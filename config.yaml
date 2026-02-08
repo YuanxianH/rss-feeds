@@ -1,0 +1,67 @@
+# RSS 生成器配置文件
+
+feeds:
+  # Google DeepMind 博客
+  - name: "Google DeepMind Blog"
+    url: "https://deepmind.google/blog/"
+    output: "deepmind_blog.xml"
+
+    # RSS feed 元信息
+    title: "Google DeepMind Blog"
+    description: "Discover the latest AI breakthroughs, projects, and updates from Google DeepMind"
+    link: "https://deepmind.google/blog/"
+
+    # CSS 选择器 - 针对 DeepMind 的卡片结构
+    selectors:
+      # 文章卡片：<article> 标签（class="card card-blog"）
+      items: "article.card-blog"
+
+      # 标题在 <h3> 中
+      title: "h3.card__title"
+
+      # 链接在第一个 <a> 标签中
+      link: "a"
+
+      # 日期在 <time> 标签中
+      date: "time"
+
+    # 抓取选项
+    options:
+      max_items: 20                  # 最多保留条目数
+      timeout: 15                    # 请求超时（秒）
+      user_agent: "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36"
+      encoding: "utf-8"              # 页面编码
+
+  # ✅ OpenAI 官方 RSS（推荐直接订阅）
+  # OpenAI 提供官方 RSS feed，可以直接在 RSS 阅读器中订阅：
+  # 🔗 https://openai.com/news/rss.xml
+  #
+  # 包含内容：新闻、研究、产品更新等
+  # 无需使用本工具抓取，直接订阅即可！
+
+  # 示例配置 - 可以根据其他网站修改
+  # - name: "示例博客"
+  #   url: "https://example.com/blog"
+  #   output: "example_blog.xml"
+  #
+  #   title: "示例博客 RSS"
+  #   description: "示例博客的最新文章"
+  #   link: "https://example.com/blog"
+  #
+  #   selectors:
+  #     items: "article.post"
+  #     title: "h2.title"
+  #     link: "a.permalink"
+  #     description: "p.summary"
+  #     date: "time.published"
+  #
+  #   options:
+  #     max_items: 20
+  #     timeout: 10
+  #     user_agent: "Mozilla/5.0"
+  #     encoding: "utf-8"
+
+# 更新设置
+update:
+  interval: 3600  # 更新间隔（秒），3600 = 1小时
+  enabled: false  # 是否启用定时更新

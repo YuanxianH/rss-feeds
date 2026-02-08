@@ -1,0 +1,36 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+venv/
+env/
+ENV/
+*.egg-info/
+dist/
+build/
+
+# RSS feeds (本地生成的，不提交到仓库)
+feeds/*.xml
+
+# 但保留 .gitkeep
+!feeds/.gitkeep
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+
+# 调试脚本
+debug.py
+debug_openai.py
+check_rss.py

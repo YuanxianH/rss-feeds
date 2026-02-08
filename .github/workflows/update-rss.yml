@@ -1,0 +1,58 @@
+name: Update RSS Feeds
+
+on:
+  # 每天 UTC 时间 0:00 和 12:00 自动运行（北京时间 8:00 和 20:00）
+  schedule:
+    - cron: '0 0,12 * * *'
+
+  # 也可以手动触发
+  workflow_dispatch:
+
+  # 首次推送时运行
+  push:
+    branches: [ main, master ]
+
+jobs:
+  update-feeds:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v4
+
+    - name: Set up Python
+      uses: actions/setup-python@v5
+      with:
+        python-version: '3.12'
+
+    - name: Install dependencies
+      run: |
+        pip install -r requirements.txt
+
+    - name: Generate RSS feeds
+      run: |
+        echo "🔄 开始生成 RSS feeds..."
+
+        # 创建 feeds 目录
+        mkdir -p feeds
+
+        # 生成 DeepMind Blog RSS
+        echo "📡 生成 Google DeepMind Blog..."
+        python main.py
+
+        # 生成 OpenAI Research RSS
+        echo "📡 生成 OpenAI Research..."
+        python filter_openai_research.py
+
+        echo "✅ RSS feeds 生成完成！"
+        ls -lh feeds/
+
+    - name: Deploy to GitHub Pages
+      uses: peaceiris/actions-gh-pages@v4
+      with:
+        github_token: ${{ secrets.GITHUB_TOKEN }}
+        publish_dir: ./feeds
+        publish_branch: gh-pages
+        user_name: 'github-actions[bot]'
+        user_email: 'github-actions[bot]@users.noreply.github.com'
+        commit_message: '🤖 Auto update RSS feeds'

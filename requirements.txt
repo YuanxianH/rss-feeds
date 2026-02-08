@@ -1,0 +1,7 @@
+requests>=2.31.0
+beautifulsoup4>=4.12.0
+lxml>=5.1.0
+feedgen>=1.0.0
+pyyaml>=6.0.1
+python-dateutil>=2.8.2
+schedule>=1.2.0
