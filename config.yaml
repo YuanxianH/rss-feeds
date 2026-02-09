@@ -53,6 +53,29 @@ feeds:
       user_agent: "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36"
       encoding: "utf-8"
 
+  # Waymo Blog 博客
+  - name: "Waymo Blog"
+    url: "https://waymo.com/blog/"
+    output: "waymo_blog.xml"
+
+    title: "Waymo Blog"
+    description: "Latest news and updates from Waymo"
+    link: "https://waymo.com/blog/"
+
+    selectors:
+      items: "article"
+      title: "h2"
+      link: "a"
+      description: "div[class*=postSummary] > p"
+      date: "p[class*=Date]"
+      author: "p[class*=Byline]"
+
+    options:
+      max_items: 20
+      timeout: 15
+      user_agent: "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36"
+      encoding: "utf-8"
+
   # ✅ OpenAI 官方 RSS（推荐直接订阅）
   # OpenAI 提供官方 RSS feed，可以直接在 RSS 阅读器中订阅：
   # 🔗 https://openai.com/news/rss.xml
