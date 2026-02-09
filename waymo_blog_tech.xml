@@ -1,0 +1,317 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0">
+  <channel>
+    <title>Waymo Blog - Technology</title>
+    <link>https://waymo.com/blog/search/?t=Technology</link>
+    <description>Waymo Blog Technology 分类文章</description>
+    <docs>http://www.rssboard.org/rss-specification</docs>
+    <generator>RSS Creator</generator>
+    <language>zh-CN</language>
+    <lastBuildDate>Mon, 09 Feb 2026 17:12:02 +0000</lastBuildDate>
+    <item>
+      <title>The Waymo World Model: A New Frontier For Autonomous Driving Simulation</title>
+      <link>https://waymo.com/blog/2026/02/the-waymo-world-model-a-new-frontier-for-autonomous-driving-simulation</link>
+      <description>We are excited to introduce the Waymo World Model, a frontier generative model that sets a new bar for large-scale, hyper-realistic autonomous driving simulation. </description>
+      <pubDate>Fri, 06 Feb 2026 00:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>Demonstrably Safe AI For Autonomous Driving</title>
+      <link>https://waymo.com/blog/2025/12/demonstrably-safe-ai-for-autonomous-driving</link>
+      <description>Autonomous driving is the ultimate challenge for AI in the physical world. At Waymo, we’re solving it by prioritizing demonstrably safe AI, where safety is central to how we engineer our models and AI ecosystem from the ground up. This post offers a detailed look at Waymo’s AI strategy and how it’s fueling our momentum, allowing us to safely bring our service to more riders, faster than ever before. </description>
+      <pubDate>Tue, 09 Dec 2025 00:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>Creating an all-weather Driver </title>
+      <link>https://waymo.com/blog/2025/10/creating-an-all-weather-driver</link>
+      <description>Life doesn't freeze when winter comes—if anything, that's when riders need reliable transportation most, when being exposed to the elements becomes less appealing. Today, the Waymo Driver successfully navigates rain, fog, sandstorms, and freezing temperatures. As we expand to more cities across the U.S. and globally, we're applying the same systematic, scientific approach that enabled us to validate the Waymo Driver for these conditions to advance our capabilities for snowier, winter weather.
+</description>
+      <pubDate>Mon, 27 Oct 2025 00:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>Advancing Vision Zero: Waymo’s Research on Speed and Seatbelt Safety Impact</title>
+      <link>https://waymo.com/blog/2025/07/advancing-vision-zero</link>
+      <description>At Waymo, our goal is to make streets safer for everyone – and our strong safety record reflects that commitment. From 360-degree perception to advanced collision avoidance, many factors contribute to how we help reduce crashes on public roads. But some of the most impactful safety measures are also the simplest – such as consistently obeying speed limits, ensuring seatbelt use, and driving the safest vehicles. Today, we're sharing two new research papers that demonstrate how these fundamental practices can help move us closer to the Vision Zero goal of eliminating traffic fatalities and severe injuries.</description>
+      <pubDate>Tue, 01 Jul 2025 00:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>Announcing the 2025 Waymo Open Dataset Challenges</title>
+      <link>https://waymo.com/blog/2025/03/2025-waymo-open-dataset-challenges</link>
+      <description>For years, the Waymo Open Dataset and associated Challenges have advanced research in autonomous driving, robotics, computer vision, and machine learning. Today, we are thrilled to announce our 6th round of Challenges, continuing to guide the community toward impactful innovations.</description>
+      <pubDate>Mon, 31 Mar 2025 00:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>Introducing Drivership: A New Framework for Good Driving</title>
+      <link>https://waymo.com/blog/2025/02/introducing-drivership-a-new-framework-for-good-driving</link>
+      <description>As part of ongoing work to define and operationalize good driving, Waymo presents our latest research on Drivership — a framing concept that helps unpack the complexity behind the evaluation of good driving behavior — whether fully autonomous, human, or somewhere in between. </description>
+      <pubDate>Thu, 13 Feb 2025 00:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>Introducing Waymo's Research on an End-to-End Multimodal Model for Autonomous Driving</title>
+      <link>https://waymo.com/blog/2024/10/introducing-emma</link>
+      <description>At Waymo, we have been at the forefront of AI and ML in autonomous driving for over 15 years, and are continuously contributing to advancing research in the field. Today, we are sharing our latest research paper on an End-to-End Multimodal Model for Autonomous Driving (EMMA). </description>
+      <pubDate>Wed, 30 Oct 2024 00:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>Meet the 6th-generation Waymo Driver: Optimized for costs, designed to handle more weather, and coming to riders faster than before</title>
+      <link>https://waymo.com/blog/2024/08/meet-the-6th-generation-waymo-driver</link>
+      <description>Waymo’s approach of designing both hardware and software from the ground up has been crucial to our success, and it continues to pay off as we introduce our sixth-generation hardware. We’ve significantly reduced the cost of our 6th-generation system while delivering even more resolution, range, compute power, and enabling more capabilities. Today, I’m excited to share more about our next generation system and how it’s helping drive our business forward. </description>
+      <pubDate>Mon, 19 Aug 2024 00:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>Fleet response: Lending a helpful hand to Waymo’s autonomously driven vehicles</title>
+      <link>https://waymo.com/blog/2024/05/fleet-response</link>
+      <description>The Waymo Driver autonomously navigates tens of thousands of rider-only miles across San Francisco, Phoenix, Los Angeles, and Austin daily. It can navigate common scenarios, like adhering to a crossing guard directing traffic, as well as more unique interactions like avoiding a swerving vehicle. As the Waymo Driver travels across town, it might contact fleet response for additional help. </description>
+      <pubDate>Tue, 21 May 2024 00:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>Announcing the 2024 Waymo Open Dataset Challenges</title>
+      <link>https://waymo.com/blog/2024/03/2024-waymo-open-dataset-challenges</link>
+      <description>Our progress on the road is in many ways enabled by the same type of data we make available for research to the scientific community via the Waymo Open Dataset, one of the largest and most diverse autonomous driving datasets ever released. Today we’re excited to announce the start of our 2024 Waymo Open Dataset Challenges, which will run through May 2024. </description>
+      <pubDate>Mon, 18 Mar 2024 00:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>From surface streets to freeways, safely expanding our rider-only testing</title>
+      <link>https://waymo.com/blog/2024/01/from-surface-streets-to-freeways-safely-expanding-our-rider-only-testing</link>
+      <description>Waymo will begin testing its fully autonomous passenger cars without a human driver on freeways in Phoenix to soon help Waymo One riders get where they’re going safely and efficiently. Just as we've taken a phased approach to rolling out our technology and operations in the past, we will continue to deploy in a step-by-step manner, first providing rider-only trips to our employees on freeways across Phoenix.</description>
+      <pubDate>Mon, 08 Jan 2024 00:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>Waymo significantly outperforms comparable human benchmarks over 7+ million miles of rider-only driving</title>
+      <link>https://waymo.com/blog/2023/12/waymo-significantly-outperforms-comparable-human-benchmarks-over-7-million</link>
+      <description>Safety leads everything we do at Waymo. This year alone, Waymo has served over 700,000 ride-hailing trips with public riders and no human driver. We couldn’t have hit that milestone without putting safety front and center, and we are working hard to improve the measurement, transparency, and performance of our fleet.</description>
+      <pubDate>Wed, 20 Dec 2023 00:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>Road trip! How our cross-country testing helps advance the Waymo Driver</title>
+      <link>https://waymo.com/blog/2023/11/road-trip-how-our-cross-country-testing-helps-advance-the-waymo-driver</link>
+      <description>Experience is the best teacher, no matter if you're learning to drive a car or getting to know a new city. The Waymo Driver — our core set of technology comprised of hardware and software that enables autonomous driving — has multiple lifetimes of experience navigating the real world and helping people and things get where they're going safely. To bring the benefits of our technology to more people in more places and deliver on our mission to improve road safety, we take the Waymo Driver on road trips to regions where the driving culture and conditions differ from the areas we regularly operate. </description>
+      <pubDate>Mon, 06 Nov 2023 00:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>Waymo advances AI research with our multifunctional Waymax simulator</title>
+      <link>https://waymo.com/blog/2023/10/waymo-advances-ai-research-with-our-multifunctional-waymax-simulator</link>
+      <description>At Waymo we are continuously pushing the boundaries of AI innovation and contributing to the research community, which is why today we are announcing [Waymax](http://waymo.com/research/waymax) – a lightweight simulator developed specifically for autonomous driving research.</description>
+      <pubDate>Thu, 19 Oct 2023 00:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>The Waymo Driver's Rapid Learning Curve</title>
+      <link>https://waymo.com/blog/2023/08/the-waymo-drivers-rapid-learning-curve</link>
+      <description>Imagine if you could automatically learn from the driving experiences of others on the road, absorbing knowledge about all the complicated scenarios they've encountered. The Waymo Driver covers tens of thousands of miles — equivalent to a lifetime of human driving experience — in a matter of days; in simulation, it does so in minutes. But driving is a social and complex task, so it’s not just about accumulating miles, but learning from each one. Our Driver has a unique ability to learn from road events across the entire fleet, advancing its capabilities at incredible speeds. This rapid pace of learning is one of the key factors that has enabled our recent expansion across multiple major U.S. cities. Here’s a glimpse of some technological advancements that have directly contributed to our progress, as well as areas where we continue to accelerate and improve.</description>
+      <pubDate>Fri, 04 Aug 2023 00:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>Past the limit: Studying how often drivers speed in San Francisco and Phoenix</title>
+      <link>https://waymo.com/blog/2023/07/past-the-limit-studying-how-often-drivers-speed-in-san-francisco-and-phoenix</link>
+      <description>Speeding is one of the leading causes of death on the road. In 2020, speeding was a contributing factor in 11,258 deaths and 308,013 injuries, accounting for nearly one-third of all traffic fatalities and 13% of injuries in the U.S., according to the [NHTSA](https://crashstats.nhtsa.dot.gov/Api/Public/ViewPublication/813320). Safety initiatives such as [Vision Zero](https://visionzeronetwork.org/) have been instrumental in helping cities design streets, set speed limits, and implement policies to reduce speeding and lessen the likelihood and forcefulness of crashes. The Waymo Driver can help achieve that important goal.</description>
+      <pubDate>Tue, 11 Jul 2023 00:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>The Waymo Driver is already improving road safety</title>
+      <link>https://waymo.com/blog/2023/07/the-waymo-driver-is-already-improving-road-safety</link>
+      <description>Excitement and caution often go hand-in-hand when a new, transformative technology is introduced. I’ve seen it many times in my career while working on innovative rocket launches, commercial space satellites, and now autonomous driving in my role as Chief Safety Officer at Waymo. Case in point, when it comes to Waymo’s autonomous vehicles, I hear two questions most frequently.</description>
+      <pubDate>Thu, 06 Jul 2023 00:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>Waymo at CVPR 2023: At the cutting-edge of autonomous driving research</title>
+      <link>https://waymo.com/blog/2023/06/waymo-at-cvpr-2023-at-the-cutting-edge-of-autonomous-driving-research</link>
+      <description>We’re excited to announce Waymo’s participation in the 50th Conference on Computer Vision and Pattern Recognition (CVPR), where we will present our latest work in autonomous driving research.
+</description>
+      <pubDate>Wed, 14 Jun 2023 00:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>Keeping riders and other road users safe with Safe Exit features</title>
+      <link>https://waymo.com/blog/2023/05/keeping-riders-and-other-road-users</link>
+      <description>When arriving at your destination and opening the door, how often do you stop to think who might be on the other side? According to the San Francisco Municipal Transportation Agency, collisions with bicyclists when a vehicle's door opens into moving traffic, or "dooring," is the second most common collision that results in injury or fatality. To help prevent 'dooring' events, Waymo implemented new and more effective methods to help inform riders when other road users are nearby by employing the same sensing technology the Waymo Driver uses to navigate roadways autonomously.</description>
+      <pubDate>Tue, 09 May 2023 06:05:00 -0700</pubDate>
+    </item>
+    <item>
+      <title>Guided by the flow: The role of aerodynamics in shaping the Waymo Driver</title>
+      <link>https://waymo.com/blog/2023/05/guided-by-flow-role-of-aerodynamics</link>
+      <description>It's essential to understand the aerodynamics of the different vehicle platforms on which Waymo's autonomous driving technology is applied to build and operate an efficient system – especially when running at full capacity in various conditions such as rain, fog, snow, or extreme temperatures. By using physical tests and state-of-the-art simulation tools, we can optimize energy use,  improve sensor performance, and build a safe, stable, scaleable autonomous Driver. </description>
+      <pubDate>Tue, 02 May 2023 10:35:00 -0700</pubDate>
+    </item>
+    <item>
+      <title>A Blueprint for AV Safety: Waymo’s Toolkit For Building a Credible Safety Case</title>
+      <link>https://waymo.com/blog/2023/03/a-blueprint-for-av-safety-waymos</link>
+      <description>For many years, Waymo has relied on an established safety framework — a comprehensive set of methodologies that we use to assess the safety of our technology and operations and that guides the deployment of the Waymo Driver. Our robust safety framework has enabled us to launch the world’s first fully autonomous ride-hail service, Waymo One, and expand our 24/7 operations with no human driver across multiple major U.S. cities. Today, residents of Metro Phoenix and San Francisco rely on Waymo to commute, run errands, meet friends and get a safe ride home as part of their daily lives.</description>
+      <pubDate>Wed, 22 Mar 2023 04:01:00 -0700</pubDate>
+    </item>
+    <item>
+      <title>Driving Research Forward: The Waymo Open Dataset Updates and 2023 Challenges</title>
+      <link>https://waymo.com/blog/2023/03/driving-research-forward-waymo-open</link>
+      <description>Waymo’s recent technology advancements and rapid expansion across Phoenix, San Francisco, and Los Angeles wouldn’t be possible without the underlying innovative research that helps drive our progress forward. As a pioneer in the AV industry, we have continuously contributed to the research community through publishing and expanding the Waymo Open Dataset — one of the largest and most diverse autonomous driving datasets ever released. Today, we are excited to announce the latest expansion of the dataset with even more sensor data and labels. We are also launching our new and exciting 2023 Waymo Open Dataset Challenges -- this is our 4th annual Challenge edition, and we invite all researchers to participate!</description>
+      <pubDate>Thu, 16 Mar 2023 09:00:00 -0700</pubDate>
+    </item>
+    <item>
+      <title>First Million Rider-Only Miles: How the Waymo Driver is Improving Road Safety</title>
+      <link>https://waymo.com/blog/2023/02/first-million-rider-only-miles-how</link>
+      <description>Waymo has achieved many global industry firsts. Each time we delight our riders and deliver on our mission safely, we are proudest. In January, we accomplished another first: we exceeded one million miles on public roads with no human behind the wheel. To put this into perspective, this equates to 40 trips around the Earth, or over 80 years of driving for the average American. But this number is not a meaningful measure of progress, without context. What’s more important is our safety performance over the course of these one million rider-only miles that demonstrates the safety benefits of the Waymo Driver. We’re sharing this safety performance data today to both acknowledge this next step on our journey, and to encourage greater transparency across the industry.</description>
+      <pubDate>Tue, 28 Feb 2023 09:01:00 -0800</pubDate>
+    </item>
+    <item>
+      <title>Waymo's Collision Avoidance Testing: Evaluating our Driver’s Ability to Avoid Crashes Compared to Humans</title>
+      <link>https://waymo.com/blog/2022/12/waymos-collision-avoidance-testing</link>
+      <description>It’s happened to almost every driver: that terrifying moment when you have to urgently brake or swerve to avoid a collision caused by other road users’ behavior. Like a human driver, the Waymo Driver encounters potential hazards — from a vehicle running a red light to a car suddenly changing lanes. To evaluate our Driver’s ability to avoid or mitigate crashes in situations like these, we developed a comprehensive scenario-based testing methodology called Waymo’s Collision Avoidance Testing (CAT). To maintain transparency and provide the public with a deeper understanding of our safety approach, we are publishing a paper to describe how we judge good collision avoidance performance, how we identify the right set of scenarios to test, and the testing tools we’ve developed.</description>
+      <pubDate>Wed, 14 Dec 2022 09:00:00 -0800</pubDate>
+    </item>
+    <item>
+      <title>What’s in the forecast: Using cutting-edge weather research to advance the Waymo Driver</title>
+      <link>https://waymo.com/blog/2022/11/using-cutting-edge-weather-research-to-advance-the-waymo-driver</link>
+      <description>Weather shapes our lives, from dictating what we wear, to how we commute, to whether school is in. At Waymo, we've invested in understanding weather and its impact on our technology since our earliest days as Google's Self-Driving Car Project. We've learned a lot along the way that has enabled us to drive autonomously in various conditions, provide better service to our riders and partners, and advance our technology to serve more cities in the future.</description>
+      <pubDate>Mon, 14 Nov 2022 08:01:00 -0800</pubDate>
+    </item>
+    <item>
+      <title>Benchmarking AV Safety: Demonstrating how the Waymo Driver outperforms the collision responses of always attentive human drivers via industry-leading assessment methods</title>
+      <link>https://waymo.com/blog/2022/09/benchmarking-av-safety</link>
+      <description>The Response Time paper presents a framework Waymo uses for analyzing and modeling response timing in a crash-imminent situation on the road. It helps establish how well an attentive and non-impaired human driver avoids collisions to provide a reference point on the spectrum of human driving against which autonomous vehicle performance can be assessed.</description>
+      <pubDate>Thu, 29 Sep 2022 09:01:00 -0700</pubDate>
+    </item>
+    <item>
+      <title>Waymo at CVPR 2022: A hub for real-world innovation and groundbreaking research</title>
+      <link>https://waymo.com/blog/2022/06/waymo-at-cvpr2022</link>
+      <description>Waymo is proud to host and participate in multiple sessions at the 49th &lt;a href="https://cvpr2022.thecvf.com/"&gt;Conference on Computer Vision and Pattern Recognition&lt;/a&gt; (CVPR) next week. We will present some of our recent state-of-the-art work in autonomous driving research—one of the most complex and practical applications of computer vision.</description>
+      <pubDate>Thu, 16 Jun 2022 12:02:00 -0700</pubDate>
+    </item>
+    <item>
+      <title>Cities, freeways, airports: How we've built a scalable autonomous driver</title>
+      <link>https://waymo.com/blog/2022/05/howwevebuiltascalableautonomousdriver</link>
+      <description>Being an experienced driver means knowing how to handle a variety of road situations that can happen anytime, anywhere. At Waymo, we’re building The World’s Most Experienced Driver™. With over 20 million autonomous public road miles under its belt, the Waymo Driver is prepared to navigate the challenges of busy city streets, high-speed multi-lane roads, chaotic parking lots and more. Right now, the Waymo Driver is simultaneously providing fully autonomous rides in two locations—Phoenix’s East Valley and San Francisco—and is ready to scale further. In the coming weeks, we will begin rider-only trips —with no human driver behind the wheel— with our employees in Downtown Phoenix. Additionally, the Waymo Driver is beginning to drive at Phoenix Sky Harbor International Airport, one of the </description>
+      <pubDate>Wed, 18 May 2022 11:40:00 -0700</pubDate>
+    </item>
+    <item>
+      <title>Expanding the Waymo Open Dataset with new labels and challenges</title>
+      <link>https://waymo.com/blog/2022/03/expanding-waymo-open-dataset-with-new-labels</link>
+      <description>We launched the &lt;a href="https://waymo.com/open/" target="_blank"&gt;Waymo Open Dataset&lt;/a&gt; back in 2019 as one of the largest and most diverse autonomous driving datasets ever released for research. At the time, it consisted of multimodal sensor data from 1,000 driving segments. As a result of the overwhelmingly positive reception and high engagement, we have continuously evolved the dataset beyond its initial scope by almost doubling our Perception dataset size and introducing a Motion dataset enabling prediction tasks. The Waymo Open Dataset remains one of the most complete and comprehensive autonomous driving datasets, contributing to 500+ publications and providing high-quality data, which is complex and resource intensive to gather, to the research and academic community.&amp;nbsp;&lt;span&gt;&lt;a name="more"&gt;&lt;/a&gt;&lt;/span&gt;</description>
+      <pubDate>Wed, 09 Mar 2022 12:18:00 -0800</pubDate>
+    </item>
+    <item>
+      <title>Utilizing key point and pose estimation for the task of autonomous driving</title>
+      <link>https://waymo.com/blog/2022/02/utilizing-key-point-and-pose-estimation</link>
+      <description>Historically, computer vision relies on rigid bounding boxes to locate and classify objects within a scene; however, one of the limiting factors in detection, tracking, and action recognition of vulnerable road users, such as pedestrians and cyclists, is the lack of precise human pose understanding. While locating and recognizing an object is essential for autonomous driving, there is a lot of context that can go unused in this process. For example, a bounding box won't inherently tell you if a pedestrian is standing or sitting, or what their actions or gestures are.</description>
+      <pubDate>Tue, 22 Feb 2022 07:30:00 -0800</pubDate>
+    </item>
+    <item>
+      <title>How we ensure the Waymo Driver operates safely in San Francisco</title>
+      <link>https://waymo.com/blog/2022/01/how-we-ensure-waymo-driver-operates-safely-sf</link>
+      <description>Last year, Waymo expanded its testing in San Francisco and began welcoming new riders in the city. As we continue to expand our operations providing rides to more San Franciscans, we’re sharing even more on how we evaluate the safety of our technology and operations in the City by the Bay.</description>
+      <pubDate>Wed, 26 Jan 2022 09:28:00 -0800</pubDate>
+    </item>
+    <item>
+      <title>What we learned from our initial trial runs with J.B. Hunt</title>
+      <link>https://waymo.com/blog/2021/12/what-we-learned-from-our-initial-trial</link>
+      <description>Earlier this year, &lt;a href="https://blog.waymo.com/2021/06/waymo-via-is-working-with-jb-hunt-to.html"&gt;we kicked off trial runs with J.B. Hunt&lt;/a&gt; to carry freight autonomously for one of their leading customers in Texas. This was part of a broader collaboration that combined the leader in autonomous driving technology with one of the largest and most reputable transportation logistics companies in the U.S.&lt;span&gt;&lt;/span&gt;</description>
+      <pubDate>Tue, 21 Dec 2021 08:59:00 -0800</pubDate>
+    </item>
+    <item>
+      <title>Designed to deliver: Bringing the benefits of our 5th generation hardware to trucking</title>
+      <link>https://waymo.com/blog/2021/12/designed-to-deliver</link>
+      <description>At Waymo, we're developing one core autonomous driving platform—the Waymo Driver—consisting of hardware and software, which builds the foundations of a Driver that can scale across multiple geographies, vehicle types, and use cases. Because we engineer an autonomous driver that can navigate these different modalities side by side, system requirements and skills learned from one vehicle platform benefit the other, and vice versa. As more of the &lt;a href="https://media2.daimlertruck.com/marsMediaSite/en/instance/ko.xhtml?oid=51847705"&gt;first fully redundant, L4 Freightliner Cascadia trucks&lt;/a&gt; operated by the Waymo Driver begin hitting the road, we wanted to share how we've designed and engineered our &lt;a href="https://blog.waymo.com/2020/03/introducing-5th-generation-waymo-driver.html"&gt;fifth-generation hardware&lt;/a&gt; specifically for the rugged life of Class 8 trucking.</description>
+      <pubDate>Mon, 20 Dec 2021 06:10:00 -0800</pubDate>
+    </item>
+    <item>
+      <title>A fog blog: Understanding a challenge inherent to driving in San Francisco</title>
+      <link>https://waymo.com/blog/2021/11/a-fog-blog</link>
+      <description>If you check the weather for San Francisco, there's a one third chance you’ll see clouds or fog in the forecast, according to the National Oceanic and Atmospheric Administration (NOAA). To ensure Waymo’s Trusted Testers can safely get where they are going, whether it’s to work in the misty morning or back home to a hazy Haight at night, we’re engineering the Waymo Driver to handle the challenges of fog.</description>
+      <pubDate>Mon, 15 Nov 2021 08:05:00 -0800</pubDate>
+    </item>
+    <item>
+      <title>The Waymo Driver Handbook: Teaching an autonomous vehicle how to perceive and understand the world around it</title>
+      <link>https://waymo.com/blog/2021/10/the-waymo-driver-handbook-perception</link>
+      <description>Imagine you are driving through downtown San Francisco and a cyclist, traveling against the flow of traffic, cuts right in front of you. Or maybe you are navigating a narrow, two-way street with a car heading the opposite direction, and you nudge over for them to pass. Perhaps, you are driving late at night when an occluded worker pops out behind a truck, right into the middle of the street. These are just a few examples of the common yet complex scenarios the Waymo Driver encounters in cities like San Francisco.</description>
+      <pubDate>Thu, 28 Oct 2021 08:06:00 -0700</pubDate>
+    </item>
+    <item>
+      <title>How we’ve built the World’s Most Experienced Urban Driver</title>
+      <link>https://waymo.com/blog/2021/08/most-experienced-urban-driver</link>
+      <description>Here’s our autonomous driving system—the Waymo Driver—in San Francisco earlier this year. It’s the kind of journey we’ve made tens of thousands of times since we first started driving autonomously in the city in 2009. As the Waymo Driver navigates dozens of vehicles and pedestrians, it’s met with a huge variety of other road users—from double-parked vehicles whose riders can hop out at any second, to scooters cutting across traffic even when they have a red light.</description>
+      <pubDate>Thu, 19 Aug 2021 09:05:00 -0700</pubDate>
+    </item>
+    <item>
+      <title>Simulation City: Introducing Waymo's most advanced simulation system yet for autonomous driving</title>
+      <link>https://waymo.com/blog/2021/07/simulation-city</link>
+      <description>At Waymo, we use simulation to advance the Waymo Driver's abilities in several ways. We can amplify our number of real-world miles to accelerate our Driver’s learning, prepare for rare events, train new models, validate new software, and even evaluate how the Waymo Driver would have performed in actual fatal crashes that have already occurred. For simulation to be valuable as a learning tool, it has to closely match our target domain – performing rider-only trips for Waymo One and goods delivery trips for Waymo Via in the real world– in which case, there is only one question that matters. Did the Waymo Driver safely and efficiently complete the trip?</description>
+      <pubDate>Tue, 06 Jul 2021 12:00:00 -0700</pubDate>
+    </item>
+    <item>
+      <title>Waymo at CVPR 2021: Building the future of perception for autonomous vehicles</title>
+      <link>https://waymo.com/blog/2021/06/waymo-at-cvpr-2021-building-future-of</link>
+      <description>Starting this weekend, researchers, developers, and engineers from all over the world will gather virtually for the 2021 Conference on Computer Vision and Pattern Recognition (CVPR). As a pioneer in the autonomous driving space, Waymo will host and speak in multiple workshops presenting its recent research work.</description>
+      <pubDate>Fri, 18 Jun 2021 18:46:00 -0700</pubDate>
+    </item>
+    <item>
+      <title>Beyond the bike lane: How we've built the Waymo Driver to share the road with cyclists</title>
+      <link>https://waymo.com/blog/2021/06/beyond-the-bike-lane</link>
+      <description>At Waymo, our team is more than engineers, designers, analysts, and autonomous specialists (what we call the trained human drivers behind the wheel) building the World’s Most Experienced Driver™. We are also cyclists, runners, equestrians, and active members of the communities in which we drive. So we know we have to keep the concerns of these vulnerable road users in mind as we create technology that can make our roads safer for everyone.
+</description>
+      <pubDate>Mon, 14 Jun 2021 14:03:00 -0700</pubDate>
+    </item>
+    <item>
+      <title>Expanding the Waymo Open Dataset with Interactive Scenario Data and New Challenges</title>
+      <link>https://waymo.com/blog/2021/03/expanding-waymo-open-dataset-with-interactive-scenario-data-and-new-challenges</link>
+      <description>One of the most important things an intelligent driver needs to do is to understand what the road users around it are going to do next. Is that pedestrian trying to cross the street? Is that car parallel parked, or about to pull into my lane? Will that speeding vehicle stop at the stop sign?</description>
+      <pubDate>Wed, 10 Mar 2021 07:00:00 -0800</pubDate>
+    </item>
+    <item>
+      <title>Expanding our testing in San Francisco</title>
+      <link>https://waymo.com/blog/2021/02/expanding-our-testing-in-san-francisco</link>
+      <description>Waymo’s story starts in the San Francisco Bay Area. Since early 2009, when we completed our first 1,000 autonomous miles across California, we’ve driven the length and breadth of the region, becoming intimately familiar with the many unique challenges of driving in San Francisco and the surrounding area.</description>
+      <pubDate>Wed, 17 Feb 2021 09:00:00 -0800</pubDate>
+    </item>
+    <item>
+      <title>In the cab with the Waymo Driver: How trucks help advance our self-driving technology</title>
+      <link>https://waymo.com/blog/2020/10/how-trucks-help-advance-our-self-driving-technology</link>
+      <description>In 2017, after nearly a decade of developing self-driving technology for passenger cars, we launched our trucking and local delivery program now known as Waymo Via. Since then, our autonomous Class 8 trucks have been tested in a wide variety of cities and environments in California, Georgia, Arizona, New Mexico and Texas. Utilizing the same core technology stack across all of our vehicles allows us to bring fully driverless trucks to the market safely and quickly.
+</description>
+      <pubDate>Tue, 13 Oct 2020 08:56:00 -0700</pubDate>
+    </item>
+    <item>
+      <title>The Waymo Driver Handbook: How our highly-detailed maps help unlock new locations for autonomous driving</title>
+      <link>https://waymo.com/blog/2020/09/the-waymo-driver-handbook-mapping</link>
+      <description>For any emerging technology to be trusted, it helps to first be understood. In the past, people could see how their cars worked, looking under the hood and tinkering with them with the help of a user manual. In 2020, vehicles have so much technology that they’ve become difficult for the general public to comprehend. We want to change that. With this blog series, we’ll unpack the different parts of our technology stack to explain the fundamentals of self-driving technology. How does the Waymo Driver perceive the world? How does it learn to understand its surroundings? How can it predict the intentions of other drivers and pedestrians? And how does it keep our riders safe? We’re starting with one of the foundational questions: how does a self-driving car know where it is? </description>
+      <pubDate>Mon, 21 Sep 2020 07:15:00 -0700</pubDate>
+    </item>
+    <item>
+      <title>The Waymo Driver’s training regimen: How structured testing prepares our self-driving technology for the real world</title>
+      <link>https://waymo.com/blog/2020/09/the-waymo-drivers-training-regime</link>
+      <description>Imagine a tiny city where you control everything that happens on the streets. You manage how many cars zip down the roads and how fast they are going. You dictate how many cyclists are on a roundabout or whether they follow the road rules. The “weather” around the vehicle can change multiple times a day from blue skies and sunshine one minute to heavy rain showers the next, but only if you want it that way. One may say such a city doesn’t exist, but if you drive out to the middle of Merced County in California, you’ll find it at Castle, a former Air Force Base our team uses to help build the World’s Most Experienced Driver™. </description>
+      <pubDate>Thu, 10 Sep 2020 07:02:00 -0700</pubDate>
+    </item>
+    <item>
+      <title>Racers on your mark: Creating a space for students to engage with the full self-driving stack</title>
+      <link>https://waymo.com/blog/2020/08/racers-on-your-mark</link>
+      <description>Last year around this time, I found myself on a racetrack in Hockenheim, Germany, at Formula Student Germany as a student on the MIT/Delft team. Formula Student is an international design competition, where students with various backgrounds, ranging from mechanical and software engineering to finance and marketing, join forces to design, build, and race a prototype self-driving racecar. This project was one of the most challenging and rewarding experiences of my life; seeing an idea transform from a concept pitch and a system architecture diagram to a car driving itself on a racetrack in Germany was extremely rewarding, but by no means easy.</description>
+      <pubDate>Tue, 11 Aug 2020 14:08:00 -0700</pubDate>
+    </item>
+    <item>
+      <title>Meet the Winners of the Waymo Open Dataset Challenges</title>
+      <link>https://waymo.com/blog/2020/07/opendataset-challenge-winners-2020</link>
+      <description>In March 2020, we launched the Waymo Open Dataset Challenges, inviting researchers to build and test their machine learning models using Waymo’s diverse self-driving dataset. We received over 100 submissions from around the world and invited the winners to present their work at our virtual Workshop on Scalability in Autonomous Driving at CVPR 2020. Today, we are excited to introduce some of the winners and their learnings.</description>
+      <pubDate>Mon, 13 Jul 2020 13:17:00 -0700</pubDate>
+    </item>
+    <item>
+      <title>VectorNet: Predicting behavior to help the Waymo Driver make better decisions</title>
+      <link>https://waymo.com/blog/2020/05/vectornet</link>
+      <description>One of the key qualities of a good driver is being able to anticipate and predict what others on the road might do. For example, what is the probability of another car merging into our lane or the cyclist in front of us making a left turn? The ability to accurately predict the intentions of other road users allows the Waymo Driver to make the safest possible decisions.
+</description>
+      <pubDate>Thu, 14 May 2020 07:00:00 -0700</pubDate>
+    </item>
+    <item>
+      <title>Catching up with the Waymo Via trucking team</title>
+      <link>https://waymo.com/blog/2020/05/catching-up-with-waymo-via-trucking-team</link>
+      <description>There’s a lot happening with Waymo Via trucking these days. Since we kicked off our goods delivery efforts in 2017, our self-driving trucks have been fixtures on freeways across California and Arizona, our technology has become even more advanced, and our trucking team has grown rapidly. </description>
+      <pubDate>Fri, 08 May 2020 08:59:00 -0700</pubDate>
+    </item>
+    <item>
+      <title>Off road, but not offline: How simulation helps advance our Waymo Driver</title>
+      <link>https://waymo.com/blog/2020/04/off-road-but-not-offline--simulation27</link>
+      <description>COVID-19 has had a significant impact on the world, affecting people’s lives and forcing many businesses to suspend their operations. At Waymo, we're actively monitoring the situation, taking steps to support our local communities, and contributing to COVID-19 response efforts. While Waymo has temporarily suspended its on-the-road operations as we put the health and safety of our riders, partners, and employees first, we are still driving our technology forward with our work in simulation.</description>
+      <pubDate>Tue, 28 Apr 2020 06:58:00 -0700</pubDate>
+    </item>
+    <item>
+      <title>In the driver's seat: footage from our 2009-2010 1,000 autonomous mile challenge</title>
+      <link>https://waymo.com/blog/2020/04/in-the-drivers-seat-1000-mile-challenge</link>
+      <description>In early 2009, when Waymo was first founded as the “Google Self-Driving Car Project,” Google founders Sergey Brin and Larry Page challenged our first engineers to drive autonomously without human intervention or disengagements along ten challenging 100-mile routes in our home state of California. By December 2009, the team had completed their first route, and nine months later in mid 2010, we had wrapped up the last.</description>
+      <pubDate>Wed, 22 Apr 2020 13:17:00 -0700</pubDate>
+    </item>
+  </channel>
+</rss>

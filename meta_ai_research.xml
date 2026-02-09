@@ -1,0 +1,156 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0">
+  <channel>
+    <title>Meta AI Research Publications</title>
+    <link>https://ai.meta.com/results/?content_types%5B0%5D=publication</link>
+    <description>Latest research publications from Meta AI</description>
+    <docs>http://www.rssboard.org/rss-specification</docs>
+    <generator>RSS Creator</generator>
+    <language>zh-CN</language>
+    <lastBuildDate>Mon, 09 Feb 2026 17:12:00 +0000</lastBuildDate>
+    <item>
+      <title>Equi-normalization of Neural Networks | Facebook AI Research</title>
+      <link>https://ai.meta.com/research/publications/equi-normalization-of-neural-networks/</link>
+      <description>Pierre Stock, Benjamin Graham, Rémi Gribonval, Hervé Jégou</description>
+      <pubDate>Sun, 05 May 2019 00:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>LAMV: Learning to align and match videos with kernelized temporal layers | Facebook AI Research</title>
+      <link>https://ai.meta.com/research/publications/lamv-learning-to-align-and-match-videos-with-kernelized-temporal-layers/</link>
+      <description>Lorenzo Baraldi, Matthijs Douze, Rita Cucchiara, Hervé Jégou</description>
+      <pubDate>Tue, 19 Jun 2018 00:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>Loss in Translation: Learning Bilingual Word Mapping with a Retrieval Criterion | Facebook AI Research</title>
+      <link>https://ai.meta.com/research/publications/loss-in-translation-learning-bilingual-word-mapping-with-a-retrieval-criterion/</link>
+      <description>Armand Joulin, Piotr Bojanowski, Tomas Mikolov, Hervé Jégou</description>
+      <pubDate>Tue, 30 Oct 2018 00:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>Low-shot learning with large-scale diffusion | Facebook AI Research</title>
+      <link>https://ai.meta.com/research/publications/low-shot-learning-with-large-scale-diffusion/</link>
+      <description>Matthijs Douze, Arthur Szlam, Bharath Hariharan, Hervé Jégou</description>
+      <pubDate>Mon, 18 Jun 2018 00:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>Polysemous Codes | Facebook AI Research</title>
+      <link>https://ai.meta.com/research/publications/polysemous-codes/</link>
+      <description>Matthijs Douze, Hervé Jégou, Florent Perronnin</description>
+      <pubDate>Mon, 10 Oct 2016 00:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>Mastering the Dungeon: Grounded Language Learning by Mechanical Turker Descent | Facebook AI Research</title>
+      <link>https://ai.meta.com/people/alexander-h-miller</link>
+      <description>Zhilin Yang, Saizheng Zhang, Jack Urbanek, Will Feng,Alexander H. Miller, Arthur Szlam,Douwe Kiela,Jason Weston</description>
+      <pubDate>Mon, 30 Apr 2018 00:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>Scaling up online speech recognition using ConvNets | Facebook AI Research</title>
+      <link>https://ai.meta.com/people/qiantong-xu</link>
+      <description>Vineel Pratap,Qiantong Xu, Jacob Kahn, Gilad Avidov,Tatiana Likhomanenko,Awni Hannun,Vitaliy Liptchinsky, Gabriel Synnaeve, Ronan Collobert</description>
+      <pubDate>Mon, 13 Jan 2020 00:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>On the Pitfalls of Measuring Emergent Communication | Facebook AI Research</title>
+      <link>https://ai.meta.com/research/publications/on-the-pitfalls-of-measuring-emergent-communication/</link>
+      <description>Ryan Lowe, Jakob Foerster, Y-Lan Boureau, Joelle Pineau, Yann Dauphin</description>
+      <pubDate>Thu, 14 Mar 2019 00:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>ELF OpenGo: An Analysis and Open Reimplementation of AlphaZero | Facebook AI Research</title>
+      <link>https://ai.meta.com/people/yuandong-tian</link>
+      <description>Yuandong Tian, Jerry Ma, Qucheng Gong, Shubho Sengupta, Zhuoyuan Chen, James Pinkerton, Larry Zitnick</description>
+      <pubDate>Tue, 11 Jun 2019 00:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>Energy-Based Models for Atomic-Resolution Protein Conformations | Facebook AI Research</title>
+      <link>https://ai.meta.com/research/publications/energy-based-models-for-atomic-resolution-protein-conformations/</link>
+      <description>Yilun Du, Joshua Meier, Jerry Ma, Rob Fergus, Alexander Rives</description>
+      <pubDate>Sat, 25 Apr 2020 00:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>Order-Aware Generative Modeling Using the 3D-Craft Dataset | Facebook AI Research</title>
+      <link>https://ai.meta.com/people/shubham-tulsiani</link>
+      <description>Zhuoyuan Chen, Demi Guo, Tong Xiao, Saining Xie, Xinlei Chen, Haonan Yu, Jonathan Gray, Kavya Srinet, Haoqi Fan, Jerry Ma, Charles R. Qi,Shubham Tulsiani, Arthur Szlam, Larry Zitnick</description>
+      <pubDate>Sun, 27 Oct 2019 00:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>Facebook AI's WAT19 Myanmar-English Translation Task Submission</title>
+      <link>https://ai.meta.com/people/matt-le/</link>
+      <description>Peng-Jen Chen, Jiajun Shen,Matt Le, Vishrav Chaudhary, Ahmed El-Kishky, Guillaume Wenzek,Myle Ott,Marc’Aurelio Ranzato</description>
+      <pubDate>Thu, 31 Oct 2019 00:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>SAM 3D Body: Robust Full-Body Human Mesh Recovery</title>
+      <link>https://ai.meta.com/research/publications/sam-3d-body-robust-full-body-human-mesh-recovery/</link>
+      <description>Xitong Yang, Devansh Kukreja, Don Pinkus, Anushka Sagar, Taosha Fan, Jinhyung Park, Soyong Shin, Jinkun Cao, Jiawei Liu, Nicolas Ugrinovic, Matt Feiszli, Jitendra Malik, Piotr Dollar, Kris Kitani</description>
+      <pubDate>Wed, 19 Nov 2025 00:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>SAM 3D: 3Dfy Anything in Images</title>
+      <link>https://ai.meta.com/research/publications/sam-3d-3dfy-anything-in-images/</link>
+      <description>SAM 3D Team, Xingyu Chen, Fu-Jen Chu, Pierre Gleize, Kevin J Liang, Alexander Sax, Hao Tang, Weiyao Wang, Michelle Guo, Thibaut Hardin, Xiang Li, Aohan Lin, Jiawei Liu, Ziqi Ma, Anushka Sagar, Bowen Song, Xiaodong Wang, Jianing Yang, Bowen Zhang, Piotr Dollar, Georgia Gkioxari, Matt Feiszli, Jitendra Malik</description>
+      <pubDate>Wed, 19 Nov 2025 00:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>Rubric-Based Benchmarking and Reinforcement Learning for Advancing LLM Instruction Following</title>
+      <link>https://ai.meta.com/research/publications/rubric-based-benchmarking-and-reinforcement-learning-for-advancing-llm-instruction-following/</link>
+      <description>Yun He, Wenzhe Li, Hejia Zhang, Vincent Li, Karishma Mandyam, Sopan Khosla, Yuanhao Xiong, Nanshu Wang, Selina Xiaoliang Peng, Shengjie Bi, Shishir G. Patil, Qi Qi, Shengyu Feng, Julian Katz-Samuels, Richard Yuanzhe Pang, Sujan Gonugondla, Hunter Lang, Yue Yu, Yundi Qian, Maryam Fazel-Zarandi, Licheng Yu, Amine Benhalloum, Hany Awadalla, Manaal Faruqui</description>
+      <pubDate>Mon, 01 Dec 2025 00:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>Text-Guided Semantic Image Encoder</title>
+      <link>https://ai.meta.com/research/publications/text-guided-semantic-image-encoder/</link>
+      <description>Raghuveer Thirukovalluru, Xiaochuang Han, Bhuwan Dhingra, Emily Dinan, Maha Elbayad</description>
+      <pubDate>Fri, 12 Dec 2025 00:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>Pushing the Frontier of Audiovisual Perception with Large-Scale Multimodal Correspondence Learning</title>
+      <link>https://ai.meta.com/research/publications/pushing-the-frontier-of-audiovisual-perception-with-large-scale-multimodal-correspondence-learning/</link>
+      <description>Apoorv Vyas, Heng-Jui Chang, Cheng-Fu Yang, Bernie Huang, Luya Gao, Julius Richter, Sanyuan Chen, Matt Le, Piotr Dollar, Christoph Feichtenhofer, Ann Lee, Wei-Ning Hsu</description>
+      <pubDate>Tue, 16 Dec 2025 00:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>SAM Audio: Segment Anything in Audio</title>
+      <link>https://ai.meta.com/research/publications/sam-audio-segment-anything-in-audio/</link>
+      <description>Bowen Shi, Andros Tjandra, John Hoffman, Helin Wang, Yi-Chiao Wu, Luya Gao, Julius Richter, Matt Le, Apoorv Vyas, Sanyuan Chen, Christoph Feichtenhofer, Piotr Dollar, Wei-Ning Hsu, Ann Lee</description>
+      <pubDate>Tue, 16 Dec 2025 00:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>Pixel Seal: Adversarial-only training for invisible image and video watermarking</title>
+      <link>https://ai.meta.com/research/publications/pixel-seal-adversarial-only-training-for-invisible-image-and-video-watermarking/</link>
+      <description>Tomáš Souček, Pierre Fernandez, Hady Elsahar, Sylvestre Rebuffi, Valeriu Lacatusu, Tuan Tran, Tom Sander, Alexandre Mourachko</description>
+      <pubDate>Thu, 18 Dec 2025 00:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>Learning to Watermark in the Latent Space of Generative Models</title>
+      <link>https://ai.meta.com/research/publications/learning-to-watermark-in-the-latent-space-of-generative-models/</link>
+      <description>Sylvestre Rebuffi, Tuan Tran, Valeriu Lacatusu, Pierre Fernandez, Tomáš Souček, Tom Sander, Hady Elsahar, Alexandre Mourachko</description>
+      <pubDate>Thu, 18 Dec 2025 00:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>How Good is Post-Hoc Watermarking With Language Model Rephrasing?</title>
+      <link>https://ai.meta.com/research/publications/how-good-is-post-hoc-watermarking-with-language-model-rephrasing/</link>
+      <description>Pierre Fernandez, Tom Sander, Hady Elsahar, Hongyan Chang, Tomáš Souček, Sylvestre Rebuffi, Valeriu Lacatusu, Tuan Tran, Alexandre Mourachko</description>
+      <pubDate>Thu, 18 Dec 2025 00:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>We Can Hide More Bits: The Unused Watermarking Capacity in Theory and Practice</title>
+      <link>https://ai.meta.com/research/publications/we-can-hide-more-bits-the-unused-watermarking-capacity-in-theory-and-practice/</link>
+      <description>Aleksandar Petrov, Pierre Fernandez, Tomáš Souček, Hady Elsahar</description>
+      <pubDate>Thu, 18 Dec 2025 00:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>Safety Alignment of LMs via Non-cooperative Games</title>
+      <link>https://ai.meta.com/research/publications/safety-alignment-of-lms-via-non-cooperative-games/</link>
+      <description>Anselm Paulus, Ilia Kulikov, Brandon Amos, Remi Munos, Ivan Evtimov, Kamalika Chaudhuri, Arman Zharmagambetov</description>
+      <pubDate>Fri, 26 Dec 2025 00:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>PhyGDPO: Physics-Aware Groupwise Direct Preference Optimization for Physically Consistent Text-to-Video Generation</title>
+      <link>https://ai.meta.com/research/publications/phygdpo-physics-aware-groupwise-direct-preference-optimization-for-physically-consistent-text-to-video-generation/</link>
+      <description>Yuanhao Cai, Kunpeng Li, Menglin Jia, Jialiang Wang, Junzhe Sun, Feng Liang, Weifeng Chen, Felix Xu, Chu Wang, Ali Thabet, Xiaoliang Dai, Xuan Ju, Alan Yuille, Ji Hou</description>
+      <pubDate>Fri, 02 Jan 2026 00:00:00 +0000</pubDate>
+    </item>
+  </channel>
+</rss>
