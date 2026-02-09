@@ -60,6 +60,28 @@ feeds:
   # 包含内容：新闻、研究、产品更新等
   # 无需使用本工具抓取，直接订阅即可！
 
+  # Meta AI Research Publications
+  - name: "Meta AI Research"
+    url: "https://ai.meta.com/results/?content_types%5B0%5D=publication"
+    output: "meta_ai_research.xml"
+
+    title: "Meta AI Research Publications"
+    description: "Latest research publications from Meta AI"
+    link: "https://ai.meta.com/results/?content_types%5B0%5D=publication"
+
+    selectors:
+      items: "[data-ms*='listview-card']"
+      title: "h4._8w6a._8w6e._8w61"
+      link: "a._8xc5._8x97._8w61"
+      description: "p._8w6f._8w61._8w6h._8zob"
+      date: "p._8w6f._8wl0._8w6h"
+
+    options:
+      max_items: 50
+      timeout: 15
+      user_agent: "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36"
+      encoding: "utf-8"
+
   # 示例配置 - 可以根据其他网站修改
   # - name: "示例博客"
   #   url: "https://example.com/blog"
