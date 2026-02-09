@@ -32,6 +32,27 @@ feeds:
       user_agent: "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36"
       encoding: "utf-8"              # 页面编码
 
+  # Waymo Research 论文
+  - name: "Waymo Research"
+    url: "https://waymo.com/intl/zh-cn/research/"
+    output: "waymo_research.xml"
+
+    title: "Waymo Research"
+    description: "Latest research publications from Waymo"
+    link: "https://waymo.com/intl/zh-cn/research/"
+
+    selectors:
+      items: "article"
+      title: "h3 a"
+      link: "h3 a"
+      description: "ul"
+
+    options:
+      max_items: 50
+      timeout: 15
+      user_agent: "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36"
+      encoding: "utf-8"
+
   # ✅ OpenAI 官方 RSS（推荐直接订阅）
   # OpenAI 提供官方 RSS feed，可以直接在 RSS 阅读器中订阅：
   # 🔗 https://openai.com/news/rss.xml
