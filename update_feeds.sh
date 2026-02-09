@@ -13,6 +13,11 @@ echo ""
 echo "📡 更新 OpenAI Research..."
 python filter_openai_research.py
 
+# 更新 Waymo Blog Technology
+echo ""
+echo "📡 更新 Waymo Blog Technology..."
+python fetch_waymo_blog.py
+
 echo ""
 echo "✅ 所有 feeds 更新完成！"
 echo ""

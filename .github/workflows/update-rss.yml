@@ -44,6 +44,10 @@ jobs:
         echo "📡 生成 OpenAI Research..."
         python filter_openai_research.py
 
+        # 生成 Waymo Blog Technology RSS
+        echo "📡 生成 Waymo Blog Technology..."
+        python fetch_waymo_blog.py
+
         echo "✅ RSS feeds 生成完成！"
         ls -lh feeds/
 
