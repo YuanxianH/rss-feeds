@@ -7,7 +7,7 @@
     <docs>http://www.rssboard.org/rss-specification</docs>
     <generator>RSS Creator - RSS Filter</generator>
     <language>zh-CN</language>
-    <lastBuildDate>Sun, 08 Feb 2026 15:42:28 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 09 Feb 2026 01:29:39 +0000</lastBuildDate>
     <item>
       <title>Weight normalization: A simple reparameterization to accelerate training of deep neural networks</title>
       <link>https://openai.com/index/weight-normalization</link>
@@ -1258,6 +1258,14 @@
       <guid isPermaLink="false">https://openai.com/index/introducing-deep-research</guid>
       <category>Research</category>
       <pubDate>Sun, 02 Feb 2025 16:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>Measuring AI’s capability to accelerate biological research</title>
+      <link>https://openai.com/index/accelerating-biological-research-in-the-wet-lab</link>
+      <description>OpenAI introduces a real-world evaluation framework to measure how AI can accelerate biological research in the wet lab. Using GPT-5 to optimize a molecular cloning protocol, the work explores both the promise and risks of AI-assisted experimentation.</description>
+      <guid isPermaLink="false">https://openai.com/index/accelerating-biological-research-in-the-wet-lab</guid>
+      <category>Research</category>
+      <pubDate>Tue, 16 Dec 2025 08:00:00 +0000</pubDate>
     </item>
     <item>
       <title>GPT-5 lowers the cost of cell-free protein synthesis</title>
