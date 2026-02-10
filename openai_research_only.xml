@@ -7,7 +7,7 @@
     <docs>http://www.rssboard.org/rss-specification</docs>
     <generator>RSS Creator - RSS Filter</generator>
     <language>zh-CN</language>
-    <lastBuildDate>Mon, 09 Feb 2026 17:12:00 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 10 Feb 2026 01:52:32 +0000</lastBuildDate>
     <item>
       <title>Weight normalization: A simple reparameterization to accelerate training of deep neural networks</title>
       <link>https://openai.com/index/weight-normalization</link>
@@ -340,16 +340,16 @@
       <pubDate>Tue, 17 Oct 2017 07:00:00 +0000</pubDate>
     </item>
     <item>
-      <title>Sim-to-real transfer of robotic control with dynamics randomization</title>
-      <link>https://openai.com/index/sim-to-real-transfer-of-robotic-control-with-dynamics-randomization</link>
-      <guid isPermaLink="false">https://openai.com/index/sim-to-real-transfer-of-robotic-control-with-dynamics-randomization</guid>
+      <title>Asymmetric actor critic for image-based robot learning</title>
+      <link>https://openai.com/index/asymmetric-actor-critic-for-image-based-robot-learning</link>
+      <guid isPermaLink="false">https://openai.com/index/asymmetric-actor-critic-for-image-based-robot-learning</guid>
       <category>Research</category>
       <pubDate>Wed, 18 Oct 2017 07:00:00 +0000</pubDate>
     </item>
     <item>
-      <title>Asymmetric actor critic for image-based robot learning</title>
-      <link>https://openai.com/index/asymmetric-actor-critic-for-image-based-robot-learning</link>
-      <guid isPermaLink="false">https://openai.com/index/asymmetric-actor-critic-for-image-based-robot-learning</guid>
+      <title>Sim-to-real transfer of robotic control with dynamics randomization</title>
+      <link>https://openai.com/index/sim-to-real-transfer-of-robotic-control-with-dynamics-randomization</link>
+      <guid isPermaLink="false">https://openai.com/index/sim-to-real-transfer-of-robotic-control-with-dynamics-randomization</guid>
       <category>Research</category>
       <pubDate>Wed, 18 Oct 2017 07:00:00 +0000</pubDate>
     </item>
@@ -423,17 +423,17 @@
       <pubDate>Thu, 15 Feb 2018 08:00:00 +0000</pubDate>
     </item>
     <item>
-      <title>Multi-Goal Reinforcement Learning: Challenging robotics environments and request for research</title>
-      <link>https://openai.com/index/multi-goal-reinforcement-learning</link>
-      <guid isPermaLink="false">https://openai.com/index/multi-goal-reinforcement-learning</guid>
-      <category>Research</category>
-      <pubDate>Mon, 26 Feb 2018 08:00:00 +0000</pubDate>
-    </item>
-    <item>
       <title>Ingredients for robotics research</title>
       <link>https://openai.com/index/ingredients-for-robotics-research</link>
       <description>We’re releasing eight simulated robotics environments and a Baselines implementation of Hindsight Experience Replay, all developed for our research over the past year. We’ve used these environments to train models which work on physical robots. We’re also releasing a set of requests for robotics research.</description>
       <guid isPermaLink="false">https://openai.com/index/ingredients-for-robotics-research</guid>
+      <category>Research</category>
+      <pubDate>Mon, 26 Feb 2018 08:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>Multi-Goal Reinforcement Learning: Challenging robotics environments and request for research</title>
+      <link>https://openai.com/index/multi-goal-reinforcement-learning</link>
+      <guid isPermaLink="false">https://openai.com/index/multi-goal-reinforcement-learning</guid>
       <category>Research</category>
       <pubDate>Mon, 26 Feb 2018 08:00:00 +0000</pubDate>
     </item>
@@ -822,18 +822,18 @@
       <pubDate>Mon, 07 Sep 2020 07:00:00 +0000</pubDate>
     </item>
     <item>
-      <title>CLIP: Connecting text and images</title>
-      <link>https://openai.com/index/clip</link>
-      <description>We’re introducing a neural network called CLIP which efficiently learns visual concepts from natural language supervision. CLIP can be applied to any visual classification benchmark by simply providing the names of the visual categories to be recognized, similar to the “zero-shot” capabilities of GPT-2 and GPT-3.</description>
-      <guid isPermaLink="false">https://openai.com/index/clip</guid>
-      <category>Research</category>
-      <pubDate>Tue, 05 Jan 2021 08:00:00 +0000</pubDate>
-    </item>
-    <item>
       <title>DALL·E: Creating images from text</title>
       <link>https://openai.com/index/dall-e</link>
       <description>We’ve trained a neural network called DALL·E that creates images from text captions for a wide range of concepts expressible in natural language.</description>
       <guid isPermaLink="false">https://openai.com/index/dall-e</guid>
+      <category>Research</category>
+      <pubDate>Tue, 05 Jan 2021 08:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>CLIP: Connecting text and images</title>
+      <link>https://openai.com/index/clip</link>
+      <description>We’re introducing a neural network called CLIP which efficiently learns visual concepts from natural language supervision. CLIP can be applied to any visual classification benchmark by simply providing the names of the visual categories to be recognized, similar to the “zero-shot” capabilities of GPT-2 and GPT-3.</description>
+      <guid isPermaLink="false">https://openai.com/index/clip</guid>
       <category>Research</category>
       <pubDate>Tue, 05 Jan 2021 08:00:00 +0000</pubDate>
     </item>
@@ -1074,6 +1074,14 @@
       <pubDate>Thu, 06 Jun 2024 00:00:00 +0000</pubDate>
     </item>
     <item>
+      <title>Consistency Models</title>
+      <link>https://openai.com/index/consistency-models</link>
+      <description>Diffusion models have significantly advanced the fields of image, audio, and video generation, but they depend on an iterative sampling process that causes slow generation.</description>
+      <guid isPermaLink="false">https://openai.com/index/consistency-models</guid>
+      <category>Research</category>
+      <pubDate>Thu, 20 Jun 2024 00:00:00 +0000</pubDate>
+    </item>
+    <item>
       <title>Improved Techniques for Training Consistency Models</title>
       <link>https://openai.com/index/improved-techniques-for-training-consistency-models</link>
       <description>Consistency models are a nascent family of generative models that can sample high quality data in one step without the need for adversarial training. </description>
@@ -1086,14 +1094,6 @@
       <link>https://openai.com/index/a-holistic-approach-to-undesired-content-detection-in-the-real-world</link>
       <description>We present a holistic approach to building a robust and useful natural language classification system for real-world content moderation.</description>
       <guid isPermaLink="false">https://openai.com/index/a-holistic-approach-to-undesired-content-detection-in-the-real-world</guid>
-      <category>Research</category>
-      <pubDate>Thu, 20 Jun 2024 00:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>Consistency Models</title>
-      <link>https://openai.com/index/consistency-models</link>
-      <description>Diffusion models have significantly advanced the fields of image, audio, and video generation, but they depend on an iterative sampling process that causes slow generation.</description>
-      <guid isPermaLink="false">https://openai.com/index/consistency-models</guid>
       <category>Research</category>
       <pubDate>Thu, 20 Jun 2024 00:00:00 +0000</pubDate>
     </item>
@@ -1234,18 +1234,18 @@
       <pubDate>Thu, 23 Jan 2025 10:00:00 +0000</pubDate>
     </item>
     <item>
-      <title>OpenAI o3-mini</title>
-      <link>https://openai.com/index/openai-o3-mini</link>
-      <description>Pushing the frontier of cost-effective reasoning.</description>
-      <guid isPermaLink="false">https://openai.com/index/openai-o3-mini</guid>
-      <category>Research</category>
-      <pubDate>Fri, 31 Jan 2025 11:00:00 +0000</pubDate>
-    </item>
-    <item>
       <title>OpenAI o3-mini System Card</title>
       <link>https://openai.com/index/o3-mini-system-card</link>
       <description>This report outlines the safety work carried out for the OpenAI o3-mini model, including safety evaluations, external red teaming, and Preparedness Framework evaluations.</description>
       <guid isPermaLink="false">https://openai.com/index/o3-mini-system-card</guid>
+      <category>Research</category>
+      <pubDate>Fri, 31 Jan 2025 11:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>OpenAI o3-mini</title>
+      <link>https://openai.com/index/openai-o3-mini</link>
+      <description>Pushing the frontier of cost-effective reasoning.</description>
+      <guid isPermaLink="false">https://openai.com/index/openai-o3-mini</guid>
       <category>Research</category>
       <pubDate>Fri, 31 Jan 2025 11:00:00 +0000</pubDate>
     </item>

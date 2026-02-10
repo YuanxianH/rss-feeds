@@ -7,306 +7,306 @@
     <docs>http://www.rssboard.org/rss-specification</docs>
     <generator>RSS Creator</generator>
     <language>zh-CN</language>
-    <lastBuildDate>Mon, 09 Feb 2026 17:11:56 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 10 Feb 2026 01:52:29 +0000</lastBuildDate>
     <item>
       <title>LET-3D-AP: Longitudinal Error Tolerant 3D Average Precision for Camera-Only 3D Detection</title>
       <link>https://waymo.com/research/let-3d-ap-longitudinal-error-tolerant-3d-average-precision-for-camera-only/</link>
       <description>Wei-Chih Hung,Henrik Kretzschmar,Vincent Casser,Jyh-Jing Hwang,Dragomir Anguelov</description>
-      <pubDate>Mon, 09 Feb 2026 17:11:56 +0000</pubDate>
+      <pubDate>Tue, 10 Feb 2026 01:52:29 +0000</pubDate>
     </item>
     <item>
       <title>RIDDLE: Lidar Data Compression with Range Image Deep Delta Encoding</title>
       <link>https://waymo.com/research/riddle-lidar-data-compression-with-range-image-deep-delta-encoding/</link>
       <description>Xuanyu Zhou,Charles R. Qi,Yin Zhou,Dragomir Anguelov</description>
-      <pubDate>Mon, 09 Feb 2026 17:11:56 +0000</pubDate>
+      <pubDate>Tue, 10 Feb 2026 01:52:29 +0000</pubDate>
     </item>
     <item>
       <title>Optimizing Anchor-based Detectors for Autonomous Driving Scenes</title>
       <link>https://waymo.com/research/optimizing-anchor-based-detectors-for-autonomous-driving-scenes/</link>
       <description>Xianzhi Du,Wei-Chih Hung,Tsung-Yin Lin</description>
-      <pubDate>Mon, 09 Feb 2026 17:11:56 +0000</pubDate>
+      <pubDate>Tue, 10 Feb 2026 01:52:29 +0000</pubDate>
     </item>
     <item>
       <title>VN-Transformer: Rotation-Equivariant Attention for Vector Neurons</title>
       <link>https://waymo.com/research/vn-transformer-rotation-equivariant-attention-for-vector-neurons/</link>
       <description>Serge Assaad,Carlton Downey,Rami Al-Rfou,Nigamaa Nayakanti,Ben Sapp</description>
-      <pubDate>Mon, 09 Feb 2026 17:11:56 +0000</pubDate>
+      <pubDate>Tue, 10 Feb 2026 01:52:29 +0000</pubDate>
     </item>
     <item>
       <title>CausalAgents: A Robustness Benchmark for Motion Forecasting using Causal Relationships</title>
       <link>https://waymo.com/research/causalagents-a-robustness-benchmark-for-motion-forecasting-using-causal/</link>
       <description>Rebecca Roelofs,Liting Sun,Benjamin Caine,Khaled S. Refaat,Ben Sapp,Scott Ettinger,Wei Chai</description>
-      <pubDate>Mon, 09 Feb 2026 17:11:56 +0000</pubDate>
+      <pubDate>Tue, 10 Feb 2026 01:52:29 +0000</pubDate>
     </item>
     <item>
       <title>LidarNAS: Unifying and Searching Neural Architectures for 3D Point Clouds</title>
       <link>https://waymo.com/research/lidarnas-unifying-and-searching-neural-architectures-for-3d-point-clouds/</link>
       <description>Chenxi Liu,Zhaoqi Leng,Pei Sun,Shuyang Cheng,Charles R. Qi,Yin Zhou,Mingxing Tan,Dragomir Anguelov</description>
-      <pubDate>Mon, 09 Feb 2026 17:11:56 +0000</pubDate>
+      <pubDate>Tue, 10 Feb 2026 01:52:29 +0000</pubDate>
     </item>
     <item>
       <title>SWFormer: Sparse Window Transformer for 3D Object Detection in Point Clouds</title>
       <link>https://waymo.com/research/swformer-sparse-window-transformer-for-3d-object-detection-in-point-clouds/</link>
       <description>Pei Sun,Mingxing Tan,Weiyue Wang,Chenxi Liu,Fei Xia,Zhaoqi Leng,Dragomir Anguelov</description>
-      <pubDate>Mon, 09 Feb 2026 17:11:56 +0000</pubDate>
+      <pubDate>Tue, 10 Feb 2026 01:52:29 +0000</pubDate>
     </item>
     <item>
       <title>Waymo Open Dataset: Panoramic Video Panoptic Segmentation</title>
       <link>https://waymo.com/research/waymo-open-dataset-panoramic-video-panoptic-segmentation/</link>
       <description>Jieru Mei,Alex Zihao Zhu,Xinchen Yan,Hang Yan,Siyuan Qiao,Yukun Zhu,Liang-Chieh Chen,Henrik Kretzschmar,Dragomir Anguelov</description>
-      <pubDate>Mon, 09 Feb 2026 17:11:56 +0000</pubDate>
+      <pubDate>Tue, 10 Feb 2026 01:52:29 +0000</pubDate>
     </item>
     <item>
       <title>CramNet: Camera-Radar Fusion with Ray-Constrained Cross-Attention for Robust 3D Object Detection</title>
       <link>https://waymo.com/research/cramnet-camera-radar-fusion-with-ray-constrained-cross-attention-for-robust/</link>
       <description>Jyh-Jing Hwang,Henrik Kretzschmar,Joshua Manela,Sean Rafferty,Nicholas Armstrong-Crews,Tiffany Chen,Dragomir Anguelov</description>
-      <pubDate>Mon, 09 Feb 2026 17:11:56 +0000</pubDate>
+      <pubDate>Tue, 10 Feb 2026 01:52:29 +0000</pubDate>
     </item>
     <item>
       <title>LESS: Label-Efficient Semantic Segmentation for LiDAR Point Clouds</title>
       <link>https://waymo.com/research/less-label-efficient-semantic-segmentation-for-lidar-point-clouds/</link>
       <description>Minghua Liu,Yin Zhou,Charles R. Qi,Boqing Gong,Hao Su,Dragomir Anguelov</description>
-      <pubDate>Mon, 09 Feb 2026 17:11:56 +0000</pubDate>
+      <pubDate>Tue, 10 Feb 2026 01:52:29 +0000</pubDate>
     </item>
     <item>
       <title>Motion Inspired Unsupervised Perception and Prediction in Autonomous Driving</title>
       <link>https://waymo.com/research/motion-inspired-unsupervised-perception-and-prediction-in-autonomous-driving/</link>
       <description>Mahyar Najibi,Jingwei Ji,Yin Zhou,Charles R. Qi,Xinchen Yan,Scott Ettinger,Dragomir Anguelov</description>
-      <pubDate>Mon, 09 Feb 2026 17:11:56 +0000</pubDate>
+      <pubDate>Tue, 10 Feb 2026 01:52:29 +0000</pubDate>
     </item>
     <item>
       <title>Instance Segmentation with Cross-Modal Consistency</title>
       <link>https://waymo.com/research/instance-segmentation-with-cross-modal-consistency/</link>
       <description>Alex Zihao Zhu,Vincent Casser,Reza Mahjourian,Henrik Kretzschmar,Sören Pirk</description>
-      <pubDate>Mon, 09 Feb 2026 17:11:56 +0000</pubDate>
+      <pubDate>Tue, 10 Feb 2026 01:52:29 +0000</pubDate>
     </item>
     <item>
       <title>PseudoAugment: Learning to Use Unlabeled Data for Data Augmentation in Point Clouds</title>
       <link>https://waymo.com/research/pseudoaugment-learning-to-use-unlabeled-data-for-data-augmentation-in-point/</link>
       <description>Zhaoqi Leng,Shuyang Cheng,Benjamin Caine,Weiyue Wang,Xiao Zhang,Jonathon Shlens,Mingxing Tan,Dragomir Anguelov</description>
-      <pubDate>Mon, 09 Feb 2026 17:11:56 +0000</pubDate>
+      <pubDate>Tue, 10 Feb 2026 01:52:29 +0000</pubDate>
     </item>
     <item>
       <title>Improving the Intra-class Long-tail in 3D Detection via Rare Example Mining</title>
       <link>https://waymo.com/research/improving-the-intra-class-long-tail-in-3d-detection-via-rare-example-mining/</link>
       <description>Chiyu Max Jiang,Mahyar Najibi,Charles R. Qi,Yin Zhou,Dragomir Anguelov</description>
-      <pubDate>Mon, 09 Feb 2026 17:11:56 +0000</pubDate>
+      <pubDate>Tue, 10 Feb 2026 01:52:29 +0000</pubDate>
     </item>
     <item>
       <title>Hierarchical Model-Based Imitation Learning for Planning in Autonomous Driving</title>
       <link>https://waymo.com/research/hierarchical-model-based-imitation-learning-for-planning-in-autonomous/</link>
       <description>Eli Bronstein,Mark Palatucci,Dominik Notz,Brandyn White,Alex Kuefler,Yiren Lu,Supratik Paul,Payam Nikdel,Paul Mougin,Hongge Chen,Justin Fu,Austin Abrams,Punit Shah,Evan Racah,Benjamin Frenkel,Shimon Whiteson,Dragomir Anguelov</description>
-      <pubDate>Mon, 09 Feb 2026 17:11:56 +0000</pubDate>
+      <pubDate>Tue, 10 Feb 2026 01:52:29 +0000</pubDate>
     </item>
     <item>
       <title>Particle-Based Score Estimation for State Space Model Learning in Autonomous Driving</title>
       <link>https://waymo.com/research/particle-based-score-estimation-for-state-space-model-learning-in-autonomous/</link>
       <description>Angad Singh,Omar Makhlouf,Maximilian Igl,Joao Messias,Arnaud Doucet,Shimon Whiteson</description>
-      <pubDate>Mon, 09 Feb 2026 17:11:56 +0000</pubDate>
+      <pubDate>Tue, 10 Feb 2026 01:52:29 +0000</pubDate>
     </item>
     <item>
       <title>Embedding Synthetic Off-Policy Experience for Autonomous Driving via Zero-Shot Curricula</title>
       <link>https://waymo.com/research/embedding-synthetic-off-policy-experience-for-autonomous-driving-via-zero/</link>
       <description>Eli Bronstein,Sirish Srinivasan,Supratik Paul,Aman Sinha,Matthew O'Kelly,Payam Nikdel,Shimon Whiteson</description>
-      <pubDate>Mon, 09 Feb 2026 17:11:56 +0000</pubDate>
+      <pubDate>Tue, 10 Feb 2026 01:52:29 +0000</pubDate>
     </item>
     <item>
       <title>JFP: Joint Future Prediction with Interactive Multi-Agent Modeling for Autonomous Driving</title>
       <link>https://waymo.com/research/jfp-joint-future-prediction-with-interactive-multi-agent-modeling-for/</link>
       <description>Wenjie Luo,Cheolho Park,Andre Cornman,Benjamin Sapp,Dragomir Anguelov</description>
-      <pubDate>Mon, 09 Feb 2026 17:11:56 +0000</pubDate>
+      <pubDate>Tue, 10 Feb 2026 01:52:29 +0000</pubDate>
     </item>
     <item>
       <title>HUM3DIL: Semi-supervised Multi-modal 3D Human Pose Estimation for Autonomous Driving</title>
       <link>https://waymo.com/research/hum3dil-semi-supervised-multi-modal-3d-human-pose-estimation-for-autonomous/</link>
       <description>Andrei Zanfir,Mihai Zanfir,Alexander Gorban,Jingwei Ji,Yin Zhou,Dragomir Anguelov,Cristian Sminchisescu</description>
-      <pubDate>Mon, 09 Feb 2026 17:11:56 +0000</pubDate>
+      <pubDate>Tue, 10 Feb 2026 01:52:29 +0000</pubDate>
     </item>
     <item>
       <title>Imitation Is Not Enough: Robustifying Imitation with Reinforcement Learning for Challenging Driving Scenarios</title>
       <link>https://waymo.com/research/imitation-is-not-enough-robustifying-imitation-with-reinforcement-learning/</link>
       <description>Yiren Lu,Justin Fu,George Tucker,Xinlei Pan,Eli Bronstein,Becca Roelofs,Benjamin Sapp,Aleksandra Faust,Brandyn White,Shimon Whiteson,Dragomir Anguelov,Sergey Levine</description>
-      <pubDate>Mon, 09 Feb 2026 17:11:56 +0000</pubDate>
+      <pubDate>Tue, 10 Feb 2026 01:52:29 +0000</pubDate>
     </item>
     <item>
       <title>WOMD-LiDAR: Raw Sensor Dataset Benchmark for Motion Forecasting</title>
       <link>https://waymo.com/research/womd-lidar/</link>
       <description>Kan Chen,Runzhou Ge,Hang Qiu,Rami Al-Rfou,Charles R. Qi,Xuanyu Zhou,Zoey Yang,Scott Ettinger,Pei Sun,Zhaoqi Leng,Mustafa Baniodeh,Ivan Bogun,Weiyue Wang,Mingxing Tan,Dragomir Anguelov</description>
-      <pubDate>Mon, 09 Feb 2026 17:11:56 +0000</pubDate>
+      <pubDate>Tue, 10 Feb 2026 01:52:29 +0000</pubDate>
     </item>
     <item>
       <title>LidarAugment: Searching for Scalable 3D LiDAR Data Augmentations</title>
       <link>https://waymo.com/research/lidaraugment-searching-for-scalable-3d-lidar-data-augmentations/</link>
       <description>Zhaoqi Leng,Guowang Li,Chenxi Liu,Ekin Dogus Cubuk,Pei Sun,Tong He,Dragomir Anguelov,Mingxing Tan</description>
-      <pubDate>Mon, 09 Feb 2026 17:11:56 +0000</pubDate>
+      <pubDate>Tue, 10 Feb 2026 01:52:29 +0000</pubDate>
     </item>
     <item>
       <title>Wayformer: Motion Forecasting via Simple &amp; Efficient Attention Networks</title>
       <link>https://waymo.com/research/wayformer/</link>
       <description>Nigamaa Nayakanti,Rami Al-Rfou,Aurick Zhou,Kratarth Goel,Khaled S. Refaat,Benjamin Sapp</description>
-      <pubDate>Mon, 09 Feb 2026 17:11:56 +0000</pubDate>
+      <pubDate>Tue, 10 Feb 2026 01:52:29 +0000</pubDate>
     </item>
     <item>
       <title>Pedestrian Crossing Action Recognition and Trajectory Prediction with 3D Human Keypoints</title>
       <link>https://waymo.com/research/pedestrian-crossing-action-recognition-and-trajectory-prediction-with-3d/</link>
       <description>Jiachen Li,Xinwei Shi,Feiyu Chen,Jonathan Stroud,Zhishuai Zhang,Tian Lan,Junhua Mao,Jeonhyung Kang,Khaled S. Refaat,Weilong Yang,Eugene Ie,Congcong Li</description>
-      <pubDate>Mon, 09 Feb 2026 17:11:56 +0000</pubDate>
+      <pubDate>Tue, 10 Feb 2026 01:52:29 +0000</pubDate>
     </item>
     <item>
       <title>MoDAR: Using Motion Forecasting for 3D Object Detection in Point Cloud Sequences</title>
       <link>https://waymo.com/research/modar-using-motion-forecasting-for-3d-object-detection-in-point-cloud/</link>
       <description>Yingwei Li,Charles R. Qi,Yin Zhou,Chenxi Liu,Dragomir Anguelov</description>
-      <pubDate>Mon, 09 Feb 2026 17:11:56 +0000</pubDate>
+      <pubDate>Tue, 10 Feb 2026 01:52:29 +0000</pubDate>
     </item>
     <item>
       <title>3D Human Keypoints Estimation From Point Clouds in the Wild Without Human Labels</title>
       <link>https://waymo.com/research/3d-human-keypoints-estimation-from-point-clouds-in-the-wild-without-human/</link>
       <description>Zhenzhen Weng,Alexander Gorban,Jingwei Ji,Mahyar Najibi,Yin Zhou,Dragomir Anguelov</description>
-      <pubDate>Mon, 09 Feb 2026 17:11:56 +0000</pubDate>
+      <pubDate>Tue, 10 Feb 2026 01:52:29 +0000</pubDate>
     </item>
     <item>
       <title>NeRDi: Single-View NeRF Synthesis with Language-Guided Diffusion as General Image Priors</title>
       <link>https://waymo.com/research/nerdi-single-view-nerf-synthesis-with-language-guided-diffusion-as-general/</link>
       <description>Congyue Deng,Chiyu Max Jiang,Charles R. Qi,Xinchen Yan,Yin Zhou,Leonidas Guibas,Dragomir Anguelov</description>
-      <pubDate>Mon, 09 Feb 2026 17:11:56 +0000</pubDate>
+      <pubDate>Tue, 10 Feb 2026 01:52:29 +0000</pubDate>
     </item>
     <item>
       <title>MotionDiffuser: Controllable Multi-Agent Motion Prediction using Diffusion</title>
       <link>https://waymo.com/research/motiondiffuser-controllable-multi-agent-motion-prediction-using-diffusion/</link>
       <description>Chiyu Max Jiang,Andre Cornman,Cheolho Park,Ben Sapp,Yin Zhou,Dragomir Anguelov</description>
-      <pubDate>Mon, 09 Feb 2026 17:11:56 +0000</pubDate>
+      <pubDate>Tue, 10 Feb 2026 01:52:29 +0000</pubDate>
     </item>
     <item>
       <title>GINA-3D: Learning to Generate Implicit Neural Assets in the Wild</title>
       <link>https://waymo.com/research/gina-3d-learning-to-generate-implicit-neural-assets-in-the-wild/</link>
       <description>Bokui Shen,Xinchen Yan,Charles R. Qi,Mahyar Najibi,Boyang Deng,Leonidas Guibas,Yin Zhou,Dragomir Anguelov</description>
-      <pubDate>Mon, 09 Feb 2026 17:11:56 +0000</pubDate>
+      <pubDate>Tue, 10 Feb 2026 01:52:29 +0000</pubDate>
     </item>
     <item>
       <title>The Waymo Open Sim Agents Challenge</title>
       <link>https://waymo.com/research/the-waymo-open-sim-agents-challenge/</link>
       <description>Nico Montali,John Lambert,Paul Mougin,Alex Kuefler,Nick Rhinehart,Michelle Li,Cole Gulino,Tristan Emrich,Zoey Yang,Shimon Whiteson,Brandyn White,Dragomir Anguelov</description>
-      <pubDate>Mon, 09 Feb 2026 17:11:56 +0000</pubDate>
+      <pubDate>Tue, 10 Feb 2026 01:52:29 +0000</pubDate>
     </item>
     <item>
       <title>Hierarchical Imitation Learning for Stochastic Environments</title>
       <link>https://waymo.com/research/hierarchical-imitation-learning-for-stochastic-environments/</link>
       <description>Maximilian Igl,Punit Shah,Paul Mougin,Sirish Srinivasan,Tarun Gupta,Brandyn White,Kyriacos Shiarlis,Shimon Whiteson</description>
-      <pubDate>Mon, 09 Feb 2026 17:11:56 +0000</pubDate>
+      <pubDate>Tue, 10 Feb 2026 01:52:29 +0000</pubDate>
     </item>
     <item>
       <title>LEF: Late-to-Early Temporal Fusion for LiDAR 3D Object Detection</title>
       <link>https://waymo.com/research/lef-late-to-early-temporal-fusion-for-lidar-3d-object-detection/</link>
       <description>Tong He,Pei Sun,Zhaoqi Leng,Chenxi Liu,Dragomir Anguelov,Mingxing Tan</description>
-      <pubDate>Mon, 09 Feb 2026 17:11:56 +0000</pubDate>
+      <pubDate>Tue, 10 Feb 2026 01:52:29 +0000</pubDate>
     </item>
     <item>
       <title>Unsupervised 3D Perception with 2D Vision-Language Distillation for Autonomous Driving</title>
       <link>https://waymo.com/research/unsupervised-3d-perception-with-2d-vision-language-distillation-for/</link>
       <description>Mahyar Najibi,Jingwei Ji,Yin Zhou,Charles R. Qi,Xinchen Yan,Scott Ettinger,Dragomir Anguelov</description>
-      <pubDate>Mon, 09 Feb 2026 17:11:56 +0000</pubDate>
+      <pubDate>Tue, 10 Feb 2026 01:52:29 +0000</pubDate>
     </item>
     <item>
       <title>MotionLM: Multi-Agent Motion Forecasting as Language Modeling</title>
       <link>https://waymo.com/research/motionlm/</link>
       <description>Ari Seff,Brian Cera,Dian Chen,Mason Ng,Aurick Zhou,Nigamaa Nayakanti,Khaled S. Refaat,Rami Al-Rfou,Benjamin Sapp</description>
-      <pubDate>Mon, 09 Feb 2026 17:11:56 +0000</pubDate>
+      <pubDate>Tue, 10 Feb 2026 01:52:29 +0000</pubDate>
     </item>
     <item>
       <title>Superpixel Transformers for Efficient Semantic Segmentation</title>
       <link>https://waymo.com/research/superpixel-transformers-for-efficient-semantic-segmentation/</link>
       <description>Alex Zihao Zhu,Jieru Mei,Siyuan Qiao,Hang Yan,Yukun Zhu,Liang-Chieh Chen,Henrik Kretzschmar</description>
-      <pubDate>Mon, 09 Feb 2026 17:11:56 +0000</pubDate>
+      <pubDate>Tue, 10 Feb 2026 01:52:29 +0000</pubDate>
     </item>
     <item>
       <title>Waymax: An Accelerated, Data-Driven Simulator forLarge-Scale Autonomous Driving Research</title>
       <link>https://waymo.com/research/waymax/</link>
       <description>Cole Gulino,Justin Fu,Wenjie Luo,George Tucker,Eli Bronstein,Yiren Lu,Jean Harb,Xinlei Pan,Yan Wang,Xiangyu Chen,JD Co-Reyes,Rishabh Agarwal,Becca Roelofs,Yao Lu,Nico Montali,Paul Mougin,Zoey Yang,Brandyn White,Aleksandra Faust,Ben Sapp,Dragomir Anguelov</description>
-      <pubDate>Mon, 09 Feb 2026 17:11:56 +0000</pubDate>
+      <pubDate>Tue, 10 Feb 2026 01:52:29 +0000</pubDate>
     </item>
     <item>
       <title>MoST: Multi-modality Scene Tokenization for Motion Prediction</title>
       <link>https://waymo.com/research/most-multi-modality-scene-tokenization-for-motion-prediction/</link>
       <description>Norman Mu,Jingwei Ji,Zhenpei Yang,Nate Harada,Haotian Tang,Kan Chen,Charles R. Qi,Runzhou Ge,Kratarth Goel,Zoey Yang,Scott Ettinger,Rami Al-Rfou,Dragomir Anguelov,Yin Zhou</description>
-      <pubDate>Mon, 09 Feb 2026 17:11:56 +0000</pubDate>
+      <pubDate>Tue, 10 Feb 2026 01:52:29 +0000</pubDate>
     </item>
     <item>
       <title>Scaling Motion Forecasting Models with Ensemble Distillation</title>
       <link>https://waymo.com/research/scaling-motion-forecasting-models-with-ensemble-distillation/</link>
       <description>Scott Ettinger,Kratarth Goel,Avikalp Srivastava,Rami Al-Rfou</description>
-      <pubDate>Mon, 09 Feb 2026 17:11:56 +0000</pubDate>
+      <pubDate>Tue, 10 Feb 2026 01:52:29 +0000</pubDate>
     </item>
     <item>
       <title>STT: Stateful Tracking with Transformers for Autonomous Driving</title>
       <link>https://waymo.com/research/stt-stateful-tracking-with-transformers-for-autonomous-driving/</link>
       <description>Longlong Jing,Ruichi Yu,Xu Chen,Zhengli Zhao,Shiwei Sheng,Colin Graber,Qi Chen,Qinru Li,Shangxuan Wu,Han Deng,Sangjin Lee,Chris Sweeney,Qiurui He,Wei-Chih Hung,Tong He,Xingyi Zhou,Farshid Moussavi,Zijian Guo,Yin Zhou,Mingxing Tan,Weilong Yang,Congcong Li</description>
-      <pubDate>Mon, 09 Feb 2026 17:11:56 +0000</pubDate>
+      <pubDate>Tue, 10 Feb 2026 01:52:29 +0000</pubDate>
     </item>
     <item>
       <title>UniGen: Unified Modeling of Initial Agent States and Trajectories for Generating Autonomous Driving Scenarios</title>
       <link>https://waymo.com/research/unigen-unified-modeling-of-initial-agent-states-and-trajectories-for/</link>
       <description>Reza Mahjourian,Rongbing Mu,Valerii Likhosherstov,Paul Mougin,Xiukun Huang,Joao Messias,Shimon Whiteson</description>
-      <pubDate>Mon, 09 Feb 2026 17:11:56 +0000</pubDate>
+      <pubDate>Tue, 10 Feb 2026 01:52:29 +0000</pubDate>
     </item>
     <item>
       <title>PVTransformer: Point-to-Voxel Transformer for Scalable 3D Object Detection</title>
       <link>https://waymo.com/research/pvtransformer-point-to-voxel-transformer-for-scalable-3d-object-detection/</link>
       <description>Zhaoqi Leng,Pei Sun,Tong He,Dragomir Anguelov,Mingxing Tan</description>
-      <pubDate>Mon, 09 Feb 2026 17:11:56 +0000</pubDate>
+      <pubDate>Tue, 10 Feb 2026 01:52:29 +0000</pubDate>
     </item>
     <item>
       <title>3D Open-Vocabulary Panoptic Segmentation with 2D-3D Vision-Language Distillation</title>
       <link>https://waymo.com/research/3d-open-vocabulary-panoptic-segmentation-with-2d-3d-vision-language/</link>
       <description>Zihao Xiao,Longlong Jing,Shangxuan Wu,Alex Zihao Zhu,Jingwei Ji,Chiyu Max Jiang,Wei-Chih Hung,Thomas Funkhouser,Anelia Angelova,Weicheng Kuo,Yin Zhou,Shiwei Sheng</description>
-      <pubDate>Mon, 09 Feb 2026 17:11:56 +0000</pubDate>
+      <pubDate>Tue, 10 Feb 2026 01:52:29 +0000</pubDate>
     </item>
     <item>
       <title>Improving Agent Behaviors with RL Fine-tuning for Autonomous Driving</title>
       <link>https://waymo.com/research/improving-agent-behaviors-with-rl-fine-tuning-for-autonomous-driving/</link>
       <description>Zhenghao Peng,Wenjie Luo,Yiren Lu,Tianyi Shen,Cole Gulino,Ari Seff,Justin Fu</description>
-      <pubDate>Mon, 09 Feb 2026 17:11:56 +0000</pubDate>
+      <pubDate>Tue, 10 Feb 2026 01:52:29 +0000</pubDate>
     </item>
     <item>
       <title>Rate-Informed Discovery via Bayesian Adaptive Multifidelity Sampling</title>
       <link>https://waymo.com/research/rate-informed-discovery-via-bayesian-adaptive-multifidelity-sampling/</link>
       <description>Aman Sinha,Payam Nikdel,Supratik Paul,Shimon Whiteson</description>
-      <pubDate>Mon, 09 Feb 2026 17:11:56 +0000</pubDate>
+      <pubDate>Tue, 10 Feb 2026 01:52:29 +0000</pubDate>
     </item>
     <item>
       <title>EMMA: End-to-End Multimodal Model for Autonomous Driving</title>
       <link>https://waymo.com/research/emma/</link>
       <description>Jyh-Jing Hwang,Runsheng Xu,Hubert Lin,Wei-Chih Hung,Jingwei Ji,Kristy Choi,Di Huang,Tong He,Paul Covington,Benjamin Sapp,Yin Zhou,James Guo,Dragomir Anguelov,Mingxing Tan</description>
-      <pubDate>Mon, 09 Feb 2026 17:11:56 +0000</pubDate>
+      <pubDate>Tue, 10 Feb 2026 01:52:29 +0000</pubDate>
     </item>
     <item>
       <title>SceneDiffuser: Efficient and Controllable Driving Simulation Initialization and Rollout</title>
       <link>https://waymo.com/research/scenediffuser-efficient-and-controllable-driving-simulation-initialization/</link>
       <description>Chiyu Max Jiang,Yijing Bai,Andre Cornman,Christopher Davis,Xiukun Huang,Hong Jeon,Sakshum Kulshresth,John Lambert,Shuangyu Li,Xuanyu Zhou,Carlos Fuertes,Chang Yuan,Mingxing Tan,Yin Zhou,Dragomir Anguelov</description>
-      <pubDate>Mon, 09 Feb 2026 17:11:56 +0000</pubDate>
+      <pubDate>Tue, 10 Feb 2026 01:52:29 +0000</pubDate>
     </item>
     <item>
       <title>S4-Driver: Scalable Self-Supervised Driving Multimodal Large Language Model with Spatio-Temporal Visual Representation</title>
       <link>https://waymo.com/research/s4-driver-scalable-self-supervised-driving-multimodal-large-language-model/</link>
       <description>Yichen Xie,Runsheng Xu,Tong He,Jyh-Jing Hwang,Katie Luo,Jingwei Ji,Hubert Lin,Letian Chen,Yiren Lu,Zhaoqi Leng,Dragomir Anguelov,Mingxing Tan</description>
-      <pubDate>Mon, 09 Feb 2026 17:11:56 +0000</pubDate>
+      <pubDate>Tue, 10 Feb 2026 01:52:29 +0000</pubDate>
     </item>
     <item>
       <title>Scaling Laws of Motion Forecasting and Planning</title>
       <link>https://waymo.com/research/scaling-laws-of-motion-forecasting-and-planning/</link>
       <description>Mustafa Baniodeh,Kratarth Goel,Scott Ettinger,Carlos Fuertes,Ari Seff,Tim Shen,Cole Gulino,Chenjie Yang,Ghassen Jerfel,Dokook Choe,Rui Wang,Vinutha Kallem,Sergio Casas,Rami Al-Rfou,Benjamin Sapp,Dragomir Anguelov</description>
-      <pubDate>Mon, 09 Feb 2026 17:11:56 +0000</pubDate>
+      <pubDate>Tue, 10 Feb 2026 01:52:29 +0000</pubDate>
     </item>
     <item>
       <title>SceneCrafter: Controllable Multi-View Driving Scene Editing</title>
       <link>https://waymo.com/research/scenecrafter-controllable-multi-view-driving-scene-editing/</link>
       <description>Zehao Zhu,Yuliang Zou,Chiyu Max Jiang,Bo Sun,Vincent Casser,Xiukun Huang,Jiahao Wang,Zhenpei Yang,Ruiqi Gao,Leonidas Guibas,Mingxing Tan,Dragomir Anguelov</description>
-      <pubDate>Mon, 09 Feb 2026 17:11:56 +0000</pubDate>
+      <pubDate>Tue, 10 Feb 2026 01:52:29 +0000</pubDate>
     </item>
     <item>
       <title>SceneDiffuser++: City-Scale Traffic Simulation via a Generative World Model</title>
       <link>https://waymo.com/research/scenediffuser-city-scale-traffic-simulation-via-a-generative-world-model/</link>
       <description>Shuhan Tan,John Lambert,Hong Jeon,Sakshum Kulshrestha,Yijing Bai,Jing Luo,Dragomir Anguelov,Mingxing Tan,Chiyu Max Jiang</description>
-      <pubDate>Mon, 09 Feb 2026 17:11:56 +0000</pubDate>
+      <pubDate>Tue, 10 Feb 2026 01:52:29 +0000</pubDate>
     </item>
   </channel>
 </rss>
