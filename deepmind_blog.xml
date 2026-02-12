@@ -7,7 +7,7 @@
     <docs>http://www.rssboard.org/rss-specification</docs>
     <generator>RSS Creator</generator>
     <language>zh-CN</language>
-    <lastBuildDate>Thu, 12 Feb 2026 12:52:13 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 12 Feb 2026 16:48:12 +0000</lastBuildDate>
     <item>
       <title>Build with Nano Banana Pro, our Gemini 3 Pro Image model</title>
       <link>https://blog.google/technology/developers/gemini-3-pro-image-developers/?utm_source=deepmind.google&amp;utm_medium=referral&amp;utm_campaign=gdm&amp;utm_content=</link>
@@ -94,19 +94,19 @@
       <pubDate>Mon, 12 Jan 2026 00:00:00 +0000</pubDate>
     </item>
     <item>
-      <title>Project Genie: Experimenting with infinite, interactive worlds</title>
-      <link>https://blog.google/innovation-and-ai/models-and-research/google-deepmind/project-genie</link>
-      <pubDate>Mon, 12 Jan 2026 00:00:00 +0000</pubDate>
-    </item>
-    <item>
       <title>Accelerating Mathematical and Scientific Discovery with Gemini Deep Think</title>
       <link>https://deepmind.google/blog/accelerating-mathematical-and-scientific-discovery-with-gemini-deep-think/</link>
       <pubDate>Thu, 12 Feb 2026 00:00:00 +0000</pubDate>
     </item>
     <item>
-      <title>A new era of intelligence with Gemini 3</title>
-      <link>https://blog.google/products/gemini/gemini-3/?utm_source=deepmind.google&amp;utm_medium=referral&amp;utm_campaign=gdm&amp;utm_content=</link>
-      <pubDate>Wed, 12 Nov 2025 00:00:00 +0000</pubDate>
+      <title>Gemini 3 Deep Think: Advancing science, research and engineering</title>
+      <link>https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-3-deep-think/</link>
+      <pubDate>Thu, 12 Feb 2026 00:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>Project Genie: Experimenting with infinite, interactive worlds</title>
+      <link>https://blog.google/innovation-and-ai/models-and-research/google-deepmind/project-genie</link>
+      <pubDate>Mon, 12 Jan 2026 00:00:00 +0000</pubDate>
     </item>
   </channel>
 </rss>

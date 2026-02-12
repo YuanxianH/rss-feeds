@@ -7,7 +7,13 @@
     <docs>http://www.rssboard.org/rss-specification</docs>
     <generator>RSS Creator</generator>
     <language>zh-CN</language>
-    <lastBuildDate>Thu, 12 Feb 2026 12:52:20 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 12 Feb 2026 16:48:19 +0000</lastBuildDate>
+    <item>
+      <title>Beginning fully autonomous operations with the 6th-generation Waymo Driver </title>
+      <link>https://waymo.com/blog/2026/02/ro-on-6th-gen-waymo-driver</link>
+      <description>Waymo will begin fully autonomous operations with its 6th-generation Driver —an important step in bringing our technology to more riders in more cities. This latest system serves as the primary engine for our next era of expansion, with a streamlined configuration that drives down costs while maintaining our uncompromising safety standards. Designed for long-term growth across multiple vehicle platforms, this system’s expanded capabilities allow us to safely broaden our footprint into more diverse environments, including those with extreme winter weather, at an even greater scale.</description>
+      <pubDate>Thu, 12 Feb 2026 00:00:00 +0000</pubDate>
+    </item>
     <item>
       <title>The Waymo World Model: A New Frontier For Autonomous Driving Simulation</title>
       <link>https://waymo.com/blog/2026/02/the-waymo-world-model-a-new-frontier-for-autonomous-driving-simulation</link>
@@ -306,12 +312,6 @@
       <link>https://waymo.com/blog/2020/04/off-road-but-not-offline--simulation27</link>
       <description>COVID-19 has had a significant impact on the world, affecting people’s lives and forcing many businesses to suspend their operations. At Waymo, we're actively monitoring the situation, taking steps to support our local communities, and contributing to COVID-19 response efforts. While Waymo has temporarily suspended its on-the-road operations as we put the health and safety of our riders, partners, and employees first, we are still driving our technology forward with our work in simulation.</description>
       <pubDate>Tue, 28 Apr 2020 06:58:00 -0700</pubDate>
-    </item>
-    <item>
-      <title>In the driver's seat: footage from our 2009-2010 1,000 autonomous mile challenge</title>
-      <link>https://waymo.com/blog/2020/04/in-the-drivers-seat-1000-mile-challenge</link>
-      <description>In early 2009, when Waymo was first founded as the “Google Self-Driving Car Project,” Google founders Sergey Brin and Larry Page challenged our first engineers to drive autonomously without human intervention or disengagements along ten challenging 100-mile routes in our home state of California. By December 2009, the team had completed their first route, and nine months later in mid 2010, we had wrapped up the last.</description>
-      <pubDate>Wed, 22 Apr 2020 13:17:00 -0700</pubDate>
     </item>
   </channel>
 </rss>
