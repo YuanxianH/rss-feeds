@@ -48,6 +48,7 @@ def main():
 
     # 从多个页面抓取文章
     pages = [
+        "https://www.minimax.io/",
         "https://www.minimax.io/news",
         "https://www.minimax.io/blog",
     ]
@@ -64,9 +65,8 @@ def main():
     session = requests.Session()
     session.headers.update(headers)
 
-    # 从所有页面收集文章链接
-    articles = []
-    seen_urls = set()
+    # 从所有页面收集文章链接 - 先收集所有 URL
+    all_urls = set()
 
     for page_url in pages:
         logger.info(f"正在抓取页面: {page_url}")
@@ -78,31 +78,23 @@ def main():
             links = soup.find_all('a', href=True)
             for link in links:
                 href = link.get('href', '')
-                if '/news/' in href and href not in seen_urls:
+                if '/news/' in href:
                     # 清理 URL
                     if href.startswith('/'):
                         href = f"https://www.minimax.io{href}"
-                    if href not in seen_urls and 'minimax.io/news/' in href:
-                        seen_urls.add(href)
-                        title = link.get_text(strip=True)
-                        # 过滤掉按钮文字
-                        if title and len(title) > 2 and title not in ['Learn More', 'NEW']:
-                            articles.append({'url': href, 'title': title})
+                    if 'minimax.io/news/' in href:
+                        all_urls.add(href)
         except Exception as e:
             logger.warning(f"抓取页面失败 {page_url}: {e}")
 
-    logger.info(f"找到 {len(articles)} 篇文章")
-
-    # 清理标题
-    for article in articles:
-        title = article['title']
-        url = article['url']
-        # 从 URL 提取产品名
+    # 从 URL 提取标题
+    articles = []
+    for url in all_urls:
+        # 从 URL 提取产品名作为标题
         import re
         match = re.search(r'news/([^/]+)$', url)
         if match:
             slug = match.group(1)
-            # 转换 slug 为标题
             title = slug.replace('-', ' ').title()
             # 修复一些常见的产品名
             title = title.replace('M21', 'M2.1')
@@ -114,8 +106,9 @@ def main():
             title = title.replace('Music 25', 'Music 2.5')
             title = title.replace('Music 20', 'Music 2.0')
             title = title.replace('Mcp', 'MCP')
-            title = title.replace('Video Agent', 'Video Agent')
-        article['title'] = title.strip()
+            articles.append({'url': url, 'title': title})
+
+    logger.info(f"找到 {len(articles)} 篇文章")
 
     # 获取每篇文章的日期
     items = []
