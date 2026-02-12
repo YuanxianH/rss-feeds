@@ -19,7 +19,7 @@ def setup_logging():
 def get_article_date(url, session):
     """从文章页面提取日期"""
     try:
-        resp = session.get(url, timeout=15)
+        resp = session.get(url, timeout=30)
         soup = BeautifulSoup(resp.text, 'html.parser')
 
         # 方法1: 查找包含日期的 div (class 包含 text-brand-1)
@@ -46,12 +46,17 @@ def main():
     setup_logging()
     logger = logging.getLogger(__name__)
 
-    blog_url = "https://www.minimax.io/blog"
+    # 从多个页面抓取文章
+    pages = [
+        "https://www.minimax.io/news",
+        "https://www.minimax.io/blog",
+    ]
+
     output_dir = Path("feeds")
     output_dir.mkdir(exist_ok=True)
     output_path = output_dir / "minimax_blog.xml"
 
-    logger.info("正在从 MiniMax Tech Blog 获取文章...")
+    logger.info("正在从 MiniMax 网站获取所有文章...")
 
     headers = {
         "User-Agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36",
@@ -59,49 +64,63 @@ def main():
     session = requests.Session()
     session.headers.update(headers)
 
-    # 获取博客页面
-    resp = session.get(blog_url, timeout=15)
-    soup = BeautifulSoup(resp.text, 'html.parser')
-
-    # 找到所有文章链接
+    # 从所有页面收集文章链接
     articles = []
     seen_urls = set()
 
-    # 查找 li 元素中的链接 - 更精确的选择
-    lis = soup.find_all('li')
-    for li in lis:
-        links = li.find_all('a', href=True)
-        for link in links:
-            href = link.get('href', '')
-            if '/news/' in href and href not in seen_urls:
-                # 清理 URL
-                if href.startswith('/'):
-                    href = f"https://www.minimax.io{href}"
-                if href not in seen_urls and 'minimax.io/news/' in href:
-                    seen_urls.add(href)
-                    # 获取更干净的标题 - 在 li 中查找非 "Learn More" 的文本
-                    title = link.get_text(strip=True)
-                    # 如果标题是 "Learn More"，尝试从父元素获取
-                    if title == "Learn More" or not title:
-                        # 查找同级的图片或标题元素
-                        parent = link.find_parent('li')
-                        if parent:
-                            # 获取标题文本（排除按钮文字）
-                            texts = parent.find_all(string=True)
-                            for t in texts:
-                                text = t.strip()
-                                if text and text != "Learn More" and len(text) > 3:
-                                    title = text
-                                    break
-                    if title and len(title) > 2 and title != "Learn More":
-                        articles.append({'url': href, 'title': title})
+    for page_url in pages:
+        logger.info(f"正在抓取页面: {page_url}")
+        try:
+            resp = session.get(page_url, timeout=15)
+            soup = BeautifulSoup(resp.text, 'html.parser')
+
+            # 查找所有包含 /news/ 的链接
+            links = soup.find_all('a', href=True)
+            for link in links:
+                href = link.get('href', '')
+                if '/news/' in href and href not in seen_urls:
+                    # 清理 URL
+                    if href.startswith('/'):
+                        href = f"https://www.minimax.io{href}"
+                    if href not in seen_urls and 'minimax.io/news/' in href:
+                        seen_urls.add(href)
+                        title = link.get_text(strip=True)
+                        # 过滤掉按钮文字
+                        if title and len(title) > 2 and title not in ['Learn More', 'NEW']:
+                            articles.append({'url': href, 'title': title})
+        except Exception as e:
+            logger.warning(f"抓取页面失败 {page_url}: {e}")
 
     logger.info(f"找到 {len(articles)} 篇文章")
+
+    # 清理标题
+    for article in articles:
+        title = article['title']
+        url = article['url']
+        # 从 URL 提取产品名
+        import re
+        match = re.search(r'news/([^/]+)$', url)
+        if match:
+            slug = match.group(1)
+            # 转换 slug 为标题
+            title = slug.replace('-', ' ').title()
+            # 修复一些常见的产品名
+            title = title.replace('M21', 'M2.1')
+            title = title.replace('M25', 'M2.5')
+            title = title.replace('M20', 'M2.0')
+            title = title.replace('M2 Her', 'M2-her')
+            title = title.replace('Speech 26', 'Speech 2.6')
+            title = title.replace('Hailuo 23', 'Hailuo 2.3')
+            title = title.replace('Music 25', 'Music 2.5')
+            title = title.replace('Music 20', 'Music 2.0')
+            title = title.replace('Mcp', 'MCP')
+            title = title.replace('Video Agent', 'Video Agent')
+        article['title'] = title.strip()
 
     # 获取每篇文章的日期
     items = []
     for i, article in enumerate(articles[:20]):  # 限制数量
-        logger.info(f"获取文章 {i+1}/{min(len(articles), 20)}: {article['title'][:30]}")
+        logger.info(f"获取文章 {i+1}/{min(len(articles), 20)}: {article['title'][:40]}")
         date = get_article_date(article['url'], session)
         if date:
             # 转换日期格式
@@ -126,9 +145,9 @@ def main():
         return
 
     generator = RSSGenerator(
-        title="MiniMax Tech Blog",
-        link="https://www.minimax.io/blog",
-        description="Latest updates and announcements from MiniMax AI",
+        title="MiniMax News",
+        link="https://www.minimax.io/news",
+        description="Latest news and updates from MiniMax AI",
     )
     generator.add_items(items)
 
