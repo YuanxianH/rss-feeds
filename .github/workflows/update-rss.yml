@@ -48,6 +48,10 @@ jobs:
         echo "📡 生成 Waymo Blog Technology..."
         python fetch_waymo_blog.py
 
+        # 生成 MiniMax Tech Blog RSS
+        echo "📡 生成 MiniMax Tech Blog..."
+        python fetch_minimax_blog.py
+
         echo "✅ RSS feeds 生成完成！"
         ls -lh feeds/
 
