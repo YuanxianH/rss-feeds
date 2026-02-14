@@ -27,7 +27,12 @@ run_step() {
 run_step "Google DeepMind / Meta / Waymo Research" env PYTHONPATH="$ROOT_DIR" python "$ROOT_DIR/main.py"
 run_step "OpenAI Research" env PYTHONPATH="$ROOT_DIR" python "$ROOT_DIR/scripts/feed_jobs/filter_openai_research.py"
 run_step "Waymo Blog Technology" env PYTHONPATH="$ROOT_DIR" python "$ROOT_DIR/scripts/feed_jobs/fetch_waymo_blog.py"
-run_step "MiniMax Tech Blog" env PYTHONPATH="$ROOT_DIR" python "$ROOT_DIR/scripts/feed_jobs/fetch_minimax_blog.py"
+run_step \
+  "MiniMax News" \
+  env PYTHONPATH="$ROOT_DIR" python "$ROOT_DIR/scripts/feed_jobs/fetch_minimax_blog.py" \
+  --max-items 200 \
+  --max-discovery-pages 200 \
+  --max-sitemaps 200
 
 echo ""
 echo "生成的 RSS 文件："
