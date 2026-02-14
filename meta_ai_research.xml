@@ -7,7 +7,7 @@
     <docs>http://www.rssboard.org/rss-specification</docs>
     <generator>RSS Creator</generator>
     <language>zh-CN</language>
-    <lastBuildDate>Fri, 13 Feb 2026 12:42:22 +0000</lastBuildDate>
+    <lastBuildDate>Sat, 14 Feb 2026 01:24:05 +0000</lastBuildDate>
     <item>
       <title>Equi-normalization of Neural Networks | Facebook AI Research</title>
       <link>https://ai.meta.com/research/publications/equi-normalization-of-neural-networks/</link>
@@ -81,12 +81,6 @@
       <pubDate>Thu, 31 Oct 2019 00:00:00 +0000</pubDate>
     </item>
     <item>
-      <title>Rubric-Based Benchmarking and Reinforcement Learning for Advancing LLM Instruction Following</title>
-      <link>https://ai.meta.com/research/publications/rubric-based-benchmarking-and-reinforcement-learning-for-advancing-llm-instruction-following/</link>
-      <description>Yun He, Wenzhe Li, Hejia Zhang, Vincent Li, Karishma Mandyam, Sopan Khosla, Yuanhao Xiong, Nanshu Wang, Selina Xiaoliang Peng, Shengjie Bi, Shishir G. Patil, Qi Qi, Shengyu Feng, Julian Katz-Samuels, Richard Yuanzhe Pang, Sujan Gonugondla, Hunter Lang, Yue Yu, Yundi Qian, Maryam Fazel-Zarandi, Licheng Yu, Amine Benhalloum, Hany Awadalla, Manaal Faruqui</description>
-      <pubDate>Mon, 01 Dec 2025 00:00:00 +0000</pubDate>
-    </item>
-    <item>
       <title>Text-Guided Semantic Image Encoder</title>
       <link>https://ai.meta.com/research/publications/text-guided-semantic-image-encoder/</link>
       <description>Raghuveer Thirukovalluru, Xiaochuang Han, Bhuwan Dhingra, Emily Dinan, Maha Elbayad</description>
@@ -151,6 +145,12 @@
       <link>https://ai.meta.com/research/publications/unit-unified-multimodal-chain-of-thought-test-time-scaling/</link>
       <description>Leon Liangyu Chen, Haoyu Ma, Zhipeng Fan, Ziqi Huang, Animesh Sinha, Xiaoliang Dai, Jialiang Wang, Zecheng He, Jianwei Yang, Chunyuan Li, Junzhe Sun, Chu Wang, Serena Yeung-Levy, Felix Juefei-Xu</description>
       <pubDate>Wed, 11 Feb 2026 00:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>FERRET: Framework for Expansion Reliant Red Teaming</title>
+      <link>https://ai.meta.com/research/publications/ferret-framework-for-expansion-reliant-red-teaming/</link>
+      <description>Ninareh Mehrabi, Vítor Albiero, Maya Pavlova, Joanna Bitton</description>
+      <pubDate>Fri, 13 Feb 2026 00:00:00 +0000</pubDate>
     </item>
   </channel>
 </rss>
