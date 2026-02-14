@@ -32,6 +32,31 @@ DEFAULT_MAX_DISCOVERY_PAGES = 60
 DEFAULT_MAX_SITEMAP_FILES = 80
 REQUEST_TIMEOUT = 20
 NEWS_SLUG_PATTERN = re.compile(r"/news/[A-Za-z0-9._~/%\-]+")
+# 需要过滤掉的无效 slug 模式（JSON-LD 类型标识符、语言代码、时间戳、FAQ 等）
+INVALID_SLUG_PATTERNS = [
+    # 语言代码: /news/en, /news/zh, /news/en-US
+    re.compile(r"^/news/[a-z]{2}(-[A-Za-z]{2})?$"),
+    # JSON-LD 类型（PascalCase 或全大写）: NewsArticle, WebPage, Organization, ImageObject, ListItem, BreadcrumbList
+    re.compile(r"^/news/[A-Z][a-z]+(?:[A-Z][a-z]+)*$"),
+    # 全大写单词: Brand, Global, News
+    re.compile(r"^/news/[A-Z][a-z]+$"),
+    # 全小写常见非文章单词: customer service, contact, about, home
+    re.compile(r"^/news/(?:customer[ -]?service|contact|about|home|faq|help|support|blog|products?|terms|privacy|search)$", re.IGNORECASE),
+    # 时间戳: /news/2026-02, /news/2021-12, /news/2026-02-14T11:04:30.812Z
+    re.compile(r"^/news/\d{4}-\d{2}(?:T\d{2}:\d{2}(?::\d{2}(?:\.\d+)?Z?)?)?$"),
+    # ISO 时间戳格式: 2026-02-14T11:13:39.368Z
+    re.compile(r"^/news/\d{4}-\d{2}-\d{2}T\d{2}:\d{2}:\d{2}\.\d{3}Z?$"),
+    # 邮箱: /news/api@minimax.io
+    re.compile(r"^/news/[\w.%+-]+@[\w.-]+$"),
+    # 动态路由: /news/page-xxx.js, /news/[detail]/xxx
+    re.compile(r"^/news/(?:\[[\w]+\]|page-[\w]+\.js)"),
+    # 问句（FAQ）: /news/What should I do, /news/How can I, /news/Can I, /news/Making Music...
+    re.compile(r"^/news/(?:What(?: should| does)?|How (?:can|do|does)|Can (?:I|you)|Is (?:it|there)|Where|When|Why|Which|Making |If you |Where can |How should)"),
+    # URL 编码的反斜杠或特殊字符
+    re.compile(r"^/news/.+[\\%]"),
+    # 包含空格的标题类 slug（通常是文章标题，不是有效 slug）
+    re.compile(r"^/news/.+ .+$"),
+]
 SITEMAP_CANDIDATES = [
     f"{BASE_URL}/sitemap.xml",
     f"{BASE_URL}/sitemap_index.xml",
@@ -96,6 +121,11 @@ def normalize_news_url(raw_url: str, base_url: str = NEWS_URL) -> Optional[str]:
         return None
     if not path.startswith("/news/"):
         return None
+
+    # 过滤掉无效的 slug 模式（JSON-LD 类型标识符、语言代码、时间戳等）
+    for pattern in INVALID_SLUG_PATTERNS:
+        if pattern.match(path):
+            return None
 
     cleaned = parsed._replace(path=path, params="", query="", fragment="")
     return urlunparse(cleaned)
