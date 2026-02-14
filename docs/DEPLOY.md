@@ -4,8 +4,8 @@
 
 ## 部署方式
 
-- 推荐：`deploy.sh` 推送代码，触发 GitHub Actions 自动生成并发布
-- 可选：`publish.sh` 直接把本地 `feeds/*.xml` 发布到 `gh-pages`
+- 推荐：`scripts/ops/deploy.sh` 推送代码，触发 GitHub Actions 自动生成并发布
+- 可选：`scripts/ops/publish.sh` 直接把本地 `feeds/*.xml` 发布到 `gh-pages`
 
 ## 前置条件
 
@@ -19,7 +19,7 @@
 
 ```bash
 cd /path/to/rss_creator
-./deploy.sh --remote-url https://github.com/YOUR_USERNAME/rss-feeds.git
+./scripts/ops/deploy.sh --remote-url https://github.com/YOUR_USERNAME/rss-feeds.git
 ```
 
 说明：
@@ -30,7 +30,7 @@ cd /path/to/rss_creator
 ### 2. 后续更新
 
 ```bash
-./deploy.sh
+./scripts/ops/deploy.sh
 ```
 
 可选参数：
@@ -58,22 +58,22 @@ https://YOUR_USERNAME.github.io/rss-feeds/deepmind_blog.xml
 ## 方式二：手动发布到 gh-pages
 
 ```bash
-./publish.sh
+./scripts/ops/publish.sh
 ```
 
 常见参数：
 
 ```bash
 # 使用已有 XML，不重新抓取
-./publish.sh --skip-generate
+./scripts/ops/publish.sh --skip-generate
 
 # 指定发布分支
-./publish.sh --branch gh-pages
+./scripts/ops/publish.sh --branch gh-pages
 ```
 
 ## 常见问题
 
-### 1) `deploy.sh` 提示 dirty working tree
+### 1) `scripts/ops/deploy.sh` 提示 dirty working tree
 
 默认安全策略。可选处理：
 

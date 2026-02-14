@@ -7,6 +7,7 @@ import logging
 
 from .scraper import WebScraper
 from .parser import HTMLParser
+from .path_utils import resolve_output_path
 from .rss_generator import RSSGenerator
 
 logger = logging.getLogger(__name__)
@@ -27,17 +28,7 @@ class FeedCreator:
 
     def _resolve_output_path(self, output: str) -> Path:
         """确保输出文件在 feeds 目录内，避免路径逃逸。"""
-        if not output or not output.strip():
-            raise ValueError("output 不能为空")
-
-        output_path = (self.feeds_dir / output).resolve()
-        feeds_root = self.feeds_dir.resolve()
-        if output_path != feeds_root and feeds_root not in output_path.parents:
-            raise ValueError(f"非法输出路径: {output}")
-        if not output_path.name:
-            raise ValueError(f"非法输出文件名: {output}")
-        output_path.parent.mkdir(parents=True, exist_ok=True)
-        return output_path
+        return resolve_output_path(self.feeds_dir, output)
 
     def create_feed(self, config: Dict) -> bool:
         """

@@ -17,7 +17,7 @@ COMMIT_MESSAGE=""
 usage() {
     cat <<'EOF'
 用法:
-  ./deploy.sh [选项]
+  ./scripts/ops/deploy.sh [选项]
 
 选项:
   --remote-url <url>    当 origin 不存在时设置远程 URL

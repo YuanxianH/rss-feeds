@@ -12,10 +12,11 @@
 
 ```bash
 pip install -r requirements.txt
-./update_feeds.sh
+python main.py
 ```
 
 生成文件位于 `feeds/`。
+核心配置入口是 `config.yaml` 的 `jobs` 数组。
 
 ## 仓库结构
 
@@ -23,9 +24,9 @@ pip install -r requirements.txt
 rss_creator/
 ├── docs/
 ├── scripts/
-│   ├── feed_jobs/
 │   └── ops/
 ├── src/
+│   └── jobs/
 ├── tests/
 ├── main.py
 ├── config.yaml

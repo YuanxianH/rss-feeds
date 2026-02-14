@@ -3,8 +3,8 @@
 import requests
 from typing import Optional
 import logging
-from requests.adapters import HTTPAdapter
-from urllib3.util.retry import Retry
+
+from .http_client import create_retry_session
 
 logger = logging.getLogger(__name__)
 
@@ -29,25 +29,12 @@ class WebScraper:
             backoff_factor: 退避系数
         """
         self.timeout = timeout
-        self.headers = {
-            "User-Agent": user_agent or "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36"
-        }
-        self.session = requests.Session()
-        self.session.headers.update(self.headers)
-
-        retry_policy = Retry(
-            total=retries,
-            connect=retries,
-            read=retries,
-            status=retries,
-            status_forcelist=(429, 500, 502, 503, 504),
-            allowed_methods=frozenset(["GET", "HEAD"]),
+        self.session = create_retry_session(
+            user_agent=user_agent or "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36",
+            retries=retries,
             backoff_factor=backoff_factor,
-            raise_on_status=False,
         )
-        adapter = HTTPAdapter(max_retries=retry_policy)
-        self.session.mount("https://", adapter)
-        self.session.mount("http://", adapter)
+        self.headers = dict(self.session.headers)
 
     def fetch(self, url: str, encoding: Optional[str] = None) -> Optional[str]:
         """

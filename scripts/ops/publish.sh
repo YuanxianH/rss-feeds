@@ -17,7 +17,7 @@ WORKTREE_DIR=""
 usage() {
     cat <<'EOF'
 用法:
-  ./publish.sh [选项]
+  ./scripts/ops/publish.sh [选项]
 
 选项:
   --remote <name>         远程名（默认: origin）
@@ -101,7 +101,7 @@ fi
 
 if [[ "$SKIP_GENERATE" -ne 1 ]]; then
     log "🔄 生成最新 RSS..."
-    "$ROOT_DIR/scripts/ops/update_feeds.sh"
+    env PYTHONPATH="$ROOT_DIR" python "$ROOT_DIR/main.py"
 fi
 
 SOURCE_PATH="$ROOT_DIR/$SOURCE_DIR"

@@ -1,48 +1,51 @@
 #!/usr/bin/env python3
 """RSS Creator - 主程序入口"""
 
-import yaml
-import logging
 import argparse
-import time
-import schedule
+import logging
 import sys
+import time
 from typing import Sequence
 
-from src.feed_creator import FeedCreator
+import schedule
+import yaml
 
-
-def setup_logging(verbose: bool = False):
-    """配置日志"""
-    level = logging.DEBUG if verbose else logging.INFO
-    logging.basicConfig(
-        level=level,
-        format="%(asctime)s [%(levelname)s] %(message)s",
-        datefmt="%Y-%m-%d %H:%M:%S"
-    )
+from src.jobs import JobRunner
+from src.runtime import setup_logging
 
 
 def load_config(config_path: str = "config.yaml") -> dict:
     """加载配置文件"""
-    with open(config_path, "r", encoding="utf-8") as f:
-        return yaml.safe_load(f)
+    with open(config_path, "r", encoding="utf-8") as file:
+        return yaml.safe_load(file) or {}
+
+
+def _run_jobs(config: dict, feeds_dir: str) -> dict[str, bool]:
+    jobs_config = config.get("jobs", [])
+    if not jobs_config:
+        return {}
+
+    enabled_jobs = [job for job in jobs_config if job.get("enabled", True)]
+    if not enabled_jobs:
+        logging.info("配置中的 jobs 均为禁用状态")
+        return {}
+
+    logging.info(f"开始执行 {len(enabled_jobs)} 个 jobs")
+    runner = JobRunner(feeds_dir=feeds_dir)
+    return runner.run_jobs(enabled_jobs)
 
 
 def run_once(config: dict, feeds_dir: str) -> bool:
     """运行一次 RSS 生成"""
-    creator = FeedCreator(feeds_dir=feeds_dir)
-    feeds_config = config.get("feeds", [])
+    results = _run_jobs(config, feeds_dir)
 
-    if not feeds_config:
-        logging.warning("配置文件中没有定义任何 feeds")
+    if not results:
+        logging.warning("配置文件中没有定义任何可执行任务")
         return False
 
-    logging.info(f"开始生成 {len(feeds_config)} 个 RSS feeds")
-    results = creator.create_all_feeds(feeds_config)
-    failed_feeds = [name for name, success in results.items() if not success]
-
-    if failed_feeds:
-        logging.error(f"以下 feeds 失败: {', '.join(failed_feeds)}")
+    failed_tasks = [name for name, success in results.items() if not success]
+    if failed_tasks:
+        logging.error(f"以下任务失败: {', '.join(failed_tasks)}")
         return False
 
     return True
@@ -98,20 +101,17 @@ def main(argv: Sequence[str] | None = None) -> int:
 
     args = parser.parse_args(argv)
 
-    # 配置日志
     setup_logging(args.verbose)
 
-    # 加载配置
     try:
         config = load_config(args.config)
     except FileNotFoundError:
         logging.error(f"配置文件不存在: {args.config}")
         return 2
-    except yaml.YAMLError as e:
-        logging.error(f"配置文件格式错误: {e}")
+    except yaml.YAMLError as exc:
+        logging.error(f"配置文件格式错误: {exc}")
         return 2
 
-    # 运行
     if args.schedule or config.get("update", {}).get("enabled", False):
         return run_scheduler(config, args.output)
 

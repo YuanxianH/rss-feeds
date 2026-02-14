@@ -5,9 +5,9 @@ from feedgen.feed import FeedGenerator
 from bs4 import BeautifulSoup
 from typing import List, Optional
 import logging
-from requests.adapters import HTTPAdapter
-from urllib3.util.retry import Retry
 from dateutil import parser as date_parser
+
+from .http_client import create_retry_session
 
 logger = logging.getLogger(__name__)
 
@@ -30,24 +30,11 @@ class RSSFilter:
         """
         self.source_url = source_url
         self.timeout = timeout
-        self.session = requests.Session()
-        self.session.headers.update({
-            "User-Agent": user_agent or "RSSCreator/1.0 (+https://github.com)"
-        })
-
-        retry_policy = Retry(
-            total=retries,
-            connect=retries,
-            read=retries,
-            status=retries,
-            status_forcelist=(429, 500, 502, 503, 504),
-            allowed_methods=frozenset(["GET", "HEAD"]),
+        self.session = create_retry_session(
+            user_agent=user_agent or "RSSCreator/1.0 (+https://github.com)",
+            retries=retries,
             backoff_factor=0.5,
-            raise_on_status=False,
         )
-        adapter = HTTPAdapter(max_retries=retry_policy)
-        self.session.mount("https://", adapter)
-        self.session.mount("http://", adapter)
 
     def fetch_rss(self) -> Optional[str]:
         """获取源 RSS 内容"""

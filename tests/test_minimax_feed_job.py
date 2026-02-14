@@ -1,6 +1,6 @@
 import unittest
 
-from scripts.feed_jobs.fetch_minimax_blog import (
+from src.jobs.minimax_news import (
     extract_article_item_from_html,
     extract_news_urls_from_html,
     _extract_news_urls_from_text,

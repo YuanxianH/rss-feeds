@@ -1,54 +1,19 @@
-# RSS 生成器配置文件
+# RSS 生成器配置文件（统一 jobs 模型）
 
-feeds:
-  # Google DeepMind 博客
-  - name: "Google DeepMind Blog"
+jobs:
+  # Google DeepMind 博客（通用选择器抓取）
+  - type: "selector_scrape"
+    name: "Google DeepMind Blog"
     url: "https://deepmind.google/blog/"
     output: "deepmind_blog.xml"
-
-    # RSS feed 元信息
     title: "Google DeepMind Blog"
     description: "Discover the latest AI breakthroughs, projects, and updates from Google DeepMind"
     link: "https://deepmind.google/blog/"
-
-    # CSS 选择器 - 针对 DeepMind 的卡片结构
     selectors:
-      # 文章卡片：<article> 标签（class="card card-blog"）
       items: "article.card-blog"
-
-      # 标题在 <h3> 中
       title: "h3.card__title"
-
-      # 链接在第一个 <a> 标签中
       link: "a"
-
-      # 日期在 <time> 标签中
       date: "time"
-
-    # 抓取选项
-    options:
-      max_items: 20                  # 最多保留条目数
-      timeout: 15                    # 请求超时（秒）
-      retries: 2                     # 网络失败重试次数
-      backoff_factor: 0.5            # 退避系数（秒）
-      user_agent: "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36"
-      encoding: "utf-8"              # 页面编码
-
-  # Waymo Research 论文
-  - name: "Waymo Research"
-    url: "https://waymo.com/intl/zh-cn/research/"
-    output: "waymo_research.xml"
-
-    title: "Waymo Research"
-    description: "Latest research publications from Waymo"
-    link: "https://waymo.com/intl/zh-cn/research/"
-
-    selectors:
-      items: "article"
-      title: "h3 a"
-      link: "h3 a"
-      description: "ul"
-
     options:
       max_items: 50
       timeout: 15
@@ -57,29 +22,41 @@ feeds:
       user_agent: "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36"
       encoding: "utf-8"
 
-  # ✅ OpenAI 官方 RSS（推荐直接订阅）
-  # OpenAI 提供官方 RSS feed，可以直接在 RSS 阅读器中订阅：
-  # 🔗 https://openai.com/news/rss.xml
-  #
-  # 包含内容：新闻、研究、产品更新等
-  # 无需使用本工具抓取，直接订阅即可！
+  # Waymo Research 论文（通用选择器抓取）
+  - type: "selector_scrape"
+    name: "Waymo Research"
+    url: "https://waymo.com/intl/zh-cn/research/"
+    output: "waymo_research.xml"
+    title: "Waymo Research"
+    description: "Latest research publications from Waymo"
+    link: "https://waymo.com/intl/zh-cn/research/"
+    selectors:
+      items: "article"
+      title: "h3 a"
+      link: "h3 a"
+      description: "ul"
+    options:
+      max_items: 50
+      timeout: 15
+      retries: 2
+      backoff_factor: 0.5
+      user_agent: "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36"
+      encoding: "utf-8"
 
-  # Meta AI Research Publications
-  - name: "Meta AI Research"
+  # Meta AI Research Publications（通用选择器抓取）
+  - type: "selector_scrape"
+    name: "Meta AI Research"
     url: "https://ai.meta.com/results/?content_types%5B0%5D=publication"
     output: "meta_ai_research.xml"
-
     title: "Meta AI Research Publications"
     description: "Latest research publications from Meta AI"
     link: "https://ai.meta.com/results/?content_types%5B0%5D=publication"
-
     selectors:
       items: "[data-ms*='listview-card']"
       title: "h4._8w6a._8w6e._8w61"
       link: "a._8xc5._8x97._8w61"
       description: "p._8w6f._8w61._8w6h._8zob"
       date: "p._8w6f._8wl0._8w6h"
-
     options:
       max_items: 50
       timeout: 15
@@ -88,29 +65,61 @@ feeds:
       user_agent: "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36"
       encoding: "utf-8"
 
-  # 示例配置 - 可以根据其他网站修改
-  # - name: "示例博客"
+  # OpenAI RSS 研究过滤
+  - type: "openai_research_filter"
+    name: "OpenAI Research"
+    source_url: "https://openai.com/news/rss.xml"
+    output: "openai_research_only.xml"
+    title: "OpenAI Research Only"
+    description: "OpenAI 官方 RSS - 仅研究内容"
+    categories:
+      - "Research"
+      - "research"
+      - "Science"
+      - "science"
+    options:
+      timeout: 15
+      retries: 2
+      user_agent: "RSSCreator/1.0 (+https://github.com)"
+
+  # Waymo Blog Technology（API 任务）
+  - type: "waymo_blog_technology"
+    name: "Waymo Blog Technology"
+    api_url: "https://waymo.com/api/blog/posts"
+    base_url: "https://waymo.com"
+    tag: "Technology"
+    output: "waymo_blog_tech.xml"
+    title: "Waymo Blog - Technology"
+    description: "Waymo Blog Technology 分类文章"
+    link: "https://waymo.com/blog/search/?t=Technology"
+    options:
+      max_items: 50
+      timeout: 15
+      retries: 2
+      backoff_factor: 0.5
+      user_agent: "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36"
+
+  # MiniMax News（复杂页面任务）
+  - type: "minimax_news"
+    name: "MiniMax News"
+    output: "minimax_blog.xml"
+    title: "MiniMax News"
+    description: "Latest news and updates from MiniMax"
+    link: "https://www.minimax.io/news"
+    options:
+      max_items: 50
+      max_discovery_pages: 50
+      max_sitemaps: 200
+
+  # 示例配置
+  # - type: "selector_scrape"
+  #   name: "Example"
   #   url: "https://example.com/blog"
   #   output: "example_blog.xml"
-  #
-  #   title: "示例博客 RSS"
-  #   description: "示例博客的最新文章"
-  #   link: "https://example.com/blog"
-  #
   #   selectors:
   #     items: "article.post"
   #     title: "h2.title"
   #     link: "a.permalink"
-  #     description: "p.summary"
-  #     date: "time.published"
-  #
-  #   options:
-  #     max_items: 20
-  #     timeout: 10
-  #     retries: 2
-  #     backoff_factor: 0.5
-  #     user_agent: "Mozilla/5.0"
-  #     encoding: "utf-8"
 
 # 更新设置
 update:

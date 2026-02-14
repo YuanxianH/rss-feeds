@@ -1,11 +1,9 @@
-#!/usr/bin/env python3
 """从 MiniMax News 页面提取文章并生成 RSS。"""
 
+import argparse
 import json
 import logging
 import re
-import sys
-import argparse
 from collections import deque
 from datetime import datetime, timezone
 from pathlib import Path
@@ -15,14 +13,14 @@ from urllib.parse import urljoin, urlparse, urlunparse
 import requests
 from bs4 import BeautifulSoup
 from dateutil import parser as date_parser
-from requests.adapters import HTTPAdapter
-from urllib3.util.retry import Retry
 
-ROOT_DIR = Path(__file__).resolve().parents[2]
-if str(ROOT_DIR) not in sys.path:
-    sys.path.insert(0, str(ROOT_DIR))
-
+from src.http_client import create_retry_session
+from src.path_utils import resolve_output_path
 from src.rss_generator import RSSGenerator
+from src.runtime import setup_logging
+
+from .base import FeedJob, JobContext, JobResult
+from .registry import register_job
 
 BASE_URL = "https://www.minimax.io"
 NEWS_URL = f"{BASE_URL}/news"
@@ -65,42 +63,15 @@ SITEMAP_CANDIDATES = [
     f"{BASE_URL}/sitemap/news.xml",
     f"{BASE_URL}/sitemap-news.xml",
 ]
-
-
-def setup_logging(verbose: bool = False):
-    logging.basicConfig(
-        level=logging.DEBUG if verbose else logging.INFO,
-        format="%(asctime)s [%(levelname)s] %(message)s",
-        datefmt="%Y-%m-%d %H:%M:%S",
-    )
+DEFAULT_FEEDS_DIR = Path(__file__).resolve().parents[2] / "feeds"
 
 
 def create_session() -> requests.Session:
-    session = requests.Session()
-    session.headers.update(
-        {
-            "User-Agent": (
-                "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) "
-                "AppleWebKit/537.36 (KHTML, like Gecko) Chrome/122.0.0.0 Safari/537.36"
-            ),
-            "Accept": "text/html,application/xml,application/xhtml+xml",
-        }
-    )
-
-    retry = Retry(
-        total=2,
-        connect=2,
-        read=2,
-        status=2,
-        status_forcelist=(429, 500, 502, 503, 504),
-        allowed_methods=frozenset(["GET", "HEAD"]),
+    return create_retry_session(
+        accept="text/html,application/xml,application/xhtml+xml",
+        retries=2,
         backoff_factor=0.5,
-        raise_on_status=False,
     )
-    adapter = HTTPAdapter(max_retries=retry)
-    session.mount("https://", adapter)
-    session.mount("http://", adapter)
-    return session
 
 
 def normalize_news_url(raw_url: str, base_url: str = NEWS_URL) -> Optional[str]:
@@ -485,6 +456,82 @@ def _fetch_news_urls(session: requests.Session, logger: logging.Logger) -> list[
     return []
 
 
+@register_job
+class MiniMaxNewsJob(FeedJob):
+    job_type = "minimax_news"
+
+    def run(self, context: JobContext) -> JobResult:
+        options = self.config.get("options", {})
+        max_items = int(options.get("max_items", DEFAULT_MAX_ITEMS))
+        max_discovery_pages = int(options.get("max_discovery_pages", DEFAULT_MAX_DISCOVERY_PAGES))
+        max_sitemaps = int(options.get("max_sitemaps", DEFAULT_MAX_SITEMAP_FILES))
+        output_file = self.config.get("output", OUTPUT_FILENAME)
+
+        output_path = resolve_output_path(context.feeds_dir, output_file)
+        logger = logging.getLogger(__name__)
+        session = create_session()
+        logger.info(f"正在从 {NEWS_URL} 获取文章...")
+
+        list_page_urls = _fetch_news_urls(session, logger)
+        sitemap_urls = _fetch_news_urls_from_sitemap(session, logger, max_sitemap_files=max_sitemaps)
+        seed_urls = []
+        for url in list_page_urls + sitemap_urls:
+            if url not in seed_urls:
+                seed_urls.append(url)
+
+        article_urls = _crawl_related_news_urls(
+            session,
+            seed_urls,
+            logger,
+            max_discovery_pages=max_discovery_pages,
+        )
+        if not article_urls:
+            return JobResult(name=self.name, success=False, details="未找到任何 MiniMax News 文章链接")
+
+        logger.info(
+            "提取到 %s 条候选文章链接（列表页: %s, sitemap: %s, 递归后总计: %s）",
+            len(article_urls),
+            len(list_page_urls),
+            len(sitemap_urls),
+            len(article_urls),
+        )
+
+        items = []
+        seen_links = set()
+        for idx, article_url in enumerate(article_urls, start=1):
+            logger.info(f"解析文章 {idx}/{len(article_urls)}: {article_url}")
+            item = _fetch_article_item(session, article_url, logger)
+            if not item:
+                continue
+            link = item.get("link")
+            if not link or link in seen_links:
+                continue
+            seen_links.add(link)
+            items.append(item)
+            if len(items) >= max_items:
+                break
+
+        if not items:
+            return JobResult(name=self.name, success=False, details="MiniMax News 文章解析失败，未生成任何条目")
+
+        # feedgen 内部会以栈顺序输出，反转以保持“最新优先”阅读体验。
+        ordered_items = list(reversed(items))
+
+        generator = RSSGenerator(
+            title=self.config.get("title", "MiniMax News"),
+            link=self.config.get("link", NEWS_URL),
+            description=self.config.get("description", "Latest news and updates from MiniMax"),
+        )
+        generator.add_items(ordered_items)
+
+        success = generator.generate(str(output_path))
+        if not success:
+            return JobResult(name=self.name, success=False, details="RSS 生成失败")
+
+        logger.info(f"成功生成 {len(items)} 篇 MiniMax News 到 {output_path}")
+        return JobResult(name=self.name, success=True, details=f"输出: {output_path}")
+
+
 def main(argv: Optional[list[str]] = None) -> int:
     parser = argparse.ArgumentParser(description="Fetch MiniMax news and generate RSS")
     parser.add_argument("--max-items", type=int, default=DEFAULT_MAX_ITEMS, help="Maximum feed items")
@@ -500,80 +547,25 @@ def main(argv: Optional[list[str]] = None) -> int:
         default=DEFAULT_MAX_SITEMAP_FILES,
         help="Maximum sitemap files to scan",
     )
+    parser.add_argument("-o", "--output", default=OUTPUT_FILENAME, help="Output RSS filename")
     parser.add_argument("-v", "--verbose", action="store_true", help="Enable debug logging")
     args = parser.parse_args(argv)
 
     setup_logging(args.verbose)
-    logger = logging.getLogger(__name__)
-
-    output_dir = ROOT_DIR / "feeds"
-    output_dir.mkdir(parents=True, exist_ok=True)
-    output_path = output_dir / OUTPUT_FILENAME
-
-    session = create_session()
-    logger.info(f"正在从 {NEWS_URL} 获取文章...")
-
-    list_page_urls = _fetch_news_urls(session, logger)
-    sitemap_urls = _fetch_news_urls_from_sitemap(session, logger, max_sitemap_files=args.max_sitemaps)
-    seed_urls = []
-    for url in list_page_urls + sitemap_urls:
-        if url not in seed_urls:
-            seed_urls.append(url)
-
-    article_urls = _crawl_related_news_urls(
-        session,
-        seed_urls,
-        logger,
-        max_discovery_pages=args.max_discovery_pages,
+    job = MiniMaxNewsJob(
+        {
+            "name": "MiniMax News",
+            "output": args.output,
+            "options": {
+                "max_items": args.max_items,
+                "max_discovery_pages": args.max_discovery_pages,
+                "max_sitemaps": args.max_sitemaps,
+            },
+        }
     )
-    if not article_urls:
-        logger.error("未找到任何 MiniMax News 文章链接")
-        return 1
-
-    logger.info(
-        "提取到 %s 条候选文章链接（列表页: %s, sitemap: %s, 递归后总计: %s）",
-        len(article_urls),
-        len(list_page_urls),
-        len(sitemap_urls),
-        len(article_urls),
-    )
-
-    items = []
-    seen_links = set()
-    for idx, article_url in enumerate(article_urls, start=1):
-        logger.info(f"解析文章 {idx}/{len(article_urls)}: {article_url}")
-        item = _fetch_article_item(session, article_url, logger)
-        if not item:
-            continue
-        link = item.get("link")
-        if not link or link in seen_links:
-            continue
-        seen_links.add(link)
-        items.append(item)
-        if len(items) >= args.max_items:
-            break
-
-    if not items:
-        logger.error("MiniMax News 文章解析失败，未生成任何条目")
-        return 1
-
-    # feedgen 内部会以栈顺序输出，反转以保持“最新优先”阅读体验。
-    ordered_items = list(reversed(items))
-
-    generator = RSSGenerator(
-        title="MiniMax News",
-        link=NEWS_URL,
-        description="Latest news and updates from MiniMax",
-    )
-    generator.add_items(ordered_items)
-
-    if not generator.generate(str(output_path)):
-        logger.error("RSS 生成失败")
-        return 1
-
-    logger.info(f"成功生成 {len(items)} 篇 MiniMax News 到 {output_path}")
-    return 0
+    result = job.run(JobContext(feeds_dir=DEFAULT_FEEDS_DIR))
+    return 0 if result.success else 1
 
 
 if __name__ == "__main__":
-    sys.exit(main())
+    raise SystemExit(main())

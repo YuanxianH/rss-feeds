@@ -18,7 +18,7 @@ pip install -r requirements.txt
 
 ## 快速开始
 
-### 1) 仅按配置生成抓取型 feeds
+### 1) 按配置生成全部 RSS 任务
 
 ```bash
 python main.py
@@ -27,12 +27,12 @@ python main.py
 ### 2) 全量更新（推荐）
 
 ```bash
-./update_feeds.sh
+python main.py -v
 ```
 
 说明：
 
-- 会执行 `main.py` 和额外任务（OpenAI/Waymo/MiniMax）
+- 会执行 `main.py`，统一处理 `config.yaml` 的 `jobs[]`
 - 任一任务失败时，脚本最终返回非零退出码
 
 ### 3) 本地预览
@@ -62,31 +62,30 @@ python -m http.server 8000
 python -m unittest discover -s tests -p "test_*.py"
 
 # 首次推送（origin 未配置）
-./deploy.sh --remote-url https://github.com/YOUR_USERNAME/rss-feeds.git
+./scripts/ops/deploy.sh --remote-url https://github.com/YOUR_USERNAME/rss-feeds.git
 
 # 后续推送（触发 Actions 自动更新与发布）
-./deploy.sh
+./scripts/ops/deploy.sh
 
 # 直接手动发布 feeds 到 gh-pages
-./publish.sh
+./scripts/ops/publish.sh
 ```
 
 ## 配置 `config.yaml`
 
 核心字段：
 
-- `feeds[].url`: 目标网页
-- `feeds[].selectors`: CSS 选择器
-- `feeds[].options.max_items`: 最大条目数
-- `feeds[].options.timeout`: 超时秒数
-- `feeds[].options.retries`: 重试次数
-- `feeds[].options.backoff_factor`: 重试退避系数
+- `jobs[].type`: 任务类型（如 `selector_scrape` / `openai_research_filter` / `waymo_blog_technology` / `minimax_news`）
+- `jobs[].name`: 任务名称（用于日志和结果统计）
+- `jobs[].output`: 输出文件名（写入 `feeds/`）
+- `jobs[].options.*`: 任务参数（如 `max_items` / `timeout` / `retries`）
 
 最小示例：
 
 ```yaml
-feeds:
-  - name: "Example"
+jobs:
+  - type: "selector_scrape"
+    name: "Example"
     url: "https://example.com/news"
     output: "example.xml"
     selectors:

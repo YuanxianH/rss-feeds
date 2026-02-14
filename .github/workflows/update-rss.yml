@@ -36,13 +36,9 @@ jobs:
         # 创建 feeds 目录
         mkdir -p feeds
 
-        # 生成 config.yaml 中定义的 feeds（DeepMind, Waymo, Meta AI）
-        echo "📡 生成 feeds (config.yaml)..."
+        # 统一入口：生成 config.yaml 的 jobs[]（含 selector/API/过滤任务）
+        echo "📡 生成 jobs..."
         python main.py
-
-        # 生成 MiniMax Tech Blog RSS（需要专门脚本）
-        echo "📡 生成 MiniMax Tech Blog..."
-        python scripts/feed_jobs/fetch_minimax_blog.py
 
         echo "✅ RSS feeds 生成完成！"
         ls -lh feeds/
