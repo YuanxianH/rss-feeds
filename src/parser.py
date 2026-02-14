@@ -2,8 +2,9 @@
 
 from bs4 import BeautifulSoup
 from typing import List, Dict, Optional
-from datetime import datetime
+from datetime import timezone
 from dateutil import parser as date_parser
+from urllib.parse import urljoin
 import logging
 
 logger = logging.getLogger(__name__)
@@ -35,12 +36,18 @@ class HTMLParser:
             解析后的条目列表
         """
         items = []
+        seen_links = set()
 
         # 查找所有条目容器
-        containers = self.soup.select(selectors.get("items", ""))
+        items_selector = selectors.get("items")
+        if not items_selector:
+            logger.warning("未配置 items 选择器")
+            return items
+
+        containers = self.soup.select(items_selector)
 
         if not containers:
-            logger.warning(f"未找到匹配的条目，选择器: {selectors.get('items')}")
+            logger.warning(f"未找到匹配的条目，选择器: {items_selector}")
             return items
 
         logger.info(f"找到 {len(containers)} 个条目")
@@ -49,6 +56,9 @@ class HTMLParser:
             try:
                 item = self._parse_item(container, selectors)
                 if item and item.get("title") and item.get("link"):
+                    if item["link"] in seen_links:
+                        continue
+                    seen_links.add(item["link"])
                     items.append(item)
             except Exception as e:
                 logger.debug(f"解析条目失败: {e}")
@@ -103,21 +113,19 @@ class HTMLParser:
         if not url:
             return ""
 
-        # 如果是完整 URL，直接返回
-        if url.startswith(("http://", "https://")):
+        if not self.base_url:
             return url
 
-        # 如果是相对 URL 且有 base_url，拼接
-        if self.base_url and url.startswith("/"):
-            return f"{self.base_url}{url}"
-
-        return url
+        # 使用标准 URL 规则处理 /、./、../、查询参数等场景
+        return urljoin(f"{self.base_url}/", url)
 
     def _parse_date(self, date_string: str) -> Optional[str]:
         """解析日期字符串为 RSS 格式"""
         try:
             dt = date_parser.parse(date_string)
+            if dt.tzinfo is None:
+                dt = dt.replace(tzinfo=timezone.utc)
             return dt.strftime("%a, %d %b %Y %H:%M:%S %z")
         except Exception:
-            # 如果解析失败，返回当前时间
-            return datetime.now().strftime("%a, %d %b %Y %H:%M:%S %z")
+            # 日期解析失败时返回 None，避免把旧内容伪装成最新内容
+            return None

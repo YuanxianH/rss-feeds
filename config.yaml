@@ -29,6 +29,8 @@ feeds:
     options:
       max_items: 20                  # 最多保留条目数
       timeout: 15                    # 请求超时（秒）
+      retries: 2                     # 网络失败重试次数
+      backoff_factor: 0.5            # 退避系数（秒）
       user_agent: "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36"
       encoding: "utf-8"              # 页面编码
 
@@ -50,6 +52,8 @@ feeds:
     options:
       max_items: 50
       timeout: 15
+      retries: 2
+      backoff_factor: 0.5
       user_agent: "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36"
       encoding: "utf-8"
 
@@ -79,6 +83,8 @@ feeds:
     options:
       max_items: 50
       timeout: 15
+      retries: 2
+      backoff_factor: 0.5
       user_agent: "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36"
       encoding: "utf-8"
 
@@ -101,6 +107,8 @@ feeds:
   #   options:
   #     max_items: 20
   #     timeout: 10
+  #     retries: 2
+  #     backoff_factor: 0.5
   #     user_agent: "Mozilla/5.0"
   #     encoding: "utf-8"
 

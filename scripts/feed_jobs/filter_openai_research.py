@@ -2,7 +2,13 @@
 """过滤 OpenAI RSS，只保留研究内容"""
 
 import logging
+import sys
 from pathlib import Path
+
+ROOT_DIR = Path(__file__).resolve().parents[2]
+if str(ROOT_DIR) not in sys.path:
+    sys.path.insert(0, str(ROOT_DIR))
+
 from src.rss_filter import RSSFilter
 
 
@@ -15,13 +21,13 @@ def setup_logging():
     )
 
 
-def main():
+def main() -> int:
     """主函数"""
     setup_logging()
 
     # 创建输出目录
-    output_dir = Path("feeds")
-    output_dir.mkdir(exist_ok=True)
+    output_dir = ROOT_DIR / "feeds"
+    output_dir.mkdir(parents=True, exist_ok=True)
 
     # 过滤器配置
     source_url = "https://openai.com/news/rss.xml"
@@ -50,14 +56,11 @@ def main():
 
     if success:
         logger.info(f"✅ 成功！RSS 已保存到: {output_path}")
-        logger.info(f"📡 在 RSS 阅读器中订阅: file://{output_path.absolute()}")
-        logger.info("\n或者启动本地服务器：")
-        logger.info(f"  cd {output_dir}")
-        logger.info("  python -m http.server 8000")
-        logger.info(f"  然后订阅: http://localhost:8000/{output_path.name}")
+        return 0
     else:
         logger.error("❌ 过滤失败")
+        return 1
 
 
 if __name__ == "__main__":
-    main()
+    sys.exit(main())

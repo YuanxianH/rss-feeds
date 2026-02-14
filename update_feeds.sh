@@ -1,25 +1,7 @@
 #!/bin/bash
-# 更新所有 RSS feeds
+# 根目录兼容入口，转发到 scripts/ops/update_feeds.sh
 
-echo "🔄 开始更新 RSS feeds..."
-echo ""
+set -euo pipefail
 
-# 更新 DeepMind Blog
-echo "📡 更新 Google DeepMind Blog..."
-python main.py
-
-# 更新 OpenAI Research
-echo ""
-echo "📡 更新 OpenAI Research..."
-python filter_openai_research.py
-
-# 更新 Waymo Blog Technology
-echo ""
-echo "📡 更新 Waymo Blog Technology..."
-python fetch_waymo_blog.py
-
-echo ""
-echo "✅ 所有 feeds 更新完成！"
-echo ""
-echo "生成的 RSS 文件："
-ls -lh feeds/*.xml
+ROOT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+exec "$ROOT_DIR/scripts/ops/update_feeds.sh" "$@"

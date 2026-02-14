@@ -6,7 +6,8 @@ import logging
 import argparse
 import time
 import schedule
-from pathlib import Path
+import sys
+from typing import Sequence
 
 from src.feed_creator import FeedCreator
 
@@ -27,20 +28,27 @@ def load_config(config_path: str = "config.yaml") -> dict:
         return yaml.safe_load(f)
 
 
-def run_once(config: dict, feeds_dir: str):
+def run_once(config: dict, feeds_dir: str) -> bool:
     """运行一次 RSS 生成"""
     creator = FeedCreator(feeds_dir=feeds_dir)
     feeds_config = config.get("feeds", [])
 
     if not feeds_config:
         logging.warning("配置文件中没有定义任何 feeds")
-        return
+        return False
 
     logging.info(f"开始生成 {len(feeds_config)} 个 RSS feeds")
-    creator.create_all_feeds(feeds_config)
+    results = creator.create_all_feeds(feeds_config)
+    failed_feeds = [name for name, success in results.items() if not success]
+
+    if failed_feeds:
+        logging.error(f"以下 feeds 失败: {', '.join(failed_feeds)}")
+        return False
+
+    return True
 
 
-def run_scheduler(config: dict, feeds_dir: str):
+def run_scheduler(config: dict, feeds_dir: str) -> int:
     """运行定时任务"""
     update_config = config.get("update", {})
     interval = update_config.get("interval", 3600)
@@ -48,7 +56,8 @@ def run_scheduler(config: dict, feeds_dir: str):
     logging.info(f"定时任务已启动，每 {interval} 秒更新一次")
 
     # 立即执行一次
-    run_once(config, feeds_dir)
+    if not run_once(config, feeds_dir):
+        logging.error("首次执行存在失败，调度器将继续运行并在下次重试")
 
     # 设置定时任务
     schedule.every(interval).seconds.do(run_once, config, feeds_dir)
@@ -60,9 +69,10 @@ def run_scheduler(config: dict, feeds_dir: str):
             time.sleep(1)
     except KeyboardInterrupt:
         logging.info("定时任务已停止")
+    return 0
 
 
-def main():
+def main(argv: Sequence[str] | None = None) -> int:
     """主函数"""
     parser = argparse.ArgumentParser(description="RSS Creator - 为任何网站生成 RSS feed")
     parser.add_argument(
@@ -86,7 +96,7 @@ def main():
         help="显示详细日志"
     )
 
-    args = parser.parse_args()
+    args = parser.parse_args(argv)
 
     # 配置日志
     setup_logging(args.verbose)
@@ -96,17 +106,17 @@ def main():
         config = load_config(args.config)
     except FileNotFoundError:
         logging.error(f"配置文件不存在: {args.config}")
-        return
+        return 2
     except yaml.YAMLError as e:
         logging.error(f"配置文件格式错误: {e}")
-        return
+        return 2
 
     # 运行
     if args.schedule or config.get("update", {}).get("enabled", False):
-        run_scheduler(config, args.output)
-    else:
-        run_once(config, args.output)
+        return run_scheduler(config, args.output)
+
+    return 0 if run_once(config, args.output) else 1
 
 
 if __name__ == "__main__":
-    main()
+    sys.exit(main())

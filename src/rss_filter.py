@@ -5,6 +5,9 @@ from feedgen.feed import FeedGenerator
 from bs4 import BeautifulSoup
 from typing import List, Optional
 import logging
+from requests.adapters import HTTPAdapter
+from urllib3.util.retry import Retry
+from dateutil import parser as date_parser
 
 logger = logging.getLogger(__name__)
 
@@ -12,7 +15,13 @@ logger = logging.getLogger(__name__)
 class RSSFilter:
     """RSS 过滤器"""
 
-    def __init__(self, source_url: str):
+    def __init__(
+        self,
+        source_url: str,
+        timeout: int = 15,
+        retries: int = 2,
+        user_agent: Optional[str] = None,
+    ):
         """
         初始化过滤器
 
@@ -20,12 +29,31 @@ class RSSFilter:
             source_url: 源 RSS feed URL
         """
         self.source_url = source_url
+        self.timeout = timeout
+        self.session = requests.Session()
+        self.session.headers.update({
+            "User-Agent": user_agent or "RSSCreator/1.0 (+https://github.com)"
+        })
+
+        retry_policy = Retry(
+            total=retries,
+            connect=retries,
+            read=retries,
+            status=retries,
+            status_forcelist=(429, 500, 502, 503, 504),
+            allowed_methods=frozenset(["GET", "HEAD"]),
+            backoff_factor=0.5,
+            raise_on_status=False,
+        )
+        adapter = HTTPAdapter(max_retries=retry_policy)
+        self.session.mount("https://", adapter)
+        self.session.mount("http://", adapter)
 
     def fetch_rss(self) -> Optional[str]:
         """获取源 RSS 内容"""
         try:
             logger.info(f"正在获取 RSS: {self.source_url}")
-            response = requests.get(self.source_url, timeout=15)
+            response = self.session.get(self.source_url, timeout=self.timeout)
             response.raise_for_status()
             return response.text
         except Exception as e:
@@ -106,11 +134,20 @@ class RSSFilter:
 
                     # GUID
                     if item_guid := item.find("guid"):
-                        fe.guid(item_guid.get_text())
+                        guid_value = item_guid.get_text()
+                    elif item_link := item.find("link"):
+                        guid_value = item_link.get_text()
+                    else:
+                        guid_value = item.find("title").get_text() if item.find("title") else None
+                    if guid_value:
+                        fe.guid(guid_value, permalink=guid_value.startswith("http"))
 
                     # 发布日期
                     if item_date := item.find("pubDate"):
-                        fe.pubDate(item_date.get_text())
+                        try:
+                            fe.pubDate(date_parser.parse(item_date.get_text()))
+                        except Exception:
+                            logger.debug(f"无法解析日期: {item_date.get_text()}")
 
                     # 分类
                     for cat in item_categories:

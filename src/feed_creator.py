@@ -23,7 +23,21 @@ class FeedCreator:
             feeds_dir: RSS 文件输出目录
         """
         self.feeds_dir = Path(feeds_dir)
-        self.feeds_dir.mkdir(exist_ok=True)
+        self.feeds_dir.mkdir(parents=True, exist_ok=True)
+
+    def _resolve_output_path(self, output: str) -> Path:
+        """确保输出文件在 feeds 目录内，避免路径逃逸。"""
+        if not output or not output.strip():
+            raise ValueError("output 不能为空")
+
+        output_path = (self.feeds_dir / output).resolve()
+        feeds_root = self.feeds_dir.resolve()
+        if output_path != feeds_root and feeds_root not in output_path.parents:
+            raise ValueError(f"非法输出路径: {output}")
+        if not output_path.name:
+            raise ValueError(f"非法输出文件名: {output}")
+        output_path.parent.mkdir(parents=True, exist_ok=True)
+        return output_path
 
     def create_feed(self, config: Dict) -> bool:
         """
@@ -40,7 +54,11 @@ class FeedCreator:
 
         try:
             # 1. 获取配置
-            url = config["url"]
+            url = config.get("url")
+            if not url:
+                logger.error(f"{name}: 缺少 url 配置")
+                return False
+
             output = config.get("output", f"{name}.xml")
             selectors = config.get("selectors", {})
             options = config.get("options", {})
@@ -48,7 +66,9 @@ class FeedCreator:
             # 2. 抓取网页
             scraper = WebScraper(
                 timeout=options.get("timeout", 10),
-                user_agent=options.get("user_agent")
+                user_agent=options.get("user_agent"),
+                retries=options.get("retries", 2),
+                backoff_factor=options.get("backoff_factor", 0.5),
             )
             html = scraper.fetch(url, encoding=options.get("encoding"))
 
@@ -79,7 +99,7 @@ class FeedCreator:
             )
             generator.add_items(items)
 
-            output_path = self.feeds_dir / output
+            output_path = self._resolve_output_path(output)
             success = generator.generate(str(output_path))
 
             if success:

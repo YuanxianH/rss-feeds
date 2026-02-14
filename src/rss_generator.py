@@ -1,7 +1,7 @@
 """RSS 生成模块"""
 
 from feedgen.feed import FeedGenerator
-from typing import List, Dict
+from typing import List, Dict, Optional
 from datetime import datetime, timezone
 from dateutil import parser as date_parser
 import logging
@@ -27,6 +27,7 @@ class RSSGenerator:
         self.fg.description(description)
         self.fg.language("zh-CN")
         self.fg.generator("RSS Creator")
+        self._seen_entry_ids = set()
 
     def add_items(self, items: List[Dict[str, str]]):
         """
@@ -37,33 +38,32 @@ class RSSGenerator:
         """
         for item_data in items:
             try:
+                entry_id = self._get_entry_id(item_data)
+                if entry_id in self._seen_entry_ids:
+                    continue
+                self._seen_entry_ids.add(entry_id)
+
                 fe = self.fg.add_entry()
 
                 # 必需字段
-                fe.title(item_data.get("title", "无标题"))
-                fe.link(href=item_data.get("link", ""))
+                title = item_data.get("title", "").strip() or "无标题"
+                link = item_data.get("link", "").strip()
+                if not link:
+                    raise ValueError("条目缺少 link")
+
+                fe.title(title)
+                fe.link(href=link)
+                guid = item_data.get("guid", "").strip() or link
+                fe.guid(guid, permalink=(guid == link))
 
                 # 可选字段
                 if description := item_data.get("description"):
                     fe.description(description)
 
                 if pub_date := item_data.get("pubDate"):
-                    # 将字符串转换为带时区的 datetime 对象
-                    try:
-                        if isinstance(pub_date, str):
-                            dt = date_parser.parse(pub_date)
-                            # 如果没有时区信息，添加 UTC
-                            if dt.tzinfo is None:
-                                dt = dt.replace(tzinfo=timezone.utc)
-                            fe.pubDate(dt)
-                        else:
-                            fe.pubDate(pub_date)
-                    except Exception:
-                        # 如果解析失败，使用当前时间
-                        fe.pubDate(datetime.now(timezone.utc))
-                else:
-                    # 默认使用当前时间
-                    fe.pubDate(datetime.now(timezone.utc))
+                    dt = self._to_datetime(pub_date)
+                    if dt is not None:
+                        fe.pubDate(dt)
 
                 if author := item_data.get("author"):
                     fe.author({"name": author})
@@ -71,6 +71,26 @@ class RSSGenerator:
             except Exception as e:
                 logger.warning(f"添加条目失败: {e}")
                 continue
+
+    def _get_entry_id(self, item_data: Dict[str, str]) -> str:
+        """优先使用稳定链接作为幂等键，缺失时回退到标题。"""
+        link = item_data.get("link", "").strip()
+        if link:
+            return link
+        return item_data.get("title", "").strip()
+
+    def _to_datetime(self, value) -> Optional[datetime]:
+        """将字符串或 datetime 统一转换成带时区的 datetime。"""
+        try:
+            if isinstance(value, datetime):
+                dt = value
+            else:
+                dt = date_parser.parse(str(value))
+            if dt.tzinfo is None:
+                dt = dt.replace(tzinfo=timezone.utc)
+            return dt
+        except Exception:
+            return None
 
     def generate(self, output_path: str) -> bool:
         """

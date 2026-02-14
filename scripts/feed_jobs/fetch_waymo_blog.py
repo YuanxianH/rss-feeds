@@ -3,7 +3,13 @@
 
 import logging
 import requests
+import sys
 from pathlib import Path
+
+ROOT_DIR = Path(__file__).resolve().parents[2]
+if str(ROOT_DIR) not in sys.path:
+    sys.path.insert(0, str(ROOT_DIR))
+
 from src.rss_generator import RSSGenerator
 
 
@@ -15,7 +21,7 @@ def setup_logging():
     )
 
 
-def main():
+def main() -> int:
     setup_logging()
     logger = logging.getLogger(__name__)
 
@@ -24,8 +30,8 @@ def main():
     tag = "Technology"
     max_items = 50
 
-    output_dir = Path("feeds")
-    output_dir.mkdir(exist_ok=True)
+    output_dir = ROOT_DIR / "feeds"
+    output_dir.mkdir(parents=True, exist_ok=True)
     output_path = output_dir / "waymo_blog_tech.xml"
 
     logger.info(f"正在从 Waymo Blog API 获取文章...")
@@ -34,9 +40,16 @@ def main():
         "User-Agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36",
         "Accept": "application/json",
     }
-    resp = requests.get(api_url, headers=headers, timeout=15)
-    resp.raise_for_status()
-    data = resp.json()
+    try:
+        resp = requests.get(api_url, headers=headers, timeout=15)
+        resp.raise_for_status()
+        data = resp.json()
+    except requests.RequestException as exc:
+        logger.error(f"调用 Waymo API 失败: {exc}")
+        return 1
+    except ValueError as exc:
+        logger.error(f"Waymo API 返回了非法 JSON: {exc}")
+        return 1
 
     posts = data.get("posts", [])
     logger.info(f"API 返回 {len(posts)} 篇文章")
@@ -67,7 +80,7 @@ def main():
 
     if not items:
         logger.warning("未找到任何 Technology 文章")
-        return
+        return 1
 
     generator = RSSGenerator(
         title="Waymo Blog - Technology",
@@ -78,9 +91,11 @@ def main():
 
     if generator.generate(str(output_path)):
         logger.info(f"成功生成 {len(items)} 篇文章到 {output_path}")
+        return 0
     else:
         logger.error("RSS 生成失败")
+        return 1
 
 
 if __name__ == "__main__":
-    main()
+    sys.exit(main())

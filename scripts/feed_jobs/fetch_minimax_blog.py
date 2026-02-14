@@ -4,8 +4,14 @@
 import logging
 import re
 import requests
+import sys
 from bs4 import BeautifulSoup
 from pathlib import Path
+
+ROOT_DIR = Path(__file__).resolve().parents[2]
+if str(ROOT_DIR) not in sys.path:
+    sys.path.insert(0, str(ROOT_DIR))
+
 from src.rss_generator import RSSGenerator
 
 def setup_logging():
@@ -20,6 +26,7 @@ def get_article_date(url, session):
     """从文章页面提取日期"""
     try:
         resp = session.get(url, timeout=30)
+        resp.raise_for_status()
         soup = BeautifulSoup(resp.text, 'html.parser')
 
         # 方法1: 查找包含日期的 div (class 包含 text-brand-1)
@@ -42,7 +49,7 @@ def get_article_date(url, session):
         return None
 
 
-def main():
+def main() -> int:
     setup_logging()
     logger = logging.getLogger(__name__)
 
@@ -53,8 +60,8 @@ def main():
         "https://www.minimax.io/blog",
     ]
 
-    output_dir = Path("feeds")
-    output_dir.mkdir(exist_ok=True)
+    output_dir = ROOT_DIR / "feeds"
+    output_dir.mkdir(parents=True, exist_ok=True)
     output_path = output_dir / "minimax_blog.xml"
 
     logger.info("正在从 MiniMax 网站获取所有文章...")
@@ -72,6 +79,7 @@ def main():
         logger.info(f"正在抓取页面: {page_url}")
         try:
             resp = session.get(page_url, timeout=15)
+            resp.raise_for_status()
             soup = BeautifulSoup(resp.text, 'html.parser')
 
             # 查找所有包含 /news/ 的链接
@@ -91,7 +99,6 @@ def main():
     articles = []
     for url in all_urls:
         # 从 URL 提取产品名作为标题
-        import re
         match = re.search(r'news/([^/]+)$', url)
         if match:
             slug = match.group(1)
@@ -121,7 +128,7 @@ def main():
                 from datetime import datetime
                 dt = datetime.strptime(date, '%Y.%m.%d')
                 pub_date = dt.strftime('%a, %d %b %Y %H:%M:%S GMT')
-            except:
+            except Exception:
                 pub_date = date
         else:
             pub_date = None
@@ -135,7 +142,7 @@ def main():
 
     if not items:
         logger.warning("未找到任何文章")
-        return
+        return 1
 
     generator = RSSGenerator(
         title="MiniMax News",
@@ -146,9 +153,11 @@ def main():
 
     if generator.generate(str(output_path)):
         logger.info(f"成功生成 {len(items)} 篇文章到 {output_path}")
+        return 0
     else:
         logger.error("RSS 生成失败")
+        return 1
 
 
 if __name__ == "__main__":
-    main()
+    sys.exit(main())
