@@ -46,6 +46,8 @@ INVALID_SLUG_PATTERNS = [
     re.compile(r"^/news/\d{4}-\d{2}-\d{2}T\d{2}:\d{2}:\d{2}\.\d{3}Z?$"),
     # 邮箱: /news/api@minimax.io
     re.compile(r"^/news/[\w.%+-]+@[\w.-]+$"),
+    # 域名文本误判: /news/www.minimax.io, /news/minimax.io
+    re.compile(r"^/news/(?:[\w-]+\.)*minimax\.io$", re.IGNORECASE),
     # 动态路由: /news/page-xxx.js, /news/[detail]/xxx
     re.compile(r"^/news/(?:\[[\w]+\]|page-[\w]+\.js)"),
     # 问句（FAQ）: /news/What should I do, /news/How can I, /news/Can I, /news/Making Music...
@@ -113,6 +115,35 @@ def _extract_news_urls_from_text(text: str, base_url: str) -> list[str]:
     return results
 
 
+def _extract_news_urls_from_json_value(value: str, base_url: str) -> list[str]:
+    """从 JSON 字符串值中提取 news 链接，忽略普通文本。"""
+    text = value.strip()
+    if not text:
+        return []
+
+    candidates = []
+    seen = set()
+
+    def add_candidate(raw: str):
+        normalized = normalize_news_url(raw, base_url=base_url)
+        if normalized and normalized not in seen:
+            seen.add(normalized)
+            candidates.append(normalized)
+
+    # 直接 URL 或相对路径
+    if text.startswith(("http://", "https://", "/news/", "news/")):
+        raw = f"/{text}" if text.startswith("news/") else text
+        add_candidate(raw)
+
+    # 长文本中嵌入的 /news/... 片段
+    for extracted in _extract_news_urls_from_text(text, base_url=base_url):
+        if extracted not in seen:
+            seen.add(extracted)
+            candidates.append(extracted)
+
+    return candidates
+
+
 def _iter_json_strings(value: Any) -> Iterable[str]:
     stack = [value]
     while stack:
@@ -161,7 +192,8 @@ def extract_news_urls_from_html(html: str, page_url: str = NEWS_URL) -> list[str
             except json.JSONDecodeError:
                 continue
             for value in _iter_json_strings(payload):
-                add_url(value)
+                for candidate in _extract_news_urls_from_json_value(value, page_url):
+                    add_url(candidate)
 
     # 最后回退：正则匹配字符串中的相对 news 路径
     for candidate in _extract_news_urls_from_text(html, page_url):
@@ -263,14 +295,26 @@ def _fallback_title_from_url(url: str) -> str:
     return slug.replace("-", " ").strip().title()
 
 
-def extract_article_item_from_html(url: str, html: str) -> Optional[dict]:
+def extract_article_item_from_html(
+    url: str,
+    html: str,
+    response_url: Optional[str] = None,
+) -> Optional[dict]:
     """从文章页面提取 RSS 所需字段。"""
     soup = BeautifulSoup(html, "html.parser")
+    effective_url = response_url or url
+    normalized_effective_url = normalize_news_url(effective_url, base_url=url)
+    if not normalized_effective_url:
+        return None
 
     canonical_tag = soup.find("link", attrs={"rel": "canonical"})
     canonical_url = canonical_tag.get("href", "") if canonical_tag else ""
     og_url = _first_meta(soup, [("property", "og:url")]) or ""
-    link = normalize_news_url(canonical_url or og_url or url, base_url=url) or url
+    link = (
+        normalize_news_url(canonical_url, base_url=effective_url)
+        or normalize_news_url(og_url, base_url=effective_url)
+        or normalized_effective_url
+    )
 
     title = _first_meta(
         soup,
@@ -328,7 +372,7 @@ def _fetch_article_item(session: requests.Session, url: str, logger: logging.Log
         logger.warning(f"抓取文章失败 {url}: {exc}")
         return None
 
-    item = extract_article_item_from_html(url, response.text)
+    item = extract_article_item_from_html(url, response.text, response_url=response.url)
     if not item:
         logger.warning(f"解析文章失败（无有效内容）: {url}")
     return item

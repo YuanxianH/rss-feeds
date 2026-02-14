@@ -15,6 +15,8 @@ class MiniMaxFeedJobTests(unittest.TestCase):
             "https://www.minimax.io/news/minimax-m25",
         )
         self.assertIsNone(normalize_news_url("https://www.minimax.io/news"))
+        self.assertIsNone(normalize_news_url("www.minimax.io"))
+        self.assertIsNone(normalize_news_url("/news/www.minimax.io"))
         self.assertIsNone(normalize_news_url("https://example.com/news/minimax-m25"))
 
     def test_extract_news_urls_from_html_with_anchor_and_embedded_json(self):
@@ -24,7 +26,12 @@ class MiniMaxFeedJobTests(unittest.TestCase):
             <a href="/news/minimax-m25">M2.5</a>
             <a href="https://www.minimax.io/news/minimax-mcp?ref=abc">MCP</a>
             <script id="__NEXT_DATA__" type="application/json">
-              {"props":{"items":[{"url":"/news/minimax-agent"},{"url":"/news/minimax-m25"}]}}
+              {
+                "props":{
+                  "items":[{"url":"/news/minimax-agent"},{"url":"/news/minimax-m25"}],
+                  "site":"www.minimax.io"
+                }
+              }
             </script>
           </body>
         </html>
@@ -58,6 +65,22 @@ class MiniMaxFeedJobTests(unittest.TestCase):
         self.assertEqual(item["description"], "MiniMax latest model update")
         self.assertEqual(item["link"], "https://www.minimax.io/news/minimax-m25")
         self.assertTrue(item["pubDate"].startswith("2026-02-12T09:30:00"))
+
+    def test_extract_article_item_rejects_redirected_non_news_page(self):
+        html = """
+        <html>
+          <head>
+            <title>MiniMax</title>
+            <meta property="og:description" content="Access API" />
+          </head>
+        </html>
+        """
+        item = extract_article_item_from_html(
+            "https://www.minimax.io/news/www.minimax.io",
+            html,
+            response_url="https://www.minimax.io/",
+        )
+        self.assertIsNone(item)
 
     def test_extract_news_urls_from_text(self):
         text = """
