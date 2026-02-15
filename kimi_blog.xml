@@ -1,0 +1,36 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0">
+  <channel>
+    <title>Kimi Research Articles &amp; Technical Blogs</title>
+    <link>https://www.kimi.com/blog</link>
+    <description>Explore Kimi research articles, technical blogs, and benchmark releases</description>
+    <docs>http://www.rssboard.org/rss-specification</docs>
+    <generator>RSS Creator</generator>
+    <language>zh-CN</language>
+    <lastBuildDate>Sun, 15 Feb 2026 06:28:47 +0000</lastBuildDate>
+    <item>
+      <title>Kimi Agent Swarm: 100 Sub-Agents at Scale</title>
+      <link>https://www.kimi.com/blog/agent-swarm.html</link>
+      <description>Kimi Agent Swarm is a self-organizing multi-agent system that spawns up to 100 sub-agents to parallelize research, document synthesis, and multi-perspective analysis.</description>
+      <guid isPermaLink="true">https://www.kimi.com/blog/agent-swarm.html</guid>
+    </item>
+    <item>
+      <title>Kimi K2.5 Tech Blog: Visual Agentic Intelligence</title>
+      <link>https://www.kimi.com/blog/kimi-k2-5.html</link>
+      <description>Kimi K2.5 defines Visual Agentic Intelligence. Trained on 15T tokens, it introduces SOTA visual coding and autonomous agent swarm. Read the full tech blog.</description>
+      <guid isPermaLink="true">https://www.kimi.com/blog/kimi-k2-5.html</guid>
+    </item>
+    <item>
+      <title>Kimi Vendor Verifier</title>
+      <link>https://www.kimi.com/blog/kimi-vendor-verifier.html</link>
+      <description>Rebuilding the</description>
+      <guid isPermaLink="true">https://www.kimi.com/blog/kimi-vendor-verifier.html</guid>
+    </item>
+    <item>
+      <title>WorldVQA: Measuring Atomic World Knowledge in MLLMs</title>
+      <link>https://www.kimi.com/blog/worldvqa.html</link>
+      <description>WorldVQA is a benchmark designed to evaluate atomic vision-centric world knowledge in Multimodal Large Language Models (MLLMs).</description>
+      <guid isPermaLink="true">https://www.kimi.com/blog/worldvqa.html</guid>
+    </item>
+  </channel>
+</rss>
