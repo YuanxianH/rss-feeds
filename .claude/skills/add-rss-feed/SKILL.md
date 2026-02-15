@@ -87,11 +87,22 @@ cd /Users/yxhuang/repo/rss_creator && python main.py -v
 
 Verify: feed generates with expected item count, read the XML in `feeds/` to confirm content.
 
-### Step 5: Commit and push
+### Step 5: Update index.html
 
-1. Commit `config.yaml` and any new files:
+Add the new feed to `feeds/index.html` so it appears in the feed list:
+
+```html
+<li class="feed-item">
+    <a href="feed_name.xml">Feed Title</a>
+    <div class="description">Feed description</div>
+</li>
+```
+
+### Step 6: Commit and push
+
+1. Commit changes:
    ```bash
-   git add config.yaml
+   git add config.yaml feeds/index.html
    git commit -m "feat: add <feed_name> RSS feed"
    ```
 
