@@ -111,6 +111,14 @@ jobs:
       max_discovery_pages: 50
       max_sitemaps: 200
 
+  # Kimi Blog（VitePress 站点）
+  - type: "kimi_blog"
+    name: "Kimi Blog"
+    output: "kimi_blog.xml"
+    title: "Kimi Research Articles & Technical Blogs"
+    description: "Explore Kimi research articles, technical blogs, and benchmark releases"
+    link: "https://www.kimi.com/blog"
+
   # 示例配置
   # - type: "selector_scrape"
   #   name: "Example"
