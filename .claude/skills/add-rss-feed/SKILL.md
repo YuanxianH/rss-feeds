@@ -9,6 +9,20 @@ description: >
 
 # Add RSS Feed
 
+## Job Types
+
+The repo supports multiple job types:
+
+| Type | Use Case |
+|------|----------|
+| `selector_scrape` | Most websites with server-rendered HTML |
+| `kimi_blog` | VitePress based blogs |
+| `minimax_news` | Complex sites requiring sitemap discovery |
+| `waymo_blog_technology` | Waymo blog API |
+| `openai_research_filter` | Filter existing RSS for specific categories |
+
+For most new feeds, use `selector_scrape`.
+
 ## Workflow
 
 ### Step 1: Analyze the page
@@ -16,7 +30,7 @@ description: >
 Run the analysis script to check if the page is server-rendered and find repeating elements:
 
 ```bash
-python /Users/yxhuang/.claude/skills/add-rss-feed/scripts/analyze_page.py <URL>
+python /Users/yxhuang/repo/rss_creator/.claude/skills/add-rss-feed/scripts/analyze_page.py <URL>
 ```
 
 If 0 repeated content elements found, the page is likely JS-rendered — inform the user it may not work with simple HTTP scraping.
@@ -45,7 +59,8 @@ From the HTML, determine selectors for:
 Read `/Users/yxhuang/repo/rss_creator/config.yaml` and append:
 
 ```yaml
-  - name: "Feed Name"
+  - type: "selector_scrape"
+    name: "Feed Name"
     url: "https://example.com/page"
     output: "feed_name.xml"
     title: "Feed Title"
@@ -58,6 +73,8 @@ Read `/Users/yxhuang/repo/rss_creator/config.yaml` and append:
     options:
       max_items: 50
       timeout: 15
+      retries: 2
+      backoff_factor: 0.5
       user_agent: "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36"
       encoding: "utf-8"
 ```
@@ -72,6 +89,19 @@ Verify: feed generates with expected item count, read the XML in `feeds/` to con
 
 ### Step 5: Commit and push
 
-Commit `config.yaml`, then `git push`. GitHub Actions auto-deploys to GitHub Pages.
+1. Commit `config.yaml` and any new files:
+   ```bash
+   git add config.yaml
+   git commit -m "feat: add <feed_name> RSS feed"
+   ```
 
-New feed URL: `https://yuanxianh.github.io/rss-feeds/<output_filename>`
+2. Push to trigger GitHub Actions:
+   ```bash
+   git push
+   ```
+
+GitHub Actions will automatically run and deploy the updated feeds to GitHub Pages.
+
+**New feed URL:** `https://yuanxianh.github.io/rss_creator/<output_filename>`
+
+You can manually trigger a deployment from the GitHub Actions tab if needed.
