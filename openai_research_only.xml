@@ -7,7 +7,7 @@
     <docs>http://www.rssboard.org/rss-specification</docs>
     <generator>RSS Creator - RSS Filter</generator>
     <language>zh-CN</language>
-    <lastBuildDate>Wed, 18 Feb 2026 01:29:56 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 18 Feb 2026 11:00:43 +0000</lastBuildDate>
     <item>
       <title>Weight normalization: A simple reparameterization to accelerate training of deep neural networks</title>
       <link>https://openai.com/index/weight-normalization</link>
@@ -317,18 +317,18 @@
       <pubDate>Fri, 29 Sep 2017 07:00:00 +0000</pubDate>
     </item>
     <item>
-      <title>Meta-learning for wrestling</title>
-      <link>https://openai.com/index/meta-learning-for-wrestling</link>
-      <description>We show that for the task of simulated robot wrestling, a meta-learning agent can learn to quickly defeat a stronger non-meta-learning agent, and also show that the meta-learning agent can adapt to physical malfunction.</description>
-      <guid isPermaLink="true">https://openai.com/index/meta-learning-for-wrestling</guid>
-      <category>Research</category>
-      <pubDate>Wed, 11 Oct 2017 07:00:00 +0000</pubDate>
-    </item>
-    <item>
       <title>Competitive self-play</title>
       <link>https://openai.com/index/competitive-self-play</link>
       <description>We’ve found that self-play allows simulated AIs to discover physical skills like tackling, ducking, faking, kicking, catching, and diving for the ball, without explicitly designing an environment with these skills in mind. Self-play ensures that the environment is always the right difficulty for an AI to improve. Taken alongside our Dota 2 self-play results, we have increasing confidence that self-play will be a core part of powerful AI systems in the future.</description>
       <guid isPermaLink="true">https://openai.com/index/competitive-self-play</guid>
+      <category>Research</category>
+      <pubDate>Wed, 11 Oct 2017 07:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>Meta-learning for wrestling</title>
+      <link>https://openai.com/index/meta-learning-for-wrestling</link>
+      <description>We show that for the task of simulated robot wrestling, a meta-learning agent can learn to quickly defeat a stronger non-meta-learning agent, and also show that the meta-learning agent can adapt to physical malfunction.</description>
+      <guid isPermaLink="true">https://openai.com/index/meta-learning-for-wrestling</guid>
       <category>Research</category>
       <pubDate>Wed, 11 Oct 2017 07:00:00 +0000</pubDate>
     </item>
@@ -340,16 +340,16 @@
       <pubDate>Tue, 17 Oct 2017 07:00:00 +0000</pubDate>
     </item>
     <item>
-      <title>Asymmetric actor critic for image-based robot learning</title>
-      <link>https://openai.com/index/asymmetric-actor-critic-for-image-based-robot-learning</link>
-      <guid isPermaLink="true">https://openai.com/index/asymmetric-actor-critic-for-image-based-robot-learning</guid>
+      <title>Sim-to-real transfer of robotic control with dynamics randomization</title>
+      <link>https://openai.com/index/sim-to-real-transfer-of-robotic-control-with-dynamics-randomization</link>
+      <guid isPermaLink="true">https://openai.com/index/sim-to-real-transfer-of-robotic-control-with-dynamics-randomization</guid>
       <category>Research</category>
       <pubDate>Wed, 18 Oct 2017 07:00:00 +0000</pubDate>
     </item>
     <item>
-      <title>Sim-to-real transfer of robotic control with dynamics randomization</title>
-      <link>https://openai.com/index/sim-to-real-transfer-of-robotic-control-with-dynamics-randomization</link>
-      <guid isPermaLink="true">https://openai.com/index/sim-to-real-transfer-of-robotic-control-with-dynamics-randomization</guid>
+      <title>Asymmetric actor critic for image-based robot learning</title>
+      <link>https://openai.com/index/asymmetric-actor-critic-for-image-based-robot-learning</link>
+      <guid isPermaLink="true">https://openai.com/index/asymmetric-actor-critic-for-image-based-robot-learning</guid>
       <category>Research</category>
       <pubDate>Wed, 18 Oct 2017 07:00:00 +0000</pubDate>
     </item>
@@ -822,18 +822,18 @@
       <pubDate>Mon, 07 Sep 2020 07:00:00 +0000</pubDate>
     </item>
     <item>
-      <title>CLIP: Connecting text and images</title>
-      <link>https://openai.com/index/clip</link>
-      <description>We’re introducing a neural network called CLIP which efficiently learns visual concepts from natural language supervision. CLIP can be applied to any visual classification benchmark by simply providing the names of the visual categories to be recognized, similar to the “zero-shot” capabilities of GPT-2 and GPT-3.</description>
-      <guid isPermaLink="true">https://openai.com/index/clip</guid>
-      <category>Research</category>
-      <pubDate>Tue, 05 Jan 2021 08:00:00 +0000</pubDate>
-    </item>
-    <item>
       <title>DALL·E: Creating images from text</title>
       <link>https://openai.com/index/dall-e</link>
       <description>We’ve trained a neural network called DALL·E that creates images from text captions for a wide range of concepts expressible in natural language.</description>
       <guid isPermaLink="true">https://openai.com/index/dall-e</guid>
+      <category>Research</category>
+      <pubDate>Tue, 05 Jan 2021 08:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>CLIP: Connecting text and images</title>
+      <link>https://openai.com/index/clip</link>
+      <description>We’re introducing a neural network called CLIP which efficiently learns visual concepts from natural language supervision. CLIP can be applied to any visual classification benchmark by simply providing the names of the visual categories to be recognized, similar to the “zero-shot” capabilities of GPT-2 and GPT-3.</description>
+      <guid isPermaLink="true">https://openai.com/index/clip</guid>
       <category>Research</category>
       <pubDate>Tue, 05 Jan 2021 08:00:00 +0000</pubDate>
     </item>
@@ -1074,18 +1074,18 @@
       <pubDate>Thu, 06 Jun 2024 00:00:00 +0000</pubDate>
     </item>
     <item>
-      <title>Improved Techniques for Training Consistency Models</title>
-      <link>https://openai.com/index/improved-techniques-for-training-consistency-models</link>
-      <description>Consistency models are a nascent family of generative models that can sample high quality data in one step without the need for adversarial training. </description>
-      <guid isPermaLink="true">https://openai.com/index/improved-techniques-for-training-consistency-models</guid>
-      <category>Research</category>
-      <pubDate>Thu, 20 Jun 2024 00:00:00 +0000</pubDate>
-    </item>
-    <item>
       <title>Consistency Models</title>
       <link>https://openai.com/index/consistency-models</link>
       <description>Diffusion models have significantly advanced the fields of image, audio, and video generation, but they depend on an iterative sampling process that causes slow generation.</description>
       <guid isPermaLink="true">https://openai.com/index/consistency-models</guid>
+      <category>Research</category>
+      <pubDate>Thu, 20 Jun 2024 00:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>Improved Techniques for Training Consistency Models</title>
+      <link>https://openai.com/index/improved-techniques-for-training-consistency-models</link>
+      <description>Consistency models are a nascent family of generative models that can sample high quality data in one step without the need for adversarial training. </description>
+      <guid isPermaLink="true">https://openai.com/index/improved-techniques-for-training-consistency-models</guid>
       <category>Research</category>
       <pubDate>Thu, 20 Jun 2024 00:00:00 +0000</pubDate>
     </item>
