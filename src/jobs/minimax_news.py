@@ -551,6 +551,8 @@ class MiniMaxNewsJob(FeedJob):
             if not link or link in seen_links:
                 continue
             seen_links.add(link)
+            if not item.get("guid"):
+                item["guid"] = article_url
             items.append(item)
             if len(items) >= max_items:
                 break

@@ -6,6 +6,7 @@ from typing import Dict
 
 # Ensure built-in jobs are registered even when importing runner directly.
 from . import minimax_news as _minimax_news  # noqa: F401
+from . import minimax_releases as _minimax_releases  # noqa: F401
 from . import openai_research as _openai_research  # noqa: F401
 from . import selector_scrape as _selector_scrape  # noqa: F401
 from . import waymo_blog as _waymo_blog  # noqa: F401

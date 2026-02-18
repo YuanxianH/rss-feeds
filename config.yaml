@@ -111,6 +111,20 @@ jobs:
       max_discovery_pages: 50
       max_sitemaps: 200
 
+  # MiniMax Releases（HuggingFace 模型 + GitHub 仓库）
+  - type: "minimax_releases"
+    name: "MiniMax Releases"
+    output: "minimax_releases.xml"
+    title: "MiniMax Releases"
+    description: "MiniMax model releases on HuggingFace and new GitHub repositories"
+    link: "https://huggingface.co/MiniMaxAI"
+    options:
+      max_items: 50
+      resource_types:
+        - "models"
+      retries: 2
+      backoff_factor: 0.5
+
   # Kimi Blog（VitePress 站点）
   - type: "kimi_blog"
     name: "Kimi Blog"
