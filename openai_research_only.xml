@@ -7,7 +7,7 @@
     <docs>http://www.rssboard.org/rss-specification</docs>
     <generator>RSS Creator - RSS Filter</generator>
     <language>zh-CN</language>
-    <lastBuildDate>Thu, 19 Feb 2026 12:48:18 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 20 Feb 2026 01:24:56 +0000</lastBuildDate>
     <item>
       <title>Weight normalization: A simple reparameterization to accelerate training of deep neural networks</title>
       <link>https://openai.com/index/weight-normalization</link>
@@ -317,18 +317,18 @@
       <pubDate>Fri, 29 Sep 2017 07:00:00 +0000</pubDate>
     </item>
     <item>
-      <title>Competitive self-play</title>
-      <link>https://openai.com/index/competitive-self-play</link>
-      <description>We’ve found that self-play allows simulated AIs to discover physical skills like tackling, ducking, faking, kicking, catching, and diving for the ball, without explicitly designing an environment with these skills in mind. Self-play ensures that the environment is always the right difficulty for an AI to improve. Taken alongside our Dota 2 self-play results, we have increasing confidence that self-play will be a core part of powerful AI systems in the future.</description>
-      <guid isPermaLink="true">https://openai.com/index/competitive-self-play</guid>
-      <category>Research</category>
-      <pubDate>Wed, 11 Oct 2017 07:00:00 +0000</pubDate>
-    </item>
-    <item>
       <title>Meta-learning for wrestling</title>
       <link>https://openai.com/index/meta-learning-for-wrestling</link>
       <description>We show that for the task of simulated robot wrestling, a meta-learning agent can learn to quickly defeat a stronger non-meta-learning agent, and also show that the meta-learning agent can adapt to physical malfunction.</description>
       <guid isPermaLink="true">https://openai.com/index/meta-learning-for-wrestling</guid>
+      <category>Research</category>
+      <pubDate>Wed, 11 Oct 2017 07:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>Competitive self-play</title>
+      <link>https://openai.com/index/competitive-self-play</link>
+      <description>We’ve found that self-play allows simulated AIs to discover physical skills like tackling, ducking, faking, kicking, catching, and diving for the ball, without explicitly designing an environment with these skills in mind. Self-play ensures that the environment is always the right difficulty for an AI to improve. Taken alongside our Dota 2 self-play results, we have increasing confidence that self-play will be a core part of powerful AI systems in the future.</description>
+      <guid isPermaLink="true">https://openai.com/index/competitive-self-play</guid>
       <category>Research</category>
       <pubDate>Wed, 11 Oct 2017 07:00:00 +0000</pubDate>
     </item>
@@ -423,17 +423,17 @@
       <pubDate>Thu, 15 Feb 2018 08:00:00 +0000</pubDate>
     </item>
     <item>
-      <title>Ingredients for robotics research</title>
-      <link>https://openai.com/index/ingredients-for-robotics-research</link>
-      <description>We’re releasing eight simulated robotics environments and a Baselines implementation of Hindsight Experience Replay, all developed for our research over the past year. We’ve used these environments to train models which work on physical robots. We’re also releasing a set of requests for robotics research.</description>
-      <guid isPermaLink="true">https://openai.com/index/ingredients-for-robotics-research</guid>
+      <title>Multi-Goal Reinforcement Learning: Challenging robotics environments and request for research</title>
+      <link>https://openai.com/index/multi-goal-reinforcement-learning</link>
+      <guid isPermaLink="true">https://openai.com/index/multi-goal-reinforcement-learning</guid>
       <category>Research</category>
       <pubDate>Mon, 26 Feb 2018 08:00:00 +0000</pubDate>
     </item>
     <item>
-      <title>Multi-Goal Reinforcement Learning: Challenging robotics environments and request for research</title>
-      <link>https://openai.com/index/multi-goal-reinforcement-learning</link>
-      <guid isPermaLink="true">https://openai.com/index/multi-goal-reinforcement-learning</guid>
+      <title>Ingredients for robotics research</title>
+      <link>https://openai.com/index/ingredients-for-robotics-research</link>
+      <description>We’re releasing eight simulated robotics environments and a Baselines implementation of Hindsight Experience Replay, all developed for our research over the past year. We’ve used these environments to train models which work on physical robots. We’re also releasing a set of requests for robotics research.</description>
+      <guid isPermaLink="true">https://openai.com/index/ingredients-for-robotics-research</guid>
       <category>Research</category>
       <pubDate>Mon, 26 Feb 2018 08:00:00 +0000</pubDate>
     </item>
@@ -1234,18 +1234,18 @@
       <pubDate>Thu, 23 Jan 2025 10:00:00 +0000</pubDate>
     </item>
     <item>
-      <title>OpenAI o3-mini</title>
-      <link>https://openai.com/index/openai-o3-mini</link>
-      <description>Pushing the frontier of cost-effective reasoning.</description>
-      <guid isPermaLink="true">https://openai.com/index/openai-o3-mini</guid>
-      <category>Research</category>
-      <pubDate>Fri, 31 Jan 2025 11:00:00 +0000</pubDate>
-    </item>
-    <item>
       <title>OpenAI o3-mini System Card</title>
       <link>https://openai.com/index/o3-mini-system-card</link>
       <description>This report outlines the safety work carried out for the OpenAI o3-mini model, including safety evaluations, external red teaming, and Preparedness Framework evaluations.</description>
       <guid isPermaLink="true">https://openai.com/index/o3-mini-system-card</guid>
+      <category>Research</category>
+      <pubDate>Fri, 31 Jan 2025 11:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>OpenAI o3-mini</title>
+      <link>https://openai.com/index/openai-o3-mini</link>
+      <description>Pushing the frontier of cost-effective reasoning.</description>
+      <guid isPermaLink="true">https://openai.com/index/openai-o3-mini</guid>
       <category>Research</category>
       <pubDate>Fri, 31 Jan 2025 11:00:00 +0000</pubDate>
     </item>
