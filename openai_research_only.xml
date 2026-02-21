@@ -7,7 +7,7 @@
     <docs>http://www.rssboard.org/rss-specification</docs>
     <generator>RSS Creator - RSS Filter</generator>
     <language>zh-CN</language>
-    <lastBuildDate>Fri, 20 Feb 2026 12:42:02 +0000</lastBuildDate>
+    <lastBuildDate>Sat, 21 Feb 2026 01:22:58 +0000</lastBuildDate>
     <item>
       <title>Weight normalization: A simple reparameterization to accelerate training of deep neural networks</title>
       <link>https://openai.com/index/weight-normalization</link>
@@ -317,18 +317,18 @@
       <pubDate>Fri, 29 Sep 2017 07:00:00 +0000</pubDate>
     </item>
     <item>
-      <title>Meta-learning for wrestling</title>
-      <link>https://openai.com/index/meta-learning-for-wrestling</link>
-      <description>We show that for the task of simulated robot wrestling, a meta-learning agent can learn to quickly defeat a stronger non-meta-learning agent, and also show that the meta-learning agent can adapt to physical malfunction.</description>
-      <guid isPermaLink="true">https://openai.com/index/meta-learning-for-wrestling</guid>
-      <category>Research</category>
-      <pubDate>Wed, 11 Oct 2017 07:00:00 +0000</pubDate>
-    </item>
-    <item>
       <title>Competitive self-play</title>
       <link>https://openai.com/index/competitive-self-play</link>
       <description>We’ve found that self-play allows simulated AIs to discover physical skills like tackling, ducking, faking, kicking, catching, and diving for the ball, without explicitly designing an environment with these skills in mind. Self-play ensures that the environment is always the right difficulty for an AI to improve. Taken alongside our Dota 2 self-play results, we have increasing confidence that self-play will be a core part of powerful AI systems in the future.</description>
       <guid isPermaLink="true">https://openai.com/index/competitive-self-play</guid>
+      <category>Research</category>
+      <pubDate>Wed, 11 Oct 2017 07:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>Meta-learning for wrestling</title>
+      <link>https://openai.com/index/meta-learning-for-wrestling</link>
+      <description>We show that for the task of simulated robot wrestling, a meta-learning agent can learn to quickly defeat a stronger non-meta-learning agent, and also show that the meta-learning agent can adapt to physical malfunction.</description>
+      <guid isPermaLink="true">https://openai.com/index/meta-learning-for-wrestling</guid>
       <category>Research</category>
       <pubDate>Wed, 11 Oct 2017 07:00:00 +0000</pubDate>
     </item>
@@ -423,17 +423,17 @@
       <pubDate>Thu, 15 Feb 2018 08:00:00 +0000</pubDate>
     </item>
     <item>
-      <title>Multi-Goal Reinforcement Learning: Challenging robotics environments and request for research</title>
-      <link>https://openai.com/index/multi-goal-reinforcement-learning</link>
-      <guid isPermaLink="true">https://openai.com/index/multi-goal-reinforcement-learning</guid>
-      <category>Research</category>
-      <pubDate>Mon, 26 Feb 2018 08:00:00 +0000</pubDate>
-    </item>
-    <item>
       <title>Ingredients for robotics research</title>
       <link>https://openai.com/index/ingredients-for-robotics-research</link>
       <description>We’re releasing eight simulated robotics environments and a Baselines implementation of Hindsight Experience Replay, all developed for our research over the past year. We’ve used these environments to train models which work on physical robots. We’re also releasing a set of requests for robotics research.</description>
       <guid isPermaLink="true">https://openai.com/index/ingredients-for-robotics-research</guid>
+      <category>Research</category>
+      <pubDate>Mon, 26 Feb 2018 08:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>Multi-Goal Reinforcement Learning: Challenging robotics environments and request for research</title>
+      <link>https://openai.com/index/multi-goal-reinforcement-learning</link>
+      <guid isPermaLink="true">https://openai.com/index/multi-goal-reinforcement-learning</guid>
       <category>Research</category>
       <pubDate>Mon, 26 Feb 2018 08:00:00 +0000</pubDate>
     </item>
@@ -822,18 +822,18 @@
       <pubDate>Mon, 07 Sep 2020 07:00:00 +0000</pubDate>
     </item>
     <item>
-      <title>CLIP: Connecting text and images</title>
-      <link>https://openai.com/index/clip</link>
-      <description>We’re introducing a neural network called CLIP which efficiently learns visual concepts from natural language supervision. CLIP can be applied to any visual classification benchmark by simply providing the names of the visual categories to be recognized, similar to the “zero-shot” capabilities of GPT-2 and GPT-3.</description>
-      <guid isPermaLink="true">https://openai.com/index/clip</guid>
-      <category>Research</category>
-      <pubDate>Tue, 05 Jan 2021 08:00:00 +0000</pubDate>
-    </item>
-    <item>
       <title>DALL·E: Creating images from text</title>
       <link>https://openai.com/index/dall-e</link>
       <description>We’ve trained a neural network called DALL·E that creates images from text captions for a wide range of concepts expressible in natural language.</description>
       <guid isPermaLink="true">https://openai.com/index/dall-e</guid>
+      <category>Research</category>
+      <pubDate>Tue, 05 Jan 2021 08:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>CLIP: Connecting text and images</title>
+      <link>https://openai.com/index/clip</link>
+      <description>We’re introducing a neural network called CLIP which efficiently learns visual concepts from natural language supervision. CLIP can be applied to any visual classification benchmark by simply providing the names of the visual categories to be recognized, similar to the “zero-shot” capabilities of GPT-2 and GPT-3.</description>
+      <guid isPermaLink="true">https://openai.com/index/clip</guid>
       <category>Research</category>
       <pubDate>Tue, 05 Jan 2021 08:00:00 +0000</pubDate>
     </item>
@@ -1284,6 +1284,14 @@
       <pubDate>Mon, 03 Nov 2025 22:30:00 +0000</pubDate>
     </item>
     <item>
+      <title>How confessions can keep language models honest</title>
+      <link>https://openai.com/index/how-confessions-can-keep-language-models-honest</link>
+      <description>OpenAI researchers are testing “confessions,” a method that trains models to admit when they make mistakes or act undesirably, helping improve AI honesty, transparency, and trust in model outputs.</description>
+      <guid isPermaLink="true">https://openai.com/index/how-confessions-can-keep-language-models-honest</guid>
+      <category>Research</category>
+      <pubDate>Wed, 03 Dec 2025 10:00:00 +0000</pubDate>
+    </item>
+    <item>
       <title>Measuring AI’s capability to accelerate biological research</title>
       <link>https://openai.com/index/accelerating-biological-research-in-the-wet-lab</link>
       <description>OpenAI introduces a real-world evaluation framework to measure how AI can accelerate biological research in the wet lab. Using GPT-5 to optimize a molecular cloning protocol, the work explores both the promise and risks of AI-assisted experimentation.</description>
@@ -1322,6 +1330,14 @@
       <guid isPermaLink="true">https://openai.com/index/new-result-theoretical-physics</guid>
       <category>Research</category>
       <pubDate>Fri, 13 Feb 2026 11:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>Our First Proof submissions</title>
+      <link>https://openai.com/index/first-proof-submissions</link>
+      <description>We share our AI model’s proof attempts for the First Proof math challenge, testing research-grade reasoning on expert-level problems.</description>
+      <guid isPermaLink="true">https://openai.com/index/first-proof-submissions</guid>
+      <category>Research</category>
+      <pubDate>Fri, 20 Feb 2026 14:30:00 +0000</pubDate>
     </item>
   </channel>
 </rss>
