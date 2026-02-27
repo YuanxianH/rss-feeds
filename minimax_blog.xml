@@ -7,14 +7,7 @@
     <docs>http://www.rssboard.org/rss-specification</docs>
     <generator>RSS Creator</generator>
     <language>zh-CN</language>
-    <lastBuildDate>Fri, 27 Feb 2026 01:23:42 +0000</lastBuildDate>
-    <item>
-      <title>MiniMax M2.5: Built for Real-World Productivity.</title>
-      <link>https://www.minimax.io/news/minimax-m25</link>
-      <description>MiniMax M2.5: Built for Real-World Productivity.</description>
-      <guid isPermaLink="true">https://www.minimax.io/news/minimax-m25</guid>
-      <pubDate>Thu, 12 Feb 2026 00:00:00 +0000</pubDate>
-    </item>
+    <lastBuildDate>Fri, 27 Feb 2026 12:42:22 +0000</lastBuildDate>
     <item>
       <title>A Deep Dive into the MiniMax-M2-her</title>
       <link>https://www.minimax.io/news/a-deep-dive-into-the-minimax-m2-her-2</link>
@@ -44,11 +37,25 @@
       <pubDate>Thu, 30 Oct 2025 00:00:00 +0000</pubDate>
     </item>
     <item>
+      <title>MiniMax Speech 2.5 Launches: Enhanced Multilingual Expressiveness Exceptional Voice Cloning Fidelity</title>
+      <link>https://www.minimax.io/news/minimax-speech-25</link>
+      <description>Try Now</description>
+      <guid isPermaLink="true">https://www.minimax.io/news/minimax-speech-25</guid>
+      <pubDate>Thu, 07 Aug 2025 00:00:00 +0000</pubDate>
+    </item>
+    <item>
       <title>MiniMax Hailuo 2.3: A New Level of Complex Video Performance &amp; Media Agent</title>
       <link>https://www.minimax.io/news/minimax-hailuo-23</link>
       <description>Access API</description>
       <guid isPermaLink="true">https://www.minimax.io/news/minimax-hailuo-23</guid>
       <pubDate>Tue, 28 Oct 2025 00:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>MiniMax Hailuo 02, World-Class Quality, Record-Breaking Cost Efficiency</title>
+      <link>https://www.minimax.io/news/minimax-hailuo-02</link>
+      <description>MiniMax Hailuo 02 launches with NCR architecture innovation. Native 1080p generation, SOTA instruction following, extreme physics mastery. 370M videos generated, ranked #2 globally on Artificial Analy</description>
+      <guid isPermaLink="true">https://www.minimax.io/news/minimax-hailuo-02</guid>
+      <pubDate>Wed, 18 Jun 2025 00:00:00 +0000</pubDate>
     </item>
     <item>
       <title>MiniMax Music 2.5: Breakthrough Across All Dimensions — Direct the Detail. Define the Real</title>
@@ -63,6 +70,13 @@
       <description>Access API</description>
       <guid isPermaLink="true">https://www.minimax.io/news/minimax-music-20</guid>
       <pubDate>Fri, 31 Oct 2025 00:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>Introducing MiniMax Music 1.5: Craft 4-Minute Masterpieces and Rediscover the Soul of Music</title>
+      <link>https://www.minimax.io/news/minimax-music-15</link>
+      <description>Try Now</description>
+      <guid isPermaLink="true">https://www.minimax.io/news/minimax-music-15</guid>
+      <pubDate>Thu, 11 Sep 2025 00:00:00 +0000</pubDate>
     </item>
   </channel>
 </rss>
