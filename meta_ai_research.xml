@@ -7,7 +7,7 @@
     <docs>http://www.rssboard.org/rss-specification</docs>
     <generator>RSS Creator</generator>
     <language>zh-CN</language>
-    <lastBuildDate>Fri, 27 Feb 2026 12:41:46 +0000</lastBuildDate>
+    <lastBuildDate>Sat, 28 Feb 2026 01:17:44 +0000</lastBuildDate>
     <item>
       <title>Equi-normalization of Neural Networks | Facebook AI Research</title>
       <link>https://ai.meta.com/research/publications/equi-normalization-of-neural-networks/</link>
@@ -93,13 +93,6 @@
       <pubDate>Thu, 31 Oct 2019 00:00:00 +0000</pubDate>
     </item>
     <item>
-      <title>Pushing the Frontier of Audiovisual Perception with Large-Scale Multimodal Correspondence Learning</title>
-      <link>https://ai.meta.com/research/publications/pushing-the-frontier-of-audiovisual-perception-with-large-scale-multimodal-correspondence-learning/</link>
-      <description>Apoorv Vyas, Heng-Jui Chang, Cheng-Fu Yang, Bernie Huang, Luya Gao, Julius Richter, Sanyuan Chen, Matt Le, Piotr Dollar, Christoph Feichtenhofer, Ann Lee, Wei-Ning Hsu</description>
-      <guid isPermaLink="true">https://ai.meta.com/research/publications/pushing-the-frontier-of-audiovisual-perception-with-large-scale-multimodal-correspondence-learning/</guid>
-      <pubDate>Tue, 16 Dec 2025 00:00:00 +0000</pubDate>
-    </item>
-    <item>
       <title>SAM Audio: Segment Anything in Audio</title>
       <link>https://ai.meta.com/research/publications/sam-audio-segment-anything-in-audio/</link>
       <description>Bowen Shi, Andros Tjandra, John Hoffman, Helin Wang, Yi-Chiao Wu, Luya Gao, Julius Richter, Matt Le, Apoorv Vyas, Sanyuan Chen, Christoph Feichtenhofer, Piotr Dollar, Wei-Ning Hsu, Ann Lee</description>
@@ -175,6 +168,13 @@
       <description>Kaiqu Liang, Julia Kruk, Shengyi Qian, Xianjun Yang, Shengjie Bi, Shaoliang Nie, Michael Zhang, Lijuan Liu, Jaime Fernández Fisac, Shuyan Zhou, Saghar Hosseini</description>
       <guid isPermaLink="true">https://ai.meta.com/research/publications/learning-personalized-agents-from-human-feedback/</guid>
       <pubDate>Thu, 26 Feb 2026 00:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>Unified Vision–Language Modeling via Concept Space Alignment</title>
+      <link>https://ai.meta.com/research/publications/unified-vision-language-modeling-via-concept-space-alignment/</link>
+      <description>Yifu Qiu, Paul-Ambroise Duquenne, Holger Schwenk</description>
+      <guid isPermaLink="true">https://ai.meta.com/research/publications/unified-vision-language-modeling-via-concept-space-alignment/</guid>
+      <pubDate>Fri, 27 Feb 2026 00:00:00 +0000</pubDate>
     </item>
   </channel>
 </rss>
