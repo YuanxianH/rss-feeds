@@ -7,7 +7,7 @@
     <docs>http://www.rssboard.org/rss-specification</docs>
     <generator>RSS Creator</generator>
     <language>zh-CN</language>
-    <lastBuildDate>Sat, 28 Feb 2026 01:18:20 +0000</lastBuildDate>
+    <lastBuildDate>Sat, 28 Feb 2026 12:33:27 +0000</lastBuildDate>
     <item>
       <title>Kimi Agent Swarm: 100 Sub-Agents at Scale</title>
       <link>https://www.kimi.com/blog/agent-swarm.html</link>
@@ -19,6 +19,18 @@
       <link>https://www.kimi.com/blog/kimi-k2-5.html</link>
       <description>Kimi K2.5 defines Visual Agentic Intelligence. Trained on 15T tokens, it introduces SOTA visual coding and autonomous agent swarm. Read the full tech blog.</description>
       <guid isPermaLink="true">https://www.kimi.com/blog/kimi-k2-5.html</guid>
+    </item>
+    <item>
+      <title>Kimi K2 Thinking</title>
+      <link>https://www.kimi.com/blog/kimi-k2-thinking.html</link>
+      <description>Kimi K2 Thinking, Moonshot's best open-source thinking model.</description>
+      <guid isPermaLink="true">https://www.kimi.com/blog/kimi-k2-thinking.html</guid>
+    </item>
+    <item>
+      <title>Kimi K2: Open Agentic Intelligence</title>
+      <link>https://www.kimi.com/blog/kimi-k2.html</link>
+      <description>Kimi K2 is our latest Mixture-of-Experts model with 32 billion activated parameters and 1 trillion total parameters. It achieves state-of-the-art performance in frontier knowledge, math, and coding among non-thinking models.</description>
+      <guid isPermaLink="true">https://www.kimi.com/blog/kimi-k2.html</guid>
     </item>
     <item>
       <title>Kimi Vendor Verifier</title>

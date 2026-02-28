@@ -7,7 +7,7 @@
     <docs>http://www.rssboard.org/rss-specification</docs>
     <generator>RSS Creator</generator>
     <language>zh-CN</language>
-    <lastBuildDate>Sat, 28 Feb 2026 01:18:14 +0000</lastBuildDate>
+    <lastBuildDate>Sat, 28 Feb 2026 12:33:19 +0000</lastBuildDate>
     <item>
       <title>MiniMax-Text-01</title>
       <link>https://huggingface.co/MiniMaxAI/MiniMax-Text-01</link>
@@ -25,7 +25,7 @@
     <item>
       <title>MiniMax-01</title>
       <link>https://github.com/MiniMax-AI/MiniMax-01</link>
-      <description>[GitHub Repo] | The official repo of MiniMax-Text-01 and MiniMax-VL-01, large-language-model &amp; vision-language-model based on Linear Attention | Language: Python | Stars: 3351 | Topics: large-language-models, llm, llms, minimax-text-01, minimax-vl-01, vision-language-model, vlm</description>
+      <description>[GitHub Repo] | The official repo of MiniMax-Text-01 and MiniMax-VL-01, large-language-model &amp; vision-language-model based on Linear Attention | Language: Python | Stars: 3352 | Topics: large-language-models, llm, llms, minimax-text-01, minimax-vl-01, vision-language-model, vlm</description>
       <guid isPermaLink="true">https://github.com/MiniMax-AI/MiniMax-01</guid>
       <pubDate>Tue, 14 Jan 2025 15:43:28 +0000</pubDate>
     </item>
@@ -39,7 +39,7 @@
     <item>
       <title>MiniMax-MCP</title>
       <link>https://github.com/MiniMax-AI/MiniMax-MCP</link>
-      <description>[GitHub Repo] | Official MiniMax Model Context Protocol (MCP) server that enables interaction with powerful Text to Speech, image generation and video generation APIs. | Language: Python | Stars: 1279 | Topics: image-generation, image-to-video, mcp, mcp-server, mcp-tools, text-to-image, text-to-speech, text-to-video, video-generation, voice-cloning</description>
+      <description>[GitHub Repo] | Official MiniMax Model Context Protocol (MCP) server that enables interaction with powerful Text to Speech, image generation and video generation APIs. | Language: Python | Stars: 1282 | Topics: image-generation, image-to-video, mcp, mcp-server, mcp-tools, text-to-image, text-to-speech, text-to-video, video-generation, voice-cloning</description>
       <guid isPermaLink="true">https://github.com/MiniMax-AI/MiniMax-MCP</guid>
       <pubDate>Thu, 10 Apr 2025 06:15:56 +0000</pubDate>
     </item>
@@ -165,7 +165,7 @@
     <item>
       <title>MiniMax-M2</title>
       <link>https://github.com/MiniMax-AI/MiniMax-M2</link>
-      <description>[GitHub Repo] | MiniMax-M2, a model built for Max coding &amp; agentic workflows. | Stars: 2447 | Topics: large-language-models, llm</description>
+      <description>[GitHub Repo] | MiniMax-M2, a model built for Max coding &amp; agentic workflows. | Stars: 2450 | Topics: large-language-models, llm</description>
       <guid isPermaLink="true">https://github.com/MiniMax-AI/MiniMax-M2</guid>
       <pubDate>Sat, 25 Oct 2025 21:28:29 +0000</pubDate>
     </item>
@@ -179,7 +179,7 @@
     <item>
       <title>Mini-Agent</title>
       <link>https://github.com/MiniMax-AI/Mini-Agent</link>
-      <description>[GitHub Repo] | A minimal yet professional single agent demo project that showcases the core execution pipeline and production-grade features of agents. | Language: Python | Stars: 1706 | Topics: agent, llm, minimax</description>
+      <description>[GitHub Repo] | A minimal yet professional single agent demo project that showcases the core execution pipeline and production-grade features of agents. | Language: Python | Stars: 1712 | Topics: agent, llm, minimax</description>
       <guid isPermaLink="true">https://github.com/MiniMax-AI/Mini-Agent</guid>
       <pubDate>Fri, 31 Oct 2025 03:56:27 +0000</pubDate>
     </item>
@@ -207,7 +207,7 @@
     <item>
       <title>VTP</title>
       <link>https://github.com/MiniMax-AI/VTP</link>
-      <description>[GitHub Repo] | Towards Scalable Pre-training of Visual Tokenizers for Generation | Language: Python | Stars: 443 | Topics: diffusion-model, visual-generation, visual-tokenizer</description>
+      <description>[GitHub Repo] | Towards Scalable Pre-training of Visual Tokenizers for Generation | Language: Python | Stars: 444 | Topics: diffusion-model, visual-generation, visual-tokenizer</description>
       <guid isPermaLink="true">https://github.com/MiniMax-AI/VTP</guid>
       <pubDate>Thu, 11 Dec 2025 10:32:23 +0000</pubDate>
     </item>
@@ -256,14 +256,14 @@
     <item>
       <title>MiniMax-M2.5</title>
       <link>https://huggingface.co/MiniMaxAI/MiniMax-M2.5</link>
-      <description>[HuggingFace Model] | text-generation | Likes: 965 | Tags: transformers, safetensors, minimax_m2, text-generation, conversational</description>
+      <description>[HuggingFace Model] | text-generation | Likes: 1035 | Tags: transformers, safetensors, minimax_m2, text-generation, conversational</description>
       <guid isPermaLink="true">https://huggingface.co/MiniMaxAI/MiniMax-M2.5</guid>
       <pubDate>Thu, 12 Feb 2026 06:05:24 +0000</pubDate>
     </item>
     <item>
       <title>MiniMax-M2.5</title>
       <link>https://github.com/MiniMax-AI/MiniMax-M2.5</link>
-      <description>[GitHub Repo] | Stars: 407</description>
+      <description>[GitHub Repo] | Stars: 413</description>
       <guid isPermaLink="true">https://github.com/MiniMax-AI/MiniMax-M2.5</guid>
       <pubDate>Fri, 13 Feb 2026 04:47:29 +0000</pubDate>
     </item>
