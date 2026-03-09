@@ -1,5 +1,11 @@
 # RSS 生成器配置文件（统一 jobs 模型）
 
+site:
+  title: "AI RSS Network"
+  url: "https://yuanxianh.github.io/rss-feeds/"
+  tagline: "A deployed RSS network for AI labs, research groups, and release channels."
+  description: "Browse and subscribe to curated RSS feeds for AI research publications, engineering blogs, and product release streams."
+
 jobs:
   # Google DeepMind 博客（通用选择器抓取）
   - type: "selector_scrape"
@@ -14,6 +20,8 @@ jobs:
       title: "h3.card__title"
       link: "a"
       date: "time"
+    catalog:
+      section: "blogs"
     options:
       max_items: 50
       timeout: 15
@@ -35,6 +43,8 @@ jobs:
       title: "h3 a"
       link: "h3 a"
       description: "ul"
+    catalog:
+      section: "research"
     options:
       max_items: 50
       timeout: 15
@@ -57,6 +67,8 @@ jobs:
       link: "a._8xc5._8x97._8w61"
       description: "p._8w6f._8w61._8w6h._8zob"
       date: "p._8w6f._8wl0._8w6h"
+    catalog:
+      section: "research"
     options:
       max_items: 50
       timeout: 15
@@ -70,13 +82,15 @@ jobs:
     name: "OpenAI Research"
     source_url: "https://openai.com/news/rss.xml"
     output: "openai_research_only.xml"
-    title: "OpenAI Research Only"
-    description: "OpenAI 官方 RSS - 仅研究内容"
+    title: "OpenAI Research"
+    description: "Research posts filtered from the official OpenAI RSS feed"
     categories:
       - "Research"
       - "research"
       - "Science"
       - "science"
+    catalog:
+      section: "research"
     options:
       timeout: 15
       retries: 2
@@ -90,8 +104,10 @@ jobs:
     tag: "Technology"
     output: "waymo_blog_tech.xml"
     title: "Waymo Blog - Technology"
-    description: "Waymo Blog Technology 分类文章"
+    description: "Technology posts from the Waymo blog"
     link: "https://waymo.com/blog/search/?t=Technology"
+    catalog:
+      section: "blogs"
     options:
       max_items: 50
       timeout: 15
@@ -106,6 +122,8 @@ jobs:
     title: "MiniMax News"
     description: "Latest news and updates from MiniMax"
     link: "https://www.minimax.io/news"
+    catalog:
+      section: "blogs"
     options:
       max_items: 50
       max_discovery_pages: 50
@@ -118,6 +136,8 @@ jobs:
     title: "MiniMax Releases"
     description: "MiniMax model releases on HuggingFace and new GitHub repositories"
     link: "https://huggingface.co/MiniMaxAI"
+    catalog:
+      section: "releases"
     options:
       max_items: 50
       resource_types:
@@ -132,12 +152,16 @@ jobs:
     title: "Kimi Research Articles & Technical Blogs"
     description: "Explore Kimi research articles, technical blogs, and benchmark releases"
     link: "https://www.kimi.com/blog"
+    catalog:
+      section: "blogs"
 
   # 示例配置
   # - type: "selector_scrape"
   #   name: "Example"
   #   url: "https://example.com/blog"
   #   output: "example_blog.xml"
+  #   catalog:
+  #     section: "blogs"
   #   selectors:
   #     items: "article.post"
   #     title: "h2.title"

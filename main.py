@@ -12,6 +12,7 @@ import yaml
 
 from src.jobs import JobRunner
 from src.runtime import setup_logging
+from src.site_index import generate_site_index
 
 
 def load_config(config_path: str = "config.yaml") -> dict:
@@ -38,6 +39,10 @@ def _run_jobs(config: dict, feeds_dir: str) -> dict[str, bool]:
 def run_once(config: dict, feeds_dir: str) -> bool:
     """运行一次 RSS 生成"""
     results = _run_jobs(config, feeds_dir)
+    try:
+        generate_site_index(config, feeds_dir)
+    except Exception as exc:
+        logging.error(f"生成部署首页失败: {exc}")
 
     if not results:
         logging.warning("配置文件中没有定义任何可执行任务")

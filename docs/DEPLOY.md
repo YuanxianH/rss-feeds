@@ -5,7 +5,7 @@
 ## 部署方式
 
 - 推荐：`scripts/ops/deploy.sh` 推送代码，触发 GitHub Actions 自动生成并发布
-- 可选：`scripts/ops/publish.sh` 直接把本地 `feeds/*.xml` 发布到 `gh-pages`
+- 可选：`scripts/ops/publish.sh` 直接把本地 `feeds/`（含 `index.html` 与 RSS XML）发布到 `gh-pages`
 
 ## 前置条件
 
@@ -48,9 +48,10 @@ cd /path/to/rss_creator
 ### 4. 查看结果
 
 1. 打开 `Actions` 查看 `Update RSS Feeds`
-2. 成功后通过如下地址访问（替换用户名与仓库名）：
+2. 成功后优先通过首页访问（替换用户名与仓库名）：
 
 ```text
+https://YOUR_USERNAME.github.io/rss-feeds/
 https://YOUR_USERNAME.github.io/rss-feeds/openai_research_only.xml
 https://YOUR_USERNAME.github.io/rss-feeds/deepmind_blog.xml
 ```

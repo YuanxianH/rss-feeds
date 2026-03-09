@@ -122,11 +122,7 @@ else
 fi
 
 find "$WORKTREE_DIR" -mindepth 1 -maxdepth 1 ! -name ".git" -exec rm -rf {} +
-cp "$SOURCE_PATH"/*.xml "$WORKTREE_DIR"/
-
-if [[ -f "$SOURCE_PATH/CNAME" ]]; then
-    cp "$SOURCE_PATH/CNAME" "$WORKTREE_DIR/CNAME"
-fi
+find "$SOURCE_PATH" -mindepth 1 -maxdepth 1 -type f ! -name ".gitkeep" -exec cp {} "$WORKTREE_DIR"/ \;
 touch "$WORKTREE_DIR/.nojekyll"
 
 git -C "$WORKTREE_DIR" add --all
