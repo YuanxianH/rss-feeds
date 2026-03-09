@@ -7,30 +7,38 @@
   <meta name="description" content="Browse and subscribe to curated RSS feeds for AI research publications, engineering blogs, and product release streams.">
   <style>
     :root {
-      --paper: #f6f1e8;
-      --paper-strong: #efe4d3;
-      --ink: #17211d;
-      --muted: #55615b;
-      --line: rgba(23, 33, 29, 0.14);
-      --teal: #116466;
-      --orange: #c96a34;
-      --card: rgba(255, 252, 248, 0.88);
-      --shadow: 0 18px 45px rgba(23, 33, 29, 0.08);
-      --radius: 24px;
+      --bg: #f4f4ef;
+      --surface: #fcfcf8;
+      --surface-muted: #f1f1eb;
+      --text: #161616;
+      --muted: #66675f;
+      --line: #d8d8cf;
+      --line-strong: #bfc1b6;
+      --accent: #16584d;
+      --accent-soft: rgba(22, 88, 77, 0.08);
+      --danger: #8b6a34;
+      --danger-soft: rgba(139, 106, 52, 0.1);
+      --sidebar-width: 276px;
+      --sidebar-collapsed-width: 64px;
     }
 
     * {
       box-sizing: border-box;
     }
 
+    html {
+      scroll-behavior: smooth;
+    }
+
     body {
       margin: 0;
-      color: var(--ink);
-      background:
-        radial-gradient(circle at top left, rgba(17, 100, 102, 0.12), transparent 32%),
-        radial-gradient(circle at top right, rgba(201, 106, 52, 0.12), transparent 28%),
-        linear-gradient(180deg, #fbf7f0 0%, var(--paper) 45%, #f2ebdf 100%);
-      font-family: "Avenir Next", "Helvetica Neue", sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      font-family: "Avenir Next", "Helvetica Neue", "Segoe UI", sans-serif;
+    }
+
+    body.sidebar-open-mobile {
+      overflow: hidden;
     }
 
     a {
@@ -38,548 +46,875 @@
     }
 
     .page {
-      width: min(1180px, calc(100vw - 32px));
+      width: min(1240px, calc(100vw - 24px));
       margin: 0 auto;
-      padding: 32px 0 64px;
+      padding: 18px 0 36px;
     }
 
-    .hero {
-      position: relative;
-      overflow: hidden;
-      padding: 32px;
-      border: 1px solid var(--line);
-      border-radius: 32px;
-      background: rgba(255, 250, 244, 0.86);
-      box-shadow: var(--shadow);
-    }
-
-    .hero::after {
-      content: "";
-      position: absolute;
-      inset: auto -10% -25% auto;
-      width: 340px;
-      height: 340px;
-      border-radius: 999px;
-      background: radial-gradient(circle, rgba(17, 100, 102, 0.18), transparent 68%);
-      pointer-events: none;
-    }
-
-    .eyebrow,
-    .meta-kicker {
-      letter-spacing: 0.16em;
-      text-transform: uppercase;
-      font-size: 0.78rem;
-      color: var(--teal);
-      margin: 0 0 14px;
-    }
-
-    h1,
-    h2,
-    h3 {
-      font-family: "Iowan Old Style", "Palatino Linotype", "Book Antiqua", Georgia, serif;
-      font-weight: 600;
-      margin: 0;
-    }
-
-    h1 {
-      max-width: 13ch;
-      font-size: clamp(2.6rem, 5vw, 5rem);
-      line-height: 0.96;
-      letter-spacing: -0.04em;
-    }
-
-    .hero-grid {
-      position: relative;
+    .layout {
       display: grid;
+      grid-template-columns: var(--sidebar-width) minmax(0, 1fr);
       gap: 28px;
-      grid-template-columns: minmax(0, 1.3fr) minmax(280px, 0.9fr);
-      z-index: 1;
+      align-items: start;
     }
 
-    .hero-copy p {
-      max-width: 60ch;
-      margin: 18px 0 0;
-      color: var(--muted);
-      font-size: 1.02rem;
-      line-height: 1.7;
+    .sidebar {
+      position: sticky;
+      top: 18px;
+      max-height: calc(100vh - 36px);
+      overflow: hidden auto;
+      padding: 14px 14px 16px;
+      border: 1px solid var(--line-strong);
+      background: var(--surface);
+      transition: width 180ms ease, padding 180ms ease, transform 180ms ease;
     }
 
-    .hero-actions {
+    body.sidebar-collapsed .layout {
+      grid-template-columns: var(--sidebar-collapsed-width) minmax(0, 1fr);
+    }
+
+    body.sidebar-collapsed .sidebar {
+      padding-left: 10px;
+      padding-right: 10px;
+    }
+
+    .sidebar-header {
       display: flex;
-      flex-wrap: wrap;
-      gap: 12px;
-      margin-top: 26px;
+      align-items: center;
+      justify-content: space-between;
+      gap: 10px;
+      margin-bottom: 12px;
     }
 
-    .button {
+    .sidebar-title,
+    .hero-kicker,
+    .section-kicker,
+    .meta-key {
+      font-family: "SFMono-Regular", "JetBrains Mono", "Menlo", monospace;
+      font-size: 0.74rem;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+      color: var(--muted);
+    }
+
+    .directory-toggle {
+      appearance: none;
       display: inline-flex;
       align-items: center;
       justify-content: center;
       gap: 8px;
-      padding: 13px 18px;
-      border-radius: 999px;
-      border: 1px solid transparent;
-      text-decoration: none;
-      font-weight: 600;
-    }
-
-    .button-primary {
-      background: var(--ink);
-      color: #fff;
-    }
-
-    .button-secondary {
-      border-color: var(--line);
-      background: rgba(255, 255, 255, 0.58);
-    }
-
-    .stats {
-      display: grid;
-      gap: 12px;
-      align-content: start;
-    }
-
-    .stat {
-      padding: 18px 20px;
-      border-radius: 22px;
-      border: 1px solid var(--line);
-      background: rgba(255, 255, 255, 0.62);
-      backdrop-filter: blur(12px);
-    }
-
-    .stat-label {
+      min-height: 34px;
+      padding: 0 11px;
+      border: 1px solid var(--line-strong);
+      background: rgba(255, 255, 255, 0.72);
+      color: var(--text);
+      cursor: pointer;
+      font: inherit;
       font-size: 0.82rem;
-      text-transform: uppercase;
-      letter-spacing: 0.14em;
-      color: var(--muted);
+      font-weight: 600;
+      line-height: 1;
+      letter-spacing: 0.01em;
+      white-space: nowrap;
+      transition: border-color 160ms ease, background 160ms ease, color 160ms ease;
     }
 
-    .stat-value {
-      margin-top: 8px;
-      font-size: 1.35rem;
-      line-height: 1.2;
+    .directory-toggle:hover {
+      border-color: var(--accent);
+      color: var(--accent);
+      background: rgba(255, 255, 255, 0.92);
+    }
+
+    .directory-toggle__icon {
+      display: inline-grid;
+      gap: 3px;
+      width: 12px;
+      flex: 0 0 auto;
+    }
+
+    .directory-toggle__icon span {
+      display: block;
+      width: 12px;
+      height: 1.5px;
+      background: currentColor;
+    }
+
+    .directory-toggle--sidebar {
+      min-width: 34px;
+      padding-left: 10px;
+      padding-right: 10px;
+    }
+
+    .sidebar-body {
+      display: grid;
+      gap: 14px;
+    }
+
+    body.sidebar-collapsed .sidebar-header {
+      justify-content: center;
+      margin-bottom: 0;
+    }
+
+    body.sidebar-collapsed .sidebar-title,
+    body.sidebar-collapsed .sidebar-body {
+      display: none;
+    }
+
+    body.sidebar-collapsed .sidebar .directory-toggle {
+      width: 42px;
+      min-width: 42px;
+      padding-left: 0;
+      padding-right: 0;
+    }
+
+    body.sidebar-collapsed .sidebar .directory-toggle__label {
+      display: none;
+    }
+
+    .sidebar-group {
+      display: grid;
+      gap: 8px;
+    }
+
+    .sidebar-group h2 {
+      margin: 0;
+      font-size: 0.88rem;
       font-weight: 700;
     }
 
-    .network-map {
-      margin-top: 28px;
-      padding: 26px 28px;
-      border: 1px solid var(--line);
-      border-radius: 28px;
-      background: rgba(255, 250, 244, 0.78);
+    .sidebar-group ul {
+      margin: 0;
+      padding: 0;
+      list-style: none;
+      display: grid;
+      gap: 6px;
     }
 
-    .network-map p {
+    .sidebar-group a {
+      display: block;
+      color: var(--muted);
+      font-size: 0.86rem;
+      text-decoration: none;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+
+    .sidebar-group a:hover {
+      color: var(--accent);
+    }
+
+    .sidebar-overlay {
+      position: fixed;
+      inset: 0;
+      background: rgba(0, 0, 0, 0.22);
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity 180ms ease;
+      z-index: 30;
+    }
+
+    body.sidebar-open-mobile .sidebar-overlay {
+      opacity: 1;
+      pointer-events: auto;
+    }
+
+    .main {
+      min-width: 0;
+    }
+
+    .hero {
+      display: grid;
+      gap: 18px;
+      grid-template-columns: minmax(0, 1fr) minmax(250px, 320px);
+      align-items: start;
+      padding: 18px 0 20px;
+      border-bottom: 1px solid var(--line-strong);
+    }
+
+    .hero-kicker,
+    .section-kicker {
+      margin: 0 0 8px;
+    }
+
+    .hero h1 {
+      margin: 0;
+      font-size: clamp(1.9rem, 3.4vw, 2.8rem);
+      line-height: 1.02;
+      letter-spacing: -0.04em;
+      font-weight: 700;
+    }
+
+    .hero-tagline {
+      margin: 10px 0 0;
+      max-width: 58ch;
+      color: var(--muted);
+      font-size: 0.98rem;
+      line-height: 1.55;
+    }
+
+    .hero-url {
       margin: 10px 0 0;
       color: var(--muted);
-      max-width: 60ch;
-      line-height: 1.65;
+      font-size: 0.92rem;
     }
 
-    .map-grid {
-      margin-top: 22px;
+    .hero-url a {
+      text-decoration: none;
+      border-bottom: 1px solid var(--line-strong);
+    }
+
+    .hero-actions {
+      margin-top: 14px;
+    }
+
+    .directory-toggle--hero {
+      color: var(--accent);
+      border-color: rgba(22, 88, 77, 0.28);
+      background: rgba(22, 88, 77, 0.05);
+    }
+
+    .hero-stats {
+      margin: 0;
       display: grid;
-      gap: 14px;
-      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 8px;
     }
 
-    .map-node {
-      padding: 18px;
-      border-radius: 22px;
-      border: 1px solid var(--line);
-      background:
-        linear-gradient(135deg, rgba(255, 255, 255, 0.78), rgba(255, 255, 255, 0.46)),
-        linear-gradient(180deg, rgba(17, 100, 102, 0.05), rgba(201, 106, 52, 0.02));
+    .stat-row {
+      display: flex;
+      justify-content: space-between;
+      gap: 16px;
+      padding: 8px 0;
+      border-bottom: 1px solid var(--line);
     }
 
-    .map-node strong {
-      display: block;
-      font-size: 1.05rem;
-      font-family: "Iowan Old Style", "Palatino Linotype", "Book Antiqua", Georgia, serif;
+    .stat-row:last-child {
+      border-bottom: 0;
     }
 
-    .map-node span {
-      display: block;
-      margin-top: 8px;
+    .stat-row dt {
       color: var(--muted);
-      line-height: 1.6;
+      font-size: 0.84rem;
+    }
+
+    .stat-row dd {
+      margin: 0;
+      text-align: right;
+      font-size: 0.95rem;
+      font-weight: 600;
     }
 
     .sections {
-      margin-top: 28px;
       display: grid;
-      gap: 24px;
+      gap: 18px;
+      margin-top: 20px;
     }
 
-    .feed-section {
-      padding: 28px;
-      border-radius: 28px;
-      border: 1px solid var(--line);
-      background: rgba(255, 253, 248, 0.82);
-      box-shadow: var(--shadow);
+    .directory-section {
+      padding: 16px 0 0;
+      border-top: 1px solid var(--line);
+    }
+
+    .directory-section:first-child {
+      border-top: 0;
+      padding-top: 0;
     }
 
     .section-header {
       display: grid;
-      gap: 10px;
       grid-template-columns: minmax(0, 1fr) auto;
+      gap: 12px;
       align-items: end;
-      margin-bottom: 20px;
+      margin-bottom: 8px;
+    }
+
+    .section-header h2 {
+      margin: 0;
+      font-size: 1.15rem;
+      line-height: 1.15;
+      font-weight: 700;
     }
 
     .section-header p {
-      margin: 0;
+      margin: 6px 0 0;
       color: var(--muted);
-      line-height: 1.65;
-      max-width: 58ch;
+      font-size: 0.9rem;
+      line-height: 1.5;
     }
 
     .section-count {
-      padding: 9px 14px;
-      border-radius: 999px;
-      background: rgba(17, 100, 102, 0.08);
-      color: var(--teal);
-      font-size: 0.82rem;
-      text-transform: uppercase;
-      letter-spacing: 0.12em;
-    }
-
-    .feed-grid {
-      display: grid;
-      gap: 16px;
-      grid-template-columns: repeat(2, minmax(0, 1fr));
-    }
-
-    .feed-card {
-      padding: 22px;
-      border-radius: var(--radius);
-      border: 1px solid var(--line);
-      background: var(--card);
-      display: grid;
-      gap: 16px;
-      align-content: start;
-    }
-
-    .feed-card h3 {
-      font-size: 1.35rem;
-      line-height: 1.12;
-    }
-
-    .feed-card p {
-      margin: 0;
       color: var(--muted);
-      line-height: 1.7;
+      font-size: 0.84rem;
+      white-space: nowrap;
     }
 
-    .feed-meta {
+    .directory-list {
+      background: var(--surface);
+      border: 1px solid var(--line);
+    }
+
+    .directory-row {
+      display: grid;
+      grid-template-columns: minmax(0, 1.45fr) minmax(300px, 0.95fr);
+      gap: 18px;
+      padding: 12px 16px;
+      border-top: 1px solid var(--line);
+    }
+
+    .directory-row:first-child {
+      border-top: 0;
+    }
+
+    .directory-row.is-unavailable {
+      background: rgba(0, 0, 0, 0.012);
+    }
+
+    .row-main {
+      min-width: 0;
+    }
+
+    .row-main h3 {
+      margin: 0;
+      font-size: 1rem;
+      line-height: 1.2;
+      font-weight: 650;
+    }
+
+    .row-description {
+      margin: 4px 0 0;
+      overflow: hidden;
+      white-space: nowrap;
+      text-overflow: ellipsis;
+      color: var(--muted);
+      font-size: 0.9rem;
+    }
+
+    .row-side {
+      display: grid;
+      gap: 6px;
+      align-content: start;
+      justify-items: end;
+      min-width: 0;
+    }
+
+    .row-meta {
       display: flex;
       flex-wrap: wrap;
-      gap: 10px;
-      font-size: 0.84rem;
-      color: var(--muted);
+      justify-content: flex-end;
+      gap: 8px;
     }
 
-    .feed-meta span {
+    .meta-item {
       display: inline-flex;
       align-items: center;
       gap: 6px;
-      padding: 6px 10px;
-      border-radius: 999px;
-      background: rgba(23, 33, 29, 0.06);
+      min-height: 28px;
+      padding: 4px 8px;
+      border: 1px solid var(--line);
+      color: var(--muted);
+      font-size: 0.82rem;
+      background: #fff;
     }
 
-    .feed-actions {
+    .meta-item strong {
+      color: var(--text);
+      font-weight: 600;
+    }
+
+    .meta-item.status-live {
+      color: var(--accent);
+      border-color: rgba(22, 88, 77, 0.2);
+      background: var(--accent-soft);
+    }
+
+    .meta-item.status-unavailable {
+      color: var(--danger);
+      border-color: rgba(139, 106, 52, 0.25);
+      background: var(--danger-soft);
+    }
+
+    .row-actions {
       display: flex;
       flex-wrap: wrap;
-      gap: 10px;
+      gap: 12px;
+      justify-content: flex-end;
+      font-size: 0.85rem;
     }
 
-    .chip {
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
-      padding: 10px 14px;
-      border-radius: 999px;
-      border: 1px solid var(--line);
+    .row-actions a {
+      color: var(--accent);
       text-decoration: none;
-      font-weight: 600;
-      background: rgba(255, 255, 255, 0.84);
+      border-bottom: 1px solid rgba(22, 88, 77, 0.28);
     }
 
-    .chip-accent {
-      border-color: rgba(17, 100, 102, 0.18);
-      background: rgba(17, 100, 102, 0.08);
-      color: var(--teal);
-    }
-
-    .chip-muted {
+    .row-actions span {
       color: var(--muted);
-      background: rgba(23, 33, 29, 0.05);
     }
 
-    .mono {
-      font-family: "SFMono-Regular", "JetBrains Mono", "Fira Code", monospace;
+    .empty-row {
+      padding: 12px 16px;
+      color: var(--muted);
       font-size: 0.9rem;
     }
 
     footer {
-      margin-top: 24px;
-      padding: 18px 4px 0;
+      margin-top: 18px;
+      padding-top: 14px;
+      border-top: 1px solid var(--line);
       color: var(--muted);
-      font-size: 0.95rem;
-      line-height: 1.65;
+      font-size: 0.84rem;
+      line-height: 1.5;
     }
 
-    @media (max-width: 980px) {
-      .hero-grid,
-      .feed-grid,
-      .map-grid {
+    @media (max-width: 960px) {
+      .page {
+        width: min(100vw - 16px, 1240px);
+      }
+
+      .layout {
         grid-template-columns: 1fr;
       }
 
+      .sidebar {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: min(88vw, 320px);
+        max-height: 100vh;
+        height: 100vh;
+        padding: 18px 14px;
+        transform: translateX(-100%);
+        z-index: 40;
+      }
+
+      body.sidebar-open-mobile .sidebar {
+        transform: translateX(0);
+      }
+
+      body.sidebar-collapsed .layout {
+        grid-template-columns: 1fr;
+      }
+
+      body.sidebar-collapsed .sidebar {
+        padding: 18px 14px;
+      }
+
+      body.sidebar-collapsed .sidebar-title,
+      body.sidebar-collapsed .sidebar-body {
+        display: grid;
+      }
+
+      .hero,
+      .directory-row,
       .section-header {
         grid-template-columns: 1fr;
-        align-items: start;
+      }
+
+      .row-side {
+        justify-items: start;
+      }
+
+      .row-meta,
+      .row-actions {
+        justify-content: flex-start;
       }
     }
 
     @media (max-width: 640px) {
-      .page {
-        width: min(100vw - 20px, 1180px);
-        padding-top: 20px;
+      .directory-list {
+        border-left: 0;
+        border-right: 0;
       }
 
-      .hero,
-      .network-map,
-      .feed-section {
-        padding: 22px;
-      }
-
-      .hero-actions,
-      .feed-actions {
-        flex-direction: column;
-      }
-
-      .button,
-      .chip {
-        width: 100%;
+      .directory-row,
+      .empty-row {
+        padding-left: 0;
+        padding-right: 0;
       }
     }
   </style>
 </head>
-<body>
+<body class="sidebar-expanded">
+  <div class="sidebar-overlay" data-sidebar-overlay hidden></div>
   <main class="page">
-    <section class="hero">
-      <div class="hero-grid">
-        <div class="hero-copy">
-          <p class="eyebrow">Deployed RSS Network</p>
-          <h1>AI RSS Network</h1>
-          <p><strong>A deployed RSS network for AI labs, research groups, and release channels.</strong></p>
-          <p>Browse and subscribe to curated RSS feeds for AI research publications, engineering blogs, and product release streams.</p>
-          <div class="hero-actions">
-            <a class="button button-primary" href="https://yuanxianh.github.io/rss-feeds/">Open deployed homepage</a>
-            <a class="button button-secondary" href="#section-research">Browse feeds</a>
-          </div>
+    <div class="layout">
+      <aside class="sidebar" id="feed-sidebar" aria-label="Feed directory navigation">
+        <div class="sidebar-header">
+          <span class="sidebar-title">Feed directory</span>
+          <button
+            class="directory-toggle directory-toggle--sidebar"
+            type="button"
+            data-sidebar-toggle
+            aria-controls="feed-sidebar"
+            aria-expanded="true"
+            aria-label="Hide directory"
+          >
+            <span class="directory-toggle__icon" aria-hidden="true"><span></span><span></span><span></span></span>
+            <span class="directory-toggle__label" data-toggle-label>Hide directory</span>
+          </button>
         </div>
-        <aside class="stats" aria-label="Network stats">
-          <div class="stat">
-            <div class="stat-label">Feeds</div>
-            <div class="stat-value">8</div>
-          </div>
-          <div class="stat">
-            <div class="stat-label">Sections</div>
-            <div class="stat-value">3</div>
-          </div>
-          <div class="stat">
-            <div class="stat-label">Latest build</div>
-            <div class="stat-value">09 Mar 2026, 15:30 UTC</div>
-          </div>
-        </aside>
-      </div>
-    </section>
+        <nav class="sidebar-body">
+          
+          <section class="sidebar-group">
+            <h2>Research</h2>
+            <ul>
+              <li><a href="#feed-research-meta-ai-research">Meta AI Research Publications</a></li><li><a href="#feed-research-openai-research-only">OpenAI Research</a></li><li><a href="#feed-research-waymo-research">Waymo Research</a></li>
+            </ul>
+          </section>
+          <section class="sidebar-group">
+            <h2>Blogs</h2>
+            <ul>
+              <li><a href="#feed-blogs-kimi-blog">Kimi Research Articles &amp; Technical Blogs</a></li><li><a href="#feed-blogs-minimax-blog">MiniMax News</a></li><li><a href="#feed-blogs-waymo-blog-tech">Waymo Blog - Technology</a></li><li><a href="#feed-blogs-deepmind-blog">Google DeepMind Blog</a></li>
+            </ul>
+          </section>
+          <section class="sidebar-group">
+            <h2>Releases</h2>
+            <ul>
+              <li><a href="#feed-releases-codex-github-releases">Codex GitHub Releases</a></li><li><a href="#feed-releases-minimax-releases">MiniMax Releases</a></li>
+            </ul>
+          </section>
+        </nav>
+      </aside>
 
-    <section class="network-map" aria-labelledby="network-map-title">
-      <p class="meta-kicker">Network map</p>
-      <h2 id="network-map-title">A single entrypoint for AI research, blogs, and release streams</h2>
-      <p>The landing page is generated from the repository configuration and feed metadata, so the deployed catalog stays aligned with the feeds published to GitHub Pages.</p>
-      <div class="map-grid">
-        
-        <article class="map-node">
-          <strong>Research</strong>
-          <span>3 feeds</span>
-          <span>Publications, lab notes, and filtered research streams.</span>
-        </article>
-        <article class="map-node">
-          <strong>Blogs</strong>
-          <span>4 feeds</span>
-          <span>Company blogs, engineering writing, and product news.</span>
-        </article>
-        <article class="map-node">
-          <strong>Releases</strong>
-          <span>1 feed</span>
-          <span>Model drops, repositories, and release-oriented feeds.</span>
-        </article>
-      </div>
-    </section>
+      <div class="main">
+        <header class="hero">
+          <div class="hero-main">
+            <p class="hero-kicker">AI feed directory</p>
+            <h1>AI RSS Network</h1>
+            <p class="hero-tagline">A deployed RSS network for AI labs, research groups, and release channels.</p>
+            <p class="hero-url">Published at <a href="https://yuanxianh.github.io/rss-feeds/">https://yuanxianh.github.io/rss-feeds/</a></p>
+            <div class="hero-actions">
+              <button
+                class="directory-toggle directory-toggle--hero"
+                type="button"
+                data-sidebar-toggle
+                aria-controls="feed-sidebar"
+                aria-expanded="true"
+                aria-label="Hide directory"
+              >
+                <span class="directory-toggle__icon" aria-hidden="true"><span></span><span></span><span></span></span>
+                <span class="directory-toggle__label" data-toggle-label>Hide directory</span>
+              </button>
+            </div>
+          </div>
+          <dl class="hero-stats" aria-label="Feed directory statistics">
+            <div class="stat-row">
+              <dt>Live feeds</dt>
+              <dd>9 live feeds</dd>
+            </div>
+            <div class="stat-row">
+              <dt>Configured</dt>
+              <dd>9 configured</dd>
+            </div>
+            <div class="stat-row">
+              <dt>Latest build</dt>
+              <dd>09 Mar 2026, 16:17 UTC</dd>
+            </div>
+          </dl>
+        </header>
 
-    <div class="sections">
-      
-    <section class="feed-section" id="section-research">
+        <div class="sections">
+          
+    <section class="directory-section" id="section-research">
       <div class="section-header">
         <div>
-          <p class="meta-kicker">Research</p>
+          <p class="section-kicker">Research</p>
           <h2>Research</h2>
           <p>Publications, lab notes, and filtered research streams.</p>
         </div>
-        <div class="section-count">3 feeds</div>
+        <div class="section-count">3 live</div>
       </div>
-      <div class="feed-grid">
+      <div class="directory-list">
         
-        <article class="feed-card">
-          <div>
-            <h3>Waymo Research</h3>
-          </div>
-          <p>Latest research publications from Waymo</p>
-          <div class="feed-meta">
-            <span>Source: <strong>waymo.com</strong></span>
-            <span>Latest build: <strong>09 Mar 2026, 15:29 UTC</strong></span>
-          </div>
-          <div class="feed-actions">
-            <a class="chip chip-accent" href="waymo_research.xml">Subscribe to RSS</a>
-            <a class="chip" href="https://waymo.com/intl/zh-cn/research/">Visit source</a>
-          </div>
-        </article>
-        <article class="feed-card">
-          <div>
+        <article class="directory-row is-live" id="feed-research-meta-ai-research">
+          <div class="row-main">
             <h3>Meta AI Research Publications</h3>
+            <p class="row-description">Latest research publications from Meta AI</p>
           </div>
-          <p>Latest research publications from Meta AI</p>
-          <div class="feed-meta">
-            <span>Source: <strong>ai.meta.com</strong></span>
-            <span>Latest build: <strong>09 Mar 2026, 15:29 UTC</strong></span>
-          </div>
-          <div class="feed-actions">
-            <a class="chip chip-accent" href="meta_ai_research.xml">Subscribe to RSS</a>
-            <a class="chip" href="https://ai.meta.com/results/?content_types%5B0%5D=publication">Visit source</a>
+          <div class="row-side">
+            <div class="row-meta">
+              <span class="meta-item"><span class="meta-key">Updated</span><strong>09 Mar 2026, 16:16 UTC</strong></span>
+              <span class="meta-item status-live"><span class="meta-key">Status</span><strong>Live</strong></span>
+            </div>
+            <div class="row-actions">
+              <a href="meta_ai_research.xml">RSS</a>
+              <a href="https://ai.meta.com/results/?content_types%5B0%5D=publication">Source</a>
+            </div>
           </div>
         </article>
-        <article class="feed-card">
-          <div>
+        <article class="directory-row is-live" id="feed-research-openai-research-only">
+          <div class="row-main">
             <h3>OpenAI Research</h3>
+            <p class="row-description">Research posts filtered from the official OpenAI RSS feed</p>
           </div>
-          <p>Research posts filtered from the official OpenAI RSS feed</p>
-          <div class="feed-meta">
-            <span>Source: <strong>openai.com</strong></span>
-            <span>Latest build: <strong>09 Mar 2026, 15:29 UTC</strong></span>
+          <div class="row-side">
+            <div class="row-meta">
+              <span class="meta-item"><span class="meta-key">Updated</span><strong>09 Mar 2026, 16:16 UTC</strong></span>
+              <span class="meta-item status-live"><span class="meta-key">Status</span><strong>Live</strong></span>
+            </div>
+            <div class="row-actions">
+              <a href="openai_research_only.xml">RSS</a>
+              <a href="https://openai.com/news">Source</a>
+            </div>
           </div>
-          <div class="feed-actions">
-            <a class="chip chip-accent" href="openai_research_only.xml">Subscribe to RSS</a>
-            <a class="chip" href="https://openai.com/news">Visit source</a>
+        </article>
+        <article class="directory-row is-live" id="feed-research-waymo-research">
+          <div class="row-main">
+            <h3>Waymo Research</h3>
+            <p class="row-description">Latest research publications from Waymo</p>
+          </div>
+          <div class="row-side">
+            <div class="row-meta">
+              <span class="meta-item"><span class="meta-key">Updated</span><strong>09 Mar 2026, 16:16 UTC</strong></span>
+              <span class="meta-item status-live"><span class="meta-key">Status</span><strong>Live</strong></span>
+            </div>
+            <div class="row-actions">
+              <a href="waymo_research.xml">RSS</a>
+              <a href="https://waymo.com/intl/zh-cn/research/">Source</a>
+            </div>
           </div>
         </article>
       </div>
     </section>
-    <section class="feed-section" id="section-blogs">
+    <section class="directory-section" id="section-blogs">
       <div class="section-header">
         <div>
-          <p class="meta-kicker">Blogs</p>
+          <p class="section-kicker">Blogs</p>
           <h2>Blogs</h2>
           <p>Company blogs, engineering writing, and product news.</p>
         </div>
-        <div class="section-count">4 feeds</div>
+        <div class="section-count">4 live</div>
       </div>
-      <div class="feed-grid">
+      <div class="directory-list">
         
-        <article class="feed-card">
-          <div>
-            <h3>Google DeepMind Blog</h3>
-          </div>
-          <p>Discover the latest AI breakthroughs, projects, and updates from Google DeepMind</p>
-          <div class="feed-meta">
-            <span>Source: <strong>deepmind.google</strong></span>
-            <span>Latest build: <strong>09 Mar 2026, 15:29 UTC</strong></span>
-          </div>
-          <div class="feed-actions">
-            <a class="chip chip-accent" href="deepmind_blog.xml">Subscribe to RSS</a>
-            <a class="chip" href="https://deepmind.google/blog/">Visit source</a>
-          </div>
-        </article>
-        <article class="feed-card">
-          <div>
-            <h3>Waymo Blog - Technology</h3>
-          </div>
-          <p>Technology posts from the Waymo blog</p>
-          <div class="feed-meta">
-            <span>Source: <strong>waymo.com</strong></span>
-            <span>Latest build: <strong>09 Mar 2026, 15:29 UTC</strong></span>
-          </div>
-          <div class="feed-actions">
-            <a class="chip chip-accent" href="waymo_blog_tech.xml">Subscribe to RSS</a>
-            <a class="chip" href="https://waymo.com/blog/search/?t=Technology">Visit source</a>
-          </div>
-        </article>
-        <article class="feed-card">
-          <div>
-            <h3>MiniMax News</h3>
-          </div>
-          <p>Latest news and updates from MiniMax</p>
-          <div class="feed-meta">
-            <span>Source: <strong>minimax.io</strong></span>
-            <span>Latest build: <strong>09 Mar 2026, 15:30 UTC</strong></span>
-          </div>
-          <div class="feed-actions">
-            <a class="chip chip-accent" href="minimax_blog.xml">Subscribe to RSS</a>
-            <a class="chip" href="https://www.minimax.io/news">Visit source</a>
-          </div>
-        </article>
-        <article class="feed-card">
-          <div>
+        <article class="directory-row is-live" id="feed-blogs-kimi-blog">
+          <div class="row-main">
             <h3>Kimi Research Articles &amp; Technical Blogs</h3>
+            <p class="row-description">Explore Kimi research articles, technical blogs, and benchmark releases</p>
           </div>
-          <p>Explore Kimi research articles, technical blogs, and benchmark releases</p>
-          <div class="feed-meta">
-            <span>Source: <strong>kimi.com</strong></span>
-            <span>Latest build: <strong>09 Mar 2026, 15:30 UTC</strong></span>
+          <div class="row-side">
+            <div class="row-meta">
+              <span class="meta-item"><span class="meta-key">Updated</span><strong>09 Mar 2026, 16:17 UTC</strong></span>
+              <span class="meta-item status-live"><span class="meta-key">Status</span><strong>Live</strong></span>
+            </div>
+            <div class="row-actions">
+              <a href="kimi_blog.xml">RSS</a>
+              <a href="https://www.kimi.com/blog">Source</a>
+            </div>
           </div>
-          <div class="feed-actions">
-            <a class="chip chip-accent" href="kimi_blog.xml">Subscribe to RSS</a>
-            <a class="chip" href="https://www.kimi.com/blog">Visit source</a>
+        </article>
+        <article class="directory-row is-live" id="feed-blogs-minimax-blog">
+          <div class="row-main">
+            <h3>MiniMax News</h3>
+            <p class="row-description">Latest news and updates from MiniMax</p>
+          </div>
+          <div class="row-side">
+            <div class="row-meta">
+              <span class="meta-item"><span class="meta-key">Updated</span><strong>09 Mar 2026, 16:17 UTC</strong></span>
+              <span class="meta-item status-live"><span class="meta-key">Status</span><strong>Live</strong></span>
+            </div>
+            <div class="row-actions">
+              <a href="minimax_blog.xml">RSS</a>
+              <a href="https://www.minimax.io/news">Source</a>
+            </div>
+          </div>
+        </article>
+        <article class="directory-row is-live" id="feed-blogs-waymo-blog-tech">
+          <div class="row-main">
+            <h3>Waymo Blog - Technology</h3>
+            <p class="row-description">Technology posts from the Waymo blog</p>
+          </div>
+          <div class="row-side">
+            <div class="row-meta">
+              <span class="meta-item"><span class="meta-key">Updated</span><strong>09 Mar 2026, 16:16 UTC</strong></span>
+              <span class="meta-item status-live"><span class="meta-key">Status</span><strong>Live</strong></span>
+            </div>
+            <div class="row-actions">
+              <a href="waymo_blog_tech.xml">RSS</a>
+              <a href="https://waymo.com/blog/search/?t=Technology">Source</a>
+            </div>
+          </div>
+        </article>
+        <article class="directory-row is-live" id="feed-blogs-deepmind-blog">
+          <div class="row-main">
+            <h3>Google DeepMind Blog</h3>
+            <p class="row-description">Discover the latest AI breakthroughs, projects, and updates from Google DeepMind</p>
+          </div>
+          <div class="row-side">
+            <div class="row-meta">
+              <span class="meta-item"><span class="meta-key">Updated</span><strong>09 Mar 2026, 16:16 UTC</strong></span>
+              <span class="meta-item status-live"><span class="meta-key">Status</span><strong>Live</strong></span>
+            </div>
+            <div class="row-actions">
+              <a href="deepmind_blog.xml">RSS</a>
+              <a href="https://deepmind.google/blog/">Source</a>
+            </div>
           </div>
         </article>
       </div>
     </section>
-    <section class="feed-section" id="section-releases">
+    <section class="directory-section" id="section-releases">
       <div class="section-header">
         <div>
-          <p class="meta-kicker">Releases</p>
+          <p class="section-kicker">Releases</p>
           <h2>Releases</h2>
           <p>Model drops, repositories, and release-oriented feeds.</p>
         </div>
-        <div class="section-count">1 feed</div>
+        <div class="section-count">2 live</div>
       </div>
-      <div class="feed-grid">
+      <div class="directory-list">
         
-        <article class="feed-card">
-          <div>
+        <article class="directory-row is-live" id="feed-releases-codex-github-releases">
+          <div class="row-main">
+            <h3>Codex GitHub Releases</h3>
+            <p class="row-description">GitHub release entries from the official Codex changelog</p>
+          </div>
+          <div class="row-side">
+            <div class="row-meta">
+              <span class="meta-item"><span class="meta-key">Updated</span><strong>09 Mar 2026, 16:17 UTC</strong></span>
+              <span class="meta-item status-live"><span class="meta-key">Status</span><strong>Live</strong></span>
+            </div>
+            <div class="row-actions">
+              <a href="codex_github_releases.xml">RSS</a>
+              <a href="https://developers.openai.com/codex/changelog#github-release">Source</a>
+            </div>
+          </div>
+        </article>
+        <article class="directory-row is-live" id="feed-releases-minimax-releases">
+          <div class="row-main">
             <h3>MiniMax Releases</h3>
+            <p class="row-description">MiniMax model releases on HuggingFace and new GitHub repositories</p>
           </div>
-          <p>MiniMax model releases on HuggingFace and new GitHub repositories</p>
-          <div class="feed-meta">
-            <span>Source: <strong>huggingface.co</strong></span>
-            <span>Latest build: <strong>09 Mar 2026, 15:30 UTC</strong></span>
-          </div>
-          <div class="feed-actions">
-            <a class="chip chip-accent" href="minimax_releases.xml">Subscribe to RSS</a>
-            <a class="chip" href="https://huggingface.co/MiniMaxAI">Visit source</a>
+          <div class="row-side">
+            <div class="row-meta">
+              <span class="meta-item"><span class="meta-key">Updated</span><strong>09 Mar 2026, 16:17 UTC</strong></span>
+              <span class="meta-item status-live"><span class="meta-key">Status</span><strong>Live</strong></span>
+            </div>
+            <div class="row-actions">
+              <a href="minimax_releases.xml">RSS</a>
+              <a href="https://huggingface.co/MiniMaxAI">Source</a>
+            </div>
           </div>
         </article>
       </div>
     </section>
-    </div>
+        </div>
 
-    <footer>
-      Generated from <span class="mono">config.yaml</span> and the current feed XML files in <span class="mono">feeds/</span>. Published at <a href="https://yuanxianh.github.io/rss-feeds/">https://yuanxianh.github.io/rss-feeds/</a>.
-    </footer>
+        <footer>
+          Generated from <span class="meta-key">config.yaml</span> and the current XML files in <span class="meta-key">feeds/</span>.
+        </footer>
+      </div>
+    </div>
   </main>
+  <script>
+    (() => {
+      const body = document.body;
+      const sidebar = document.getElementById("feed-sidebar");
+      const overlay = document.querySelector("[data-sidebar-overlay]");
+      const toggles = Array.from(document.querySelectorAll("[data-sidebar-toggle]"));
+      const navLinks = Array.from(document.querySelectorAll(".sidebar a"));
+      const mobileQuery = window.matchMedia("(max-width: 960px)");
+      const labels = {
+        "desktop-expanded": "Hide directory",
+        "desktop-collapsed": "Show directory",
+        "mobile-closed": "Open directory",
+        "mobile-open": "Close directory",
+      };
+
+      const currentState = () => {
+        if (mobileQuery.matches) {
+          return body.classList.contains("sidebar-open-mobile") ? "mobile-open" : "mobile-closed";
+        }
+        return body.classList.contains("sidebar-collapsed") ? "desktop-collapsed" : "desktop-expanded";
+      };
+
+      const syncToggleState = () => {
+        const state = currentState();
+        const expanded = state === "desktop-expanded" || state === "mobile-open";
+        const label = labels[state];
+        body.dataset.directoryState = state;
+        toggles.forEach((toggle) => {
+          toggle.setAttribute("aria-expanded", expanded ? "true" : "false");
+          toggle.setAttribute("aria-label", label);
+          toggle.dataset.directoryState = state;
+          const labelNode = toggle.querySelector("[data-toggle-label]");
+          if (labelNode) {
+            labelNode.textContent = label;
+          }
+        });
+      };
+
+      const closeMobileSidebar = () => {
+        body.classList.remove("sidebar-open-mobile");
+        overlay.hidden = true;
+        syncToggleState();
+      };
+
+      const openMobileSidebar = () => {
+        body.classList.add("sidebar-open-mobile");
+        overlay.hidden = false;
+        syncToggleState();
+      };
+
+      const toggleDesktopSidebar = () => {
+        const collapsed = body.classList.toggle("sidebar-collapsed");
+        body.classList.toggle("sidebar-expanded", !collapsed);
+        syncToggleState();
+      };
+
+      toggles.forEach((toggle) => {
+        toggle.addEventListener("click", () => {
+          if (mobileQuery.matches) {
+            if (body.classList.contains("sidebar-open-mobile")) {
+              closeMobileSidebar();
+            } else {
+              openMobileSidebar();
+            }
+            return;
+          }
+          toggleDesktopSidebar();
+        });
+      });
+
+      overlay.addEventListener("click", closeMobileSidebar);
+
+      document.addEventListener("keydown", (event) => {
+        if (event.key === "Escape" && body.classList.contains("sidebar-open-mobile")) {
+          closeMobileSidebar();
+        }
+      });
+
+      navLinks.forEach((link) => {
+        link.addEventListener("click", () => {
+          if (mobileQuery.matches) {
+            closeMobileSidebar();
+          }
+        });
+      });
+
+      mobileQuery.addEventListener("change", (event) => {
+        if (event.matches) {
+          body.classList.remove("sidebar-expanded", "sidebar-collapsed");
+          body.classList.remove("sidebar-open-mobile");
+          overlay.hidden = true;
+        } else {
+          overlay.hidden = true;
+          body.classList.remove("sidebar-open-mobile");
+          body.classList.add("sidebar-expanded");
+          body.classList.remove("sidebar-collapsed");
+        }
+        syncToggleState();
+      });
+
+      if (mobileQuery.matches) {
+        body.classList.remove("sidebar-expanded", "sidebar-collapsed", "sidebar-open-mobile");
+        overlay.hidden = true;
+      } else {
+        body.classList.add("sidebar-expanded");
+        body.classList.remove("sidebar-collapsed", "sidebar-open-mobile");
+        overlay.hidden = true;
+      }
+      syncToggleState();
+    })();
+  </script>
 </body>
 </html>
