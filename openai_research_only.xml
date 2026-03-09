@@ -7,7 +7,7 @@
     <docs>http://www.rssboard.org/rss-specification</docs>
     <generator>RSS Creator - RSS Filter</generator>
     <language>zh-CN</language>
-    <lastBuildDate>Sun, 08 Mar 2026 12:33:57 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 09 Mar 2026 01:26:53 +0000</lastBuildDate>
     <item>
       <title>Weight normalization: A simple reparameterization to accelerate training of deep neural networks</title>
       <link>https://openai.com/index/weight-normalization</link>
@@ -340,16 +340,16 @@
       <pubDate>Tue, 17 Oct 2017 07:00:00 +0000</pubDate>
     </item>
     <item>
-      <title>Asymmetric actor critic for image-based robot learning</title>
-      <link>https://openai.com/index/asymmetric-actor-critic-for-image-based-robot-learning</link>
-      <guid isPermaLink="true">https://openai.com/index/asymmetric-actor-critic-for-image-based-robot-learning</guid>
+      <title>Sim-to-real transfer of robotic control with dynamics randomization</title>
+      <link>https://openai.com/index/sim-to-real-transfer-of-robotic-control-with-dynamics-randomization</link>
+      <guid isPermaLink="true">https://openai.com/index/sim-to-real-transfer-of-robotic-control-with-dynamics-randomization</guid>
       <category>Research</category>
       <pubDate>Wed, 18 Oct 2017 07:00:00 +0000</pubDate>
     </item>
     <item>
-      <title>Sim-to-real transfer of robotic control with dynamics randomization</title>
-      <link>https://openai.com/index/sim-to-real-transfer-of-robotic-control-with-dynamics-randomization</link>
-      <guid isPermaLink="true">https://openai.com/index/sim-to-real-transfer-of-robotic-control-with-dynamics-randomization</guid>
+      <title>Asymmetric actor critic for image-based robot learning</title>
+      <link>https://openai.com/index/asymmetric-actor-critic-for-image-based-robot-learning</link>
+      <guid isPermaLink="true">https://openai.com/index/asymmetric-actor-critic-for-image-based-robot-learning</guid>
       <category>Research</category>
       <pubDate>Wed, 18 Oct 2017 07:00:00 +0000</pubDate>
     </item>
