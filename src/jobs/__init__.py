@@ -3,6 +3,7 @@
 from .runner import JobRunner
 
 # Import modules for job registration side effects.
+from .codex_changelog import CodexChangelogJob  # noqa: F401
 from .kimi_blog import KimiBlogJob  # noqa: F401
 from .minimax_news import MiniMaxNewsJob  # noqa: F401
 from .minimax_releases import MiniMaxReleasesJob  # noqa: F401

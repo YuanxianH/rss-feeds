@@ -5,6 +5,7 @@ from pathlib import Path
 from typing import Dict
 
 # Ensure built-in jobs are registered even when importing runner directly.
+from . import codex_changelog as _codex_changelog  # noqa: F401
 from . import minimax_news as _minimax_news  # noqa: F401
 from . import minimax_releases as _minimax_releases  # noqa: F401
 from . import openai_research as _openai_research  # noqa: F401

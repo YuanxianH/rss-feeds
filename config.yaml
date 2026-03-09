@@ -145,6 +145,27 @@ jobs:
       retries: 2
       backoff_factor: 0.5
 
+  # Codex changelog 里的 GitHub release
+  - type: "codex_changelog"
+    name: "Codex GitHub Releases"
+    url: "https://developers.openai.com/codex/changelog"
+    link: "https://developers.openai.com/codex/changelog#github-release"
+    fallback_atom_url: "https://github.com/openai/codex/releases.atom"
+    output: "codex_github_releases.xml"
+    title: "Codex GitHub Releases"
+    description: "GitHub release entries from the official Codex changelog"
+    anchor_prefixes:
+      - "github-release-"
+    catalog:
+      section: "releases"
+    options:
+      max_items: 50
+      timeout: 15
+      retries: 2
+      backoff_factor: 0.5
+      user_agent: "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36"
+      encoding: "utf-8"
+
   # Kimi Blog（VitePress 站点）
   - type: "kimi_blog"
     name: "Kimi Blog"

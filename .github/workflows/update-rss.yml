@@ -1,9 +1,9 @@
 name: Update RSS Feeds
 
 on:
-  # 每天 UTC 时间 0:00 和 12:00 自动运行（北京时间 8:00 和 20:00）
+  # 每小时运行一次，尽快把上游更新反映到 RSS
   schedule:
-    - cron: '0 0,12 * * *'
+    - cron: '0 * * * *'
 
   # 也可以手动触发
   workflow_dispatch:

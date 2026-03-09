@@ -8,7 +8,7 @@ from email.utils import parsedate_to_datetime
 from html import escape
 import logging
 from pathlib import Path
-from urllib.parse import urlparse
+import re
 from xml.etree import ElementTree as ET
 
 logger = logging.getLogger(__name__)
@@ -41,15 +41,19 @@ DEFAULT_SITE = {
 class FeedCard:
     """Rendered feed metadata for the landing page."""
 
+    anchor_id: str
     title: str
     description: str
     section: str
     source_url: str
-    source_label: str
     rss_path: str
-    last_build_display: str
-    last_build_sort: datetime | None
+    updated_display: str
+    updated_sort: datetime | None
     rss_available: bool
+    is_live: bool
+    status_label: str
+    status_class: str
+    sort_rank: int
 
 
 def generate_site_index(config: dict, feeds_dir: str) -> Path:
@@ -61,19 +65,31 @@ def generate_site_index(config: dict, feeds_dir: str) -> Path:
     jobs = [job for job in config.get("jobs", []) if job.get("enabled", True)]
 
     grouped_cards = {section: [] for section in SECTION_ORDER}
-    latest_build: datetime | None = None
+    all_cards: list[FeedCard] = []
 
     for job in jobs:
         card = _build_feed_card(job, feeds_path)
         grouped_cards[card.section].append(card)
-        if card.last_build_sort and (
-            latest_build is None or card.last_build_sort > latest_build
-        ):
-            latest_build = card.last_build_sort
+        all_cards.append(card)
+
+    sorted_groups = {
+        section: _sort_cards(grouped_cards[section]) for section in SECTION_ORDER
+    }
+    latest_build = max(
+        (card.updated_sort for card in all_cards if card.updated_sort is not None),
+        default=None,
+    )
+    live_feed_count = sum(1 for card in all_cards if card.is_live)
 
     output_path = feeds_path / "index.html"
     output_path.write_text(
-        _render_page(site, grouped_cards, latest_build, len(jobs)),
+        _render_page(
+            site=site,
+            grouped_cards=sorted_groups,
+            latest_build=latest_build,
+            live_feed_count=live_feed_count,
+            total_feeds=len(all_cards),
+        ),
         encoding="utf-8",
     )
     logger.info("Generated landing page: %s", output_path)
@@ -84,32 +100,65 @@ def _build_feed_card(job: dict, feeds_path: Path) -> FeedCard:
     output_name = str(job.get("output") or "").strip()
     xml_path = feeds_path / output_name if output_name else None
     channel_meta = _read_channel_metadata(xml_path) if xml_path else {}
-
-    section = _normalize_section((job.get("catalog") or {}).get("section"))
     source_url = _resolve_source_url(job, channel_meta)
-    last_build_raw = channel_meta.get("lastBuildDate") or ""
-    last_build = _parse_datetime(last_build_raw)
+    section = _normalize_section((job.get("catalog") or {}).get("section"))
+
+    rss_available = bool(output_name and xml_path and xml_path.exists())
+    updated_sort = _parse_datetime(channel_meta.get("lastBuildDate") or "")
+    status_label, status_class, sort_rank, is_live, updated_display = _status_metadata(
+        rss_available=rss_available,
+        updated_sort=updated_sort,
+    )
 
     return FeedCard(
-        title=str(
-            job.get("title")
-            or channel_meta.get("title")
-            or job.get("name")
-            or output_name
-            or "Untitled feed"
+        anchor_id=_feed_anchor_id(
+            output_name=output_name,
+            title=job.get("title") or job.get("name"),
+            section=section,
         ),
-        description=str(
-            job.get("description")
-            or channel_meta.get("description")
-            or "RSS feed"
+        title=_normalize_text(
+            str(
+                job.get("title")
+                or channel_meta.get("title")
+                or job.get("name")
+                or output_name
+                or "Untitled feed"
+            )
+        ),
+        description=_normalize_text(
+            str(job.get("description") or channel_meta.get("description") or "RSS feed")
         ),
         section=section,
         source_url=source_url,
-        source_label=_source_label(source_url),
         rss_path=output_name,
-        last_build_display=_format_datetime(last_build) if last_build else "Awaiting first build",
-        last_build_sort=last_build,
-        rss_available=bool(output_name and xml_path and xml_path.exists()),
+        updated_display=updated_display,
+        updated_sort=updated_sort,
+        rss_available=rss_available,
+        is_live=is_live,
+        status_label=status_label,
+        status_class=status_class,
+        sort_rank=sort_rank,
+    )
+
+
+def _status_metadata(
+    *, rss_available: bool, updated_sort: datetime | None
+) -> tuple[str, str, int, bool, str]:
+    if not rss_available:
+        return ("Unavailable", "is-unavailable", 2, False, "Awaiting build")
+    if updated_sort is None:
+        return ("Live", "is-live", 1, True, "Unknown")
+    return ("Live", "is-live", 0, True, _format_datetime(updated_sort))
+
+
+def _sort_cards(cards: list[FeedCard]) -> list[FeedCard]:
+    return sorted(
+        cards,
+        key=lambda card: (
+            card.sort_rank,
+            -(card.updated_sort.timestamp()) if card.updated_sort else 0,
+            card.title.lower(),
+        ),
     )
 
 
@@ -117,6 +166,12 @@ def _normalize_section(value: str | None) -> str:
     if value in SECTION_META:
         return value
     return "blogs"
+
+
+def _feed_anchor_id(*, output_name: str, title: str | None, section: str) -> str:
+    base = Path(output_name).stem if output_name else str(title or "feed")
+    slug = re.sub(r"[^a-z0-9]+", "-", str(base).lower()).strip("-") or "feed"
+    return f"feed-{section}-{slug}"
 
 
 def _resolve_source_url(job: dict, channel_meta: dict[str, str]) -> str:
@@ -132,14 +187,8 @@ def _resolve_source_url(job: dict, channel_meta: dict[str, str]) -> str:
         if value:
             return value
     return str(channel_meta.get("link") or "").strip()
-
-
-def _source_label(url: str) -> str:
-    if not url:
-        return "Source site"
-    parsed = urlparse(url)
-    host = parsed.netloc or parsed.path
-    return host.removeprefix("www.") or "Source site"
+def _normalize_text(value: str) -> str:
+    return " ".join(value.split())
 
 
 def _read_channel_metadata(xml_path: Path | None) -> dict[str, str]:
@@ -181,13 +230,14 @@ def _format_datetime(value: datetime) -> str:
 
 
 def _render_page(
+    *,
     site: dict,
     grouped_cards: dict[str, list[FeedCard]],
     latest_build: datetime | None,
+    live_feed_count: int,
     total_feeds: int,
 ) -> str:
-    section_count = sum(1 for section in SECTION_ORDER if grouped_cards[section])
-    latest_display = _format_datetime(latest_build) if latest_build else "Awaiting first build"
+    latest_display = _format_datetime(latest_build) if latest_build else "Awaiting build"
 
     return """<!DOCTYPE html>
 <html lang="en">
@@ -198,30 +248,38 @@ def _render_page(
   <meta name="description" content="{description}">
   <style>
     :root {{
-      --paper: #f6f1e8;
-      --paper-strong: #efe4d3;
-      --ink: #17211d;
-      --muted: #55615b;
-      --line: rgba(23, 33, 29, 0.14);
-      --teal: #116466;
-      --orange: #c96a34;
-      --card: rgba(255, 252, 248, 0.88);
-      --shadow: 0 18px 45px rgba(23, 33, 29, 0.08);
-      --radius: 24px;
+      --bg: #f4f4ef;
+      --surface: #fcfcf8;
+      --surface-muted: #f1f1eb;
+      --text: #161616;
+      --muted: #66675f;
+      --line: #d8d8cf;
+      --line-strong: #bfc1b6;
+      --accent: #16584d;
+      --accent-soft: rgba(22, 88, 77, 0.08);
+      --danger: #8b6a34;
+      --danger-soft: rgba(139, 106, 52, 0.1);
+      --sidebar-width: 276px;
+      --sidebar-collapsed-width: 64px;
     }}
 
     * {{
       box-sizing: border-box;
     }}
 
+    html {{
+      scroll-behavior: smooth;
+    }}
+
     body {{
       margin: 0;
-      color: var(--ink);
-      background:
-        radial-gradient(circle at top left, rgba(17, 100, 102, 0.12), transparent 32%),
-        radial-gradient(circle at top right, rgba(201, 106, 52, 0.12), transparent 28%),
-        linear-gradient(180deg, #fbf7f0 0%, var(--paper) 45%, #f2ebdf 100%);
-      font-family: "Avenir Next", "Helvetica Neue", sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      font-family: "Avenir Next", "Helvetica Neue", "Segoe UI", sans-serif;
+    }}
+
+    body.sidebar-open-mobile {{
+      overflow: hidden;
     }}
 
     a {{
@@ -229,383 +287,675 @@ def _render_page(
     }}
 
     .page {{
-      width: min(1180px, calc(100vw - 32px));
+      width: min(1240px, calc(100vw - 24px));
       margin: 0 auto;
-      padding: 32px 0 64px;
+      padding: 18px 0 36px;
     }}
 
-    .hero {{
-      position: relative;
-      overflow: hidden;
-      padding: 32px;
-      border: 1px solid var(--line);
-      border-radius: 32px;
-      background: rgba(255, 250, 244, 0.86);
-      box-shadow: var(--shadow);
-    }}
-
-    .hero::after {{
-      content: "";
-      position: absolute;
-      inset: auto -10% -25% auto;
-      width: 340px;
-      height: 340px;
-      border-radius: 999px;
-      background: radial-gradient(circle, rgba(17, 100, 102, 0.18), transparent 68%);
-      pointer-events: none;
-    }}
-
-    .eyebrow,
-    .meta-kicker {{
-      letter-spacing: 0.16em;
-      text-transform: uppercase;
-      font-size: 0.78rem;
-      color: var(--teal);
-      margin: 0 0 14px;
-    }}
-
-    h1,
-    h2,
-    h3 {{
-      font-family: "Iowan Old Style", "Palatino Linotype", "Book Antiqua", Georgia, serif;
-      font-weight: 600;
-      margin: 0;
-    }}
-
-    h1 {{
-      max-width: 13ch;
-      font-size: clamp(2.6rem, 5vw, 5rem);
-      line-height: 0.96;
-      letter-spacing: -0.04em;
-    }}
-
-    .hero-grid {{
-      position: relative;
+    .layout {{
       display: grid;
+      grid-template-columns: var(--sidebar-width) minmax(0, 1fr);
       gap: 28px;
-      grid-template-columns: minmax(0, 1.3fr) minmax(280px, 0.9fr);
-      z-index: 1;
+      align-items: start;
     }}
 
-    .hero-copy p {{
-      max-width: 60ch;
-      margin: 18px 0 0;
-      color: var(--muted);
-      font-size: 1.02rem;
-      line-height: 1.7;
+    .sidebar {{
+      position: sticky;
+      top: 18px;
+      max-height: calc(100vh - 36px);
+      overflow: hidden auto;
+      padding: 14px 14px 16px;
+      border: 1px solid var(--line-strong);
+      background: var(--surface);
+      transition: width 180ms ease, padding 180ms ease, transform 180ms ease;
     }}
 
-    .hero-actions {{
+    body.sidebar-collapsed .layout {{
+      grid-template-columns: var(--sidebar-collapsed-width) minmax(0, 1fr);
+    }}
+
+    body.sidebar-collapsed .sidebar {{
+      padding-left: 10px;
+      padding-right: 10px;
+    }}
+
+    .sidebar-header {{
       display: flex;
-      flex-wrap: wrap;
-      gap: 12px;
-      margin-top: 26px;
+      align-items: center;
+      justify-content: space-between;
+      gap: 10px;
+      margin-bottom: 12px;
     }}
 
-    .button {{
+    .sidebar-title,
+    .hero-kicker,
+    .section-kicker,
+    .meta-key {{
+      font-family: "SFMono-Regular", "JetBrains Mono", "Menlo", monospace;
+      font-size: 0.74rem;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+      color: var(--muted);
+    }}
+
+    .directory-toggle {{
+      appearance: none;
       display: inline-flex;
       align-items: center;
       justify-content: center;
       gap: 8px;
-      padding: 13px 18px;
-      border-radius: 999px;
-      border: 1px solid transparent;
-      text-decoration: none;
-      font-weight: 600;
-    }}
-
-    .button-primary {{
-      background: var(--ink);
-      color: #fff;
-    }}
-
-    .button-secondary {{
-      border-color: var(--line);
-      background: rgba(255, 255, 255, 0.58);
-    }}
-
-    .stats {{
-      display: grid;
-      gap: 12px;
-      align-content: start;
-    }}
-
-    .stat {{
-      padding: 18px 20px;
-      border-radius: 22px;
-      border: 1px solid var(--line);
-      background: rgba(255, 255, 255, 0.62);
-      backdrop-filter: blur(12px);
-    }}
-
-    .stat-label {{
+      min-height: 34px;
+      padding: 0 11px;
+      border: 1px solid var(--line-strong);
+      background: rgba(255, 255, 255, 0.72);
+      color: var(--text);
+      cursor: pointer;
+      font: inherit;
       font-size: 0.82rem;
-      text-transform: uppercase;
-      letter-spacing: 0.14em;
-      color: var(--muted);
+      font-weight: 600;
+      line-height: 1;
+      letter-spacing: 0.01em;
+      white-space: nowrap;
+      transition: border-color 160ms ease, background 160ms ease, color 160ms ease;
     }}
 
-    .stat-value {{
-      margin-top: 8px;
-      font-size: 1.35rem;
-      line-height: 1.2;
+    .directory-toggle:hover {{
+      border-color: var(--accent);
+      color: var(--accent);
+      background: rgba(255, 255, 255, 0.92);
+    }}
+
+    .directory-toggle__icon {{
+      display: inline-grid;
+      gap: 3px;
+      width: 12px;
+      flex: 0 0 auto;
+    }}
+
+    .directory-toggle__icon span {{
+      display: block;
+      width: 12px;
+      height: 1.5px;
+      background: currentColor;
+    }}
+
+    .directory-toggle--sidebar {{
+      min-width: 34px;
+      padding-left: 10px;
+      padding-right: 10px;
+    }}
+
+    .sidebar-body {{
+      display: grid;
+      gap: 14px;
+    }}
+
+    body.sidebar-collapsed .sidebar-header {{
+      justify-content: center;
+      margin-bottom: 0;
+    }}
+
+    body.sidebar-collapsed .sidebar-title,
+    body.sidebar-collapsed .sidebar-body {{
+      display: none;
+    }}
+
+    body.sidebar-collapsed .sidebar .directory-toggle {{
+      width: 42px;
+      min-width: 42px;
+      padding-left: 0;
+      padding-right: 0;
+    }}
+
+    body.sidebar-collapsed .sidebar .directory-toggle__label {{
+      display: none;
+    }}
+
+    .sidebar-group {{
+      display: grid;
+      gap: 8px;
+    }}
+
+    .sidebar-group h2 {{
+      margin: 0;
+      font-size: 0.88rem;
       font-weight: 700;
     }}
 
-    .network-map {{
-      margin-top: 28px;
-      padding: 26px 28px;
-      border: 1px solid var(--line);
-      border-radius: 28px;
-      background: rgba(255, 250, 244, 0.78);
+    .sidebar-group ul {{
+      margin: 0;
+      padding: 0;
+      list-style: none;
+      display: grid;
+      gap: 6px;
     }}
 
-    .network-map p {{
+    .sidebar-group a {{
+      display: block;
+      color: var(--muted);
+      font-size: 0.86rem;
+      text-decoration: none;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }}
+
+    .sidebar-group a:hover {{
+      color: var(--accent);
+    }}
+
+    .sidebar-overlay {{
+      position: fixed;
+      inset: 0;
+      background: rgba(0, 0, 0, 0.22);
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity 180ms ease;
+      z-index: 30;
+    }}
+
+    body.sidebar-open-mobile .sidebar-overlay {{
+      opacity: 1;
+      pointer-events: auto;
+    }}
+
+    .main {{
+      min-width: 0;
+    }}
+
+    .hero {{
+      display: grid;
+      gap: 18px;
+      grid-template-columns: minmax(0, 1fr) minmax(250px, 320px);
+      align-items: start;
+      padding: 18px 0 20px;
+      border-bottom: 1px solid var(--line-strong);
+    }}
+
+    .hero-kicker,
+    .section-kicker {{
+      margin: 0 0 8px;
+    }}
+
+    .hero h1 {{
+      margin: 0;
+      font-size: clamp(1.9rem, 3.4vw, 2.8rem);
+      line-height: 1.02;
+      letter-spacing: -0.04em;
+      font-weight: 700;
+    }}
+
+    .hero-tagline {{
+      margin: 10px 0 0;
+      max-width: 58ch;
+      color: var(--muted);
+      font-size: 0.98rem;
+      line-height: 1.55;
+    }}
+
+    .hero-url {{
       margin: 10px 0 0;
       color: var(--muted);
-      max-width: 60ch;
-      line-height: 1.65;
+      font-size: 0.92rem;
     }}
 
-    .map-grid {{
-      margin-top: 22px;
+    .hero-url a {{
+      text-decoration: none;
+      border-bottom: 1px solid var(--line-strong);
+    }}
+
+    .hero-actions {{
+      margin-top: 14px;
+    }}
+
+    .directory-toggle--hero {{
+      color: var(--accent);
+      border-color: rgba(22, 88, 77, 0.28);
+      background: rgba(22, 88, 77, 0.05);
+    }}
+
+    .hero-stats {{
+      margin: 0;
       display: grid;
-      gap: 14px;
-      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 8px;
     }}
 
-    .map-node {{
-      padding: 18px;
-      border-radius: 22px;
-      border: 1px solid var(--line);
-      background:
-        linear-gradient(135deg, rgba(255, 255, 255, 0.78), rgba(255, 255, 255, 0.46)),
-        linear-gradient(180deg, rgba(17, 100, 102, 0.05), rgba(201, 106, 52, 0.02));
+    .stat-row {{
+      display: flex;
+      justify-content: space-between;
+      gap: 16px;
+      padding: 8px 0;
+      border-bottom: 1px solid var(--line);
     }}
 
-    .map-node strong {{
-      display: block;
-      font-size: 1.05rem;
-      font-family: "Iowan Old Style", "Palatino Linotype", "Book Antiqua", Georgia, serif;
+    .stat-row:last-child {{
+      border-bottom: 0;
     }}
 
-    .map-node span {{
-      display: block;
-      margin-top: 8px;
+    .stat-row dt {{
       color: var(--muted);
-      line-height: 1.6;
+      font-size: 0.84rem;
+    }}
+
+    .stat-row dd {{
+      margin: 0;
+      text-align: right;
+      font-size: 0.95rem;
+      font-weight: 600;
     }}
 
     .sections {{
-      margin-top: 28px;
       display: grid;
-      gap: 24px;
+      gap: 18px;
+      margin-top: 20px;
     }}
 
-    .feed-section {{
-      padding: 28px;
-      border-radius: 28px;
-      border: 1px solid var(--line);
-      background: rgba(255, 253, 248, 0.82);
-      box-shadow: var(--shadow);
+    .directory-section {{
+      padding: 16px 0 0;
+      border-top: 1px solid var(--line);
+    }}
+
+    .directory-section:first-child {{
+      border-top: 0;
+      padding-top: 0;
     }}
 
     .section-header {{
       display: grid;
-      gap: 10px;
       grid-template-columns: minmax(0, 1fr) auto;
+      gap: 12px;
       align-items: end;
-      margin-bottom: 20px;
+      margin-bottom: 8px;
+    }}
+
+    .section-header h2 {{
+      margin: 0;
+      font-size: 1.15rem;
+      line-height: 1.15;
+      font-weight: 700;
     }}
 
     .section-header p {{
-      margin: 0;
+      margin: 6px 0 0;
       color: var(--muted);
-      line-height: 1.65;
-      max-width: 58ch;
+      font-size: 0.9rem;
+      line-height: 1.5;
     }}
 
     .section-count {{
-      padding: 9px 14px;
-      border-radius: 999px;
-      background: rgba(17, 100, 102, 0.08);
-      color: var(--teal);
-      font-size: 0.82rem;
-      text-transform: uppercase;
-      letter-spacing: 0.12em;
-    }}
-
-    .feed-grid {{
-      display: grid;
-      gap: 16px;
-      grid-template-columns: repeat(2, minmax(0, 1fr));
-    }}
-
-    .feed-card {{
-      padding: 22px;
-      border-radius: var(--radius);
-      border: 1px solid var(--line);
-      background: var(--card);
-      display: grid;
-      gap: 16px;
-      align-content: start;
-    }}
-
-    .feed-card h3 {{
-      font-size: 1.35rem;
-      line-height: 1.12;
-    }}
-
-    .feed-card p {{
-      margin: 0;
       color: var(--muted);
-      line-height: 1.7;
+      font-size: 0.84rem;
+      white-space: nowrap;
     }}
 
-    .feed-meta {{
+    .directory-list {{
+      background: var(--surface);
+      border: 1px solid var(--line);
+    }}
+
+    .directory-row {{
+      display: grid;
+      grid-template-columns: minmax(0, 1.45fr) minmax(300px, 0.95fr);
+      gap: 18px;
+      padding: 12px 16px;
+      border-top: 1px solid var(--line);
+    }}
+
+    .directory-row:first-child {{
+      border-top: 0;
+    }}
+
+    .directory-row.is-unavailable {{
+      background: rgba(0, 0, 0, 0.012);
+    }}
+
+    .row-main {{
+      min-width: 0;
+    }}
+
+    .row-main h3 {{
+      margin: 0;
+      font-size: 1rem;
+      line-height: 1.2;
+      font-weight: 650;
+    }}
+
+    .row-description {{
+      margin: 4px 0 0;
+      overflow: hidden;
+      white-space: nowrap;
+      text-overflow: ellipsis;
+      color: var(--muted);
+      font-size: 0.9rem;
+    }}
+
+    .row-side {{
+      display: grid;
+      gap: 6px;
+      align-content: start;
+      justify-items: end;
+      min-width: 0;
+    }}
+
+    .row-meta {{
       display: flex;
       flex-wrap: wrap;
-      gap: 10px;
-      font-size: 0.84rem;
-      color: var(--muted);
+      justify-content: flex-end;
+      gap: 8px;
     }}
 
-    .feed-meta span {{
+    .meta-item {{
       display: inline-flex;
       align-items: center;
       gap: 6px;
-      padding: 6px 10px;
-      border-radius: 999px;
-      background: rgba(23, 33, 29, 0.06);
+      min-height: 28px;
+      padding: 4px 8px;
+      border: 1px solid var(--line);
+      color: var(--muted);
+      font-size: 0.82rem;
+      background: #fff;
     }}
 
-    .feed-actions {{
+    .meta-item strong {{
+      color: var(--text);
+      font-weight: 600;
+    }}
+
+    .meta-item.status-live {{
+      color: var(--accent);
+      border-color: rgba(22, 88, 77, 0.2);
+      background: var(--accent-soft);
+    }}
+
+    .meta-item.status-unavailable {{
+      color: var(--danger);
+      border-color: rgba(139, 106, 52, 0.25);
+      background: var(--danger-soft);
+    }}
+
+    .row-actions {{
       display: flex;
       flex-wrap: wrap;
-      gap: 10px;
+      gap: 12px;
+      justify-content: flex-end;
+      font-size: 0.85rem;
     }}
 
-    .chip {{
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
-      padding: 10px 14px;
-      border-radius: 999px;
-      border: 1px solid var(--line);
+    .row-actions a {{
+      color: var(--accent);
       text-decoration: none;
-      font-weight: 600;
-      background: rgba(255, 255, 255, 0.84);
+      border-bottom: 1px solid rgba(22, 88, 77, 0.28);
     }}
 
-    .chip-accent {{
-      border-color: rgba(17, 100, 102, 0.18);
-      background: rgba(17, 100, 102, 0.08);
-      color: var(--teal);
-    }}
-
-    .chip-muted {{
+    .row-actions span {{
       color: var(--muted);
-      background: rgba(23, 33, 29, 0.05);
     }}
 
-    .mono {{
-      font-family: "SFMono-Regular", "JetBrains Mono", "Fira Code", monospace;
+    .empty-row {{
+      padding: 12px 16px;
+      color: var(--muted);
       font-size: 0.9rem;
     }}
 
     footer {{
-      margin-top: 24px;
-      padding: 18px 4px 0;
+      margin-top: 18px;
+      padding-top: 14px;
+      border-top: 1px solid var(--line);
       color: var(--muted);
-      font-size: 0.95rem;
-      line-height: 1.65;
+      font-size: 0.84rem;
+      line-height: 1.5;
     }}
 
-    @media (max-width: 980px) {{
-      .hero-grid,
-      .feed-grid,
-      .map-grid {{
+    @media (max-width: 960px) {{
+      .page {{
+        width: min(100vw - 16px, 1240px);
+      }}
+
+      .layout {{
         grid-template-columns: 1fr;
       }}
 
+      .sidebar {{
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: min(88vw, 320px);
+        max-height: 100vh;
+        height: 100vh;
+        padding: 18px 14px;
+        transform: translateX(-100%);
+        z-index: 40;
+      }}
+
+      body.sidebar-open-mobile .sidebar {{
+        transform: translateX(0);
+      }}
+
+      body.sidebar-collapsed .layout {{
+        grid-template-columns: 1fr;
+      }}
+
+      body.sidebar-collapsed .sidebar {{
+        padding: 18px 14px;
+      }}
+
+      body.sidebar-collapsed .sidebar-title,
+      body.sidebar-collapsed .sidebar-body {{
+        display: grid;
+      }}
+
+      .hero,
+      .directory-row,
       .section-header {{
         grid-template-columns: 1fr;
-        align-items: start;
+      }}
+
+      .row-side {{
+        justify-items: start;
+      }}
+
+      .row-meta,
+      .row-actions {{
+        justify-content: flex-start;
       }}
     }}
 
     @media (max-width: 640px) {{
-      .page {{
-        width: min(100vw - 20px, 1180px);
-        padding-top: 20px;
+      .directory-list {{
+        border-left: 0;
+        border-right: 0;
       }}
 
-      .hero,
-      .network-map,
-      .feed-section {{
-        padding: 22px;
-      }}
-
-      .hero-actions,
-      .feed-actions {{
-        flex-direction: column;
-      }}
-
-      .button,
-      .chip {{
-        width: 100%;
+      .directory-row,
+      .empty-row {{
+        padding-left: 0;
+        padding-right: 0;
       }}
     }}
   </style>
 </head>
-<body>
+<body class="sidebar-expanded">
+  <div class="sidebar-overlay" data-sidebar-overlay hidden></div>
   <main class="page">
-    <section class="hero">
-      <div class="hero-grid">
-        <div class="hero-copy">
-          <p class="eyebrow">Deployed RSS Network</p>
-          <h1>{title}</h1>
-          <p><strong>{tagline}</strong></p>
-          <p>{description}</p>
-          <div class="hero-actions">
-            <a class="button button-primary" href="{site_url}">Open deployed homepage</a>
-            <a class="button button-secondary" href="#section-research">Browse feeds</a>
-          </div>
+    <div class="layout">
+      <aside class="sidebar" id="feed-sidebar" aria-label="Feed directory navigation">
+        <div class="sidebar-header">
+          <span class="sidebar-title">Feed directory</span>
+          <button
+            class="directory-toggle directory-toggle--sidebar"
+            type="button"
+            data-sidebar-toggle
+            aria-controls="feed-sidebar"
+            aria-expanded="true"
+            aria-label="Hide directory"
+          >
+            <span class="directory-toggle__icon" aria-hidden="true"><span></span><span></span><span></span></span>
+            <span class="directory-toggle__label" data-toggle-label>Hide directory</span>
+          </button>
         </div>
-        <aside class="stats" aria-label="Network stats">
-          <div class="stat">
-            <div class="stat-label">Feeds</div>
-            <div class="stat-value">{total_feeds}</div>
-          </div>
-          <div class="stat">
-            <div class="stat-label">Sections</div>
-            <div class="stat-value">{section_count}</div>
-          </div>
-          <div class="stat">
-            <div class="stat-label">Latest build</div>
-            <div class="stat-value">{latest_display}</div>
-          </div>
-        </aside>
-      </div>
-    </section>
+        <nav class="sidebar-body">
+          {sidebar_nav}
+        </nav>
+      </aside>
 
-    <section class="network-map" aria-labelledby="network-map-title">
-      <p class="meta-kicker">Network map</p>
-      <h2 id="network-map-title">A single entrypoint for AI research, blogs, and release streams</h2>
-      <p>The landing page is generated from the repository configuration and feed metadata, so the deployed catalog stays aligned with the feeds published to GitHub Pages.</p>
-      <div class="map-grid">
-        {map_nodes}
-      </div>
-    </section>
+      <div class="main">
+        <header class="hero">
+          <div class="hero-main">
+            <p class="hero-kicker">AI feed directory</p>
+            <h1>{title}</h1>
+            <p class="hero-tagline">{tagline}</p>
+            <p class="hero-url">Published at <a href="{site_url}">{site_url}</a></p>
+            <div class="hero-actions">
+              <button
+                class="directory-toggle directory-toggle--hero"
+                type="button"
+                data-sidebar-toggle
+                aria-controls="feed-sidebar"
+                aria-expanded="true"
+                aria-label="Hide directory"
+              >
+                <span class="directory-toggle__icon" aria-hidden="true"><span></span><span></span><span></span></span>
+                <span class="directory-toggle__label" data-toggle-label>Hide directory</span>
+              </button>
+            </div>
+          </div>
+          <dl class="hero-stats" aria-label="Feed directory statistics">
+            <div class="stat-row">
+              <dt>Live feeds</dt>
+              <dd>{live_feed_count} live feeds</dd>
+            </div>
+            <div class="stat-row">
+              <dt>Configured</dt>
+              <dd>{total_feeds} configured</dd>
+            </div>
+            <div class="stat-row">
+              <dt>Latest build</dt>
+              <dd>{latest_display}</dd>
+            </div>
+          </dl>
+        </header>
 
-    <div class="sections">
-      {sections}
+        <div class="sections">
+          {sections}
+        </div>
+
+        <footer>
+          Generated from <span class="meta-key">config.yaml</span> and the current XML files in <span class="meta-key">feeds/</span>.
+        </footer>
+      </div>
     </div>
-
-    <footer>
-      Generated from <span class="mono">config.yaml</span> and the current feed XML files in <span class="mono">feeds/</span>. Published at <a href="{site_url}">{site_url}</a>.
-    </footer>
   </main>
+  <script>
+    (() => {{
+      const body = document.body;
+      const sidebar = document.getElementById("feed-sidebar");
+      const overlay = document.querySelector("[data-sidebar-overlay]");
+      const toggles = Array.from(document.querySelectorAll("[data-sidebar-toggle]"));
+      const navLinks = Array.from(document.querySelectorAll(".sidebar a"));
+      const mobileQuery = window.matchMedia("(max-width: 960px)");
+      const labels = {{
+        "desktop-expanded": "Hide directory",
+        "desktop-collapsed": "Show directory",
+        "mobile-closed": "Open directory",
+        "mobile-open": "Close directory",
+      }};
+
+      const currentState = () => {{
+        if (mobileQuery.matches) {{
+          return body.classList.contains("sidebar-open-mobile") ? "mobile-open" : "mobile-closed";
+        }}
+        return body.classList.contains("sidebar-collapsed") ? "desktop-collapsed" : "desktop-expanded";
+      }};
+
+      const syncToggleState = () => {{
+        const state = currentState();
+        const expanded = state === "desktop-expanded" || state === "mobile-open";
+        const label = labels[state];
+        body.dataset.directoryState = state;
+        toggles.forEach((toggle) => {{
+          toggle.setAttribute("aria-expanded", expanded ? "true" : "false");
+          toggle.setAttribute("aria-label", label);
+          toggle.dataset.directoryState = state;
+          const labelNode = toggle.querySelector("[data-toggle-label]");
+          if (labelNode) {{
+            labelNode.textContent = label;
+          }}
+        }});
+      }};
+
+      const closeMobileSidebar = () => {{
+        body.classList.remove("sidebar-open-mobile");
+        overlay.hidden = true;
+        syncToggleState();
+      }};
+
+      const openMobileSidebar = () => {{
+        body.classList.add("sidebar-open-mobile");
+        overlay.hidden = false;
+        syncToggleState();
+      }};
+
+      const toggleDesktopSidebar = () => {{
+        const collapsed = body.classList.toggle("sidebar-collapsed");
+        body.classList.toggle("sidebar-expanded", !collapsed);
+        syncToggleState();
+      }};
+
+      toggles.forEach((toggle) => {{
+        toggle.addEventListener("click", () => {{
+          if (mobileQuery.matches) {{
+            if (body.classList.contains("sidebar-open-mobile")) {{
+              closeMobileSidebar();
+            }} else {{
+              openMobileSidebar();
+            }}
+            return;
+          }}
+          toggleDesktopSidebar();
+        }});
+      }});
+
+      overlay.addEventListener("click", closeMobileSidebar);
+
+      document.addEventListener("keydown", (event) => {{
+        if (event.key === "Escape" && body.classList.contains("sidebar-open-mobile")) {{
+          closeMobileSidebar();
+        }}
+      }});
+
+      navLinks.forEach((link) => {{
+        link.addEventListener("click", () => {{
+          if (mobileQuery.matches) {{
+            closeMobileSidebar();
+          }}
+        }});
+      }});
+
+      mobileQuery.addEventListener("change", (event) => {{
+        if (event.matches) {{
+          body.classList.remove("sidebar-expanded", "sidebar-collapsed");
+          body.classList.remove("sidebar-open-mobile");
+          overlay.hidden = true;
+        }} else {{
+          overlay.hidden = true;
+          body.classList.remove("sidebar-open-mobile");
+          body.classList.add("sidebar-expanded");
+          body.classList.remove("sidebar-collapsed");
+        }}
+        syncToggleState();
+      }});
+
+      if (mobileQuery.matches) {{
+        body.classList.remove("sidebar-expanded", "sidebar-collapsed", "sidebar-open-mobile");
+        overlay.hidden = true;
+      }} else {{
+        body.classList.add("sidebar-expanded");
+        body.classList.remove("sidebar-collapsed", "sidebar-open-mobile");
+        overlay.hidden = true;
+      }}
+      syncToggleState();
+    }})();
+  </script>
 </body>
 </html>
 """.format(
@@ -613,32 +963,39 @@ def _render_page(
         description=escape(str(site.get("description") or DEFAULT_SITE["description"])),
         tagline=escape(str(site.get("tagline") or DEFAULT_SITE["tagline"])),
         site_url=escape(str(site.get("url") or DEFAULT_SITE["url"])),
+        sidebar_nav=_render_sidebar_nav(grouped_cards),
+        live_feed_count=live_feed_count,
         total_feeds=total_feeds,
-        section_count=section_count,
         latest_display=escape(latest_display),
-        map_nodes=_render_map_nodes(grouped_cards),
         sections=_render_sections(grouped_cards),
     )
 
 
-def _render_map_nodes(grouped_cards: dict[str, list[FeedCard]]) -> str:
-    parts = []
+def _render_sidebar_nav(grouped_cards: dict[str, list[FeedCard]]) -> str:
+    groups = []
     for section in SECTION_ORDER:
+        cards = grouped_cards[section]
         meta = SECTION_META[section]
-        parts.append(
+        links = [
+            '<li><a href="#{anchor_id}">{title}</a></li>'.format(
+                anchor_id=escape(card.anchor_id),
+                title=escape(card.title),
+            )
+            for card in cards
+        ]
+        groups.append(
             """
-        <article class="map-node">
-          <strong>{title}</strong>
-          <span>{count} feed{suffix}</span>
-          <span>{description}</span>
-        </article>""".format(
+          <section class="sidebar-group">
+            <h2>{title}</h2>
+            <ul>
+              {links}
+            </ul>
+          </section>""".format(
                 title=escape(meta["title"]),
-                count=len(grouped_cards[section]),
-                suffix="" if len(grouped_cards[section]) == 1 else "s",
-                description=escape(meta["description"]),
+                links="".join(links),
             )
         )
-    return "".join(parts)
+    return "".join(groups)
 
 
 def _render_sections(grouped_cards: dict[str, list[FeedCard]]) -> str:
@@ -647,71 +1004,70 @@ def _render_sections(grouped_cards: dict[str, list[FeedCard]]) -> str:
 
 def _render_section(section: str, cards: list[FeedCard]) -> str:
     meta = SECTION_META[section]
-    cards_html = "".join(_render_card(card) for card in cards) or """
-        <article class="feed-card">
-          <h3>No feed published yet</h3>
-          <p>This section is configured, but no feed file has been generated yet.</p>
-        </article>"""
+    live_count = sum(1 for card in cards if card.is_live)
+    cards_html = "".join(_render_row(card) for card in cards) or (
+        '<div class="empty-row">No feeds configured in this section.</div>'
+    )
 
     return """
-    <section class="feed-section" id="section-{section}">
+    <section class="directory-section" id="section-{section}">
       <div class="section-header">
         <div>
-          <p class="meta-kicker">{title}</p>
+          <p class="section-kicker">{title}</p>
           <h2>{title}</h2>
           <p>{description}</p>
         </div>
-        <div class="section-count">{count} feed{suffix}</div>
+        <div class="section-count">{live_count} live</div>
       </div>
-      <div class="feed-grid">
+      <div class="directory-list">
         {cards}
       </div>
     </section>""".format(
         section=escape(section),
         title=escape(meta["title"]),
         description=escape(meta["description"]),
-        count=len(cards),
-        suffix="" if len(cards) == 1 else "s",
+        live_count=live_count,
         cards=cards_html,
     )
 
 
-def _render_card(card: FeedCard) -> str:
+def _render_row(card: FeedCard) -> str:
     rss_action = (
-        '<a class="chip chip-accent" href="{rss_path}">Subscribe to RSS</a>'.format(
-            rss_path=escape(card.rss_path)
-        )
+        '<a href="{rss_path}">RSS</a>'.format(rss_path=escape(card.rss_path))
         if card.rss_available
-        else '<span class="chip chip-muted">Feed file unavailable</span>'
+        else "<span>RSS unavailable</span>"
     )
-
     source_action = (
-        '<a class="chip" href="{source_url}">Visit source</a>'.format(
-            source_url=escape(card.source_url)
-        )
+        '<a href="{source_url}">Source</a>'.format(source_url=escape(card.source_url))
         if card.source_url
-        else '<span class="chip chip-muted">Source unavailable</span>'
+        else "<span>Source unavailable</span>"
     )
+    status_class = "status-live" if card.is_live else "status-unavailable"
 
     return """
-        <article class="feed-card">
-          <div>
+        <article class="directory-row {row_class}" id="{anchor_id}">
+          <div class="row-main">
             <h3>{title}</h3>
+            <p class="row-description">{description}</p>
           </div>
-          <p>{description}</p>
-          <div class="feed-meta">
-            <span>Source: <strong>{source_label}</strong></span>
-            <span>Latest build: <strong>{last_build}</strong></span>
-          </div>
-          <div class="feed-actions">
-            {rss_action}
-            {source_action}
+          <div class="row-side">
+            <div class="row-meta">
+              <span class="meta-item"><span class="meta-key">Updated</span><strong>{updated_display}</strong></span>
+              <span class="meta-item {status_class}"><span class="meta-key">Status</span><strong>{status_label}</strong></span>
+            </div>
+            <div class="row-actions">
+              {rss_action}
+              {source_action}
+            </div>
           </div>
         </article>""".format(
+        row_class=escape(card.status_class),
+        anchor_id=escape(card.anchor_id),
         title=escape(card.title),
         description=escape(card.description),
-        source_label=escape(card.source_label),
-        last_build=escape(card.last_build_display),
+        updated_display=escape(card.updated_display),
+        status_class=status_class,
+        status_label=escape(card.status_label),
         rss_action=rss_action,
         source_action=source_action,
     )
