@@ -7,7 +7,7 @@
     <docs>http://www.rssboard.org/rss-specification</docs>
     <generator>RSS Creator</generator>
     <language>zh-CN</language>
-    <lastBuildDate>Wed, 11 Mar 2026 20:31:03 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 11 Mar 2026 21:30:07 +0000</lastBuildDate>
     <item>
       <title>MiniMax-Text-01</title>
       <link>https://huggingface.co/MiniMaxAI/MiniMax-Text-01</link>
@@ -130,7 +130,7 @@
     <item>
       <title>MiniMax-M1</title>
       <link>https://github.com/MiniMax-AI/MiniMax-M1</link>
-      <description>[GitHub Repo] | MiniMax-M1, the world's first open-weight, large-scale hybrid-attention reasoning model. | Language: Python | Stars: 3112 | Topics: large-language-models, llm, minimax-m1, reasoning-models</description>
+      <description>[GitHub Repo] | MiniMax-M1, the world's first open-weight, large-scale hybrid-attention reasoning model. | Language: Python | Stars: 3113 | Topics: large-language-models, llm, minimax-m1, reasoning-models</description>
       <guid isPermaLink="true">https://github.com/MiniMax-AI/MiniMax-M1</guid>
       <pubDate>Sat, 14 Jun 2025 08:54:06 +0000</pubDate>
     </item>
@@ -242,7 +242,7 @@
     <item>
       <title>MiniMax-M2.1</title>
       <link>https://github.com/MiniMax-AI/MiniMax-M2.1</link>
-      <description>[GitHub Repo] | MiniMax M2.1, a SOTA model for real-world dev &amp; agents. | Stars: 531 | Topics: agent, agentic-ai, ai-coding-models, large-language-models, llm</description>
+      <description>[GitHub Repo] | MiniMax M2.1, a SOTA model for real-world dev &amp; agents. | Stars: 532 | Topics: agent, agentic-ai, ai-coding-models, large-language-models, llm</description>
       <guid isPermaLink="true">https://github.com/MiniMax-AI/MiniMax-M2.1</guid>
       <pubDate>Mon, 22 Dec 2025 09:11:13 +0000</pubDate>
     </item>
@@ -256,7 +256,7 @@
     <item>
       <title>MiniMax-M2.5</title>
       <link>https://huggingface.co/MiniMaxAI/MiniMax-M2.5</link>
-      <description>[HuggingFace Model] | text-generation | Likes: 1162 | Tags: transformers, safetensors, minimax_m2, text-generation, conversational</description>
+      <description>[HuggingFace Model] | text-generation | Likes: 1163 | Tags: transformers, safetensors, minimax_m2, text-generation, conversational</description>
       <guid isPermaLink="true">https://huggingface.co/MiniMaxAI/MiniMax-M2.5</guid>
       <pubDate>Thu, 12 Feb 2026 06:05:24 +0000</pubDate>
     </item>
