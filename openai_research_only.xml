@@ -7,7 +7,7 @@
     <docs>http://www.rssboard.org/rss-specification</docs>
     <generator>RSS Creator - RSS Filter</generator>
     <language>zh-CN</language>
-    <lastBuildDate>Sun, 15 Mar 2026 22:23:16 +0000</lastBuildDate>
+    <lastBuildDate>Sun, 15 Mar 2026 23:26:18 +0000</lastBuildDate>
     <item>
       <title>Weight normalization: A simple reparameterization to accelerate training of deep neural networks</title>
       <link>https://openai.com/index/weight-normalization</link>
@@ -1234,18 +1234,18 @@
       <pubDate>Thu, 23 Jan 2025 10:00:00 +0000</pubDate>
     </item>
     <item>
-      <title>OpenAI o3-mini</title>
-      <link>https://openai.com/index/openai-o3-mini</link>
-      <description>Pushing the frontier of cost-effective reasoning.</description>
-      <guid isPermaLink="true">https://openai.com/index/openai-o3-mini</guid>
-      <category>Research</category>
-      <pubDate>Fri, 31 Jan 2025 11:00:00 +0000</pubDate>
-    </item>
-    <item>
       <title>OpenAI o3-mini System Card</title>
       <link>https://openai.com/index/o3-mini-system-card</link>
       <description>This report outlines the safety work carried out for the OpenAI o3-mini model, including safety evaluations, external red teaming, and Preparedness Framework evaluations.</description>
       <guid isPermaLink="true">https://openai.com/index/o3-mini-system-card</guid>
+      <category>Research</category>
+      <pubDate>Fri, 31 Jan 2025 11:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>OpenAI o3-mini</title>
+      <link>https://openai.com/index/openai-o3-mini</link>
+      <description>Pushing the frontier of cost-effective reasoning.</description>
+      <guid isPermaLink="true">https://openai.com/index/openai-o3-mini</guid>
       <category>Research</category>
       <pubDate>Fri, 31 Jan 2025 11:00:00 +0000</pubDate>
     </item>
