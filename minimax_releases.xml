@@ -7,7 +7,7 @@
     <docs>http://www.rssboard.org/rss-specification</docs>
     <generator>RSS Creator</generator>
     <language>zh-CN</language>
-    <lastBuildDate>Sun, 15 Mar 2026 14:28:17 +0000</lastBuildDate>
+    <lastBuildDate>Sun, 15 Mar 2026 15:27:00 +0000</lastBuildDate>
     <item>
       <title>MiniMax-Text-01</title>
       <link>https://huggingface.co/MiniMaxAI/MiniMax-Text-01</link>
@@ -25,7 +25,7 @@
     <item>
       <title>MiniMax-01</title>
       <link>https://github.com/MiniMax-AI/MiniMax-01</link>
-      <description>[GitHub Repo] | The official repo of MiniMax-Text-01 and MiniMax-VL-01, large-language-model &amp; vision-language-model based on Linear Attention | Language: Python | Stars: 3363 | Topics: large-language-models, llm, llms, minimax-text-01, minimax-vl-01, vision-language-model, vlm</description>
+      <description>[GitHub Repo] | The official repo of MiniMax-Text-01 and MiniMax-VL-01, large-language-model &amp; vision-language-model based on Linear Attention | Language: Python | Stars: 3362 | Topics: large-language-models, llm, llms, minimax-text-01, minimax-vl-01, vision-language-model, vlm</description>
       <guid isPermaLink="true">https://github.com/MiniMax-AI/MiniMax-01</guid>
       <pubDate>Tue, 14 Jan 2025 15:43:28 +0000</pubDate>
     </item>
@@ -165,21 +165,21 @@
     <item>
       <title>MiniMax-M2</title>
       <link>https://github.com/MiniMax-AI/MiniMax-M2</link>
-      <description>[GitHub Repo] | MiniMax-M2, a model built for Max coding &amp; agentic workflows. | Stars: 2478 | Topics: large-language-models, llm</description>
+      <description>[GitHub Repo] | MiniMax-M2, a model built for Max coding &amp; agentic workflows. | Stars: 2479 | Topics: large-language-models, llm</description>
       <guid isPermaLink="true">https://github.com/MiniMax-AI/MiniMax-M2</guid>
       <pubDate>Sat, 25 Oct 2025 21:28:29 +0000</pubDate>
     </item>
     <item>
       <title>minimax_search</title>
       <link>https://github.com/MiniMax-AI/minimax_search</link>
-      <description>[GitHub Repo] | MiniMax Search is an MCP (Model Context Protocol) server that provides web search and browsing capabilities. | Language: Python | Stars: 32 | Topics: mcp, mcp-server, web-search, web-search-agent</description>
+      <description>[GitHub Repo] | MiniMax Search is an MCP (Model Context Protocol) server that provides web search and browsing capabilities. | Language: Python | Stars: 33 | Topics: mcp, mcp-server, web-search, web-search-agent</description>
       <guid isPermaLink="true">https://github.com/MiniMax-AI/minimax_search</guid>
       <pubDate>Thu, 30 Oct 2025 14:13:01 +0000</pubDate>
     </item>
     <item>
       <title>Mini-Agent</title>
       <link>https://github.com/MiniMax-AI/Mini-Agent</link>
-      <description>[GitHub Repo] | A minimal yet professional single agent demo project that showcases the core execution pipeline and production-grade features of agents. | Language: Python | Stars: 1851 | Topics: agent, llm, minimax</description>
+      <description>[GitHub Repo] | A minimal yet professional single agent demo project that showcases the core execution pipeline and production-grade features of agents. | Language: Python | Stars: 1852 | Topics: agent, llm, minimax</description>
       <guid isPermaLink="true">https://github.com/MiniMax-AI/Mini-Agent</guid>
       <pubDate>Fri, 31 Oct 2025 03:56:27 +0000</pubDate>
     </item>
@@ -256,7 +256,7 @@
     <item>
       <title>MiniMax-M2.5</title>
       <link>https://huggingface.co/MiniMaxAI/MiniMax-M2.5</link>
-      <description>[HuggingFace Model] | text-generation | Likes: 1193 | Tags: transformers, safetensors, minimax_m2, text-generation, conversational</description>
+      <description>[HuggingFace Model] | text-generation | Likes: 1194 | Tags: transformers, safetensors, minimax_m2, text-generation, conversational</description>
       <guid isPermaLink="true">https://huggingface.co/MiniMaxAI/MiniMax-M2.5</guid>
       <pubDate>Thu, 12 Feb 2026 06:05:24 +0000</pubDate>
     </item>
