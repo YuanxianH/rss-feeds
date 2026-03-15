@@ -7,7 +7,7 @@
     <docs>http://www.rssboard.org/rss-specification</docs>
     <generator>RSS Creator</generator>
     <language>zh-CN</language>
-    <lastBuildDate>Sun, 15 Mar 2026 08:33:21 +0000</lastBuildDate>
+    <lastBuildDate>Sun, 15 Mar 2026 09:31:32 +0000</lastBuildDate>
     <item>
       <title>MiniMax-Text-01</title>
       <link>https://huggingface.co/MiniMaxAI/MiniMax-Text-01</link>
@@ -172,14 +172,14 @@
     <item>
       <title>minimax_search</title>
       <link>https://github.com/MiniMax-AI/minimax_search</link>
-      <description>[GitHub Repo] | MiniMax Search is an MCP (Model Context Protocol) server that provides web search and browsing capabilities. | Language: Python | Stars: 31 | Topics: mcp, mcp-server, web-search, web-search-agent</description>
+      <description>[GitHub Repo] | MiniMax Search is an MCP (Model Context Protocol) server that provides web search and browsing capabilities. | Language: Python | Stars: 32 | Topics: mcp, mcp-server, web-search, web-search-agent</description>
       <guid isPermaLink="true">https://github.com/MiniMax-AI/minimax_search</guid>
       <pubDate>Thu, 30 Oct 2025 14:13:01 +0000</pubDate>
     </item>
     <item>
       <title>Mini-Agent</title>
       <link>https://github.com/MiniMax-AI/Mini-Agent</link>
-      <description>[GitHub Repo] | A minimal yet professional single agent demo project that showcases the core execution pipeline and production-grade features of agents. | Language: Python | Stars: 1847 | Topics: agent, llm, minimax</description>
+      <description>[GitHub Repo] | A minimal yet professional single agent demo project that showcases the core execution pipeline and production-grade features of agents. | Language: Python | Stars: 1849 | Topics: agent, llm, minimax</description>
       <guid isPermaLink="true">https://github.com/MiniMax-AI/Mini-Agent</guid>
       <pubDate>Fri, 31 Oct 2025 03:56:27 +0000</pubDate>
     </item>
@@ -256,7 +256,7 @@
     <item>
       <title>MiniMax-M2.5</title>
       <link>https://huggingface.co/MiniMaxAI/MiniMax-M2.5</link>
-      <description>[HuggingFace Model] | text-generation | Likes: 1190 | Tags: transformers, safetensors, minimax_m2, text-generation, conversational</description>
+      <description>[HuggingFace Model] | text-generation | Likes: 1193 | Tags: transformers, safetensors, minimax_m2, text-generation, conversational</description>
       <guid isPermaLink="true">https://huggingface.co/MiniMaxAI/MiniMax-M2.5</guid>
       <pubDate>Thu, 12 Feb 2026 06:05:24 +0000</pubDate>
     </item>
@@ -270,7 +270,7 @@
     <item>
       <title>OpenRoom</title>
       <link>https://github.com/MiniMax-AI/OpenRoom</link>
-      <description>[GitHub Repo] | Language: TypeScript | Stars: 17</description>
+      <description>[GitHub Repo] | Language: TypeScript | Stars: 16</description>
       <guid isPermaLink="true">https://github.com/MiniMax-AI/OpenRoom</guid>
       <pubDate>Tue, 03 Mar 2026 04:01:01 +0000</pubDate>
     </item>
