@@ -7,7 +7,7 @@
     <docs>http://www.rssboard.org/rss-specification</docs>
     <generator>RSS Creator - RSS Filter</generator>
     <language>zh-CN</language>
-    <lastBuildDate>Sun, 15 Mar 2026 20:24:47 +0000</lastBuildDate>
+    <lastBuildDate>Sun, 15 Mar 2026 21:24:22 +0000</lastBuildDate>
     <item>
       <title>Weight normalization: A simple reparameterization to accelerate training of deep neural networks</title>
       <link>https://openai.com/index/weight-normalization</link>
@@ -1074,10 +1074,10 @@
       <pubDate>Thu, 06 Jun 2024 00:00:00 +0000</pubDate>
     </item>
     <item>
-      <title>Improved Techniques for Training Consistency Models</title>
-      <link>https://openai.com/index/improved-techniques-for-training-consistency-models</link>
-      <description>Consistency models are a nascent family of generative models that can sample high quality data in one step without the need for adversarial training. </description>
-      <guid isPermaLink="true">https://openai.com/index/improved-techniques-for-training-consistency-models</guid>
+      <title>Consistency Models</title>
+      <link>https://openai.com/index/consistency-models</link>
+      <description>Diffusion models have significantly advanced the fields of image, audio, and video generation, but they depend on an iterative sampling process that causes slow generation.</description>
+      <guid isPermaLink="true">https://openai.com/index/consistency-models</guid>
       <category>Research</category>
       <pubDate>Thu, 20 Jun 2024 00:00:00 +0000</pubDate>
     </item>
@@ -1090,10 +1090,10 @@
       <pubDate>Thu, 20 Jun 2024 00:00:00 +0000</pubDate>
     </item>
     <item>
-      <title>Consistency Models</title>
-      <link>https://openai.com/index/consistency-models</link>
-      <description>Diffusion models have significantly advanced the fields of image, audio, and video generation, but they depend on an iterative sampling process that causes slow generation.</description>
-      <guid isPermaLink="true">https://openai.com/index/consistency-models</guid>
+      <title>Improved Techniques for Training Consistency Models</title>
+      <link>https://openai.com/index/improved-techniques-for-training-consistency-models</link>
+      <description>Consistency models are a nascent family of generative models that can sample high quality data in one step without the need for adversarial training. </description>
+      <guid isPermaLink="true">https://openai.com/index/improved-techniques-for-training-consistency-models</guid>
       <category>Research</category>
       <pubDate>Thu, 20 Jun 2024 00:00:00 +0000</pubDate>
     </item>
