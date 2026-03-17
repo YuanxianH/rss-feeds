@@ -7,7 +7,7 @@
     <docs>http://www.rssboard.org/rss-specification</docs>
     <generator>RSS Creator</generator>
     <language>zh-CN</language>
-    <lastBuildDate>Tue, 17 Mar 2026 09:53:00 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 17 Mar 2026 10:47:24 +0000</lastBuildDate>
     <item>
       <title>Equi-normalization of Neural Networks | Facebook AI Research</title>
       <link>https://ai.meta.com/research/publications/equi-normalization-of-neural-networks/</link>
@@ -93,20 +93,6 @@
       <pubDate>Thu, 31 Oct 2019 00:00:00 +0000</pubDate>
     </item>
     <item>
-      <title>SAM Audio: Segment Anything in Audio</title>
-      <link>https://ai.meta.com/research/publications/sam-audio-segment-anything-in-audio/</link>
-      <description>Bowen Shi, Andros Tjandra, John Hoffman, Helin Wang, Yi-Chiao Wu, Luya Gao, Julius Richter, Matt Le, Apoorv Vyas, Sanyuan Chen, Christoph Feichtenhofer, Piotr Dollar, Wei-Ning Hsu, Ann Lee</description>
-      <guid isPermaLink="true">https://ai.meta.com/research/publications/sam-audio-segment-anything-in-audio/</guid>
-      <pubDate>Tue, 16 Dec 2025 00:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>Pixel Seal: Adversarial-only training for invisible image and video watermarking</title>
-      <link>https://ai.meta.com/research/publications/pixel-seal-adversarial-only-training-for-invisible-image-and-video-watermarking/</link>
-      <description>Tomáš Souček, Pierre Fernandez, Hady Elsahar, Sylvestre Rebuffi, Valeriu Lacatusu, Tuan Tran, Tom Sander, Alexandre Mourachko</description>
-      <guid isPermaLink="true">https://ai.meta.com/research/publications/pixel-seal-adversarial-only-training-for-invisible-image-and-video-watermarking/</guid>
-      <pubDate>Thu, 18 Dec 2025 00:00:00 +0000</pubDate>
-    </item>
-    <item>
       <title>Learning to Watermark in the Latent Space of Generative Models</title>
       <link>https://ai.meta.com/research/publications/learning-to-watermark-in-the-latent-space-of-generative-models/</link>
       <description>Sylvestre Rebuffi, Tuan Tran, Valeriu Lacatusu, Pierre Fernandez, Tomáš Souček, Tom Sander, Hady Elsahar, Alexandre Mourachko</description>
@@ -175,6 +161,20 @@
       <description>Yifu Qiu, Paul-Ambroise Duquenne, Holger Schwenk</description>
       <guid isPermaLink="true">https://ai.meta.com/research/publications/unified-vision-language-modeling-via-concept-space-alignment/</guid>
       <pubDate>Fri, 27 Feb 2026 00:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>Omnilingual SONAR: Cross-Lingual and Cross-Modal Sentence Embeddings Bridging Massively Multilingual Text and Speech</title>
+      <link>https://ai.meta.com/research/publications/omnilingual-sonar-cross-lingual-and-cross-modal-sentence-embeddings-bridging-massively-multilingual-text-and-speech/</link>
+      <description>Omnilingual SONAR Team, João Maria Janeiro, Pere Lluís Huguet Cabot, Ioannis Tsiamas, Yen Meng, Vivek Iyer, Guillem Ramirez, Loic Barrault, Belen Alastruey, Yu-An Chung, Marta R. Costa-jussa, David Dale, Kevin Heffernan, Jaehyeong Jo, Artyom Kozhevnikov, Alexandre Mourachko, Christophe Ropers, Holger Schwenk, Paul-Ambroise Duquenne</description>
+      <guid isPermaLink="true">https://ai.meta.com/research/publications/omnilingual-sonar-cross-lingual-and-cross-modal-sentence-embeddings-bridging-massively-multilingual-text-and-speech/</guid>
+      <pubDate>Tue, 17 Mar 2026 00:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>Omnilingual MT: Machine Translation for 1,600 Languages</title>
+      <link>https://ai.meta.com/research/publications/omnilingual-mt-machine-translation-for-1600-languages/</link>
+      <description>Omnilingual MT Team, Belen Alastruey, Niyati Bafna, Andrea Caciolai, Kevin Heffernan, Artyom Kozhevnikov, Christophe Ropers, Eduardo Sánchez, Charles-Eric Saint-James, Ioannis Tsiamas, Chierh CHENG, Joe Chuang, Paul-Ambroise Duquenne, Mark Duppenthaler, Nate Ekberg, Cynthia Gao, Pere Lluís Huguet Cabot, João Maria Janeiro, Jean Maillard, Gabriel Mejia Gonzalez, Holger Schwenk, Edan Toledo, Arina Turkatenko, Albert Ventayol-Boada, Rashel Moritz, Alexandre Mourachko, Surya Parimi, Mary Williamson, Shireen Yates, David Dale, Marta R. Costa-jussa</description>
+      <guid isPermaLink="true">https://ai.meta.com/research/publications/omnilingual-mt-machine-translation-for-1600-languages/</guid>
+      <pubDate>Tue, 17 Mar 2026 00:00:00 +0000</pubDate>
     </item>
   </channel>
 </rss>
