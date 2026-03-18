@@ -7,7 +7,7 @@
     <docs>http://www.rssboard.org/rss-specification</docs>
     <generator>RSS Creator</generator>
     <language>zh-CN</language>
-    <lastBuildDate>Wed, 18 Mar 2026 21:31:12 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 18 Mar 2026 22:29:26 +0000</lastBuildDate>
     <item>
       <title>MiniMax-Text-01</title>
       <link>https://huggingface.co/MiniMaxAI/MiniMax-Text-01</link>
@@ -256,7 +256,7 @@
     <item>
       <title>MiniMax-M2.5</title>
       <link>https://huggingface.co/MiniMaxAI/MiniMax-M2.5</link>
-      <description>[HuggingFace Model] | text-generation | Likes: 1221 | Tags: transformers, safetensors, minimax_m2, text-generation, conversational</description>
+      <description>[HuggingFace Model] | text-generation | Likes: 1222 | Tags: transformers, safetensors, minimax_m2, text-generation, conversational</description>
       <guid isPermaLink="true">https://huggingface.co/MiniMaxAI/MiniMax-M2.5</guid>
       <pubDate>Thu, 12 Feb 2026 06:05:24 +0000</pubDate>
     </item>
@@ -270,7 +270,7 @@
     <item>
       <title>OpenRoom</title>
       <link>https://github.com/MiniMax-AI/OpenRoom</link>
-      <description>[GitHub Repo] | Language: TypeScript | Stars: 292</description>
+      <description>[GitHub Repo] | Language: TypeScript | Stars: 294</description>
       <guid isPermaLink="true">https://github.com/MiniMax-AI/OpenRoom</guid>
       <pubDate>Tue, 03 Mar 2026 04:01:01 +0000</pubDate>
     </item>
