@@ -7,7 +7,7 @@
     <docs>http://www.rssboard.org/rss-specification</docs>
     <generator>RSS Creator</generator>
     <language>zh-CN</language>
-    <lastBuildDate>Thu, 19 Mar 2026 11:35:35 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 19 Mar 2026 12:57:42 +0000</lastBuildDate>
     <item>
       <title>MiniMax-Text-01</title>
       <link>https://huggingface.co/MiniMaxAI/MiniMax-Text-01</link>
@@ -25,7 +25,7 @@
     <item>
       <title>MiniMax-01</title>
       <link>https://github.com/MiniMax-AI/MiniMax-01</link>
-      <description>[GitHub Repo] | The official repo of MiniMax-Text-01 and MiniMax-VL-01, large-language-model &amp; vision-language-model based on Linear Attention | Language: Python | Stars: 3367 | Topics: large-language-models, llm, llms, minimax-text-01, minimax-vl-01, vision-language-model, vlm</description>
+      <description>[GitHub Repo] | The official repo of MiniMax-Text-01 and MiniMax-VL-01, large-language-model &amp; vision-language-model based on Linear Attention | Language: Python | Stars: 3368 | Topics: large-language-models, llm, llms, minimax-text-01, minimax-vl-01, vision-language-model, vlm</description>
       <guid isPermaLink="true">https://github.com/MiniMax-AI/MiniMax-01</guid>
       <pubDate>Tue, 14 Jan 2025 15:43:28 +0000</pubDate>
     </item>
@@ -130,7 +130,7 @@
     <item>
       <title>MiniMax-M1</title>
       <link>https://github.com/MiniMax-AI/MiniMax-M1</link>
-      <description>[GitHub Repo] | MiniMax-M1, the world's first open-weight, large-scale hybrid-attention reasoning model. | Language: Python | Stars: 3117 | Topics: large-language-models, llm, minimax-m1, reasoning-models</description>
+      <description>[GitHub Repo] | MiniMax-M1, the world's first open-weight, large-scale hybrid-attention reasoning model. | Language: Python | Stars: 3118 | Topics: large-language-models, llm, minimax-m1, reasoning-models</description>
       <guid isPermaLink="true">https://github.com/MiniMax-AI/MiniMax-M1</guid>
       <pubDate>Sat, 14 Jun 2025 08:54:06 +0000</pubDate>
     </item>
@@ -179,7 +179,7 @@
     <item>
       <title>Mini-Agent</title>
       <link>https://github.com/MiniMax-AI/Mini-Agent</link>
-      <description>[GitHub Repo] | A minimal yet professional single agent demo project that showcases the core execution pipeline and production-grade features of agents. | Language: Python | Stars: 1916 | Topics: agent, llm, minimax</description>
+      <description>[GitHub Repo] | A minimal yet professional single agent demo project that showcases the core execution pipeline and production-grade features of agents. | Language: Python | Stars: 1918 | Topics: agent, llm, minimax</description>
       <guid isPermaLink="true">https://github.com/MiniMax-AI/Mini-Agent</guid>
       <pubDate>Fri, 31 Oct 2025 03:56:27 +0000</pubDate>
     </item>
@@ -256,7 +256,7 @@
     <item>
       <title>MiniMax-M2.5</title>
       <link>https://huggingface.co/MiniMaxAI/MiniMax-M2.5</link>
-      <description>[HuggingFace Model] | text-generation | Likes: 1227 | Tags: transformers, safetensors, minimax_m2, text-generation, conversational</description>
+      <description>[HuggingFace Model] | text-generation | Likes: 1228 | Tags: transformers, safetensors, minimax_m2, text-generation, conversational</description>
       <guid isPermaLink="true">https://huggingface.co/MiniMaxAI/MiniMax-M2.5</guid>
       <pubDate>Thu, 12 Feb 2026 06:05:24 +0000</pubDate>
     </item>
@@ -270,14 +270,14 @@
     <item>
       <title>OpenRoom</title>
       <link>https://github.com/MiniMax-AI/OpenRoom</link>
-      <description>[GitHub Repo] | Language: TypeScript | Stars: 416</description>
+      <description>[GitHub Repo] | A browser-based desktop where AI Agent operates every app through natural language. | Language: TypeScript | Stars: 425 | Topics: ai-agent, browser, desktop, micro-frontend, minimax, natural-language, open-source, react, typescript, vibe-coding</description>
       <guid isPermaLink="true">https://github.com/MiniMax-AI/OpenRoom</guid>
       <pubDate>Tue, 03 Mar 2026 04:01:01 +0000</pubDate>
     </item>
     <item>
       <title>skills</title>
       <link>https://github.com/MiniMax-AI/skills</link>
-      <description>[GitHub Repo] | Language: Python | Stars: 77</description>
+      <description>[GitHub Repo] | Language: Python | Stars: 85</description>
       <guid isPermaLink="true">https://github.com/MiniMax-AI/skills</guid>
       <pubDate>Tue, 17 Mar 2026 07:19:25 +0000</pubDate>
     </item>
