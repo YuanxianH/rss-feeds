@@ -7,7 +7,7 @@
     <docs>http://www.rssboard.org/rss-specification</docs>
     <generator>RSS Creator</generator>
     <language>zh-CN</language>
-    <lastBuildDate>Sat, 21 Mar 2026 08:29:11 +0000</lastBuildDate>
+    <lastBuildDate>Sat, 21 Mar 2026 09:29:14 +0000</lastBuildDate>
     <item>
       <title>MiniMax-Text-01</title>
       <link>https://huggingface.co/MiniMaxAI/MiniMax-Text-01</link>
@@ -179,7 +179,7 @@
     <item>
       <title>Mini-Agent</title>
       <link>https://github.com/MiniMax-AI/Mini-Agent</link>
-      <description>[GitHub Repo] | A minimal yet professional single agent demo project that showcases the core execution pipeline and production-grade features of agents. | Language: Python | Stars: 1940 | Topics: agent, llm, minimax</description>
+      <description>[GitHub Repo] | A minimal yet professional single agent demo project that showcases the core execution pipeline and production-grade features of agents. | Language: Python | Stars: 1941 | Topics: agent, llm, minimax</description>
       <guid isPermaLink="true">https://github.com/MiniMax-AI/Mini-Agent</guid>
       <pubDate>Fri, 31 Oct 2025 03:56:27 +0000</pubDate>
     </item>
@@ -256,7 +256,7 @@
     <item>
       <title>MiniMax-M2.5</title>
       <link>https://huggingface.co/MiniMaxAI/MiniMax-M2.5</link>
-      <description>[HuggingFace Model] | text-generation | Likes: 1246 | Tags: transformers, safetensors, minimax_m2, text-generation, conversational</description>
+      <description>[HuggingFace Model] | text-generation | Likes: 1247 | Tags: transformers, safetensors, minimax_m2, text-generation, conversational</description>
       <guid isPermaLink="true">https://huggingface.co/MiniMaxAI/MiniMax-M2.5</guid>
       <pubDate>Thu, 12 Feb 2026 06:05:24 +0000</pubDate>
     </item>
@@ -270,14 +270,14 @@
     <item>
       <title>OpenRoom</title>
       <link>https://github.com/MiniMax-AI/OpenRoom</link>
-      <description>[GitHub Repo] | A browser-based desktop where AI Agent operates every app through natural language. | Language: TypeScript | Stars: 547 | Topics: ai-agent, browser, desktop, micro-frontend, minimax, natural-language, open-source, react, typescript, vibe-coding</description>
+      <description>[GitHub Repo] | A browser-based desktop where AI Agent operates every app through natural language. | Language: TypeScript | Stars: 548 | Topics: ai-agent, browser, desktop, micro-frontend, minimax, natural-language, open-source, react, typescript, vibe-coding</description>
       <guid isPermaLink="true">https://github.com/MiniMax-AI/OpenRoom</guid>
       <pubDate>Tue, 03 Mar 2026 04:01:01 +0000</pubDate>
     </item>
     <item>
       <title>skills</title>
       <link>https://github.com/MiniMax-AI/skills</link>
-      <description>[GitHub Repo] | Language: Python | Stars: 134</description>
+      <description>[GitHub Repo] | Language: Python | Stars: 135</description>
       <guid isPermaLink="true">https://github.com/MiniMax-AI/skills</guid>
       <pubDate>Tue, 17 Mar 2026 07:19:25 +0000</pubDate>
     </item>
