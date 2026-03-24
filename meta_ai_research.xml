@@ -7,7 +7,7 @@
     <docs>http://www.rssboard.org/rss-specification</docs>
     <generator>RSS Creator</generator>
     <language>zh-CN</language>
-    <lastBuildDate>Tue, 24 Mar 2026 16:03:50 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 24 Mar 2026 17:53:22 +0000</lastBuildDate>
     <item>
       <title>Equi-normalization of Neural Networks | Facebook AI Research</title>
       <link>https://ai.meta.com/research/publications/equi-normalization-of-neural-networks/</link>
@@ -93,13 +93,6 @@
       <pubDate>Thu, 31 Oct 2019 00:00:00 +0000</pubDate>
     </item>
     <item>
-      <title>Learning to Watermark in the Latent Space of Generative Models</title>
-      <link>https://ai.meta.com/research/publications/learning-to-watermark-in-the-latent-space-of-generative-models/</link>
-      <description>Sylvestre Rebuffi, Tuan Tran, Valeriu Lacatusu, Pierre Fernandez, Tomáš Souček, Tom Sander, Hady Elsahar, Alexandre Mourachko</description>
-      <guid isPermaLink="true">https://ai.meta.com/research/publications/learning-to-watermark-in-the-latent-space-of-generative-models/</guid>
-      <pubDate>Thu, 18 Dec 2025 00:00:00 +0000</pubDate>
-    </item>
-    <item>
       <title>How Good is Post-Hoc Watermarking With Language Model Rephrasing?</title>
       <link>https://ai.meta.com/research/publications/how-good-is-post-hoc-watermarking-with-language-model-rephrasing/</link>
       <description>Pierre Fernandez, Tom Sander, Hady Elsahar, Hongyan Chang, Tomáš Souček, Sylvestre Rebuffi, Valeriu Lacatusu, Tuan Tran, Alexandre Mourachko</description>
@@ -175,6 +168,13 @@
       <description>Omnilingual MT Team, Belen Alastruey, Niyati Bafna, Andrea Caciolai, Kevin Heffernan, Artyom Kozhevnikov, Christophe Ropers, Eduardo Sánchez, Charles-Eric Saint-James, Ioannis Tsiamas, Chierh CHENG, Joe Chuang, Paul-Ambroise Duquenne, Mark Duppenthaler, Nate Ekberg, Cynthia Gao, Pere Lluís Huguet Cabot, João Maria Janeiro, Jean Maillard, Gabriel Mejia Gonzalez, Holger Schwenk, Edan Toledo, Arina Turkatenko, Albert Ventayol-Boada, Rashel Moritz, Alexandre Mourachko, Surya Parimi, Mary Williamson, Shireen Yates, David Dale, Marta R. Costa-jussa</description>
       <guid isPermaLink="true">https://ai.meta.com/research/publications/omnilingual-mt-machine-translation-for-1600-languages/</guid>
       <pubDate>Tue, 17 Mar 2026 00:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>HyperAgents</title>
+      <link>https://ai.meta.com/research/publications/hyperagents/</link>
+      <description>Jenny Zhang, Bingchen Zhao, Winnie Yang, Jakob Foerster, Sam Devlin, Tatiana Shavrina</description>
+      <guid isPermaLink="true">https://ai.meta.com/research/publications/hyperagents/</guid>
+      <pubDate>Tue, 24 Mar 2026 00:00:00 +0000</pubDate>
     </item>
   </channel>
 </rss>
