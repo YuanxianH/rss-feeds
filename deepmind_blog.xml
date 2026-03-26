@@ -7,13 +7,7 @@
     <docs>http://www.rssboard.org/rss-specification</docs>
     <generator>RSS Creator</generator>
     <language>zh-CN</language>
-    <lastBuildDate>Thu, 26 Mar 2026 15:00:47 +0000</lastBuildDate>
-    <item>
-      <title>Revealing a key protein behind heart disease</title>
-      <link>https://deepmind.google/blog/revealing-a-key-protein-behind-heart-disease/</link>
-      <guid isPermaLink="true">https://deepmind.google/blog/revealing-a-key-protein-behind-heart-disease/</guid>
-      <pubDate>Wed, 26 Nov 2025 00:00:00 +0000</pubDate>
-    </item>
+    <lastBuildDate>Thu, 26 Mar 2026 16:57:02 +0000</lastBuildDate>
     <item>
       <title>AlphaFold: Five years of impact</title>
       <link>https://deepmind.google/blog/alphafold-five-years-of-impact/</link>
@@ -150,6 +144,12 @@
       <title>Protecting people from harmful manipulation</title>
       <link>https://deepmind.google/blog/protecting-people-from-harmful-manipulation/</link>
       <guid isPermaLink="true">https://deepmind.google/blog/protecting-people-from-harmful-manipulation/</guid>
+      <pubDate>Thu, 26 Mar 2026 00:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>Gemini 3.1 Flash Live: Making audio AI more natural and reliable</title>
+      <link>https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-3-1-flash-live/</link>
+      <guid isPermaLink="true">https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-3-1-flash-live/</guid>
       <pubDate>Thu, 26 Mar 2026 00:00:00 +0000</pubDate>
     </item>
     <item>
