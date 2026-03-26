@@ -7,7 +7,7 @@
     <docs>http://www.rssboard.org/rss-specification</docs>
     <generator>RSS Creator</generator>
     <language>zh-CN</language>
-    <lastBuildDate>Thu, 26 Mar 2026 11:48:36 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 26 Mar 2026 13:06:14 +0000</lastBuildDate>
     <item>
       <title>Equi-normalization of Neural Networks | Facebook AI Research</title>
       <link>https://ai.meta.com/research/publications/equi-normalization-of-neural-networks/</link>
@@ -93,13 +93,6 @@
       <pubDate>Thu, 31 Oct 2019 00:00:00 +0000</pubDate>
     </item>
     <item>
-      <title>How Good is Post-Hoc Watermarking With Language Model Rephrasing?</title>
-      <link>https://ai.meta.com/research/publications/how-good-is-post-hoc-watermarking-with-language-model-rephrasing/</link>
-      <description>Pierre Fernandez, Tom Sander, Hady Elsahar, Hongyan Chang, Tomáš Souček, Sylvestre Rebuffi, Valeriu Lacatusu, Tuan Tran, Alexandre Mourachko</description>
-      <guid isPermaLink="true">https://ai.meta.com/research/publications/how-good-is-post-hoc-watermarking-with-language-model-rephrasing/</guid>
-      <pubDate>Thu, 18 Dec 2025 00:00:00 +0000</pubDate>
-    </item>
-    <item>
       <title>We Can Hide More Bits: The Unused Watermarking Capacity in Theory and Practice</title>
       <link>https://ai.meta.com/research/publications/we-can-hide-more-bits-the-unused-watermarking-capacity-in-theory-and-practice/</link>
       <description>Aleksandar Petrov, Pierre Fernandez, Tomáš Souček, Hady Elsahar</description>
@@ -175,6 +168,13 @@
       <description>Jenny Zhang, Bingchen Zhao, Winnie Yang, Jakob Foerster, Sam Devlin, Tatiana Shavrina</description>
       <guid isPermaLink="true">https://ai.meta.com/research/publications/hyperagents/</guid>
       <pubDate>Tue, 24 Mar 2026 00:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>A foundation model of vision, audition, and language for in-silico neuroscience</title>
+      <link>https://ai.meta.com/research/publications/a-foundation-model-of-vision-audition-and-language-for-in-silico-neuroscience/</link>
+      <description>Stéphane d'Ascoli, Jérémy Rapin, Yohann Benchetrit, Teon Brooks, Katelyn Begany, Josephine Raugel, Hubert Jacob Banville, Jean Remi King</description>
+      <guid isPermaLink="true">https://ai.meta.com/research/publications/a-foundation-model-of-vision-audition-and-language-for-in-silico-neuroscience/</guid>
+      <pubDate>Thu, 26 Mar 2026 00:00:00 +0000</pubDate>
     </item>
   </channel>
 </rss>
