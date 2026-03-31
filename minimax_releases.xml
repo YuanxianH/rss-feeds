@@ -7,7 +7,7 @@
     <docs>http://www.rssboard.org/rss-specification</docs>
     <generator>RSS Creator</generator>
     <language>zh-CN</language>
-    <lastBuildDate>Tue, 31 Mar 2026 17:54:09 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 31 Mar 2026 18:57:43 +0000</lastBuildDate>
     <item>
       <title>MiniMax-Text-01</title>
       <link>https://huggingface.co/MiniMaxAI/MiniMax-Text-01</link>
@@ -151,7 +151,7 @@
     <item>
       <title>MiniMax-Hackathon</title>
       <link>https://github.com/MiniMax-AI/MiniMax-Hackathon</link>
-      <description>[GitHub Repo] | Stars: 3</description>
+      <description>[GitHub Repo] | Stars: 4</description>
       <guid isPermaLink="true">https://github.com/MiniMax-AI/MiniMax-Hackathon</guid>
       <pubDate>Tue, 23 Sep 2025 05:43:06 +0000</pubDate>
     </item>
@@ -277,7 +277,7 @@
     <item>
       <title>skills</title>
       <link>https://github.com/MiniMax-AI/skills</link>
-      <description>[GitHub Repo] | Language: C# | Stars: 8289</description>
+      <description>[GitHub Repo] | Language: C# | Stars: 8293</description>
       <guid isPermaLink="true">https://github.com/MiniMax-AI/skills</guid>
       <pubDate>Tue, 17 Mar 2026 07:19:25 +0000</pubDate>
     </item>
