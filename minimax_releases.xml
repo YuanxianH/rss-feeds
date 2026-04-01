@@ -7,7 +7,7 @@
     <docs>http://www.rssboard.org/rss-specification</docs>
     <generator>RSS Creator</generator>
     <language>zh-CN</language>
-    <lastBuildDate>Wed, 01 Apr 2026 22:34:11 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 01 Apr 2026 23:33:26 +0000</lastBuildDate>
     <item>
       <title>MiniMax-Text-01</title>
       <link>https://huggingface.co/MiniMaxAI/MiniMax-Text-01</link>
@@ -256,7 +256,7 @@
     <item>
       <title>MiniMax-M2.5</title>
       <link>https://huggingface.co/MiniMaxAI/MiniMax-M2.5</link>
-      <description>[HuggingFace Model] | text-generation | Likes: 1322 | Tags: transformers, safetensors, minimax_m2, text-generation, conversational</description>
+      <description>[HuggingFace Model] | text-generation | Likes: 1323 | Tags: transformers, safetensors, minimax_m2, text-generation, conversational</description>
       <guid isPermaLink="true">https://huggingface.co/MiniMaxAI/MiniMax-M2.5</guid>
       <pubDate>Thu, 12 Feb 2026 06:05:24 +0000</pubDate>
     </item>
@@ -277,7 +277,7 @@
     <item>
       <title>skills</title>
       <link>https://github.com/MiniMax-AI/skills</link>
-      <description>[GitHub Repo] | Language: C# | Stars: 8514</description>
+      <description>[GitHub Repo] | Language: C# | Stars: 8516</description>
       <guid isPermaLink="true">https://github.com/MiniMax-AI/skills</guid>
       <pubDate>Tue, 17 Mar 2026 07:19:25 +0000</pubDate>
     </item>
