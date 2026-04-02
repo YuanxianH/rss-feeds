@@ -7,14 +7,7 @@
     <docs>http://www.rssboard.org/rss-specification</docs>
     <generator>RSS Creator</generator>
     <language>zh-CN</language>
-    <lastBuildDate>Thu, 02 Apr 2026 17:53:44 +0000</lastBuildDate>
-    <item>
-      <title>Codex CLI artifact-runtime-v2.4.0</title>
-      <link>https://github.com/openai/codex/releases/tag/artifact-runtime-v2.4.0</link>
-      <description>Empty draft</description>
-      <guid isPermaLink="false">https://developers.openai.com/codex/changelog#github-release-293436198</guid>
-      <pubDate>Thu, 05 Mar 2026 00:00:00 +0000</pubDate>
-    </item>
+    <lastBuildDate>Thu, 02 Apr 2026 18:52:58 +0000</lastBuildDate>
     <item>
       <title>Codex CLI 0.110.0</title>
       <link>https://github.com/openai/codex/releases/tag/rust-v0.110.0</link>
