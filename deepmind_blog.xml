@@ -7,13 +7,7 @@
     <docs>http://www.rssboard.org/rss-specification</docs>
     <generator>RSS Creator</generator>
     <language>zh-CN</language>
-    <lastBuildDate>Thu, 02 Apr 2026 15:57:49 +0000</lastBuildDate>
-    <item>
-      <title>AlphaFold: Five years of impact</title>
-      <link>https://deepmind.google/blog/alphafold-five-years-of-impact/</link>
-      <guid isPermaLink="true">https://deepmind.google/blog/alphafold-five-years-of-impact/</guid>
-      <pubDate>Sun, 02 Nov 2025 00:00:00 +0000</pubDate>
-    </item>
+    <lastBuildDate>Thu, 02 Apr 2026 16:58:48 +0000</lastBuildDate>
     <item>
       <title>Engineering more resilient crops for a warming climate</title>
       <link>https://deepmind.google/blog/engineering-more-resilient-crops-for-a-warming-climate/</link>
@@ -151,6 +145,12 @@
       <link>https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-3-1-flash-live/</link>
       <guid isPermaLink="true">https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-3-1-flash-live/</guid>
       <pubDate>Mon, 02 Mar 2026 00:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>Gemma 4: Byte for byte, the most capable open models</title>
+      <link>https://blog.google/innovation-and-ai/technology/developers-tools/gemma-4/</link>
+      <guid isPermaLink="true">https://blog.google/innovation-and-ai/technology/developers-tools/gemma-4/</guid>
+      <pubDate>Thu, 02 Apr 2026 00:00:00 +0000</pubDate>
     </item>
     <item>
       <title>Project Genie: Experimenting with infinite, interactive worlds</title>
