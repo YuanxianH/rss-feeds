@@ -7,7 +7,7 @@
     <docs>http://www.rssboard.org/rss-specification</docs>
     <generator>RSS Creator</generator>
     <language>zh-CN</language>
-    <lastBuildDate>Thu, 09 Apr 2026 22:37:24 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 09 Apr 2026 23:34:56 +0000</lastBuildDate>
     <item>
       <title>Equi-normalization of Neural Networks | Facebook AI Research</title>
       <link>https://ai.meta.com/research/publications/equi-normalization-of-neural-networks/</link>
@@ -93,13 +93,6 @@
       <pubDate>Thu, 31 Oct 2019 00:00:00 +0000</pubDate>
     </item>
     <item>
-      <title>We Can Hide More Bits: The Unused Watermarking Capacity in Theory and Practice</title>
-      <link>https://ai.meta.com/research/publications/we-can-hide-more-bits-the-unused-watermarking-capacity-in-theory-and-practice/</link>
-      <description>Aleksandar Petrov, Pierre Fernandez, Tomáš Souček, Hady Elsahar</description>
-      <guid isPermaLink="true">https://ai.meta.com/research/publications/we-can-hide-more-bits-the-unused-watermarking-capacity-in-theory-and-practice/</guid>
-      <pubDate>Thu, 18 Dec 2025 00:00:00 +0000</pubDate>
-    </item>
-    <item>
       <title>Safety Alignment of LMs via Non-cooperative Games</title>
       <link>https://ai.meta.com/research/publications/safety-alignment-of-lms-via-non-cooperative-games/</link>
       <description>Anselm Paulus, Ilia Kulikov, Brandon Amos, Remi Munos, Ivan Evtimov, Kamalika Chaudhuri, Arman Zharmagambetov</description>
@@ -175,6 +168,13 @@
       <description>Stéphane d'Ascoli, Jérémy Rapin, Yohann Benchetrit, Teon Brooks, Katelyn Begany, Josephine Raugel, Hubert Jacob Banville, Jean Remi King</description>
       <guid isPermaLink="true">https://ai.meta.com/research/publications/a-foundation-model-of-vision-audition-and-language-for-in-silico-neuroscience/</guid>
       <pubDate>Thu, 26 Mar 2026 00:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>Think in Strokes, Not Pixels: Process-Driven Image Generation via Interleaved Reasoning</title>
+      <link>https://ai.meta.com/research/publications/think-in-strokes-not-pixels-process-driven-image-generation-via-interleaved-reasoning/</link>
+      <description>Lei Zhang, Junjiao Tian, Zhipeng Fan, Kunpeng Li, Jialiang Wang, Weifeng Chen, Markos Georgopoulos, Felix Xu, Yuxiao Bao, Julian McAuley, Manling Li, Zecheng He</description>
+      <guid isPermaLink="true">https://ai.meta.com/research/publications/think-in-strokes-not-pixels-process-driven-image-generation-via-interleaved-reasoning/</guid>
+      <pubDate>Thu, 09 Apr 2026 00:00:00 +0000</pubDate>
     </item>
   </channel>
 </rss>
