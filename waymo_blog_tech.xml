@@ -7,7 +7,15 @@
     <docs>http://www.rssboard.org/rss-specification</docs>
     <generator>RSS Creator</generator>
     <language>zh-CN</language>
-    <lastBuildDate>Thu, 09 Apr 2026 11:53:08 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 09 Apr 2026 13:18:53 +0000</lastBuildDate>
+    <item>
+      <title>Partnering with Waze to help cities patch their potholes</title>
+      <link>https://waymo.com/blog/2026/04/partnering-with-waze-to-help-cities-patch-their-potholes</link>
+      <description>Waymo and Waze are announcing a new pilot program that uses Waymo’s perception and physical feedback systems to detect and provide up-to-date information on potholes to cities and state Departments of Transportation where Waymo operates through the free-to-use Waze for Cities platform.
+</description>
+      <guid isPermaLink="true">https://waymo.com/blog/2026/04/partnering-with-waze-to-help-cities-patch-their-potholes</guid>
+      <pubDate>Thu, 09 Apr 2026 00:00:00 +0000</pubDate>
+    </item>
     <item>
       <title>Beginning fully autonomous operations with the 6th-generation Waymo Driver</title>
       <link>https://waymo.com/blog/2026/02/ro-on-6th-gen-waymo-driver</link>
@@ -355,13 +363,6 @@
       <description>There’s a lot happening with Waymo Via trucking these days. Since we kicked off our goods delivery efforts in 2017, our self-driving trucks have been fixtures on freeways across California and Arizona, our technology has become even more advanced, and our trucking team has grown rapidly. </description>
       <guid isPermaLink="true">https://waymo.com/blog/2020/05/catching-up-with-waymo-via-trucking-team</guid>
       <pubDate>Fri, 08 May 2020 08:59:00 -0700</pubDate>
-    </item>
-    <item>
-      <title>Off road, but not offline: How simulation helps advance our Waymo Driver</title>
-      <link>https://waymo.com/blog/2020/04/off-road-but-not-offline--simulation27</link>
-      <description>COVID-19 has had a significant impact on the world, affecting people’s lives and forcing many businesses to suspend their operations. At Waymo, we're actively monitoring the situation, taking steps to support our local communities, and contributing to COVID-19 response efforts. While Waymo has temporarily suspended its on-the-road operations as we put the health and safety of our riders, partners, and employees first, we are still driving our technology forward with our work in simulation.</description>
-      <guid isPermaLink="true">https://waymo.com/blog/2020/04/off-road-but-not-offline--simulation27</guid>
-      <pubDate>Tue, 28 Apr 2020 06:58:00 -0700</pubDate>
     </item>
   </channel>
 </rss>
