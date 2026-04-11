@@ -7,7 +7,7 @@
     <docs>http://www.rssboard.org/rss-specification</docs>
     <generator>RSS Creator</generator>
     <language>zh-CN</language>
-    <lastBuildDate>Sat, 11 Apr 2026 20:28:49 +0000</lastBuildDate>
+    <lastBuildDate>Sat, 11 Apr 2026 21:29:35 +0000</lastBuildDate>
     <item>
       <title>MiniMax-Text-01</title>
       <link>https://huggingface.co/MiniMaxAI/MiniMax-Text-01</link>
@@ -60,7 +60,7 @@
     <item>
       <title>MiniMax-AI.github.io</title>
       <link>https://github.com/MiniMax-AI/MiniMax-AI.github.io</link>
-      <description>[GitHub Repo] | The official GitHub Page for MiniMax | Language: HTML | Stars: 68 | Topics: text-to-speech, tts</description>
+      <description>[GitHub Repo] | The official GitHub Page for MiniMax | Language: HTML | Stars: 69 | Topics: text-to-speech, tts</description>
       <guid isPermaLink="true">https://github.com/MiniMax-AI/MiniMax-AI.github.io</guid>
       <pubDate>Fri, 09 May 2025 09:35:01 +0000</pubDate>
     </item>
@@ -256,7 +256,7 @@
     <item>
       <title>MiniMax-M2.5</title>
       <link>https://huggingface.co/MiniMaxAI/MiniMax-M2.5</link>
-      <description>[HuggingFace Model] | text-generation | Likes: 1372 | Tags: transformers, safetensors, minimax_m2, text-generation, conversational</description>
+      <description>[HuggingFace Model] | text-generation | Likes: 1373 | Tags: transformers, safetensors, minimax_m2, text-generation, conversational</description>
       <guid isPermaLink="true">https://huggingface.co/MiniMaxAI/MiniMax-M2.5</guid>
       <pubDate>Thu, 12 Feb 2026 06:05:24 +0000</pubDate>
     </item>
@@ -277,14 +277,14 @@
     <item>
       <title>skills</title>
       <link>https://github.com/MiniMax-AI/skills</link>
-      <description>[GitHub Repo] | Language: C# | Stars: 10032</description>
+      <description>[GitHub Repo] | Language: C# | Stars: 10033</description>
       <guid isPermaLink="true">https://github.com/MiniMax-AI/skills</guid>
       <pubDate>Tue, 17 Mar 2026 07:19:25 +0000</pubDate>
     </item>
     <item>
       <title>cli</title>
       <link>https://github.com/MiniMax-AI/cli</link>
-      <description>[GitHub Repo] | Generate text, images, video, speech, and music by MiniMax. | Language: TypeScript | Stars: 959 | Topics: ai</description>
+      <description>[GitHub Repo] | Generate text, images, video, speech, and music by MiniMax. | Language: TypeScript | Stars: 965 | Topics: ai</description>
       <guid isPermaLink="true">https://github.com/MiniMax-AI/cli</guid>
       <pubDate>Wed, 25 Mar 2026 15:34:45 +0000</pubDate>
     </item>
