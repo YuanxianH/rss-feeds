@@ -7,9 +7,1967 @@
     <docs>http://www.rssboard.org/rss-specification</docs>
     <generator>RSS Creator</generator>
     <language>zh-CN</language>
-    <lastBuildDate>Mon, 13 Apr 2026 20:51:00 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 13 Apr 2026 21:44:09 +0000</lastBuildDate>
     <item>
-      <title>0.119.0</title>
+      <title>Codex CLI 0.115.0</title>
+      <link>https://github.com/openai/codex/releases/tag/rust-v0.115.0</link>
+      <description>New Features
+Supported models can now request full-resolution image inspection through both
+view_image
+and
+codex.emitImage(..., detail: "original")
+, which helps with precision visual tasks. (
+#14175
+)
+js_repl
+now exposes
+codex.cwd
+and
+codex.homeDir
+, and saved
+codex.tool(...)
+/
+codex.emitImage(...)
+references keep working across cells. (
+#14385
+,
+#14503
+)
+Realtime websocket sessions gained a dedicated transcription mode, plus v2 handoff support through the
+codex
+tool, with a unified
+[realtime]
+session config. (
+#14554
+,
+#14556
+,
+#14606
+)
+The v2 app-server now exposes filesystem RPCs for file reads, writes, copies, directory operations, and path watching, and there is a new Python SDK for integrating with that API. (
+#14245
+,
+#14435
+)
+Smart Approvals can now route review requests through a guardian subagent in core, app-server, and TUI, reducing repeated setup work on follow-up approvals. (
+#13860
+,
+#14668
+)
+App integrations now use the Responses API tool-search flow, can suggest missing tools, and fall back cleanly when the active model does not support search-based lookup. (
+#14274
+,
+#14287
+,
+#14732
+)
+Bug Fixes
+Spawned subagents now inherit sandbox and network rules more reliably, including project-profile layering, persisted host approvals, and symlinked writable roots. (
+#14619
+,
+#14650
+,
+#14674
+,
+#14807
+)
+js_repl
+no longer hangs when dynamic tool responses contain literal U+2028 or U+2029 characters. (
+#14421
+)
+The TUI no longer stalls on exit after creating subagents, and interrupting a turn no longer tears down background terminals by default. (
+#14816
+,
+#14602
+)
+codex exec --profile
+once again preserves profile-scoped settings when starting or resuming a thread. (
+#14524
+)
+MCP and elicitation flows are more robust, with safer tool-name normalization and preserved
+tool_params
+in approval prompts. (
+#14491
+,
+#14605
+,
+#14769
+)
+The local network proxy now serves CONNECT traffic as explicit HTTP/1, improving compatibility with HTTP proxy clients. (
+#14395
+)
+Chores
+The subagent wait tool is now consistently named
+wait_agent
+, aligning it with
+spawn_agent
+and
+send_input
+. (
+#14631
+)
+Changelog
+Full Changelog:
+rust-v0.114.0...rust-v0.115.0
+#14395
+fix(network-proxy): serve HTTP proxy listener as HTTP/1
+@viyatb-oai
+#14385
+Add js_repl cwd and homeDir helpers
+@fjord-oai
+#14376
+Keep agent-switch word-motion keys out of draft editing
+@joshka-oai
+#14175
+Let models opt into original image detail
+@fjord-oai
+#14382
+check for large binaries in CI
+@owenlin0
+#14392
+chore(app-server): stop emitting codex/event/ notifications
+@owenlin0
+#14274
+feat: search_tool migrate to bring you own tool of Responses API
+@apanasenko-oai
+#14174
+refactor: centralize filesystem permissions precedence
+@viyatb-oai
+#14394
+chore(app-server): delete unused rpc methods from v1.rs
+@owenlin0
+#14171
+fix: align core approvals with split sandbox policies
+@viyatb-oai
+#14410
+Make collab model metadata accurate on completion
+@aibrahim-oai
+#14387
+feat(app-server): propagate traces across tasks and core ops
+@owenlin0
+#14407
+chore: use AVAILABLE and ON_INSTALL as default plugin install and auth policies
+@sayan-oai
+#14287
+[apps] Add tool_suggest tool.
+@mzeng-openai
+#14432
+Clarify spawn agent authorization
+@aibrahim-oai
+#14295
+Support waiting for code_mode sessions
+@pakrym-oai
+#14427
+feat: refactor on openai-curated plugins.
+@xl-openai
+#13996
+refactor: make bubblewrap the default Linux sandbox
+@viyatb-oai
+#14440
+fix: follow up on linux sandbox review nits
+@viyatb-oai
+#14431
+Handle pre-approved permissions in zsh fork
+@mousseau-oai
+#14403
+[elicitation] User-friendly tool call messages.
+@mzeng-openai
+#14429
+Use granted permissions when invoking apply_patch
+@mousseau-oai
+#14471
+Updated out-of-date tip about availability on free and go plans
+@etraut-openai
+#14444
+fix: move inline codex-rs/core unit tests into sibling files
+@bolinfest
+#14437
+Dispatch tools when code mode is not awaited directly
+@pakrym-oai
+#14435
+Add Python app-server SDK
+@shaqayeq-oai
+#14473
+fix(cli): support legacy use_linux_sandbox_bwrap flag
+@viyatb-oai
+#13882
+Fix stdio-to-uds peer-close flake
+@aibrahim-oai
+#14476
+Move code mode tool files under tools/code_mode and split functionality
+@pakrym-oai
+#14475
+rename spawn_csv feature flag to enable_fanout
+@daveaitel-openai
+#14173
+fix: preserve split filesystem semantics in linux sandbox
+@viyatb-oai
+#14480
+Cleanup code_mode tool descriptions
+@pakrym-oai
+#14488
+Handle malformed agent role definitions nonfatally
+@gabec-openai
+#14398
+Do not allow unified_exec for sandboxed scenarios on Windows
+@iceweasel-oai
+#14419
+use scopes_supported for OAuth when present on MCP servers
+@jgershen-oai
+#14484
+Add default code-mode yield timeout
+@pakrym-oai
+#14494
+Add parallel tool call test
+@pakrym-oai
+#14478
+chore(app-server): stop exporting EventMsg schemas
+@owenlin0
+#14490
+fix turn_start_jsonrpc_span_parents_core_turn_spans flakiness
+@owenlin0
+#14496
+Reuse tool runtime for code mode worker
+@pakrym-oai
+#14421
+Fix js_repl hangs on U+2028/U+2029 dynamic tool responses
+@aaronl-openai
+#14505
+Skip nested tool call parallel test on Windows
+@pakrym-oai
+#14491
+Fix MCP tool calling
+@pakrym-oai
+#14493
+memories: focus write prompts on user preferences
+@andi-oai
+#14510
+Rename exec session IDs to cell IDs
+@pakrym-oai
+#14500
+Update tool search prompts
+@mzeng-openai
+#14426
+Decouple request permissions feature and tool
+@mousseau-oai
+#14503
+Persist js_repl codex helpers across cells
+@fjord-oai
+#14517
+Expose code-mode tools through globals
+@pakrym-oai
+#14502
+feat(search_tool): gate search_tool on model supports_search_tool field
+@apanasenko-oai
+#14521
+Reapply "Pass more params to compaction" (
+#14298
+)
+@rasmusrygaard
+#14524
+Fix
+codex exec --profile
+handling
+@etraut-openai
+#14516
+Rename reject approval policy to granular
+@mousseau-oai
+#14445
+feat: add plugin/read.
+@xl-openai
+#14178
+login: add custom CA support for login flows
+@joshka-oai
+#14535
+Split multi-agent handlers per tool
+@pakrym-oai
+#13329
+[js_repl] Hard-stop active js_repl execs on explicit user interrupts
+@aaronl-openai
+#14239
+client: extend custom CA handling across HTTPS and websocket clients
+@joshka-oai
+#14536
+Add typed multi-agent tool outputs
+@pakrym-oai
+#14514
+fix: reopen writable linux carveouts under denied parents
+@viyatb-oai
+#14531
+Add plugin usage telemetry
+@alexsong-oai
+#14511
+code_mode: Move exec params from runtime declarations to
+@pragma
+@cconger
+#14504
+Refactor cloud requirements error and surface in JSON-RPC error
+@alexsong-oai
+#14537
+Add realtime v2 event parser behind feature flag
+@aibrahim-oai
+#14529
+Simplify permissions available in request permissions tool
+@mousseau-oai
+#14522
+feat: support skill-scoped managed network domain overrides in skill config
+@celia-oai
+#14554
+Add codex tool support for realtime v2 handoff
+@aibrahim-oai
+#14556
+Add realtime transcription mode for websocket sessions
+@aibrahim-oai
+#14518
+Add diagnostics for read_only_unless_trusted timeout flake
+@aibrahim-oai
+#14603
+Split multi-agent handler into dedicated files
+@pakrym-oai
+#14526
+code mode: single line tool declarations
+@pakrym-oai
+#14400
+Use a private desktop for Windows sandbox instead of Winsta0\Default
+@iceweasel-oai
+#14558
+sending back imagaegencall response back to responseapi
+@won-openai
+#14553
+Improve granular approval policy prompt
+@mousseau-oai
+#14541
+chore: clarify plugin + app copy in model instructions
+@sayan-oai
+#14542
+[bazel] Bump up cc and rust toolchains
+@zbarsky-openai
+#14512
+Start TUI on embedded app server
+@etraut-openai
+#14606
+Unify realtime v1/v2 session config
+@aibrahim-oai
+#14527
+app-server: Add platform os and family to init response
+@euroelessar
+#14618
+Use subagents naming in the TUI
+@aibrahim-oai
+#14304
+Override local apps settings with requirements.toml settings
+@canvrno-oai
+#14479
+feat(app-server, core): add more spans
+@owenlin0
+#13644
+fix: preserve zsh-fork escalation fds across unified-exec spawn paths
+@bolinfest
+#14617
+Add code_mode_only feature
+@pakrym-oai
+#13201
+Slash copy osc52 wsl support
+@won-openai
+#14631
+Rename multi-agent wait tool to wait_agent
+@aibrahim-oai
+#14622
+Stabilize multi-agent feature flag
+@aibrahim-oai
+#14245
+app-server: add v2 filesystem APIs
+@euroelessar
+#14605
+Normalize MCP tool names to code-mode safe form
+@pakrym-oai
+#14637
+Fix wait_agent expectations in core tests
+@charley-oai
+#13860
+Add Smart Approvals guardian review across core, app-server, and TUI
+@charley-oai
+#14639
+Fix stale create_wait_tool reference
+@charley-oai
+#14532
+[hooks] stop continuation &amp; stop_hook_active mechanics
+@eternal-openai
+#14635
+Fix realtime transcription session.update tools payload
+@aibrahim-oai
+#14636
+Use parser-specific realtime voice enum
+@aibrahim-oai
+#14633
+refactor: make unified-exec zsh-fork state explicit
+@bolinfest
+#12031
+Add openai_base_url config override for built-in provider
+@etraut-openai
+#14645
+Fix Windows CI assertions for guardian and Smart Approvals
+@aibrahim-oai
+#14616
+Fix turn context reconstruction after backtracking
+@charley-oai
+#14619
+fix: persist future network host approvals across sessions
+@viyatb-oai
+#14650
+fix: sync split sandbox policies for spawned subagents
+@viyatb-oai
+#14609
+move plugin/skill instructions into dev msg and reorder
+@sayan-oai
+#12024
+Enforce errors on overriding built-in model providers
+@etraut-openai
+#14646
+Refresh Python SDK generated types
+@sayan-oai
+#14649
+make defaultPrompt an array, keep backcompat
+@sayan-oai
+#14501
+dynamic tool calls: add param
+exposeToContext
+to optionally hide tool
+@cconger
+#14651
+Add argument-comment Dylint runner
+@bolinfest
+#14674
+fix: fix symlinked writable roots in sandbox policies
+@viyatb-oai
+#14611
+Add auth 401 recovery observability to client bug reports
+@ccy-oai
+#14647
+[apps] Add tool call meta.
+@mzeng-openai
+#14732
+[apps] Improve search tool fallback.
+@mzeng-openai
+#14602
+Preserve background terminals on interrupt and rename cleanup command to /stop
+@friel-openai
+#14668
+Reuse guardian session across approvals
+@charley-oai
+#14769
+fix(core): preserve tool_params for elicitations
+@mzeng-openai
+#14807
+fix: sub-agent role when using profiles
+@jif-oai
+#14806
+feat: improve skills cache key to take into account config layering
+@jif-oai
+#13850
+feat: make interrupt state not final for multi-agents
+@jif-oai
+#14816
+fix: tui freeze when sub-agents are present
+@jif-oai</description>
+      <guid isPermaLink="false">https://developers.openai.com/codex/changelog#github-release-297641413</guid>
+      <pubDate>Mon, 16 Mar 2026 00:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>Codex CLI 0.116.0</title>
+      <link>https://github.com/openai/codex/releases/tag/rust-v0.116.0</link>
+      <description>New Features
+App-server TUI now supports device-code ChatGPT sign-in during onboarding and can refresh existing ChatGPT tokens. (
+#14952
+)
+Plugin setup is smoother: Codex can prompt to install missing plugins or connectors, honor a configured suggestion allowlist, and sync install/uninstall state remotely. (
+#14896
+,
+#15022
+,
+#14878
+)
+Added a
+userpromptsubmit
+hook so prompts can be blocked or augmented before execution and before they enter history. (
+#14626
+)
+Realtime sessions now start with recent thread context and are less likely to self-interrupt during audio playback. (
+#14829
+,
+#14827
+)
+Bug Fixes
+Fixed a first-turn stall where websocket prewarm could delay
+turn/start
+; startup now times out and falls back cleanly. (
+#14838
+)
+Restored conversation history for remote resume/fork in the app-server TUI and stopped duplicate live transcript output from legacy stream events. (
+#14930
+,
+#14892
+)
+Improved Linux sandbox startup on symlinked checkouts, missing writable roots, and Ubuntu/AppArmor hosts by preferring system
+bwrap
+when available. (
+#14849
+,
+#14890
+,
+#14963
+)
+Fixed an agent job finalization race and reduced status polling churn for worker threads. (
+#14843
+)
+Documentation
+Refreshed the Python SDK public API docs, examples, and walkthrough around the generated app-server models. (
+#14446
+)
+Chores
+Pinned the
+setup-zig
+GitHub Action to an immutable SHA for more reproducible CI. (
+#14858
+)
+Changelog
+Full Changelog:
+rust-v0.115.0...rust-v0.116.0
+#14717
+Move TUI on top of app server (parallel code)
+@etraut-openai
+#14665
+Use request permission profile in app server
+@mousseau-oai
+#14826
+Fixed build failures related to PR 14717
+@etraut-openai
+#14833
+fix(core): fix sanitize name to use '_' everywhere
+@apanasenko-oai
+#14268
+memories: exclude AGENTS and skills from stage1 input
+@andi-oai
+#14139
+windows-sandbox: add runner IPC foundation for future unified_exec
+@iceweasel-oai
+#14851
+Add exit helper to code mode scripts
+@pakrym-oai
+#14828
+[stack 1/4] Split realtime websocket methods by version
+@aibrahim-oai
+#14652
+Apply argument comment lint across codex-rs
+@bolinfest
+#14837
+skill-creator: default new skills to ~/.codex/skills
+@xl-openai
+#14861
+Add marketplace display names to plugin/list
+@xl-openai
+#14878
+feat: support remote_sync for plugin install/uninstall.
+@xl-openai
+#14830
+[stack 2/4] Align main realtime v2 wire and runtime flow
+@aibrahim-oai
+#14886
+fix: align marketplace display name with existing interface conventions
+@xl-openai
+#14881
+[codex] add Jason as a predefined subagent name
+@tibo-openai
+#14864
+fix: tighten up shell arg quoting in GitHub workflows
+@bolinfest
+#14829
+[stack 3/4] Add current thread context to realtime startup
+@aibrahim-oai
+#14827
+[stack 4/4] Reduce realtime self-interruptions during playback
+@aibrahim-oai
+#14849
+fix: canonicalize symlinked Linux sandbox cwd
+@viyatb-oai
+#14892
+Fix tui_app_server: ignore duplicate legacy stream events
+@etraut-openai
+#14899
+Revert tui code so it does not rely on in-process app server
+@etraut-openai
+#14890
+fix(linux-sandbox): ignore missing writable roots
+@viyatb-oai
+#14920
+feat: centralize package manager version
+@jif-oai
+#14935
+feat: rename to get more explicit close agent
+@jif-oai
+#14843
+Fix agent jobs finalization race and reduce status polling churn
+@daveaitel-openai
+#14944
+feat: show effective model in spawn agent event
+@jif-oai
+#14838
+fix(core): prevent hanging turn/start due to websocket warming issues
+@owenlin0
+#14859
+Feat: CXA-1831 Persist latest model and reasoning effort in sqlite
+@shijie-oai
+#14930
+fix(tui): restore remote resume and fork history
+@fcoury
+#14955
+Fix fuzzy search notification buffering in app-server tests
+@aibrahim-oai
+#14938
+feat: add suffix to shell snapshot name
+@jif-oai
+#14959
+Fix code mode yield startup race
+@aibrahim-oai
+#14434
+generate an internal json schema for
+RolloutLine
+@keyz
+#14846
+use framed IPC for elevated command runner
+@iceweasel-oai
+#14952
+Add device-code onboarding and ChatGPT token refresh to app-server TUI
+@etraut-openai
+#14896
+[plugins] Support plugin installation elicitation.
+@mzeng-openai
+#14958
+Stabilize Windows cmd-based shell test harnesses
+@aibrahim-oai
+#14966
+Stabilize permissions popup selection tests
+@aibrahim-oai
+#14968
+Stabilize approval matrix write-file command
+@aibrahim-oai
+#14986
+temporarily disable private desktop until it works with elevated IPC path
+@iceweasel-oai
+#14983
+Rename exec_wait tool to wait
+@pakrym-oai
+#14905
+Add auth env observability
+@ccy-oai
+#14931
+fix(tui): implement /mcp inventory for tui_app_server
+@fcoury
+#14977
+Cleanup skills/remote/xxx endpoints.
+@xl-openai
+#14984
+Gate realtime audio interruption logic to v2
+@aibrahim-oai
+#14902
+Unify realtime shutdown in core
+@aibrahim-oai
+#14963
+fix(linux-sandbox): prefer system /usr/bin/bwrap when available
+@viyatb-oai
+#14446
+Add Python SDK public API and examples
+@shaqayeq-oai
+#14993
+feat: Add product-aware plugin policies and clean up manifest naming
+@xl-openai
+#14995
+app-server: reject websocket requests with Origin headers
+@maxj-oai
+#14960
+Add FS abstraction and use in view_image
+@pakrym-oai
+#14293
+fix: honor active permission profiles in sandbox debug
+@viyatb-oai
+#14610
+feat: support restricted ReadOnlyAccess in elevated Windows sandbox
+@viyatb-oai
+#13592
+Prefer websockets when providers support them
+@pakrym-oai
+#14903
+Handle realtime conversation end in the TUI
+@aibrahim-oai
+#14727
+Use workspace requirements for guardian prompt override
+@charley-oai
+#14626
+[hooks] userpromptsubmit - hook before user's prompt is executed
+@eternal-openai
+#14858
+Pin setup-zig GitHub Action to immutable SHA
+@viyatb-oai
+#13702
+fix(subagents) share execpolicy by default
+@dylan-hurd-oai
+#15022
+[plugins] Support configuration tool suggest allowlist.
+@mzeng-openai
+#14947
+feat: adapt artifacts to new packaging and 2.5.6
+@jif-oai
+#14821
+feat: add memory citation to agent message
+@jif-oai
+#15058
+nit: disable live memory edition
+@jif-oai
+#14942
+Removed remaining core events from tui_app_server
+@etraut-openai
+#15059
+chore: disable memory read path for morpheus
+@jif-oai
+#14842
+Add notify to code-mode
+@pakrym-oai
+#15020
+fix: harden plugin feature gating
+@xl-openai</description>
+      <guid isPermaLink="false">https://developers.openai.com/codex/changelog#github-release-299083035</guid>
+      <pubDate>Thu, 19 Mar 2026 00:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>Codex CLI 0.117.0</title>
+      <link>https://github.com/openai/codex/releases/tag/rust-v0.117.0</link>
+      <description>New Features
+Plugins are now a first-class workflow: Codex can sync product-scoped plugins at startup, browse them in
+/plugins
+, and install or remove them with clearer auth/setup handling. (
+#15041
+,
+#15042
+,
+#15195
+,
+#15215
+,
+#15217
+,
+#15264
+,
+#15275
+,
+#15342
+,
+#15580
+,
+#15606
+,
+#15802
+)
+Sub-agents now use readable path-based addresses like
+/root/agent_a
+, with structured inter-agent messaging and agent listing for multi-agent v2 workflows. (
+#15313
+,
+#15515
+,
+#15556
+,
+#15570
+,
+#15621
+,
+#15647
+)
+The
+/title
+terminal-title picker now works in both the classic TUI and the app-server TUI, making parallel sessions easier to tell apart. (
+#12334
+,
+#15860
+)
+App-server clients can now send
+!
+shell commands, watch filesystem changes, and connect to remote websocket servers with bearer-token auth. (
+#14988
+,
+#14533
+,
+#14847
+,
+#14853
+)
+Image workflows got smoother:
+view_image
+now returns image URLs for code mode, generated images are reopenable from the TUI, and image-generation history survives resume. (
+#15072
+,
+#15154
+,
+#15223
+)
+Prompt history recall now works in the app-server TUI, including across sessions. (
+#14945
+)
+Bug Fixes
+tui_app_server
+no longer duplicates live reasoning summaries or
+/review
+output, and it preserves transcript text instead of dropping it under backpressure. (
+#15758
+,
+#15839
+,
+#15759
+)
+ChatGPT login in
+tui_app_server
+now opens the local browser again, cancels cleanly on
+Ctrl+C
+, and no longer fails startup when you're logged out. (
+#15672
+,
+#15673
+,
+#15670
+)
+Early exits now restore terminal state reliably, avoiding broken shell state after quitting; tmux users also get a working queued-message edit shortcut on
+Shift+Left
+. (
+#15671
+,
+#15480
+)
+Linux sandboxed tool calls are more reliable on older distributions with older
+bubblewrap
+, and Windows restricted-token sandboxing now supports more split-policy carveout layouts. (
+#15693
+,
+#14172
+)
+Remote multi-agent sessions now show agent names instead of raw IDs and recover more gracefully from stale turn-steering races. (
+#15513
+,
+#15714
+,
+#15163
+)
+Plugin-backed mentions and product gating now behave more predictably, fixing cases where explicit mentions lost context or plugins were filtered incorrectly. (
+#15372
+,
+#15263
+,
+#15279
+)
+Documentation
+Expanded the app-server and exec-server docs/schema fixtures to cover exec-server setup, filesystem watch RPCs, realtime transcript notifications, and the new Python
+thread.run(...)
+quickstart flow. (
+#15089
+,
+#14533
+,
+#15344
+,
+#15088
+)
+Chores
+The app-server-backed TUI is now enabled by default, and the plugin/app rollout flags have been flipped on in normal builds. (
+#15661
+,
+#15713
+,
+#15719
+,
+#15820
+)
+Removed the legacy artifact tool and retired the old
+read_file
+and
+grep_files
+handlers as part of ongoing tool-surface cleanup. (
+#15851
+,
+#15864
+,
+#15773
+,
+#15775
+)
+Changelog
+Full Changelog:
+rust-v0.116.0...rust-v0.117.0
+#14945
+feat(tui): restore composer history in app-server tui
+@fcoury
+#15092
+fix: try to fix "Stage npm package" step in ci.yml
+@bolinfest
+#15075
+Propagate tool errors to code mode
+@pakrym-oai
+#15072
+Return image URL from view_image tool
+@pakrym-oai
+#15076
+Add a startup deprecation warning for custom prompts
+@etraut-openai
+#15102
+Revert "fix: harden plugin feature gating"
+@xl-openai
+#15077
+Add final message prefix to realtime handoff output
+@aibrahim-oai
+#13494
+Align SQLite feedback logs with feedback formatter
+@charley-oai
+#14888
+Feat: reuse persisted model and reasoning effort on thread resume
+@shijie-oai
+#15111
+don't add transcript for v2 realtime
+@aibrahim-oai
+#15103
+Add update_plan code mode result
+@pakrym-oai
+#15100
+Add apply_patch code mode result
+@pakrym-oai
+#15104
+fix: harden plugin feature gating
+@xl-openai
+#15089
+Add exec-server stub server and protocol docs
+@starr-openai
+#15042
+Support featured plugins
+@alexsong-oai
+#15088
+Add Python SDK thread.run convenience methods
+@shaqayeq-oai
+#15119
+Remove stdio transport from exec server
+@pakrym-oai
+#14632
+feat(core, tracing): create turn spans over websockets
+@owenlin0
+#15011
+Forward session and turn headers to MCP HTTP requests
+@nicholasclark-openai
+#15118
+[hooks] turn_id extension for Stop &amp; UserPromptSubmit
+@eternal-openai
+#14970
+Simple directory mentions
+@canvrno-oai
+#14988
+Add thread/shellCommand to app server API surface
+@etraut-openai
+#15041
+feat: support product-scoped plugins.
+@xl-openai
+#15056
+feat: add graph representation of agent network
+@jif-oai
+#15163
+fix: case where agent is already closed
+@jif-oai
+#15125
+Move environment abstraction into exec server
+@pakrym-oai
+#15180
+chore: add metrics for profile
+@jif-oai
+#15175
+chore: morpheus does not generate memories
+@jif-oai
+#15185
+Revert "Forward session and turn headers to MCP HTTP requests"
+@nicholasclark-openai
+#14867
+[hooks] use a user message &gt; developer message for prompt continuation
+@eternal-openai
+#15196
+Add experimental exec server URL handling
+@pakrym-oai
+#15198
+Publish runnable DotSlash package for argument-comment lint
+@bolinfest
+#15090
+Add exec-server process and filesystem RPCs
+@starr-openai
+#15201
+Log automated reviewer approval sources distinctly
+@gabec-openai
+#12334
+feat(tui): add /title terminal title configuration
+@yvolovich-cyber
+#15206
+feat(tracing): tag app-server turn spans with turn_id
+@owenlin0
+#15216
+Move terminal module to terminal-detection crate
+@aibrahim-oai
+#15207
+add specific tool guidance for Windows destructive commands
+@iceweasel-oai
+#15154
+adding full imagepath to tui
+@won-openai
+#15217
+feat: expose needs_auth for plugin/read.
+@xl-openai
+#15190
+Plumb MCP turn metadata through _meta
+@nicholasclark-openai
+#15220
+feat(app-server): add mcpServer/startupStatus/updated notification
+@owenlin0
+#15222
+changed save directory to codex_home
+@won-openai
+#15232
+Refactor ExecServer filesystem split between local and remote
+@pakrym-oai
+#15021
+V8 Bazel Build
+@cconger
+#15150
+Move auth code into login crate
+@aibrahim-oai
+#15195
+[plugins] Install MCPs when calling plugin/install
+@mzeng-openai
+#15254
+core: add a full-buffer exec capture policy
+@bolinfest
+#15263
+fix: Distinguish missing and empty plugin products
+@xl-openai
+#15253
+Split features into codex-features crate
+@aibrahim-oai
+#15233
+Split exec process into local and remote implementations
+@starr-openai
+#15199
+Use released DotSlash package for argument-comment lint
+@bolinfest
+#15215
+Initial plugins TUI menu - list and read only. tui + tui_app_server
+@canvrno-oai
+#15252
+Disable hooks on windows for now
+@eternal-openai
+#15264
+feat: Add One-Time Startup Remote Plugin Sync
+@xl-openai
+#15262
+Add guardian follow-up reminder
+@charley-oai
+#15223
+Feat/restore image generation history
+@won-openai
+#15275
+feat: prefer git for curated plugin sync
+@xl-openai
+#14869
+Add remote env CI matrix and integration test
+@pakrym-oai
+#15218
+Add temporary app-server originator fallback for codex-tui
+@etraut-openai
+#15328
+try to fix bazel
+@jif-oai
+#15324
+Add remote test skill
+@pakrym-oai
+#15313
+feat: change multi-agent to use path-like system instead of uuids
+@jif-oai
+#15244
+Pin Python SDK app-server stdio to UTF-8 on Windows
+@shaqayeq-oai
+#15337
+Bump aws-lc-rs
+@cconger
+#15203
+Add v8-poc consumer of our new built v8
+@cconger
+#15273
+[apps] Use ARC for yolo mode.
+@mzeng-openai
+#15128
+chore(core) Remove Feature::PowershellUtf8
+@dylan-hurd-oai
+#15344
+Add realtime transcript notification in v2
+@aibrahim-oai
+#15285
+Gate tui /plugins menu behind flag
+@canvrno-oai
+#15114
+fix: allow restricted filesystem profiles to read helper executables
+@celia-oai
+#15231
+chore(core) update prefix_rule guidance
+@dylan-hurd-oai
+#15036
+fix(core) disable command_might_be_dangerous when unsandboxed
+@dylan-hurd-oai
+#15348
+Pass platform param to featured plugins
+@alexsong-oai
+#15276
+Code mode on v8
+@cconger
+#15372
+[plugins] Fix plugin explicit mention context management.
+@mzeng-openai
+#15366
+chore(context) Include guardian approval context
+@dylan-hurd-oai
+#15390
+Remove legacy app-server notification handling from tui_app_server
+@etraut-openai
+#15409
+Add JIT entitlement for macosx
+@cconger
+#15414
+Remove legacy auth and notification handling from tui_app_server
+@etraut-openai
+#15376
+[apps] Improve app tools loading for TUI.
+@mzeng-openai
+#15415
+chore(exec_policy) ExecPolicyRequirementScenario tests
+@dylan-hurd-oai
+#15464
+Remove smart_approvals alias migration
+@charley-oai
+#15443
+core: snapshot fork startup context injection
+@charley-oai
+#15480
+Use Shift+Left to edit queued messages in tmux
+@charley-oai
+#15317
+nit: guard -&gt; registry
+@jif-oai
+#15338
+fix: fall back to vendored bubblewrap when system bwrap lacks --argv0
+@bolinfest
+#15520
+fix: cargo deny
+@jif-oai
+#15279
+Label plugins as plugins, and hide skills/apps for given plugin
+@canvrno-oai
+#15259
+tui: queue follow-ups during manual /compact
+@charley-oai
+#15515
+feat: structured multi-agent output
+@jif-oai
+#15357
+Fix: proactive auth refresh to reload guarded disk state first
+@celia-oai
+#15342
+Plugins TUI install/uninstall
+@canvrno-oai
+#15540
+chore: split sub-agent v2 implementation
+@jif-oai
+#15516
+Thread guardian Responses API errors into denial rationale
+@charley-oai
+#15378
+feat: support disable skills by name.
+@xl-openai
+#15529
+Unify realtime stop handling in TUI
+@aibrahim-oai
+#15557
+fix: main tui
+@jif-oai
+#15556
+feat: new op type for sub-agents communication
+@jif-oai
+#15211
+[hooks] add non-streaming (non-stdin style) shell-only PreToolUse support
+@eternal-openai
+#15560
+feat: use serde to differenciate inter agent communication
+@jif-oai
+#15426
+chore(core) Add approvals reviewer to UserTurn
+@dylan-hurd-oai
+#15562
+[codex] Add rollback context duplication snapshot
+@charley-oai
+#15570
+feat: custom watcher for multi-agent v2
+@jif-oai
+#15575
+feat: custom watcher for multi-agent v2
+@jif-oai
+#15576
+feat: custom watcher for multi-agent v2
+@jif-oai
+#15360
+fix: build PATH env var using OsString instead of String
+@bolinfest
+#15239
+Add fork snapshot modes
+@charley-oai
+#15554
+Add plugin-creator as system skill
+@alexsong-oai
+#15592
+Extract landlock helpers into codex-sandboxing
+@pakrym-oai
+#15593
+Move macOS sandbox builders into codex-sandboxing
+@pakrym-oai
+#15478
+[codex-cli][app-server] Update self-serve business usage limit copy in error returned
+@dhruvgupta-oai
+#15600
+move imagegen skill into system skills
+@dkundel-openai
+#15599
+Move sandbox policy transforms into codex-sandboxing
+@pakrym-oai
+#15580
+Remove filter from plugins/list result
+@canvrno-oai
+#15581
+Stabilize macOS CI test timeouts
+@dylan-hurd-oai
+#15613
+nit: split v2 wait
+@jif-oai
+#15614
+fix: flaky test
+@jif-oai
+#15621
+feat: list agents for sub-agent v2
+@jif-oai
+#15623
+nit: optim on list agents
+@jif-oai
+#15549
+Allow global network allowlist wildcard
+@rreichel3-oai
+#15424
+Finish moving codex exec to app-server
+@etraut-openai
+#15603
+Extract sandbox manager and transforms into codex-sandboxing
+@pakrym-oai
+#15484
+chore(deps): bump pnpm/action-setup from 4 to 5
+@dependabot
+#14777
+Bump vedantmgoyal9/winget-releaser from 19e706d4c9121098010096f9c495a70a7518b30f to 7bd472be23763def6e16bd06cc8b1cdfab0e2fd5
+@dependabot
+#15558
+[Codex TUI] - Sort /plugins TUI menu by installed status first, alpha second
+@canvrno-oai
+#15598
+Refresh mentions list after plugin install/uninstall
+@canvrno-oai
+#15624
+feat: disable notifier v2 and start turn on agent interaction
+@jif-oai
+#15605
+[codex] Stabilize compact resume and fork snapshot flaky tests
+@charley-oai
+#15658
+try to fix git glitch
+@jif-oai
+#15657
+try to fix git glitch
+@jif-oai
+#15656
+try to fix git glitch
+@jif-oai
+#15655
+try to fix git glitch
+@jif-oai
+#15654
+try to fix git glitch
+@jif-oai
+#15653
+try to fix git glitch
+@jif-oai
+#15652
+try to fix git glitch
+@jif-oai
+#15651
+try to fix git glitch
+@jif-oai
+#15650
+try to fix git glitch
+@jif-oai
+#15606
+Pretty plugin labels, preserve plugin app provenance during MCP tool refresh
+@canvrno-oai
+#15579
+Increase voice space hold timeout to 1s
+@aibrahim-oai
+#15093
+core: Make FileWatcher reusable
+@euroelessar
+#15547
+app-server: Add back pressure and batching to
+command/exec
+@euroelessar
+#15647
+feat: communication pattern v2
+@jif-oai
+#15438
+feat: include marketplace loading error in plugin/list
+@xl-openai
+#15545
+chore: use access token expiration for proactive auth refresh
+@celia-oai
+#15530
+chore: stop app-server auth refresh storms after permanent token failure
+@celia-oai
+#15577
+Trim pre-turn context updates during rollback
+@charley-oai
+#15660
+Hide numeric prefixes on disabled TUI list rows
+@canvrno-oai
+#15644
+fix: keep zsh-fork release assets after removing shell-tool-mcp
+@bolinfest
+#15670
+tui_app_server: tolerate missing rate limits while logged out
+@etraut-openai
+#15564
+Move git utilities into a dedicated crate
+@aibrahim-oai
+#15669
+Clean up TUI /plugins row allignment
+@canvrno-oai
+#15671
+tui: always restore the terminal on early exit
+@etraut-openai
+#15672
+tui_app_server: open ChatGPT login in the local browser
+@etraut-openai
+#15673
+tui_app_server: cancel active login before Ctrl+C exit
+@etraut-openai
+#15676
+Tweak /plugin menu wording
+@canvrno-oai
+#15666
+Suppress plugin-install MCP OAuth URL console spam
+@canvrno-oai
+#15573
+[plugins] Additional gating for tool suggest and apps.
+@mzeng-openai
+#15665
+Drop sandbox_permissions from sandbox exec requests
+@pakrym-oai
+#15572
+Move string truncation helpers into codex-utils-string
+@aibrahim-oai
+#14533
+app-server: add filesystem watch support
+@euroelessar
+#15674
+Use delayed shimmer for plugin loading headers in tui and tui_app_server
+@canvrno-oai
+#15689
+app-server: Return codex home in initialize response
+@euroelessar
+#15363
+fix: keep rmcp-client env vars as OsString
+@bolinfest
+#15700
+Remove provenance filtering in $mentions for apps and skills from plugins
+@canvrno-oai
+#15692
+Add legal link to TUI /plugin details
+@canvrno-oai
+#15351
+Expand ~ in MDM workspace write roots
+@evawong-oai
+#15548
+Extract rollout into its own crate
+@aibrahim-oai
+#15699
+[codex] Defer fork context injection until first turn
+@charley-oai
+#15601
+[app-server] Add a method to override feature flags.
+@mzeng-openai
+#15708
+TUI plugin menu cleanup - hide app ID
+@canvrno-oai
+#15677
+Fix stale quickstart integration assertion
+@shaqayeq-oai
+#15713
+[plugins] Flip the flags.
+@mzeng-openai
+#15719
+[plugins] Flip on additional flags.
+@mzeng-openai
+#14172
+fix: support split carveouts in windows restricted-token sandbox
+@viyatb-oai
+#15714
+Fix stale turn steering fallback in tui_app_server
+@etraut-openai
+#15722
+[plugins] Add a flag for tool search.
+@mzeng-openai
+#15734
+Update plugin creator skill.
+@xl-openai
+#15766
+chore: tty metric
+@jif-oai
+#15519
+fix(core): default approval behavior for mcp missing annotations
+@fouad-openai
+#15775
+chore: remove grep_files handler
+@jif-oai
+#15710
+Use AbsolutePathBuf for cwd state
+@pakrym-oai
+#15778
+feat: rendering library v1
+@jif-oai
+#15758
+fix(tui): avoid duplicate live reasoning summaries
+@fcoury
+#15773
+chore: remove read_file handler
+@jif-oai
+#15776
+feat: add multi-thread log query
+@jif-oai
+#15744
+Extract codex-instructions crate
+@aibrahim-oai
+#15339
+Add non-interactive resume filter option
+@nornagon-openai
+#15746
+Extract codex-utils-plugins crate
+@aibrahim-oai
+#15747
+Extract codex-plugin crate
+@aibrahim-oai
+#15748
+Extract codex-analytics crate
+@aibrahim-oai
+#15707
+Clarify codex_home base for MDM path resolution
+@evawong-oai
+#15513
+fix(tui_app_server): fix remote subagent switching and agent names
+@fcoury
+#14856
+[apps][tool_suggest] Remove tool_suggest's dependency on tool search.
+@mzeng-openai
+#14847
+feat: add websocket auth for app-server
+@viyatb-oai
+#15759
+fix(tui_app_server): preserve transcript events under backpressure
+@fcoury
+#15749
+Extract codex-core-skills crate
+@aibrahim-oai
+#15798
+Avoid duplicate auth refreshes in
+getAuthStatus
+@etraut-openai
+#15659
+Add MCP tool call spans
+@nicholasclark-openai
+#15789
+Treat ChatGPT
+hc
+plan as Enterprise
+@arnavdugar-openai
+#15802
+TUI plugin menu polish
+@canvrno-oai
+#15785
+Add cached environment manager for exec server URL
+@pakrym-oai
+#15806
+Add ReloadUserConfig to tui_app_server
+@canvrno-oai
+#15810
+app-server: Organize app-server to allow more transports
+@euroelessar
+#15800
+[mcp] Improve custom MCP elicitation
+@mzeng-openai
+#15531
+[hooks] add non-streaming (non-stdin style) shell-only PostToolUse support
+@eternal-openai
+#15820
+[plugins] Flip flags on.
+@mzeng-openai
+#15825
+Fix quoted command rendering in tui_app_server
+@etraut-openai
+#14853
+Wire remote app-server auth through the client
+@etraut-openai
+#15817
+Expand home-relative paths on Windows
+@tiffanycitra
+#15693
+fix: fix old system bubblewrap compatibility without falling back to vendored bwrap
+@viyatb-oai
+#15784
+feat: replace askama by custom lib
+@jif-oai
+#15851
+feat: drop artifact tool and feature
+@jif-oai
+#15861
+feat: clean spawn v1
+@jif-oai
+#15691
+feat: exec-server prep for unified exec
+@jif-oai
+#15864
+chore: drop artifacts lib
+@jif-oai
+#15812
+core: remove special execve handling for skill scripts
+@bolinfest
+#15869
+fix: flaky
+@jif-oai
+#15877
+chore: ask agents md not to play with PIDs
+@jif-oai
+#15866
+feat: use
+ProcessId
+in
+exec-server
+@jif-oai
+#15829
+[plugins] Update the suggestable plugins list.
+@mzeng-openai
+#15880
+fix: max depth agent still has v2 tools
+@jif-oai
+#15839
+Fix duplicate /review messages in app-server TUI
+@etraut-openai
+#15805
+Add MCP connector metrics
+@nicholasclark-openai
+#15661
+Enable
+tui_app_server
+feature by default
+@etraut-openai
+#15835
+fix: box apply_patch test harness futures
+@bolinfest
+#15796
+[codex] Block unsafe git global options from safe allowlist
+@adrian-openai
+#15813
+Add wildcard in the middle test coverage
+@evawong-oai
+#15881
+fix: root as std agent
+@jif-oai
+#15860
+feat(tui): add terminal title support to tui app server
+@fcoury
+#15885
+[mcp] Fix legacy_tools
+@mzeng-openai</description>
+      <guid isPermaLink="false">https://developers.openai.com/codex/changelog#github-release-302123790</guid>
+      <pubDate>Thu, 26 Mar 2026 00:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>Codex CLI 0.118.0</title>
+      <link>https://github.com/openai/codex/releases/tag/rust-v0.118.0</link>
+      <description>New Features
+Windows sandbox runs can now enforce proxy-only networking with OS-level egress rules, instead of relying on environment variables alone. (
+#12220
+)
+App-server clients can now start ChatGPT sign-in with a device code flow, which helps when browser callback login is unreliable or unavailable. (
+#15525
+)
+codex exec
+now supports the prompt-plus-stdin workflow, so you can pipe input and still pass a separate prompt on the command line. (
+#15917
+)
+Custom model providers can now fetch and refresh short-lived bearer tokens dynamically, instead of being limited to static credentials from config or environment variables. (
+#16286
+,
+#16287
+,
+#16288
+)
+Bug Fixes
+Project-local
+.codex
+files are now protected even on first creation, closing a gap where the initial write could bypass normal approval checks. (
+#15067
+)
+Linux sandbox launches are more reliable because Codex once again finds a trusted system
+bwrap
+on normal multi-entry
+PATH
+s. (
+#15791
+,
+#15973
+)
+The app-server-backed TUI regained several missing workflows: hook notifications replay correctly,
+/copy
+and
+/resume &lt;name&gt;
+work again,
+/agent
+no longer shows stale threads, and the skills picker scrolls past the first page. (
+#16013
+,
+#16021
+,
+#16050
+,
+#16014
+,
+#16109
+,
+#16110
+)
+MCP startup is more robust: local servers get a longer startup window, and failed handshakes surface warnings in the TUI again instead of looking like clean startups. (
+#16080
+,
+#16041
+)
+On Windows,
+apply_patch
+is less likely to fail because it no longer adds redundant writable roots that could trigger unnecessary ACL churn. (
+#16030
+)
+Changelog
+Full Changelog:
+rust-v0.117.0...rust-v0.118.0
+#15891
+[plugins] Polish tool suggest prompts.
+@mzeng-openai
+#15791
+fix: resolve bwrap from trusted PATH entry
+@viyatb-oai
+#15900
+skills: remove unused skill permission metadata
+@bolinfest
+#15811
+app-server: Split transport module
+@euroelessar
+#15067
+Protect first-time project .codex creation across Linux and macOS sandboxes
+@rreichel3-oai
+#15903
+[codex] import token_data from codex-login directly
+@bolinfest
+#15897
+sandboxing: use OsString for SandboxCommand.program
+@bolinfest
+#15910
+docs: update AGENTS.md to discourage adding code to codex-core
+@bolinfest
+#15898
+chore: move bwrap config helpers into dedicated module
+@viyatb-oai
+#15906
+chore: remove skill metadata from command approval payloads
+@bolinfest
+#15909
+fix(network-proxy): fail closed on network-proxy DNS lookup errors
+@viyatb-oai
+#14495
+Preserve bazel repository cache in github actions
+@siggisim
+#15522
+bazel: re-organize bazelrc
+@sluongng
+#15923
+codex-tools: extract shared tool schema parsing
+@bolinfest
+#15918
+permissions: remove macOS seatbelt extension profiles
+@bolinfest
+#12220
+feat(windows-sandbox): add network proxy support
+@viyatb-oai
+#15931
+fix: make MACOS_DEFAULT_PREFERENCES_POLICY part of MACOS_SEATBELT_BASE_POLICY
+@bolinfest
+#15933
+fix: use matrix.target instead of matrix.os for actions/cache build action
+@bolinfest
+#15928
+codex-tools: extract MCP schema adapters
+@bolinfest
+#15948
+fix: increase timeout for rust-ci to 45 minutes for now
+@bolinfest
+#15921
+[app-server-protocol] introduce generic ClientResponse for app-server-protocol
+@rhan-oai
+#15120
+chore: refactor network permissions to use explicit domain and unix socket rule maps
+@celia-oai
+#15525
+Add ChatGPT device-code login to app server
+@daniel-oai
+#15876
+chore: drop useless stuff
+@jif-oai
+#15954
+chore: move pty and windows sandbox to Rust 2024
+@bolinfest
+#15986
+feat: spawn v2 make task name as mandatory
+@jif-oai
+#16000
+Use codex-utils-template for login error page
+@jif-oai
+#16001
+Use codex-utils-template for review prompts
+@jif-oai
+#15998
+Use codex-utils-template for sandbox mode prompts
+@jif-oai
+#15995
+Use codex-utils-template for collaboration mode presets
+@jif-oai
+#15996
+Use codex-utils-template for search tool descriptions
+@jif-oai
+#15999
+Use codex-utils-template for review exit XML
+@jif-oai
+#15985
+feat: spawn v2 as inter agent communication
+@jif-oai
+#15973
+fix(sandbox): fix bwrap lookup for multi-entry PATH
+@viyatb-oai
+#15944
+codex-tools: extract dynamic tool adapters
+@bolinfest
+#15955
+ci: add Bazel clippy workflow for codex-rs
+@bolinfest
+#15953
+codex-tools: introduce named tool definitions
+@bolinfest
+#16027
+fix: fix Windows CI regression introduced in
+#15999
+@bolinfest
+#16036
+fix: disable plugins in SDK integration tests
+@bolinfest
+#15946
+Normalize /mcp tool grouping for hyphenated server names
+@pakrym-oai
+#16035
+plugins: Clean up stale curated plugin sync temp dirs and add sync metrics
+@xl-openai
+#15934
+Add usage-based business plan types
+@bwanner-oai
+#16031
+codex-tools: extract responses API tool models
+@bolinfest
+#16013
+Fix tui_app_server hook notification rendering and replay
+@etraut-openai
+#16021
+Fix /copy regression in tui_app_server turn completion
+@etraut-openai
+#16044
+[mcp] Bypass read-only tool checks.
+@mzeng-openai
+#16030
+don't include redundant write roots in apply_patch
+@iceweasel-oai
+#15922
+Remove the legacy TUI split
+@etraut-openai
+#15828
+[codex] Pin GitHub Actions workflow references
+@hintz-openai
+#16046
+ci: run SDK tests with a Bazel-built codex
+@bolinfest
+#16050
+Fix tui_app_server resume-by-name lookup regression
+@etraut-openai
+#16014
+Fix tui_app_server agent picker closed-state regression
+@etraut-openai
+#16054
+chore: clean up argument-comment lint and roll out all-target CI on macOS
+@bolinfest
+#15917
+Support Codex CLI stdin piping for
+codex exec
+@jliccini
+#16057
+shell-command: reuse a PowerShell parser process on Windows
+@bolinfest
+#16063
+refactor: rewrite argument-comment lint wrappers in Python
+@bolinfest
+#15952
+bazel: enable the full Windows gnullvm CI path
+@bolinfest
+#16067
+ci: run Bazel clippy on Windows gnullvm
+@bolinfest
+#16071
+fix: clean up remaining Windows argument-comment-lint violations
+@bolinfest
+#16072
+ci: split fast PR Rust CI from full post-merge Cargo CI
+@bolinfest
+#16074
+bazel: add Windows gnullvm stack flags to unit test binaries
+@bolinfest
+#16026
+fix(tui): refresh footer on collaboration mode changes
+@fcoury
+#16112
+Update PR babysitter skill for review replies and resolution
+@etraut-openai
+#16104
+Rename tui_app_server to tui
+@etraut-openai
+#16118
+fix: fix comment linter lint violations in Linux-only code
+@bolinfest
+#16106
+build: migrate argument-comment-lint to a native Bazel aspect
+@bolinfest
+#16115
+Remove remaining custom prompt support
+@etraut-openai
+#16116
+Remove the codex-tui app-server originator workaround
+@etraut-openai
+#16047
+codex-tools: extract tool spec models
+@bolinfest
+#16128
+bazel: refresh the expired macOS SDK pin
+@bolinfest
+#16129
+codex-tools: extract configured tool specs
+@bolinfest
+#16130
+ci: keep rust-ci-full Windows argument-comment-lint on packaged wrapper
+@bolinfest
+#16126
+core: fix stale curated plugin cache refresh races
+@bolinfest
+#16132
+codex-tools: extract code mode tool spec adapters
+@bolinfest
+#16136
+ci: use BuildBuddy for rust-ci-full non-Windows argument-comment-lint
+@bolinfest
+#16137
+exec: make review-policy tests hermetic
+@bolinfest
+#16109
+Fix skills picker scrolling in tui app server
+@etraut-openai
+#16138
+codex-tools: extract local host tool specs
+@bolinfest
+#16114
+Remove TUI voice transcription feature
+@etraut-openai
+#16080
+[mcp] Increase MCP startup timeout.
+@mzeng-openai
+#16141
+codex-tools: extract collaboration tool specs
+@bolinfest
+#16041
+Fix app-server TUI MCP startup warnings regression
+@etraut-openai
+#16110
+Fix tui_app_server ghost subagent entries in /agent
+@etraut-openai
+#16154
+codex-tools: extract utility tool specs
+@bolinfest
+#16204
+[codex] Normalize Windows path in MCP startup snapshot test
+@etraut-openai
+#16010
+feat: add mailbox concept for wait
+@jif-oai
+#16237
+fix: ma1
+@jif-oai
+#16193
+codex-tools: extract discovery tool specs
+@bolinfest
+#16254
+codex-tools: extract discoverable tool models
+@bolinfest
+#16253
+fix: close Bazel argument-comment-lint CI gaps
+@bolinfest
+#16225
+[codex-analytics] refactor analytics to use reducer architecture
+@rhan-oai
+#16279
+Update code mode exec() instructions
+@andmis
+#16120
+ci: run Windows argument-comment-lint via native Bazel
+@bolinfest
+#16286
+auth: generalize external auth tokens for bearer-only sources
+@bolinfest
+#16287
+auth: let AuthManager own external bearer auth
+@bolinfest
+#16288
+core: support dynamic auth tokens for model providers
+@bolinfest</description>
+      <guid isPermaLink="false">https://developers.openai.com/codex/changelog#github-release-303805427</guid>
+      <pubDate>Tue, 31 Mar 2026 00:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>Codex CLI 0.119.0</title>
       <link>https://github.com/openai/codex/releases/tag/rust-v0.119.0</link>
       <description>New Features
 Realtime voice sessions now default to the v2 WebRTC path, with configurable transport, voice selection, native TUI media support, and app-server coverage for the new flow (
@@ -1029,32 +2987,11 @@ mut
 #17258
 Omit empty app-server instruction overrides
 @aibrahim-oai</description>
-      <guid isPermaLink="false">tag:github.com,2008:Repository/965415649/rust-v0.119.0</guid>
-      <pubDate>Fri, 10 Apr 2026 22:44:46 +0000</pubDate>
+      <guid isPermaLink="false">https://developers.openai.com/codex/changelog#github-release-307754801</guid>
+      <pubDate>Fri, 10 Apr 2026 00:00:00 +0000</pubDate>
     </item>
     <item>
-      <title>rust-v0.120.0-alpha.1</title>
-      <link>https://github.com/openai/codex/releases/tag/rust-v0.120.0-alpha.1</link>
-      <description>Release 0.120.0-alpha.1</description>
-      <guid isPermaLink="false">tag:github.com,2008:Repository/965415649/rust-v0.120.0-alpha.1</guid>
-      <pubDate>Fri, 10 Apr 2026 23:52:34 +0000</pubDate>
-    </item>
-    <item>
-      <title>rust-v0.120.0-alpha.2</title>
-      <link>https://github.com/openai/codex/releases/tag/rust-v0.120.0-alpha.2</link>
-      <description>Release 0.120.0-alpha.2</description>
-      <guid isPermaLink="false">tag:github.com,2008:Repository/965415649/rust-v0.120.0-alpha.2</guid>
-      <pubDate>Sat, 11 Apr 2026 00:24:36 +0000</pubDate>
-    </item>
-    <item>
-      <title>0.120.0-alpha.3</title>
-      <link>https://github.com/openai/codex/releases/tag/rust-v0.120.0-alpha.3</link>
-      <description>Release 0.120.0-alpha.3</description>
-      <guid isPermaLink="false">tag:github.com,2008:Repository/965415649/rust-v0.120.0-alpha.3</guid>
-      <pubDate>Sat, 11 Apr 2026 01:22:11 +0000</pubDate>
-    </item>
-    <item>
-      <title>0.120.0</title>
+      <title>Codex CLI 0.120.0</title>
       <link>https://github.com/openai/codex/releases/tag/rust-v0.120.0</link>
       <description>New Features
 Realtime V2 can now stream background agent progress while work is still running and queue follow-up responses until the active response completes (
@@ -1218,43 +3155,8 @@ fix(permissions): fix symlinked writable roots in sandbox permissions
 #17055
 feat(analytics): add guardian review event schema
 @owenlin0</description>
-      <guid isPermaLink="false">tag:github.com,2008:Repository/965415649/rust-v0.120.0</guid>
-      <pubDate>Sat, 11 Apr 2026 02:54:13 +0000</pubDate>
-    </item>
-    <item>
-      <title>0.121.0-alpha.1</title>
-      <link>https://github.com/openai/codex/releases/tag/rust-v0.121.0-alpha.1</link>
-      <description>Release 0.121.0-alpha.1</description>
-      <guid isPermaLink="false">tag:github.com,2008:Repository/965415649/rust-v0.121.0-alpha.1</guid>
-      <pubDate>Sat, 11 Apr 2026 17:52:59 +0000</pubDate>
-    </item>
-    <item>
-      <title>0.121.0-alpha.2</title>
-      <link>https://github.com/openai/codex/releases/tag/rust-v0.121.0-alpha.2</link>
-      <description>Release 0.121.0-alpha.2</description>
-      <guid isPermaLink="false">tag:github.com,2008:Repository/965415649/rust-v0.121.0-alpha.2</guid>
-      <pubDate>Sat, 11 Apr 2026 21:36:36 +0000</pubDate>
-    </item>
-    <item>
-      <title>rust-v0.121.0-alpha.3</title>
-      <link>https://github.com/openai/codex/releases/tag/rust-v0.121.0-alpha.3</link>
-      <description>Release 0.121.0-alpha.3</description>
-      <guid isPermaLink="false">tag:github.com,2008:Repository/965415649/rust-v0.121.0-alpha.3</guid>
-      <pubDate>Sun, 12 Apr 2026 21:28:21 +0000</pubDate>
-    </item>
-    <item>
-      <title>0.121.0-alpha.4</title>
-      <link>https://github.com/openai/codex/releases/tag/rust-v0.121.0-alpha.4</link>
-      <description>Release 0.121.0-alpha.4</description>
-      <guid isPermaLink="false">tag:github.com,2008:Repository/965415649/rust-v0.121.0-alpha.4</guid>
-      <pubDate>Mon, 13 Apr 2026 15:35:16 +0000</pubDate>
-    </item>
-    <item>
-      <title>rust-v0.121.0-alpha.5</title>
-      <link>https://github.com/openai/codex/releases/tag/rust-v0.121.0-alpha.5</link>
-      <description>Release 0.121.0-alpha.5</description>
-      <guid isPermaLink="false">tag:github.com,2008:Repository/965415649/rust-v0.121.0-alpha.5</guid>
-      <pubDate>Mon, 13 Apr 2026 19:35:55 +0000</pubDate>
+      <guid isPermaLink="false">https://developers.openai.com/codex/changelog#github-release-307789275</guid>
+      <pubDate>Sat, 11 Apr 2026 00:00:00 +0000</pubDate>
     </item>
   </channel>
 </rss>
