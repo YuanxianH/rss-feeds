@@ -7,7 +7,7 @@
     <docs>http://www.rssboard.org/rss-specification</docs>
     <generator>RSS Creator</generator>
     <language>zh-CN</language>
-    <lastBuildDate>Thu, 16 Apr 2026 21:39:18 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 16 Apr 2026 22:36:09 +0000</lastBuildDate>
     <item>
       <title>Equi-normalization of Neural Networks | Facebook AI Research</title>
       <link>https://ai.meta.com/research/publications/equi-normalization-of-neural-networks/</link>
@@ -93,13 +93,6 @@
       <pubDate>Thu, 31 Oct 2019 00:00:00 +0000</pubDate>
     </item>
     <item>
-      <title>PhyGDPO: Physics-Aware Groupwise Direct Preference Optimization for Physically Consistent Text-to-Video Generation</title>
-      <link>https://ai.meta.com/research/publications/phygdpo-physics-aware-groupwise-direct-preference-optimization-for-physically-consistent-text-to-video-generation/</link>
-      <description>Yuanhao Cai, Kunpeng Li, Menglin Jia, Jialiang Wang, Junzhe Sun, Feng Liang, Weifeng Chen, Felix Xu, Chu Wang, Ali Thabet, Xiaoliang Dai, Xuan Ju, Alan Yuille, Ji Hou</description>
-      <guid isPermaLink="true">https://ai.meta.com/research/publications/phygdpo-physics-aware-groupwise-direct-preference-optimization-for-physically-consistent-text-to-video-generation/</guid>
-      <pubDate>Fri, 02 Jan 2026 00:00:00 +0000</pubDate>
-    </item>
-    <item>
       <title>AIRS-Bench: a Suite of Tasks for Frontier AI Research Science Agents</title>
       <link>https://ai.meta.com/research/publications/airs-bench-a-suite-of-tasks-for-frontier-ai-research-science-agents/</link>
       <description>Alisia Lupidi, Bhavul Gauri, Thomas Simon Foster, Bassel Al Omari, Despoina Magka, Alberto Pepe, Alexis Audran-Reiss, Muna Aghamelu, Nicolas Baldwin, Lucia Cipolina-Kun, Jean-Christophe Gagnon-Audet, Chee Hau Leow, Sandra Lefdal, Hossam Mossalam, Abhinav Moudgil, Saba Nazir, Emanuel Tewolde, Isabel Urrego, Jordi Armengol-Estape, Amar Budhiraja, Gaurav Chaurasia, Abhishek Charnalia, Derek Dunfield, Karen Hambardzumyan, Daniel Izcovich, Martin Josifoski, Ishita Mediratta, Kelvin Niu, Parth Pathak, Michael Shvartsman, Edan Toledo, Anton Protopopov, Roberta Raileanu, Alexander Miller, Tatiana Shavrina, Jakob Foerster, Yoram Bachrach</description>
@@ -175,6 +168,13 @@
       <description>Fei Zhang, Zijian Zhou, Bohao Tang, Sen He, Hang Li (BizAI), Zhe Wang, Soubhik Sanyal, Pengfei Liu, Viktar Atliha, Tao Xiang, Frost Xu, Semih Gunel</description>
       <guid isPermaLink="true">https://ai.meta.com/research/publications/transtext-transparency-aware-image-to-video-typography-animation/</guid>
       <pubDate>Tue, 14 Apr 2026 00:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>AIRA₂: Overcoming Bottlenecks in AI Research Agents</title>
+      <link>https://ai.meta.com/research/publications/aira-overcoming-bottlenecks-in-ai-research-agents/</link>
+      <description>Karen Hambardzumyan, Nicolas Baldwin, Edan Toledo, Rishi Hazra, Michael Kuchnik, Bassel Al Omari, Thomas Simon Foster, Anton Protopopov, Jean-Christophe Gagnon-Audet, Ishita Mediratta, Kelvin Niu, Michael Shvartsman, Alisia Lupidi, Alexis Audran-Reiss, Parth Pathak, Tatiana Shavrina, Despoina Magka, Hela Momand, Derek Dunfield, Nicola Cancedda, Pontus Stenetorp, Carole-Jean Wu, Jakob Foerster, Yoram Bachrach, Martin Josifoski</description>
+      <guid isPermaLink="true">https://ai.meta.com/research/publications/aira-overcoming-bottlenecks-in-ai-research-agents/</guid>
+      <pubDate>Thu, 16 Apr 2026 00:00:00 +0000</pubDate>
     </item>
   </channel>
 </rss>
