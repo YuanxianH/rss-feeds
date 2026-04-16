@@ -7,7 +7,7 @@
     <docs>http://www.rssboard.org/rss-specification</docs>
     <generator>RSS Creator</generator>
     <language>zh-CN</language>
-    <lastBuildDate>Thu, 16 Apr 2026 02:14:15 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 16 Apr 2026 05:28:11 +0000</lastBuildDate>
     <item>
       <title>MiniMax-Text-01</title>
       <link>https://huggingface.co/MiniMaxAI/MiniMax-Text-01</link>
@@ -88,14 +88,14 @@
     <item>
       <title>SynLogic-32B</title>
       <link>https://huggingface.co/MiniMaxAI/SynLogic-32B</link>
-      <description>[HuggingFace Model] | text-generation | Likes: 14 | Tags: transformers, safetensors, qwen2, text-generation, LLM</description>
+      <description>[HuggingFace Model] | text-generation | Likes: 15 | Tags: transformers, safetensors, qwen2, text-generation, LLM</description>
       <guid isPermaLink="true">https://huggingface.co/MiniMaxAI/SynLogic-32B</guid>
       <pubDate>Fri, 30 May 2025 12:06:34 +0000</pubDate>
     </item>
     <item>
       <title>SynLogic-Mix-3-32B</title>
       <link>https://huggingface.co/MiniMaxAI/SynLogic-Mix-3-32B</link>
-      <description>[HuggingFace Model] | text-generation | Likes: 17 | Tags: transformers, safetensors, qwen2, text-generation, LLM</description>
+      <description>[HuggingFace Model] | text-generation | Likes: 18 | Tags: transformers, safetensors, qwen2, text-generation, LLM</description>
       <guid isPermaLink="true">https://huggingface.co/MiniMaxAI/SynLogic-Mix-3-32B</guid>
       <pubDate>Fri, 30 May 2025 13:32:06 +0000</pubDate>
     </item>
@@ -179,7 +179,7 @@
     <item>
       <title>Mini-Agent</title>
       <link>https://github.com/MiniMax-AI/Mini-Agent</link>
-      <description>[GitHub Repo] | A minimal yet professional single agent demo project that showcases the core execution pipeline and production-grade features of agents. | Language: Python | Stars: 2421 | Topics: agent, llm, minimax</description>
+      <description>[GitHub Repo] | A minimal yet professional single agent demo project that showcases the core execution pipeline and production-grade features of agents. | Language: Python | Stars: 2422 | Topics: agent, llm, minimax</description>
       <guid isPermaLink="true">https://github.com/MiniMax-AI/Mini-Agent</guid>
       <pubDate>Fri, 31 Oct 2025 03:56:27 +0000</pubDate>
     </item>
@@ -214,21 +214,21 @@
     <item>
       <title>VTP-Small-f16d64</title>
       <link>https://huggingface.co/MiniMaxAI/VTP-Small-f16d64</link>
-      <description>[HuggingFace Model] | image-feature-extraction | Likes: 12 | Tags: transformers, safetensors, vtp, image-feature-extraction, en</description>
+      <description>[HuggingFace Model] | image-feature-extraction | Likes: 13 | Tags: transformers, safetensors, vtp, image-feature-extraction, en</description>
       <guid isPermaLink="true">https://huggingface.co/MiniMaxAI/VTP-Small-f16d64</guid>
       <pubDate>Tue, 16 Dec 2025 05:06:02 +0000</pubDate>
     </item>
     <item>
       <title>VTP-Base-f16d64</title>
       <link>https://huggingface.co/MiniMaxAI/VTP-Base-f16d64</link>
-      <description>[HuggingFace Model] | image-feature-extraction | Likes: 19 | Tags: transformers, safetensors, vtp, image-feature-extraction, en</description>
+      <description>[HuggingFace Model] | image-feature-extraction | Likes: 20 | Tags: transformers, safetensors, vtp, image-feature-extraction, en</description>
       <guid isPermaLink="true">https://huggingface.co/MiniMaxAI/VTP-Base-f16d64</guid>
       <pubDate>Tue, 16 Dec 2025 05:25:29 +0000</pubDate>
     </item>
     <item>
       <title>VTP-Large-f16d64</title>
       <link>https://huggingface.co/MiniMaxAI/VTP-Large-f16d64</link>
-      <description>[HuggingFace Model] | image-feature-extraction | Likes: 14 | Tags: transformers, safetensors, vtp, image-feature-extraction, en</description>
+      <description>[HuggingFace Model] | image-feature-extraction | Likes: 15 | Tags: transformers, safetensors, vtp, image-feature-extraction, en</description>
       <guid isPermaLink="true">https://huggingface.co/MiniMaxAI/VTP-Large-f16d64</guid>
       <pubDate>Tue, 16 Dec 2025 05:27:29 +0000</pubDate>
     </item>
@@ -270,35 +270,35 @@
     <item>
       <title>OpenRoom</title>
       <link>https://github.com/MiniMax-AI/OpenRoom</link>
-      <description>[GitHub Repo] | A browser-based desktop where AI Agent operates every app through natural language. | Language: TypeScript | Stars: 1072 | Topics: ai-agent, browser, desktop, micro-frontend, minimax, natural-language, open-source, react, typescript, vibe-coding</description>
+      <description>[GitHub Repo] | A browser-based desktop where AI Agent operates every app through natural language. | Language: TypeScript | Stars: 1074 | Topics: ai-agent, browser, desktop, micro-frontend, minimax, natural-language, open-source, react, typescript, vibe-coding</description>
       <guid isPermaLink="true">https://github.com/MiniMax-AI/OpenRoom</guid>
       <pubDate>Tue, 03 Mar 2026 04:01:01 +0000</pubDate>
     </item>
     <item>
       <title>skills</title>
       <link>https://github.com/MiniMax-AI/skills</link>
-      <description>[GitHub Repo] | Language: C# | Stars: 10629</description>
+      <description>[GitHub Repo] | Language: C# | Stars: 10644</description>
       <guid isPermaLink="true">https://github.com/MiniMax-AI/skills</guid>
       <pubDate>Tue, 17 Mar 2026 07:19:25 +0000</pubDate>
     </item>
     <item>
       <title>cli</title>
       <link>https://github.com/MiniMax-AI/cli</link>
-      <description>[GitHub Repo] | Generate text, images, video, speech, and music by MiniMax. | Language: TypeScript | Stars: 1427 | Topics: ai</description>
+      <description>[GitHub Repo] | Generate text, images, video, speech, and music by MiniMax. | Language: TypeScript | Stars: 1429 | Topics: ai</description>
       <guid isPermaLink="true">https://github.com/MiniMax-AI/cli</guid>
       <pubDate>Wed, 25 Mar 2026 15:34:45 +0000</pubDate>
     </item>
     <item>
       <title>MiniMax-M2.7</title>
       <link>https://github.com/MiniMax-AI/MiniMax-M2.7</link>
-      <description>[GitHub Repo] | Stars: 221</description>
+      <description>[GitHub Repo] | Stars: 224</description>
       <guid isPermaLink="true">https://github.com/MiniMax-AI/MiniMax-M2.7</guid>
       <pubDate>Thu, 09 Apr 2026 03:34:10 +0000</pubDate>
     </item>
     <item>
       <title>MiniMax-M2.7</title>
       <link>https://huggingface.co/MiniMaxAI/MiniMax-M2.7</link>
-      <description>[HuggingFace Model] | text-generation | Likes: 797 | Tags: transformers, safetensors, minimax_m2, text-generation, conversational</description>
+      <description>[HuggingFace Model] | text-generation | Likes: 800 | Tags: transformers, safetensors, minimax_m2, text-generation, conversational</description>
       <guid isPermaLink="true">https://huggingface.co/MiniMaxAI/MiniMax-M2.7</guid>
       <pubDate>Thu, 09 Apr 2026 03:37:12 +0000</pubDate>
     </item>
