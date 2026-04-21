@@ -7,7 +7,7 @@
     <docs>http://www.rssboard.org/rss-specification</docs>
     <generator>RSS Creator - RSS Filter</generator>
     <language>zh-CN</language>
-    <lastBuildDate>Tue, 21 Apr 2026 17:58:47 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 21 Apr 2026 19:20:40 +0000</lastBuildDate>
     <item>
       <title>Weight normalization: A simple reparameterization to accelerate training of deep neural networks</title>
       <link>https://openai.com/index/weight-normalization</link>
@@ -340,16 +340,16 @@
       <pubDate>Tue, 17 Oct 2017 07:00:00 +0000</pubDate>
     </item>
     <item>
-      <title>Asymmetric actor critic for image-based robot learning</title>
-      <link>https://openai.com/index/asymmetric-actor-critic-for-image-based-robot-learning</link>
-      <guid isPermaLink="true">https://openai.com/index/asymmetric-actor-critic-for-image-based-robot-learning</guid>
+      <title>Sim-to-real transfer of robotic control with dynamics randomization</title>
+      <link>https://openai.com/index/sim-to-real-transfer-of-robotic-control-with-dynamics-randomization</link>
+      <guid isPermaLink="true">https://openai.com/index/sim-to-real-transfer-of-robotic-control-with-dynamics-randomization</guid>
       <category>Research</category>
       <pubDate>Wed, 18 Oct 2017 07:00:00 +0000</pubDate>
     </item>
     <item>
-      <title>Sim-to-real transfer of robotic control with dynamics randomization</title>
-      <link>https://openai.com/index/sim-to-real-transfer-of-robotic-control-with-dynamics-randomization</link>
-      <guid isPermaLink="true">https://openai.com/index/sim-to-real-transfer-of-robotic-control-with-dynamics-randomization</guid>
+      <title>Asymmetric actor critic for image-based robot learning</title>
+      <link>https://openai.com/index/asymmetric-actor-critic-for-image-based-robot-learning</link>
+      <guid isPermaLink="true">https://openai.com/index/asymmetric-actor-critic-for-image-based-robot-learning</guid>
       <category>Research</category>
       <pubDate>Wed, 18 Oct 2017 07:00:00 +0000</pubDate>
     </item>
@@ -1073,18 +1073,18 @@
       <pubDate>Thu, 06 Jun 2024 00:00:00 +0000</pubDate>
     </item>
     <item>
-      <title>A Holistic Approach to Undesired Content Detection in the Real World</title>
-      <link>https://openai.com/index/a-holistic-approach-to-undesired-content-detection-in-the-real-world</link>
-      <description>We present a holistic approach to building a robust and useful natural language classification system for real-world content moderation.</description>
-      <guid isPermaLink="true">https://openai.com/index/a-holistic-approach-to-undesired-content-detection-in-the-real-world</guid>
-      <category>Research</category>
-      <pubDate>Thu, 20 Jun 2024 00:00:00 +0000</pubDate>
-    </item>
-    <item>
       <title>Consistency Models</title>
       <link>https://openai.com/index/consistency-models</link>
       <description>Diffusion models have significantly advanced the fields of image, audio, and video generation, but they depend on an iterative sampling process that causes slow generation.</description>
       <guid isPermaLink="true">https://openai.com/index/consistency-models</guid>
+      <category>Research</category>
+      <pubDate>Thu, 20 Jun 2024 00:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>A Holistic Approach to Undesired Content Detection in the Real World</title>
+      <link>https://openai.com/index/a-holistic-approach-to-undesired-content-detection-in-the-real-world</link>
+      <description>We present a holistic approach to building a robust and useful natural language classification system for real-world content moderation.</description>
+      <guid isPermaLink="true">https://openai.com/index/a-holistic-approach-to-undesired-content-detection-in-the-real-world</guid>
       <category>Research</category>
       <pubDate>Thu, 20 Jun 2024 00:00:00 +0000</pubDate>
     </item>
@@ -1128,27 +1128,12 @@
       <pubDate>Wed, 24 Jul 2024 09:00:00 +0000</pubDate>
     </item>
     <item>
-      <title>GPT-4o System Card External Testers Acknowledgements</title>
-      <link>https://openai.com/index/gpt-4o-system-card/external-testers-acknowledgements</link>
-      <guid isPermaLink="true">https://openai.com/index/gpt-4o-system-card/external-testers-acknowledgements</guid>
-      <category>Research</category>
-      <pubDate>Thu, 08 Aug 2024 10:00:00 +0000</pubDate>
-    </item>
-    <item>
       <title>Introducing SWE-bench Verified</title>
       <link>https://openai.com/index/introducing-swe-bench-verified</link>
       <description>We’re releasing a human-validated subset of SWE-bench that more reliably evaluates AI models’ ability to solve real-world software issues.</description>
       <guid isPermaLink="true">https://openai.com/index/introducing-swe-bench-verified</guid>
       <category>Research</category>
       <pubDate>Tue, 13 Aug 2024 10:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>OpenAI o1 System Card External Testers Acknowledgements</title>
-      <link>https://openai.com/index/openai-o1-system-card/external-testers-acknowledgements</link>
-      <description>OpenAI o1 system card external testers acknowledgements</description>
-      <guid isPermaLink="true">https://openai.com/index/openai-o1-system-card/external-testers-acknowledgements</guid>
-      <category>Research</category>
-      <pubDate>Thu, 12 Sep 2024 10:00:00 +0000</pubDate>
     </item>
     <item>
       <title>OpenAI o1-mini</title>
@@ -1229,17 +1214,17 @@
       <pubDate>Thu, 23 Jan 2025 10:00:00 +0000</pubDate>
     </item>
     <item>
-      <title>OpenAI o3-mini</title>
-      <link>https://openai.com/index/openai-o3-mini</link>
-      <guid isPermaLink="true">https://openai.com/index/openai-o3-mini</guid>
-      <category>Research</category>
-      <pubDate>Fri, 31 Jan 2025 11:00:00 +0000</pubDate>
-    </item>
-    <item>
       <title>OpenAI o3-mini System Card</title>
       <link>https://openai.com/index/o3-mini-system-card</link>
       <description>This report outlines the safety work carried out for the OpenAI o3-mini model, including safety evaluations, external red teaming, and Preparedness Framework evaluations.</description>
       <guid isPermaLink="true">https://openai.com/index/o3-mini-system-card</guid>
+      <category>Research</category>
+      <pubDate>Fri, 31 Jan 2025 11:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>OpenAI o3-mini</title>
+      <link>https://openai.com/index/openai-o3-mini</link>
+      <guid isPermaLink="true">https://openai.com/index/openai-o3-mini</guid>
       <category>Research</category>
       <pubDate>Fri, 31 Jan 2025 11:00:00 +0000</pubDate>
     </item>
