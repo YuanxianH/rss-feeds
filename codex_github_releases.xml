@@ -7,21 +7,7 @@
     <docs>http://www.rssboard.org/rss-specification</docs>
     <generator>RSS Creator</generator>
     <language>zh-CN</language>
-    <lastBuildDate>Tue, 21 Apr 2026 02:11:48 +0000</lastBuildDate>
-    <item>
-      <title>0.122.0-alpha.7</title>
-      <link>https://github.com/openai/codex/releases/tag/rust-v0.122.0-alpha.7</link>
-      <description>Release 0.122.0-alpha.7</description>
-      <guid isPermaLink="false">tag:github.com,2008:Repository/965415649/rust-v0.122.0-alpha.7</guid>
-      <pubDate>Fri, 17 Apr 2026 16:20:36 +0000</pubDate>
-    </item>
-    <item>
-      <title>0.122.0-alpha.8</title>
-      <link>https://github.com/openai/codex/releases/tag/rust-v0.122.0-alpha.8</link>
-      <description>Release 0.122.0-alpha.8</description>
-      <guid isPermaLink="false">tag:github.com,2008:Repository/965415649/rust-v0.122.0-alpha.8</guid>
-      <pubDate>Fri, 17 Apr 2026 20:21:03 +0000</pubDate>
-    </item>
+    <lastBuildDate>Tue, 21 Apr 2026 05:24:51 +0000</lastBuildDate>
     <item>
       <title>0.122.0-alpha.9</title>
       <link>https://github.com/openai/codex/releases/tag/rust-v0.122.0-alpha.9</link>
@@ -747,6 +733,20 @@ feat: chronicle alias
       <description>Release 0.123.0-alpha.2</description>
       <guid isPermaLink="false">tag:github.com,2008:Repository/965415649/rust-v0.123.0-alpha.2</guid>
       <pubDate>Tue, 21 Apr 2026 00:28:09 +0000</pubDate>
+    </item>
+    <item>
+      <title>0.123.0-alpha.3</title>
+      <link>https://github.com/openai/codex/releases/tag/rust-v0.123.0-alpha.3</link>
+      <description>Release 0.123.0-alpha.3</description>
+      <guid isPermaLink="false">tag:github.com,2008:Repository/965415649/rust-v0.123.0-alpha.3</guid>
+      <pubDate>Tue, 21 Apr 2026 03:39:24 +0000</pubDate>
+    </item>
+    <item>
+      <title>rust-v0.123.0-alpha.4</title>
+      <link>https://github.com/openai/codex/releases/tag/rust-v0.123.0-alpha.4</link>
+      <description>Release 0.123.0-alpha.4</description>
+      <guid isPermaLink="false">tag:github.com,2008:Repository/965415649/rust-v0.123.0-alpha.4</guid>
+      <pubDate>Tue, 21 Apr 2026 05:19:01 +0000</pubDate>
     </item>
   </channel>
 </rss>
