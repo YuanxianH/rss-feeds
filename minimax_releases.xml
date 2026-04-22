@@ -7,7 +7,7 @@
     <docs>http://www.rssboard.org/rss-specification</docs>
     <generator>RSS Creator</generator>
     <language>zh-CN</language>
-    <lastBuildDate>Wed, 22 Apr 2026 20:03:24 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 22 Apr 2026 21:47:31 +0000</lastBuildDate>
     <item>
       <title>MiniMax-Text-01</title>
       <link>https://huggingface.co/MiniMaxAI/MiniMax-Text-01</link>
@@ -39,7 +39,7 @@
     <item>
       <title>MiniMax-MCP</title>
       <link>https://github.com/MiniMax-AI/MiniMax-MCP</link>
-      <description>[GitHub Repo] | Official MiniMax Model Context Protocol (MCP) server that enables interaction with powerful Text to Speech, image generation and video generation APIs. | Language: Python | Stars: 1437 | Topics: image-generation, image-to-video, mcp, mcp-server, mcp-tools, text-to-image, text-to-speech, text-to-video, video-generation, voice-cloning</description>
+      <description>[GitHub Repo] | Official MiniMax Model Context Protocol (MCP) server that enables interaction with powerful Text to Speech, image generation and video generation APIs. | Language: Python | Stars: 1438 | Topics: image-generation, image-to-video, mcp, mcp-server, mcp-tools, text-to-image, text-to-speech, text-to-video, video-generation, voice-cloning</description>
       <guid isPermaLink="true">https://github.com/MiniMax-AI/MiniMax-MCP</guid>
       <pubDate>Thu, 10 Apr 2025 06:15:56 +0000</pubDate>
     </item>
@@ -186,7 +186,7 @@
     <item>
       <title>MiniMax-Provider-Verifier</title>
       <link>https://github.com/MiniMax-AI/MiniMax-Provider-Verifier</link>
-      <description>[GitHub Repo] | MiniMax-Provider-Verifier offers a rigorous, vendor-agnostic way to verify whether third-party deployments of the Minimax M2 model are correct and reliable. | Language: Python | Stars: 41</description>
+      <description>[GitHub Repo] | MiniMax-Provider-Verifier offers a rigorous, vendor-agnostic way to verify whether third-party deployments of the Minimax M2 model are correct and reliable. | Language: Python | Stars: 42</description>
       <guid isPermaLink="true">https://github.com/MiniMax-AI/MiniMax-Provider-Verifier</guid>
       <pubDate>Mon, 10 Nov 2025 09:07:34 +0000</pubDate>
     </item>
@@ -207,7 +207,7 @@
     <item>
       <title>VTP</title>
       <link>https://github.com/MiniMax-AI/VTP</link>
-      <description>[GitHub Repo] | Towards Scalable Pre-training of Visual Tokenizers for Generation | Language: Python | Stars: 472 | Topics: diffusion-model, visual-generation, visual-tokenizer</description>
+      <description>[GitHub Repo] | Towards Scalable Pre-training of Visual Tokenizers for Generation | Language: Python | Stars: 473 | Topics: diffusion-model, visual-generation, visual-tokenizer</description>
       <guid isPermaLink="true">https://github.com/MiniMax-AI/VTP</guid>
       <pubDate>Thu, 11 Dec 2025 10:32:23 +0000</pubDate>
     </item>
@@ -277,7 +277,7 @@
     <item>
       <title>skills</title>
       <link>https://github.com/MiniMax-AI/skills</link>
-      <description>[GitHub Repo] | Language: C# | Stars: 11092</description>
+      <description>[GitHub Repo] | Language: C# | Stars: 11093</description>
       <guid isPermaLink="true">https://github.com/MiniMax-AI/skills</guid>
       <pubDate>Tue, 17 Mar 2026 07:19:25 +0000</pubDate>
     </item>
