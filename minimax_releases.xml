@@ -7,7 +7,7 @@
     <docs>http://www.rssboard.org/rss-specification</docs>
     <generator>RSS Creator</generator>
     <language>zh-CN</language>
-    <lastBuildDate>Sat, 25 Apr 2026 07:09:53 +0000</lastBuildDate>
+    <lastBuildDate>Sat, 25 Apr 2026 08:48:22 +0000</lastBuildDate>
     <item>
       <title>MiniMax-Text-01</title>
       <link>https://huggingface.co/MiniMaxAI/MiniMax-Text-01</link>
@@ -193,7 +193,7 @@
     <item>
       <title>MiniMax-Coding-Plan-MCP</title>
       <link>https://github.com/MiniMax-AI/MiniMax-Coding-Plan-MCP</link>
-      <description>[GitHub Repo] | Specialized MiniMax Model Context Protocol (MCP) server designed for coding-plan users, featuring AI-powered search and vision analysis APIs optimized for code development workflows | Language: Python | Stars: 67 | Topics: coding-plan, mcp, mcp-server, mcp-tools, understand-image, web-search</description>
+      <description>[GitHub Repo] | Specialized MiniMax Model Context Protocol (MCP) server designed for coding-plan users, featuring AI-powered search and vision analysis APIs optimized for code development workflows | Language: Python | Stars: 68 | Topics: coding-plan, mcp, mcp-server, mcp-tools, understand-image, web-search</description>
       <guid isPermaLink="true">https://github.com/MiniMax-AI/MiniMax-Coding-Plan-MCP</guid>
       <pubDate>Thu, 20 Nov 2025 04:48:05 +0000</pubDate>
     </item>
@@ -207,7 +207,7 @@
     <item>
       <title>VTP</title>
       <link>https://github.com/MiniMax-AI/VTP</link>
-      <description>[GitHub Repo] | Towards Scalable Pre-training of Visual Tokenizers for Generation | Language: Python | Stars: 473 | Topics: diffusion-model, visual-generation, visual-tokenizer</description>
+      <description>[GitHub Repo] | Towards Scalable Pre-training of Visual Tokenizers for Generation | Language: Python | Stars: 474 | Topics: diffusion-model, visual-generation, visual-tokenizer</description>
       <guid isPermaLink="true">https://github.com/MiniMax-AI/VTP</guid>
       <pubDate>Thu, 11 Dec 2025 10:32:23 +0000</pubDate>
     </item>
@@ -277,7 +277,7 @@
     <item>
       <title>skills</title>
       <link>https://github.com/MiniMax-AI/skills</link>
-      <description>[GitHub Repo] | Language: C# | Stars: 11201</description>
+      <description>[GitHub Repo] | Language: C# | Stars: 11207</description>
       <guid isPermaLink="true">https://github.com/MiniMax-AI/skills</guid>
       <pubDate>Tue, 17 Mar 2026 07:19:25 +0000</pubDate>
     </item>
