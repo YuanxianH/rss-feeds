@@ -7,12 +7,12 @@
     <docs>http://www.rssboard.org/rss-specification</docs>
     <generator>RSS Creator</generator>
     <language>zh-CN</language>
-    <lastBuildDate>Mon, 27 Apr 2026 15:04:43 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 27 Apr 2026 17:18:32 +0000</lastBuildDate>
     <item>
-      <title>LET-3D-AP: Longitudinal Error Tolerant 3D Average Precision for Camera-Only 3D Detection</title>
-      <link>https://waymo.com/research/let-3d-ap-longitudinal-error-tolerant-3d-average-precision-for-camera-only/</link>
-      <description>Wei-Chih Hung,Henrik Kretzschmar,Vincent Casser,Jyh-Jing Hwang,Dragomir Anguelov</description>
-      <guid isPermaLink="true">https://waymo.com/research/let-3d-ap-longitudinal-error-tolerant-3d-average-precision-for-camera-only/</guid>
+      <title>Block-NeRF</title>
+      <link>https://waymo.com/research/block-nerf/</link>
+      <description>Matthew Tancik,Vincent Casser,Xinchen Yan,Sabeek Pradhan,Ben Mildenhall,Pratul P. Srinivasan,Jonathan T. Barron,Henrik Kretzschmar</description>
+      <guid isPermaLink="true">https://waymo.com/research/block-nerf/</guid>
     </item>
     <item>
       <title>RIDDLE: Lidar Data Compression with Range Image Deep Delta Encoding</title>
@@ -99,10 +99,10 @@
       <guid isPermaLink="true">https://waymo.com/research/hierarchical-model-based-imitation-learning-for-planning-in-autonomous/</guid>
     </item>
     <item>
-      <title>Particle-Based Score Estimation for State Space Model Learning in Autonomous Driving</title>
-      <link>https://waymo.com/research/particle-based-score-estimation-for-state-space-model-learning-in-autonomous/</link>
-      <description>Angad Singh,Omar Makhlouf,Maximilian Igl,Joao Messias,Arnaud Doucet,Shimon Whiteson</description>
-      <guid isPermaLink="true">https://waymo.com/research/particle-based-score-estimation-for-state-space-model-learning-in-autonomous/</guid>
+      <title>JFP: Joint Future Prediction with Interactive Multi-Agent Modeling for Autonomous Driving</title>
+      <link>https://waymo.com/research/jfp-joint-future-prediction-with-interactive-multi-agent-modeling-for/</link>
+      <description>Wenjie Luo,Cheolho Park,Andre Cornman,Benjamin Sapp,Dragomir Anguelov</description>
+      <guid isPermaLink="true">https://waymo.com/research/jfp-joint-future-prediction-with-interactive-multi-agent-modeling-for/</guid>
     </item>
     <item>
       <title>Embedding Synthetic Off-Policy Experience for Autonomous Driving via Zero-Shot Curricula</title>
@@ -111,10 +111,10 @@
       <guid isPermaLink="true">https://waymo.com/research/embedding-synthetic-off-policy-experience-for-autonomous-driving-via-zero/</guid>
     </item>
     <item>
-      <title>JFP: Joint Future Prediction with Interactive Multi-Agent Modeling for Autonomous Driving</title>
-      <link>https://waymo.com/research/jfp-joint-future-prediction-with-interactive-multi-agent-modeling-for/</link>
-      <description>Wenjie Luo,Cheolho Park,Andre Cornman,Benjamin Sapp,Dragomir Anguelov</description>
-      <guid isPermaLink="true">https://waymo.com/research/jfp-joint-future-prediction-with-interactive-multi-agent-modeling-for/</guid>
+      <title>Particle-Based Score Estimation for State Space Model Learning in Autonomous Driving</title>
+      <link>https://waymo.com/research/particle-based-score-estimation-for-state-space-model-learning-in-autonomous/</link>
+      <description>Angad Singh,Omar Makhlouf,Maximilian Igl,Joao Messias,Arnaud Doucet,Shimon Whiteson</description>
+      <guid isPermaLink="true">https://waymo.com/research/particle-based-score-estimation-for-state-space-model-learning-in-autonomous/</guid>
     </item>
     <item>
       <title>HUM3DIL: Semi-supervised Multi-modal 3D Human Pose Estimation for Autonomous Driving</title>
@@ -153,16 +153,16 @@
       <guid isPermaLink="true">https://waymo.com/research/pedestrian-crossing-action-recognition-and-trajectory-prediction-with-3d/</guid>
     </item>
     <item>
-      <title>MoDAR: Using Motion Forecasting for 3D Object Detection in Point Cloud Sequences</title>
-      <link>https://waymo.com/research/modar-using-motion-forecasting-for-3d-object-detection-in-point-cloud/</link>
-      <description>Yingwei Li,Charles R. Qi,Yin Zhou,Chenxi Liu,Dragomir Anguelov</description>
-      <guid isPermaLink="true">https://waymo.com/research/modar-using-motion-forecasting-for-3d-object-detection-in-point-cloud/</guid>
-    </item>
-    <item>
       <title>3D Human Keypoints Estimation From Point Clouds in the Wild Without Human Labels</title>
       <link>https://waymo.com/research/3d-human-keypoints-estimation-from-point-clouds-in-the-wild-without-human/</link>
       <description>Zhenzhen Weng,Alexander Gorban,Jingwei Ji,Mahyar Najibi,Yin Zhou,Dragomir Anguelov</description>
       <guid isPermaLink="true">https://waymo.com/research/3d-human-keypoints-estimation-from-point-clouds-in-the-wild-without-human/</guid>
+    </item>
+    <item>
+      <title>MoDAR: Using Motion Forecasting for 3D Object Detection in Point Cloud Sequences</title>
+      <link>https://waymo.com/research/modar-using-motion-forecasting-for-3d-object-detection-in-point-cloud/</link>
+      <description>Yingwei Li,Charles R. Qi,Yin Zhou,Chenxi Liu,Dragomir Anguelov</description>
+      <guid isPermaLink="true">https://waymo.com/research/modar-using-motion-forecasting-for-3d-object-detection-in-point-cloud/</guid>
     </item>
     <item>
       <title>NeRDi: Single-View NeRF Synthesis with Language-Guided Diffusion as General Image Priors</title>
@@ -243,16 +243,16 @@
       <guid isPermaLink="true">https://waymo.com/research/stt-stateful-tracking-with-transformers-for-autonomous-driving/</guid>
     </item>
     <item>
-      <title>UniGen: Unified Modeling of Initial Agent States and Trajectories for Generating Autonomous Driving Scenarios</title>
-      <link>https://waymo.com/research/unigen-unified-modeling-of-initial-agent-states-and-trajectories-for/</link>
-      <description>Reza Mahjourian,Rongbing Mu,Valerii Likhosherstov,Paul Mougin,Xiukun Huang,Joao Messias,Shimon Whiteson</description>
-      <guid isPermaLink="true">https://waymo.com/research/unigen-unified-modeling-of-initial-agent-states-and-trajectories-for/</guid>
-    </item>
-    <item>
       <title>PVTransformer: Point-to-Voxel Transformer for Scalable 3D Object Detection</title>
       <link>https://waymo.com/research/pvtransformer-point-to-voxel-transformer-for-scalable-3d-object-detection/</link>
       <description>Zhaoqi Leng,Pei Sun,Tong He,Dragomir Anguelov,Mingxing Tan</description>
       <guid isPermaLink="true">https://waymo.com/research/pvtransformer-point-to-voxel-transformer-for-scalable-3d-object-detection/</guid>
+    </item>
+    <item>
+      <title>UniGen: Unified Modeling of Initial Agent States and Trajectories for Generating Autonomous Driving Scenarios</title>
+      <link>https://waymo.com/research/unigen-unified-modeling-of-initial-agent-states-and-trajectories-for/</link>
+      <description>Reza Mahjourian,Rongbing Mu,Valerii Likhosherstov,Paul Mougin,Xiukun Huang,Joao Messias,Shimon Whiteson</description>
+      <guid isPermaLink="true">https://waymo.com/research/unigen-unified-modeling-of-initial-agent-states-and-trajectories-for/</guid>
     </item>
     <item>
       <title>3D Open-Vocabulary Panoptic Segmentation with 2D-3D Vision-Language Distillation</title>
