@@ -7,14 +7,7 @@
     <docs>http://www.rssboard.org/rss-specification</docs>
     <generator>RSS Creator</generator>
     <language>zh-CN</language>
-    <lastBuildDate>Thu, 30 Apr 2026 02:37:26 +0000</lastBuildDate>
-    <item>
-      <title>0.126.0-alpha.9</title>
-      <link>https://github.com/openai/codex/releases/tag/rust-v0.126.0-alpha.9</link>
-      <description>Release 0.126.0-alpha.9</description>
-      <guid isPermaLink="false">tag:github.com,2008:Repository/965415649/rust-v0.126.0-alpha.9</guid>
-      <pubDate>Tue, 28 Apr 2026 11:51:33 +0000</pubDate>
-    </item>
+    <lastBuildDate>Thu, 30 Apr 2026 05:56:12 +0000</lastBuildDate>
     <item>
       <title>0.126.0-alpha.10</title>
       <link>https://github.com/openai/codex/releases/tag/rust-v0.126.0-alpha.10</link>
@@ -77,6 +70,13 @@
       <description>Release 0.126.0-alpha.17</description>
       <guid isPermaLink="false">tag:github.com,2008:Repository/965415649/rust-v0.126.0-alpha.17</guid>
       <pubDate>Thu, 30 Apr 2026 00:53:37 +0000</pubDate>
+    </item>
+    <item>
+      <title>rust-v0.127.0</title>
+      <link>https://github.com/openai/codex/releases/tag/rust-v0.127.0</link>
+      <description>Release 0.127.0</description>
+      <guid isPermaLink="false">tag:github.com,2008:Repository/965415649/rust-v0.127.0</guid>
+      <pubDate>Thu, 30 Apr 2026 05:11:17 +0000</pubDate>
     </item>
   </channel>
 </rss>
