@@ -74,7 +74,7 @@ class HTMLParser:
         # 标题
         if title_selector := selectors.get("title"):
             if title_elem := container.select_one(title_selector):
-                item["title"] = title_elem.get_text(strip=True)
+                item["title"] = title_elem.get("title") or title_elem.get_text(strip=True)
 
         # 链接
         link_selector = selectors.get("link")

@@ -176,6 +176,29 @@ jobs:
     catalog:
       section: "blogs"
 
+  # Physical Intelligence Blog
+  - type: "selector_scrape"
+    name: "Physical Intelligence Blog"
+    url: "https://www.pi.website/"
+    output: "pi_blog.xml"
+    title: "Physical Intelligence Blog"
+    description: "Latest blog posts and research from Physical Intelligence"
+    link: "https://www.pi.website/"
+    selectors:
+      items: "a.flex.flex-col.gap-2.px-3.py-2.ml-6.group.cursor-pointer"
+      title: "div.text-xs.truncate.font-semibold.leading-5"
+      description: "p.text-xs.text-muted-foreground.no-underline"
+      date: "div.text-xs.text-muted-foreground.shrink-0.ml-1"
+    catalog:
+      section: "blogs"
+    options:
+      max_items: 50
+      timeout: 15
+      retries: 2
+      backoff_factor: 0.5
+      user_agent: "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36"
+      encoding: "utf-8"
+
   # 示例配置
   # - type: "selector_scrape"
   #   name: "Example"
