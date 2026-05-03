@@ -1,7 +1,7 @@
 ---
 name: add-rss-feed
 description: >
-  Add a new website as an RSS feed to the rss_creator project at /Users/yxhuang/repo/rss_creator.
+  Add a new website as an RSS feed to the rss_creator project at /Users/yxhuang/my_world/rss_creator.
   Use when the user provides a URL and wants to turn it into an RSS feed, or says things like
   "帮我把这个网页变成 RSS", "add RSS feed for this site", "订阅这个页面", "把这个网页加到 RSS".
   Handles: analyzing page HTML, configuring CSS selectors, testing feed generation, committing, and deploying to GitHub Pages.
@@ -18,8 +18,10 @@ The repo supports multiple job types:
 | `selector_scrape` | Most websites with server-rendered HTML |
 | `kimi_blog` | VitePress based blogs |
 | `minimax_news` | Complex sites requiring sitemap discovery |
+| `minimax_releases` | HuggingFace models + GitHub repos |
 | `waymo_blog_technology` | Waymo blog API |
 | `openai_research_filter` | Filter existing RSS for specific categories |
+| `codex_changelog` | GitHub release entries from Codex changelog |
 
 For most new feeds, use `selector_scrape`.
 
@@ -30,7 +32,7 @@ For most new feeds, use `selector_scrape`.
 Run the analysis script to check if the page is server-rendered and find repeating elements:
 
 ```bash
-python /Users/yxhuang/repo/rss_creator/.claude/skills/add-rss-feed/scripts/analyze_page.py <URL>
+python /Users/yxhuang/my_world/rss_creator/.claude/skills/add-rss-feed/scripts/analyze_page.py <URL>
 ```
 
 If 0 repeated content elements found, the page is likely JS-rendered — inform the user it may not work with simple HTTP scraping.
@@ -56,7 +58,7 @@ From the HTML, determine selectors for:
 
 ### Step 3: Add config to config.yaml
 
-Read `/Users/yxhuang/repo/rss_creator/config.yaml` and append:
+Read `/Users/yxhuang/my_world/rss_creator/config.yaml` and append:
 
 ```yaml
   - type: "selector_scrape"
@@ -82,7 +84,7 @@ Read `/Users/yxhuang/repo/rss_creator/config.yaml` and append:
 ### Step 4: Test locally
 
 ```bash
-cd /Users/yxhuang/repo/rss_creator && python main.py -v
+cd /Users/yxhuang/my_world/rss_creator && python main.py -v
 ```
 
 Verify: feed generates with expected item count, read the XML in `feeds/` to confirm content.
@@ -113,6 +115,6 @@ Add the new feed to `feeds/index.html` so it appears in the feed list:
 
 GitHub Actions will automatically run and deploy the updated feeds to GitHub Pages.
 
-**New feed URL:** `https://yuanxianh.github.io/rss_creator/<output_filename>`
+**New feed URL:** `https://yuanxianh.github.io/rss-feeds/<output_filename>`
 
 You can manually trigger a deployment from the GitHub Actions tab if needed.
