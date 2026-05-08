@@ -7,7 +7,7 @@
     <docs>http://www.rssboard.org/rss-specification</docs>
     <generator>RSS Creator</generator>
     <language>zh-CN</language>
-    <lastBuildDate>Fri, 08 May 2026 11:09:37 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 08 May 2026 13:25:22 +0000</lastBuildDate>
     <item>
       <title>MiniMax-Text-01</title>
       <link>https://huggingface.co/MiniMaxAI/MiniMax-Text-01</link>
@@ -74,7 +74,7 @@
     <item>
       <title>One-RL-to-See-Them-All</title>
       <link>https://github.com/MiniMax-AI/One-RL-to-See-Them-All</link>
-      <description>[GitHub Repo] | The official repo of One RL to See Them All: Visual Triple Unified Reinforcement Learning | Language: Python | Stars: 332 | Topics: orsta, rl, v-triune, visual-language-models, vlm, vlm-rl</description>
+      <description>[GitHub Repo] | The official repo of One RL to See Them All: Visual Triple Unified Reinforcement Learning | Language: Python | Stars: 333 | Topics: orsta, rl, v-triune, visual-language-models, vlm, vlm-rl</description>
       <guid isPermaLink="true">https://github.com/MiniMax-AI/One-RL-to-See-Them-All</guid>
       <pubDate>Fri, 23 May 2025 08:03:39 +0000</pubDate>
     </item>
@@ -284,7 +284,7 @@
     <item>
       <title>cli</title>
       <link>https://github.com/MiniMax-AI/cli</link>
-      <description>[GitHub Repo] | Generate text, images, video, speech, and music by MiniMax. | Language: TypeScript | Stars: 1681 | Topics: ai</description>
+      <description>[GitHub Repo] | Generate text, images, video, speech, and music by MiniMax. | Language: TypeScript | Stars: 1682 | Topics: ai</description>
       <guid isPermaLink="true">https://github.com/MiniMax-AI/cli</guid>
       <pubDate>Wed, 25 Mar 2026 15:34:45 +0000</pubDate>
     </item>
