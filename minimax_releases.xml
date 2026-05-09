@@ -7,7 +7,7 @@
     <docs>http://www.rssboard.org/rss-specification</docs>
     <generator>RSS Creator</generator>
     <language>zh-CN</language>
-    <lastBuildDate>Sat, 09 May 2026 18:55:47 +0000</lastBuildDate>
+    <lastBuildDate>Sat, 09 May 2026 19:56:33 +0000</lastBuildDate>
     <item>
       <title>MiniMax-Text-01</title>
       <link>https://huggingface.co/MiniMaxAI/MiniMax-Text-01</link>
@@ -74,7 +74,7 @@
     <item>
       <title>One-RL-to-See-Them-All</title>
       <link>https://github.com/MiniMax-AI/One-RL-to-See-Them-All</link>
-      <description>[GitHub Repo] | The official repo of One RL to See Them All: Visual Triple Unified Reinforcement Learning | Language: Python | Stars: 333 | Topics: orsta, rl, v-triune, visual-language-models, vlm, vlm-rl</description>
+      <description>[GitHub Repo] | The official repo of One RL to See Them All: Visual Triple Unified Reinforcement Learning | Language: Python | Stars: 334 | Topics: orsta, rl, v-triune, visual-language-models, vlm, vlm-rl</description>
       <guid isPermaLink="true">https://github.com/MiniMax-AI/One-RL-to-See-Them-All</guid>
       <pubDate>Fri, 23 May 2025 08:03:39 +0000</pubDate>
     </item>
@@ -277,7 +277,7 @@
     <item>
       <title>skills</title>
       <link>https://github.com/MiniMax-AI/skills</link>
-      <description>[GitHub Repo] | Language: C# | Stars: 11680</description>
+      <description>[GitHub Repo] | Language: C# | Stars: 11679</description>
       <guid isPermaLink="true">https://github.com/MiniMax-AI/skills</guid>
       <pubDate>Tue, 17 Mar 2026 07:19:25 +0000</pubDate>
     </item>
