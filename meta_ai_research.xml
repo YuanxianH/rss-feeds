@@ -7,7 +7,7 @@
     <docs>http://www.rssboard.org/rss-specification</docs>
     <generator>RSS Creator</generator>
     <language>zh-CN</language>
-    <lastBuildDate>Tue, 12 May 2026 22:56:45 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 12 May 2026 23:59:14 +0000</lastBuildDate>
     <item>
       <title>Equi-normalization of Neural Networks | Facebook AI Research</title>
       <link>https://ai.meta.com/research/publications/equi-normalization-of-neural-networks/</link>
@@ -95,84 +95,84 @@
     <item>
       <title>FERRET: Framework for Expansion Reliant Red Teaming</title>
       <link>https://ai.meta.com/research/publications/ferret-framework-for-expansion-reliant-red-teaming/</link>
-      <description>Ninareh Mehrabi, Vítor Albiero, Maya Pavlova, Joanna Bitton</description>
+      <description>Joanna Bitton, Maya Pavlova, Ninareh Mehrabi, Vítor Albiero</description>
       <guid isPermaLink="true">https://ai.meta.com/research/publications/ferret-framework-for-expansion-reliant-red-teaming/</guid>
       <pubDate>Fri, 13 Feb 2026 00:00:00 +0000</pubDate>
     </item>
     <item>
       <title>Learning Personalized Agents from Human Feedback</title>
       <link>https://ai.meta.com/research/publications/learning-personalized-agents-from-human-feedback/</link>
-      <description>Kaiqu Liang, Julia Kruk, Shengyi Qian, Xianjun Yang, Shengjie Bi, Shaoliang Nie, Michael Zhang, Lijuan Liu, Jaime Fernández Fisac, Shuyan Zhou, Saghar Hosseini</description>
+      <description>Kaiqu Liang, Xianjun Yang, Shaoliang Nie, Jaime Fernández Fisac, Shuyan Zhou, Julia Kruk, Lijuan Liu, Michael Zhang, Saghar Hosseini, Shengjie Bi, Shengyi Qian</description>
       <guid isPermaLink="true">https://ai.meta.com/research/publications/learning-personalized-agents-from-human-feedback/</guid>
       <pubDate>Thu, 26 Feb 2026 00:00:00 +0000</pubDate>
     </item>
     <item>
       <title>Unified Vision–Language Modeling via Concept Space Alignment</title>
       <link>https://ai.meta.com/research/publications/unified-vision-language-modeling-via-concept-space-alignment/</link>
-      <description>Yifu Qiu, Paul-Ambroise Duquenne, Holger Schwenk</description>
+      <description>Yifu Qiu, Holger Schwenk, Paul-Ambroise Duquenne</description>
       <guid isPermaLink="true">https://ai.meta.com/research/publications/unified-vision-language-modeling-via-concept-space-alignment/</guid>
       <pubDate>Fri, 27 Feb 2026 00:00:00 +0000</pubDate>
     </item>
     <item>
       <title>Omnilingual SONAR: Cross-Lingual and Cross-Modal Sentence Embeddings Bridging Massively Multilingual Text and Speech</title>
       <link>https://ai.meta.com/research/publications/omnilingual-sonar-cross-lingual-and-cross-modal-sentence-embeddings-bridging-massively-multilingual-text-and-speech/</link>
-      <description>Omnilingual SONAR Team, João Maria Janeiro, Pere Lluís Huguet Cabot, Ioannis Tsiamas, Yen Meng, Vivek Iyer, Guillem Ramirez, Loic Barrault, Belen Alastruey, Yu-An Chung, Marta R. Costa-jussa, David Dale, Kevin Heffernan, Jaehyeong Jo, Artyom Kozhevnikov, Alexandre Mourachko, Christophe Ropers, Holger Schwenk, Paul-Ambroise Duquenne</description>
+      <description>Omnilingual SONAR Team, Ioannis Tsiamas, Yen Meng, Vivek Iyer, Guillem Ramirez, Jaehyeong Jo, Alexandre Mourachko, Yu-An Chung, Artyom Kozhevnikov, Belen Alastruey, Christophe Ropers, David Dale, Holger Schwenk, João Maria Janeiro, Kevin Heffernan, Loic Barrault, Marta R. Costa-jussa, Paul-Ambroise Duquenne, Pere Lluís Huguet Cabot</description>
       <guid isPermaLink="true">https://ai.meta.com/research/publications/omnilingual-sonar-cross-lingual-and-cross-modal-sentence-embeddings-bridging-massively-multilingual-text-and-speech/</guid>
       <pubDate>Tue, 17 Mar 2026 00:00:00 +0000</pubDate>
     </item>
     <item>
       <title>Omnilingual MT: Machine Translation for 1,600 Languages</title>
       <link>https://ai.meta.com/research/publications/omnilingual-mt-machine-translation-for-1600-languages/</link>
-      <description>Omnilingual MT Team, Belen Alastruey, Niyati Bafna, Andrea Caciolai, Kevin Heffernan, Artyom Kozhevnikov, Christophe Ropers, Eduardo Sánchez, Charles-Eric Saint-James, Ioannis Tsiamas, Chierh CHENG, Joe Chuang, Paul-Ambroise Duquenne, Mark Duppenthaler, Nate Ekberg, Cynthia Gao, Pere Lluís Huguet Cabot, João Maria Janeiro, Jean Maillard, Gabriel Mejia Gonzalez, Holger Schwenk, Edan Toledo, Arina Turkatenko, Albert Ventayol-Boada, Rashel Moritz, Alexandre Mourachko, Surya Parimi, Mary Williamson, Shireen Yates, David Dale, Marta R. Costa-jussa</description>
+      <description>Omnilingual MT Team, Niyati Bafna, Ioannis Tsiamas, Mark Duppenthaler, Albert Ventayol-Boada, Alexandre Mourachko, Andrea Caciolai, Arina Turkatenko, Artyom Kozhevnikov, Belen Alastruey, Charles-Eric Saint-James, Chierh CHENG, Christophe Ropers, Cynthia Gao, David Dale, Edan Toledo, Eduardo Sánchez, Gabriel Mejia Gonzalez, Holger Schwenk, Jean Maillard, Joe Chuang, João Maria Janeiro, Kevin Heffernan, Marta R. Costa-jussa, Mary Williamson, Nate Ekberg, Paul-Ambroise Duquenne, Pere Lluís Huguet Cabot, Rashel Moritz, Shireen Yates, Surya Parimi</description>
       <guid isPermaLink="true">https://ai.meta.com/research/publications/omnilingual-mt-machine-translation-for-1600-languages/</guid>
       <pubDate>Tue, 17 Mar 2026 00:00:00 +0000</pubDate>
     </item>
     <item>
       <title>HyperAgents</title>
       <link>https://ai.meta.com/research/publications/hyperagents/</link>
-      <description>Jenny Zhang, Bingchen Zhao, Winnie Yang, Jakob Foerster, Sam Devlin, Tatiana Shavrina</description>
+      <description>Jenny Zhang, Bingchen Zhao, Jakob Foerster, Sam Devlin, Tatiana Shavrina, Winnie Yang</description>
       <guid isPermaLink="true">https://ai.meta.com/research/publications/hyperagents/</guid>
       <pubDate>Tue, 24 Mar 2026 00:00:00 +0000</pubDate>
     </item>
     <item>
       <title>A foundation model of vision, audition, and language for in-silico neuroscience</title>
       <link>https://ai.meta.com/research/publications/a-foundation-model-of-vision-audition-and-language-for-in-silico-neuroscience/</link>
-      <description>Stéphane d'Ascoli, Jérémy Rapin, Yohann Benchetrit, Teon Brooks, Katelyn Begany, Josephine Raugel, Hubert Jacob Banville, Jean Remi King</description>
+      <description>Hubert Jacob Banville, Jean Remi King, Josephine Raugel, Jérémy Rapin, Katelyn Begany, Stéphane d'Ascoli, Teon Brooks, Yohann Benchetrit</description>
       <guid isPermaLink="true">https://ai.meta.com/research/publications/a-foundation-model-of-vision-audition-and-language-for-in-silico-neuroscience/</guid>
       <pubDate>Thu, 26 Mar 2026 00:00:00 +0000</pubDate>
     </item>
     <item>
       <title>Think in Strokes, Not Pixels: Process-Driven Image Generation via Interleaved Reasoning</title>
       <link>https://ai.meta.com/research/publications/think-in-strokes-not-pixels-process-driven-image-generation-via-interleaved-reasoning/</link>
-      <description>Lei Zhang, Junjiao Tian, Zhipeng Fan, Kunpeng Li, Jialiang Wang, Weifeng Chen, Markos Georgopoulos, Felix Xu, Yuxiao Bao, Julian McAuley, Manling Li, Zecheng He</description>
+      <description>Lei Zhang, Junjiao Tian, Kunpeng Li, Jialiang Wang, Weifeng Chen, Yuxiao Bao, Julian McAuley, Manling Li, Zecheng He, Felix Xu, Markos Georgopoulos, Zhipeng Fan</description>
       <guid isPermaLink="true">https://ai.meta.com/research/publications/think-in-strokes-not-pixels-process-driven-image-generation-via-interleaved-reasoning/</guid>
       <pubDate>Thu, 09 Apr 2026 00:00:00 +0000</pubDate>
     </item>
     <item>
       <title>TransText: Transparency Aware Image-to-Video Typography Animation</title>
       <link>https://ai.meta.com/research/publications/transtext-transparency-aware-image-to-video-typography-animation/</link>
-      <description>Fei Zhang, Zijian Zhou, Bohao Tang, Sen He, Hang Li (BizAI), Zhe Wang, Soubhik Sanyal, Pengfei Liu, Viktar Atliha, Tao Xiang, Frost Xu, Semih Gunel</description>
+      <description>Zijian Zhou, Bohao Tang, Pengfei Liu, Fei Zhang, Frost Xu, Hang Li (BizAI), Semih Gunel, Sen He, Soubhik Sanyal, Tao Xiang, Viktar Atliha, Zhe Wang</description>
       <guid isPermaLink="true">https://ai.meta.com/research/publications/transtext-transparency-aware-image-to-video-typography-animation/</guid>
       <pubDate>Tue, 14 Apr 2026 00:00:00 +0000</pubDate>
     </item>
     <item>
       <title>AIRA₂: Overcoming Bottlenecks in AI Research Agents</title>
       <link>https://ai.meta.com/research/publications/aira-overcoming-bottlenecks-in-ai-research-agents/</link>
-      <description>Karen Hambardzumyan, Nicolas Baldwin, Edan Toledo, Rishi Hazra, Michael Kuchnik, Bassel Al Omari, Thomas Simon Foster, Anton Protopopov, Jean-Christophe Gagnon-Audet, Ishita Mediratta, Kelvin Niu, Michael Shvartsman, Alisia Lupidi, Alexis Audran-Reiss, Parth Pathak, Tatiana Shavrina, Despoina Magka, Hela Momand, Derek Dunfield, Nicola Cancedda, Pontus Stenetorp, Carole-Jean Wu, Jakob Foerster, Yoram Bachrach, Martin Josifoski</description>
+      <description>Nicola Cancedda, Pontus Stenetorp, Alexis Audran-Reiss, Alisia Lupidi, Anton Protopopov, Bassel Al Omari, Carole-Jean Wu, Derek Dunfield, Despoina Magka, Edan Toledo, Hela Momand, Ishita Mediratta, Jakob Foerster, Jean-Christophe Gagnon-Audet, Karen Hambardzumyan, Kelvin Niu, Martin Josifoski, Michael Kuchnik, Michael Shvartsman, Nicolas Baldwin, Parth Pathak, Rishi Hazra, Tatiana Shavrina, Thomas Simon Foster, Yoram Bachrach</description>
       <guid isPermaLink="true">https://ai.meta.com/research/publications/aira-overcoming-bottlenecks-in-ai-research-agents/</guid>
       <pubDate>Thu, 16 Apr 2026 00:00:00 +0000</pubDate>
     </item>
     <item>
       <title>Compute Optimal Tokenization</title>
       <link>https://ai.meta.com/research/publications/compute-optimal-tokenization/</link>
-      <description>Tomasz Limisiewicz, Artidoro Pagnoni, Srini Iyer, Mike Lewis, Sachin Mehta, Alisa Liu, Margaret Li, Gargi Ghosh, Luke Zettlemoyer</description>
+      <description>Sachin Mehta, Alisa Liu, Margaret Li, Artidoro Pagnoni, Gargi Ghosh, Luke Zettlemoyer, Mike Lewis, Srini Iyer, Tomasz Limisiewicz</description>
       <guid isPermaLink="true">https://ai.meta.com/research/publications/compute-optimal-tokenization/</guid>
       <pubDate>Mon, 04 May 2026 00:00:00 +0000</pubDate>
     </item>
     <item>
       <title>NeuralBench: A Unifying Framework to Benchmark NeuroAI Models</title>
       <link>https://ai.meta.com/research/publications/neuralbench-a-unifying-framework-to-benchmark-neuroai-models/</link>
-      <description>Hubert Banville, Stéphane d'Ascoli, Simon Dahan, Jérémy Rapin, Marlene Careil, Yohann Benchetrit, Jarod Levy, Saarang Panchavati, Antoine Ratouchniak, Mingfang (Lucy) Zhang, Elisa Cascardi, Katelyn Begany, Teon Brooks, Jean-Rémi King</description>
+      <description>Saarang Panchavati, Antoine Ratouchniak, Mingfang (Lucy) Zhang, Elisa Cascardi, Hubert Banville, Jarod Levy, Jean-Rémi King, Jérémy Rapin, Katelyn Begany, Marlene Careil, Simon Dahan, Stéphane d'Ascoli, Teon Brooks, Yohann Benchetrit</description>
       <guid isPermaLink="true">https://ai.meta.com/research/publications/neuralbench-a-unifying-framework-to-benchmark-neuroai-models/</guid>
       <pubDate>Wed, 06 May 2026 00:00:00 +0000</pubDate>
     </item>
