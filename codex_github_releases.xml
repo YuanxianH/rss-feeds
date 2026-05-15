@@ -7,7 +7,7 @@
     <docs>http://www.rssboard.org/rss-specification</docs>
     <generator>RSS Creator</generator>
     <language>zh-CN</language>
-    <lastBuildDate>Thu, 14 May 2026 23:55:08 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 15 May 2026 02:47:30 +0000</lastBuildDate>
     <item>
       <title>0.131.0-alpha.9</title>
       <link>https://github.com/openai/codex/releases/tag/rust-v0.131.0-alpha.9</link>
