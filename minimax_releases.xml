@@ -7,7 +7,7 @@
     <docs>http://www.rssboard.org/rss-specification</docs>
     <generator>RSS Creator</generator>
     <language>zh-CN</language>
-    <lastBuildDate>Wed, 20 May 2026 09:24:27 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 20 May 2026 12:21:01 +0000</lastBuildDate>
     <item>
       <title>MiniMax-Text-01</title>
       <link>https://huggingface.co/MiniMaxAI/MiniMax-Text-01</link>
@@ -25,7 +25,7 @@
     <item>
       <title>MiniMax-01</title>
       <link>https://github.com/MiniMax-AI/MiniMax-01</link>
-      <description>[GitHub Repo] | The official repo of MiniMax-Text-01 and MiniMax-VL-01, large-language-model &amp; vision-language-model based on Linear Attention | Language: Python | Stars: 3418 | Topics: large-language-models, llm, llms, minimax-text-01, minimax-vl-01, vision-language-model, vlm</description>
+      <description>[GitHub Repo] | The official repo of MiniMax-Text-01 and MiniMax-VL-01, large-language-model &amp; vision-language-model based on Linear Attention | Language: Python | Stars: 3419 | Topics: large-language-models, llm, llms, minimax-text-01, minimax-vl-01, vision-language-model, vlm</description>
       <guid isPermaLink="true">https://github.com/MiniMax-AI/MiniMax-01</guid>
       <pubDate>Tue, 14 Jan 2025 15:43:28 +0000</pubDate>
     </item>
@@ -179,7 +179,7 @@
     <item>
       <title>Mini-Agent</title>
       <link>https://github.com/MiniMax-AI/Mini-Agent</link>
-      <description>[GitHub Repo] | A minimal yet professional single agent demo project that showcases the core execution pipeline and production-grade features of agents. | Language: Python | Stars: 2639 | Topics: agent, llm, minimax</description>
+      <description>[GitHub Repo] | A minimal yet professional single agent demo project that showcases the core execution pipeline and production-grade features of agents. | Language: Python | Stars: 2640 | Topics: agent, llm, minimax</description>
       <guid isPermaLink="true">https://github.com/MiniMax-AI/Mini-Agent</guid>
       <pubDate>Fri, 31 Oct 2025 03:56:27 +0000</pubDate>
     </item>
@@ -298,7 +298,7 @@
     <item>
       <title>MiniMax-M2.7</title>
       <link>https://huggingface.co/MiniMaxAI/MiniMax-M2.7</link>
-      <description>[HuggingFace Model] | text-generation | Likes: 1132 | Tags: transformers, safetensors, minimax_m2, text-generation, conversational</description>
+      <description>[HuggingFace Model] | text-generation | Likes: 1133 | Tags: transformers, safetensors, minimax_m2, text-generation, conversational</description>
       <guid isPermaLink="true">https://huggingface.co/MiniMaxAI/MiniMax-M2.7</guid>
       <pubDate>Thu, 09 Apr 2026 03:37:12 +0000</pubDate>
     </item>
