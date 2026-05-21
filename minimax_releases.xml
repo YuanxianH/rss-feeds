@@ -7,7 +7,7 @@
     <docs>http://www.rssboard.org/rss-specification</docs>
     <generator>RSS Creator</generator>
     <language>zh-CN</language>
-    <lastBuildDate>Thu, 21 May 2026 21:24:29 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 21 May 2026 23:00:15 +0000</lastBuildDate>
     <item>
       <title>MiniMax-Text-01</title>
       <link>https://huggingface.co/MiniMaxAI/MiniMax-Text-01</link>
@@ -291,7 +291,7 @@
     <item>
       <title>MiniMax-M2.7</title>
       <link>https://github.com/MiniMax-AI/MiniMax-M2.7</link>
-      <description>[GitHub Repo] | Stars: 305</description>
+      <description>[GitHub Repo] | Stars: 306</description>
       <guid isPermaLink="true">https://github.com/MiniMax-AI/MiniMax-M2.7</guid>
       <pubDate>Thu, 09 Apr 2026 03:34:10 +0000</pubDate>
     </item>
