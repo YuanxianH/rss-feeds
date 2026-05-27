@@ -7,7 +7,7 @@
     <docs>http://www.rssboard.org/rss-specification</docs>
     <generator>RSS Creator</generator>
     <language>zh-CN</language>
-    <lastBuildDate>Wed, 27 May 2026 18:23:36 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 27 May 2026 20:59:58 +0000</lastBuildDate>
     <item>
       <title>Equi-normalization of Neural Networks | Facebook AI Research</title>
       <link>https://ai.meta.com/research/publications/equi-normalization-of-neural-networks/</link>
@@ -93,20 +93,6 @@
       <pubDate>Thu, 31 Oct 2019 00:00:00 +0000</pubDate>
     </item>
     <item>
-      <title>Learning Personalized Agents from Human Feedback</title>
-      <link>https://ai.meta.com/research/publications/learning-personalized-agents-from-human-feedback/</link>
-      <description>Kaiqu Liang, Xianjun Yang, Shaoliang Nie, Jaime Fernández Fisac, Shuyan Zhou, Julia Kruk, Lijuan Liu, Michael Zhang, Saghar Hosseini, Shengjie Bi, Shengyi Qian</description>
-      <guid isPermaLink="true">https://ai.meta.com/research/publications/learning-personalized-agents-from-human-feedback/</guid>
-      <pubDate>Thu, 26 Feb 2026 00:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>Unified Vision–Language Modeling via Concept Space Alignment</title>
-      <link>https://ai.meta.com/research/publications/unified-vision-language-modeling-via-concept-space-alignment/</link>
-      <description>Yifu Qiu, Holger Schwenk, Paul-Ambroise Duquenne</description>
-      <guid isPermaLink="true">https://ai.meta.com/research/publications/unified-vision-language-modeling-via-concept-space-alignment/</guid>
-      <pubDate>Fri, 27 Feb 2026 00:00:00 +0000</pubDate>
-    </item>
-    <item>
       <title>Omnilingual SONAR: Cross-Lingual and Cross-Modal Sentence Embeddings Bridging Massively Multilingual Text and Speech</title>
       <link>https://ai.meta.com/research/publications/omnilingual-sonar-cross-lingual-and-cross-modal-sentence-embeddings-bridging-massively-multilingual-text-and-speech/</link>
       <description>Omnilingual SONAR Team, Ioannis Tsiamas, Yen Meng, Vivek Iyer, Guillem Ramirez, Jaehyeong Jo, Alexandre Mourachko, Yu-An Chung, Artyom Kozhevnikov, Belen Alastruey, Christophe Ropers, David Dale, Holger Schwenk, João Maria Janeiro, Kevin Heffernan, Loic Barrault, Marta R. Costa-jussa, Paul-Ambroise Duquenne, Pere Lluís Huguet Cabot</description>
@@ -175,6 +161,20 @@
       <description>Corentin Bel, Linnea Evanson, Julien Gadonneix, Andrea Santos Revilla, Mingfang (Lucy) Zhang, Julie Bonnaire, Charlotte Caucheteux, Alexandre Défossez, Théo Desbordes, Pablo Diego-Simón, Shubh Khanna, Juliette Millet, Pierre Orhan, Saarang Panchavati, Antoine Ratouchniak, Alexis Thual, Hubert Jacob Banville, Jarod Levy, Jean Remi King, Josephine Raugel, Jérémy Rapin, Katelyn Begany, Marlene Careil, Simon Dahan, Sophia Houhamdi, Stéphane d'Ascoli, Teon Brooks, Yohann Benchetrit</description>
       <guid isPermaLink="true">https://ai.meta.com/research/publications/neuralset-a-high-performing-python-package-for-neuro-ai/</guid>
       <pubDate>Tue, 12 May 2026 00:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>GIM: Evaluating models via tasks that integrate multiple cognitive domains</title>
+      <link>https://ai.meta.com/research/publications/gim-evaluating-models-via-tasks-that-integrate-multiple-cognitive-domains/</link>
+      <description>Alexandre Rezende, Rohit Patel, Steven McClain</description>
+      <guid isPermaLink="true">https://ai.meta.com/research/publications/gim-evaluating-models-via-tasks-that-integrate-multiple-cognitive-domains/</guid>
+      <pubDate>Sun, 17 May 2026 00:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>EgoBabyVLM: Benchmarking Cross-Modal Learning from Naturalistic Egocentric Video Data</title>
+      <link>https://ai.meta.com/research/publications/egobabyvlm-benchmarking-cross-modal-learning-from-naturalistic-egocentric-video-data/</link>
+      <description>Alvin W. M. Tan, Nicolas Hamilakis, Manel Khentout, Sho Tsuji, Balázs Kégl, Michael C. Frank, Angel Villar Corrales, Charles-Eric Saint-James, Dongyan Lin, Emmanuel Dupoux, Jiayi Shen, Juan Pino, Mahi Luthra, Martin Gleize, Phillip Rust, Rashel Moritz, Sheila Krogh-Jespersen, Surya Parimi, Tom Fizycki, Vanessa Stark, Yosuke Higuchi, Youssef Benchekroun</description>
+      <guid isPermaLink="true">https://ai.meta.com/research/publications/egobabyvlm-benchmarking-cross-modal-learning-from-naturalistic-egocentric-video-data/</guid>
+      <pubDate>Tue, 19 May 2026 00:00:00 +0000</pubDate>
     </item>
   </channel>
 </rss>
