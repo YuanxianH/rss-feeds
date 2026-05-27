@@ -7,7 +7,7 @@
     <docs>http://www.rssboard.org/rss-specification</docs>
     <generator>RSS Creator</generator>
     <language>zh-CN</language>
-    <lastBuildDate>Wed, 27 May 2026 11:43:58 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 27 May 2026 15:31:08 +0000</lastBuildDate>
     <item>
       <title>MiniMax-Text-01</title>
       <link>https://huggingface.co/MiniMaxAI/MiniMax-Text-01</link>
@@ -81,7 +81,7 @@
     <item>
       <title>SynLogic</title>
       <link>https://github.com/MiniMax-AI/SynLogic</link>
-      <description>[GitHub Repo] | [NeurIPS 2025] The official repo of SynLogic: Synthesizing Verifiable Reasoning Data at Scale for Learning Logical Reasoning and Beyond | Language: Python | Stars: 200 | Topics: large-language-models, llms, logical-reasoning, synlogic</description>
+      <description>[GitHub Repo] | [NeurIPS 2025] The official repo of SynLogic: Synthesizing Verifiable Reasoning Data at Scale for Learning Logical Reasoning and Beyond | Language: Python | Stars: 201 | Topics: large-language-models, llms, logical-reasoning, synlogic</description>
       <guid isPermaLink="true">https://github.com/MiniMax-AI/SynLogic</guid>
       <pubDate>Fri, 23 May 2025 14:54:08 +0000</pubDate>
     </item>
@@ -158,14 +158,14 @@
     <item>
       <title>MiniMax-M2</title>
       <link>https://huggingface.co/MiniMaxAI/MiniMax-M2</link>
-      <description>[HuggingFace Model] | text-generation | Likes: 1494 | Tags: transformers, safetensors, minimax_m2, text-generation, conversational</description>
+      <description>[HuggingFace Model] | text-generation | Likes: 1495 | Tags: transformers, safetensors, minimax_m2, text-generation, conversational</description>
       <guid isPermaLink="true">https://huggingface.co/MiniMaxAI/MiniMax-M2</guid>
       <pubDate>Wed, 22 Oct 2025 13:45:10 +0000</pubDate>
     </item>
     <item>
       <title>MiniMax-M2</title>
       <link>https://github.com/MiniMax-AI/MiniMax-M2</link>
-      <description>[GitHub Repo] | MiniMax-M2, a model built for Max coding &amp; agentic workflows. | Stars: 2593 | Topics: large-language-models, llm</description>
+      <description>[GitHub Repo] | MiniMax-M2, a model built for Max coding &amp; agentic workflows. | Stars: 2594 | Topics: large-language-models, llm</description>
       <guid isPermaLink="true">https://github.com/MiniMax-AI/MiniMax-M2</guid>
       <pubDate>Sat, 25 Oct 2025 21:28:29 +0000</pubDate>
     </item>
@@ -179,7 +179,7 @@
     <item>
       <title>Mini-Agent</title>
       <link>https://github.com/MiniMax-AI/Mini-Agent</link>
-      <description>[GitHub Repo] | A minimal yet professional single agent demo project that showcases the core execution pipeline and production-grade features of agents. | Language: Python | Stars: 2664 | Topics: agent, llm, minimax</description>
+      <description>[GitHub Repo] | A minimal yet professional single agent demo project that showcases the core execution pipeline and production-grade features of agents. | Language: Python | Stars: 2665 | Topics: agent, llm, minimax</description>
       <guid isPermaLink="true">https://github.com/MiniMax-AI/Mini-Agent</guid>
       <pubDate>Fri, 31 Oct 2025 03:56:27 +0000</pubDate>
     </item>
@@ -277,7 +277,7 @@
     <item>
       <title>skills</title>
       <link>https://github.com/MiniMax-AI/skills</link>
-      <description>[GitHub Repo] | Language: C# | Stars: 12138</description>
+      <description>[GitHub Repo] | Language: C# | Stars: 12143</description>
       <guid isPermaLink="true">https://github.com/MiniMax-AI/skills</guid>
       <pubDate>Tue, 17 Mar 2026 07:19:25 +0000</pubDate>
     </item>
