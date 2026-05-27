@@ -7,7 +7,7 @@
     <docs>http://www.rssboard.org/rss-specification</docs>
     <generator>RSS Creator</generator>
     <language>zh-CN</language>
-    <lastBuildDate>Wed, 27 May 2026 20:59:58 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 27 May 2026 22:46:45 +0000</lastBuildDate>
     <item>
       <title>Equi-normalization of Neural Networks | Facebook AI Research</title>
       <link>https://ai.meta.com/research/publications/equi-normalization-of-neural-networks/</link>
@@ -93,13 +93,6 @@
       <pubDate>Thu, 31 Oct 2019 00:00:00 +0000</pubDate>
     </item>
     <item>
-      <title>Omnilingual SONAR: Cross-Lingual and Cross-Modal Sentence Embeddings Bridging Massively Multilingual Text and Speech</title>
-      <link>https://ai.meta.com/research/publications/omnilingual-sonar-cross-lingual-and-cross-modal-sentence-embeddings-bridging-massively-multilingual-text-and-speech/</link>
-      <description>Omnilingual SONAR Team, Ioannis Tsiamas, Yen Meng, Vivek Iyer, Guillem Ramirez, Jaehyeong Jo, Alexandre Mourachko, Yu-An Chung, Artyom Kozhevnikov, Belen Alastruey, Christophe Ropers, David Dale, Holger Schwenk, João Maria Janeiro, Kevin Heffernan, Loic Barrault, Marta R. Costa-jussa, Paul-Ambroise Duquenne, Pere Lluís Huguet Cabot</description>
-      <guid isPermaLink="true">https://ai.meta.com/research/publications/omnilingual-sonar-cross-lingual-and-cross-modal-sentence-embeddings-bridging-massively-multilingual-text-and-speech/</guid>
-      <pubDate>Tue, 17 Mar 2026 00:00:00 +0000</pubDate>
-    </item>
-    <item>
       <title>Omnilingual MT: Machine Translation for 1,600 Languages</title>
       <link>https://ai.meta.com/research/publications/omnilingual-mt-machine-translation-for-1600-languages/</link>
       <description>Omnilingual MT Team, Niyati Bafna, Ioannis Tsiamas, Mark Duppenthaler, Albert Ventayol-Boada, Alexandre Mourachko, Andrea Caciolai, Arina Turkatenko, Artyom Kozhevnikov, Belen Alastruey, Charles-Eric Saint-James, Chierh CHENG, Christophe Ropers, Cynthia Gao, David Dale, Edan Toledo, Eduardo Sánchez, Gabriel Mejia Gonzalez, Holger Schwenk, Jean Maillard, Joe Chuang, João Maria Janeiro, Kevin Heffernan, Marta R. Costa-jussa, Mary Williamson, Nate Ekberg, Paul-Ambroise Duquenne, Pere Lluís Huguet Cabot, Rashel Moritz, Shireen Yates, Surya Parimi</description>
@@ -175,6 +168,13 @@
       <description>Alvin W. M. Tan, Nicolas Hamilakis, Manel Khentout, Sho Tsuji, Balázs Kégl, Michael C. Frank, Angel Villar Corrales, Charles-Eric Saint-James, Dongyan Lin, Emmanuel Dupoux, Jiayi Shen, Juan Pino, Mahi Luthra, Martin Gleize, Phillip Rust, Rashel Moritz, Sheila Krogh-Jespersen, Surya Parimi, Tom Fizycki, Vanessa Stark, Yosuke Higuchi, Youssef Benchekroun</description>
       <guid isPermaLink="true">https://ai.meta.com/research/publications/egobabyvlm-benchmarking-cross-modal-learning-from-naturalistic-egocentric-video-data/</guid>
       <pubDate>Tue, 19 May 2026 00:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>Misalignment Between Backpropagation and the Hierarchy of Brain Responses to Images</title>
+      <link>https://ai.meta.com/research/publications/misalignment-between-backpropagation-and-the-hierarchy-of-brain-responses-to-images/</link>
+      <description>Valentin Wyart, Huy V. Vo, Jean Remi King, Josephine Raugel, Jérémy Rapin, Marc Szafraniec, Max Seitzer, Patrick Labatut, Piotr Bojanowski</description>
+      <guid isPermaLink="true">https://ai.meta.com/research/publications/misalignment-between-backpropagation-and-the-hierarchy-of-brain-responses-to-images/</guid>
+      <pubDate>Tue, 26 May 2026 00:00:00 +0000</pubDate>
     </item>
   </channel>
 </rss>
