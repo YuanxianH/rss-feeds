@@ -7,7 +7,7 @@
     <docs>http://www.rssboard.org/rss-specification</docs>
     <generator>RSS Creator</generator>
     <language>zh-CN</language>
-    <lastBuildDate>Thu, 28 May 2026 16:51:41 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 28 May 2026 19:34:09 +0000</lastBuildDate>
     <item>
       <title>Equi-normalization of Neural Networks | Facebook AI Research</title>
       <link>https://ai.meta.com/research/publications/equi-normalization-of-neural-networks/</link>
@@ -93,13 +93,6 @@
       <pubDate>Thu, 31 Oct 2019 00:00:00 +0000</pubDate>
     </item>
     <item>
-      <title>Omnilingual MT: Machine Translation for 1,600 Languages</title>
-      <link>https://ai.meta.com/research/publications/omnilingual-mt-machine-translation-for-1600-languages/</link>
-      <description>Omnilingual MT Team, Niyati Bafna, Ioannis Tsiamas, Mark Duppenthaler, Albert Ventayol-Boada, Alexandre Mourachko, Andrea Caciolai, Arina Turkatenko, Artyom Kozhevnikov, Belen Alastruey, Charles-Eric Saint-James, Chierh CHENG, Christophe Ropers, Cynthia Gao, David Dale, Edan Toledo, Eduardo Sánchez, Gabriel Mejia Gonzalez, Holger Schwenk, Jean Maillard, Joe Chuang, João Maria Janeiro, Kevin Heffernan, Marta R. Costa-jussa, Mary Williamson, Nate Ekberg, Paul-Ambroise Duquenne, Pere Lluís Huguet Cabot, Rashel Moritz, Shireen Yates, Surya Parimi</description>
-      <guid isPermaLink="true">https://ai.meta.com/research/publications/omnilingual-mt-machine-translation-for-1600-languages/</guid>
-      <pubDate>Tue, 17 Mar 2026 00:00:00 +0000</pubDate>
-    </item>
-    <item>
       <title>HyperAgents</title>
       <link>https://ai.meta.com/research/publications/hyperagents/</link>
       <description>Jenny Zhang, Bingchen Zhao, Jakob Foerster, Sam Devlin, Tatiana Shavrina, Winnie Yang</description>
@@ -175,6 +168,13 @@
       <description>Valentin Wyart, Huy V. Vo, Jean Remi King, Josephine Raugel, Jérémy Rapin, Marc Szafraniec, Max Seitzer, Patrick Labatut, Piotr Bojanowski</description>
       <guid isPermaLink="true">https://ai.meta.com/research/publications/misalignment-between-backpropagation-and-the-hierarchy-of-brain-responses-to-images/</guid>
       <pubDate>Tue, 26 May 2026 00:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>AutoformBot: Formalizing Mathematics at Scale</title>
+      <link>https://ai.meta.com/research/publications/autoformbot-formalizing-mathematics-at-scale/</link>
+      <description>Amaury Hayat, Ahmad Rammal, Charles Arnal, Julia Kempe, Niket Patel, Remi Munos, Vivien Cabannes</description>
+      <guid isPermaLink="true">https://ai.meta.com/research/publications/autoformbot-formalizing-mathematics-at-scale/</guid>
+      <pubDate>Wed, 27 May 2026 00:00:00 +0000</pubDate>
     </item>
   </channel>
 </rss>
