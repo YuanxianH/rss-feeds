@@ -7,7 +7,7 @@
     <docs>http://www.rssboard.org/rss-specification</docs>
     <generator>RSS Creator</generator>
     <language>zh-CN</language>
-    <lastBuildDate>Thu, 28 May 2026 04:03:27 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 28 May 2026 08:39:43 +0000</lastBuildDate>
     <item>
       <title>MiniMax-Text-01</title>
       <link>https://huggingface.co/MiniMaxAI/MiniMax-Text-01</link>
@@ -81,7 +81,7 @@
     <item>
       <title>SynLogic</title>
       <link>https://github.com/MiniMax-AI/SynLogic</link>
-      <description>[GitHub Repo] | [NeurIPS 2025] The official repo of SynLogic: Synthesizing Verifiable Reasoning Data at Scale for Learning Logical Reasoning and Beyond | Language: Python | Stars: 201 | Topics: large-language-models, llms, logical-reasoning, synlogic</description>
+      <description>[GitHub Repo] | [NeurIPS 2025] The official repo of SynLogic: Synthesizing Verifiable Reasoning Data at Scale for Learning Logical Reasoning and Beyond | Language: Python | Stars: 202 | Topics: large-language-models, llms, logical-reasoning, synlogic</description>
       <guid isPermaLink="true">https://github.com/MiniMax-AI/SynLogic</guid>
       <pubDate>Fri, 23 May 2025 14:54:08 +0000</pubDate>
     </item>
@@ -179,7 +179,7 @@
     <item>
       <title>Mini-Agent</title>
       <link>https://github.com/MiniMax-AI/Mini-Agent</link>
-      <description>[GitHub Repo] | A minimal yet professional single agent demo project that showcases the core execution pipeline and production-grade features of agents. | Language: Python | Stars: 2668 | Topics: agent, llm, minimax</description>
+      <description>[GitHub Repo] | A minimal yet professional single agent demo project that showcases the core execution pipeline and production-grade features of agents. | Language: Python | Stars: 2671 | Topics: agent, llm, minimax</description>
       <guid isPermaLink="true">https://github.com/MiniMax-AI/Mini-Agent</guid>
       <pubDate>Fri, 31 Oct 2025 03:56:27 +0000</pubDate>
     </item>
@@ -277,21 +277,21 @@
     <item>
       <title>skills</title>
       <link>https://github.com/MiniMax-AI/skills</link>
-      <description>[GitHub Repo] | Language: C# | Stars: 12158</description>
+      <description>[GitHub Repo] | Language: C# | Stars: 12168</description>
       <guid isPermaLink="true">https://github.com/MiniMax-AI/skills</guid>
       <pubDate>Tue, 17 Mar 2026 07:19:25 +0000</pubDate>
     </item>
     <item>
       <title>cli</title>
       <link>https://github.com/MiniMax-AI/cli</link>
-      <description>[GitHub Repo] | Generate text, images, video, speech, and music by MiniMax. | Language: TypeScript | Stars: 1819 | Topics: ai</description>
+      <description>[GitHub Repo] | Generate text, images, video, speech, and music by MiniMax. | Language: TypeScript | Stars: 1821 | Topics: ai</description>
       <guid isPermaLink="true">https://github.com/MiniMax-AI/cli</guid>
       <pubDate>Wed, 25 Mar 2026 15:34:45 +0000</pubDate>
     </item>
     <item>
       <title>MiniMax-M2.7</title>
       <link>https://github.com/MiniMax-AI/MiniMax-M2.7</link>
-      <description>[GitHub Repo] | Stars: 314</description>
+      <description>[GitHub Repo] | Stars: 315</description>
       <guid isPermaLink="true">https://github.com/MiniMax-AI/MiniMax-M2.7</guid>
       <pubDate>Thu, 09 Apr 2026 03:34:10 +0000</pubDate>
     </item>
