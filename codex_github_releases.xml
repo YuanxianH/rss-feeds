@@ -7,14 +7,7 @@
     <docs>http://www.rssboard.org/rss-specification</docs>
     <generator>RSS Creator</generator>
     <language>zh-CN</language>
-    <lastBuildDate>Thu, 04 Jun 2026 19:59:56 +0000</lastBuildDate>
-    <item>
-      <title>rust-v0.137.0-alpha.1</title>
-      <link>https://github.com/openai/codex/releases/tag/rust-v0.137.0-alpha.1</link>
-      <description>Release 0.137.0-alpha.1</description>
-      <guid isPermaLink="false">tag:github.com,2008:Repository/965415649/rust-v0.137.0-alpha.1</guid>
-      <pubDate>Tue, 02 Jun 2026 16:29:35 +0000</pubDate>
-    </item>
+    <lastBuildDate>Thu, 04 Jun 2026 21:49:15 +0000</lastBuildDate>
     <item>
       <title>rust-v0.137.0-alpha.2</title>
       <link>https://github.com/openai/codex/releases/tag/rust-v0.137.0-alpha.2</link>
@@ -588,11 +581,18 @@ fix: main
       <pubDate>Thu, 04 Jun 2026 17:28:28 +0000</pubDate>
     </item>
     <item>
-      <title>rust-v0.138.0-alpha.3</title>
+      <title>0.138.0-alpha.3</title>
       <link>https://github.com/openai/codex/releases/tag/rust-v0.138.0-alpha.3</link>
       <description>Release 0.138.0-alpha.3</description>
       <guid isPermaLink="false">tag:github.com,2008:Repository/965415649/rust-v0.138.0-alpha.3</guid>
-      <pubDate>Thu, 04 Jun 2026 19:27:24 +0000</pubDate>
+      <pubDate>Thu, 04 Jun 2026 20:20:19 +0000</pubDate>
+    </item>
+    <item>
+      <title>rust-v0.138.0-alpha.4</title>
+      <link>https://github.com/openai/codex/releases/tag/rust-v0.138.0-alpha.4</link>
+      <description>Release 0.138.0-alpha.4</description>
+      <guid isPermaLink="false">tag:github.com,2008:Repository/965415649/rust-v0.138.0-alpha.4</guid>
+      <pubDate>Thu, 04 Jun 2026 21:01:44 +0000</pubDate>
     </item>
   </channel>
 </rss>
