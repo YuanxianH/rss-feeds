@@ -7,7 +7,14 @@
     <docs>http://www.rssboard.org/rss-specification</docs>
     <generator>RSS Creator</generator>
     <language>zh-CN</language>
-    <lastBuildDate>Thu, 04 Jun 2026 11:49:05 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 04 Jun 2026 14:50:25 +0000</lastBuildDate>
+    <item>
+      <title>A second life for EV batteries, clean energy for communities</title>
+      <link>https://waymo.com/blog/2026/06/b2u-partnership</link>
+      <description>Today, we’re proud to announce our new EV battery repurposing program in partnership with B2U Storage Solutions. This strategic collaboration ensures that once our batteries are retired from our all-electric fleet, they begin a vital second chapter: powering the local electricity grids.</description>
+      <guid isPermaLink="true">https://waymo.com/blog/2026/06/b2u-partnership</guid>
+      <pubDate>Thu, 04 Jun 2026 00:00:00 +0000</pubDate>
+    </item>
     <item>
       <title>Partnering with Waze to help cities patch their potholes</title>
       <link>https://waymo.com/blog/2026/04/partnering-with-waze-to-help-cities-patch-their-potholes</link>
@@ -356,13 +363,6 @@
 </description>
       <guid isPermaLink="true">https://waymo.com/blog/2020/05/vectornet</guid>
       <pubDate>Thu, 14 May 2020 00:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>Catching up with the Waymo Via trucking team</title>
-      <link>https://waymo.com/blog/2020/05/catching-up-with-waymo-via-trucking-team</link>
-      <description>There’s a lot happening with Waymo Via trucking these days. Since we kicked off our goods delivery efforts in 2017, our self-driving trucks have been fixtures on freeways across California and Arizona, our technology has become even more advanced, and our trucking team has grown rapidly. </description>
-      <guid isPermaLink="true">https://waymo.com/blog/2020/05/catching-up-with-waymo-via-trucking-team</guid>
-      <pubDate>Fri, 08 May 2020 00:00:00 +0000</pubDate>
     </item>
   </channel>
 </rss>
