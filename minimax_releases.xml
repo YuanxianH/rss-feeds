@@ -7,7 +7,7 @@
     <docs>http://www.rssboard.org/rss-specification</docs>
     <generator>RSS Creator</generator>
     <language>zh-CN</language>
-    <lastBuildDate>Fri, 05 Jun 2026 15:50:07 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 05 Jun 2026 17:50:04 +0000</lastBuildDate>
     <item>
       <title>MiniMax-Text-01</title>
       <link>https://huggingface.co/MiniMaxAI/MiniMax-Text-01</link>
@@ -193,7 +193,7 @@
     <item>
       <title>MiniMax-Coding-Plan-MCP</title>
       <link>https://github.com/MiniMax-AI/MiniMax-Coding-Plan-MCP</link>
-      <description>[GitHub Repo] | Specialized MiniMax Model Context Protocol (MCP) server designed for coding-plan users, featuring AI-powered search and vision analysis APIs optimized for code development workflows | Language: Python | Stars: 91 | Topics: coding-plan, mcp, mcp-server, mcp-tools, understand-image, web-search</description>
+      <description>[GitHub Repo] | Specialized MiniMax Model Context Protocol (MCP) server designed for coding-plan users, featuring AI-powered search and vision analysis APIs optimized for code development workflows | Language: Python | Stars: 92 | Topics: coding-plan, mcp, mcp-server, mcp-tools, understand-image, web-search</description>
       <guid isPermaLink="true">https://github.com/MiniMax-AI/MiniMax-Coding-Plan-MCP</guid>
       <pubDate>Thu, 20 Nov 2025 04:48:05 +0000</pubDate>
     </item>
@@ -277,7 +277,7 @@
     <item>
       <title>skills</title>
       <link>https://github.com/MiniMax-AI/skills</link>
-      <description>[GitHub Repo] | Language: C# | Stars: 12390</description>
+      <description>[GitHub Repo] | Language: C# | Stars: 12391</description>
       <guid isPermaLink="true">https://github.com/MiniMax-AI/skills</guid>
       <pubDate>Tue, 17 Mar 2026 07:19:25 +0000</pubDate>
     </item>
@@ -305,7 +305,7 @@
     <item>
       <title>MiniMax-M3</title>
       <link>https://github.com/MiniMax-AI/MiniMax-M3</link>
-      <description>[GitHub Repo] | Stars: 141</description>
+      <description>[GitHub Repo] | Stars: 144</description>
       <guid isPermaLink="true">https://github.com/MiniMax-AI/MiniMax-M3</guid>
       <pubDate>Mon, 01 Jun 2026 06:05:17 +0000</pubDate>
     </item>
