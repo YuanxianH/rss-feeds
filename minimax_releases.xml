@@ -7,21 +7,7 @@
     <docs>http://www.rssboard.org/rss-specification</docs>
     <generator>RSS Creator</generator>
     <language>zh-CN</language>
-    <lastBuildDate>Mon, 08 Jun 2026 20:09:04 +0000</lastBuildDate>
-    <item>
-      <title>MiniMax-Text-01</title>
-      <link>https://huggingface.co/MiniMaxAI/MiniMax-Text-01</link>
-      <description>[HuggingFace Model] | text-generation | Likes: 656 | Tags: safetensors, minimax_text_01, text-generation, conversational, custom_code</description>
-      <guid isPermaLink="true">https://huggingface.co/MiniMaxAI/MiniMax-Text-01</guid>
-      <pubDate>Sun, 12 Jan 2025 13:48:31 +0000</pubDate>
-    </item>
-    <item>
-      <title>MiniMax-VL-01</title>
-      <link>https://huggingface.co/MiniMaxAI/MiniMax-VL-01</link>
-      <description>[HuggingFace Model] | image-text-to-text | Likes: 285 | Tags: safetensors, minimax_vl_01, image-text-to-text, conversational, custom_code</description>
-      <guid isPermaLink="true">https://huggingface.co/MiniMaxAI/MiniMax-VL-01</guid>
-      <pubDate>Sun, 12 Jan 2025 15:02:13 +0000</pubDate>
-    </item>
+    <lastBuildDate>Mon, 08 Jun 2026 22:23:23 +0000</lastBuildDate>
     <item>
       <title>MiniMax-01</title>
       <link>https://github.com/MiniMax-AI/MiniMax-01</link>
@@ -86,48 +72,6 @@
       <pubDate>Fri, 23 May 2025 14:54:08 +0000</pubDate>
     </item>
     <item>
-      <title>SynLogic-32B</title>
-      <link>https://huggingface.co/MiniMaxAI/SynLogic-32B</link>
-      <description>[HuggingFace Model] | text-generation | Likes: 17 | Tags: transformers, safetensors, qwen2, text-generation, LLM</description>
-      <guid isPermaLink="true">https://huggingface.co/MiniMaxAI/SynLogic-32B</guid>
-      <pubDate>Fri, 30 May 2025 12:06:34 +0000</pubDate>
-    </item>
-    <item>
-      <title>SynLogic-Mix-3-32B</title>
-      <link>https://huggingface.co/MiniMaxAI/SynLogic-Mix-3-32B</link>
-      <description>[HuggingFace Model] | text-generation | Likes: 20 | Tags: transformers, safetensors, qwen2, text-generation, LLM</description>
-      <guid isPermaLink="true">https://huggingface.co/MiniMaxAI/SynLogic-Mix-3-32B</guid>
-      <pubDate>Fri, 30 May 2025 13:32:06 +0000</pubDate>
-    </item>
-    <item>
-      <title>SynLogic-7B</title>
-      <link>https://huggingface.co/MiniMaxAI/SynLogic-7B</link>
-      <description>[HuggingFace Model] | text-generation | Likes: 28 | Tags: transformers, safetensors, qwen2, text-generation, LLM</description>
-      <guid isPermaLink="true">https://huggingface.co/MiniMaxAI/SynLogic-7B</guid>
-      <pubDate>Tue, 03 Jun 2025 03:00:03 +0000</pubDate>
-    </item>
-    <item>
-      <title>MiniMax-Text-01-hf</title>
-      <link>https://huggingface.co/MiniMaxAI/MiniMax-Text-01-hf</link>
-      <description>[HuggingFace Model] | text-generation | Likes: 11 | Tags: transformers, safetensors, minimax, text-generation, moe</description>
-      <guid isPermaLink="true">https://huggingface.co/MiniMaxAI/MiniMax-Text-01-hf</guid>
-      <pubDate>Tue, 03 Jun 2025 09:38:42 +0000</pubDate>
-    </item>
-    <item>
-      <title>MiniMax-M1-40k</title>
-      <link>https://huggingface.co/MiniMaxAI/MiniMax-M1-40k</link>
-      <description>[HuggingFace Model] | text-generation | Likes: 185 | Tags: transformers, safetensors, minimax_m1, text-generation, vllm</description>
-      <guid isPermaLink="true">https://huggingface.co/MiniMaxAI/MiniMax-M1-40k</guid>
-      <pubDate>Thu, 05 Jun 2025 08:42:49 +0000</pubDate>
-    </item>
-    <item>
-      <title>MiniMax-M1-80k</title>
-      <link>https://huggingface.co/MiniMaxAI/MiniMax-M1-80k</link>
-      <description>[HuggingFace Model] | text-generation | Likes: 692 | Tags: transformers, safetensors, minimax_m1, text-generation, vllm</description>
-      <guid isPermaLink="true">https://huggingface.co/MiniMaxAI/MiniMax-M1-80k</guid>
-      <pubDate>Fri, 13 Jun 2025 08:21:14 +0000</pubDate>
-    </item>
-    <item>
       <title>MiniMax-M1</title>
       <link>https://github.com/MiniMax-AI/MiniMax-M1</link>
       <description>[GitHub Repo] | MiniMax-M1, the world's first open-weight, large-scale hybrid-attention reasoning model. | Language: Python | Stars: 3153 | Topics: large-language-models, llm, minimax-m1, reasoning-models</description>
@@ -135,32 +79,11 @@
       <pubDate>Sat, 14 Jun 2025 08:54:06 +0000</pubDate>
     </item>
     <item>
-      <title>MiniMax-M1-80k-hf</title>
-      <link>https://huggingface.co/MiniMaxAI/MiniMax-M1-80k-hf</link>
-      <description>[HuggingFace Model] | text-generation | Likes: 8 | Tags: transformers, safetensors, minimax, text-generation, vllm</description>
-      <guid isPermaLink="true">https://huggingface.co/MiniMaxAI/MiniMax-M1-80k-hf</guid>
-      <pubDate>Tue, 01 Jul 2025 16:52:58 +0000</pubDate>
-    </item>
-    <item>
-      <title>MiniMax-M1-40k-hf</title>
-      <link>https://huggingface.co/MiniMaxAI/MiniMax-M1-40k-hf</link>
-      <description>[HuggingFace Model] | text-generation | Likes: 12 | Tags: transformers, safetensors, minimax, text-generation, vllm</description>
-      <guid isPermaLink="true">https://huggingface.co/MiniMaxAI/MiniMax-M1-40k-hf</guid>
-      <pubDate>Tue, 01 Jul 2025 16:56:51 +0000</pubDate>
-    </item>
-    <item>
       <title>MiniMax-Hackathon</title>
       <link>https://github.com/MiniMax-AI/MiniMax-Hackathon</link>
       <description>[GitHub Repo] | Stars: 4</description>
       <guid isPermaLink="true">https://github.com/MiniMax-AI/MiniMax-Hackathon</guid>
       <pubDate>Tue, 23 Sep 2025 05:43:06 +0000</pubDate>
-    </item>
-    <item>
-      <title>MiniMax-M2</title>
-      <link>https://huggingface.co/MiniMaxAI/MiniMax-M2</link>
-      <description>[HuggingFace Model] | text-generation | Likes: 1495 | Tags: transformers, safetensors, minimax_m2, text-generation, conversational</description>
-      <guid isPermaLink="true">https://huggingface.co/MiniMaxAI/MiniMax-M2</guid>
-      <pubDate>Wed, 22 Oct 2025 13:45:10 +0000</pubDate>
     </item>
     <item>
       <title>MiniMax-M2</title>
@@ -212,34 +135,6 @@
       <pubDate>Thu, 11 Dec 2025 10:32:23 +0000</pubDate>
     </item>
     <item>
-      <title>VTP-Small-f16d64</title>
-      <link>https://huggingface.co/MiniMaxAI/VTP-Small-f16d64</link>
-      <description>[HuggingFace Model] | image-feature-extraction | Likes: 14 | Tags: transformers, safetensors, vtp, image-feature-extraction, en</description>
-      <guid isPermaLink="true">https://huggingface.co/MiniMaxAI/VTP-Small-f16d64</guid>
-      <pubDate>Tue, 16 Dec 2025 05:06:02 +0000</pubDate>
-    </item>
-    <item>
-      <title>VTP-Base-f16d64</title>
-      <link>https://huggingface.co/MiniMaxAI/VTP-Base-f16d64</link>
-      <description>[HuggingFace Model] | image-feature-extraction | Likes: 20 | Tags: transformers, safetensors, vtp, image-feature-extraction, en</description>
-      <guid isPermaLink="true">https://huggingface.co/MiniMaxAI/VTP-Base-f16d64</guid>
-      <pubDate>Tue, 16 Dec 2025 05:25:29 +0000</pubDate>
-    </item>
-    <item>
-      <title>VTP-Large-f16d64</title>
-      <link>https://huggingface.co/MiniMaxAI/VTP-Large-f16d64</link>
-      <description>[HuggingFace Model] | image-feature-extraction | Likes: 15 | Tags: transformers, safetensors, vtp, image-feature-extraction, en</description>
-      <guid isPermaLink="true">https://huggingface.co/MiniMaxAI/VTP-Large-f16d64</guid>
-      <pubDate>Tue, 16 Dec 2025 05:27:29 +0000</pubDate>
-    </item>
-    <item>
-      <title>MiniMax-M2.1</title>
-      <link>https://huggingface.co/MiniMaxAI/MiniMax-M2.1</link>
-      <description>[HuggingFace Model] | text-generation | Likes: 1352 | Tags: transformers, safetensors, minimax_m2, text-generation, conversational</description>
-      <guid isPermaLink="true">https://huggingface.co/MiniMaxAI/MiniMax-M2.1</guid>
-      <pubDate>Sat, 20 Dec 2025 05:45:05 +0000</pubDate>
-    </item>
-    <item>
       <title>MiniMax-M2.1</title>
       <link>https://github.com/MiniMax-AI/MiniMax-M2.1</link>
       <description>[GitHub Repo] | MiniMax M2.1, a SOTA model for real-world dev &amp; agents. | Stars: 544 | Topics: agent, agentic-ai, ai-coding-models, large-language-models, llm</description>
@@ -252,13 +147,6 @@
       <description>[GitHub Repo] | Language: Python | Stars: 36</description>
       <guid isPermaLink="true">https://github.com/MiniMax-AI/mini-vela</guid>
       <pubDate>Thu, 15 Jan 2026 08:58:19 +0000</pubDate>
-    </item>
-    <item>
-      <title>MiniMax-M2.5</title>
-      <link>https://huggingface.co/MiniMaxAI/MiniMax-M2.5</link>
-      <description>[HuggingFace Model] | text-generation | Likes: 1493 | Tags: transformers, safetensors, minimax_m2, text-generation, conversational</description>
-      <guid isPermaLink="true">https://huggingface.co/MiniMaxAI/MiniMax-M2.5</guid>
-      <pubDate>Thu, 12 Feb 2026 06:05:24 +0000</pubDate>
     </item>
     <item>
       <title>MiniMax-M2.5</title>
@@ -296,16 +184,9 @@
       <pubDate>Thu, 09 Apr 2026 03:34:10 +0000</pubDate>
     </item>
     <item>
-      <title>MiniMax-M2.7</title>
-      <link>https://huggingface.co/MiniMaxAI/MiniMax-M2.7</link>
-      <description>[HuggingFace Model] | text-generation | Likes: 1195 | Tags: transformers, safetensors, minimax_m2, text-generation, conversational</description>
-      <guid isPermaLink="true">https://huggingface.co/MiniMaxAI/MiniMax-M2.7</guid>
-      <pubDate>Thu, 09 Apr 2026 03:37:12 +0000</pubDate>
-    </item>
-    <item>
       <title>MiniMax-M3</title>
       <link>https://github.com/MiniMax-AI/MiniMax-M3</link>
-      <description>[GitHub Repo] | Stars: 175</description>
+      <description>[GitHub Repo] | Stars: 176</description>
       <guid isPermaLink="true">https://github.com/MiniMax-AI/MiniMax-M3</guid>
       <pubDate>Mon, 01 Jun 2026 06:05:17 +0000</pubDate>
     </item>
