@@ -7,31 +7,7 @@
     <docs>http://www.rssboard.org/rss-specification</docs>
     <generator>RSS Creator</generator>
     <language>zh-CN</language>
-    <lastBuildDate>Tue, 09 Jun 2026 12:33:02 +0000</lastBuildDate>
-    <item>
-      <title>Gemma 4: Byte for byte, the most capable open models</title>
-      <link>https://blog.google/innovation-and-ai/technology/developers-tools/gemma-4/</link>
-      <guid isPermaLink="true">https://blog.google/innovation-and-ai/technology/developers-tools/gemma-4/</guid>
-      <pubDate>Thu, 09 Apr 2026 00:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>Gemini Robotics-ER 1.6: Powering real-world robotics tasks through enhanced embodied reasoning</title>
-      <link>https://deepmind.google/blog/gemini-robotics-er-1-6/</link>
-      <guid isPermaLink="true">https://deepmind.google/blog/gemini-robotics-er-1-6/</guid>
-      <pubDate>Thu, 09 Apr 2026 00:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>Gemini 3.1 Flash TTS: the next generation of expressive AI speech</title>
-      <link>https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-3-1-flash-tts</link>
-      <guid isPermaLink="true">https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-3-1-flash-tts</guid>
-      <pubDate>Thu, 09 Apr 2026 00:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>Partnering with industry leaders to accelerate AI transformation</title>
-      <link>https://deepmind.google/blog/partnering-with-industry-leaders-to-accelerate-ai-transformation/</link>
-      <guid isPermaLink="true">https://deepmind.google/blog/partnering-with-industry-leaders-to-accelerate-ai-transformation/</guid>
-      <pubDate>Thu, 09 Apr 2026 00:00:00 +0000</pubDate>
-    </item>
+    <lastBuildDate>Tue, 09 Jun 2026 15:51:31 +0000</lastBuildDate>
     <item>
       <title>Decoupled DiLoCo: A new frontier for resilient, distributed AI training</title>
       <link>https://deepmind.google/blog/decoupled-diloco/</link>
@@ -75,9 +51,9 @@
       <pubDate>Sat, 09 May 2026 00:00:00 +0000</pubDate>
     </item>
     <item>
-      <title>Opening new paths in aging research</title>
-      <link>https://deepmind.google/blog/opening-new-paths-in-aging-research/</link>
-      <guid isPermaLink="true">https://deepmind.google/blog/opening-new-paths-in-aging-research/</guid>
+      <title>Uniting biological toolkits for a new approach to ALS</title>
+      <link>https://deepmind.google/blog/uniting-biological-toolkits-for-a-new-approach-to-als/</link>
+      <guid isPermaLink="true">https://deepmind.google/blog/uniting-biological-toolkits-for-a-new-approach-to-als/</guid>
       <pubDate>Sat, 09 May 2026 00:00:00 +0000</pubDate>
     </item>
     <item>
@@ -99,9 +75,9 @@
       <pubDate>Sat, 09 May 2026 00:00:00 +0000</pubDate>
     </item>
     <item>
-      <title>Uniting biological toolkits for a new approach to ALS</title>
-      <link>https://deepmind.google/blog/uniting-biological-toolkits-for-a-new-approach-to-als/</link>
-      <guid isPermaLink="true">https://deepmind.google/blog/uniting-biological-toolkits-for-a-new-approach-to-als/</guid>
+      <title>Opening new paths in aging research</title>
+      <link>https://deepmind.google/blog/opening-new-paths-in-aging-research/</link>
+      <guid isPermaLink="true">https://deepmind.google/blog/opening-new-paths-in-aging-research/</guid>
       <pubDate>Sat, 09 May 2026 00:00:00 +0000</pubDate>
     </item>
     <item>
@@ -151,6 +127,30 @@
       <link>https://deepmind.google/blog/strengthening-singapores-ai-future-a-new-national-partnership/</link>
       <guid isPermaLink="true">https://deepmind.google/blog/strengthening-singapores-ai-future-a-new-national-partnership/</guid>
       <pubDate>Sat, 09 May 2026 00:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>Introducing Gemma 4 12B: a unified, encoder-free multimodal model</title>
+      <link>https://blog.google/innovation-and-ai/technology/developers-tools/introducing-gemma-4-12b/?utm_source=deepmind.google&amp;utm_medium=referral&amp;utm_campaign=gdm&amp;utm_content=</link>
+      <guid isPermaLink="true">https://blog.google/innovation-and-ai/technology/developers-tools/introducing-gemma-4-12b/?utm_source=deepmind.google&amp;utm_medium=referral&amp;utm_campaign=gdm&amp;utm_content=</guid>
+      <pubDate>Tue, 09 Jun 2026 00:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>Powering the future of robotics in Europe</title>
+      <link>https://blog.google/topics/google-europe/powering-the-future-of-robotics-in-europe/?utm_source=deepmind.google&amp;utm_medium=referral&amp;utm_campaign=gdm&amp;utm_content=</link>
+      <guid isPermaLink="true">https://blog.google/topics/google-europe/powering-the-future-of-robotics-in-europe/?utm_source=deepmind.google&amp;utm_medium=referral&amp;utm_campaign=gdm&amp;utm_content=</guid>
+      <pubDate>Tue, 09 Jun 2026 00:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>Measuring the impact of learning with AI in Sierra Leone and beyond</title>
+      <link>https://deepmind.google/blog/measuring-the-impact-of-learning-with-ai-in-sierra-leone-and-beyond/</link>
+      <guid isPermaLink="true">https://deepmind.google/blog/measuring-the-impact-of-learning-with-ai-in-sierra-leone-and-beyond/</guid>
+      <pubDate>Tue, 09 Jun 2026 00:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>Fluid, natural voice translation with Gemini 3.5 Live Translate</title>
+      <link>https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-live-3-5-translate/?utm_source=deepmind.google&amp;utm_medium=referral&amp;utm_campaign=gdm&amp;utm_content=</link>
+      <guid isPermaLink="true">https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-live-3-5-translate/?utm_source=deepmind.google&amp;utm_medium=referral&amp;utm_campaign=gdm&amp;utm_content=</guid>
+      <pubDate>Tue, 09 Jun 2026 00:00:00 +0000</pubDate>
     </item>
     <item>
       <title>Introducing Gemini Omni</title>
