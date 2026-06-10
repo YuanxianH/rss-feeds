@@ -7,14 +7,7 @@
     <docs>http://www.rssboard.org/rss-specification</docs>
     <generator>RSS Creator</generator>
     <language>zh-CN</language>
-    <lastBuildDate>Wed, 10 Jun 2026 16:32:57 +0000</lastBuildDate>
-    <item>
-      <title>0.138.0-alpha.7</title>
-      <link>https://github.com/openai/codex/releases/tag/rust-v0.138.0-alpha.7</link>
-      <description>Release 0.138.0-alpha.7</description>
-      <guid isPermaLink="false">tag:github.com,2008:Repository/965415649/rust-v0.138.0-alpha.7</guid>
-      <pubDate>Mon, 08 Jun 2026 14:50:10 +0000</pubDate>
-    </item>
+    <lastBuildDate>Wed, 10 Jun 2026 19:32:01 +0000</lastBuildDate>
     <item>
       <title>0.138.0-alpha.8</title>
       <link>https://github.com/openai/codex/releases/tag/rust-v0.138.0-alpha.8</link>
@@ -679,6 +672,13 @@ Preserve cloud requirements across TUI thread resets
       <description>Release 0.140.0-alpha.3</description>
       <guid isPermaLink="false">tag:github.com,2008:Repository/965415649/rust-v0.140.0-alpha.3</guid>
       <pubDate>Wed, 10 Jun 2026 16:16:59 +0000</pubDate>
+    </item>
+    <item>
+      <title>rust-v0.140.0-alpha.4</title>
+      <link>https://github.com/openai/codex/releases/tag/rust-v0.140.0-alpha.4</link>
+      <description>Release 0.140.0-alpha.4</description>
+      <guid isPermaLink="false">tag:github.com,2008:Repository/965415649/rust-v0.140.0-alpha.4</guid>
+      <pubDate>Wed, 10 Jun 2026 18:40:19 +0000</pubDate>
     </item>
   </channel>
 </rss>

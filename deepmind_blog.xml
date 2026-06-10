@@ -7,13 +7,7 @@
     <docs>http://www.rssboard.org/rss-specification</docs>
     <generator>RSS Creator</generator>
     <language>zh-CN</language>
-    <lastBuildDate>Wed, 10 Jun 2026 16:32:42 +0000</lastBuildDate>
-    <item>
-      <title>Decoupled DiLoCo: A new frontier for resilient, distributed AI training</title>
-      <link>https://deepmind.google/blog/decoupled-diloco/</link>
-      <guid isPermaLink="true">https://deepmind.google/blog/decoupled-diloco/</guid>
-      <pubDate>Fri, 10 Apr 2026 00:00:00 +0000</pubDate>
-    </item>
+    <lastBuildDate>Wed, 10 Jun 2026 19:31:45 +0000</lastBuildDate>
     <item>
       <title>Announcing our partnership with the Republic of Korea</title>
       <link>https://deepmind.google/blog/announcing-our-partnership-with-the-republic-of-korea/</link>
@@ -45,6 +39,12 @@
       <pubDate>Sun, 10 May 2026 00:00:00 +0000</pubDate>
     </item>
     <item>
+      <title>Uncovering repurposed medicines to fight liver fibrosis</title>
+      <link>https://deepmind.google/blog/uncovering-repurposed-medicines-to-fight-liver-fibrosis/</link>
+      <guid isPermaLink="true">https://deepmind.google/blog/uncovering-repurposed-medicines-to-fight-liver-fibrosis/</guid>
+      <pubDate>Sun, 10 May 2026 00:00:00 +0000</pubDate>
+    </item>
+    <item>
       <title>Fast-tracking genetic leads to reverse cellular aging</title>
       <link>https://deepmind.google/blog/fast-tracking-genetic-leads-to-reverse-cellular-aging/</link>
       <guid isPermaLink="true">https://deepmind.google/blog/fast-tracking-genetic-leads-to-reverse-cellular-aging/</guid>
@@ -57,27 +57,21 @@
       <pubDate>Sun, 10 May 2026 00:00:00 +0000</pubDate>
     </item>
     <item>
-      <title>Accelerating discovery of liver disease mechanisms</title>
-      <link>https://deepmind.google/blog/accelerating-discovery-of-liver-disease-mechanisms/</link>
-      <guid isPermaLink="true">https://deepmind.google/blog/accelerating-discovery-of-liver-disease-mechanisms/</guid>
-      <pubDate>Sun, 10 May 2026 00:00:00 +0000</pubDate>
-    </item>
-    <item>
       <title>Finding the molecular switches behind new infectious diseases</title>
       <link>https://deepmind.google/blog/finding-the-molecular-switches-behind-new-infectious-diseases/</link>
       <guid isPermaLink="true">https://deepmind.google/blog/finding-the-molecular-switches-behind-new-infectious-diseases/</guid>
       <pubDate>Sun, 10 May 2026 00:00:00 +0000</pubDate>
     </item>
     <item>
-      <title>Uncovering repurposed medicines to fight liver fibrosis</title>
-      <link>https://deepmind.google/blog/uncovering-repurposed-medicines-to-fight-liver-fibrosis/</link>
-      <guid isPermaLink="true">https://deepmind.google/blog/uncovering-repurposed-medicines-to-fight-liver-fibrosis/</guid>
-      <pubDate>Sun, 10 May 2026 00:00:00 +0000</pubDate>
-    </item>
-    <item>
       <title>Opening new paths in aging research</title>
       <link>https://deepmind.google/blog/opening-new-paths-in-aging-research/</link>
       <guid isPermaLink="true">https://deepmind.google/blog/opening-new-paths-in-aging-research/</guid>
+      <pubDate>Sun, 10 May 2026 00:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>Accelerating discovery of liver disease mechanisms</title>
+      <link>https://deepmind.google/blog/accelerating-discovery-of-liver-disease-mechanisms/</link>
+      <guid isPermaLink="true">https://deepmind.google/blog/accelerating-discovery-of-liver-disease-mechanisms/</guid>
       <pubDate>Sun, 10 May 2026 00:00:00 +0000</pubDate>
     </item>
     <item>
@@ -150,6 +144,12 @@
       <title>Fluid, natural voice translation with Gemini 3.5 Live Translate</title>
       <link>https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-live-3-5-translate/?utm_source=deepmind.google&amp;utm_medium=referral&amp;utm_campaign=gdm&amp;utm_content=</link>
       <guid isPermaLink="true">https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-live-3-5-translate/?utm_source=deepmind.google&amp;utm_medium=referral&amp;utm_campaign=gdm&amp;utm_content=</guid>
+      <pubDate>Wed, 10 Jun 2026 00:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>DiffusionGemma: 4x faster text generation</title>
+      <link>https://blog.google/innovation-and-ai/technology/developers-tools/diffusion-gemma-faster-text-generation/?utm_source=deepmind.google&amp;utm_medium=referral&amp;utm_campaign=gdm&amp;utm_content=</link>
+      <guid isPermaLink="true">https://blog.google/innovation-and-ai/technology/developers-tools/diffusion-gemma-faster-text-generation/?utm_source=deepmind.google&amp;utm_medium=referral&amp;utm_campaign=gdm&amp;utm_content=</guid>
       <pubDate>Wed, 10 Jun 2026 00:00:00 +0000</pubDate>
     </item>
     <item>
