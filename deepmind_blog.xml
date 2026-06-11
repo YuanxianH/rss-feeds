@@ -7,13 +7,7 @@
     <docs>http://www.rssboard.org/rss-specification</docs>
     <generator>RSS Creator</generator>
     <language>zh-CN</language>
-    <lastBuildDate>Thu, 11 Jun 2026 08:41:47 +0000</lastBuildDate>
-    <item>
-      <title>Announcing our partnership with the Republic of Korea</title>
-      <link>https://deepmind.google/blog/announcing-our-partnership-with-the-republic-of-korea/</link>
-      <guid isPermaLink="true">https://deepmind.google/blog/announcing-our-partnership-with-the-republic-of-korea/</guid>
-      <pubDate>Sat, 11 Apr 2026 00:00:00 +0000</pubDate>
-    </item>
+    <lastBuildDate>Thu, 11 Jun 2026 12:41:23 +0000</lastBuildDate>
     <item>
       <title>Enabling a new model for healthcare with AI co-clinician</title>
       <link>https://deepmind.google/blog/ai-co-clinician/</link>
@@ -39,18 +33,6 @@
       <pubDate>Mon, 11 May 2026 00:00:00 +0000</pubDate>
     </item>
     <item>
-      <title>Uncovering repurposed medicines to fight liver fibrosis</title>
-      <link>https://deepmind.google/blog/uncovering-repurposed-medicines-to-fight-liver-fibrosis/</link>
-      <guid isPermaLink="true">https://deepmind.google/blog/uncovering-repurposed-medicines-to-fight-liver-fibrosis/</guid>
-      <pubDate>Mon, 11 May 2026 00:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>Fast-tracking genetic leads to reverse cellular aging</title>
-      <link>https://deepmind.google/blog/fast-tracking-genetic-leads-to-reverse-cellular-aging/</link>
-      <guid isPermaLink="true">https://deepmind.google/blog/fast-tracking-genetic-leads-to-reverse-cellular-aging/</guid>
-      <pubDate>Mon, 11 May 2026 00:00:00 +0000</pubDate>
-    </item>
-    <item>
       <title>Uniting biological toolkits for a new approach to ALS</title>
       <link>https://deepmind.google/blog/uniting-biological-toolkits-for-a-new-approach-to-als/</link>
       <guid isPermaLink="true">https://deepmind.google/blog/uniting-biological-toolkits-for-a-new-approach-to-als/</guid>
@@ -63,6 +45,12 @@
       <pubDate>Mon, 11 May 2026 00:00:00 +0000</pubDate>
     </item>
     <item>
+      <title>Uncovering repurposed medicines to fight liver fibrosis</title>
+      <link>https://deepmind.google/blog/uncovering-repurposed-medicines-to-fight-liver-fibrosis/</link>
+      <guid isPermaLink="true">https://deepmind.google/blog/uncovering-repurposed-medicines-to-fight-liver-fibrosis/</guid>
+      <pubDate>Mon, 11 May 2026 00:00:00 +0000</pubDate>
+    </item>
+    <item>
       <title>Opening new paths in aging research</title>
       <link>https://deepmind.google/blog/opening-new-paths-in-aging-research/</link>
       <guid isPermaLink="true">https://deepmind.google/blog/opening-new-paths-in-aging-research/</guid>
@@ -72,6 +60,12 @@
       <title>Accelerating discovery of liver disease mechanisms</title>
       <link>https://deepmind.google/blog/accelerating-discovery-of-liver-disease-mechanisms/</link>
       <guid isPermaLink="true">https://deepmind.google/blog/accelerating-discovery-of-liver-disease-mechanisms/</guid>
+      <pubDate>Mon, 11 May 2026 00:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>Fast-tracking genetic leads to reverse cellular aging</title>
+      <link>https://deepmind.google/blog/fast-tracking-genetic-leads-to-reverse-cellular-aging/</link>
+      <guid isPermaLink="true">https://deepmind.google/blog/fast-tracking-genetic-leads-to-reverse-cellular-aging/</guid>
       <pubDate>Mon, 11 May 2026 00:00:00 +0000</pubDate>
     </item>
     <item>
@@ -150,6 +144,12 @@
       <title>DiffusionGemma: 4x faster text generation</title>
       <link>https://blog.google/innovation-and-ai/technology/developers-tools/diffusion-gemma-faster-text-generation/?utm_source=deepmind.google&amp;utm_medium=referral&amp;utm_campaign=gdm&amp;utm_content=</link>
       <guid isPermaLink="true">https://blog.google/innovation-and-ai/technology/developers-tools/diffusion-gemma-faster-text-generation/?utm_source=deepmind.google&amp;utm_medium=referral&amp;utm_campaign=gdm&amp;utm_content=</guid>
+      <pubDate>Thu, 11 Jun 2026 00:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>Investing in multi-agent AI safety research</title>
+      <link>https://deepmind.google/blog/investing-in-multi-agent-ai-safety-research/</link>
+      <guid isPermaLink="true">https://deepmind.google/blog/investing-in-multi-agent-ai-safety-research/</guid>
       <pubDate>Thu, 11 Jun 2026 00:00:00 +0000</pubDate>
     </item>
     <item>
