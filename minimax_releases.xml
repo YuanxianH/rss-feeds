@@ -7,7 +7,7 @@
     <docs>http://www.rssboard.org/rss-specification</docs>
     <generator>RSS Creator</generator>
     <language>zh-CN</language>
-    <lastBuildDate>Sun, 14 Jun 2026 21:06:54 +0000</lastBuildDate>
+    <lastBuildDate>Sun, 14 Jun 2026 23:05:04 +0000</lastBuildDate>
     <item>
       <title>MiniMax-Text-01</title>
       <link>https://huggingface.co/MiniMaxAI/MiniMax-Text-01</link>
@@ -284,7 +284,7 @@
     <item>
       <title>cli</title>
       <link>https://github.com/MiniMax-AI/cli</link>
-      <description>[GitHub Repo] | Generate text, images, video, speech, and music by MiniMax. | Language: TypeScript | Stars: 1922 | Topics: ai</description>
+      <description>[GitHub Repo] | Generate text, images, video, speech, and music by MiniMax. | Language: TypeScript | Stars: 1923 | Topics: ai</description>
       <guid isPermaLink="true">https://github.com/MiniMax-AI/cli</guid>
       <pubDate>Wed, 25 Mar 2026 15:34:45 +0000</pubDate>
     </item>
@@ -298,7 +298,7 @@
     <item>
       <title>MiniMax-M2.7</title>
       <link>https://huggingface.co/MiniMaxAI/MiniMax-M2.7</link>
-      <description>[HuggingFace Model] | text-generation | Likes: 1211 | Tags: transformers, safetensors, minimax_m2, text-generation, conversational</description>
+      <description>[HuggingFace Model] | text-generation | Likes: 1212 | Tags: transformers, safetensors, minimax_m2, text-generation, conversational</description>
       <guid isPermaLink="true">https://huggingface.co/MiniMaxAI/MiniMax-M2.7</guid>
       <pubDate>Thu, 09 Apr 2026 03:37:12 +0000</pubDate>
     </item>
@@ -319,7 +319,7 @@
     <item>
       <title>MiniMax-M3</title>
       <link>https://huggingface.co/MiniMaxAI/MiniMax-M3</link>
-      <description>[HuggingFace Model] | image-text-to-text | Likes: 480 | Tags: transformers, safetensors, minimax_m3_vl, image-text-to-text, multimodal</description>
+      <description>[HuggingFace Model] | image-text-to-text | Likes: 482 | Tags: transformers, safetensors, minimax_m3_vl, image-text-to-text, multimodal</description>
       <guid isPermaLink="true">https://huggingface.co/MiniMaxAI/MiniMax-M3</guid>
       <pubDate>Tue, 02 Jun 2026 07:49:31 +0000</pubDate>
     </item>
@@ -333,7 +333,7 @@
     <item>
       <title>MSA</title>
       <link>https://github.com/MiniMax-AI/MSA</link>
-      <description>[GitHub Repo] | Language: Python | Stars: 269</description>
+      <description>[GitHub Repo] | Language: Python | Stars: 270</description>
       <guid isPermaLink="true">https://github.com/MiniMax-AI/MSA</guid>
       <pubDate>Thu, 11 Jun 2026 09:20:28 +0000</pubDate>
     </item>
