@@ -7,13 +7,7 @@
     <docs>http://www.rssboard.org/rss-specification</docs>
     <generator>RSS Creator</generator>
     <language>zh-CN</language>
-    <lastBuildDate>Tue, 16 Jun 2026 18:01:11 +0000</lastBuildDate>
-    <item>
-      <title>Enabling a new model for healthcare with AI co-clinician</title>
-      <link>https://deepmind.google/blog/ai-co-clinician/</link>
-      <guid isPermaLink="true">https://deepmind.google/blog/ai-co-clinician/</guid>
-      <pubDate>Thu, 16 Apr 2026 00:00:00 +0000</pubDate>
-    </item>
+    <lastBuildDate>Tue, 16 Jun 2026 21:40:05 +0000</lastBuildDate>
     <item>
       <title>AlphaEvolve: How our Gemini-powered coding agent is scaling impact across fields</title>
       <link>https://deepmind.google/blog/alphaevolve-impact/</link>
@@ -150,6 +144,12 @@
       <title>Investing in multi-agent AI safety research</title>
       <link>https://deepmind.google/blog/investing-in-multi-agent-ai-safety-research/</link>
       <guid isPermaLink="true">https://deepmind.google/blog/investing-in-multi-agent-ai-safety-research/</guid>
+      <pubDate>Tue, 16 Jun 2026 00:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>Unlocking UK house-building with AI-accelerated planning</title>
+      <link>https://deepmind.google/blog/unlocking-uk-house-building-with-ai-accelerated-planning/</link>
+      <guid isPermaLink="true">https://deepmind.google/blog/unlocking-uk-house-building-with-ai-accelerated-planning/</guid>
       <pubDate>Tue, 16 Jun 2026 00:00:00 +0000</pubDate>
     </item>
     <item>
