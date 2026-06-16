@@ -7,7 +7,7 @@
     <docs>http://www.rssboard.org/rss-specification</docs>
     <generator>RSS Creator</generator>
     <language>zh-CN</language>
-    <lastBuildDate>Tue, 16 Jun 2026 12:09:53 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 16 Jun 2026 18:01:15 +0000</lastBuildDate>
     <item>
       <title>Equi-normalization of Neural Networks | Facebook AI Research</title>
       <link>https://ai.meta.com/research/publications/equi-normalization-of-neural-networks/</link>
@@ -95,84 +95,84 @@
     <item>
       <title>A foundation model of vision, audition, and language for in-silico neuroscience</title>
       <link>https://ai.meta.com/research/publications/a-foundation-model-of-vision-audition-and-language-for-in-silico-neuroscience/</link>
-      <description>Hubert Jacob Banville, Jean Remi King, Josephine Raugel, Jérémy Rapin, Katelyn Begany, Stéphane d'Ascoli, Teon Brooks, Yohann Benchetrit</description>
+      <description>Stéphane d'Ascoli, Jérémy Rapin, Yohann Benchetrit, Teon Brooks, Katelyn Begany, Josephine Raugel, Hubert Jacob Banville, Jean Remi King</description>
       <guid isPermaLink="true">https://ai.meta.com/research/publications/a-foundation-model-of-vision-audition-and-language-for-in-silico-neuroscience/</guid>
       <pubDate>Thu, 26 Mar 2026 00:00:00 +0000</pubDate>
     </item>
     <item>
       <title>Think in Strokes, Not Pixels: Process-Driven Image Generation via Interleaved Reasoning</title>
       <link>https://ai.meta.com/research/publications/think-in-strokes-not-pixels-process-driven-image-generation-via-interleaved-reasoning/</link>
-      <description>Lei Zhang, Junjiao Tian, Kunpeng Li, Jialiang Wang, Weifeng Chen, Yuxiao Bao, Julian McAuley, Manling Li, Zecheng He, Felix Xu, Markos Georgopoulos, Zhipeng Fan</description>
+      <description>Lei Zhang, Junjiao Tian, Zhipeng Fan, Kunpeng Li, Jialiang Wang, Weifeng Chen, Markos Georgopoulos, Felix Xu, Yuxiao Bao, Julian McAuley, Manling Li, Zecheng He</description>
       <guid isPermaLink="true">https://ai.meta.com/research/publications/think-in-strokes-not-pixels-process-driven-image-generation-via-interleaved-reasoning/</guid>
       <pubDate>Thu, 09 Apr 2026 00:00:00 +0000</pubDate>
     </item>
     <item>
       <title>TransText: Transparency Aware Image-to-Video Typography Animation</title>
       <link>https://ai.meta.com/research/publications/transtext-transparency-aware-image-to-video-typography-animation/</link>
-      <description>Zijian Zhou, Bohao Tang, Pengfei Liu, Fei Zhang, Frost Xu, Hang Li (BizAI), Semih Gunel, Sen He, Soubhik Sanyal, Tao Xiang, Viktar Atliha, Zhe Wang</description>
+      <description>Fei Zhang, Zijian Zhou, Bohao Tang, Sen He, Hang Li (BizAI), Zhe Wang, Soubhik Sanyal, Pengfei Liu, Viktar Atliha, Tao Xiang, Frost Xu, Semih Gunel</description>
       <guid isPermaLink="true">https://ai.meta.com/research/publications/transtext-transparency-aware-image-to-video-typography-animation/</guid>
       <pubDate>Tue, 14 Apr 2026 00:00:00 +0000</pubDate>
     </item>
     <item>
       <title>AIRA₂: Overcoming Bottlenecks in AI Research Agents</title>
       <link>https://ai.meta.com/research/publications/aira-overcoming-bottlenecks-in-ai-research-agents/</link>
-      <description>Nicola Cancedda, Pontus Stenetorp, Alexis Audran-Reiss, Alisia Lupidi, Anton Protopopov, Bassel Al Omari, Carole-Jean Wu, Derek Dunfield, Despoina Magka, Edan Toledo, Hela Momand, Ishita Mediratta, Jakob Foerster, Jean-Christophe Gagnon-Audet, Karen Hambardzumyan, Kelvin Niu, Martin Josifoski, Michael Kuchnik, Michael Shvartsman, Nicolas Baldwin, Parth Pathak, Rishi Hazra, Tatiana Shavrina, Thomas Simon Foster, Yoram Bachrach</description>
+      <description>Karen Hambardzumyan, Nicolas Baldwin, Edan Toledo, Rishi Hazra, Michael Kuchnik, Bassel Al Omari, Thomas Simon Foster, Anton Protopopov, Jean-Christophe Gagnon-Audet, Ishita Mediratta, Kelvin Niu, Michael Shvartsman, Alisia Lupidi, Alexis Audran-Reiss, Parth Pathak, Tatiana Shavrina, Despoina Magka, Hela Momand, Derek Dunfield, Nicola Cancedda, Pontus Stenetorp, Carole-Jean Wu, Jakob Foerster, Yoram Bachrach, Martin Josifoski</description>
       <guid isPermaLink="true">https://ai.meta.com/research/publications/aira-overcoming-bottlenecks-in-ai-research-agents/</guid>
       <pubDate>Thu, 16 Apr 2026 00:00:00 +0000</pubDate>
     </item>
     <item>
       <title>Compute Optimal Tokenization</title>
       <link>https://ai.meta.com/research/publications/compute-optimal-tokenization/</link>
-      <description>Sachin Mehta, Alisa Liu, Margaret Li, Artidoro Pagnoni, Gargi Ghosh, Luke Zettlemoyer, Mike Lewis, Srini Iyer, Tomasz Limisiewicz</description>
+      <description>Tomasz Limisiewicz, Artidoro Pagnoni, Srini Iyer, Mike Lewis, Sachin Mehta, Alisa Liu, Margaret Li, Gargi Ghosh, Luke Zettlemoyer</description>
       <guid isPermaLink="true">https://ai.meta.com/research/publications/compute-optimal-tokenization/</guid>
       <pubDate>Mon, 04 May 2026 00:00:00 +0000</pubDate>
     </item>
     <item>
       <title>NeuralBench: A Unifying Framework to Benchmark NeuroAI Models</title>
       <link>https://ai.meta.com/research/publications/neuralbench-a-unifying-framework-to-benchmark-neuroai-models/</link>
-      <description>Saarang Panchavati, Antoine Ratouchniak, Mingfang (Lucy) Zhang, Elisa Cascardi, Hubert Banville, Jarod Levy, Jean-Rémi King, Jérémy Rapin, Katelyn Begany, Marlene Careil, Simon Dahan, Stéphane d'Ascoli, Teon Brooks, Yohann Benchetrit</description>
+      <description>Hubert Banville, Stéphane d'Ascoli, Simon Dahan, Jérémy Rapin, Marlene Careil, Yohann Benchetrit, Jarod Levy, Saarang Panchavati, Antoine Ratouchniak, Mingfang (Lucy) Zhang, Elisa Cascardi, Katelyn Begany, Teon Brooks, Jean-Rémi King</description>
       <guid isPermaLink="true">https://ai.meta.com/research/publications/neuralbench-a-unifying-framework-to-benchmark-neuroai-models/</guid>
       <pubDate>Wed, 06 May 2026 00:00:00 +0000</pubDate>
     </item>
     <item>
       <title>NeuralSet: A High-Performing Python Package for Neuro-AI</title>
       <link>https://ai.meta.com/research/publications/neuralset-a-high-performing-python-package-for-neuro-ai/</link>
-      <description>Corentin Bel, Linnea Evanson, Julien Gadonneix, Andrea Santos Revilla, Mingfang (Lucy) Zhang, Julie Bonnaire, Charlotte Caucheteux, Alexandre Défossez, Théo Desbordes, Pablo Diego-Simón, Shubh Khanna, Juliette Millet, Pierre Orhan, Saarang Panchavati, Antoine Ratouchniak, Alexis Thual, Hubert Jacob Banville, Jarod Levy, Jean Remi King, Josephine Raugel, Jérémy Rapin, Katelyn Begany, Marlene Careil, Simon Dahan, Sophia Houhamdi, Stéphane d'Ascoli, Teon Brooks, Yohann Benchetrit</description>
+      <description>Jean Remi King, Corentin Bel, Linnea Evanson, Julien Gadonneix, Sophia Houhamdi, Jarod Levy, Josephine Raugel, Andrea Santos Revilla, Mingfang (Lucy) Zhang, Julie Bonnaire, Charlotte Caucheteux, Alexandre Défossez, Théo Desbordes, Pablo Diego-Simón, Shubh Khanna, Juliette Millet, Pierre Orhan, Saarang Panchavati, Antoine Ratouchniak, Alexis Thual, Teon Brooks, Katelyn Begany, Yohann Benchetrit, Marlene Careil, Hubert Jacob Banville, Stéphane d'Ascoli, Simon Dahan, Jérémy Rapin</description>
       <guid isPermaLink="true">https://ai.meta.com/research/publications/neuralset-a-high-performing-python-package-for-neuro-ai/</guid>
       <pubDate>Tue, 12 May 2026 00:00:00 +0000</pubDate>
     </item>
     <item>
       <title>GIM: Evaluating models via tasks that integrate multiple cognitive domains</title>
       <link>https://ai.meta.com/research/publications/gim-evaluating-models-via-tasks-that-integrate-multiple-cognitive-domains/</link>
-      <description>Alexandre Rezende, Rohit Patel, Steven McClain</description>
+      <description>Rohit Patel, Alexandre Rezende, Steven McClain</description>
       <guid isPermaLink="true">https://ai.meta.com/research/publications/gim-evaluating-models-via-tasks-that-integrate-multiple-cognitive-domains/</guid>
       <pubDate>Sun, 17 May 2026 00:00:00 +0000</pubDate>
     </item>
     <item>
       <title>EgoBabyVLM: Benchmarking Cross-Modal Learning from Naturalistic Egocentric Video Data</title>
       <link>https://ai.meta.com/research/publications/egobabyvlm-benchmarking-cross-modal-learning-from-naturalistic-egocentric-video-data/</link>
-      <description>Alvin W. M. Tan, Nicolas Hamilakis, Manel Khentout, Sho Tsuji, Balázs Kégl, Michael C. Frank, Angel Villar Corrales, Charles-Eric Saint-James, Dongyan Lin, Emmanuel Dupoux, Jiayi Shen, Juan Pino, Mahi Luthra, Martin Gleize, Phillip Rust, Rashel Moritz, Sheila Krogh-Jespersen, Surya Parimi, Tom Fizycki, Vanessa Stark, Yosuke Higuchi, Youssef Benchekroun</description>
+      <description>Dongyan Lin, Phillip Rust, Angel Villar Corrales, Alvin W. M. Tan, Mahi Luthra, Charles-Eric Saint-James, Rashel Moritz, Sheila Krogh-Jespersen, Vanessa Stark, Surya Parimi, Jiayi Shen, Youssef Benchekroun, Yosuke Higuchi, Martin Gleize, Tom Fizycki, Nicolas Hamilakis, Manel Khentout, Sho Tsuji, Balázs Kégl, Juan Pino, Michael C. Frank, Emmanuel Dupoux</description>
       <guid isPermaLink="true">https://ai.meta.com/research/publications/egobabyvlm-benchmarking-cross-modal-learning-from-naturalistic-egocentric-video-data/</guid>
       <pubDate>Tue, 19 May 2026 00:00:00 +0000</pubDate>
     </item>
     <item>
       <title>Misalignment Between Backpropagation and the Hierarchy of Brain Responses to Images</title>
       <link>https://ai.meta.com/research/publications/misalignment-between-backpropagation-and-the-hierarchy-of-brain-responses-to-images/</link>
-      <description>Valentin Wyart, Huy V. Vo, Jean Remi King, Josephine Raugel, Jérémy Rapin, Marc Szafraniec, Max Seitzer, Patrick Labatut, Piotr Bojanowski</description>
+      <description>Josephine Raugel, Max Seitzer, Marc Szafraniec, Huy V. Vo, Jérémy Rapin, Patrick Labatut, Piotr Bojanowski, Valentin Wyart, Jean Remi King</description>
       <guid isPermaLink="true">https://ai.meta.com/research/publications/misalignment-between-backpropagation-and-the-hierarchy-of-brain-responses-to-images/</guid>
       <pubDate>Tue, 26 May 2026 00:00:00 +0000</pubDate>
     </item>
     <item>
       <title>AutoformBot: Formalizing Mathematics at Scale</title>
       <link>https://ai.meta.com/research/publications/autoformbot-formalizing-mathematics-at-scale/</link>
-      <description>Amaury Hayat, Ahmad Rammal, Charles Arnal, Julia Kempe, Niket Patel, Remi Munos, Vivien Cabannes</description>
+      <description>Ahmad Rammal, Niket Patel, Amaury Hayat, Julia Kempe, Remi Munos, Charles Arnal, Vivien Cabannes</description>
       <guid isPermaLink="true">https://ai.meta.com/research/publications/autoformbot-formalizing-mathematics-at-scale/</guid>
       <pubDate>Wed, 27 May 2026 00:00:00 +0000</pubDate>
     </item>
     <item>
       <title>Superintelligent Retrieval Agent: The Next Frontier of Agentic Retrieval</title>
       <link>https://ai.meta.com/research/publications/superintelligent-retrieval-agent-the-next-frontier-of-agentic-retrieval/</link>
-      <description>Anshumali Shrivastava, Jason Chen, Qi Ma, Zeyu Yang</description>
+      <description>Zeyu Yang, Qi Ma, Jason Chen, Anshumali Shrivastava</description>
       <guid isPermaLink="true">https://ai.meta.com/research/publications/superintelligent-retrieval-agent-the-next-frontier-of-agentic-retrieval/</guid>
       <pubDate>Fri, 05 Jun 2026 00:00:00 +0000</pubDate>
     </item>
