@@ -7,7 +7,7 @@
     <docs>http://www.rssboard.org/rss-specification</docs>
     <generator>RSS Creator</generator>
     <language>zh-CN</language>
-    <lastBuildDate>Thu, 18 Jun 2026 03:32:26 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 18 Jun 2026 08:41:30 +0000</lastBuildDate>
     <item>
       <title>MiniMax-Text-01</title>
       <link>https://huggingface.co/MiniMaxAI/MiniMax-Text-01</link>
@@ -67,7 +67,7 @@
     <item>
       <title>awesome-minimax-integrations</title>
       <link>https://github.com/MiniMax-AI/awesome-minimax-integrations</link>
-      <description>[GitHub Repo] | Explore these applications integrating MiniMax's multimodal API to see how text, vision, and speech processing capabilities are incorporated into various software. | Stars: 77</description>
+      <description>[GitHub Repo] | Explore these applications integrating MiniMax's multimodal API to see how text, vision, and speech processing capabilities are incorporated into various software. | Stars: 78</description>
       <guid isPermaLink="true">https://github.com/MiniMax-AI/awesome-minimax-integrations</guid>
       <pubDate>Tue, 20 May 2025 12:11:35 +0000</pubDate>
     </item>
@@ -179,7 +179,7 @@
     <item>
       <title>Mini-Agent</title>
       <link>https://github.com/MiniMax-AI/Mini-Agent</link>
-      <description>[GitHub Repo] | A minimal yet professional single agent demo project that showcases the core execution pipeline and production-grade features of agents. | Language: Python | Stars: 2803 | Topics: agent, llm, minimax</description>
+      <description>[GitHub Repo] | A minimal yet professional single agent demo project that showcases the core execution pipeline and production-grade features of agents. | Language: Python | Stars: 2805 | Topics: agent, llm, minimax</description>
       <guid isPermaLink="true">https://github.com/MiniMax-AI/Mini-Agent</guid>
       <pubDate>Fri, 31 Oct 2025 03:56:27 +0000</pubDate>
     </item>
@@ -256,42 +256,42 @@
     <item>
       <title>MiniMax-M2.5</title>
       <link>https://huggingface.co/MiniMaxAI/MiniMax-M2.5</link>
-      <description>[HuggingFace Model] | text-generation | Likes: 1498 | Tags: transformers, safetensors, minimax_m2, text-generation, conversational</description>
+      <description>[HuggingFace Model] | text-generation | Likes: 1497 | Tags: transformers, safetensors, minimax_m2, text-generation, conversational</description>
       <guid isPermaLink="true">https://huggingface.co/MiniMaxAI/MiniMax-M2.5</guid>
       <pubDate>Thu, 12 Feb 2026 06:05:24 +0000</pubDate>
     </item>
     <item>
       <title>MiniMax-M2.5</title>
       <link>https://github.com/MiniMax-AI/MiniMax-M2.5</link>
-      <description>[GitHub Repo] | Stars: 585</description>
+      <description>[GitHub Repo] | Stars: 586</description>
       <guid isPermaLink="true">https://github.com/MiniMax-AI/MiniMax-M2.5</guid>
       <pubDate>Fri, 13 Feb 2026 04:47:29 +0000</pubDate>
     </item>
     <item>
       <title>OpenRoom</title>
       <link>https://github.com/MiniMax-AI/OpenRoom</link>
-      <description>[GitHub Repo] | A browser-based desktop where AI Agent operates every app through natural language. | Language: TypeScript | Stars: 1213 | Topics: ai-agent, browser, desktop, micro-frontend, minimax, natural-language, open-source, react, typescript, vibe-coding</description>
+      <description>[GitHub Repo] | A browser-based desktop where AI Agent operates every app through natural language. | Language: TypeScript | Stars: 1212 | Topics: ai-agent, browser, desktop, micro-frontend, minimax, natural-language, open-source, react, typescript, vibe-coding</description>
       <guid isPermaLink="true">https://github.com/MiniMax-AI/OpenRoom</guid>
       <pubDate>Tue, 03 Mar 2026 04:01:01 +0000</pubDate>
     </item>
     <item>
       <title>skills</title>
       <link>https://github.com/MiniMax-AI/skills</link>
-      <description>[GitHub Repo] | Language: C# | Stars: 12688</description>
+      <description>[GitHub Repo] | Language: C# | Stars: 12696</description>
       <guid isPermaLink="true">https://github.com/MiniMax-AI/skills</guid>
       <pubDate>Tue, 17 Mar 2026 07:19:25 +0000</pubDate>
     </item>
     <item>
       <title>cli</title>
       <link>https://github.com/MiniMax-AI/cli</link>
-      <description>[GitHub Repo] | Generate text, images, video, speech, and music by MiniMax. | Language: TypeScript | Stars: 1931 | Topics: ai</description>
+      <description>[GitHub Repo] | Generate text, images, video, speech, and music by MiniMax. | Language: TypeScript | Stars: 1932 | Topics: ai</description>
       <guid isPermaLink="true">https://github.com/MiniMax-AI/cli</guid>
       <pubDate>Wed, 25 Mar 2026 15:34:45 +0000</pubDate>
     </item>
     <item>
       <title>MiniMax-M2.7</title>
       <link>https://github.com/MiniMax-AI/MiniMax-M2.7</link>
-      <description>[GitHub Repo] | Stars: 343</description>
+      <description>[GitHub Repo] | Stars: 344</description>
       <guid isPermaLink="true">https://github.com/MiniMax-AI/MiniMax-M2.7</guid>
       <pubDate>Thu, 09 Apr 2026 03:34:10 +0000</pubDate>
     </item>
@@ -319,7 +319,7 @@
     <item>
       <title>MiniMax-M3</title>
       <link>https://huggingface.co/MiniMaxAI/MiniMax-M3</link>
-      <description>[HuggingFace Model] | image-text-to-text | Likes: 1066 | Tags: transformers, safetensors, minimax_m3_vl, image-text-to-text, multimodal</description>
+      <description>[HuggingFace Model] | image-text-to-text | Likes: 1075 | Tags: transformers, safetensors, minimax_m3_vl, image-text-to-text, multimodal</description>
       <guid isPermaLink="true">https://huggingface.co/MiniMaxAI/MiniMax-M3</guid>
       <pubDate>Tue, 02 Jun 2026 07:49:31 +0000</pubDate>
     </item>
@@ -333,7 +333,7 @@
     <item>
       <title>MSA</title>
       <link>https://github.com/MiniMax-AI/MSA</link>
-      <description>[GitHub Repo] | Language: Python | Stars: 325</description>
+      <description>[GitHub Repo] | Language: Python | Stars: 328</description>
       <guid isPermaLink="true">https://github.com/MiniMax-AI/MSA</guid>
       <pubDate>Thu, 11 Jun 2026 09:20:28 +0000</pubDate>
     </item>
