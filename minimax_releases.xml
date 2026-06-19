@@ -7,7 +7,7 @@
     <docs>http://www.rssboard.org/rss-specification</docs>
     <generator>RSS Creator</generator>
     <language>zh-CN</language>
-    <lastBuildDate>Fri, 19 Jun 2026 06:13:29 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 19 Jun 2026 11:18:30 +0000</lastBuildDate>
     <item>
       <title>MiniMax-Text-01</title>
       <link>https://huggingface.co/MiniMaxAI/MiniMax-Text-01</link>
@@ -39,7 +39,7 @@
     <item>
       <title>MiniMax-MCP</title>
       <link>https://github.com/MiniMax-AI/MiniMax-MCP</link>
-      <description>[GitHub Repo] | Official MiniMax Model Context Protocol (MCP) server that enables interaction with powerful Text to Speech, image generation and video generation APIs. | Language: Python | Stars: 1515 | Topics: image-generation, image-to-video, mcp, mcp-server, mcp-tools, text-to-image, text-to-speech, text-to-video, video-generation, voice-cloning</description>
+      <description>[GitHub Repo] | Official MiniMax Model Context Protocol (MCP) server that enables interaction with powerful Text to Speech, image generation and video generation APIs. | Language: Python | Stars: 1516 | Topics: image-generation, image-to-video, mcp, mcp-server, mcp-tools, text-to-image, text-to-speech, text-to-video, video-generation, voice-cloning</description>
       <guid isPermaLink="true">https://github.com/MiniMax-AI/MiniMax-MCP</guid>
       <pubDate>Thu, 10 Apr 2025 06:15:56 +0000</pubDate>
     </item>
@@ -207,7 +207,7 @@
     <item>
       <title>VTP</title>
       <link>https://github.com/MiniMax-AI/VTP</link>
-      <description>[GitHub Repo] | Towards Scalable Pre-training of Visual Tokenizers for Generation | Language: Python | Stars: 492 | Topics: diffusion-model, visual-generation, visual-tokenizer</description>
+      <description>[GitHub Repo] | Towards Scalable Pre-training of Visual Tokenizers for Generation | Language: Python | Stars: 493 | Topics: diffusion-model, visual-generation, visual-tokenizer</description>
       <guid isPermaLink="true">https://github.com/MiniMax-AI/VTP</guid>
       <pubDate>Thu, 11 Dec 2025 10:32:23 +0000</pubDate>
     </item>
@@ -277,7 +277,7 @@
     <item>
       <title>skills</title>
       <link>https://github.com/MiniMax-AI/skills</link>
-      <description>[GitHub Repo] | Language: C# | Stars: 12704</description>
+      <description>[GitHub Repo] | Language: C# | Stars: 12711</description>
       <guid isPermaLink="true">https://github.com/MiniMax-AI/skills</guid>
       <pubDate>Tue, 17 Mar 2026 07:19:25 +0000</pubDate>
     </item>
@@ -319,7 +319,7 @@
     <item>
       <title>MiniMax-M3</title>
       <link>https://huggingface.co/MiniMaxAI/MiniMax-M3</link>
-      <description>[HuggingFace Model] | image-text-to-text | Likes: 1106 | Tags: transformers, safetensors, minimax_m3_vl, image-text-to-text, multimodal</description>
+      <description>[HuggingFace Model] | image-text-to-text | Likes: 1112 | Tags: transformers, safetensors, minimax_m3_vl, image-text-to-text, multimodal</description>
       <guid isPermaLink="true">https://huggingface.co/MiniMaxAI/MiniMax-M3</guid>
       <pubDate>Tue, 02 Jun 2026 07:49:31 +0000</pubDate>
     </item>
