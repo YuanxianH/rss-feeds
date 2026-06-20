@@ -7,7 +7,7 @@
     <docs>http://www.rssboard.org/rss-specification</docs>
     <generator>RSS Creator</generator>
     <language>zh-CN</language>
-    <lastBuildDate>Sat, 20 Jun 2026 11:13:49 +0000</lastBuildDate>
+    <lastBuildDate>Sat, 20 Jun 2026 13:53:05 +0000</lastBuildDate>
     <item>
       <title>MiniMax-Text-01</title>
       <link>https://huggingface.co/MiniMaxAI/MiniMax-Text-01</link>
@@ -277,7 +277,7 @@
     <item>
       <title>skills</title>
       <link>https://github.com/MiniMax-AI/skills</link>
-      <description>[GitHub Repo] | Language: C# | Stars: 12717</description>
+      <description>[GitHub Repo] | Language: C# | Stars: 12718</description>
       <guid isPermaLink="true">https://github.com/MiniMax-AI/skills</guid>
       <pubDate>Tue, 17 Mar 2026 07:19:25 +0000</pubDate>
     </item>
@@ -319,7 +319,7 @@
     <item>
       <title>MiniMax-M3</title>
       <link>https://huggingface.co/MiniMaxAI/MiniMax-M3</link>
-      <description>[HuggingFace Model] | image-text-to-text | Likes: 1142 | Tags: transformers, safetensors, minimax_m3_vl, image-text-to-text, multimodal</description>
+      <description>[HuggingFace Model] | image-text-to-text | Likes: 1147 | Tags: transformers, safetensors, minimax_m3_vl, image-text-to-text, multimodal</description>
       <guid isPermaLink="true">https://huggingface.co/MiniMaxAI/MiniMax-M3</guid>
       <pubDate>Tue, 02 Jun 2026 07:49:31 +0000</pubDate>
     </item>
@@ -333,7 +333,7 @@
     <item>
       <title>MSA</title>
       <link>https://github.com/MiniMax-AI/MSA</link>
-      <description>[GitHub Repo] | Language: Python | Stars: 333</description>
+      <description>[GitHub Repo] | Language: Python | Stars: 334</description>
       <guid isPermaLink="true">https://github.com/MiniMax-AI/MSA</guid>
       <pubDate>Thu, 11 Jun 2026 09:20:28 +0000</pubDate>
     </item>
