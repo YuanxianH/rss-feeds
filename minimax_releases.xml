@@ -7,7 +7,7 @@
     <docs>http://www.rssboard.org/rss-specification</docs>
     <generator>RSS Creator</generator>
     <language>zh-CN</language>
-    <lastBuildDate>Mon, 22 Jun 2026 06:25:16 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 22 Jun 2026 12:46:06 +0000</lastBuildDate>
     <item>
       <title>MiniMax-Text-01</title>
       <link>https://huggingface.co/MiniMaxAI/MiniMax-Text-01</link>
@@ -39,7 +39,7 @@
     <item>
       <title>MiniMax-MCP</title>
       <link>https://github.com/MiniMax-AI/MiniMax-MCP</link>
-      <description>[GitHub Repo] | Official MiniMax Model Context Protocol (MCP) server that enables interaction with powerful Text to Speech, image generation and video generation APIs. | Language: Python | Stars: 1518 | Topics: image-generation, image-to-video, mcp, mcp-server, mcp-tools, text-to-image, text-to-speech, text-to-video, video-generation, voice-cloning</description>
+      <description>[GitHub Repo] | Official MiniMax Model Context Protocol (MCP) server that enables interaction with powerful Text to Speech, image generation and video generation APIs. | Language: Python | Stars: 1519 | Topics: image-generation, image-to-video, mcp, mcp-server, mcp-tools, text-to-image, text-to-speech, text-to-video, video-generation, voice-cloning</description>
       <guid isPermaLink="true">https://github.com/MiniMax-AI/MiniMax-MCP</guid>
       <pubDate>Thu, 10 Apr 2025 06:15:56 +0000</pubDate>
     </item>
@@ -277,21 +277,21 @@
     <item>
       <title>skills</title>
       <link>https://github.com/MiniMax-AI/skills</link>
-      <description>[GitHub Repo] | Language: C# | Stars: 12731</description>
+      <description>[GitHub Repo] | Language: C# | Stars: 12736</description>
       <guid isPermaLink="true">https://github.com/MiniMax-AI/skills</guid>
       <pubDate>Tue, 17 Mar 2026 07:19:25 +0000</pubDate>
     </item>
     <item>
       <title>cli</title>
       <link>https://github.com/MiniMax-AI/cli</link>
-      <description>[GitHub Repo] | Generate text, images, video, speech, and music by MiniMax. | Language: TypeScript | Stars: 1939 | Topics: ai</description>
+      <description>[GitHub Repo] | Generate text, images, video, speech, and music by MiniMax. | Language: TypeScript | Stars: 1942 | Topics: ai</description>
       <guid isPermaLink="true">https://github.com/MiniMax-AI/cli</guid>
       <pubDate>Wed, 25 Mar 2026 15:34:45 +0000</pubDate>
     </item>
     <item>
       <title>MiniMax-M2.7</title>
       <link>https://github.com/MiniMax-AI/MiniMax-M2.7</link>
-      <description>[GitHub Repo] | Stars: 346</description>
+      <description>[GitHub Repo] | Stars: 347</description>
       <guid isPermaLink="true">https://github.com/MiniMax-AI/MiniMax-M2.7</guid>
       <pubDate>Thu, 09 Apr 2026 03:34:10 +0000</pubDate>
     </item>
@@ -305,7 +305,7 @@
     <item>
       <title>MiniMax-M3</title>
       <link>https://github.com/MiniMax-AI/MiniMax-M3</link>
-      <description>[GitHub Repo] | Stars: 340</description>
+      <description>[GitHub Repo] | Stars: 342</description>
       <guid isPermaLink="true">https://github.com/MiniMax-AI/MiniMax-M3</guid>
       <pubDate>Mon, 01 Jun 2026 06:05:17 +0000</pubDate>
     </item>
@@ -319,21 +319,21 @@
     <item>
       <title>MiniMax-M3</title>
       <link>https://huggingface.co/MiniMaxAI/MiniMax-M3</link>
-      <description>[HuggingFace Model] | image-text-to-text | Likes: 1182 | Tags: transformers, safetensors, minimax_m3_vl, image-text-to-text, multimodal</description>
+      <description>[HuggingFace Model] | image-text-to-text | Likes: 1189 | Tags: transformers, safetensors, minimax_m3_vl, image-text-to-text, multimodal</description>
       <guid isPermaLink="true">https://huggingface.co/MiniMaxAI/MiniMax-M3</guid>
       <pubDate>Tue, 02 Jun 2026 07:49:31 +0000</pubDate>
     </item>
     <item>
       <title>MiniMax-M3-MXFP8</title>
       <link>https://huggingface.co/MiniMaxAI/MiniMax-M3-MXFP8</link>
-      <description>[HuggingFace Model] | image-text-to-text | Likes: 38 | Tags: transformers, safetensors, minimax_m3_vl, image-text-to-text, multimodal</description>
+      <description>[HuggingFace Model] | image-text-to-text | Likes: 39 | Tags: transformers, safetensors, minimax_m3_vl, image-text-to-text, multimodal</description>
       <guid isPermaLink="true">https://huggingface.co/MiniMaxAI/MiniMax-M3-MXFP8</guid>
       <pubDate>Tue, 02 Jun 2026 07:50:45 +0000</pubDate>
     </item>
     <item>
       <title>MSA</title>
       <link>https://github.com/MiniMax-AI/MSA</link>
-      <description>[GitHub Repo] | Language: Python | Stars: 340</description>
+      <description>[GitHub Repo] | Language: Python | Stars: 342</description>
       <guid isPermaLink="true">https://github.com/MiniMax-AI/MSA</guid>
       <pubDate>Thu, 11 Jun 2026 09:20:28 +0000</pubDate>
     </item>
