@@ -7,14 +7,7 @@
     <docs>http://www.rssboard.org/rss-specification</docs>
     <generator>RSS Creator</generator>
     <language>zh-CN</language>
-    <lastBuildDate>Tue, 23 Jun 2026 11:57:08 +0000</lastBuildDate>
-    <item>
-      <title>0.142.0-alpha.9</title>
-      <link>https://github.com/openai/codex/releases/tag/rust-v0.142.0-alpha.9</link>
-      <description>Release 0.142.0-alpha.9</description>
-      <guid isPermaLink="false">tag:github.com,2008:Repository/965415649/rust-v0.142.0-alpha.9</guid>
-      <pubDate>Sun, 21 Jun 2026 06:51:28 +0000</pubDate>
-    </item>
+    <lastBuildDate>Tue, 23 Jun 2026 14:49:48 +0000</lastBuildDate>
     <item>
       <title>0.142.0-alpha.10</title>
       <link>https://github.com/openai/codex/releases/tag/rust-v0.142.0-alpha.10</link>
@@ -744,6 +737,13 @@ chore: advance tungstenite fork pins
       <description>Release 0.143.0-alpha.5</description>
       <guid isPermaLink="false">tag:github.com,2008:Repository/965415649/rust-v0.143.0-alpha.5</guid>
       <pubDate>Tue, 23 Jun 2026 08:26:26 +0000</pubDate>
+    </item>
+    <item>
+      <title>0.143.0-alpha.6</title>
+      <link>https://github.com/openai/codex/releases/tag/rust-v0.143.0-alpha.6</link>
+      <description>Release 0.143.0-alpha.6</description>
+      <guid isPermaLink="false">tag:github.com,2008:Repository/965415649/rust-v0.143.0-alpha.6</guid>
+      <pubDate>Tue, 23 Jun 2026 13:09:01 +0000</pubDate>
     </item>
   </channel>
 </rss>
