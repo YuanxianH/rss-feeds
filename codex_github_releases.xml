@@ -7,21 +7,7 @@
     <docs>http://www.rssboard.org/rss-specification</docs>
     <generator>RSS Creator</generator>
     <language>zh-CN</language>
-    <lastBuildDate>Tue, 23 Jun 2026 00:01:45 +0000</lastBuildDate>
-    <item>
-      <title>0.142.0-alpha.6</title>
-      <link>https://github.com/openai/codex/releases/tag/rust-v0.142.0-alpha.6</link>
-      <description>Release 0.142.0-alpha.6</description>
-      <guid isPermaLink="false">tag:github.com,2008:Repository/965415649/rust-v0.142.0-alpha.6</guid>
-      <pubDate>Fri, 19 Jun 2026 20:31:59 +0000</pubDate>
-    </item>
-    <item>
-      <title>0.142.0-alpha.7</title>
-      <link>https://github.com/openai/codex/releases/tag/rust-v0.142.0-alpha.7</link>
-      <description>Release 0.142.0-alpha.7</description>
-      <guid isPermaLink="false">tag:github.com,2008:Repository/965415649/rust-v0.142.0-alpha.7</guid>
-      <pubDate>Sat, 20 Jun 2026 00:43:26 +0000</pubDate>
-    </item>
+    <lastBuildDate>Tue, 23 Jun 2026 04:56:45 +0000</lastBuildDate>
     <item>
       <title>0.142.0-alpha.8</title>
       <link>https://github.com/openai/codex/releases/tag/rust-v0.142.0-alpha.8</link>
@@ -739,11 +725,25 @@ chore: advance tungstenite fork pins
       <pubDate>Mon, 22 Jun 2026 23:11:44 +0000</pubDate>
     </item>
     <item>
-      <title>rust-v0.143.0-alpha.2</title>
+      <title>0.143.0-alpha.2</title>
       <link>https://github.com/openai/codex/releases/tag/rust-v0.143.0-alpha.2</link>
       <description>Release 0.143.0-alpha.2</description>
       <guid isPermaLink="false">tag:github.com,2008:Repository/965415649/rust-v0.143.0-alpha.2</guid>
-      <pubDate>Mon, 22 Jun 2026 23:45:56 +0000</pubDate>
+      <pubDate>Tue, 23 Jun 2026 00:32:38 +0000</pubDate>
+    </item>
+    <item>
+      <title>0.143.0-alpha.3</title>
+      <link>https://github.com/openai/codex/releases/tag/rust-v0.143.0-alpha.3</link>
+      <description>Release 0.143.0-alpha.3</description>
+      <guid isPermaLink="false">tag:github.com,2008:Repository/965415649/rust-v0.143.0-alpha.3</guid>
+      <pubDate>Tue, 23 Jun 2026 03:18:39 +0000</pubDate>
+    </item>
+    <item>
+      <title>0.143.0-alpha.4</title>
+      <link>https://github.com/openai/codex/releases/tag/rust-v0.143.0-alpha.4</link>
+      <description>Release 0.143.0-alpha.4</description>
+      <guid isPermaLink="false">tag:github.com,2008:Repository/965415649/rust-v0.143.0-alpha.4</guid>
+      <pubDate>Tue, 23 Jun 2026 04:06:49 +0000</pubDate>
     </item>
   </channel>
 </rss>
