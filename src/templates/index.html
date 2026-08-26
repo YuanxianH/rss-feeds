@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="$lang">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>$title</title>
+    <meta name="description" content="$description">
+    <link rel="canonical" href="$site_url">
+    <link rel="stylesheet" href="assets/site.css">
+  </head>
+  <body>
+    <a class="skip-link" href="#main-content">Skip to feeds</a>
+    <main class="page" id="main-content">
+      <header class="site-header">
+        <a class="site-title" href="$site_url">$title</a>
+        <p>$tagline</p>
+        <p class="last-build">Latest successful build: $latest_build</p>
+      </header>
+
+      <nav class="section-nav" aria-label="Feed categories">
+        $section_nav
+      </nav>
+
+      <div class="sections">
+        $sections
+      </div>
+
+      <footer>
+        Static RSS directory. Feeds update independently every hour.
+      </footer>
+    </main>
+  </body>
+</html>
