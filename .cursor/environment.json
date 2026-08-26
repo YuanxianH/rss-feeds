@@ -1,0 +1,17 @@
+{
+  "name": "AI RSS Network",
+  "install": "pip install -r requirements.txt && pip install pytest",
+  "terminals": [
+    {
+      "name": "feed-preview",
+      "command": "python3 main.py -v; cd feeds && python3 -m http.server 8000",
+      "description": "Generates the RSS feeds from config.yaml, then serves feeds/ (landing page + XML) at http://localhost:8000"
+    }
+  ],
+  "ports": [
+    {
+      "name": "feed preview",
+      "port": 8000
+    }
+  ]
+}
