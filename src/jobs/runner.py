@@ -2,16 +2,8 @@
 
 import logging
 from pathlib import Path
-from typing import Dict
 
-# Ensure built-in jobs are registered even when importing runner directly.
-from . import codex_changelog as _codex_changelog  # noqa: F401
-from . import minimax_news as _minimax_news  # noqa: F401
-from . import minimax_releases as _minimax_releases  # noqa: F401
-from . import openai_research as _openai_research  # noqa: F401
-from . import selector_scrape as _selector_scrape  # noqa: F401
-from . import waymo_blog as _waymo_blog  # noqa: F401
-from .base import JobContext
+from .base import JobContext, JobResult, JobRunReport
 from .registry import create_job
 
 logger = logging.getLogger(__name__)
@@ -24,8 +16,8 @@ class JobRunner:
         self.feeds_dir = Path(feeds_dir)
         self.feeds_dir.mkdir(parents=True, exist_ok=True)
 
-    def run_jobs(self, job_configs: list[dict]) -> Dict[str, bool]:
-        results: Dict[str, bool] = {}
+    def run_jobs(self, job_configs: list[dict]) -> JobRunReport:
+        results: dict[str, JobResult] = {}
         context = JobContext(feeds_dir=self.feeds_dir)
 
         for config in job_configs:
@@ -38,23 +30,33 @@ class JobRunner:
             try:
                 job = create_job(config)
             except Exception as exc:
-                logger.error(f"{fallback_name}: job 配置错误 - {exc}")
-                results[fallback_name] = False
+                details = f"job 配置错误 - {exc}"
+                logger.error(f"{fallback_name}: {details}")
+                results[fallback_name] = JobResult(
+                    name=fallback_name,
+                    success=False,
+                    details=details,
+                )
                 continue
 
             try:
                 result = job.run(context)
             except Exception as exc:
-                logger.error(f"{job.name}: 执行异常 - {exc}")
-                results[job.name] = False
+                details = f"执行异常 - {exc}"
+                logger.error(f"{job.name}: {details}")
+                results[job.name] = JobResult(
+                    name=job.name,
+                    success=False,
+                    details=details,
+                )
                 continue
 
-            results[result.name] = result.success
+            results[result.name] = result
             if not result.success and result.details:
                 logger.error(f"{result.name}: {result.details}")
 
         if results:
-            success_count = sum(1 for ok in results.values() if ok)
+            success_count = sum(1 for result in results.values() if result.success)
             logger.info(f"jobs 完成: {success_count}/{len(results)} 成功")
 
-        return results
+        return JobRunReport(results=results)
