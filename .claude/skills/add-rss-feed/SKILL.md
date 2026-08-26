@@ -1,120 +1,106 @@
 ---
 name: add-rss-feed
 description: >
-  Add a new website as an RSS feed to the rss_creator project at /Users/yxhuang/my_world/rss_creator.
-  Use when the user provides a URL and wants to turn it into an RSS feed, or says things like
-  "帮我把这个网页变成 RSS", "add RSS feed for this site", "订阅这个页面", "把这个网页加到 RSS".
-  Handles: analyzing page HTML, configuring CSS selectors, testing feed generation, committing, and deploying to GitHub Pages.
+  Add a website as an RSS feed to this repository. Use when the user provides a
+  URL and asks to subscribe to it or turn it into RSS.
 ---
 
 # Add RSS Feed
 
-## Job Types
+Run commands from the repository root. Feed XML, `feeds/index.html`, and
+`feeds/assets/` are generated output; never edit or commit them.
 
-The repo supports multiple job types:
+## Choose a job type
 
-| Type | Use Case |
-|------|----------|
-| `selector_scrape` | Most websites with server-rendered HTML |
-| `kimi_blog` | VitePress based blogs |
-| `minimax_news` | Complex sites requiring sitemap discovery |
-| `minimax_releases` | HuggingFace models + GitHub repos |
+| Type | Use case |
+|---|---|
+| `selector_scrape` | Server-rendered lists with stable CSS selectors |
+| `dynamic_site` | Blog links present in HTML, embedded JSON/Next.js data, or sitemaps |
+| `minimax_news` | MiniMax News discovery and crawl |
+| `minimax_releases` | HuggingFace models and GitHub repositories |
 | `waymo_blog_technology` | Waymo blog API |
-| `openai_research_filter` | Filter existing RSS for specific categories |
-| `codex_changelog` | GitHub release entries from Codex changelog |
+| `openai_research_filter` | Filter an existing RSS feed by category |
+| `codex_changelog` | Codex changelog release entries |
 
-For most new feeds, use `selector_scrape`.
+Prefer `selector_scrape` for regular HTML. Use `dynamic_site` when article links
+exist outside repeated cards or inside embedded data. Add a site-specific job
+only when the source requires a dedicated API or data model. Do not add a
+headless browser to the hourly workflow.
 
 ## Workflow
 
-### Step 1: Analyze the page
-
-Run the analysis script to check if the page is server-rendered and find repeating elements:
+### 1. Analyze the page
 
 ```bash
-python /Users/yxhuang/my_world/rss_creator/.claude/skills/add-rss-feed/scripts/analyze_page.py <URL>
+python .claude/skills/add-rss-feed/scripts/analyze_page.py <URL>
 ```
 
-If 0 repeated content elements found, the page is likely JS-rendered — inform the user it may not work with simple HTTP scraping.
+Inspect visible anchors, `__NEXT_DATA__`, Next.js flight data, JSON-LD, and
+sitemaps. Prefer semantic selectors over generated class names.
 
-Also fetch the page with `WebFetch` or Python to inspect the first item's full HTML with `prettify()`.
+### 2. Add config
 
-### Step 2: Identify CSS selectors
-
-From the HTML, determine selectors for:
-
-| Field | Required | Notes |
-|-------|----------|-------|
-| `items` | Yes | Container for each entry (e.g., `article`, `div.post`) |
-| `title` | Yes | Title text element (e.g., `h3 a`, `h2.title`) |
-| `link` | Yes | Element with `href` (e.g., `h3 a`, `a.permalink`) |
-| `description` | No | Summary text |
-| `date` | No | Parser reads `datetime` attr first, then text content |
-| `author` | No | Author name |
-
-**Tips:**
-- Prefer semantic tags (`article`, `h3 a`) over CSS module hashed classes (`_foo_abc123`) which break between builds
-- Verify with `soup.select(selector)` that match count equals expected item count
-
-### Step 3: Add config to config.yaml
-
-Read `/Users/yxhuang/my_world/rss_creator/config.yaml` and append:
+For server-rendered pages:
 
 ```yaml
-  - type: "selector_scrape"
-    name: "Feed Name"
-    url: "https://example.com/page"
-    output: "feed_name.xml"
-    title: "Feed Title"
-    description: "Feed description"
-    link: "https://example.com/page"
-    selectors:
-      items: "article"
-      title: "h3 a"
-      link: "h3 a"
-    options:
-      max_items: 50
-      timeout: 15
-      retries: 2
-      backoff_factor: 0.5
-      user_agent: "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36"
-      encoding: "utf-8"
+- type: "selector_scrape"
+  name: "Feed Name"
+  url: "https://example.com/news"
+  output: "feed_name.xml"
+  title: "Feed Title"
+  description: "Feed description"
+  link: "https://example.com/news"
+  selectors:
+    items: "article"
+    title: "h2"
+    link: "a"
+  catalog:
+    section: "blogs"
 ```
 
-### Step 4: Test locally
+For dynamic indexes:
+
+```yaml
+- type: "dynamic_site"
+  name: "Feed Name"
+  url: "https://example.com/blog"
+  path_prefix: "/blog"
+  allowed_hosts: ["example.com"]
+  sitemap_urls:
+    - "https://example.com/sitemap.xml"
+  output: "feed_name.xml"
+  title: "Feed Title"
+  description: "Feed description"
+  link: "https://example.com/blog"
+  catalog:
+    section: "blogs"
+  options:
+    minimum_items: 1
+```
+
+Common timeout, retry, user-agent, encoding, and item limits come from
+`defaults.options` in `config.yaml`; only add per-job overrides when needed.
+
+### 3. Add regression coverage
+
+Save a minimal upstream HTML sample under `tests/fixtures/`. Test URL
+normalization, discovery, metadata extraction, empty results, and partial
+article failures without live network access.
+
+### 4. Verify
 
 ```bash
-cd /Users/yxhuang/my_world/rss_creator && python main.py -v
+python -m unittest discover -s tests -p "test_*.py"
+python main.py -v
 ```
 
-Verify: feed generates with expected item count, read the XML in `feeds/` to confirm content.
+Validate the generated XML item count, titles, links, and dates. The generated
+directory includes the feed automatically from `config.yaml`.
 
-### Step 5: Update index.html
+### 5. Publish
 
-Add the new feed to `feeds/index.html` so it appears in the feed list:
+Commit source/config/tests only, then push. GitHub Actions restores previous
+feeds, updates healthy jobs, retains failed jobs' prior XML, generates the
+directory, and publishes `feeds/` to `gh-pages`.
 
-```html
-<li class="feed-item">
-    <a href="feed_name.xml">Feed Title</a>
-    <div class="description">Feed description</div>
-</li>
-```
-
-### Step 6: Commit and push
-
-1. Commit changes:
-   ```bash
-   git add config.yaml feeds/index.html
-   git commit -m "feat: add <feed_name> RSS feed"
-   ```
-
-2. Push to trigger GitHub Actions:
-   ```bash
-   git push
-   ```
-
-GitHub Actions will automatically run and deploy the updated feeds to GitHub Pages.
-
-**New feed URL:** `https://yuanxianh.github.io/rss-feeds/<output_filename>`
-
-You can manually trigger a deployment from the GitHub Actions tab if needed.
+Feed URL: `https://yuanxianh.github.io/rss-feeds/<output_filename>`

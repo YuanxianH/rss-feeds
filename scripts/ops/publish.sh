@@ -101,7 +101,7 @@ fi
 
 if [[ "$SKIP_GENERATE" -ne 1 ]]; then
     log "🔄 生成最新 RSS..."
-    env PYTHONPATH="$ROOT_DIR" python "$ROOT_DIR/main.py"
+    env PYTHONPATH="$ROOT_DIR" python "$ROOT_DIR/main.py" --allow-partial
 fi
 
 SOURCE_PATH="$ROOT_DIR/$SOURCE_DIR"
@@ -109,6 +109,8 @@ SOURCE_PATH="$ROOT_DIR/$SOURCE_DIR"
 if ! ls "$SOURCE_PATH"/*.xml >/dev/null 2>&1; then
     die "未找到可发布的 XML 文件，请先生成 feeds"
 fi
+[[ -f "$SOURCE_PATH/index.html" ]] || die "未找到 feeds/index.html，请先生成站点"
+[[ -f "$SOURCE_PATH/assets/site.css" ]] || die "未找到站点样式，请先生成站点"
 
 log "📦 准备发布到 $REMOTE_NAME/$PUBLISH_BRANCH ..."
 WORKTREE_DIR="$(mktemp -d "${TMPDIR:-/tmp}/rss-pages.XXXXXX")"
@@ -122,7 +124,7 @@ else
 fi
 
 find "$WORKTREE_DIR" -mindepth 1 -maxdepth 1 ! -name ".git" -exec rm -rf {} +
-find "$SOURCE_PATH" -mindepth 1 -maxdepth 1 -type f ! -name ".gitkeep" -exec cp {} "$WORKTREE_DIR"/ \;
+find "$SOURCE_PATH" -mindepth 1 -maxdepth 1 ! -name ".gitkeep" -exec cp -R {} "$WORKTREE_DIR"/ \;
 touch "$WORKTREE_DIR/.nojekyll"
 
 git -C "$WORKTREE_DIR" add --all

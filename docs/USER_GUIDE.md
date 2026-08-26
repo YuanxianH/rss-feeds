@@ -12,7 +12,7 @@
 ## 安装
 
 ```bash
-cd /Users/yxhuang/repo/rss_creator
+cd /path/to/rss-feeds
 pip install -r requirements.txt
 ```
 
@@ -34,6 +34,7 @@ python main.py -v
 
 - 会执行 `main.py`，统一处理 `config.yaml` 的 `jobs[]`
 - 任一任务失败时，脚本最终返回非零退出码
+- 自动发布使用 `--allow-partial`，会更新成功的 Feed 并保留失败 Feed 的旧版本
 
 ### 3) 本地预览
 
@@ -54,6 +55,11 @@ python -m http.server 8000
 - `feeds/openai_research_only.xml`
 - `feeds/waymo_blog_tech.xml`
 - `feeds/minimax_blog.xml`
+- `feeds/minimax_official_blog.xml`
+- `feeds/kimi_blog.xml`
+
+`feeds/index.html` 和 `feeds/assets/site.css` 也会自动生成，用于本地预览；
+这些文件不需要手工编辑。
 
 ## 常用命令
 
@@ -75,10 +81,11 @@ python -m unittest discover -s tests -p "test_*.py"
 
 核心字段：
 
-- `jobs[].type`: 任务类型（如 `selector_scrape` / `openai_research_filter` / `waymo_blog_technology` / `minimax_news`）
+- `jobs[].type`: 任务类型（如 `selector_scrape` / `dynamic_site` / `openai_research_filter` / `waymo_blog_technology` / `minimax_news`）
 - `jobs[].name`: 任务名称（用于日志和结果统计）
 - `jobs[].output`: 输出文件名（写入 `feeds/`）
 - `jobs[].options.*`: 任务参数（如 `max_items` / `timeout` / `retries`）
+- `defaults.options.*`: 所有任务共用的默认参数；单个任务可以覆盖
 
 最小示例：
 
@@ -92,6 +99,18 @@ jobs:
       items: "article.post"
       title: "h2.title"
       link: "a.permalink"
+```
+
+动态页面若在 HTML、Next.js 内嵌数据或 sitemap 中包含文章链接，可配置：
+
+```yaml
+jobs:
+  - type: "dynamic_site"
+    name: "Example Blog"
+    url: "https://example.com/blog"
+    path_prefix: "/blog"
+    allowed_hosts: ["example.com"]
+    output: "example_blog.xml"
 ```
 
 ## 部署到 GitHub Pages

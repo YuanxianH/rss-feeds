@@ -27,7 +27,9 @@ The network currently covers:
 - [Google DeepMind Blog](https://yuanxianh.github.io/rss-feeds/deepmind_blog.xml)
 - [Waymo Blog - Technology](https://yuanxianh.github.io/rss-feeds/waymo_blog_tech.xml)
 - [MiniMax News](https://yuanxianh.github.io/rss-feeds/minimax_blog.xml)
+- [MiniMax Official Blog](https://yuanxianh.github.io/rss-feeds/minimax_official_blog.xml)
 - [Kimi Research Articles & Technical Blogs](https://yuanxianh.github.io/rss-feeds/kimi_blog.xml)
+- [Physical Intelligence Blog](https://yuanxianh.github.io/rss-feeds/pi_blog.xml)
 
 ### Releases
 
@@ -60,7 +62,9 @@ Then open `http://localhost:8000/` for the generated landing page or subscribe t
 ./scripts/ops/deploy.sh
 ```
 
-That pushes the repository, triggers GitHub Actions, regenerates the feeds, and publishes `feeds/` to GitHub Pages.
+That pushes the repository and triggers GitHub Actions. Healthy feeds are updated
+independently; when one upstream site fails, its previous XML is retained and the
+remaining feeds are still published.
 
 ## Docs
 
@@ -77,6 +81,10 @@ rss_creator/
 │   └── ops/
 ├── src/
 │   ├── jobs/
+│   ├── site_assets/
+│   ├── templates/
+│   ├── discovery.py
+│   ├── article_metadata.py
 │   └── site_index.py
 ├── tests/
 ├── config.yaml

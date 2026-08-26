@@ -19,12 +19,14 @@ rss_creator/
 1. `main.py`
 - 读取 `config.yaml`
 - 调用 `src/jobs/runner.py` 处理 `jobs[]`
-- 在非调度模式下，任一任务失败返回退出码 `1`
+- 生成 RSS 后由 `src/site_index.py` 从模板和样式生成静态目录
+- 默认严格模式下，任一任务失败返回退出码 `1`
 
 2. `.github/workflows/update-rss.yml`
 - 安装依赖
 - 运行单元测试
-- 调用 `python main.py`
+- 恢复 `gh-pages` 上一次发布的 XML
+- 调用 `python main.py --allow-partial`
 - 将 `feeds/` 发布到 `gh-pages`
 
 ## 失败语义约定
@@ -32,6 +34,8 @@ rss_creator/
 - 任务成功：退出码 `0`
 - 业务失败（抓取失败/无有效内容/生成失败）：退出码 `1`
 - 配置或参数错误：退出码 `2`（例如主配置文件不存在）
+- `--allow-partial`：至少一个 Feed 更新成功且首页生成成功时返回 `0`；失败
+  Feed 的旧 XML 会由发布流程保留，并在 Actions summary 中标记
 
 新增脚本时请保持同样约定，避免 CI 假成功。
 
@@ -39,15 +43,21 @@ rss_creator/
 
 ### 统一方式：新增 job
 
-1. 简单网页抓取：在 `config.yaml` 增加 `type: selector_scrape` 的条目。
-2. 复杂来源（API / 多步解析）：在 `src/jobs/` 新增 job 并注册 `job_type`，再在 `config.yaml` 增加条目。
-3. 本地验证：
+1. 简单 SSR 网页：在 `config.yaml` 增加 `type: selector_scrape`。
+2. Next.js 等页面若 HTML 或内嵌数据含文章链接：使用 `type: dynamic_site`，
+   配置 `url`、`path_prefix`、`allowed_hosts` 与可选 `sitemap_urls`。
+3. 只有专用 API 或特殊数据模型的来源：在 `src/jobs/` 新增 job 并注册
+   `job_type`。
+4. 本地验证：
 
 ```bash
 python main.py -v
 ```
 
-4. 补对应单元测试（必要时 mock 网络层）。
+5. 为页面结构保存最小 HTML fixture，并补脱网单元测试。
+
+`feeds/index.html`、`feeds/assets/` 和 XML 都是生成产物，不要手工编辑或提交。
+首页源文件位于 `src/templates/` 与 `src/site_assets/`。
 
 ## 测试与检查
 
@@ -74,11 +84,13 @@ bash -n scripts/ops/*.sh
 
 1. 某站点突然无新内容
 - 优先检查 `config.yaml` 里的 CSS 选择器
+- 对 `dynamic_site` 检查文章链接是否仍符合 `path_prefix`，以及域名是否迁移
 - 开启 `-v` 查看解析日志
 
 2. CI 失败但本地成功
 - 检查网络与目标站点限流策略
 - 检查 CI 运行时依赖版本是否一致
+- 查看 Actions summary，区分更新失败、保留旧 Feed 与整体部署失败
 
 3. 本地 sandbox 网络失败（在受限环境）
 - 这通常是执行环境限制，不代表脚本逻辑错误

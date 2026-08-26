@@ -25,6 +25,8 @@ cd /path/to/rss_creator
 说明：
 
 - 会先执行单元测试
+- 会恢复上一次发布的 XML；单个上游失败时保留旧 Feed，并继续发布其他 Feed
+- 每个 Feed 的更新或保留状态会写入 Actions summary
 - 默认要求工作区干净（避免误推未确认改动）
 
 ### 2. 后续更新
@@ -72,6 +74,9 @@ https://YOUR_USERNAME.github.io/rss-feeds/deepmind_blog.xml
 ./scripts/ops/publish.sh --branch gh-pages
 ```
 
+`--skip-generate` 要求 `feeds/index.html`、`feeds/assets/site.css` 与至少一个
+XML 已存在。它们都是生成产物，不应提交到源码分支。
+
 ## 常见问题
 
 ### 1) `scripts/ops/deploy.sh` 提示 dirty working tree
@@ -89,8 +94,10 @@ https://YOUR_USERNAME.github.io/rss-feeds/deepmind_blog.xml
 - `Settings -> Actions -> General -> Workflow permissions`
 - 选择 `Read and write permissions`
 
+工作流也显式声明了 `contents: write`；若组织策略禁止写入，仍需管理员放行。
+
 ### 3) Pages 404
 
 - 等待 5-10 分钟
 - 确认 Pages Source 指向 `gh-pages`
-- 确认 workflow 最新一次执行成功
+- 确认 workflow 最新一次执行成功，并检查部署分支包含 `assets/site.css`
