@@ -49,7 +49,20 @@ def _run_jobs(config: dict, feeds_dir: str) -> JobRunReport:
     if not jobs_config:
         return JobRunReport(results={})
 
-    enabled_jobs = [job for job in jobs_config if job.get("enabled", True)]
+    default_options = (config.get("defaults") or {}).get("options") or {}
+    enabled_jobs = []
+    for job in jobs_config:
+        if not job.get("enabled", True):
+            continue
+        enabled_jobs.append(
+            {
+                **job,
+                "options": {
+                    **default_options,
+                    **(job.get("options") or {}),
+                },
+            }
+        )
     if not enabled_jobs:
         logging.info("配置中的 jobs 均为禁用状态")
         return JobRunReport(results={})

@@ -108,6 +108,30 @@ class MainTests(unittest.TestCase):
         self.assertIn("| bad | Failed | Previous kept | failed |", summary)
         self.assertIn("Result: **partial**", summary)
 
+    @patch("main.JobRunner")
+    def test_run_jobs_merges_default_and_job_options(self, runner_cls):
+        runner_cls.return_value.run_jobs.return_value = _job_report(demo=True)
+        config = {
+            "defaults": {
+                "options": {
+                    "timeout": 20,
+                    "retries": 3,
+                }
+            },
+            "jobs": [
+                {
+                    "type": "dynamic_site",
+                    "name": "demo",
+                    "options": {"timeout": 30},
+                }
+            ],
+        }
+
+        app_main._run_jobs(config, "feeds")
+
+        submitted = runner_cls.return_value.run_jobs.call_args.args[0]
+        self.assertEqual(submitted[0]["options"], {"timeout": 30, "retries": 3})
+
     def test_main_returns_2_when_config_not_found(self):
         code = app_main.main(["-c", "/tmp/does-not-exist-rss-creator.yaml"])
         self.assertEqual(code, 2)

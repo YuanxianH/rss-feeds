@@ -1,16 +1,12 @@
 """Waymo Blog Technology job."""
 
-import argparse
 import logging
-from pathlib import Path
-from typing import Optional
 
 import requests
 
 from src.http_client import create_retry_session
 from src.path_utils import resolve_output_path
 from src.rss_generator import RSSGenerator
-from src.runtime import setup_logging
 
 from .base import FeedJob, JobContext, JobResult
 from .registry import register_job
@@ -22,7 +18,6 @@ DEFAULT_OUTPUT_FILENAME = "waymo_blog_tech.xml"
 DEFAULT_MAX_ITEMS = 50
 
 logger = logging.getLogger(__name__)
-DEFAULT_FEEDS_DIR = Path(__file__).resolve().parents[2] / "feeds"
 
 
 @register_job
@@ -94,22 +89,3 @@ class WaymoBlogTechnologyJob(FeedJob):
         success = generator.generate(str(output_path))
         details = f"输出: {output_path}" if success else "RSS 生成失败"
         return JobResult(name=self.name, success=success, details=details)
-
-
-def main(argv: Optional[list[str]] = None) -> int:
-    parser = argparse.ArgumentParser(description="Fetch Waymo Blog Technology posts and generate RSS")
-    parser.add_argument("--max-items", type=int, default=DEFAULT_MAX_ITEMS, help="Maximum feed items")
-    parser.add_argument("-o", "--output", default=DEFAULT_OUTPUT_FILENAME, help="Output RSS filename")
-    parser.add_argument("-v", "--verbose", action="store_true", help="Enable debug logging")
-    args = parser.parse_args(argv)
-
-    setup_logging(args.verbose)
-    job = WaymoBlogTechnologyJob(
-        {
-            "name": "Waymo Blog Technology",
-            "output": args.output,
-            "options": {"max_items": args.max_items},
-        }
-    )
-    result = job.run(JobContext(feeds_dir=DEFAULT_FEEDS_DIR))
-    return 0 if result.success else 1
