@@ -133,11 +133,14 @@ def extract_article_urls(
 
     # Next.js flight data and similar payloads often contain escaped URLs in
     # non-JSON script tags. Keep this last so visible links retain their order.
-    searchable = html.replace("\\/", "/")
+    searchable = html.replace("\\\\/", "/").replace("\\/", "/")
     prefix = urlparse(page_url).path.rstrip("/")
     if prefix:
         path_pattern = re.escape(prefix) + r"/[A-Za-z0-9][A-Za-z0-9._~%/-]*"
-        for match in re.findall(path_pattern, searchable):
+        candidate_pattern = (
+            r"(?:https?://[A-Za-z0-9.-]+(?::\d+)?)?" + path_pattern
+        )
+        for match in re.findall(candidate_pattern, searchable):
             add(match)
 
     return urls
