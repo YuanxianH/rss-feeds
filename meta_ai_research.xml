@@ -7,7 +7,7 @@
     <docs>http://www.rssboard.org/rss-specification</docs>
     <generator>RSS Creator</generator>
     <language>zh-CN</language>
-    <lastBuildDate>Thu, 25 Jun 2026 05:01:19 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 27 Aug 2026 13:33:39 +0000</lastBuildDate>
     <item>
       <title>Equi-normalization of Neural Networks | Facebook AI Research</title>
       <link>https://ai.meta.com/research/publications/equi-normalization-of-neural-networks/</link>
@@ -93,48 +93,6 @@
       <pubDate>Thu, 31 Oct 2019 00:00:00 +0000</pubDate>
     </item>
     <item>
-      <title>A foundation model of vision, audition, and language for in-silico neuroscience</title>
-      <link>https://ai.meta.com/research/publications/a-foundation-model-of-vision-audition-and-language-for-in-silico-neuroscience/</link>
-      <description>Stéphane d'Ascoli, Jérémy Rapin, Yohann Benchetrit, Teon Brooks, Katelyn Begany, Josephine Raugel, Hubert Jacob Banville, Jean Remi King</description>
-      <guid isPermaLink="true">https://ai.meta.com/research/publications/a-foundation-model-of-vision-audition-and-language-for-in-silico-neuroscience/</guid>
-      <pubDate>Thu, 26 Mar 2026 00:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>Think in Strokes, Not Pixels: Process-Driven Image Generation via Interleaved Reasoning</title>
-      <link>https://ai.meta.com/research/publications/think-in-strokes-not-pixels-process-driven-image-generation-via-interleaved-reasoning/</link>
-      <description>Lei Zhang, Junjiao Tian, Zhipeng Fan, Kunpeng Li, Jialiang Wang, Weifeng Chen, Markos Georgopoulos, Felix Xu, Yuxiao Bao, Julian McAuley, Manling Li, Zecheng He</description>
-      <guid isPermaLink="true">https://ai.meta.com/research/publications/think-in-strokes-not-pixels-process-driven-image-generation-via-interleaved-reasoning/</guid>
-      <pubDate>Thu, 09 Apr 2026 00:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>TransText: Transparency Aware Image-to-Video Typography Animation</title>
-      <link>https://ai.meta.com/research/publications/transtext-transparency-aware-image-to-video-typography-animation/</link>
-      <description>Fei Zhang, Zijian Zhou, Bohao Tang, Sen He, Hang Li (BizAI), Zhe Wang, Soubhik Sanyal, Pengfei Liu, Viktar Atliha, Tao Xiang, Frost Xu, Semih Gunel</description>
-      <guid isPermaLink="true">https://ai.meta.com/research/publications/transtext-transparency-aware-image-to-video-typography-animation/</guid>
-      <pubDate>Tue, 14 Apr 2026 00:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>AIRA₂: Overcoming Bottlenecks in AI Research Agents</title>
-      <link>https://ai.meta.com/research/publications/aira-overcoming-bottlenecks-in-ai-research-agents/</link>
-      <description>Karen Hambardzumyan, Nicolas Baldwin, Edan Toledo, Rishi Hazra, Michael Kuchnik, Bassel Al Omari, Thomas Simon Foster, Anton Protopopov, Jean-Christophe Gagnon-Audet, Ishita Mediratta, Kelvin Niu, Michael Shvartsman, Alisia Lupidi, Alexis Audran-Reiss, Parth Pathak, Tatiana Shavrina, Despoina Magka, Hela Momand, Derek Dunfield, Nicola Cancedda, Pontus Stenetorp, Carole-Jean Wu, Jakob Foerster, Yoram Bachrach, Martin Josifoski</description>
-      <guid isPermaLink="true">https://ai.meta.com/research/publications/aira-overcoming-bottlenecks-in-ai-research-agents/</guid>
-      <pubDate>Thu, 16 Apr 2026 00:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>Compute Optimal Tokenization</title>
-      <link>https://ai.meta.com/research/publications/compute-optimal-tokenization/</link>
-      <description>Tomasz Limisiewicz, Artidoro Pagnoni, Srini Iyer, Mike Lewis, Sachin Mehta, Alisa Liu, Margaret Li, Gargi Ghosh, Luke Zettlemoyer</description>
-      <guid isPermaLink="true">https://ai.meta.com/research/publications/compute-optimal-tokenization/</guid>
-      <pubDate>Mon, 04 May 2026 00:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>NeuralBench: A Unifying Framework to Benchmark NeuroAI Models</title>
-      <link>https://ai.meta.com/research/publications/neuralbench-a-unifying-framework-to-benchmark-neuroai-models/</link>
-      <description>Hubert Banville, Stéphane d'Ascoli, Simon Dahan, Jérémy Rapin, Marlene Careil, Yohann Benchetrit, Jarod Levy, Saarang Panchavati, Antoine Ratouchniak, Mingfang (Lucy) Zhang, Elisa Cascardi, Katelyn Begany, Teon Brooks, Jean-Rémi King</description>
-      <guid isPermaLink="true">https://ai.meta.com/research/publications/neuralbench-a-unifying-framework-to-benchmark-neuroai-models/</guid>
-      <pubDate>Wed, 06 May 2026 00:00:00 +0000</pubDate>
-    </item>
-    <item>
       <title>NeuralSet: A High-Performing Python Package for Neuro-AI</title>
       <link>https://ai.meta.com/research/publications/neuralset-a-high-performing-python-package-for-neuro-ai/</link>
       <description>Jean Remi King, Corentin Bel, Linnea Evanson, Julien Gadonneix, Sophia Houhamdi, Jarod Levy, Josephine Raugel, Andrea Santos Revilla, Mingfang (Lucy) Zhang, Julie Bonnaire, Charlotte Caucheteux, Alexandre Défossez, Théo Desbordes, Pablo Diego-Simón, Shubh Khanna, Juliette Millet, Pierre Orhan, Saarang Panchavati, Antoine Ratouchniak, Alexis Thual, Teon Brooks, Katelyn Begany, Yohann Benchetrit, Marlene Careil, Hubert Jacob Banville, Stéphane d'Ascoli, Simon Dahan, Jérémy Rapin</description>
@@ -175,6 +133,49 @@
       <description>Zeyu Yang, Qi Ma, Jason Chen, Anshumali Shrivastava</description>
       <guid isPermaLink="true">https://ai.meta.com/research/publications/superintelligent-retrieval-agent-the-next-frontier-of-agentic-retrieval/</guid>
       <pubDate>Fri, 05 Jun 2026 00:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>Accurate Decoding of Natural Sentences from
+Non-Invasive Brain Recordings</title>
+      <link>https://ai.meta.com/research/publications/accurate-decoding-of-natural-sentences-from-non-invasive-brain-recordings/</link>
+      <description>Mingfang (Lucy) Zhang *, Jarod Levy *, Cédric Rommel, Jérémy Rapin, Corentin Bel, Julie Bonnaire, Daniel Nieto, Pierre Bourdillon, Svetlana Pinet, Stéphane d'Ascoli, Thomas Moreau, Jean Remi King</description>
+      <guid isPermaLink="true">https://ai.meta.com/research/publications/accurate-decoding-of-natural-sentences-from-non-invasive-brain-recordings/</guid>
+      <pubDate>Mon, 29 Jun 2026 00:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>Interpreting Physics in Video World Models</title>
+      <link>https://ai.meta.com/research/publications/interpreting-physics-in-video-world-models/</link>
+      <description>Sonia Joseph, Quentin Garrido, Randall Balestriero, Matthew Kowal, Thomas Fel, Shahab Bakhtiari, Blake Richards, Mike Rabbat</description>
+      <guid isPermaLink="true">https://ai.meta.com/research/publications/interpreting-physics-in-video-world-models/</guid>
+      <pubDate>Fri, 03 Jul 2026 00:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>S-EMBER: A Large-Scale Benchmark for Streaming Egocentric Memory Retrieval</title>
+      <link>https://ai.meta.com/research/publications/s-ember-a-large-scale-benchmark-for-streaming-egocentric-memory-retrieval/</link>
+      <description>Xiaodong Wang, Xuanyi Zhao, Pedro Rodriguez, Devendra Singh Sachan, Barlas Oguz, Seungwhan Moon, Shang-Wen Li, Gargi Ghosh, Xin Dong, Wen-Tau Yih</description>
+      <guid isPermaLink="true">https://ai.meta.com/research/publications/s-ember-a-large-scale-benchmark-for-streaming-egocentric-memory-retrieval/</guid>
+      <pubDate>Mon, 13 Jul 2026 00:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>Learning to Reason by Analogy via Retrieval-Augmented Reinforcement Fine-Tuning</title>
+      <link>https://ai.meta.com/research/publications/learning-to-reason-by-analogy-via-retrieval-augmented-reinforcement-fine-tuning/</link>
+      <description>Zilin Xiao, Qi Ma, Jason Chen, Xintao Chen, Avinash Atreya, Hanjie Chen, Vicente Ordonez</description>
+      <guid isPermaLink="true">https://ai.meta.com/research/publications/learning-to-reason-by-analogy-via-retrieval-augmented-reinforcement-fine-tuning/</guid>
+      <pubDate>Fri, 17 Jul 2026 00:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>Reinforcement Learning for Code Optimization</title>
+      <link>https://ai.meta.com/research/publications/reinforcement-learning-for-code-optimization/</link>
+      <description>Pierre Chambon, Kunhao Zheng, Juliette Decugis, Benoît Sagot, Gabriel Synnaeve</description>
+      <guid isPermaLink="true">https://ai.meta.com/research/publications/reinforcement-learning-for-code-optimization/</guid>
+      <pubDate>Wed, 29 Jul 2026 00:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>WaiT for the Signal: Simple Frequency-Aware Flow-Matching</title>
+      <link>https://ai.meta.com/research/publications/wait-for-the-signal-simple-frequency-aware-flow-matching/</link>
+      <description>Krunoslav Lehman Pavasovic, Theophane Vallaeys, Stéphane Mallat, Giulio Biroli, Luke Zettlemoyer, Brian Karrer, Jakob Verbeek</description>
+      <guid isPermaLink="true">https://ai.meta.com/research/publications/wait-for-the-signal-simple-frequency-aware-flow-matching/</guid>
+      <pubDate>Tue, 04 Aug 2026 00:00:00 +0000</pubDate>
     </item>
   </channel>
 </rss>

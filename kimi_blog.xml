@@ -2,53 +2,65 @@
 <rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0">
   <channel>
     <title>Kimi Research Articles &amp; Technical Blogs</title>
-    <link>https://www.kimi.com/blog</link>
+    <link>https://www.kimi.ai/blog/</link>
     <description>Explore Kimi research articles, technical blogs, and benchmark releases</description>
     <docs>http://www.rssboard.org/rss-specification</docs>
     <generator>RSS Creator</generator>
     <language>zh-CN</language>
-    <lastBuildDate>Thu, 25 Jun 2026 05:01:38 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 27 Aug 2026 13:33:55 +0000</lastBuildDate>
     <item>
-      <title>Kimi Agent Swarm: 100 Sub-Agents at Scale</title>
-      <link>https://www.kimi.com/blog/agent-swarm.html</link>
-      <description>Kimi Agent Swarm is a self-organizing multi-agent system that spawns up to 100 sub-agents to parallelize research, document synthesis, and multi-perspective analysis.</description>
-      <guid isPermaLink="true">https://www.kimi.com/blog/agent-swarm.html</guid>
+      <title>Kimi K3 Tech Blog: Open Frontier Intelligence</title>
+      <link>https://www.kimi.ai/blog/kimi-k3</link>
+      <description>Kimi K3 is the world's first open 3T-class model — frontier performance across coding, knowledge work, and reasoning, with native multimodality and 1M context.</description>
+      <guid isPermaLink="true">https://www.kimi.ai/blog/kimi-k3</guid>
     </item>
     <item>
-      <title>Kimi K2.5 Tech Blog: Visual Agentic Intelligence</title>
-      <link>https://www.kimi.com/blog/kimi-k2-5.html</link>
-      <description>Kimi K2.5 defines Visual Agentic Intelligence. Trained on 15T tokens, it introduces SOTA visual coding and autonomous agent swarm. Read the full tech blog.</description>
-      <guid isPermaLink="true">https://www.kimi.com/blog/kimi-k2-5.html</guid>
+      <title>PerceptionBench: Evaluating Atomic Visual Perception in MLLMs</title>
+      <link>https://www.kimi.ai/blog/perception-bench</link>
+      <description>PerceptionBench evaluates visual perception at the level of atomic capabilities discovered from model failures, measuring what multimodal models actually see rather than what they infer.</description>
+      <guid isPermaLink="true">https://www.kimi.ai/blog/perception-bench</guid>
     </item>
     <item>
       <title>Kimi K2.6 Tech Blog: Advancing Open-Source Coding</title>
-      <link>https://www.kimi.com/blog/kimi-k2-6.html</link>
+      <link>https://www.kimi.ai/blog/kimi-k2-6</link>
       <description>Kimi K2.6 advances open-source coding, featuring long-horizon coding, coding-driven design, agent swarms, proactive agents, and the Claw Groups research preview.</description>
-      <guid isPermaLink="true">https://www.kimi.com/blog/kimi-k2-6.html</guid>
+      <guid isPermaLink="true">https://www.kimi.ai/blog/kimi-k2-6</guid>
     </item>
     <item>
-      <title>Kimi K2 Thinking</title>
-      <link>https://www.kimi.com/blog/kimi-k2-thinking.html</link>
-      <description>Kimi K2 Thinking, Moonshot's best open-source thinking model.</description>
-      <guid isPermaLink="true">https://www.kimi.com/blog/kimi-k2-thinking.html</guid>
-    </item>
-    <item>
-      <title>Kimi K2: Open Agentic Intelligence</title>
-      <link>https://www.kimi.com/blog/kimi-k2.html</link>
-      <description>Kimi K2 is our latest Mixture-of-Experts model with 32 billion activated parameters and 1 trillion total parameters. It achieves state-of-the-art performance in frontier knowledge, math, and coding among non-thinking models.</description>
-      <guid isPermaLink="true">https://www.kimi.com/blog/kimi-k2.html</guid>
-    </item>
-    <item>
-      <title>Kimi Vendor Verifier</title>
-      <link>https://www.kimi.com/blog/kimi-vendor-verifier.html</link>
-      <description>Rebuilding the</description>
-      <guid isPermaLink="true">https://www.kimi.com/blog/kimi-vendor-verifier.html</guid>
+      <title>Kimi Agent Swarm: 100 Sub-Agents at Scale</title>
+      <link>https://www.kimi.ai/blog/agent-swarm</link>
+      <description>Kimi Agent Swarm is a self-organizing multi-agent system that spawns up to 100 sub-agents to parallelize research, document synthesis, and multi-perspective analysis.</description>
+      <guid isPermaLink="true">https://www.kimi.ai/blog/agent-swarm</guid>
     </item>
     <item>
       <title>WorldVQA: Measuring Atomic World Knowledge in MLLMs</title>
-      <link>https://www.kimi.com/blog/worldvqa.html</link>
+      <link>https://www.kimi.ai/blog/worldvqa</link>
       <description>WorldVQA is a benchmark designed to evaluate atomic vision-centric world knowledge in Multimodal Large Language Models (MLLMs).</description>
-      <guid isPermaLink="true">https://www.kimi.com/blog/worldvqa.html</guid>
+      <guid isPermaLink="true">https://www.kimi.ai/blog/worldvqa</guid>
+    </item>
+    <item>
+      <title>Kimi K2.5 Tech Blog: Visual Agentic Intelligence</title>
+      <link>https://www.kimi.ai/blog/kimi-k2-5</link>
+      <description>Kimi K2.5 defines Visual Agentic Intelligence. Trained on 15T tokens, it introduces SOTA visual coding and autonomous agent swarm. Read the full tech blog.</description>
+      <guid isPermaLink="true">https://www.kimi.ai/blog/kimi-k2-5</guid>
+    </item>
+    <item>
+      <title>Kimi Vendor Verifier</title>
+      <link>https://www.kimi.ai/blog/kimi-vendor-verifier</link>
+      <description>Rebuilding the "Chain of Trust" -- Kimi Vendor Verifier.</description>
+      <guid isPermaLink="true">https://www.kimi.ai/blog/kimi-vendor-verifier</guid>
+    </item>
+    <item>
+      <title>Kimi K2 Thinking</title>
+      <link>https://www.kimi.ai/blog/kimi-k2-thinking</link>
+      <description>Kimi K2 Thinking, Moonshot's best open-source thinking model.</description>
+      <guid isPermaLink="true">https://www.kimi.ai/blog/kimi-k2-thinking</guid>
+    </item>
+    <item>
+      <title>Kimi K2: Open Agentic Intelligence</title>
+      <link>https://www.kimi.ai/blog/kimi-k2</link>
+      <description>Kimi K2 is our latest Mixture-of-Experts model with 32 billion activated parameters and 1 trillion total parameters. It achieves state-of-the-art performance in frontier knowledge, math, and coding among non-thinking models.</description>
+      <guid isPermaLink="true">https://www.kimi.ai/blog/kimi-k2</guid>
     </item>
   </channel>
 </rss>

@@ -7,7 +7,14 @@
     <docs>http://www.rssboard.org/rss-specification</docs>
     <generator>RSS Creator</generator>
     <language>zh-CN</language>
-    <lastBuildDate>Thu, 25 Jun 2026 05:01:21 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 27 Aug 2026 13:33:41 +0000</lastBuildDate>
+    <item>
+      <title>Say hi to new Ojai in-car experience</title>
+      <link>https://waymo.com/blog/2026/07/gemini-in-waymo</link>
+      <description>Designed from the ground up for ride-hailing, the Ojai reimagines the vehicle cabin as a flexible, premium space for riders to make their own—a true living room on wheels. As we prepare to welcome more public riders to experience the Ojai soon, we are unveiling new in-car features designed to enhance every journey: Gemini in Waymo and a redesigned user interface.</description>
+      <guid isPermaLink="true">https://waymo.com/blog/2026/07/gemini-in-waymo</guid>
+      <pubDate>Wed, 29 Jul 2026 00:00:00 +0000</pubDate>
+    </item>
     <item>
       <title>A second life for EV batteries, clean energy for communities</title>
       <link>https://waymo.com/blog/2026/06/b2u-partnership</link>
@@ -355,14 +362,6 @@
       <description>In March 2020, we launched the Waymo Open Dataset Challenges, inviting researchers to build and test their machine learning models using Waymo’s diverse self-driving dataset. We received over 100 submissions from around the world and invited the winners to present their work at our virtual Workshop on Scalability in Autonomous Driving at CVPR 2020. Today, we are excited to introduce some of the winners and their learnings.</description>
       <guid isPermaLink="true">https://waymo.com/blog/2020/07/opendataset-challenge-winners-2020</guid>
       <pubDate>Mon, 13 Jul 2020 00:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>VectorNet: Predicting behavior to help the Waymo Driver make better decisions</title>
-      <link>https://waymo.com/blog/2020/05/vectornet</link>
-      <description>One of the key qualities of a good driver is being able to anticipate and predict what others on the road might do. For example, what is the probability of another car merging into our lane or the cyclist in front of us making a left turn? The ability to accurately predict the intentions of other road users allows the Waymo Driver to make the safest possible decisions.
-</description>
-      <guid isPermaLink="true">https://waymo.com/blog/2020/05/vectornet</guid>
-      <pubDate>Thu, 14 May 2020 00:00:00 +0000</pubDate>
     </item>
   </channel>
 </rss>

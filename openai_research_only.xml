@@ -7,7 +7,7 @@
     <docs>http://www.rssboard.org/rss-specification</docs>
     <generator>RSS Creator - RSS Filter</generator>
     <language>zh-CN</language>
-    <lastBuildDate>Thu, 25 Jun 2026 05:01:19 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 27 Aug 2026 13:33:39 +0000</lastBuildDate>
     <item>
       <title>Weight normalization: A simple reparameterization to accelerate training of deep neural networks</title>
       <link>https://openai.com/index/weight-normalization</link>
@@ -317,18 +317,18 @@
       <pubDate>Fri, 29 Sep 2017 07:00:00 +0000</pubDate>
     </item>
     <item>
-      <title>Meta-learning for wrestling</title>
-      <link>https://openai.com/index/meta-learning-for-wrestling</link>
-      <description>We show that for the task of simulated robot wrestling, a meta-learning agent can learn to quickly defeat a stronger non-meta-learning agent, and also show that the meta-learning agent can adapt to physical malfunction.</description>
-      <guid isPermaLink="true">https://openai.com/index/meta-learning-for-wrestling</guid>
-      <category>Research</category>
-      <pubDate>Wed, 11 Oct 2017 07:00:00 +0000</pubDate>
-    </item>
-    <item>
       <title>Competitive self-play</title>
       <link>https://openai.com/index/competitive-self-play</link>
       <description>We’ve found that self-play allows simulated AIs to discover physical skills like tackling, ducking, faking, kicking, catching, and diving for the ball, without explicitly designing an environment with these skills in mind. Self-play ensures that the environment is always the right difficulty for an AI to improve. Taken alongside our Dota 2 self-play results, we have increasing confidence that self-play will be a core part of powerful AI systems in the future.</description>
       <guid isPermaLink="true">https://openai.com/index/competitive-self-play</guid>
+      <category>Research</category>
+      <pubDate>Wed, 11 Oct 2017 07:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>Meta-learning for wrestling</title>
+      <link>https://openai.com/index/meta-learning-for-wrestling</link>
+      <description>We show that for the task of simulated robot wrestling, a meta-learning agent can learn to quickly defeat a stronger non-meta-learning agent, and also show that the meta-learning agent can adapt to physical malfunction.</description>
+      <guid isPermaLink="true">https://openai.com/index/meta-learning-for-wrestling</guid>
       <category>Research</category>
       <pubDate>Wed, 11 Oct 2017 07:00:00 +0000</pubDate>
     </item>
@@ -423,17 +423,17 @@
       <pubDate>Thu, 15 Feb 2018 08:00:00 +0000</pubDate>
     </item>
     <item>
-      <title>Ingredients for robotics research</title>
-      <link>https://openai.com/index/ingredients-for-robotics-research</link>
-      <description>We’re releasing eight simulated robotics environments and a Baselines implementation of Hindsight Experience Replay, all developed for our research over the past year. We’ve used these environments to train models which work on physical robots. We’re also releasing a set of requests for robotics research.</description>
-      <guid isPermaLink="true">https://openai.com/index/ingredients-for-robotics-research</guid>
+      <title>Multi-Goal Reinforcement Learning: Challenging robotics environments and request for research</title>
+      <link>https://openai.com/index/multi-goal-reinforcement-learning</link>
+      <guid isPermaLink="true">https://openai.com/index/multi-goal-reinforcement-learning</guid>
       <category>Research</category>
       <pubDate>Mon, 26 Feb 2018 08:00:00 +0000</pubDate>
     </item>
     <item>
-      <title>Multi-Goal Reinforcement Learning: Challenging robotics environments and request for research</title>
-      <link>https://openai.com/index/multi-goal-reinforcement-learning</link>
-      <guid isPermaLink="true">https://openai.com/index/multi-goal-reinforcement-learning</guid>
+      <title>Ingredients for robotics research</title>
+      <link>https://openai.com/index/ingredients-for-robotics-research</link>
+      <description>We’re releasing eight simulated robotics environments and a Baselines implementation of Hindsight Experience Replay, all developed for our research over the past year. We’ve used these environments to train models which work on physical robots. We’re also releasing a set of requests for robotics research.</description>
+      <guid isPermaLink="true">https://openai.com/index/ingredients-for-robotics-research</guid>
       <category>Research</category>
       <pubDate>Mon, 26 Feb 2018 08:00:00 +0000</pubDate>
     </item>
@@ -975,6 +975,7 @@
     <item>
       <title>Introducing Whisper</title>
       <link>https://openai.com/index/whisper</link>
+      <description>We’ve trained and are open-sourcing a neural net called Whisper that approaches human level robustness and accuracy on English speech recognition.</description>
       <guid isPermaLink="true">https://openai.com/index/whisper</guid>
       <category>Research</category>
       <pubDate>Wed, 21 Sep 2022 07:00:00 +0000</pubDate>
@@ -1019,7 +1020,7 @@
     <item>
       <title>Improving mathematical reasoning with process supervision</title>
       <link>https://openai.com/index/improving-mathematical-reasoning-with-process-supervision</link>
-      <description>We've trained a model to achieve a new state-of-the-art in mathematical problem solving by rewarding each correct step of reasoning (“process supervision”) instead of simply rewarding the correct final answer (“outcome supervision”). In addition to boosting performance relative to outcome supervision, process supervision also has an important alignment benefit: it directly trains the model to produce a chain-of-thought that is endorsed by humans.</description>
+      <description>We’ve trained a model to achieve a new state-of-the-art in mathematical problem solving by rewarding each correct step of reasoning (“process supervision”) instead of simply rewarding the correct final answer (“outcome supervision”). In addition to boosting performance relative to outcome supervision, process supervision also has an important alignment benefit: it directly trains the model to produce a chain-of-thought that is endorsed by humans.</description>
       <guid isPermaLink="true">https://openai.com/index/improving-mathematical-reasoning-with-process-supervision</guid>
       <category>Research</category>
       <pubDate>Wed, 31 May 2023 07:00:00 +0000</pubDate>
@@ -1073,14 +1074,6 @@
       <pubDate>Thu, 06 Jun 2024 00:00:00 +0000</pubDate>
     </item>
     <item>
-      <title>Improved Techniques for Training Consistency Models</title>
-      <link>https://openai.com/index/improved-techniques-for-training-consistency-models</link>
-      <description>Consistency models are a nascent family of generative models that can sample high quality data in one step without the need for adversarial training. </description>
-      <guid isPermaLink="true">https://openai.com/index/improved-techniques-for-training-consistency-models</guid>
-      <category>Research</category>
-      <pubDate>Thu, 20 Jun 2024 00:00:00 +0000</pubDate>
-    </item>
-    <item>
       <title>Consistency Models</title>
       <link>https://openai.com/index/consistency-models</link>
       <description>Diffusion models have significantly advanced the fields of image, audio, and video generation, but they depend on an iterative sampling process that causes slow generation.</description>
@@ -1093,6 +1086,14 @@
       <link>https://openai.com/index/a-holistic-approach-to-undesired-content-detection-in-the-real-world</link>
       <description>We present a holistic approach to building a robust and useful natural language classification system for real-world content moderation.</description>
       <guid isPermaLink="true">https://openai.com/index/a-holistic-approach-to-undesired-content-detection-in-the-real-world</guid>
+      <category>Research</category>
+      <pubDate>Thu, 20 Jun 2024 00:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>Improved Techniques for Training Consistency Models</title>
+      <link>https://openai.com/index/improved-techniques-for-training-consistency-models</link>
+      <description>Consistency models are a nascent family of generative models that can sample high quality data in one step without the need for adversarial training. </description>
+      <guid isPermaLink="true">https://openai.com/index/improved-techniques-for-training-consistency-models</guid>
       <category>Research</category>
       <pubDate>Thu, 20 Jun 2024 00:00:00 +0000</pubDate>
     </item>
@@ -1122,7 +1123,7 @@
     <item>
       <title>Improving Model Safety Behavior with Rule-Based Rewards</title>
       <link>https://openai.com/index/improving-model-safety-behavior-with-rule-based-rewards</link>
-      <description>We've developed and applied a new method leveraging Rule-Based Rewards (RBRs) that aligns models to behave safely without extensive human data collection.</description>
+      <description>We’ve developed and applied a new method leveraging Rule-Based Rewards (RBRs) that aligns models to behave safely without extensive human data collection.</description>
       <guid isPermaLink="true">https://openai.com/index/improving-model-safety-behavior-with-rule-based-rewards</guid>
       <category>Research</category>
       <pubDate>Wed, 24 Jul 2024 09:00:00 +0000</pubDate>
@@ -1161,7 +1162,7 @@
     <item>
       <title>Evaluating fairness in ChatGPT</title>
       <link>https://openai.com/index/evaluating-fairness-in-chatgpt</link>
-      <description>We've analyzed how ChatGPT responds to users based on their name, using AI research assistants to protect privacy.</description>
+      <description>We’ve analyzed how ChatGPT responds to users based on their name, using AI research assistants to protect privacy.</description>
       <guid isPermaLink="true">https://openai.com/index/evaluating-fairness-in-chatgpt</guid>
       <category>Research</category>
       <pubDate>Tue, 15 Oct 2024 10:00:00 +0000</pubDate>
@@ -1265,7 +1266,7 @@
     <item>
       <title>Sora 2 is here </title>
       <link>https://openai.com/index/sora-2</link>
-      <description>Our latest video generation model is more physically accurate, realistic, and controllable than prior systems. It also features synchronized dialogue and sound effects. Create with it in the new Sora app.</description>
+      <description>This post introduced Sora 2, a video generation model with synchronized dialogue and sound effects. The Sora product is no longer available.</description>
       <guid isPermaLink="true">https://openai.com/index/sora-2</guid>
       <category>Research</category>
       <pubDate>Tue, 30 Sep 2025 00:00:00 +0000</pubDate>
@@ -1477,6 +1478,30 @@
       <guid isPermaLink="true">https://openai.com/index/ai-chemist-improves-reaction</guid>
       <category>Research</category>
       <pubDate>Wed, 17 Jun 2026 10:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>Introducing GeneBench-Pro</title>
+      <link>https://openai.com/index/introducing-genebench-pro</link>
+      <description>Introducing GeneBench-Pro, a new benchmark testing AI performance in genomics, biology, and scientific research using complex, real-world datasets.</description>
+      <guid isPermaLink="true">https://openai.com/index/introducing-genebench-pro</guid>
+      <category>Research</category>
+      <pubDate>Tue, 30 Jun 2026 00:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>Separating signal from noise in coding evaluations</title>
+      <link>https://openai.com/index/separating-signal-from-noise-coding-evaluations</link>
+      <description>A new analysis from OpenAI reveals issues in SWE-Bench Pro, a popular coding benchmark, raising concerns about reliability and accuracy in evaluating AI models.</description>
+      <guid isPermaLink="true">https://openai.com/index/separating-signal-from-noise-coding-evaluations</guid>
+      <category>Research</category>
+      <pubDate>Wed, 08 Jul 2026 13:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>How enabling two settings tripled our scores on the ARC-AGI-3 benchmark</title>
+      <link>https://openai.com/index/how-two-settings-tripled-our-arc-agi-3-scores</link>
+      <description>How two API settings improved GPT-5.6 performance on ARC-AGI-3, boosting scores and efficiency by retaining reasoning and enabling compaction.</description>
+      <guid isPermaLink="true">https://openai.com/index/how-two-settings-tripled-our-arc-agi-3-scores</guid>
+      <category>Research</category>
+      <pubDate>Wed, 29 Jul 2026 15:00:00 +0000</pubDate>
     </item>
   </channel>
 </rss>
