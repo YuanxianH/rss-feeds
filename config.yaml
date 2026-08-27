@@ -166,13 +166,13 @@ jobs:
       user_agent: "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36"
       encoding: "utf-8"
 
-  # Kimi Blog（VitePress 站点）
+  # Kimi Blog（kimi.com 已 301 到 kimi.ai 的 Next.js 站点）
   - type: "kimi_blog"
     name: "Kimi Blog"
     output: "kimi_blog.xml"
     title: "Kimi Research Articles & Technical Blogs"
     description: "Explore Kimi research articles, technical blogs, and benchmark releases"
-    link: "https://www.kimi.com/blog"
+    link: "https://www.kimi.ai/blog/"
     catalog:
       section: "blogs"
 
