@@ -7,28 +7,7 @@
     <docs>http://www.rssboard.org/rss-specification</docs>
     <generator>RSS Creator</generator>
     <language>zh-CN</language>
-    <lastBuildDate>Thu, 27 Aug 2026 23:39:10 +0000</lastBuildDate>
-    <item>
-      <title>Codex CLI 0.144.6</title>
-      <link>https://github.com/openai/codex/releases/tag/rust-v0.144.6</link>
-      <description>Bug Fixes
-Refreshed bundled instructions for GPT-5.6 Sol, Terra, and Luna, and corrected their context windows to 272,000 tokens. (
-#33972
-,
-#34009
-)
-Changelog
-Full Changelog:
-rust-v0.144.5...rust-v0.144.6
-#33972
-Backport refreshed bundled model metadata to 0.144
-@sayan-oai
-#34009
-Narrow 0.144 hotfix to GPT-5.6 prompts and context
-@sayan-oai</description>
-      <guid isPermaLink="false">https://developers.openai.com/codex/changelog#github-release-356112050</guid>
-      <pubDate>Sat, 18 Jul 2026 00:00:00 +0000</pubDate>
-    </item>
+    <lastBuildDate>Fri, 28 Aug 2026 10:07:21 +0000</lastBuildDate>
     <item>
       <title>Codex CLI 0.145.0</title>
       <link>https://github.com/openai/codex/releases/tag/rust-v0.145.0</link>
