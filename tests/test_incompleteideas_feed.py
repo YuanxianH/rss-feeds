@@ -12,14 +12,17 @@ FIXTURE = Path(__file__).parent / "fixtures" / "incompleteideas_index.html"
 def _incompleteideas_job() -> dict:
     config = yaml.safe_load((ROOT / "config.yaml").read_text(encoding="utf-8"))
     for job in config.get("jobs") or []:
-        if job.get("name") == "Incomplete Ideas":
+        if job.get("output") == "incompleteideas_blog.xml":
             return job
-    raise AssertionError("Incomplete Ideas job missing from config.yaml")
+    raise AssertionError("Incomplete Ideas Blog job missing from config.yaml")
 
 
 class IncompleteIdeasFeedTests(unittest.TestCase):
     def test_fixture_extracts_navigable_homepage_links(self):
         job = _incompleteideas_job()
+        self.assertEqual(job.get("name"), "Incomplete Ideas Blog")
+        self.assertEqual(job.get("title"), "Incomplete Ideas Blog")
+        self.assertEqual(job.get("output"), "incompleteideas_blog.xml")
         self.assertTrue((job.get("options") or {}).get("infer_dates_from_context"))
         self.assertTrue((job.get("options") or {}).get("persist_pubdates"))
         parser = HTMLParser(

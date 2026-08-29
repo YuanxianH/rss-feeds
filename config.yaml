@@ -267,10 +267,10 @@ jobs:
 
   # Rich Sutton 个人主页里的 Incomplete Ideas (blog) 栏目
   - type: "selector_scrape"
-    name: "Incomplete Ideas"
+    name: "Incomplete Ideas Blog"
     url: "http://www.incompleteideas.net/"
-    output: "incompleteideas.xml"
-    title: "Incomplete Ideas (blog)"
+    output: "incompleteideas_blog.xml"
+    title: "Incomplete Ideas Blog"
     description: "Posts from the Incomplete Ideas blog on Rich Sutton's homepage"
     link: "http://www.incompleteideas.net/"
     selectors:
