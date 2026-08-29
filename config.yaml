@@ -183,6 +183,19 @@ jobs:
     catalog:
       section: "blogs"
 
+  # Tencent Hunyuan 研究成果（公开列表 API）
+  - type: "hunyuan_research"
+    name: "Tencent Hunyuan Research"
+    api_url: "https://api.hunyuan.tencent.com/api/blog/publicList"
+    article_base_url: "https://hy.tencent.com/research"
+    locale: "zh"
+    output: "hunyuan_research.xml"
+    title: "Tencent Hunyuan Research"
+    description: "Research publications and technical posts from Tencent Hunyuan (混元)"
+    link: "https://hy.tencent.com/research"
+    catalog:
+      section: "research"
+
   # Physical Intelligence Blog
   - type: "selector_scrape"
     name: "Physical Intelligence Blog"

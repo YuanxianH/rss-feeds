@@ -20,6 +20,7 @@ Run commands from the repository root. Feed XML, `feeds/index.html`, and
 | `minimax_releases` | HuggingFace models and GitHub repositories |
 | `waymo_blog_technology` | Waymo blog API |
 | `zhipu_research` | Zhipu research articles API |
+| `hunyuan_research` | Tencent Hunyuan research list API |
 | `openai_research_filter` | Filter an existing RSS feed by category |
 | `codex_changelog` | Codex changelog release entries |
 

@@ -1,0 +1,25 @@
+{
+  "code": 0,
+  "msg": "success",
+  "data": {
+    "totalNum": 5,
+    "list": [
+      {
+        "id": 100025,
+        "lang": "zh",
+        "title": "Learning from context is harder than we thought",
+        "author": "Shihan Dou and Pluto Zhou",
+        "displayPublishTime": 1770092288,
+        "customUrl": ""
+      },
+      {
+        "id": 100015,
+        "lang": "zh",
+        "title": "Stabilizing RLVR via Token-level Gradient Diagnosis and Layerwise Clipping",
+        "author": "黄冠华;许庭强;王锦波",
+        "publishedAt": 1770971794,
+        "customUrl": ""
+      }
+    ]
+  }
+}

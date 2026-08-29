@@ -21,6 +21,7 @@ The network currently covers:
 - [Waymo Research](https://yuanxianh.github.io/rss-feeds/waymo_research.xml)
 - [Meta AI Research Publications](https://yuanxianh.github.io/rss-feeds/meta_ai_research.xml)
 - [OpenAI Research](https://yuanxianh.github.io/rss-feeds/openai_research_only.xml)
+- [Tencent Hunyuan Research](https://yuanxianh.github.io/rss-feeds/hunyuan_research.xml)
 
 ### Blogs
 
