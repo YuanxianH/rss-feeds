@@ -195,11 +195,15 @@ jobs:
     catalog:
       section: "research"
 
-  # 智谱研究博客（Payload CMS articles API）
-  - type: "zhipu_research"
+  # 智谱研究博客（列表页 + Next.js 内嵌数据 + collection API，页面更新后小时任务会跟上）
+  - type: "dynamic_site"
     name: "Zhipu AI Research"
-    api_url: "https://www.zhipuai.cn/api/articles"
-    article_base_url: "https://www.zhipuai.cn/zh/research"
+    url: "https://www.zhipuai.cn/zh/research"
+    path_prefix: "/zh/research"
+    allowed_hosts:
+      - "zhipuai.cn"
+    api_urls:
+      - "https://www.zhipuai.cn/api/articles"
     category: "blog"
     locale: "zh"
     output: "zhipu_research.xml"
@@ -208,6 +212,9 @@ jobs:
     link: "https://www.zhipuai.cn/zh/research"
     catalog:
       section: "blogs"
+    options:
+      require_active: true
+      minimum_items: 1
 
   # Physical Intelligence Blog
   - type: "selector_scrape"

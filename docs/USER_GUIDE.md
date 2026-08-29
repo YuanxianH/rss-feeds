@@ -85,6 +85,7 @@ python -m unittest discover -s tests -p "test_*.py"
 核心字段：
 
 - `jobs[].type`: 任务类型（如 `selector_scrape` / `dynamic_site` / `openai_research_filter` / `waymo_blog_technology` / `minimax_news` / `zhipu_research`）
+- `jobs[].api_urls`: `dynamic_site` 可选的 JSON collection，与列表页一起发现新文章
 - `jobs[].name`: 任务名称（用于日志和结果统计）
 - `jobs[].output`: 输出文件名（写入 `feeds/`）
 - `jobs[].options.*`: 任务参数（如 `max_items` / `timeout` / `retries`）
