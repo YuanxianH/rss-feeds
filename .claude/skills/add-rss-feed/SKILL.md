@@ -15,11 +15,13 @@ Run commands from the repository root. Feed XML, `feeds/index.html`, and
 | Type | Use case |
 |---|---|
 | `selector_scrape` | Server-rendered lists with stable CSS selectors |
-| `dynamic_site` | Blog links present in HTML, embedded JSON/Next.js data, or sitemaps |
+| `dynamic_site` | Blog links in HTML, embedded JSON/Next.js data, sitemaps, or collection APIs |
 | `minimax_news` | MiniMax News discovery and crawl |
 | `minimax_releases` | HuggingFace models and GitHub repositories |
 | `waymo_blog_technology` | Waymo blog API |
+| `json_list_api` | Paginated JSON list APIs; field/pagination mappings live in config |
 | `zhipu_research` | Compatibility adapter for Zhipu research via `dynamic_site` |
+| `hunyuan_research` | Hunyuan preset of `json_list_api` |
 | `openai_research_filter` | Filter an existing RSS feed by category |
 | `codex_changelog` | Codex changelog release entries |
 
@@ -100,6 +102,31 @@ picked up from the live page, embedded data, and the API together:
   options:
     require_active: true
     minimum_items: 1
+```
+
+For paginated JSON list APIs with no usable HTML index:
+
+```yaml
+- type: "json_list_api"
+  name: "Feed Name"
+  api_url: "https://example.com/api/posts"
+  article_base_url: "https://example.com/research"
+  output: "feed_name.xml"
+  title: "Feed Title"
+  description: "Feed description"
+  link: "https://example.com/research"
+  fields:
+    list: "data.list"
+    total: "data.totalNum"
+    title: ["title"]
+    description: ["desc", "summary"]
+    slug: ["customUrl", "id"]
+    date: ["displayPublishTime", "publishedAt"]
+  request:
+    page_key: "pageNum"
+    page_size_key: "pageSize"
+  catalog:
+    section: "research"
 ```
 
 Common timeout, retry, user-agent, encoding, and item limits come from

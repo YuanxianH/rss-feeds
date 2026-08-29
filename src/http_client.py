@@ -1,6 +1,6 @@
 """Shared HTTP session factory with retries."""
 
-from typing import Optional
+from typing import Iterable, Optional
 
 import requests
 from requests.adapters import HTTPAdapter
@@ -19,6 +19,7 @@ def create_retry_session(
     accept: Optional[str] = None,
     retries: int = 2,
     backoff_factor: float = 0.5,
+    allowed_methods: Optional[Iterable[str]] = None,
 ) -> requests.Session:
     """Create a requests session with retry policy for idempotent methods."""
     session = requests.Session()
@@ -32,7 +33,7 @@ def create_retry_session(
         read=retries,
         status=retries,
         status_forcelist=(429, 500, 502, 503, 504),
-        allowed_methods=frozenset(["GET", "HEAD"]),
+        allowed_methods=frozenset(allowed_methods or ("GET", "HEAD")),
         backoff_factor=backoff_factor,
         raise_on_status=False,
     )

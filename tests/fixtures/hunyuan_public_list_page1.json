@@ -1,0 +1,43 @@
+{
+  "code": 0,
+  "msg": "success",
+  "data": {
+    "totalNum": 6,
+    "list": [
+      {
+        "id": 100100,
+        "lang": "zh",
+        "title": "Hy4 preview 发布",
+        "author": "Hy LLM",
+        "displayPublishTime": 1787846400,
+        "publishedAt": 1787896648,
+        "customUrl": "hy4-preview"
+      },
+      {
+        "id": 100091,
+        "lang": "zh",
+        "title": "From LR to ELR: A Better Heuristic for Pretraining Dynamics",
+        "desc": "引入有效学习率来控制模型权重的方向变化。",
+        "author": "Pretrain Team",
+        "displayPublishTime": 1786377600,
+        "publishedAt": 1786592588,
+        "customUrl": "elr"
+      },
+      {
+        "id": 100041,
+        "lang": "zh",
+        "title": "Hy-MT2：面向实际应用场景的高性能多语言翻译模型",
+        "desc": "Hy-MT2 支持 33 种语言互译。",
+        "author": "pokolv;moonzheng;jasonzli",
+        "displayPublishTime": 1779346800,
+        "customUrl": ""
+      },
+      {
+        "id": null,
+        "title": "缺少编号",
+        "desc": "should be skipped",
+        "customUrl": ""
+      }
+    ]
+  }
+}

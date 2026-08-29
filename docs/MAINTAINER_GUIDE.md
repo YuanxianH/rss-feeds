@@ -48,15 +48,18 @@ rss_creator/
    `type: dynamic_site`，配置 `url`、`path_prefix`、`allowed_hosts`，以及可选的
    `sitemap_urls` / `api_urls`。小时任务会重新抓取页面，网页新增文章后 feed
    会自动更新。
-3. 只有专用 API 或特殊数据模型的来源：在 `src/jobs/` 新增 job 并注册
+3. 公开 JSON 列表接口（HTML 里没有可用文章链接）：使用 `type: json_list_api`，
+   把 list/title/slug/date 和分页参数写进 `config.yaml`。同类站点（例如混元
+   研究页）可以复用同一 job，网页持续发文时由小时级 Actions 自动更新 XML。
+4. 只有专用 API 或特殊数据模型的来源：在 `src/jobs/` 新增 job 并注册
    `job_type`。
-4. 本地验证：
+5. 本地验证：
 
 ```bash
 python main.py -v
 ```
 
-5. 为页面结构保存最小 HTML fixture，并补脱网单元测试。
+6. 为页面结构保存最小 HTML/JSON fixture，并补脱网单元测试。
 
 `feeds/index.html`、`feeds/assets/` 和 XML 都是生成产物，不要手工编辑或提交。
 首页源文件位于 `src/templates/` 与 `src/site_assets/`。
