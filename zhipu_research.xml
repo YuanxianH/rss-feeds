@@ -1,0 +1,138 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0">
+  <channel>
+    <title>Zhipu AI Research</title>
+    <link>https://www.zhipuai.cn/zh/research</link>
+    <description>Research and technical blogs from Zhipu AI (智谱)</description>
+    <docs>http://www.rssboard.org/rss-specification</docs>
+    <generator>RSS Creator</generator>
+    <language>zh-CN</language>
+    <lastBuildDate>Sat, 29 Aug 2026 16:28:18 +0000</lastBuildDate>
+    <item>
+      <title>GLM-5.3-Flash：前沿智能进入普惠时代</title>
+      <link>https://www.zhipuai.cn/zh/research/163</link>
+      <description>基座模型</description>
+      <guid isPermaLink="true">https://www.zhipuai.cn/zh/research/163</guid>
+      <pubDate>Wed, 26 Aug 2026 14:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>GLM-5.3：前沿编程能力与涌现的网络安全能力</title>
+      <link>https://www.zhipuai.cn/zh/research/162</link>
+      <description>基座模型</description>
+      <guid isPermaLink="true">https://www.zhipuai.cn/zh/research/162</guid>
+      <pubDate>Fri, 14 Aug 2026 06:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>GLM-5.2上线并开源：专注Coding与长程任务</title>
+      <link>https://www.zhipuai.cn/zh/research/161</link>
+      <description>基座模型</description>
+      <guid isPermaLink="true">https://www.zhipuai.cn/zh/research/161</guid>
+      <pubDate>Tue, 16 Jun 2026 16:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>下一代大模型推理网络架构：ZCube如何有效破解网络瓶颈？</title>
+      <link>https://www.zhipuai.cn/zh/research/160</link>
+      <description>ZCube：超大规模大模型推理的网络优化</description>
+      <guid isPermaLink="true">https://www.zhipuai.cn/zh/research/160</guid>
+      <pubDate>Wed, 20 May 2026 19:51:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>Scaling Pain：超大规模Coding Agent推理实践</title>
+      <link>https://www.zhipuai.cn/zh/research/159</link>
+      <description>we share the lessons learned from this investigation, with the hope of helping the community better understand and overcome the Scaling Pain of Coding Agent inference.</description>
+      <guid isPermaLink="true">https://www.zhipuai.cn/zh/research/159</guid>
+      <pubDate>Wed, 29 Apr 2026 16:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>GLM-5.1开源：一个独立工作8小时的模型</title>
+      <link>https://www.zhipuai.cn/zh/research/157</link>
+      <description>our next-generation flagship model for agentic engineering</description>
+      <guid isPermaLink="true">https://www.zhipuai.cn/zh/research/157</guid>
+      <pubDate>Tue, 07 Apr 2026 16:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>GLM-5V-Turbo发布：多模态Coding基座模型</title>
+      <link>https://www.zhipuai.cn/zh/research/156</link>
+      <description>A multimodal coding foundation model for visual programming</description>
+      <guid isPermaLink="true">https://www.zhipuai.cn/zh/research/156</guid>
+      <pubDate>Wed, 01 Apr 2026 16:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>GLM-5-Turbo：龙虾增强的基座模型</title>
+      <link>https://www.zhipuai.cn/zh/research/155</link>
+      <description>A foundation model for OpenClaw</description>
+      <guid isPermaLink="true">https://www.zhipuai.cn/zh/research/155</guid>
+      <pubDate>Sun, 15 Mar 2026 16:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>GLM-5技术报告</title>
+      <link>https://www.zhipuai.cn/zh/research/153</link>
+      <description>to transition the paradigm of vibe coding to agentic engineering</description>
+      <guid isPermaLink="true">https://www.zhipuai.cn/zh/research/153</guid>
+      <pubDate>Sat, 21 Feb 2026 16:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>GLM-5开源：从代码到工程，Agentic Engineering时代最好的开源模型</title>
+      <link>https://www.zhipuai.cn/zh/research/154</link>
+      <description>targeting complex systems engineering and long-horizon agentic tasks</description>
+      <guid isPermaLink="true">https://www.zhipuai.cn/zh/research/154</guid>
+      <pubDate>Wed, 11 Feb 2026 16:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>GLM-OCR发布：性能SOTA，搞定复杂文档</title>
+      <link>https://www.zhipuai.cn/zh/research/150</link>
+      <description>a lightweight professional OCR model</description>
+      <guid isPermaLink="true">https://www.zhipuai.cn/zh/research/150</guid>
+      <pubDate>Mon, 02 Feb 2026 16:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>GLM-4.7-Flash开源、免费</title>
+      <link>https://www.zhipuai.cn/zh/research/148</link>
+      <description>Small but powerful.</description>
+      <guid isPermaLink="true">https://www.zhipuai.cn/zh/research/148</guid>
+      <pubDate>Mon, 19 Jan 2026 16:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>智谱联合华为开源国产芯片训练的多模态SOTA模型</title>
+      <link>https://www.zhipuai.cn/zh/research/158</link>
+      <description>the first open-source, industrial-grade discrete auto-regressive image generation model</description>
+      <guid isPermaLink="true">https://www.zhipuai.cn/zh/research/158</guid>
+      <pubDate>Tue, 13 Jan 2026 16:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>GLM-4.7：更强的 Coding</title>
+      <link>https://www.zhipuai.cn/zh/research/143</link>
+      <description>GLM-4.7, your new coding partner, is coming with the following features:</description>
+      <guid isPermaLink="true">https://www.zhipuai.cn/zh/research/143</guid>
+      <pubDate>Sun, 21 Dec 2025 16:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>GLM-TTS：基于多奖励融合强化学习，实现工业级语音合成</title>
+      <link>https://www.zhipuai.cn/zh/research/147</link>
+      <description>Generating more expressive and emotional speech.</description>
+      <guid isPermaLink="true">https://www.zhipuai.cn/zh/research/147</guid>
+      <pubDate>Wed, 10 Dec 2025 16:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>GLM-ASR-Nano：面向真实世界的高鲁棒性语音识别</title>
+      <link>https://www.zhipuai.cn/zh/research/149</link>
+      <description>a robust, open-source speech recognition model with 1.5B parameters</description>
+      <guid isPermaLink="true">https://www.zhipuai.cn/zh/research/149</guid>
+      <pubDate>Tue, 09 Dec 2025 16:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>AutoGLM开源：每台手机，都可以成为AI手机</title>
+      <link>https://www.zhipuai.cn/zh/research/145</link>
+      <description>Unlocking the AI Phone for Everyone</description>
+      <guid isPermaLink="true">https://www.zhipuai.cn/zh/research/145</guid>
+      <pubDate>Mon, 08 Dec 2025 16:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>GLM-4.6V：支持原生工具调用的开源多模态模型</title>
+      <link>https://www.zhipuai.cn/zh/research/144</link>
+      <description>effectively bridges the gap between "visual perception" and "executable action"</description>
+      <guid isPermaLink="true">https://www.zhipuai.cn/zh/research/144</guid>
+      <pubDate>Sun, 07 Dec 2025 16:00:00 +0000</pubDate>
+    </item>
+  </channel>
+</rss>
