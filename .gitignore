@@ -11,10 +11,10 @@ ENV/
 dist/
 build/
 
-# RSS feeds (本地生成的，不提交到仓库)
-feeds/*.xml
+# 生成的 RSS 与静态站点（由 CI 发布，不提交到源码分支）
+feeds/*
 
-# 但保留 .gitkeep
+# 保留目录
 !feeds/.gitkeep
 
 # IDE

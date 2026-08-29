@@ -6,6 +6,15 @@ site:
   tagline: "A deployed RSS network for AI labs, research groups, and release channels."
   description: "Browse and subscribe to curated RSS feeds for AI research publications, engineering blogs, and product release streams."
 
+defaults:
+  options:
+    max_items: 50
+    timeout: 20
+    retries: 3
+    backoff_factor: 0.75
+    user_agent: "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36"
+    encoding: "utf-8"
+
 jobs:
   # Google DeepMind 博客（通用选择器抓取）
   - type: "selector_scrape"
@@ -22,13 +31,6 @@ jobs:
       date: "time"
     catalog:
       section: "blogs"
-    options:
-      max_items: 50
-      timeout: 15
-      retries: 2
-      backoff_factor: 0.5
-      user_agent: "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36"
-      encoding: "utf-8"
 
   # Waymo Research 论文（通用选择器抓取）
   - type: "selector_scrape"
@@ -45,13 +47,6 @@ jobs:
       description: "ul"
     catalog:
       section: "research"
-    options:
-      max_items: 50
-      timeout: 15
-      retries: 2
-      backoff_factor: 0.5
-      user_agent: "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36"
-      encoding: "utf-8"
 
   # Meta AI Research Publications（通用选择器抓取）
   - type: "selector_scrape"
@@ -69,13 +64,6 @@ jobs:
       date: "p._8w6f._8wl0._8w6h"
     catalog:
       section: "research"
-    options:
-      max_items: 50
-      timeout: 15
-      retries: 2
-      backoff_factor: 0.5
-      user_agent: "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36"
-      encoding: "utf-8"
 
   # OpenAI RSS 研究过滤
   - type: "openai_research_filter"
@@ -92,8 +80,6 @@ jobs:
     catalog:
       section: "research"
     options:
-      timeout: 15
-      retries: 2
       user_agent: "RSSCreator/1.0 (+https://github.com)"
 
   # Waymo Blog Technology（API 任务）
@@ -108,12 +94,6 @@ jobs:
     link: "https://waymo.com/blog/search/?t=Technology"
     catalog:
       section: "blogs"
-    options:
-      max_items: 50
-      timeout: 15
-      retries: 2
-      backoff_factor: 0.5
-      user_agent: "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36"
 
   # MiniMax News（复杂页面任务）
   - type: "minimax_news"
@@ -125,9 +105,26 @@ jobs:
     catalog:
       section: "blogs"
     options:
-      max_items: 50
       max_discovery_pages: 50
       max_sitemaps: 200
+
+  # MiniMax 官方博客（Next.js 页面）
+  - type: "dynamic_site"
+    name: "MiniMax Official Blog"
+    url: "https://www.minimax.io/blog"
+    path_prefix: "/blog"
+    allowed_hosts:
+      - "minimax.io"
+    sitemap_urls:
+      - "https://www.minimax.io/sitemap.xml"
+    output: "minimax_official_blog.xml"
+    title: "MiniMax Official Blog"
+    description: "Official product, research, and engineering posts from MiniMax"
+    link: "https://www.minimax.io/blog"
+    catalog:
+      section: "blogs"
+    options:
+      minimum_items: 1
 
   # MiniMax Releases（HuggingFace 模型 + GitHub 仓库）
   - type: "minimax_releases"
@@ -139,11 +136,8 @@ jobs:
     catalog:
       section: "releases"
     options:
-      max_items: 50
       resource_types:
         - "models"
-      retries: 2
-      backoff_factor: 0.5
 
   # Codex changelog 里的 GitHub release
   - type: "codex_changelog"
@@ -158,23 +152,22 @@ jobs:
       - "github-release-"
     catalog:
       section: "releases"
-    options:
-      max_items: 50
-      timeout: 15
-      retries: 2
-      backoff_factor: 0.5
-      user_agent: "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36"
-      encoding: "utf-8"
 
   # Kimi Blog（kimi.com 已 301 到 kimi.ai 的 Next.js 站点）
   - type: "kimi_blog"
     name: "Kimi Blog"
+    url: "https://www.kimi.ai/blog/"
+    path_prefix: "/blog"
+    allowed_hosts:
+      - "kimi.ai"
     output: "kimi_blog.xml"
     title: "Kimi Research Articles & Technical Blogs"
     description: "Explore Kimi research articles, technical blogs, and benchmark releases"
     link: "https://www.kimi.ai/blog/"
     catalog:
       section: "blogs"
+    options:
+      minimum_items: 1
 
   # Physical Intelligence Blog
   - type: "selector_scrape"
@@ -191,13 +184,6 @@ jobs:
       date: "div.text-xs.text-muted-foreground.shrink-0.ml-1"
     catalog:
       section: "blogs"
-    options:
-      max_items: 50
-      timeout: 15
-      retries: 2
-      backoff_factor: 0.5
-      user_agent: "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36"
-      encoding: "utf-8"
 
   # 示例配置
   # - type: "selector_scrape"

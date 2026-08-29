@@ -1,23 +1,19 @@
 """从 MiniMax News 页面提取文章并生成 RSS。"""
 
-import argparse
 import json
 import logging
 import re
 from collections import deque
-from datetime import datetime, timezone
-from pathlib import Path
 from typing import Any, Iterable, Optional
 from urllib.parse import urljoin, urlparse, urlunparse
 
 import requests
 from bs4 import BeautifulSoup
-from dateutil import parser as date_parser
 
+from src.article_metadata import extract_article_item
 from src.http_client import create_retry_session
 from src.path_utils import resolve_output_path
 from src.rss_generator import RSSGenerator
-from src.runtime import setup_logging
 
 from .base import FeedJob, JobContext, JobResult
 from .registry import register_job
@@ -65,9 +61,6 @@ SITEMAP_CANDIDATES = [
     f"{BASE_URL}/sitemap/news.xml",
     f"{BASE_URL}/sitemap-news.xml",
 ]
-DEFAULT_FEEDS_DIR = Path(__file__).resolve().parents[2] / "feeds"
-
-
 def create_session() -> requests.Session:
     return create_retry_session(
         accept="text/html,application/xml,application/xhtml+xml",
@@ -202,166 +195,18 @@ def extract_news_urls_from_html(html: str, page_url: str = NEWS_URL) -> list[str
     return urls
 
 
-def _parse_datetime(candidate: str) -> Optional[datetime]:
-    if not candidate:
-        return None
-    text = candidate.strip()
-    if not text:
-        return None
-
-    normalized = text.replace("年", "-").replace("月", "-").replace("日", "")
-    normalized = normalized.replace(".", "-").replace("/", "-")
-
-    try:
-        dt = date_parser.parse(normalized, fuzzy=True)
-    except Exception:
-        return None
-
-    if dt.tzinfo is None:
-        dt = dt.replace(tzinfo=timezone.utc)
-    return dt
-
-
-def _first_meta(soup: BeautifulSoup, candidates: list[tuple[str, str]]) -> Optional[str]:
-    for attr_name, attr_value in candidates:
-        tag = soup.find("meta", attrs={attr_name: attr_value})
-        if tag and tag.get("content"):
-            content = tag.get("content", "").strip()
-            if content:
-                return content
-    return None
-
-
-def _extract_json_ld(soup: BeautifulSoup) -> list[Any]:
-    entries = []
-    for script in soup.find_all("script", attrs={"type": "application/ld+json"}):
-        raw = script.string or script.get_text()
-        if not raw:
-            continue
-        try:
-            parsed = json.loads(raw)
-        except json.JSONDecodeError:
-            continue
-        if isinstance(parsed, list):
-            entries.extend(parsed)
-        else:
-            entries.append(parsed)
-    return entries
-
-
-def _extract_publish_date(soup: BeautifulSoup) -> Optional[str]:
-    meta_date = _first_meta(
-        soup,
-        [
-            ("property", "article:published_time"),
-            ("property", "og:published_time"),
-            ("name", "publish_date"),
-            ("name", "date"),
-            ("name", "dc.date"),
-        ],
-    )
-    if meta_date:
-        dt = _parse_datetime(meta_date)
-        if dt is not None:
-            return dt.isoformat()
-
-    for time_tag in soup.select("time"):
-        candidate = time_tag.get("datetime") or time_tag.get_text(strip=True)
-        dt = _parse_datetime(candidate)
-        if dt is not None:
-            return dt.isoformat()
-
-    for obj in _extract_json_ld(soup):
-        if not isinstance(obj, dict):
-            continue
-        for key in ("datePublished", "dateCreated", "uploadDate"):
-            value = obj.get(key)
-            if isinstance(value, str):
-                dt = _parse_datetime(value)
-                if dt is not None:
-                    return dt.isoformat()
-
-    text = soup.get_text(" ", strip=True)
-    for match in re.findall(r"(20\d{2}[./-]\d{1,2}[./-]\d{1,2}(?:[ T]\d{1,2}:\d{2}(?::\d{2})?)?)", text):
-        dt = _parse_datetime(match)
-        if dt is not None:
-            return dt.isoformat()
-
-    return None
-
-
-def _fallback_title_from_url(url: str) -> str:
-    slug = urlparse(url).path.rsplit("/", 1)[-1]
-    return slug.replace("-", " ").strip().title()
-
-
 def extract_article_item_from_html(
     url: str,
     html: str,
     response_url: Optional[str] = None,
 ) -> Optional[dict]:
     """从文章页面提取 RSS 所需字段。"""
-    soup = BeautifulSoup(html, "html.parser")
-    effective_url = response_url or url
-    normalized_effective_url = normalize_news_url(effective_url, base_url=url)
-    if not normalized_effective_url:
-        return None
-
-    canonical_tag = soup.find("link", attrs={"rel": "canonical"})
-    canonical_url = canonical_tag.get("href", "") if canonical_tag else ""
-    og_url = _first_meta(soup, [("property", "og:url")]) or ""
-    link = (
-        normalize_news_url(canonical_url, base_url=effective_url)
-        or normalize_news_url(og_url, base_url=effective_url)
-        or normalized_effective_url
+    return extract_article_item(
+        url,
+        html,
+        response_url=response_url,
+        normalize_url=lambda candidate, base: normalize_news_url(candidate, base_url=base),
     )
-
-    title = _first_meta(
-        soup,
-        [
-            ("property", "og:title"),
-            ("name", "twitter:title"),
-            ("name", "title"),
-        ],
-    )
-    if not title:
-        if h1 := soup.select_one("h1"):
-            title = h1.get_text(strip=True)
-    if not title and soup.title:
-        title = soup.title.get_text(strip=True)
-    if not title:
-        title = _fallback_title_from_url(link)
-    if not title:
-        return None
-
-    description = _first_meta(
-        soup,
-        [
-            ("property", "og:description"),
-            ("name", "description"),
-            ("name", "twitter:description"),
-        ],
-    )
-    if not description:
-        if p_tag := soup.select_one("article p, main p"):
-            description = p_tag.get_text(" ", strip=True)
-
-    item = {
-        "title": title,
-        "link": link,
-    }
-    if description:
-        item["description"] = description
-
-    pub_date = _extract_publish_date(soup)
-    if pub_date:
-        item["pubDate"] = pub_date
-
-    author = _first_meta(soup, [("name", "author"), ("property", "article:author")])
-    if author:
-        item["author"] = author
-
-    return item
 
 
 def _fetch_article_item(session: requests.Session, url: str, logger: logging.Logger) -> Optional[dict]:
@@ -576,42 +421,3 @@ class MiniMaxNewsJob(FeedJob):
 
         logger.info(f"成功生成 {len(items)} 篇 MiniMax News 到 {output_path}")
         return JobResult(name=self.name, success=True, details=f"输出: {output_path}")
-
-
-def main(argv: Optional[list[str]] = None) -> int:
-    parser = argparse.ArgumentParser(description="Fetch MiniMax news and generate RSS")
-    parser.add_argument("--max-items", type=int, default=DEFAULT_MAX_ITEMS, help="Maximum feed items")
-    parser.add_argument(
-        "--max-discovery-pages",
-        type=int,
-        default=DEFAULT_MAX_DISCOVERY_PAGES,
-        help="Maximum pages visited during recursive discovery",
-    )
-    parser.add_argument(
-        "--max-sitemaps",
-        type=int,
-        default=DEFAULT_MAX_SITEMAP_FILES,
-        help="Maximum sitemap files to scan",
-    )
-    parser.add_argument("-o", "--output", default=OUTPUT_FILENAME, help="Output RSS filename")
-    parser.add_argument("-v", "--verbose", action="store_true", help="Enable debug logging")
-    args = parser.parse_args(argv)
-
-    setup_logging(args.verbose)
-    job = MiniMaxNewsJob(
-        {
-            "name": "MiniMax News",
-            "output": args.output,
-            "options": {
-                "max_items": args.max_items,
-                "max_discovery_pages": args.max_discovery_pages,
-                "max_sitemaps": args.max_sitemaps,
-            },
-        }
-    )
-    result = job.run(JobContext(feeds_dir=DEFAULT_FEEDS_DIR))
-    return 0 if result.success else 1
-
-
-if __name__ == "__main__":
-    raise SystemExit(main())

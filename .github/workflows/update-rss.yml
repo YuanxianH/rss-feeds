@@ -12,9 +12,17 @@ on:
   push:
     branches: [ main, master ]
 
+permissions:
+  contents: write
+
+concurrency:
+  group: rss-pages
+  cancel-in-progress: false
+
 jobs:
   update-feeds:
     runs-on: ubuntu-latest
+    timeout-minutes: 20
 
     steps:
     - name: Checkout repository
@@ -24,23 +32,25 @@ jobs:
       uses: actions/setup-python@v5
       with:
         python-version: '3.12'
+        cache: pip
 
     - name: Install dependencies
       run: |
-        pip install -r requirements.txt
+        python -m pip install -r requirements.txt
+
+    - name: Run unit tests
+      run: python -m unittest discover -s tests -p "test_*.py"
+
+    - name: Restore previously published feeds
+      run: |
+        mkdir -p feeds
+        if git fetch --depth=1 origin gh-pages; then
+          git archive FETCH_HEAD -- "*.xml" | tar -x -C feeds
+        fi
 
     - name: Generate RSS feeds
       run: |
-        echo "🔄 开始生成 RSS feeds..."
-
-        # 创建 feeds 目录
-        mkdir -p feeds
-
-        # 统一入口：生成 config.yaml 的 jobs[]（含 selector/API/过滤任务）
-        echo "📡 生成 jobs..."
-        python main.py
-
-        echo "✅ RSS feeds 生成完成！"
+        python main.py --allow-partial
         ls -lh feeds/
 
     - name: Deploy to GitHub Pages

@@ -1,13 +1,9 @@
 """OpenAI RSS filter job."""
 
-import argparse
 import logging
-from pathlib import Path
-from typing import Optional
 
 from src.path_utils import resolve_output_path
 from src.rss_filter import RSSFilter
-from src.runtime import setup_logging
 
 from .base import FeedJob, JobContext, JobResult
 from .registry import register_job
@@ -17,7 +13,6 @@ DEFAULT_OUTPUT_FILENAME = "openai_research_only.xml"
 DEFAULT_CATEGORIES = ["Research", "research", "Science", "science"]
 
 logger = logging.getLogger(__name__)
-DEFAULT_FEEDS_DIR = Path(__file__).resolve().parents[2] / "feeds"
 
 
 @register_job
@@ -47,15 +42,3 @@ class OpenAIResearchFilterJob(FeedJob):
         )
         details = f"输出: {output_path}" if success else "过滤失败"
         return JobResult(name=self.name, success=success, details=details)
-
-
-def main(argv: Optional[list[str]] = None) -> int:
-    parser = argparse.ArgumentParser(description="Filter OpenAI RSS to research-only entries")
-    parser.add_argument("-o", "--output", default=DEFAULT_OUTPUT_FILENAME, help="Output RSS filename")
-    parser.add_argument("-v", "--verbose", action="store_true", help="Enable debug logging")
-    args = parser.parse_args(argv)
-
-    setup_logging(args.verbose)
-    job = OpenAIResearchFilterJob({"name": "OpenAI Research", "output": args.output})
-    result = job.run(JobContext(feeds_dir=DEFAULT_FEEDS_DIR))
-    return 0 if result.success else 1

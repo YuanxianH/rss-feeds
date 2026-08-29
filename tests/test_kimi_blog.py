@@ -6,14 +6,10 @@ from xml.etree import ElementTree as ET
 
 import requests
 
+from src.article_metadata import extract_article_item
+from src.discovery import extract_article_urls, make_url_normalizer
 from src.jobs.base import JobContext
-from src.jobs.kimi_blog import (
-    BLOG_URL,
-    KimiBlogJob,
-    extract_article_item,
-    extract_article_urls_from_index,
-    normalize_article_url,
-)
+from src.jobs.kimi_blog import KIMI_BLOG_URL, KimiBlogJob
 
 
 class FakeResponse:
@@ -33,32 +29,39 @@ class FakeSession:
 
     def get(self, url: str, timeout: float):
         response = self.responses[url]
+        response.url = response.url or url
         return response
 
 
+def _kimi_normalize():
+    return make_url_normalizer(allowed_hosts=["kimi.ai"], path_prefix="/blog")
+
+
 class KimiBlogJobTests(unittest.TestCase):
-    def test_normalize_keeps_kimi_ai_article_and_rewrites_old_host(self):
+    def test_adapter_fills_kimi_ai_defaults(self):
+        job = KimiBlogJob({"name": "Kimi Blog"})
+        self.assertEqual(job.job_type, "kimi_blog")
+        self.assertEqual(job.config["url"], KIMI_BLOG_URL)
+        self.assertEqual(job.config["path_prefix"], "/blog")
+        self.assertEqual(job.config["allowed_hosts"], ["kimi.ai"])
+        self.assertEqual(job.config["output"], "kimi_blog.xml")
+
+    def test_normalize_keeps_kimi_ai_article_paths(self):
+        normalize = _kimi_normalize()
         self.assertEqual(
-            normalize_article_url("/blog/kimi-k3?from=home#top"),
+            normalize("/blog/kimi-k3?from=home#top", KIMI_BLOG_URL),
             "https://www.kimi.ai/blog/kimi-k3",
         )
-        self.assertEqual(
-            normalize_article_url("https://www.kimi.com/blog/worldvqa"),
-            "https://www.kimi.ai/blog/worldvqa",
-        )
-        self.assertIsNone(normalize_article_url("https://www.kimi.ai/blog/"))
-        self.assertIsNone(normalize_article_url("https://www.kimi.ai/de/blog/kimi-k3"))
-        self.assertIsNone(normalize_article_url("/blog/ListItem"))
-        self.assertIsNone(normalize_article_url("/blog/Research"))
-        self.assertIsNone(normalize_article_url("https://example.com/blog/kimi-k3"))
+        self.assertIsNone(normalize("https://www.kimi.ai/blog/", KIMI_BLOG_URL))
+        self.assertIsNone(normalize("https://www.kimi.ai/de/blog/kimi-k3", KIMI_BLOG_URL))
+        self.assertIsNone(normalize("https://example.com/blog/kimi-k3", KIMI_BLOG_URL))
 
-    def test_extracts_visible_and_next_flight_links_without_vitepress_map(self):
+    def test_extracts_visible_and_next_flight_links(self):
         html = """
         <html>
           <body>
             <a href="/blog/kimi-k3">Kimi K3</a>
             <a href="/blog/">Blog home</a>
-            <a href="/blog/ListItem">schema noise</a>
             <script>
               self.__next_f.push([1, "href:\\"/blog/worldvqa\\""])
               self.__next_f.push([1, "https://www.kimi.ai/blog/kimi-k2-6"])
@@ -68,23 +71,16 @@ class KimiBlogJobTests(unittest.TestCase):
         """
 
         self.assertEqual(
-            extract_article_urls_from_index(html),
+            extract_article_urls(
+                html,
+                page_url=KIMI_BLOG_URL,
+                normalize_url=_kimi_normalize(),
+            ),
             [
                 "https://www.kimi.ai/blog/kimi-k3",
                 "https://www.kimi.ai/blog/worldvqa",
                 "https://www.kimi.ai/blog/kimi-k2-6",
             ],
-        )
-
-    def test_extracts_vitepress_hash_map_as_fallback(self):
-        html = r"""
-        <script>
-          __VP_HASH_MAP__=JSON.parse("{\"index.md\":\"aaa\",\"kimi-k1.md\":\"bbb\"}")
-        </script>
-        """
-        self.assertEqual(
-            extract_article_urls_from_index(html),
-            ["https://www.kimi.ai/blog/kimi-k1"],
         )
 
     def test_extract_article_item_prefers_open_graph(self):
@@ -97,7 +93,11 @@ class KimiBlogJobTests(unittest.TestCase):
           </head>
         </html>
         """
-        item = extract_article_item("https://www.kimi.ai/blog/kimi-k3", html)
+        item = extract_article_item(
+            "https://www.kimi.ai/blog/kimi-k3",
+            html,
+            normalize_url=_kimi_normalize(),
+        )
         self.assertIsNotNone(item)
         assert item is not None
         self.assertEqual(item["title"], "Kimi K3 Tech Blog")
@@ -105,9 +105,16 @@ class KimiBlogJobTests(unittest.TestCase):
         self.assertEqual(item["link"], "https://www.kimi.ai/blog/kimi-k3")
 
     def test_empty_index_without_article_links(self):
-        self.assertEqual(extract_article_urls_from_index("<html><body>No posts</body></html>"), [])
+        self.assertEqual(
+            extract_article_urls(
+                "<html><body>No posts</body></html>",
+                page_url=KIMI_BLOG_URL,
+                normalize_url=_kimi_normalize(),
+            ),
+            [],
+        )
 
-    @patch("src.jobs.kimi_blog.create_session")
+    @patch("src.jobs.dynamic_site.create_retry_session")
     def test_job_writes_rss_when_one_article_fails(self, create_session):
         index_html = '<a href="/blog/kimi-k3">K3</a><a href="/blog/kimi-k2">K2</a>'
         article_html = """
@@ -118,7 +125,7 @@ class KimiBlogJobTests(unittest.TestCase):
         """
         create_session.return_value = FakeSession(
             {
-                BLOG_URL: FakeResponse(index_html, BLOG_URL),
+                KIMI_BLOG_URL: FakeResponse(index_html, KIMI_BLOG_URL),
                 "https://www.kimi.ai/blog/kimi-k3": FakeResponse(
                     article_html, "https://www.kimi.ai/blog/kimi-k3"
                 ),
@@ -134,7 +141,7 @@ class KimiBlogJobTests(unittest.TestCase):
                     "name": "Kimi Blog",
                     "output": "kimi_blog.xml",
                     "title": "Kimi Blog",
-                    "link": BLOG_URL,
+                    "link": KIMI_BLOG_URL,
                 }
             ).run(JobContext(feeds_dir=Path(temp_dir)))
             output = Path(temp_dir) / "kimi_blog.xml"

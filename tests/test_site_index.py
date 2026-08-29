@@ -1,5 +1,7 @@
 import tempfile
 import unittest
+from datetime import datetime, timedelta, timezone
+from email.utils import format_datetime
 from pathlib import Path
 
 from src.site_index import generate_site_index
@@ -29,12 +31,13 @@ def _write_feed(
 
 
 class SiteIndexTests(unittest.TestCase):
-    def test_generate_site_index_renders_sidebar_navigation_with_live_counts_and_sorting(self):
+    def test_generates_simple_static_directory_and_stylesheet(self):
+        now = datetime.now(timezone.utc)
         config = {
             "site": {
                 "title": "AI RSS Network",
-                "url": "https://yuanxianh.github.io/rss-feeds/",
-                "tagline": "A deployed RSS network for AI labs.",
+                "url": "https://example.com/feeds/",
+                "tagline": "A small feed directory.",
                 "description": "Curated AI feeds.",
             },
             "jobs": [
@@ -77,141 +80,116 @@ class SiteIndexTests(unittest.TestCase):
                 feeds_dir / "older_research.xml",
                 "Older Research",
                 "Older research stream.",
-                "Fri, 14 Feb 2026 06:27:21 +0000",
+                format_datetime(now - timedelta(hours=2)),
             )
             _write_feed(
                 feeds_dir / "newest_research.xml",
                 "Newest Research",
                 "Newest research stream.",
-                "Sun, 15 Feb 2026 06:27:21 +0000",
+                format_datetime(now - timedelta(hours=1)),
             )
             _write_feed(
                 feeds_dir / "deepmind_blog.xml",
                 "DeepMind Blog",
                 "Latest posts from DeepMind.",
-                "Sat, 15 Feb 2026 05:00:00 +0000",
+                format_datetime(now),
             )
 
             output_path = generate_site_index(config, str(feeds_dir))
             html = output_path.read_text(encoding="utf-8")
+            stylesheet = feeds_dir / "assets" / "site.css"
+            stylesheet_exists = stylesheet.exists()
 
-        research_block = html.split('id="section-research"', 1)[1].split('id="section-blogs"', 1)[0]
-        sidebar_block = html.split('<nav class="sidebar-body">', 1)[1].split("</nav>", 1)[0]
-
-        self.assertIn('class="sidebar"', html)
-        self.assertIn('class="sidebar-overlay"', html)
-        self.assertNotIn('class="jump-menu"', html)
-        self.assertIn('data-sidebar-toggle', html)
-        self.assertIn('aria-controls="feed-sidebar"', html)
-        self.assertIn("sidebar-open-mobile", html)
-        self.assertIn("desktop-expanded", html)
-        self.assertIn("mobile-open", html)
-        self.assertIn("mobile-closed", html)
-        self.assertIn("3 live feeds", html)
-        self.assertIn("4 configured", html)
-        self.assertIn('class="directory-toggle directory-toggle--sidebar"', html)
-        self.assertIn('class="directory-toggle directory-toggle--hero"', html)
-        self.assertIn('data-toggle-label', html)
-        self.assertIn("Hide directory", html)
-        self.assertIn("Show directory", html)
-        self.assertIn("Open directory", html)
-        self.assertIn("Close directory", html)
-        self.assertNotIn('href="#section-research"', html)
-        self.assertNotIn('href="#section-blogs"', html)
-        self.assertNotIn('href="#section-releases"', html)
-        self.assertIn('href="#feed-research-newest-research"', html)
-        self.assertEqual(sidebar_block.count("<h2>Research</h2>"), 1)
-        self.assertEqual(sidebar_block.count("<h2>Blogs</h2>"), 1)
-        self.assertEqual(sidebar_block.count("<h2>Releases</h2>"), 1)
-        self.assertIn("2 live", research_block)
-        self.assertNotIn('<span class="meta-key">Source</span>', research_block)
-        self.assertIn("Unavailable", research_block)
-        self.assertIn("RSS unavailable", research_block)
+        research = html.split('id="section-research"', 1)[1].split(
+            'id="section-blogs"', 1
+        )[0]
+        self.assertTrue(stylesheet_exists)
+        self.assertIn('href="assets/site.css"', html)
+        self.assertIn('class="skip-link" href="#main-content"', html)
+        self.assertIn('aria-label="Feed categories"', html)
+        self.assertIn('href="#section-research">Research<span>3</span>', html)
+        self.assertNotIn("<script", html)
+        self.assertNotIn("sidebar", html)
+        self.assertNotIn("hero", html)
+        self.assertIn("Live", research)
+        self.assertIn("Unavailable", research)
+        self.assertIn("RSS unavailable", research)
         self.assertIn('href="newest_research.xml"', html)
-        self.assertIn('href="https://example.com/newest_research"', html)
-        self.assertIn('id="feed-research-newest-research"', html)
-        self.assertLess(research_block.index("Newest Research"), research_block.index("Older Research"))
-        self.assertLess(research_block.index("Older Research"), research_block.index("Unavailable Research"))
-        self.assertIn("15 Feb 2026, 06:27 UTC", html)
+        self.assertIn('rel="noopener"', html)
+        self.assertIn("<time datetime=", html)
+        self.assertLess(
+            research.index("Newest Research"),
+            research.index("Older Research"),
+        )
+        self.assertLess(
+            research.index("Older Research"),
+            research.index("Unavailable Research"),
+        )
 
-    def test_generate_site_index_places_missing_timestamp_after_dated_live_feeds(self):
+    def test_marks_old_restored_feed_as_stale(self):
         config = {
             "jobs": [
                 {
-                    "name": "Dated Blog",
-                    "title": "Dated Blog",
-                    "description": "Has a build timestamp.",
-                    "output": "dated_blog.xml",
+                    "name": "Current Blog",
+                    "output": "current.xml",
                     "catalog": {"section": "blogs"},
                 },
                 {
-                    "name": "Undated Blog",
-                    "title": "Undated Blog",
-                    "description": "Missing build timestamp.",
-                    "output": "undated_blog.xml",
+                    "name": "Restored Blog",
+                    "output": "restored.xml",
                     "catalog": {"section": "blogs"},
                 },
             ]
         }
-
+        now = datetime.now(timezone.utc)
         with tempfile.TemporaryDirectory() as temp_dir:
             feeds_dir = Path(temp_dir)
             _write_feed(
-                feeds_dir / "dated_blog.xml",
-                "Dated Blog",
-                "Has a build timestamp.",
-                "Sun, 15 Feb 2026 06:27:21 +0000",
+                feeds_dir / "current.xml",
+                "Current Blog",
+                "Current.",
+                format_datetime(now),
             )
             _write_feed(
-                feeds_dir / "undated_blog.xml",
-                "Undated Blog",
-                "Missing build timestamp.",
+                feeds_dir / "restored.xml",
+                "Restored Blog",
+                "Old but retained.",
+                format_datetime(now - timedelta(days=4)),
             )
 
-            output_path = generate_site_index(config, str(feeds_dir))
-            html = output_path.read_text(encoding="utf-8")
+            html = generate_site_index(config, str(feeds_dir)).read_text(
+                encoding="utf-8"
+            )
 
-        blogs_block = html.split('id="section-blogs"', 1)[1].split('id="section-releases"', 1)[0]
+        restored = html.split('id="feed-blogs-restored"', 1)[1].split(
+            "</article>", 1
+        )[0]
+        self.assertIn("is-stale", html)
+        self.assertIn("Stale", restored)
+        self.assertIn('href="restored.xml"', restored)
+        self.assertLess(html.index("Current Blog"), html.index("Restored Blog"))
 
-        self.assertIn("2 live", blogs_block)
-        self.assertIn("Unknown", blogs_block)
-        self.assertLess(blogs_block.index("Dated Blog"), blogs_block.index("Undated Blog"))
-
-    def test_generate_site_index_keeps_source_action_without_rendering_source_meta(self):
+    def test_escapes_configured_content_and_keeps_missing_source_disabled(self):
         config = {
+            "site": {
+                "title": "Feeds <script>",
+                "description": 'Quotes " and <tags>',
+            },
             "jobs": [
                 {
-                    "name": "Linked Feed",
-                    "title": "Linked Feed",
-                    "description": "Has a source action.",
-                    "output": "linked_feed.xml",
-                    "catalog": {"section": "blogs"},
-                },
-                {
-                    "name": "No Source Feed",
-                    "title": "No Source Feed",
-                    "description": "Missing upstream URL.",
-                    "output": "missing_no_source.xml",
+                    "name": "Unsafe <Feed>",
+                    "description": "<b>not markup</b>",
+                    "output": "missing.xml",
                     "catalog": {"section": "releases"},
-                },
-            ]
+                }
+            ],
         }
-
         with tempfile.TemporaryDirectory() as temp_dir:
-            feeds_dir = Path(temp_dir)
-            _write_feed(
-                feeds_dir / "linked_feed.xml",
-                "Linked Feed",
-                "Has a source action.",
-                "Sun, 15 Feb 2026 06:27:21 +0000",
-            )
+            html = generate_site_index(config, temp_dir).read_text(encoding="utf-8")
 
-            output_path = generate_site_index(config, str(feeds_dir))
-            html = output_path.read_text(encoding="utf-8")
-
-        self.assertNotIn('<span class="meta-key">Source</span>', html)
-        self.assertIn('href="https://example.com/linked_feed"', html)
-        self.assertIn(">Source</a>", html)
+        self.assertIn("Feeds &lt;script&gt;", html)
+        self.assertIn("&lt;b&gt;not markup&lt;/b&gt;", html)
+        self.assertNotIn("<b>not markup</b>", html)
         self.assertIn("Source unavailable", html)
 
 
