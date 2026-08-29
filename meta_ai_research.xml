@@ -7,160 +7,13 @@
     <docs>http://www.rssboard.org/rss-specification</docs>
     <generator>RSS Creator</generator>
     <language>zh-CN</language>
-    <lastBuildDate>Sat, 29 Aug 2026 17:25:50 +0000</lastBuildDate>
+    <lastBuildDate>Sat, 29 Aug 2026 17:33:09 +0000</lastBuildDate>
     <item>
-      <title>Equi-normalization of Neural Networks | Facebook AI Research</title>
-      <link>https://ai.meta.com/research/publications/equi-normalization-of-neural-networks/</link>
-      <description>Pierre Stock, Benjamin Graham, Rémi Gribonval, Hervé Jégou</description>
-      <guid isPermaLink="true">https://ai.meta.com/research/publications/equi-normalization-of-neural-networks/</guid>
-      <pubDate>Sun, 05 May 2019 00:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>LAMV: Learning to align and match videos with kernelized temporal layers | Facebook AI Research</title>
-      <link>https://ai.meta.com/research/publications/lamv-learning-to-align-and-match-videos-with-kernelized-temporal-layers/</link>
-      <description>Lorenzo Baraldi, Matthijs Douze, Rita Cucchiara, Hervé Jégou</description>
-      <guid isPermaLink="true">https://ai.meta.com/research/publications/lamv-learning-to-align-and-match-videos-with-kernelized-temporal-layers/</guid>
-      <pubDate>Tue, 19 Jun 2018 00:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>Loss in Translation: Learning Bilingual Word Mapping with a Retrieval Criterion | Facebook AI Research</title>
-      <link>https://ai.meta.com/research/publications/loss-in-translation-learning-bilingual-word-mapping-with-a-retrieval-criterion/</link>
-      <description>Armand Joulin, Piotr Bojanowski, Tomas Mikolov, Hervé Jégou</description>
-      <guid isPermaLink="true">https://ai.meta.com/research/publications/loss-in-translation-learning-bilingual-word-mapping-with-a-retrieval-criterion/</guid>
-      <pubDate>Tue, 30 Oct 2018 00:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>Low-shot learning with large-scale diffusion | Facebook AI Research</title>
-      <link>https://ai.meta.com/research/publications/low-shot-learning-with-large-scale-diffusion/</link>
-      <description>Matthijs Douze, Arthur Szlam, Bharath Hariharan, Hervé Jégou</description>
-      <guid isPermaLink="true">https://ai.meta.com/research/publications/low-shot-learning-with-large-scale-diffusion/</guid>
-      <pubDate>Mon, 18 Jun 2018 00:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>Polysemous Codes | Facebook AI Research</title>
-      <link>https://ai.meta.com/research/publications/polysemous-codes/</link>
-      <description>Matthijs Douze, Hervé Jégou, Florent Perronnin</description>
-      <guid isPermaLink="true">https://ai.meta.com/research/publications/polysemous-codes/</guid>
-      <pubDate>Mon, 10 Oct 2016 00:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>Mastering the Dungeon: Grounded Language Learning by Mechanical Turker Descent | Facebook AI Research</title>
-      <link>https://ai.meta.com/people/alexander-h-miller</link>
-      <description>Zhilin Yang, Saizheng Zhang, Jack Urbanek, Will Feng,Alexander H. Miller, Arthur Szlam,Douwe Kiela,Jason Weston</description>
-      <guid isPermaLink="true">https://ai.meta.com/people/alexander-h-miller</guid>
-      <pubDate>Mon, 30 Apr 2018 00:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>Scaling up online speech recognition using ConvNets | Facebook AI Research</title>
-      <link>https://ai.meta.com/people/qiantong-xu</link>
-      <description>Vineel Pratap,Qiantong Xu, Jacob Kahn, Gilad Avidov,Tatiana Likhomanenko,Awni Hannun,Vitaliy Liptchinsky, Gabriel Synnaeve, Ronan Collobert</description>
-      <guid isPermaLink="true">https://ai.meta.com/people/qiantong-xu</guid>
-      <pubDate>Mon, 13 Jan 2020 00:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>On the Pitfalls of Measuring Emergent Communication | Facebook AI Research</title>
-      <link>https://ai.meta.com/research/publications/on-the-pitfalls-of-measuring-emergent-communication/</link>
-      <description>Ryan Lowe, Jakob Foerster, Y-Lan Boureau, Joelle Pineau, Yann Dauphin</description>
-      <guid isPermaLink="true">https://ai.meta.com/research/publications/on-the-pitfalls-of-measuring-emergent-communication/</guid>
-      <pubDate>Thu, 14 Mar 2019 00:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>ELF OpenGo: An Analysis and Open Reimplementation of AlphaZero | Facebook AI Research</title>
-      <link>https://ai.meta.com/people/yuandong-tian</link>
-      <description>Yuandong Tian, Jerry Ma, Qucheng Gong, Shubho Sengupta, Zhuoyuan Chen, James Pinkerton, Larry Zitnick</description>
-      <guid isPermaLink="true">https://ai.meta.com/people/yuandong-tian</guid>
-      <pubDate>Tue, 11 Jun 2019 00:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>Energy-Based Models for Atomic-Resolution Protein Conformations | Facebook AI Research</title>
-      <link>https://ai.meta.com/research/publications/energy-based-models-for-atomic-resolution-protein-conformations/</link>
-      <description>Yilun Du, Joshua Meier, Jerry Ma, Rob Fergus, Alexander Rives</description>
-      <guid isPermaLink="true">https://ai.meta.com/research/publications/energy-based-models-for-atomic-resolution-protein-conformations/</guid>
-      <pubDate>Sat, 25 Apr 2020 00:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>Order-Aware Generative Modeling Using the 3D-Craft Dataset | Facebook AI Research</title>
-      <link>https://ai.meta.com/people/shubham-tulsiani</link>
-      <description>Zhuoyuan Chen, Demi Guo, Tong Xiao, Saining Xie, Xinlei Chen, Haonan Yu, Jonathan Gray, Kavya Srinet, Haoqi Fan, Jerry Ma, Charles R. Qi,Shubham Tulsiani, Arthur Szlam, Larry Zitnick</description>
-      <guid isPermaLink="true">https://ai.meta.com/people/shubham-tulsiani</guid>
-      <pubDate>Sun, 27 Oct 2019 00:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>Facebook AI's WAT19 Myanmar-English Translation Task Submission</title>
-      <link>https://ai.meta.com/people/matt-le/</link>
-      <description>Peng-Jen Chen, Jiajun Shen,Matt Le, Vishrav Chaudhary, Ahmed El-Kishky, Guillaume Wenzek,Myle Ott,Marc’Aurelio Ranzato</description>
-      <guid isPermaLink="true">https://ai.meta.com/people/matt-le/</guid>
-      <pubDate>Thu, 31 Oct 2019 00:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>NeuralSet: A High-Performing Python Package for Neuro-AI</title>
-      <link>https://ai.meta.com/research/publications/neuralset-a-high-performing-python-package-for-neuro-ai/</link>
-      <description>Jean Remi King, Corentin Bel, Linnea Evanson, Julien Gadonneix, Sophia Houhamdi, Jarod Levy, Josephine Raugel, Andrea Santos Revilla, Mingfang (Lucy) Zhang, Julie Bonnaire, Charlotte Caucheteux, Alexandre Défossez, Théo Desbordes, Pablo Diego-Simón, Shubh Khanna, Juliette Millet, Pierre Orhan, Saarang Panchavati, Antoine Ratouchniak, Alexis Thual, Teon Brooks, Katelyn Begany, Yohann Benchetrit, Marlene Careil, Hubert Jacob Banville, Stéphane d'Ascoli, Simon Dahan, Jérémy Rapin</description>
-      <guid isPermaLink="true">https://ai.meta.com/research/publications/neuralset-a-high-performing-python-package-for-neuro-ai/</guid>
-      <pubDate>Tue, 12 May 2026 00:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>GIM: Evaluating models via tasks that integrate multiple cognitive domains</title>
-      <link>https://ai.meta.com/research/publications/gim-evaluating-models-via-tasks-that-integrate-multiple-cognitive-domains/</link>
-      <description>Rohit Patel, Alexandre Rezende, Steven McClain</description>
-      <guid isPermaLink="true">https://ai.meta.com/research/publications/gim-evaluating-models-via-tasks-that-integrate-multiple-cognitive-domains/</guid>
-      <pubDate>Sun, 17 May 2026 00:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>EgoBabyVLM: Benchmarking Cross-Modal Learning from Naturalistic Egocentric Video Data</title>
-      <link>https://ai.meta.com/research/publications/egobabyvlm-benchmarking-cross-modal-learning-from-naturalistic-egocentric-video-data/</link>
-      <description>Dongyan Lin, Phillip Rust, Angel Villar Corrales, Alvin W. M. Tan, Mahi Luthra, Charles-Eric Saint-James, Rashel Moritz, Sheila Krogh-Jespersen, Vanessa Stark, Surya Parimi, Jiayi Shen, Youssef Benchekroun, Yosuke Higuchi, Martin Gleize, Tom Fizycki, Nicolas Hamilakis, Manel Khentout, Sho Tsuji, Balázs Kégl, Juan Pino, Michael C. Frank, Emmanuel Dupoux</description>
-      <guid isPermaLink="true">https://ai.meta.com/research/publications/egobabyvlm-benchmarking-cross-modal-learning-from-naturalistic-egocentric-video-data/</guid>
-      <pubDate>Tue, 19 May 2026 00:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>Misalignment Between Backpropagation and the Hierarchy of Brain Responses to Images</title>
-      <link>https://ai.meta.com/research/publications/misalignment-between-backpropagation-and-the-hierarchy-of-brain-responses-to-images/</link>
-      <description>Josephine Raugel, Max Seitzer, Marc Szafraniec, Huy V. Vo, Jérémy Rapin, Patrick Labatut, Piotr Bojanowski, Valentin Wyart, Jean Remi King</description>
-      <guid isPermaLink="true">https://ai.meta.com/research/publications/misalignment-between-backpropagation-and-the-hierarchy-of-brain-responses-to-images/</guid>
-      <pubDate>Tue, 26 May 2026 00:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>AutoformBot: Formalizing Mathematics at Scale</title>
-      <link>https://ai.meta.com/research/publications/autoformbot-formalizing-mathematics-at-scale/</link>
-      <description>Ahmad Rammal, Niket Patel, Amaury Hayat, Julia Kempe, Remi Munos, Charles Arnal, Vivien Cabannes</description>
-      <guid isPermaLink="true">https://ai.meta.com/research/publications/autoformbot-formalizing-mathematics-at-scale/</guid>
-      <pubDate>Wed, 27 May 2026 00:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>Superintelligent Retrieval Agent: The Next Frontier of Agentic Retrieval</title>
-      <link>https://ai.meta.com/research/publications/superintelligent-retrieval-agent-the-next-frontier-of-agentic-retrieval/</link>
-      <description>Zeyu Yang, Qi Ma, Jason Chen, Anshumali Shrivastava</description>
-      <guid isPermaLink="true">https://ai.meta.com/research/publications/superintelligent-retrieval-agent-the-next-frontier-of-agentic-retrieval/</guid>
-      <pubDate>Fri, 05 Jun 2026 00:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>Accurate Decoding of Natural Sentences from Non-Invasive Brain Recordings</title>
-      <link>https://ai.meta.com/research/publications/accurate-decoding-of-natural-sentences-from-non-invasive-brain-recordings/</link>
-      <description>Mingfang (Lucy) Zhang *, Jarod Levy *, Cédric Rommel, Jérémy Rapin, Corentin Bel, Julie Bonnaire, Daniel Nieto, Pierre Bourdillon, Svetlana Pinet, Stéphane d'Ascoli, Thomas Moreau, Jean Remi King</description>
-      <guid isPermaLink="true">https://ai.meta.com/research/publications/accurate-decoding-of-natural-sentences-from-non-invasive-brain-recordings/</guid>
-      <pubDate>Mon, 29 Jun 2026 00:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>Interpreting Physics in Video World Models</title>
-      <link>https://ai.meta.com/research/publications/interpreting-physics-in-video-world-models/</link>
-      <description>Sonia Joseph, Quentin Garrido, Randall Balestriero, Matthew Kowal, Thomas Fel, Shahab Bakhtiari, Blake Richards, Mike Rabbat</description>
-      <guid isPermaLink="true">https://ai.meta.com/research/publications/interpreting-physics-in-video-world-models/</guid>
-      <pubDate>Fri, 03 Jul 2026 00:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>S-EMBER: A Large-Scale Benchmark for Streaming Egocentric Memory Retrieval</title>
-      <link>https://ai.meta.com/research/publications/s-ember-a-large-scale-benchmark-for-streaming-egocentric-memory-retrieval/</link>
-      <description>Xiaodong Wang, Xuanyi Zhao, Pedro Rodriguez, Devendra Singh Sachan, Barlas Oguz, Seungwhan Moon, Shang-Wen Li, Gargi Ghosh, Xin Dong, Wen-Tau Yih</description>
-      <guid isPermaLink="true">https://ai.meta.com/research/publications/s-ember-a-large-scale-benchmark-for-streaming-egocentric-memory-retrieval/</guid>
-      <pubDate>Mon, 13 Jul 2026 00:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>Learning to Reason by Analogy via Retrieval-Augmented Reinforcement Fine-Tuning</title>
-      <link>https://ai.meta.com/research/publications/learning-to-reason-by-analogy-via-retrieval-augmented-reinforcement-fine-tuning/</link>
-      <description>Zilin Xiao, Qi Ma, Jason Chen, Xintao Chen, Avinash Atreya, Hanjie Chen, Vicente Ordonez</description>
-      <guid isPermaLink="true">https://ai.meta.com/research/publications/learning-to-reason-by-analogy-via-retrieval-augmented-reinforcement-fine-tuning/</guid>
-      <pubDate>Fri, 17 Jul 2026 00:00:00 +0000</pubDate>
+      <title>WaiT for the Signal: Simple Frequency-Aware Flow-Matching</title>
+      <link>https://ai.meta.com/research/publications/wait-for-the-signal-simple-frequency-aware-flow-matching/</link>
+      <description>Krunoslav Lehman Pavasovic, Theophane Vallaeys, Stéphane Mallat, Giulio Biroli, Luke Zettlemoyer, Brian Karrer, Jakob Verbeek</description>
+      <guid isPermaLink="true">https://ai.meta.com/research/publications/wait-for-the-signal-simple-frequency-aware-flow-matching/</guid>
+      <pubDate>Tue, 04 Aug 2026 00:00:00 +0000</pubDate>
     </item>
     <item>
       <title>Reinforcement Learning for Code Optimization</title>
@@ -170,11 +23,158 @@
       <pubDate>Wed, 29 Jul 2026 00:00:00 +0000</pubDate>
     </item>
     <item>
-      <title>WaiT for the Signal: Simple Frequency-Aware Flow-Matching</title>
-      <link>https://ai.meta.com/research/publications/wait-for-the-signal-simple-frequency-aware-flow-matching/</link>
-      <description>Krunoslav Lehman Pavasovic, Theophane Vallaeys, Stéphane Mallat, Giulio Biroli, Luke Zettlemoyer, Brian Karrer, Jakob Verbeek</description>
-      <guid isPermaLink="true">https://ai.meta.com/research/publications/wait-for-the-signal-simple-frequency-aware-flow-matching/</guid>
-      <pubDate>Tue, 04 Aug 2026 00:00:00 +0000</pubDate>
+      <title>Learning to Reason by Analogy via Retrieval-Augmented Reinforcement Fine-Tuning</title>
+      <link>https://ai.meta.com/research/publications/learning-to-reason-by-analogy-via-retrieval-augmented-reinforcement-fine-tuning/</link>
+      <description>Zilin Xiao, Qi Ma, Jason Chen, Xintao Chen, Avinash Atreya, Hanjie Chen, Vicente Ordonez</description>
+      <guid isPermaLink="true">https://ai.meta.com/research/publications/learning-to-reason-by-analogy-via-retrieval-augmented-reinforcement-fine-tuning/</guid>
+      <pubDate>Fri, 17 Jul 2026 00:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>S-EMBER: A Large-Scale Benchmark for Streaming Egocentric Memory Retrieval</title>
+      <link>https://ai.meta.com/research/publications/s-ember-a-large-scale-benchmark-for-streaming-egocentric-memory-retrieval/</link>
+      <description>Xiaodong Wang, Xuanyi Zhao, Pedro Rodriguez, Devendra Singh Sachan, Barlas Oguz, Seungwhan Moon, Shang-Wen Li, Gargi Ghosh, Xin Dong, Wen-Tau Yih</description>
+      <guid isPermaLink="true">https://ai.meta.com/research/publications/s-ember-a-large-scale-benchmark-for-streaming-egocentric-memory-retrieval/</guid>
+      <pubDate>Mon, 13 Jul 2026 00:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>Interpreting Physics in Video World Models</title>
+      <link>https://ai.meta.com/research/publications/interpreting-physics-in-video-world-models/</link>
+      <description>Sonia Joseph, Quentin Garrido, Randall Balestriero, Matthew Kowal, Thomas Fel, Shahab Bakhtiari, Blake Richards, Mike Rabbat</description>
+      <guid isPermaLink="true">https://ai.meta.com/research/publications/interpreting-physics-in-video-world-models/</guid>
+      <pubDate>Fri, 03 Jul 2026 00:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>Accurate Decoding of Natural Sentences from Non-Invasive Brain Recordings</title>
+      <link>https://ai.meta.com/research/publications/accurate-decoding-of-natural-sentences-from-non-invasive-brain-recordings/</link>
+      <description>Mingfang (Lucy) Zhang *, Jarod Levy *, Cédric Rommel, Jérémy Rapin, Corentin Bel, Julie Bonnaire, Daniel Nieto, Pierre Bourdillon, Svetlana Pinet, Stéphane d'Ascoli, Thomas Moreau, Jean Remi King</description>
+      <guid isPermaLink="true">https://ai.meta.com/research/publications/accurate-decoding-of-natural-sentences-from-non-invasive-brain-recordings/</guid>
+      <pubDate>Mon, 29 Jun 2026 00:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>Superintelligent Retrieval Agent: The Next Frontier of Agentic Retrieval</title>
+      <link>https://ai.meta.com/research/publications/superintelligent-retrieval-agent-the-next-frontier-of-agentic-retrieval/</link>
+      <description>Zeyu Yang, Qi Ma, Jason Chen, Anshumali Shrivastava</description>
+      <guid isPermaLink="true">https://ai.meta.com/research/publications/superintelligent-retrieval-agent-the-next-frontier-of-agentic-retrieval/</guid>
+      <pubDate>Fri, 05 Jun 2026 00:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>AutoformBot: Formalizing Mathematics at Scale</title>
+      <link>https://ai.meta.com/research/publications/autoformbot-formalizing-mathematics-at-scale/</link>
+      <description>Ahmad Rammal, Niket Patel, Amaury Hayat, Julia Kempe, Remi Munos, Charles Arnal, Vivien Cabannes</description>
+      <guid isPermaLink="true">https://ai.meta.com/research/publications/autoformbot-formalizing-mathematics-at-scale/</guid>
+      <pubDate>Wed, 27 May 2026 00:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>Misalignment Between Backpropagation and the Hierarchy of Brain Responses to Images</title>
+      <link>https://ai.meta.com/research/publications/misalignment-between-backpropagation-and-the-hierarchy-of-brain-responses-to-images/</link>
+      <description>Josephine Raugel, Max Seitzer, Marc Szafraniec, Huy V. Vo, Jérémy Rapin, Patrick Labatut, Piotr Bojanowski, Valentin Wyart, Jean Remi King</description>
+      <guid isPermaLink="true">https://ai.meta.com/research/publications/misalignment-between-backpropagation-and-the-hierarchy-of-brain-responses-to-images/</guid>
+      <pubDate>Tue, 26 May 2026 00:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>EgoBabyVLM: Benchmarking Cross-Modal Learning from Naturalistic Egocentric Video Data</title>
+      <link>https://ai.meta.com/research/publications/egobabyvlm-benchmarking-cross-modal-learning-from-naturalistic-egocentric-video-data/</link>
+      <description>Dongyan Lin, Phillip Rust, Angel Villar Corrales, Alvin W. M. Tan, Mahi Luthra, Charles-Eric Saint-James, Rashel Moritz, Sheila Krogh-Jespersen, Vanessa Stark, Surya Parimi, Jiayi Shen, Youssef Benchekroun, Yosuke Higuchi, Martin Gleize, Tom Fizycki, Nicolas Hamilakis, Manel Khentout, Sho Tsuji, Balázs Kégl, Juan Pino, Michael C. Frank, Emmanuel Dupoux</description>
+      <guid isPermaLink="true">https://ai.meta.com/research/publications/egobabyvlm-benchmarking-cross-modal-learning-from-naturalistic-egocentric-video-data/</guid>
+      <pubDate>Tue, 19 May 2026 00:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>GIM: Evaluating models via tasks that integrate multiple cognitive domains</title>
+      <link>https://ai.meta.com/research/publications/gim-evaluating-models-via-tasks-that-integrate-multiple-cognitive-domains/</link>
+      <description>Rohit Patel, Alexandre Rezende, Steven McClain</description>
+      <guid isPermaLink="true">https://ai.meta.com/research/publications/gim-evaluating-models-via-tasks-that-integrate-multiple-cognitive-domains/</guid>
+      <pubDate>Sun, 17 May 2026 00:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>NeuralSet: A High-Performing Python Package for Neuro-AI</title>
+      <link>https://ai.meta.com/research/publications/neuralset-a-high-performing-python-package-for-neuro-ai/</link>
+      <description>Jean Remi King, Corentin Bel, Linnea Evanson, Julien Gadonneix, Sophia Houhamdi, Jarod Levy, Josephine Raugel, Andrea Santos Revilla, Mingfang (Lucy) Zhang, Julie Bonnaire, Charlotte Caucheteux, Alexandre Défossez, Théo Desbordes, Pablo Diego-Simón, Shubh Khanna, Juliette Millet, Pierre Orhan, Saarang Panchavati, Antoine Ratouchniak, Alexis Thual, Teon Brooks, Katelyn Begany, Yohann Benchetrit, Marlene Careil, Hubert Jacob Banville, Stéphane d'Ascoli, Simon Dahan, Jérémy Rapin</description>
+      <guid isPermaLink="true">https://ai.meta.com/research/publications/neuralset-a-high-performing-python-package-for-neuro-ai/</guid>
+      <pubDate>Tue, 12 May 2026 00:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>Energy-Based Models for Atomic-Resolution Protein Conformations | Facebook AI Research</title>
+      <link>https://ai.meta.com/research/publications/energy-based-models-for-atomic-resolution-protein-conformations/</link>
+      <description>Yilun Du, Joshua Meier, Jerry Ma, Rob Fergus, Alexander Rives</description>
+      <guid isPermaLink="true">https://ai.meta.com/research/publications/energy-based-models-for-atomic-resolution-protein-conformations/</guid>
+      <pubDate>Sat, 25 Apr 2020 00:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>Scaling up online speech recognition using ConvNets | Facebook AI Research</title>
+      <link>https://ai.meta.com/people/qiantong-xu</link>
+      <description>Vineel Pratap,Qiantong Xu, Jacob Kahn, Gilad Avidov,Tatiana Likhomanenko,Awni Hannun,Vitaliy Liptchinsky, Gabriel Synnaeve, Ronan Collobert</description>
+      <guid isPermaLink="true">https://ai.meta.com/people/qiantong-xu</guid>
+      <pubDate>Mon, 13 Jan 2020 00:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>Facebook AI's WAT19 Myanmar-English Translation Task Submission</title>
+      <link>https://ai.meta.com/people/matt-le/</link>
+      <description>Peng-Jen Chen, Jiajun Shen,Matt Le, Vishrav Chaudhary, Ahmed El-Kishky, Guillaume Wenzek,Myle Ott,Marc’Aurelio Ranzato</description>
+      <guid isPermaLink="true">https://ai.meta.com/people/matt-le/</guid>
+      <pubDate>Thu, 31 Oct 2019 00:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>Order-Aware Generative Modeling Using the 3D-Craft Dataset | Facebook AI Research</title>
+      <link>https://ai.meta.com/people/shubham-tulsiani</link>
+      <description>Zhuoyuan Chen, Demi Guo, Tong Xiao, Saining Xie, Xinlei Chen, Haonan Yu, Jonathan Gray, Kavya Srinet, Haoqi Fan, Jerry Ma, Charles R. Qi,Shubham Tulsiani, Arthur Szlam, Larry Zitnick</description>
+      <guid isPermaLink="true">https://ai.meta.com/people/shubham-tulsiani</guid>
+      <pubDate>Sun, 27 Oct 2019 00:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>ELF OpenGo: An Analysis and Open Reimplementation of AlphaZero | Facebook AI Research</title>
+      <link>https://ai.meta.com/people/yuandong-tian</link>
+      <description>Yuandong Tian, Jerry Ma, Qucheng Gong, Shubho Sengupta, Zhuoyuan Chen, James Pinkerton, Larry Zitnick</description>
+      <guid isPermaLink="true">https://ai.meta.com/people/yuandong-tian</guid>
+      <pubDate>Tue, 11 Jun 2019 00:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>Equi-normalization of Neural Networks | Facebook AI Research</title>
+      <link>https://ai.meta.com/research/publications/equi-normalization-of-neural-networks/</link>
+      <description>Pierre Stock, Benjamin Graham, Rémi Gribonval, Hervé Jégou</description>
+      <guid isPermaLink="true">https://ai.meta.com/research/publications/equi-normalization-of-neural-networks/</guid>
+      <pubDate>Sun, 05 May 2019 00:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>On the Pitfalls of Measuring Emergent Communication | Facebook AI Research</title>
+      <link>https://ai.meta.com/research/publications/on-the-pitfalls-of-measuring-emergent-communication/</link>
+      <description>Ryan Lowe, Jakob Foerster, Y-Lan Boureau, Joelle Pineau, Yann Dauphin</description>
+      <guid isPermaLink="true">https://ai.meta.com/research/publications/on-the-pitfalls-of-measuring-emergent-communication/</guid>
+      <pubDate>Thu, 14 Mar 2019 00:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>Loss in Translation: Learning Bilingual Word Mapping with a Retrieval Criterion | Facebook AI Research</title>
+      <link>https://ai.meta.com/research/publications/loss-in-translation-learning-bilingual-word-mapping-with-a-retrieval-criterion/</link>
+      <description>Armand Joulin, Piotr Bojanowski, Tomas Mikolov, Hervé Jégou</description>
+      <guid isPermaLink="true">https://ai.meta.com/research/publications/loss-in-translation-learning-bilingual-word-mapping-with-a-retrieval-criterion/</guid>
+      <pubDate>Tue, 30 Oct 2018 00:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>LAMV: Learning to align and match videos with kernelized temporal layers | Facebook AI Research</title>
+      <link>https://ai.meta.com/research/publications/lamv-learning-to-align-and-match-videos-with-kernelized-temporal-layers/</link>
+      <description>Lorenzo Baraldi, Matthijs Douze, Rita Cucchiara, Hervé Jégou</description>
+      <guid isPermaLink="true">https://ai.meta.com/research/publications/lamv-learning-to-align-and-match-videos-with-kernelized-temporal-layers/</guid>
+      <pubDate>Tue, 19 Jun 2018 00:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>Low-shot learning with large-scale diffusion | Facebook AI Research</title>
+      <link>https://ai.meta.com/research/publications/low-shot-learning-with-large-scale-diffusion/</link>
+      <description>Matthijs Douze, Arthur Szlam, Bharath Hariharan, Hervé Jégou</description>
+      <guid isPermaLink="true">https://ai.meta.com/research/publications/low-shot-learning-with-large-scale-diffusion/</guid>
+      <pubDate>Mon, 18 Jun 2018 00:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>Mastering the Dungeon: Grounded Language Learning by Mechanical Turker Descent | Facebook AI Research</title>
+      <link>https://ai.meta.com/people/alexander-h-miller</link>
+      <description>Zhilin Yang, Saizheng Zhang, Jack Urbanek, Will Feng,Alexander H. Miller, Arthur Szlam,Douwe Kiela,Jason Weston</description>
+      <guid isPermaLink="true">https://ai.meta.com/people/alexander-h-miller</guid>
+      <pubDate>Mon, 30 Apr 2018 00:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>Polysemous Codes | Facebook AI Research</title>
+      <link>https://ai.meta.com/research/publications/polysemous-codes/</link>
+      <description>Matthijs Douze, Hervé Jégou, Florent Perronnin</description>
+      <guid isPermaLink="true">https://ai.meta.com/research/publications/polysemous-codes/</guid>
+      <pubDate>Mon, 10 Oct 2016 00:00:00 +0000</pubDate>
     </item>
   </channel>
 </rss>
