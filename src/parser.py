@@ -2,7 +2,7 @@
 
 from bs4 import BeautifulSoup
 from typing import List, Dict, Optional
-from datetime import timezone
+from datetime import datetime, timezone
 from dateutil import parser as date_parser
 from urllib.parse import urljoin
 import logging
@@ -176,7 +176,9 @@ class HTMLParser:
         if match := _SLASH_DATE.search(text):
             return self._parse_date(match.group(1))
         if match := _YEAR_DATE.search(text):
-            return self._parse_date(match.group(1))
+            year = int(match.group(1))
+            dt = datetime(year, 1, 1, tzinfo=timezone.utc)
+            return dt.strftime("%a, %d %b %Y %H:%M:%S %z")
         return None
 
     def _element_text(self, elem) -> str:
