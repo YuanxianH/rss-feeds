@@ -1,42 +1,29 @@
-# 什么是 RSS，以及这份 AI 清单
+# AI RSS
 
-## 先说 RSS
+很多 AI 实验室和公司的网站没有 RSS。这个开源项目会定时去这些网站上看，把新论文、新文章、新模型做成 Feed，放在一个目录里，大约每小时更新一次。
 
-RSS 是一种「自动收文章」的方式。
+订阅目录：[yuanxianh.github.io/rss-feeds](https://yuanxianh.github.io/rss-feeds/)
 
-很多网站会提供一个专门的地址。你把它交给一个阅读应用之后，这个网站一有新内容，应用里就会自己出现，不用再去官网翻。
+在目录里点 RSS 即可订阅。也可以直接把下面的地址加进阅读器。
 
-可以把它想成关注公众号：
+## 论文
 
-- 网站提供的那个地址，就像公众号
-- Feedly 这类应用，就像微信里的订阅号列表
-- 你添加一次，之后更新会自己来
+- [Waymo Research](https://yuanxianh.github.io/rss-feeds/waymo_research.xml)
+- [Meta AI Research](https://yuanxianh.github.io/rss-feeds/meta_ai_research.xml)
+- [OpenAI Research](https://yuanxianh.github.io/rss-feeds/openai_research_only.xml)
 
-点开 RSS 地址时，常常会看到一页看不懂的文字。那是给阅读应用看的，不是给你读的。你只要把浏览器最上面的地址复制下来就行。
+## 文章
 
-## 这个开源项目做了什么
+- [Google DeepMind Blog](https://yuanxianh.github.io/rss-feeds/deepmind_blog.xml)
+- [Waymo Blog · Technology](https://yuanxianh.github.io/rss-feeds/waymo_blog_tech.xml)
+- [MiniMax News](https://yuanxianh.github.io/rss-feeds/minimax_blog.xml)
+- [MiniMax Official Blog](https://yuanxianh.github.io/rss-feeds/minimax_official_blog.xml)
+- [Kimi](https://yuanxianh.github.io/rss-feeds/kimi_blog.xml)
+- [Physical Intelligence](https://yuanxianh.github.io/rss-feeds/pi_blog.xml)
 
-问题是：很多 AI 实验室和公司的官网，根本没有提供 RSS。
+## 发布
 
-这个项目会定时去这些网站上看一看，把新论文、新文章、新模型整理成 RSS，放在一个页面里，大约每小时更新一次。这样你就能用同一种方式跟着看。
+- [MiniMax Releases](https://yuanxianh.github.io/rss-feeds/minimax_releases.xml)
+- [Codex Releases](https://yuanxianh.github.io/rss-feeds/codex_github_releases.xml)
 
-打开这份清单：[yuanxianh.github.io/rss-feeds](https://yuanxianh.github.io/rss-feeds/)
-
-里面大致有三类：
-
-- **论文**：Waymo、Meta、OpenAI 这些实验室新发表的研究
-- **文章**：DeepMind、Kimi、MiniMax 这些公司自己写的内容
-- **新东西**：新模型、新版本什么时候出来
-
-每家右边有两个按钮：一个是 RSS，一个会打开他们自己的网站。
-
-代码是公开的。你可以直接用这份清单，也可以自己改、自己加更多来源。
-
-## 怎么开始用
-
-1. 在应用商店搜 **Feedly**，装一个。这是常见的 RSS 阅读应用，装好后按提示点几下就行。
-2. 打开上面的清单，找到你想看的那一家。
-3. 点它旁边的 **RSS** 按钮。如果打开一页看不懂的文字，这是正常的。
-4. 把浏览器最上面那一长串地址复制下来，回到 Feedly，选添加，贴进去。
-
-做完一次就不用再管了。以后有新文章，会自己出现在应用里。
+代码是公开的。你可以直接订阅这份清单，也可以自己加更多来源。
