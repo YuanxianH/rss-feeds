@@ -96,7 +96,7 @@ class HTMLParserTests(unittest.TestCase):
         by_title = {item["title"]: item for item in items}
         self.assertIn("13 Mar 2019", by_title["The Bitter Lesson"]["pubDate"])
         self.assertIn("12 Nov 2001", by_title["What's Wrong with AI"]["pubDate"])
-        self.assertIn("2007", by_title["half a manifesto..."]["pubDate"])
+        self.assertIn("01 Jan 2007", by_title["half a manifesto..."]["pubDate"])
         self.assertNotIn("pubDate", by_title["Oak Lab"])
 
     def test_parse_items_does_not_take_dates_from_huge_parent(self):
