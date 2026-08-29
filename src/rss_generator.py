@@ -8,6 +8,31 @@ import logging
 
 logger = logging.getLogger(__name__)
 
+_MIN_PUBDATE = datetime.min.replace(tzinfo=timezone.utc)
+
+
+def parse_pubdate(value) -> Optional[datetime]:
+    """Parse a pubDate string or datetime into an aware datetime."""
+    try:
+        if isinstance(value, datetime):
+            dt = value
+        else:
+            dt = date_parser.parse(str(value))
+        if dt.tzinfo is None:
+            dt = dt.replace(tzinfo=timezone.utc)
+        return dt
+    except Exception:
+        return None
+
+
+def items_oldest_first(items: List[Dict[str, str]]) -> List[Dict[str, str]]:
+    """Sort by pubDate ascending so feedgen's stack output is newest-first."""
+    return sorted(items, key=_item_pubdate)
+
+
+def _item_pubdate(item: Dict[str, str]) -> datetime:
+    return parse_pubdate(item.get("pubDate")) or _MIN_PUBDATE
+
 
 class RSSGenerator:
     """RSS 生成器"""
@@ -61,7 +86,7 @@ class RSSGenerator:
                     fe.description(description)
 
                 if pub_date := item_data.get("pubDate"):
-                    dt = self._to_datetime(pub_date)
+                    dt = parse_pubdate(pub_date)
                     if dt is not None:
                         fe.pubDate(dt)
 
@@ -78,19 +103,6 @@ class RSSGenerator:
         if link:
             return link
         return item_data.get("title", "").strip()
-
-    def _to_datetime(self, value) -> Optional[datetime]:
-        """将字符串或 datetime 统一转换成带时区的 datetime。"""
-        try:
-            if isinstance(value, datetime):
-                dt = value
-            else:
-                dt = date_parser.parse(str(value))
-            if dt.tzinfo is None:
-                dt = dt.replace(tzinfo=timezone.utc)
-            return dt
-        except Exception:
-            return None
 
     def generate(self, output_path: str) -> bool:
         """

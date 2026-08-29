@@ -65,6 +65,21 @@ jobs:
     catalog:
       section: "research"
 
+  # DeepSeek 研究索引（官网新闻页，只抓研究论文卡片）
+  - type: "selector_scrape"
+    name: "DeepSeek Research Index"
+    url: "https://www.deepseek.com/news/"
+    output: "deepseek_research.xml"
+    title: "DeepSeek Research Index"
+    description: "Research papers and technical reports from DeepSeek's Research Index"
+    link: "https://www.deepseek.com/news/"
+    selectors:
+      items: "a.ds-research-item"
+      title: "span.ds-research-title"
+      date: "span.ds-research-date"
+    catalog:
+      section: "research"
+
   # OpenAI RSS 研究过滤
   - type: "openai_research_filter"
     name: "OpenAI Research"
@@ -265,20 +280,22 @@ jobs:
     catalog:
       section: "blogs"
 
-  # Rich Sutton 个人主页：每个可点击超链接作为一条 RSS
+  # Rich Sutton 个人主页里的 Incomplete Ideas (blog) 栏目
   - type: "selector_scrape"
-    name: "Incomplete Ideas"
+    name: "Incomplete Ideas Blog"
     url: "http://www.incompleteideas.net/"
-    output: "incompleteideas.xml"
-    title: "Rich Sutton - Incomplete Ideas"
-    description: "New hyperlinks published on Rich Sutton's homepage"
+    output: "incompleteideas_blog.xml"
+    title: "Incomplete Ideas Blog"
+    description: "Posts from the Incomplete Ideas blog on Rich Sutton's homepage"
     link: "http://www.incompleteideas.net/"
     selectors:
-      items: 'a[href]:not([href^="mailto:"]):not([href^="javascript:"])'
+      items: 'li:has(> small:-soup-contains("Incomplete Ideas (blog)")) > ul a[href]:not([href^="mailto:"]):not([href^="javascript:"])'
     catalog:
       section: "blogs"
     options:
-      max_items: 200
+      max_items: 50
+      infer_dates_from_context: true
+      persist_pubdates: true
 
   # 示例配置
   # - type: "selector_scrape"
