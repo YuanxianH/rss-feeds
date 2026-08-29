@@ -169,9 +169,10 @@ jobs:
     options:
       minimum_items: 1
 
-  # ByteDance Seed 技术博客（官方 article list API）
+  # ByteDance Seed 技术博客（每小时重抓列表页/API，新文章自动进入 RSS）
   - type: "seed_bytedance"
     name: "ByteDance Seed Blog"
+    url: "https://seed.bytedance.com/zh/blog?order_desc=true"
     article_type: 2
     locale: "zh"
     output: "seed_blog.xml"
@@ -181,9 +182,10 @@ jobs:
     catalog:
       section: "blogs"
 
-  # ByteDance Seed 公开论文（官方 article list API）
+  # ByteDance Seed 公开论文（每小时重抓列表页/API，新论文自动进入 RSS）
   - type: "seed_bytedance"
     name: "ByteDance Seed Papers"
+    url: "https://seed.bytedance.com/zh/public_papers?view_from=research&order_desc=true"
     article_type: 1
     locale: "zh"
     output: "seed_papers.xml"

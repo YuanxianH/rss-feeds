@@ -17,8 +17,12 @@ from src.jobs.seed_bytedance import (
     article_link,
     article_to_item,
     collect_items,
+    extract_article_rows,
+    extract_router_articles,
+    infer_collection,
     localized_field,
     publish_date,
+    resolve_collection,
 )
 
 FIXTURES = Path(__file__).parent / "fixtures"
@@ -134,6 +138,51 @@ class SeedHelperTests(unittest.TestCase):
             item["description"],
         )
 
+    def test_infer_collection_from_live_list_urls(self):
+        self.assertEqual(
+            infer_collection("https://seed.bytedance.com/zh/blog?order_desc=true&offset=12"),
+            ("zh", "blog", 2),
+        )
+        self.assertEqual(
+            infer_collection(
+                "https://seed.bytedance.com/zh/public_papers?view_from=research&order_desc=true"
+            ),
+            ("zh", "public_papers", 1),
+        )
+        self.assertEqual(
+            infer_collection("https://seed.bytedance.com/en/blog"),
+            ("en", "blog", 2),
+        )
+        self.assertIsNone(infer_collection("https://seed.bytedance.com/zh/career"))
+
+    def test_resolve_collection_from_url_without_article_type(self):
+        self.assertEqual(
+            resolve_collection({"url": "https://seed.bytedance.com/zh/blog?order_desc=true"}),
+            ("zh", "blog", 2),
+        )
+
+    def test_extract_rows_from_router_data_and_api_keys(self):
+        router_rows = extract_article_rows(
+            {
+                "loaderData": {
+                    "(locale$)/blog/page": {
+                        "article_list": _page("seed_blog_list.json")["sub_article_list"]
+                    }
+                }
+            }
+        )
+        self.assertEqual(len(router_rows), 4)
+        self.assertEqual(
+            extract_article_rows(_page("seed_blog_list.json"))[0]["ArticleMeta"]["ArticleID"],
+            1785893583524,
+        )
+
+    def test_extract_router_articles_from_list_html(self):
+        html = (FIXTURES / "seed_blog_ssr.html").read_text(encoding="utf-8")
+        rows = extract_router_articles(html)
+        self.assertEqual(len(rows), 1)
+        self.assertEqual(rows[0]["ArticleSubContentZh"]["Title"], "页面更新后的新博客")
+
     def test_collect_items_skips_incomplete_rows(self):
         items = collect_items(
             _page("seed_blog_list.json")["sub_article_list"],
@@ -156,13 +205,13 @@ class SeedBytedanceJobTests(unittest.TestCase):
         self.assertIsInstance(job, SeedBytedanceJob)
         self.assertEqual(job.job_type, "seed_bytedance")
 
-    def test_missing_article_type_fails(self):
+    def test_missing_collection_fails(self):
         with tempfile.TemporaryDirectory() as temp_dir:
             result = SeedBytedanceJob({"name": "Seed"}).run(
                 JobContext(feeds_dir=Path(temp_dir))
             )
         self.assertFalse(result.success)
-        self.assertIn("article_type", result.details)
+        self.assertIn("url", result.details)
 
     @patch("src.jobs.seed_bytedance.create_retry_session")
     def test_blog_job_paginates_and_deduplicates(self, create_session):
@@ -297,6 +346,51 @@ class SeedBytedanceJobTests(unittest.TestCase):
             ).run(JobContext(feeds_dir=Path(temp_dir)))
         self.assertFalse(result.success)
         self.assertIn("调用 Seed API 失败", result.details)
+
+    @patch("src.jobs.seed_bytedance.create_retry_session")
+    def test_url_only_config_uses_inferred_blog_type(self, create_session):
+        payload = _page("seed_blog_list.json")
+        payload["has_more"] = False
+        session = FakeSession(
+            [FakeResponse(payload, DEFAULT_API_URL)]
+        )
+        create_session.return_value = session
+        with tempfile.TemporaryDirectory() as temp_dir:
+            result = SeedBytedanceJob(
+                {
+                    "name": "ByteDance Seed Blog",
+                    "url": "https://seed.bytedance.com/zh/blog?order_desc=true",
+                    "output": "seed_blog.xml",
+                }
+            ).run(JobContext(feeds_dir=Path(temp_dir)))
+            root = ET.parse(Path(temp_dir) / "seed_blog.xml").getroot()
+        self.assertTrue(result.success)
+        self.assertEqual(session.calls[0]["params"]["article_type"], 2)
+        self.assertEqual(len(root.findall("./channel/item")), 2)
+
+    @patch("src.jobs.seed_bytedance.create_retry_session")
+    def test_list_page_ssr_fallback_when_api_fails(self, create_session):
+        html = (FIXTURES / "seed_blog_ssr.html").read_text(encoding="utf-8")
+        session = FakeSession(
+            [
+                FakeResponse({}, DEFAULT_API_URL, status_code=503),
+                FakeResponse(html, "https://seed.bytedance.com/zh/blog"),
+            ]
+        )
+        create_session.return_value = session
+        with tempfile.TemporaryDirectory() as temp_dir:
+            result = SeedBytedanceJob(
+                {
+                    "name": "ByteDance Seed Blog",
+                    "url": "https://seed.bytedance.com/zh/blog?order_desc=true",
+                    "output": "seed_blog.xml",
+                }
+            ).run(JobContext(feeds_dir=Path(temp_dir)))
+            root = ET.parse(Path(temp_dir) / "seed_blog.xml").getroot()
+        self.assertTrue(result.success)
+        self.assertEqual(len(session.calls), 2)
+        self.assertEqual(session.calls[1]["url"], "https://seed.bytedance.com/zh/blog?order_desc=true")
+        self.assertEqual(root.findtext("./channel/item/title"), "页面更新后的新博客")
 
 
 if __name__ == "__main__":

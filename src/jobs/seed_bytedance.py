@@ -1,11 +1,12 @@
-"""ByteDance Seed blog and public-paper feeds from the official list API."""
+"""Reusable ByteDance Seed list feeds from the live API and list-page SSR."""
 
 from __future__ import annotations
 
+import json
 import logging
 from datetime import datetime
 from typing import Any
-from urllib.parse import quote
+from urllib.parse import quote, urlparse
 from zoneinfo import ZoneInfo
 
 import requests
@@ -29,6 +30,8 @@ ITEM_PATHS = {
     ARTICLE_TYPE_PUBLICATION: "public_papers",
     ARTICLE_TYPE_BLOG: "blog",
 }
+PATH_TO_ARTICLE_TYPE = {path: article_type for article_type, path in ITEM_PATHS.items()}
+ARTICLE_LIST_KEYS = ("sub_article_list", "article_list")
 EXTERNAL_LINK_LABELS = {
     1: "arXiv",
     2: "GitHub",
@@ -57,6 +60,68 @@ def item_path_for(article_type: int, override: str = "") -> str:
     if custom:
         return custom
     return ITEM_PATHS[article_type]
+
+
+def infer_collection(url: str) -> tuple[str, str, int] | None:
+    """Infer locale, item path, and article_type from a live Seed list URL."""
+    parsed = urlparse(str(url or "").strip())
+    parts = [part for part in parsed.path.split("/") if part]
+    if not parts:
+        return None
+    item_path = parts[-1]
+    article_type = PATH_TO_ARTICLE_TYPE.get(item_path)
+    if article_type is None:
+        return None
+    locale = parts[0] if len(parts) >= 2 else DEFAULT_LOCALE
+    return locale, item_path, article_type
+
+
+def extract_article_rows(payload: Any) -> list[Any]:
+    """Find the first Seed article list in an API or SSR JSON payload."""
+
+    def looks_like_article(row: Any) -> bool:
+        return isinstance(row, dict) and (
+            isinstance(row.get("ArticleMeta"), dict)
+            or isinstance(row.get("ArticleSubContentZh"), dict)
+            or isinstance(row.get("ArticleSubContentEn"), dict)
+        )
+
+    stack = [payload]
+    while stack:
+        current = stack.pop()
+        if isinstance(current, dict):
+            for key in ARTICLE_LIST_KEYS:
+                rows = current.get(key)
+                if isinstance(rows, list) and any(looks_like_article(row) for row in rows):
+                    return [row for row in rows if looks_like_article(row)]
+            stack.extend(current.values())
+        elif isinstance(current, list):
+            stack.extend(current)
+    return []
+
+
+def extract_window_json(html: str, name: str) -> Any | None:
+    """Parse a ``window.NAME = {...}`` JSON assignment from Modern.js HTML."""
+    marker = f"window.{name}"
+    start = html.find(marker)
+    if start < 0:
+        return None
+    equals = html.find("=", start + len(marker))
+    if equals < 0:
+        return None
+    try:
+        payload, _ = json.JSONDecoder().raw_decode(html[equals + 1 :].lstrip())
+    except json.JSONDecodeError:
+        return None
+    return payload
+
+
+def extract_router_articles(html: str) -> list[Any]:
+    """Read article cards from ``window._ROUTER_DATA`` on a Seed list page."""
+    payload = extract_window_json(html, "_ROUTER_DATA")
+    if payload is None:
+        return []
+    return extract_article_rows(payload)
 
 
 def localized_field(article: dict[str, Any], field: str, locale: str) -> str:
@@ -199,26 +264,46 @@ def collect_items(
     return items
 
 
+def resolve_collection(config: dict[str, Any]) -> tuple[str, str, int] | None:
+    """Resolve a Seed collection from explicit fields or the live list URL."""
+    list_url = str(config.get("url") or config.get("link") or "").strip()
+    inferred = infer_collection(list_url) if list_url else None
+    article_type = coerce_article_type(config.get("article_type"))
+    if article_type is None and inferred is not None:
+        article_type = inferred[2]
+    if article_type is None:
+        return None
+    locale = str(config.get("locale") or "").strip()
+    if not locale:
+        locale = inferred[0] if inferred else DEFAULT_LOCALE
+    item_path = item_path_for(article_type, str(config.get("item_path") or ""))
+    if inferred and not str(config.get("item_path") or "").strip():
+        item_path = inferred[1]
+    return locale or DEFAULT_LOCALE, item_path, article_type
+
+
 @register_job
 class SeedBytedanceJob(FeedJob):
-    """Build RSS from Seed's get_article_list_v2 API."""
+    """Refresh Seed RSS from the live list API, with list-page SSR fallback."""
 
     job_type = "seed_bytedance"
 
     def run(self, context: JobContext) -> JobResult:
         options = self.config.get("options") or {}
-        article_type = coerce_article_type(self.config.get("article_type"))
-        if article_type is None:
+        collection = resolve_collection(self.config)
+        if collection is None:
             return JobResult(
                 name=self.name,
                 success=False,
-                details="seed_bytedance 需要 article_type=1（论文）或 2（博客）",
+                details="seed_bytedance 需要 url（/blog 或 /public_papers）或 article_type",
             )
 
+        locale, item_path, article_type = collection
+        list_url = str(
+            self.config.get("url") or self.config.get("link") or ""
+        ).strip()
         api_url = str(self.config.get("api_url") or DEFAULT_API_URL).strip()
         base_url = str(self.config.get("base_url") or DEFAULT_BASE_URL).strip()
-        locale = str(self.config.get("locale") or DEFAULT_LOCALE).strip() or DEFAULT_LOCALE
-        item_path = item_path_for(article_type, str(self.config.get("item_path") or ""))
         output_file = str(self.config.get("output") or f"seed_{item_path}.xml").strip()
         max_items = int(options.get("max_items", 50))
         max_pages = int(options.get("max_pages", DEFAULT_MAX_PAGES))
@@ -228,7 +313,7 @@ class SeedBytedanceJob(FeedJob):
 
         session = create_retry_session(
             user_agent=options.get("user_agent"),
-            accept="application/json",
+            accept="application/json,text/html",
             retries=int(options.get("retries", 2)),
             backoff_factor=float(options.get("backoff_factor", 0.5)),
         )
@@ -239,6 +324,7 @@ class SeedBytedanceJob(FeedJob):
         request_headers = (
             {"x-tt-locale": api_locale} if article_type == ARTICLE_TYPE_PUBLICATION else None
         )
+        api_error: str | None = None
 
         for page_index in range(max_pages):
             if len(items) >= max_items:
@@ -258,37 +344,23 @@ class SeedBytedanceJob(FeedJob):
                 response.raise_for_status()
                 payload = response.json()
             except requests.RequestException as exc:
-                if not items:
-                    return JobResult(
-                        name=self.name,
-                        success=False,
-                        details=f"调用 Seed API 失败: {exc}",
-                    )
-                logger.warning("Seed 后续分页失败，使用已解析条目: %s", exc)
+                api_error = f"调用 Seed API 失败: {exc}"
+                if items:
+                    logger.warning("Seed 后续分页失败，使用已解析条目: %s", exc)
                 break
             except ValueError as exc:
-                if not items:
-                    return JobResult(
-                        name=self.name,
-                        success=False,
-                        details=f"Seed API 返回非法 JSON: {exc}",
-                    )
-                logger.warning("Seed 后续分页 JSON 非法，使用已解析条目: %s", exc)
+                api_error = f"Seed API 返回非法 JSON: {exc}"
+                if items:
+                    logger.warning("Seed 后续分页 JSON 非法，使用已解析条目: %s", exc)
                 break
 
             if not isinstance(payload, dict):
-                if not items:
-                    return JobResult(
-                        name=self.name,
-                        success=False,
-                        details="Seed API 返回非法 JSON",
-                    )
-                logger.warning("Seed 后续分页结构异常，使用已解析条目")
+                api_error = "Seed API 返回非法 JSON"
+                if items:
+                    logger.warning("Seed 后续分页结构异常，使用已解析条目")
                 break
 
-            rows = payload.get("sub_article_list") or []
-            if not isinstance(rows, list):
-                rows = []
+            rows = extract_article_rows(payload)
             items.extend(
                 collect_items(
                     rows,
@@ -301,7 +373,7 @@ class SeedBytedanceJob(FeedJob):
             )
 
             if page_index == 0 and not items:
-                return JobResult(name=self.name, success=False, details="未找到任何 Seed 条目")
+                break
 
             if not payload.get("has_more"):
                 break
@@ -310,8 +382,31 @@ class SeedBytedanceJob(FeedJob):
                 break
             page_token = next_token
 
+        if not items and list_url:
+            try:
+                page = session.get(list_url, timeout=timeout)
+                page.raise_for_status()
+                items.extend(
+                    collect_items(
+                        extract_router_articles(page.text),
+                        locale=locale,
+                        base_url=base_url,
+                        item_path=item_path,
+                        seen_ids=seen_ids,
+                        limit=max_items,
+                    )
+                )
+                if items:
+                    logger.info("Seed API 不可用，改从列表页 SSR 解析到 %s 条", len(items))
+            except requests.RequestException as exc:
+                logger.warning("抓取 Seed 列表页失败: %s", exc)
+
         if not items:
-            return JobResult(name=self.name, success=False, details="未找到任何 Seed 条目")
+            return JobResult(
+                name=self.name,
+                success=False,
+                details=api_error or "未找到任何 Seed 条目",
+            )
 
         default_link = f"{base_url.rstrip('/')}/{locale}/{item_path}"
         generator = RSSGenerator(
