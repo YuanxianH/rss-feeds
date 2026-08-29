@@ -21,6 +21,7 @@ The network currently covers:
 - [Waymo Research](https://yuanxianh.github.io/rss-feeds/waymo_research.xml)
 - [Meta AI Research Publications](https://yuanxianh.github.io/rss-feeds/meta_ai_research.xml)
 - [OpenAI Research](https://yuanxianh.github.io/rss-feeds/openai_research_only.xml)
+- [ByteDance Seed Public Papers](https://yuanxianh.github.io/rss-feeds/seed_papers.xml)
 
 ### Blogs
 
@@ -31,6 +32,7 @@ The network currently covers:
 - [Kimi Research Articles & Technical Blogs](https://yuanxianh.github.io/rss-feeds/kimi_blog.xml)
 - [Physical Intelligence Blog](https://yuanxianh.github.io/rss-feeds/pi_blog.xml)
 - [Zhipu AI Research](https://yuanxianh.github.io/rss-feeds/zhipu_research.xml)
+- [ByteDance Seed Blog](https://yuanxianh.github.io/rss-feeds/seed_blog.xml)
 
 ### Releases
 

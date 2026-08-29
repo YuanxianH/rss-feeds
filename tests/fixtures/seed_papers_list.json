@@ -1,0 +1,35 @@
+{
+  "sub_article_list": [
+    {
+      "ArticleMeta": {
+        "ID": 1701,
+        "ArticleID": 1783396707305,
+        "ArticleType": 1,
+        "PublishDate": 1783267200000,
+        "ExternalLinks": [
+          {
+            "ExternalLinkType": 1,
+            "Link": "https://arxiv.org/pdf/2607.05155"
+          },
+          {
+            "ExternalLinkType": 2,
+            "Link": "https://github.com/bytedance-seed/EdgeBench"
+          }
+        ]
+      },
+      "ArticleSubContentEn": {
+        "Title": "EdgeBench: Unveiling Scaling Laws of Learning from Real-World Environments",
+        "Abstract": "Pretraining scaling laws reveal that model capability improves predictably.",
+        "TitleKey": "edgebench-unveiling-scaling-laws-of-learning-from-real-world-environments"
+      },
+      "ArticleSubContentZh": {
+        "Title": "",
+        "Abstract": "",
+        "TitleKey": ""
+      }
+    }
+  ],
+  "next_page_token": "20",
+  "has_more": false,
+  "total": 1
+}

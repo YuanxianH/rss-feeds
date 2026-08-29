@@ -169,6 +169,32 @@ jobs:
     options:
       minimum_items: 1
 
+  # ByteDance Seed 技术博客（每小时重抓列表页/API，新文章自动进入 RSS）
+  - type: "seed_bytedance"
+    name: "ByteDance Seed Blog"
+    url: "https://seed.bytedance.com/zh/blog?order_desc=true"
+    article_type: 2
+    locale: "zh"
+    output: "seed_blog.xml"
+    title: "ByteDance Seed Blog"
+    description: "Technical blog posts from ByteDance Seed"
+    link: "https://seed.bytedance.com/zh/blog"
+    catalog:
+      section: "blogs"
+
+  # ByteDance Seed 公开论文（每小时重抓列表页/API，新论文自动进入 RSS）
+  - type: "seed_bytedance"
+    name: "ByteDance Seed Papers"
+    url: "https://seed.bytedance.com/zh/public_papers?view_from=research&order_desc=true"
+    article_type: 1
+    locale: "zh"
+    output: "seed_papers.xml"
+    title: "ByteDance Seed Public Papers"
+    description: "Public research papers from ByteDance Seed"
+    link: "https://seed.bytedance.com/zh/public_papers"
+    catalog:
+      section: "research"
+
   # 智谱研究博客（列表页 + Next.js 内嵌数据 + collection API，页面更新后小时任务会跟上）
   - type: "dynamic_site"
     name: "Zhipu AI Research"
