@@ -65,6 +65,21 @@ jobs:
     catalog:
       section: "research"
 
+  # DeepSeek 研究索引（官网新闻页，只抓研究论文卡片）
+  - type: "selector_scrape"
+    name: "DeepSeek Research Index"
+    url: "https://www.deepseek.com/news/"
+    output: "deepseek_research.xml"
+    title: "DeepSeek Research Index"
+    description: "Research papers and technical reports from DeepSeek's Research Index"
+    link: "https://www.deepseek.com/news/"
+    selectors:
+      items: "a.ds-research-item"
+      title: "span.ds-research-title"
+      date: "span.ds-research-date"
+    catalog:
+      section: "research"
+
   # OpenAI RSS 研究过滤
   - type: "openai_research_filter"
     name: "OpenAI Research"

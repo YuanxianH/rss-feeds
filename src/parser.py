@@ -2,12 +2,17 @@
 
 from bs4 import BeautifulSoup
 from typing import List, Dict, Optional
-from datetime import timezone
+from datetime import datetime, timezone
 from dateutil import parser as date_parser
 from urllib.parse import urljoin
 import logging
+import re
 
 logger = logging.getLogger(__name__)
+
+_CHINESE_DATE = re.compile(
+    r"(?P<year>\d{4})\s*年\s*(?P<month>\d{1,2})\s*月\s*(?P<day>\d{1,2})\s*日"
+)
 
 
 class HTMLParser:
@@ -128,6 +133,22 @@ class HTMLParser:
 
     def _parse_date(self, date_string: str) -> Optional[str]:
         """解析日期字符串为 RSS 格式"""
+        if not date_string:
+            return None
+
+        match = _CHINESE_DATE.search(date_string)
+        if match:
+            try:
+                dt = datetime(
+                    int(match.group("year")),
+                    int(match.group("month")),
+                    int(match.group("day")),
+                    tzinfo=timezone.utc,
+                )
+                return dt.strftime("%a, %d %b %Y %H:%M:%S %z")
+            except ValueError:
+                return None
+
         try:
             dt = date_parser.parse(date_string)
             if dt.tzinfo is None:

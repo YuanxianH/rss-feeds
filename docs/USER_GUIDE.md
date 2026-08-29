@@ -61,6 +61,7 @@ python -m http.server 8000
 - `feeds/hunyuan_research.xml`
 - `feeds/seed_blog.xml`
 - `feeds/seed_papers.xml`
+- `feeds/deepseek_research.xml`
 
 `feeds/index.html` 和 `feeds/assets/site.css` 也会自动生成，用于本地预览；
 这些文件不需要手工编辑。
