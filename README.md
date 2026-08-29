@@ -6,13 +6,17 @@
 
 在目录里点 RSS 即可订阅。也可以直接把下面的地址加进阅读器。
 
-## 论文
+## 研究论文
+
+实验室新发表的研究。
 
 - [Waymo Research](https://yuanxianh.github.io/rss-feeds/waymo_research.xml)
 - [Meta AI Research](https://yuanxianh.github.io/rss-feeds/meta_ai_research.xml)
 - [OpenAI Research](https://yuanxianh.github.io/rss-feeds/openai_research_only.xml)
 
-## 文章
+## 公司博客
+
+这些公司自己写的文章和动态。
 
 - [Google DeepMind Blog](https://yuanxianh.github.io/rss-feeds/deepmind_blog.xml)
 - [Waymo Blog · Technology](https://yuanxianh.github.io/rss-feeds/waymo_blog_tech.xml)
@@ -21,7 +25,9 @@
 - [Kimi](https://yuanxianh.github.io/rss-feeds/kimi_blog.xml)
 - [Physical Intelligence](https://yuanxianh.github.io/rss-feeds/pi_blog.xml)
 
-## 发布
+## 新模型、新版本
+
+模型上线和工具更新。
 
 - [MiniMax Releases](https://yuanxianh.github.io/rss-feeds/minimax_releases.xml)
 - [Codex Releases](https://yuanxianh.github.io/rss-feeds/codex_github_releases.xml)
