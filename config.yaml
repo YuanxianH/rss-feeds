@@ -169,6 +169,30 @@ jobs:
     options:
       minimum_items: 1
 
+  # ByteDance Seed 技术博客（官方 article list API）
+  - type: "seed_bytedance"
+    name: "ByteDance Seed Blog"
+    article_type: 2
+    locale: "zh"
+    output: "seed_blog.xml"
+    title: "ByteDance Seed Blog"
+    description: "Technical blog posts from ByteDance Seed"
+    link: "https://seed.bytedance.com/zh/blog"
+    catalog:
+      section: "blogs"
+
+  # ByteDance Seed 公开论文（官方 article list API）
+  - type: "seed_bytedance"
+    name: "ByteDance Seed Papers"
+    article_type: 1
+    locale: "zh"
+    output: "seed_papers.xml"
+    title: "ByteDance Seed Public Papers"
+    description: "Public research papers from ByteDance Seed"
+    link: "https://seed.bytedance.com/zh/public_papers"
+    catalog:
+      section: "research"
+
   # 智谱研究博客（Payload CMS articles API）
   - type: "zhipu_research"
     name: "Zhipu AI Research"
