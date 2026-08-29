@@ -38,13 +38,6 @@ class IncompleteIdeasFeedTests(unittest.TestCase):
         self.assertEqual(
             [(item["title"], item["link"]) for item in items],
             [
-                ("Oak Lab", "https://oaklab.example"),
-                ("http://richsutton.com", "http://richsutton.com"),
-                ("X: @RichardSSutton", "https://x.com/RichardSSutton"),
-                (
-                    "The Alberta Plan for AI Research",
-                    "http://www.incompleteideas.net/IncIdeas/AlbertaPlan.html",
-                ),
                 (
                     "What's Wrong with AI",
                     "http://www.incompleteideas.net/IncIdeas/WrongWithAI.html",
@@ -57,12 +50,19 @@ class IncompleteIdeasFeedTests(unittest.TestCase):
                     "half a manifesto...",
                     "http://www.incompleteideas.net/IncIdeas/eoai.pdf",
                 ),
+                (
+                    "Rich's Slogans",
+                    "http://www.incompleteideas.net/IncIdeas/Slogans.html",
+                ),
+                ("rlai.net", "http://rlai.net/"),
             ],
         )
         self.assertIn("12 Nov 2001", by_title["What's Wrong with AI"]["pubDate"])
         self.assertIn("13 Mar 2019", by_title["The Bitter Lesson"]["pubDate"])
         self.assertIn("01 Jan 2007", by_title["half a manifesto..."]["pubDate"])
-        self.assertNotIn("pubDate", by_title["Oak Lab"])
+        self.assertNotIn("Oak Lab", by_title)
+        self.assertNotIn("The Alberta Plan for AI Research", by_title)
+        self.assertNotIn("Software", by_title)
         self.assertTrue(all("mailto:" not in item["link"] for item in items))
         self.assertTrue(all("javascript:" not in item["link"] for item in items))
 

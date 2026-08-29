@@ -185,20 +185,20 @@ jobs:
     catalog:
       section: "blogs"
 
-  # Rich Sutton 个人主页：每个可点击超链接作为一条 RSS
+  # Rich Sutton 个人主页里的 Incomplete Ideas (blog) 栏目
   - type: "selector_scrape"
     name: "Incomplete Ideas"
     url: "http://www.incompleteideas.net/"
     output: "incompleteideas.xml"
-    title: "Rich Sutton - Incomplete Ideas"
-    description: "New hyperlinks published on Rich Sutton's homepage"
+    title: "Incomplete Ideas (blog)"
+    description: "Posts from the Incomplete Ideas blog on Rich Sutton's homepage"
     link: "http://www.incompleteideas.net/"
     selectors:
-      items: 'a[href]:not([href^="mailto:"]):not([href^="javascript:"])'
+      items: 'li:has(> small:-soup-contains("Incomplete Ideas (blog)")) > ul a[href]:not([href^="mailto:"]):not([href^="javascript:"])'
     catalog:
       section: "blogs"
     options:
-      max_items: 200
+      max_items: 50
       infer_dates_from_context: true
       persist_pubdates: true
 
