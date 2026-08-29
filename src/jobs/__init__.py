@@ -5,11 +5,15 @@ from .runner import JobRunner
 # Import modules for job registration side effects.
 from .codex_changelog import CodexChangelogJob  # noqa: F401
 from .dynamic_site import DynamicSiteJob  # noqa: F401
+from .hunyuan_research import HunyuanResearchJob  # noqa: F401
+from .json_list_api import JsonListApiJob  # noqa: F401
 from .kimi_blog import KimiBlogJob  # noqa: F401
 from .minimax_news import MiniMaxNewsJob  # noqa: F401
 from .minimax_releases import MiniMaxReleasesJob  # noqa: F401
 from .openai_research import OpenAIResearchFilterJob  # noqa: F401
+from .seed_bytedance import SeedBytedanceJob  # noqa: F401
 from .selector_scrape import SelectorScrapeJob  # noqa: F401
 from .waymo_blog import WaymoBlogTechnologyJob  # noqa: F401
+from .zhipu_research import ZhipuResearchJob  # noqa: F401
 
 __all__ = ["JobRunner"]

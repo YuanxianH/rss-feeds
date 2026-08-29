@@ -13,6 +13,8 @@
 - [Waymo Research](https://yuanxianh.github.io/rss-feeds/waymo_research.xml)
 - [Meta AI Research](https://yuanxianh.github.io/rss-feeds/meta_ai_research.xml)
 - [OpenAI Research](https://yuanxianh.github.io/rss-feeds/openai_research_only.xml)
+- [Tencent Hunyuan Research](https://yuanxianh.github.io/rss-feeds/hunyuan_research.xml)
+- [ByteDance Seed Public Papers](https://yuanxianh.github.io/rss-feeds/seed_papers.xml)
 
 ## 公司博客
 
@@ -24,6 +26,8 @@
 - [MiniMax Official Blog](https://yuanxianh.github.io/rss-feeds/minimax_official_blog.xml)
 - [Kimi](https://yuanxianh.github.io/rss-feeds/kimi_blog.xml)
 - [Physical Intelligence](https://yuanxianh.github.io/rss-feeds/pi_blog.xml)
+- [Zhipu AI Research](https://yuanxianh.github.io/rss-feeds/zhipu_research.xml)
+- [ByteDance Seed Blog](https://yuanxianh.github.io/rss-feeds/seed_blog.xml)
 
 ## 新模型、新版本
 

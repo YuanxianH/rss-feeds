@@ -13,6 +13,8 @@ from xml.etree import ElementTree as ET
 import requests
 from bs4 import BeautifulSoup
 
+from src.cms_records import collect_article_records, record_url
+
 UrlNormalizer = Callable[[str, str], str | None]
 
 _ASSET_SUFFIXES = {
@@ -85,12 +87,21 @@ def _iter_json_strings(value: Any) -> Iterable[str]:
             stack.extend(current)
 
 
+_ID_TITLE_RE = re.compile(
+    r'"id"\s*:\s*(\d+)\s*,\s*"title(?:_[a-z]+)?"\s*:\s*"'
+    r'|'
+    r'"title(?:_[a-z]+)?"\s*:\s*"(?:\\.|[^"\\])+"\s*,\s*"id"\s*:\s*(\d+)'
+)
+
+
 def extract_article_urls(
     html: str,
     *,
     page_url: str,
     normalize_url: UrlNormalizer,
     link_selector: str = "a[href]",
+    category: str = "",
+    require_active: bool = False,
 ) -> list[str]:
     """Discover article URLs from anchors, metadata, embedded JSON and text."""
     soup = BeautifulSoup(html, "html.parser")
@@ -130,10 +141,23 @@ def extract_article_urls(
                 continue
             for value in _iter_json_strings(payload):
                 add(value)
+            prefix = urlparse(page_url).path.rstrip("/")
+            for record in collect_article_records(
+                payload, category=category, require_active=require_active
+            ):
+                built = record_url(
+                    record, page_url=page_url, path_prefix=prefix
+                )
+                if built:
+                    add(built)
 
     # Next.js flight data and similar payloads often contain escaped URLs in
     # non-JSON script tags. Keep this last so visible links retain their order.
-    searchable = html.replace("\\\\/", "/").replace("\\/", "/")
+    searchable = (
+        html.replace("\\\\/", "/")
+        .replace("\\/", "/")
+        .replace('\\"', '"')
+    )
     prefix = urlparse(page_url).path.rstrip("/")
     if prefix:
         path_pattern = re.escape(prefix) + r"/[A-Za-z0-9][A-Za-z0-9._~%/-]*"
@@ -142,8 +166,32 @@ def extract_article_urls(
         )
         for match in re.findall(candidate_pattern, searchable):
             add(match)
+        for match in _ID_TITLE_RE.finditer(searchable):
+            article_id = match.group(1) or match.group(2)
+            next_id = searchable.find('"id":', match.end())
+            window_end = next_id if next_id != -1 else match.start() + 400
+            window = searchable[max(0, match.start() - 20) : window_end]
+            if not _window_matches_filters(
+                window, category=category, require_active=require_active
+            ):
+                continue
+            add(f"{prefix}/{article_id}")
 
     return urls
+
+
+def _window_matches_filters(
+    window: str, *, category: str, require_active: bool
+) -> bool:
+    if category and re.search(r'"category"\s*:', window):
+        if not re.search(
+            rf'"category"\s*:\s*"{re.escape(category)}"', window, re.I
+        ):
+            return False
+    if require_active and re.search(r'"active"\s*:', window):
+        if not re.search(r'"active"\s*:\s*true', window):
+            return False
+    return True
 
 
 def discover_sitemap_urls(
@@ -196,3 +244,74 @@ def discover_sitemap_urls(
                 queue.append(location)
 
     return article_urls
+
+
+def discover_collection_records(
+    session: requests.Session,
+    api_urls: Iterable[str],
+    *,
+    page_url: str,
+    path_prefix: str,
+    normalize_url: UrlNormalizer,
+    timeout: float,
+    max_pages: int = 10,
+    page_size: int = 50,
+    category: str = "",
+    require_active: bool = False,
+    logger: logging.Logger | None = None,
+) -> tuple[list[str], list[dict[str, Any]]]:
+    """Walk CMS collection APIs and return article URLs plus raw records."""
+    log = logger or logging.getLogger(__name__)
+    article_urls: list[str] = []
+    records: list[dict[str, Any]] = []
+    seen_urls: set[str] = set()
+    seen_records: set[Any] = set()
+
+    for api_url in api_urls:
+        endpoint = str(api_url or "").strip()
+        if not endpoint:
+            continue
+        for page in range(1, max_pages + 1):
+            try:
+                response = session.get(
+                    endpoint,
+                    params={
+                        "limit": page_size,
+                        "page": page,
+                        "depth": 0,
+                        **(
+                            {"where[category][equals]": category}
+                            if category
+                            else {}
+                        ),
+                    },
+                    timeout=timeout,
+                )
+                response.raise_for_status()
+                payload = response.json()
+            except (requests.RequestException, ValueError) as exc:
+                log.warning("读取 collection API 失败 %s: %s", endpoint, exc)
+                break
+
+            batch = collect_article_records(
+                payload, category=category, require_active=require_active
+            )
+            for record in batch:
+                key = record.get("id")
+                if key not in seen_records:
+                    seen_records.add(key)
+                    records.append(record)
+                built = record_url(
+                    record, page_url=page_url, path_prefix=path_prefix
+                )
+                if not built:
+                    continue
+                normalized = normalize_url(built, page_url)
+                if normalized and normalized not in seen_urls:
+                    seen_urls.add(normalized)
+                    article_urls.append(normalized)
+
+            if not (isinstance(payload, dict) and payload.get("hasNextPage")):
+                break
+
+    return article_urls, records

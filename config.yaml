@@ -169,6 +169,86 @@ jobs:
     options:
       minimum_items: 1
 
+  # ByteDance Seed 技术博客（每小时重抓列表页/API，新文章自动进入 RSS）
+  - type: "seed_bytedance"
+    name: "ByteDance Seed Blog"
+    url: "https://seed.bytedance.com/zh/blog?order_desc=true"
+    article_type: 2
+    locale: "zh"
+    output: "seed_blog.xml"
+    title: "ByteDance Seed Blog"
+    description: "Technical blog posts from ByteDance Seed"
+    link: "https://seed.bytedance.com/zh/blog"
+    catalog:
+      section: "blogs"
+
+  # ByteDance Seed 公开论文（每小时重抓列表页/API，新论文自动进入 RSS）
+  - type: "seed_bytedance"
+    name: "ByteDance Seed Papers"
+    url: "https://seed.bytedance.com/zh/public_papers?view_from=research&order_desc=true"
+    article_type: 1
+    locale: "zh"
+    output: "seed_papers.xml"
+    title: "ByteDance Seed Public Papers"
+    description: "Public research papers from ByteDance Seed"
+    link: "https://seed.bytedance.com/zh/public_papers"
+    catalog:
+      section: "research"
+
+  # 智谱研究博客（列表页 + Next.js 内嵌数据 + collection API，页面更新后小时任务会跟上）
+  - type: "dynamic_site"
+    name: "Zhipu AI Research"
+    url: "https://www.zhipuai.cn/zh/research"
+    path_prefix: "/zh/research"
+    allowed_hosts:
+      - "zhipuai.cn"
+    api_urls:
+      - "https://www.zhipuai.cn/api/articles"
+    category: "blog"
+    locale: "zh"
+    output: "zhipu_research.xml"
+    title: "Zhipu AI Research"
+    description: "Research and technical blogs from Zhipu AI (智谱)"
+    link: "https://www.zhipuai.cn/zh/research"
+    catalog:
+      section: "blogs"
+    options:
+      require_active: true
+      minimum_items: 1
+
+  # Tencent Hunyuan 研究成果。hunyuan_research 是 json_list_api 的预设：
+  # 每小时重拉公开列表，新文章会自动进入 feed；字段/分页可在下面改而不用改代码。
+  - type: "hunyuan_research"
+    name: "Tencent Hunyuan Research"
+    api_url: "https://api.hunyuan.tencent.com/api/blog/publicList"
+    article_base_url: "https://hy.tencent.com/research"
+    locale: "zh"
+    output: "hunyuan_research.xml"
+    title: "Tencent Hunyuan Research"
+    description: "Research publications and technical posts from Tencent Hunyuan (混元)"
+    link: "https://hy.tencent.com/research"
+    catalog:
+      section: "research"
+    fields:
+      list: "data.list"
+      total: "data.totalNum"
+      title: ["title"]
+      description: ["desc", "summary", "description"]
+      author: ["author", "createdUid"]
+      date: ["displayPublishTime", "publishedAt", "publicAt", "createdAt"]
+      slug: ["customUrl", "id"]
+    request:
+      page_key: "pageNum"
+      page_size_key: "pageSize"
+      extra_body:
+        needFilter: false
+      headers:
+        Origin: "https://hy.tencent.com"
+        Referer: "https://hy.tencent.com/research"
+    options:
+      max_pages: 10
+      page_size: 50
+
   # Physical Intelligence Blog
   - type: "selector_scrape"
     name: "Physical Intelligence Blog"
@@ -184,6 +264,21 @@ jobs:
       date: "div.text-xs.text-muted-foreground.shrink-0.ml-1"
     catalog:
       section: "blogs"
+
+  # Rich Sutton 个人主页：每个可点击超链接作为一条 RSS
+  - type: "selector_scrape"
+    name: "Incomplete Ideas"
+    url: "http://www.incompleteideas.net/"
+    output: "incompleteideas.xml"
+    title: "Rich Sutton - Incomplete Ideas"
+    description: "New hyperlinks published on Rich Sutton's homepage"
+    link: "http://www.incompleteideas.net/"
+    selectors:
+      items: 'a[href]:not([href^="mailto:"]):not([href^="javascript:"])'
+    catalog:
+      section: "blogs"
+    options:
+      max_items: 200
 
   # 示例配置
   # - type: "selector_scrape"

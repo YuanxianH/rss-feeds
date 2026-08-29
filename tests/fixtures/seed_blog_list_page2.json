@@ -1,0 +1,41 @@
+{
+  "sub_article_list": [
+    {
+      "ArticleMeta": {
+        "ID": 1766,
+        "ArticleID": 1785893583524,
+        "ArticleType": 2,
+        "PublishDate": 1785859200000
+      },
+      "ArticleSubContentZh": {
+        "Title": "重复的 SeedRealtime",
+        "Abstract": "should be deduplicated",
+        "TitleKey": "seedrealtime-音视频全双工大模型发布-走向全模态自然交互"
+      },
+      "ArticleSubContentEn": {
+        "Title": "Duplicate SeedRealtime",
+        "TitleKey": "seedrealtime-audio-visual-full-duplex-llm-released-toward-omni-modal-natural-interaction"
+      }
+    },
+    {
+      "ArticleMeta": {
+        "ID": 1600,
+        "ArticleID": 1780000000000,
+        "ArticleType": 2,
+        "PublishDate": 1775000000000
+      },
+      "ArticleSubContentZh": {
+        "Title": "Seed2.1 正式发布，深入 AI 生产力",
+        "Abstract": "第二页博客",
+        "TitleKey": "seed2-1-正式发布"
+      },
+      "ArticleSubContentEn": {
+        "Title": "Seed2.1 Released",
+        "TitleKey": "seed2-1-released"
+      }
+    }
+  ],
+  "next_page_token": "40",
+  "has_more": false,
+  "total": 5
+}
