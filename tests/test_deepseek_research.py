@@ -85,8 +85,8 @@ class DeepSeekResearchFeedTests(unittest.TestCase):
         self.assertTrue(result.success)
         items = root.findall("./channel/item")
         self.assertEqual(
-            {(item.findtext("title"), item.findtext("link")) for item in items},
-            {
+            [(item.findtext("title"), item.findtext("link")) for item in items],
+            [
                 (
                     "DeepSeek-V4: Towards Highly Efficient Million-Token Context Intelligence",
                     "https://arxiv.org/abs/2606.19348",
@@ -99,14 +99,11 @@ class DeepSeekResearchFeedTests(unittest.TestCase):
                     "Linear-Programming-Based Load Balancer (LPLB)",
                     "https://github.com/deepseek-ai/LPLB",
                 ),
-            },
+            ],
         )
-        v4 = next(
-            item
-            for item in items
-            if item.findtext("link") == "https://arxiv.org/abs/2606.19348"
-        )
-        self.assertTrue((v4.findtext("pubDate") or "").startswith("Wed, 24 Jun 2026"))
+        self.assertTrue((items[0].findtext("pubDate") or "").startswith("Wed, 24 Jun 2026"))
+        self.assertTrue((items[1].findtext("pubDate") or "").startswith("Wed, 25 Feb 2026"))
+        self.assertTrue((items[2].findtext("pubDate") or "").startswith("Sat, 01 Nov 2025"))
         self.assertTrue(
             all("/news/" not in (item.findtext("link") or "") for item in items)
         )

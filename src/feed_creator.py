@@ -8,7 +8,7 @@ import logging
 from .scraper import WebScraper
 from .parser import HTMLParser
 from .path_utils import resolve_output_path
-from .rss_generator import RSSGenerator
+from .rss_generator import RSSGenerator, items_oldest_first
 
 logger = logging.getLogger(__name__)
 
@@ -88,7 +88,9 @@ class FeedCreator:
                 link=config.get("link", url),
                 description=config.get("description", f"{name} RSS Feed")
             )
-            generator.add_items(items)
+            # feedgen emits entries in stack order; add oldest first so
+            # readers see newest research by pubDate at the top.
+            generator.add_items(items_oldest_first(items))
 
             output_path = self._resolve_output_path(output)
             success = generator.generate(str(output_path))
