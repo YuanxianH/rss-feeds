@@ -7,7 +7,7 @@
     <docs>http://www.rssboard.org/rss-specification</docs>
     <generator>RSS Creator</generator>
     <language>zh-CN</language>
-    <lastBuildDate>Sat, 29 Aug 2026 16:09:56 +0000</lastBuildDate>
+    <lastBuildDate>Sat, 29 Aug 2026 16:24:07 +0000</lastBuildDate>
     <item>
       <title>Equi-normalization of Neural Networks | Facebook AI Research</title>
       <link>https://ai.meta.com/research/publications/equi-normalization-of-neural-networks/</link>
@@ -135,8 +135,7 @@
       <pubDate>Fri, 05 Jun 2026 00:00:00 +0000</pubDate>
     </item>
     <item>
-      <title>Accurate Decoding of Natural Sentences from
-Non-Invasive Brain Recordings</title>
+      <title>Accurate Decoding of Natural Sentences from Non-Invasive Brain Recordings</title>
       <link>https://ai.meta.com/research/publications/accurate-decoding-of-natural-sentences-from-non-invasive-brain-recordings/</link>
       <description>Mingfang (Lucy) Zhang *, Jarod Levy *, Cédric Rommel, Jérémy Rapin, Corentin Bel, Julie Bonnaire, Daniel Nieto, Pierre Bourdillon, Svetlana Pinet, Stéphane d'Ascoli, Thomas Moreau, Jean Remi King</description>
       <guid isPermaLink="true">https://ai.meta.com/research/publications/accurate-decoding-of-natural-sentences-from-non-invasive-brain-recordings/</guid>
