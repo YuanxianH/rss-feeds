@@ -16,6 +16,7 @@ from src.jobs.hunyuan_research import (
     select_articles,
     unix_timestamp_to_iso,
 )
+from src.jobs.json_list_api import JsonListApiJob
 from src.jobs.registry import create_job
 
 FIXTURES = Path(__file__).parent / "fixtures"
@@ -116,6 +117,20 @@ class HunyuanResearchHelperTests(unittest.TestCase):
             },
         )
 
+    def test_article_to_item_falls_back_to_renamed_summary_field(self):
+        item = article_to_item(
+            {
+                "id": 100091,
+                "title": "From LR to ELR",
+                "summary": "接口把 desc 改成了 summary。",
+                "customUrl": "elr",
+            },
+            article_base_url=DEFAULT_ARTICLE_BASE_URL,
+        )
+        self.assertIsNotNone(item)
+        assert item is not None
+        self.assertEqual(item["description"], "接口把 desc 改成了 summary。")
+
     def test_article_to_item_normalizes_semicolon_authors(self):
         item = article_to_item(
             {
@@ -159,9 +174,10 @@ class HunyuanResearchJobTests(unittest.TestCase):
     def test_registry_creates_hunyuan_job(self):
         job = create_job({"type": "hunyuan_research", "name": "Tencent Hunyuan Research"})
         self.assertIsInstance(job, HunyuanResearchJob)
+        self.assertIsInstance(job, JsonListApiJob)
         self.assertEqual(job.job_type, "hunyuan_research")
 
-    @patch("src.jobs.hunyuan_research.create_retry_session")
+    @patch("src.jobs.json_list_api.create_retry_session")
     def test_job_paginates_and_writes_rss(self, create_session):
         session = FakeSession(
             [
@@ -224,7 +240,7 @@ class HunyuanResearchJobTests(unittest.TestCase):
             "引入有效学习率来控制模型权重的方向变化。",
         )
 
-    @patch("src.jobs.hunyuan_research.create_retry_session")
+    @patch("src.jobs.json_list_api.create_retry_session")
     def test_job_keeps_working_when_later_page_has_partial_docs(self, create_session):
         create_session.return_value = FakeSession(
             [
@@ -260,7 +276,7 @@ class HunyuanResearchJobTests(unittest.TestCase):
         self.assertTrue(result.success)
         self.assertEqual(len(root.findall("./channel/item")), 4)
 
-    @patch("src.jobs.hunyuan_research.create_retry_session")
+    @patch("src.jobs.json_list_api.create_retry_session")
     def test_empty_public_list_fails(self, create_session):
         create_session.return_value = FakeSession(
             [
@@ -277,7 +293,7 @@ class HunyuanResearchJobTests(unittest.TestCase):
         self.assertFalse(result.success)
         self.assertIn("未找到任何研究成果", result.details)
 
-    @patch("src.jobs.hunyuan_research.create_retry_session")
+    @patch("src.jobs.json_list_api.create_retry_session")
     def test_api_http_error_fails(self, create_session):
         create_session.return_value = FakeSession(
             [
@@ -295,7 +311,7 @@ class HunyuanResearchJobTests(unittest.TestCase):
         self.assertFalse(result.success)
         self.assertIn("调用混元 API 失败", result.details)
 
-    @patch("src.jobs.hunyuan_research.create_retry_session")
+    @patch("src.jobs.json_list_api.create_retry_session")
     def test_invalid_payload_fails(self, create_session):
         create_session.return_value = FakeSession(
             [
@@ -312,7 +328,7 @@ class HunyuanResearchJobTests(unittest.TestCase):
         self.assertFalse(result.success)
         self.assertIn("非法 JSON", result.details)
 
-    @patch("src.jobs.hunyuan_research.create_retry_session")
+    @patch("src.jobs.json_list_api.create_retry_session")
     def test_business_error_code_fails(self, create_session):
         create_session.return_value = FakeSession(
             [

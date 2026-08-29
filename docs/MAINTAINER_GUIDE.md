@@ -46,15 +46,18 @@ rss_creator/
 1. 简单 SSR 网页：在 `config.yaml` 增加 `type: selector_scrape`。
 2. Next.js 等页面若 HTML 或内嵌数据含文章链接：使用 `type: dynamic_site`，
    配置 `url`、`path_prefix`、`allowed_hosts` 与可选 `sitemap_urls`。
-3. 只有专用 API 或特殊数据模型的来源：在 `src/jobs/` 新增 job 并注册
+3. 公开 JSON 列表接口：使用 `type: json_list_api`，把 list/title/slug/date
+   和分页参数写进 `config.yaml`。同类站点（例如混元研究页）可以复用同一
+   job，网页持续发文时由小时级 Actions 自动更新 XML。
+4. 只有专用 API 或特殊数据模型的来源：在 `src/jobs/` 新增 job 并注册
    `job_type`。
-4. 本地验证：
+5. 本地验证：
 
 ```bash
 python main.py -v
 ```
 
-5. 为页面结构保存最小 HTML fixture，并补脱网单元测试。
+6. 为页面结构保存最小 HTML/JSON fixture，并补脱网单元测试。
 
 `feeds/index.html`、`feeds/assets/` 和 XML 都是生成产物，不要手工编辑或提交。
 首页源文件位于 `src/templates/` 与 `src/site_assets/`。

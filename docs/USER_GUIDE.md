@@ -83,7 +83,7 @@ python -m unittest discover -s tests -p "test_*.py"
 
 核心字段：
 
-- `jobs[].type`: 任务类型（如 `selector_scrape` / `dynamic_site` / `openai_research_filter` / `waymo_blog_technology` / `minimax_news` / `zhipu_research` / `hunyuan_research`）
+- `jobs[].type`: 任务类型（如 `selector_scrape` / `dynamic_site` / `json_list_api` / `openai_research_filter` / `waymo_blog_technology` / `minimax_news` / `zhipu_research` / `hunyuan_research`）
 - `jobs[].name`: 任务名称（用于日志和结果统计）
 - `jobs[].output`: 输出文件名（写入 `feeds/`）
 - `jobs[].options.*`: 任务参数（如 `max_items` / `timeout` / `retries`）
@@ -101,6 +101,27 @@ jobs:
       items: "article.post"
       title: "h2.title"
       link: "a.permalink"
+```
+
+JSON 列表接口（SPA 常见）用 `json_list_api`，字段和分页都写在配置里；站点改字段名或继续发文时，小时级任务会按同一套映射重拉列表：
+
+```yaml
+jobs:
+  - type: "json_list_api"
+    name: "Example Research"
+    api_url: "https://example.com/api/posts"
+    article_base_url: "https://example.com/research"
+    output: "example_research.xml"
+    fields:
+      list: "data.list"
+      total: "data.totalNum"
+      title: ["title"]
+      description: ["desc", "summary"]
+      slug: ["customUrl", "id"]
+      date: ["displayPublishTime", "publishedAt"]
+    request:
+      page_key: "pageNum"
+      page_size_key: "pageSize"
 ```
 
 动态页面若在 HTML、Next.js 内嵌数据或 sitemap 中包含文章链接，可配置：

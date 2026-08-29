@@ -183,7 +183,8 @@ jobs:
     catalog:
       section: "blogs"
 
-  # Tencent Hunyuan 研究成果（公开列表 API）
+  # Tencent Hunyuan 研究成果。hunyuan_research 是 json_list_api 的预设：
+  # 每小时重拉公开列表，新文章会自动进入 feed；字段/分页可在下面改而不用改代码。
   - type: "hunyuan_research"
     name: "Tencent Hunyuan Research"
     api_url: "https://api.hunyuan.tencent.com/api/blog/publicList"
@@ -195,6 +196,25 @@ jobs:
     link: "https://hy.tencent.com/research"
     catalog:
       section: "research"
+    fields:
+      list: "data.list"
+      total: "data.totalNum"
+      title: ["title"]
+      description: ["desc", "summary", "description"]
+      author: ["author", "createdUid"]
+      date: ["displayPublishTime", "publishedAt", "publicAt", "createdAt"]
+      slug: ["customUrl", "id"]
+    request:
+      page_key: "pageNum"
+      page_size_key: "pageSize"
+      extra_body:
+        needFilter: false
+      headers:
+        Origin: "https://hy.tencent.com"
+        Referer: "https://hy.tencent.com/research"
+    options:
+      max_pages: 10
+      page_size: 50
 
   # Physical Intelligence Blog
   - type: "selector_scrape"
