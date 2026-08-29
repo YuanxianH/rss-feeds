@@ -30,6 +30,7 @@ The network currently covers:
 - [MiniMax Official Blog](https://yuanxianh.github.io/rss-feeds/minimax_official_blog.xml)
 - [Kimi Research Articles & Technical Blogs](https://yuanxianh.github.io/rss-feeds/kimi_blog.xml)
 - [Physical Intelligence Blog](https://yuanxianh.github.io/rss-feeds/pi_blog.xml)
+- [Zhipu AI Research](https://yuanxianh.github.io/rss-feeds/zhipu_research.xml)
 
 ### Releases
 
