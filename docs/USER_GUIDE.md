@@ -59,6 +59,8 @@ python -m http.server 8000
 - `feeds/kimi_blog.xml`
 - `feeds/zhipu_research.xml`
 - `feeds/hunyuan_research.xml`
+- `feeds/seed_blog.xml`
+- `feeds/seed_papers.xml`
 
 `feeds/index.html` 和 `feeds/assets/site.css` 也会自动生成，用于本地预览；
 这些文件不需要手工编辑。
@@ -83,7 +85,7 @@ python -m unittest discover -s tests -p "test_*.py"
 
 核心字段：
 
-- `jobs[].type`: 任务类型（如 `selector_scrape` / `dynamic_site` / `json_list_api` / `openai_research_filter` / `waymo_blog_technology` / `minimax_news` / `zhipu_research` / `hunyuan_research`）
+- `jobs[].type`: 任务类型（如 `selector_scrape` / `dynamic_site` / `json_list_api` / `openai_research_filter` / `waymo_blog_technology` / `minimax_news` / `zhipu_research` / `hunyuan_research` / `seed_bytedance`）
 - `jobs[].api_urls`: `dynamic_site` 可选的 JSON collection，与列表页一起发现新文章
 - `jobs[].name`: 任务名称（用于日志和结果统计）
 - `jobs[].output`: 输出文件名（写入 `feeds/`）
