@@ -279,6 +279,8 @@ jobs:
       section: "blogs"
     options:
       max_items: 200
+      infer_dates_from_context: true
+      persist_pubdates: true
 
   # 示例配置
   # - type: "selector_scrape"
