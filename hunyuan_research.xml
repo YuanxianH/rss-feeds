@@ -1,0 +1,70 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0">
+  <channel>
+    <title>Tencent Hunyuan Research</title>
+    <link>https://hy.tencent.com/research</link>
+    <description>Research publications and technical posts from Tencent Hunyuan (混元)</description>
+    <docs>http://www.rssboard.org/rss-specification</docs>
+    <generator>RSS Creator</generator>
+    <language>zh-CN</language>
+    <lastBuildDate>Sat, 29 Aug 2026 16:56:28 +0000</lastBuildDate>
+    <item>
+      <title>Hy4 preview 发布</title>
+      <link>https://hy.tencent.com/research/hy4-preview</link>
+      <guid isPermaLink="true">https://hy.tencent.com/research/hy4-preview</guid>
+      <pubDate>Thu, 27 Aug 2026 16:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>From LR to ELR: A Better Heuristic for Pretraining Dynamics</title>
+      <link>https://hy.tencent.com/research/elr</link>
+      <description>在大模型（Large Language Models，LLM）预训练中，超参数是影响效果好坏、控制模型训练动态的关键因素。而学习率（Learning Rate, LR）作为预训练中最重要的超参数之一，却无法精确控制模型参数的演化速率，其最优取值又往往随模型和数据规模的扩大而改变。本文引入了有效学习率（Effective Learning Rate, ELR）来控制模型权重的方向变化。作为可调超参数，ELR 比 LR 更贴近训练的内在动态，因此是更合适的调参依据：在多幂律（Multi-Power Law, MPL）模型中，以 ELR 为依据可以更准确地预测损失，最优 ELR 也能更可靠地迁移到不同规模的模型。进一步地，ELR 这一视角还能指导我们设计更合适的 LR 调度策略，并在实验中优于常规 LR 调度策略基线。</description>
+      <guid isPermaLink="true">https://hy.tencent.com/research/elr</guid>
+      <pubDate>Mon, 10 Aug 2026 16:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>Hyra: 简单有效的科学发现智能体</title>
+      <link>https://hy.tencent.com/research/hyra</link>
+      <description>今天我们推出Hyra-1.0，这是 Hyra（Hunyuan Research Agent） 的首个版本：一个能够递归自我改进、专为性能导向的研究与工程任务打造的智能体。</description>
+      <guid isPermaLink="true">https://hy.tencent.com/research/hyra</guid>
+      <pubDate>Tue, 21 Jul 2026 02:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>Hy3 正式发布</title>
+      <link>https://hy.tencent.com/research/hy3</link>
+      <guid isPermaLink="true">https://hy.tencent.com/research/hy3</guid>
+      <pubDate>Mon, 06 Jul 2026 06:50:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>Hy-MT2：面向实际应用场景的高性能多语言翻译模型</title>
+      <link>https://hy.tencent.com/research/100041</link>
+      <description>Hy-MT2 是支持 33 种语言互译的多语言模型，其中7B 和 30B-A3B模型在各类翻译任务上达到了开源模型最佳效果，超越了几十倍参数量的模型。轻量级的 1.8B 模型也超越了微软和豆包等主流商业 API，且得益于 AngelSlim 1.25-bit 极端量化，仅需 440MB 存储空间，可以轻松部署在苹果、高通、联发科等手机芯片上支持本地推理，相比Hy-MT1.5推理速度提升 1.5 倍。基于Hy-MT2模型的“腾讯Hy翻译”小程序已经上线，IOS和安卓APP即将上线（支持本地推理）。</description>
+      <guid isPermaLink="true">https://hy.tencent.com/research/100041</guid>
+      <pubDate>Thu, 21 May 2026 07:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>Real life is where context gets hard</title>
+      <link>https://hy.tencent.com/research/100039</link>
+      <description>此前，我们发布了 CL-bench，用来测试 AI 能否从 context 中掌握复杂的新知识，并将其有效运用。它关注的是专业场景中相对清晰、经过整理的 context。但现实生活中的 context 并不是一本提前梳理好的“说明书”。如果要成为真正好用的日常助理，AI 不能只停留于理解和运用新知识；它还必须能看懂复杂的人际关系，处理混乱、碎片化、不断变化的信息，并从这些线索中读懂我们真实的生活。</description>
+      <guid isPermaLink="true">https://hy.tencent.com/research/100039</guid>
+      <pubDate>Thu, 30 Apr 2026 07:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>Hy3 preview : 混元大模型重建的第一步</title>
+      <link>https://hy.tencent.com/research/hy3-preview</link>
+      <guid isPermaLink="true">https://hy.tencent.com/research/hy3-preview</guid>
+      <pubDate>Wed, 22 Apr 2026 16:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>Stabilizing RLVR via Token-level Gradient Diagnosis and Layerwise Clipping</title>
+      <link>https://hy.tencent.com/research/100015</link>
+      <guid isPermaLink="true">https://hy.tencent.com/research/100015</guid>
+      <pubDate>Fri, 13 Feb 2026 08:36:34 +0000</pubDate>
+    </item>
+    <item>
+      <title>Learning from context is harder than we thought</title>
+      <link>https://hy.tencent.com/research/100025</link>
+      <guid isPermaLink="true">https://hy.tencent.com/research/100025</guid>
+      <pubDate>Tue, 03 Feb 2026 04:18:08 +0000</pubDate>
+    </item>
+  </channel>
+</rss>
