@@ -20,6 +20,8 @@ def _incompleteideas_job() -> dict:
 class IncompleteIdeasFeedTests(unittest.TestCase):
     def test_fixture_extracts_navigable_homepage_links(self):
         job = _incompleteideas_job()
+        self.assertTrue((job.get("options") or {}).get("infer_dates_from_context"))
+        self.assertTrue((job.get("options") or {}).get("persist_pubdates"))
         parser = HTMLParser(
             FIXTURE.read_text(encoding="utf-8"),
             base_url="http://www.incompleteideas.net",
@@ -27,24 +29,40 @@ class IncompleteIdeasFeedTests(unittest.TestCase):
         items = parser.parse_items(
             job["selectors"],
             max_items=int((job.get("options") or {}).get("max_items", 200)),
+            infer_dates_from_context=bool(
+                (job.get("options") or {}).get("infer_dates_from_context")
+            ),
         )
 
+        by_title = {item["title"]: item for item in items}
         self.assertEqual(
             [(item["title"], item["link"]) for item in items],
             [
-                ("Oak Lab", "https://oaklab.example"),
-                ("http://richsutton.com", "http://richsutton.com"),
-                ("X: @RichardSSutton", "https://x.com/RichardSSutton"),
                 (
-                    "The Alberta Plan for AI Research",
-                    "http://www.incompleteideas.net/IncIdeas/AlbertaPlan.html",
+                    "What's Wrong with AI",
+                    "http://www.incompleteideas.net/IncIdeas/WrongWithAI.html",
                 ),
                 (
                     "The Bitter Lesson",
                     "http://www.incompleteideas.net/IncIdeas/BitterLesson.html",
                 ),
+                (
+                    "half a manifesto...",
+                    "http://www.incompleteideas.net/IncIdeas/eoai.pdf",
+                ),
+                (
+                    "Rich's Slogans",
+                    "http://www.incompleteideas.net/IncIdeas/Slogans.html",
+                ),
+                ("rlai.net", "http://rlai.net/"),
             ],
         )
+        self.assertIn("12 Nov 2001", by_title["What's Wrong with AI"]["pubDate"])
+        self.assertIn("13 Mar 2019", by_title["The Bitter Lesson"]["pubDate"])
+        self.assertIn("01 Jan 2007", by_title["half a manifesto..."]["pubDate"])
+        self.assertNotIn("Oak Lab", by_title)
+        self.assertNotIn("The Alberta Plan for AI Research", by_title)
+        self.assertNotIn("Software", by_title)
         self.assertTrue(all("mailto:" not in item["link"] for item in items))
         self.assertTrue(all("javascript:" not in item["link"] for item in items))
 
