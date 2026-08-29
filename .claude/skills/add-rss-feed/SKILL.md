@@ -19,7 +19,7 @@ Run commands from the repository root. Feed XML, `feeds/index.html`, and
 | `minimax_news` | MiniMax News discovery and crawl |
 | `minimax_releases` | HuggingFace models and GitHub repositories |
 | `waymo_blog_technology` | Waymo blog API |
-| `zhipu_research` | Zhipu research articles API |
+| `zhipu_research` | Compatibility adapter for Zhipu research via `dynamic_site` |
 | `openai_research_filter` | Filter an existing RSS feed by category |
 | `codex_changelog` | Codex changelog release entries |
 
@@ -76,6 +76,29 @@ For dynamic indexes:
   catalog:
     section: "blogs"
   options:
+    minimum_items: 1
+```
+
+If the index also exposes a JSON collection, add `api_urls` so new posts are
+picked up from the live page, embedded data, and the API together:
+
+```yaml
+- type: "dynamic_site"
+  name: "Example Research"
+  url: "https://example.com/zh/research"
+  path_prefix: "/zh/research"
+  allowed_hosts: ["example.com"]
+  api_urls:
+    - "https://example.com/api/articles"
+  category: "blog"
+  output: "example_research.xml"
+  title: "Example Research"
+  description: "Research posts from Example"
+  link: "https://example.com/zh/research"
+  catalog:
+    section: "blogs"
+  options:
+    require_active: true
     minimum_items: 1
 ```
 
