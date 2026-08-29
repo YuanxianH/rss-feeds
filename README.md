@@ -1,23 +1,26 @@
-# AI RSS
+# 一份 AI 更新清单
 
-把 AI 实验室、研究组和产品博客的更新，收成一组可订阅的 RSS。打开 [订阅首页](https://yuanxianh.github.io/rss-feeds/)，点 RSS，把链接加进阅读器即可。
+每天都有实验室发论文、公司写文章、新模型上线。不用一个个官网去翻，打开这个页面就行：
 
-## 研究
+[yuanxianh.github.io/rss-feeds](https://yuanxianh.github.io/rss-feeds/)
 
-- [Waymo Research](https://yuanxianh.github.io/rss-feeds/waymo_research.xml)
-- [Meta AI Research](https://yuanxianh.github.io/rss-feeds/meta_ai_research.xml)
-- [OpenAI Research](https://yuanxianh.github.io/rss-feeds/openai_research_only.xml)
+## 这个页面是干什么的
 
-## 博客
+把它想成一份已经帮你整理好的「AI 公众号清单」。里面大致有三类：
 
-- [Google DeepMind Blog](https://yuanxianh.github.io/rss-feeds/deepmind_blog.xml)
-- [Waymo Blog · Technology](https://yuanxianh.github.io/rss-feeds/waymo_blog_tech.xml)
-- [MiniMax News](https://yuanxianh.github.io/rss-feeds/minimax_blog.xml)
-- [MiniMax Official Blog](https://yuanxianh.github.io/rss-feeds/minimax_official_blog.xml)
-- [Kimi Research & Technical Blogs](https://yuanxianh.github.io/rss-feeds/kimi_blog.xml)
-- [Physical Intelligence Blog](https://yuanxianh.github.io/rss-feeds/pi_blog.xml)
+- **论文**：Waymo、Meta、OpenAI 这些实验室新发表的研究
+- **文章**：DeepMind、Kimi、MiniMax 这些公司自己写的内容
+- **新东西**：新模型、新版本什么时候出来
 
-## 发布
+打开就能看到每家最近在写什么。点「原文」会跳到他们的官网。
 
-- [MiniMax Releases](https://yuanxianh.github.io/rss-feeds/minimax_releases.xml)
-- [Codex GitHub Releases](https://yuanxianh.github.io/rss-feeds/codex_github_releases.xml)
+## 想以后自动收到更新
+
+可以再花两分钟，像关注公众号那样收进手机或电脑：
+
+1. 在应用商店搜 **Feedly**，装一个。这是专门用来收文章的应用，装好后按提示点几下就行。
+2. 回到上面那个页面，找到你想看的那一家。
+3. 点它旁边写着 **RSS** 的按钮。不用管这三个字母是什么意思，把它当成「关注」就行。
+4. 再回到 Feedly，选添加，把刚才打开的地址贴进去。
+
+做完一次就不用再管了。以后有新文章，会自己出现在应用里。
