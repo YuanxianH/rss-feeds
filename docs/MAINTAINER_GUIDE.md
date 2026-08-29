@@ -44,11 +44,13 @@ rss_creator/
 ### 统一方式：新增 job
 
 1. 简单 SSR 网页：在 `config.yaml` 增加 `type: selector_scrape`。
-2. Next.js 等页面若 HTML 或内嵌数据含文章链接：使用 `type: dynamic_site`，
-   配置 `url`、`path_prefix`、`allowed_hosts` 与可选 `sitemap_urls`。
-3. 公开 JSON 列表接口：使用 `type: json_list_api`，把 list/title/slug/date
-   和分页参数写进 `config.yaml`。同类站点（例如混元研究页）可以复用同一
-   job，网页持续发文时由小时级 Actions 自动更新 XML。
+2. Next.js 等页面若 HTML、内嵌数据或 collection API 含文章：使用
+   `type: dynamic_site`，配置 `url`、`path_prefix`、`allowed_hosts`，以及可选的
+   `sitemap_urls` / `api_urls`。小时任务会重新抓取页面，网页新增文章后 feed
+   会自动更新。
+3. 公开 JSON 列表接口（HTML 里没有可用文章链接）：使用 `type: json_list_api`，
+   把 list/title/slug/date 和分页参数写进 `config.yaml`。同类站点（例如混元
+   研究页）可以复用同一 job，网页持续发文时由小时级 Actions 自动更新 XML。
 4. 只有专用 API 或特殊数据模型的来源：在 `src/jobs/` 新增 job 并注册
    `job_type`。
 5. 本地验证：
