@@ -1,97 +1,39 @@
-# AI RSS Network
+# AI RSS
 
-An English-first, deployed RSS network for AI labs, research groups, engineering blogs, and release streams.
+很多 AI 实验室和公司的网站没有 RSS。这个开源项目会定时去这些网站上看，把新论文、新文章、新模型做成 Feed，放在一个目录里，大约每小时更新一次。
 
-Primary entrypoint: [yuanxianh.github.io/rss-feeds](https://yuanxianh.github.io/rss-feeds/)
+订阅目录：[yuanxianh.github.io/rss-feeds](https://yuanxianh.github.io/rss-feeds/)
 
-## What This Is
+在目录里点 RSS 即可订阅。也可以直接把下面的地址加进阅读器。
 
-This repository publishes a subscriber-facing RSS collection for AI research and product monitoring. Instead of browsing each source separately, you can start from one deployed homepage and subscribe to the feeds you want.
+## 研究论文
 
-The network currently covers:
-
-- Research publications and filtered research feeds
-- Engineering and company blogs
-- Release-oriented feeds for models and repositories
-
-## Available Feeds
-
-### Research
+实验室新发表的研究。
 
 - [Waymo Research](https://yuanxianh.github.io/rss-feeds/waymo_research.xml)
-- [Meta AI Research Publications](https://yuanxianh.github.io/rss-feeds/meta_ai_research.xml)
+- [Meta AI Research](https://yuanxianh.github.io/rss-feeds/meta_ai_research.xml)
 - [OpenAI Research](https://yuanxianh.github.io/rss-feeds/openai_research_only.xml)
 - [Tencent Hunyuan Research](https://yuanxianh.github.io/rss-feeds/hunyuan_research.xml)
 - [ByteDance Seed Public Papers](https://yuanxianh.github.io/rss-feeds/seed_papers.xml)
 
-### Blogs
+## 公司博客
+
+这些公司自己写的文章和动态。
 
 - [Google DeepMind Blog](https://yuanxianh.github.io/rss-feeds/deepmind_blog.xml)
-- [Waymo Blog - Technology](https://yuanxianh.github.io/rss-feeds/waymo_blog_tech.xml)
+- [Waymo Blog · Technology](https://yuanxianh.github.io/rss-feeds/waymo_blog_tech.xml)
 - [MiniMax News](https://yuanxianh.github.io/rss-feeds/minimax_blog.xml)
 - [MiniMax Official Blog](https://yuanxianh.github.io/rss-feeds/minimax_official_blog.xml)
-- [Kimi Research Articles & Technical Blogs](https://yuanxianh.github.io/rss-feeds/kimi_blog.xml)
-- [Physical Intelligence Blog](https://yuanxianh.github.io/rss-feeds/pi_blog.xml)
+- [Kimi](https://yuanxianh.github.io/rss-feeds/kimi_blog.xml)
+- [Physical Intelligence](https://yuanxianh.github.io/rss-feeds/pi_blog.xml)
 - [Zhipu AI Research](https://yuanxianh.github.io/rss-feeds/zhipu_research.xml)
 - [ByteDance Seed Blog](https://yuanxianh.github.io/rss-feeds/seed_blog.xml)
 
-### Releases
+## 新模型、新版本
 
-- MiniMax Releases, configured in the network and shown on the landing page when its XML feed is available
+模型上线和工具更新。
 
-## Quick Paths
+- [MiniMax Releases](https://yuanxianh.github.io/rss-feeds/minimax_releases.xml)
+- [Codex Releases](https://yuanxianh.github.io/rss-feeds/codex_github_releases.xml)
 
-### Browse Online
-
-- Landing page: [https://yuanxianh.github.io/rss-feeds/](https://yuanxianh.github.io/rss-feeds/)
-
-### Subscribe Directly
-
-- Copy any live XML URL above into your RSS reader.
-
-### Run Locally
-
-```bash
-pip install -r requirements.txt
-python main.py
-cd feeds
-python -m http.server 8000
-```
-
-Then open `http://localhost:8000/` for the generated landing page or subscribe to any local XML feed.
-
-### Deploy
-
-```bash
-./scripts/ops/deploy.sh
-```
-
-That pushes the repository and triggers GitHub Actions. Healthy feeds are updated
-independently; when one upstream site fails, its previous XML is retained and the
-remaining feeds are still published.
-
-## Docs
-
-- User guide (Chinese): [docs/USER_GUIDE.md](docs/USER_GUIDE.md)
-- Deployment guide (Chinese): [docs/DEPLOY.md](docs/DEPLOY.md)
-- Maintainer guide (Chinese): [docs/MAINTAINER_GUIDE.md](docs/MAINTAINER_GUIDE.md)
-
-## Repository Shape
-
-```text
-rss_creator/
-├── docs/
-├── scripts/
-│   └── ops/
-├── src/
-│   ├── jobs/
-│   ├── site_assets/
-│   ├── templates/
-│   ├── discovery.py
-│   ├── article_metadata.py
-│   └── site_index.py
-├── tests/
-├── config.yaml
-├── main.py
-└── feeds/
-```
+代码是公开的。你可以直接订阅这份清单，也可以自己加更多来源。
