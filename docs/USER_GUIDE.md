@@ -57,6 +57,7 @@ python -m http.server 8000
 - `feeds/minimax_blog.xml`
 - `feeds/minimax_official_blog.xml`
 - `feeds/kimi_blog.xml`
+- `feeds/zhipu_research.xml`
 
 `feeds/index.html` 和 `feeds/assets/site.css` 也会自动生成，用于本地预览；
 这些文件不需要手工编辑。
@@ -81,7 +82,7 @@ python -m unittest discover -s tests -p "test_*.py"
 
 核心字段：
 
-- `jobs[].type`: 任务类型（如 `selector_scrape` / `dynamic_site` / `openai_research_filter` / `waymo_blog_technology` / `minimax_news`）
+- `jobs[].type`: 任务类型（如 `selector_scrape` / `dynamic_site` / `openai_research_filter` / `waymo_blog_technology` / `minimax_news` / `zhipu_research`）
 - `jobs[].name`: 任务名称（用于日志和结果统计）
 - `jobs[].output`: 输出文件名（写入 `feeds/`）
 - `jobs[].options.*`: 任务参数（如 `max_items` / `timeout` / `retries`）

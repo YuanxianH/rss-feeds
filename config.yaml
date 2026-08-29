@@ -169,6 +169,20 @@ jobs:
     options:
       minimum_items: 1
 
+  # 智谱研究博客（Payload CMS articles API）
+  - type: "zhipu_research"
+    name: "Zhipu AI Research"
+    api_url: "https://www.zhipuai.cn/api/articles"
+    article_base_url: "https://www.zhipuai.cn/zh/research"
+    category: "blog"
+    locale: "zh"
+    output: "zhipu_research.xml"
+    title: "Zhipu AI Research"
+    description: "Research and technical blogs from Zhipu AI (智谱)"
+    link: "https://www.zhipuai.cn/zh/research"
+    catalog:
+      section: "blogs"
+
   # Physical Intelligence Blog
   - type: "selector_scrape"
     name: "Physical Intelligence Blog"
