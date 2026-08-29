@@ -7,20 +7,20 @@
     <docs>http://www.rssboard.org/rss-specification</docs>
     <generator>RSS Creator</generator>
     <language>zh-CN</language>
-    <lastBuildDate>Sat, 29 Aug 2026 16:30:03 +0000</lastBuildDate>
-    <item>
-      <title>MiniMax H3: An Open Model Breaking the Boundaries Between Tasks and Modalities - MiniMax Research</title>
-      <link>https://www.minimax.io/blog/minimax-h3</link>
-      <description>Today, we're officially launching MiniMax H3, a general-purpose omni-modal generation model. H3 can jointly understand multimodal contexts spanning text, images, video, and audio. It generates video with native stereo audio at up to 2K resolution and 15 seconds in length.</description>
-      <guid isPermaLink="true">https://www.minimax.io/blog/minimax-h3</guid>
-      <pubDate>Fri, 31 Jul 2026 00:00:00 +0000</pubDate>
-    </item>
+    <lastBuildDate>Sat, 29 Aug 2026 16:49:20 +0000</lastBuildDate>
     <item>
       <title>MiniMax Music 3.0: Next-Generation Open-Weights, Production-Ready &amp; Versatile Music Model - MiniMax Research</title>
       <link>https://www.minimax.io/blog/minimax-music-3-0-next-generation-open-weights-production-ready-versatile-music-model</link>
       <description>Today, we are introducing MiniMax Music 3.0, our next-generation music generation model. Given a creative concept and optional lyrics, the model composes, arranges, performs, and produces a complete s</description>
       <guid isPermaLink="true">https://www.minimax.io/blog/minimax-music-3-0-next-generation-open-weights-production-ready-versatile-music-model</guid>
       <pubDate>Thu, 13 Aug 2026 00:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>MiniMax H3: An Open Model Breaking the Boundaries Between Tasks and Modalities - MiniMax Research</title>
+      <link>https://www.minimax.io/blog/minimax-h3</link>
+      <description>Today, we're officially launching MiniMax H3, a general-purpose omni-modal generation model. H3 can jointly understand multimodal contexts spanning text, images, video, and audio. It generates video with native stereo audio at up to 2K resolution and 15 seconds in length.</description>
+      <guid isPermaLink="true">https://www.minimax.io/blog/minimax-h3</guid>
+      <pubDate>Fri, 31 Jul 2026 00:00:00 +0000</pubDate>
     </item>
     <item>
       <title>MaxProof: Scaling Mathematical Proof with Generative-Verifier RL and Evolutionary Search - MiniMax Research</title>

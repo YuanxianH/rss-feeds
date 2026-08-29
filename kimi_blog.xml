@@ -7,7 +7,14 @@
     <docs>http://www.rssboard.org/rss-specification</docs>
     <generator>RSS Creator</generator>
     <language>zh-CN</language>
-    <lastBuildDate>Sat, 29 Aug 2026 16:30:17 +0000</lastBuildDate>
+    <lastBuildDate>Sat, 29 Aug 2026 16:49:29 +0000</lastBuildDate>
+    <item>
+      <title>Kimi K2: Open Agentic Intelligence</title>
+      <link>https://www.kimi.ai/blog/kimi-k2</link>
+      <description>Kimi K2 is our latest Mixture-of-Experts model with 32 billion activated parameters and 1 trillion total parameters. It achieves state-of-the-art performance in frontier knowledge, math, and coding among non-thinking models.</description>
+      <guid isPermaLink="true">https://www.kimi.ai/blog/kimi-k2</guid>
+      <pubDate>Mon, 25 Nov 2024 00:00:00 +0000</pubDate>
+    </item>
     <item>
       <title>Kimi K3 Tech Blog: Open Frontier Intelligence</title>
       <link>https://www.kimi.ai/blog/kimi-k3</link>
@@ -55,13 +62,6 @@
       <link>https://www.kimi.ai/blog/kimi-k2-thinking</link>
       <description>Kimi K2 Thinking, Moonshot's best open-source thinking model.</description>
       <guid isPermaLink="true">https://www.kimi.ai/blog/kimi-k2-thinking</guid>
-    </item>
-    <item>
-      <title>Kimi K2: Open Agentic Intelligence</title>
-      <link>https://www.kimi.ai/blog/kimi-k2</link>
-      <description>Kimi K2 is our latest Mixture-of-Experts model with 32 billion activated parameters and 1 trillion total parameters. It achieves state-of-the-art performance in frontier knowledge, math, and coding among non-thinking models.</description>
-      <guid isPermaLink="true">https://www.kimi.ai/blog/kimi-k2</guid>
-      <pubDate>Mon, 25 Nov 2024 00:00:00 +0000</pubDate>
     </item>
   </channel>
 </rss>
