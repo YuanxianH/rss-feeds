@@ -78,6 +78,16 @@ class HTMLParserTests(unittest.TestCase):
             ],
         )
 
+    def test_parse_items_collapses_whitespace_in_anchor_titles(self):
+        html = """
+        <a href="IncIdeas/BitterLesson.html">The
+                    Bitter
+                    Lesson</a>
+        """
+        parser = HTMLParser(html, base_url="http://www.incompleteideas.net")
+        items = parser.parse_items(selectors={"items": "a[href]"}, max_items=5)
+        self.assertEqual(items[0]["title"], "The Bitter Lesson")
+
 
 if __name__ == "__main__":
     unittest.main()

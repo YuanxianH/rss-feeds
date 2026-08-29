@@ -74,10 +74,10 @@ class HTMLParser:
         # 标题
         if title_selector := selectors.get("title"):
             if title_elem := container.select_one(title_selector):
-                item["title"] = title_elem.get("title") or title_elem.get_text(strip=True)
+                item["title"] = self._element_text(title_elem)
         if not item.get("title") and container.name == "a":
             # 条目容器本身就是 <a> 时，select_one 找不到后代标题，回退到自身文本
-            item["title"] = container.get("title") or container.get_text(strip=True)
+            item["title"] = self._element_text(container)
 
         # 链接
         link_selector = selectors.get("link")
@@ -110,6 +110,10 @@ class HTMLParser:
                 item["author"] = author_elem.get_text(strip=True)
 
         return item
+
+    def _element_text(self, elem) -> str:
+        """读取元素可见文本，并折叠 HTML 换行造成的多余空白。"""
+        return " ".join((elem.get("title") or elem.get_text() or "").split())
 
     def _normalize_url(self, url: str) -> str:
         """规范化 URL，处理相对链接"""
