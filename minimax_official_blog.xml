@@ -1,0 +1,96 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0">
+  <channel>
+    <title>MiniMax Official Blog</title>
+    <link>https://www.minimax.io/blog</link>
+    <description>Official product, research, and engineering posts from MiniMax</description>
+    <docs>http://www.rssboard.org/rss-specification</docs>
+    <generator>RSS Creator</generator>
+    <language>zh-CN</language>
+    <lastBuildDate>Sat, 29 Aug 2026 16:10:09 +0000</lastBuildDate>
+    <item>
+      <title>MiniMax H3: An Open Model Breaking the Boundaries Between Tasks and Modalities - MiniMax Research</title>
+      <link>https://www.minimax.io/blog/minimax-h3</link>
+      <description>Today, we're officially launching MiniMax H3, a general-purpose omni-modal generation model. H3 can jointly understand multimodal contexts spanning text, images, video, and audio. It generates video with native stereo audio at up to 2K resolution and 15 seconds in length.</description>
+      <guid isPermaLink="true">https://www.minimax.io/blog/minimax-h3</guid>
+      <pubDate>Fri, 31 Jul 2026 00:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>MiniMax Music 3.0: Next-Generation Open-Weights, Production-Ready &amp; Versatile Music Model - MiniMax Research</title>
+      <link>https://www.minimax.io/blog/minimax-music-3-0-next-generation-open-weights-production-ready-versatile-music-model</link>
+      <description>Today, we are introducing MiniMax Music 3.0, our next-generation music generation model. Given a creative concept and optional lyrics, the model composes, arranges, performs, and produces a complete s</description>
+      <guid isPermaLink="true">https://www.minimax.io/blog/minimax-music-3-0-next-generation-open-weights-production-ready-versatile-music-model</guid>
+      <pubDate>Thu, 13 Aug 2026 00:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>MaxProof: Scaling Mathematical Proof with Generative-Verifier RL and Evolutionary Search - MiniMax Research</title>
+      <link>https://www.minimax.io/blog/minimax-maxproof-math-proof-evolution</link>
+      <description>In the M3 release post, we reported the performance of the M3 model on two international mathematical olympiad benchmarks: IMO 2025 and USAMO 2026. With the MaxProof framework, M3 exceeded the human gold-medal threshold on both. This article further elaborates on our technical path toward advancing mathematical proof capabilities, including base model enhancement, verifier alignment, refinement capability building, and the design of the test-time scaling framework MaxProof.</description>
+      <guid isPermaLink="true">https://www.minimax.io/blog/minimax-maxproof-math-proof-evolution</guid>
+      <pubDate>Tue, 09 Jun 2026 00:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>MiniMax M3: Frontier Coding, 1M Context, Native Multimodality — All in One Model - MiniMax Research</title>
+      <link>https://www.minimax.io/blog/minimax-m3</link>
+      <description>M3 reaches frontier capability on coding and agentic tasks, introduces the brand-new MSA (MiniMax Sparse Attention) supporting up to 1M context, and is a natively multimodal model. It is the only domestic model combining all three Frontier essentials and will be the only open-source one in this class.</description>
+      <guid isPermaLink="true">https://www.minimax.io/blog/minimax-m3</guid>
+      <pubDate>Mon, 01 Jun 2026 00:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>MiniMax Agent Team: Built for Long-Running Tasks and Continuous Evolution - MiniMax</title>
+      <link>https://www.minimax.io/blog/minimax-agent-team-long-running-1779893953</link>
+      <description>Today we are introducing the overall upgrade of MiniMax Agent. We have given the upgraded Agent a new name: Mavis — MiniMax as a Jarvis, your AI butler.</description>
+      <guid isPermaLink="true">https://www.minimax.io/blog/minimax-agent-team-long-running-1779893953</guid>
+      <pubDate>Wed, 27 May 2026 00:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>Why Can't the MiniMax LLM Say "Ma Jiaqi"? Internal Investigation of Sparse Token Forgetting - MiniMax Research</title>
+      <link>https://www.minimax.io/blog/sparse-token-forgetting</link>
+      <description>The MiniMax M2 series has attracted widespread attention from the developer community. This article presents our internal investigation into the sparse token forgetting phenomenon.</description>
+      <guid isPermaLink="true">https://www.minimax.io/blog/sparse-token-forgetting</guid>
+      <pubDate>Tue, 26 May 2026 00:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>MiniMax M2.7: Early Echoes of Self-Evolution  - MiniMax Research</title>
+      <link>https://www.minimax.io/blog/minimax-m27</link>
+      <description>M2.7 is MiniMax's first model deeply participating in its own evolution, excelling at software engineering, professional work, and entertainment with native Agent Teams and self-evolving capabilities.</description>
+      <guid isPermaLink="true">https://www.minimax.io/blog/minimax-m27</guid>
+      <pubDate>Wed, 18 Mar 2026 00:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>Forge: Scalable Agent RL Framework and Algorithm - MiniMax Research</title>
+      <link>https://www.minimax.io/blog/forge-scalable-agent-rl-en-1779896141</link>
+      <description>Scaling reinforcement learning for real-world agents runs into a three-way conflict: system throughput, training stability, and agent flexibility all pull in different directions, and that tension has</description>
+      <guid isPermaLink="true">https://www.minimax.io/blog/forge-scalable-agent-rl-en-1779896141</guid>
+      <pubDate>Sat, 14 Feb 2026 00:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>MiniMax M2.5: Built for Real-World Productivity. - MiniMax Research</title>
+      <link>https://www.minimax.io/blog/minimax-m25</link>
+      <description>MiniMax M2.5: Built for Real-World Productivity.</description>
+      <guid isPermaLink="true">https://www.minimax.io/blog/minimax-m25</guid>
+      <pubDate>Thu, 12 Feb 2026 00:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>A Deep Dive into the MiniMax-M2-her - MiniMax Research</title>
+      <link>https://www.minimax.io/blog/minimax-m2-her</link>
+      <description>Worlds to Dream, Stories to Live. How we built a Role-Play Agent for the production usage. This year marks our third year optimizing Role-Play in Talkie / Xingye. Three years is long enough for a pro</description>
+      <guid isPermaLink="true">https://www.minimax.io/blog/minimax-m2-her</guid>
+      <pubDate>Tue, 27 Jan 2026 00:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>MiniMax M2.1: Significantly Enhanced Multi-Language Programming, Built for Real-World Complex Tasks - MiniMax Research</title>
+      <link>https://www.minimax.io/blog/minimax-m21</link>
+      <description>MiniMax M2.1 delivers industry-leading multi-language programming capabilities across Rust, Java, Go, C++, TypeScript and more, with enhanced mobile development, aesthetic web design, concise responses, and robust Agent framework generalization.</description>
+      <guid isPermaLink="true">https://www.minimax.io/blog/minimax-m21</guid>
+      <pubDate>Tue, 23 Dec 2025 00:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>MiniMax M2 &amp; Agent: Ingenious in Simplicity - MiniMax Research</title>
+      <link>https://www.minimax.io/blog/minimax-m2-en-1748600000</link>
+      <description>MiniMax launches and open-sources M2, an agent-first model delivering top-tier coding, tool use, and deep search at 8% of Claude Sonnet's price with 2x speed. Free API and Agent product available.</description>
+      <guid isPermaLink="true">https://www.minimax.io/blog/minimax-m2-en-1748600000</guid>
+      <pubDate>Mon, 27 Oct 2025 00:00:00 +0000</pubDate>
+    </item>
+  </channel>
+</rss>
