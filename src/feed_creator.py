@@ -1,8 +1,10 @@
 """Feed 创建主逻辑"""
 
+from datetime import datetime, timezone
 from pathlib import Path
 from typing import Dict
 from urllib.parse import urlparse
+from xml.etree import ElementTree as ET
 import logging
 
 from .scraper import WebScraper
@@ -29,6 +31,36 @@ class FeedCreator:
     def _resolve_output_path(self, output: str) -> Path:
         """确保输出文件在 feeds 目录内，避免路径逃逸。"""
         return resolve_output_path(self.feeds_dir, output)
+
+    def _persist_pubdates(self, items: list[dict], output_path: Path) -> list[dict]:
+        """无页面日期的条目沿用上次 feed 的 pubDate，新条目才用当前时间。"""
+        previous = self._read_existing_pubdates(output_path)
+        now = datetime.now(timezone.utc).strftime("%a, %d %b %Y %H:%M:%S %z")
+        for item in items:
+            if item.get("pubDate"):
+                continue
+            item["pubDate"] = previous.get(item.get("link", "")) or now
+        return items
+
+    def _read_existing_pubdates(self, xml_path: Path) -> dict[str, str]:
+        if not xml_path.exists():
+            return {}
+        try:
+            root = ET.parse(xml_path).getroot()
+        except (ET.ParseError, OSError) as exc:
+            logger.warning("读取已有 feed 日期失败 %s: %s", xml_path, exc)
+            return {}
+        dates: dict[str, str] = {}
+        for item in root.findall("./channel/item"):
+            link = (item.findtext("guid") or item.findtext("link") or "").strip()
+            pub_date = (item.findtext("pubDate") or "").strip()
+            if link and pub_date:
+                dates[link] = pub_date
+        return dates
+
+    def _order_items_for_rss(self, items: list[dict]) -> list[dict]:
+        """feedgen 会反转写入顺序，因此先按时间升序，使 XML 中最新条目在前。"""
+        return items_oldest_first(items)
 
     def create_feed(self, config: Dict) -> bool:
         """
@@ -75,12 +107,18 @@ class FeedCreator:
             parser = HTMLParser(html, base_url=base_url)
             items = parser.parse_items(
                 selectors,
-                max_items=options.get("max_items", 20)
+                max_items=options.get("max_items", 20),
+                infer_dates_from_context=bool(options.get("infer_dates_from_context")),
             )
 
             if not items:
                 logger.warning(f"{name}: 未解析到任何条目")
                 return False
+
+            output_path = self._resolve_output_path(output)
+            if options.get("persist_pubdates"):
+                items = self._persist_pubdates(items, output_path)
+            items = self._order_items_for_rss(items)
 
             # 4. 生成 RSS
             generator = RSSGenerator(
@@ -88,11 +126,8 @@ class FeedCreator:
                 link=config.get("link", url),
                 description=config.get("description", f"{name} RSS Feed")
             )
-            # feedgen emits entries in stack order; add oldest first so
-            # readers see newest research by pubDate at the top.
-            generator.add_items(items_oldest_first(items))
+            generator.add_items(items)
 
-            output_path = self._resolve_output_path(output)
             success = generator.generate(str(output_path))
 
             if success:
