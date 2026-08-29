@@ -1,0 +1,144 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0">
+  <channel>
+    <title>Incomplete Ideas Blog</title>
+    <link>http://www.incompleteideas.net/</link>
+    <description>Posts from the Incomplete Ideas blog on Rich Sutton's homepage</description>
+    <docs>http://www.rssboard.org/rss-specification</docs>
+    <generator>RSS Creator</generator>
+    <language>zh-CN</language>
+    <lastBuildDate>Sat, 29 Aug 2026 17:29:16 +0000</lastBuildDate>
+    <item>
+      <title>UofA convocation address</title>
+      <link>http://www.incompleteideas.net/IncIdeas/ConvocationAddress.html</link>
+      <guid isPermaLink="true">http://www.incompleteideas.net/IncIdeas/ConvocationAddress.html</guid>
+      <pubDate>Sat, 29 Aug 2026 17:29:16 +0000</pubDate>
+    </item>
+    <item>
+      <title>Turing award acceptance speech</title>
+      <link>http://www.incompleteideas.net/IncIdeas/TuringSpeech.html</link>
+      <guid isPermaLink="true">http://www.incompleteideas.net/IncIdeas/TuringSpeech.html</guid>
+      <pubDate>Sat, 29 Aug 2026 17:29:16 +0000</pubDate>
+    </item>
+    <item>
+      <title>The One-Step Trap</title>
+      <link>http://www.incompleteideas.net/IncIdeas/OneStepTrap.html</link>
+      <guid isPermaLink="true">http://www.incompleteideas.net/IncIdeas/OneStepTrap.html</guid>
+      <pubDate>Sat, 29 Aug 2026 17:29:16 +0000</pubDate>
+    </item>
+    <item>
+      <title>rlai.net</title>
+      <link>http://rlai.net/</link>
+      <guid isPermaLink="true">http://rlai.net/</guid>
+      <pubDate>Sat, 29 Aug 2026 17:29:16 +0000</pubDate>
+    </item>
+    <item>
+      <title>Rich's Slogans</title>
+      <link>http://incompleteideas.net/rlai.cs.ualberta.ca/RLAI/richsprinciples.html</link>
+      <guid isPermaLink="true">http://incompleteideas.net/rlai.cs.ualberta.ca/RLAI/richsprinciples.html</guid>
+      <pubDate>Sat, 29 Aug 2026 17:29:16 +0000</pubDate>
+    </item>
+    <item>
+      <title>Text of speech on 'AI Creativity and Discovery'</title>
+      <link>https://docs.google.com/document/d/1gpsSZyp_-rgGno91wP0J_GKNtIBduIQyrHA7XYBjyEc/edit?usp=sharing</link>
+      <guid isPermaLink="true">https://docs.google.com/document/d/1gpsSZyp_-rgGno91wP0J_GKNtIBduIQyrHA7XYBjyEc/edit?usp=sharing</guid>
+      <pubDate>Sat, 29 Aug 2026 17:29:16 +0000</pubDate>
+    </item>
+    <item>
+      <title>Advice for writing in your research notebook</title>
+      <link>https://docs.google.com/document/d/1Qms-LiwNAlGNPL5cz0dcoxGHjkh3aeD5SpZIedmL6B4/edit?usp=sharing</link>
+      <guid isPermaLink="true">https://docs.google.com/document/d/1Qms-LiwNAlGNPL5cz0dcoxGHjkh3aeD5SpZIedmL6B4/edit?usp=sharing</guid>
+      <pubDate>Sat, 29 Aug 2026 17:29:16 +0000</pubDate>
+    </item>
+    <item>
+      <title>Advice for general technical writing</title>
+      <link>https://docs.google.com/document/d/1EKhufclxlvF0RDA3oR0Dp02iTH5biCDguE7Ou7Sprzo/edit</link>
+      <guid isPermaLink="true">https://docs.google.com/document/d/1EKhufclxlvF0RDA3oR0Dp02iTH5biCDguE7Ou7Sprzo/edit</guid>
+      <pubDate>Sat, 29 Aug 2026 17:29:16 +0000</pubDate>
+    </item>
+    <item>
+      <title>Advice for writing peer reviews</title>
+      <link>http://www.incompleteideas.net/IncIdeas/ReviewAdvice.html</link>
+      <guid isPermaLink="true">http://www.incompleteideas.net/IncIdeas/ReviewAdvice.html</guid>
+      <pubDate>Sat, 29 Aug 2026 17:29:16 +0000</pubDate>
+    </item>
+    <item>
+      <title>transcript</title>
+      <link>https://www.eye-on.ai/s/EP11RichSuttonTranscriptv2.docx</link>
+      <guid isPermaLink="true">https://www.eye-on.ai/s/EP11RichSuttonTranscriptv2.docx</guid>
+      <pubDate>Thu, 04 Apr 2019 00:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>Podcast re My Life So Far</title>
+      <link>https://www.eye-on.ai/podcast-011</link>
+      <guid isPermaLink="true">https://www.eye-on.ai/podcast-011</guid>
+      <pubDate>Thu, 04 Apr 2019 00:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>The Bitter Lesson</title>
+      <link>http://www.incompleteideas.net/IncIdeas/BitterLesson.html</link>
+      <guid isPermaLink="true">http://www.incompleteideas.net/IncIdeas/BitterLesson.html</guid>
+      <pubDate>Wed, 13 Mar 2019 00:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>The Definition of Intelligence</title>
+      <link>http://www.incompleteideas.net/IncIdeas/DefinitionOfIntelligence.html</link>
+      <guid isPermaLink="true">http://www.incompleteideas.net/IncIdeas/DefinitionOfIntelligence.html</guid>
+      <pubDate>Fri, 01 Jan 2016 00:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>14 principles of experience oriented intelligence</title>
+      <link>http://www.incompleteideas.net/RLAIcourse2009/principles2.pdf</link>
+      <guid isPermaLink="true">http://www.incompleteideas.net/RLAIcourse2009/principles2.pdf</guid>
+      <pubDate>Tue, 01 Jan 2008 00:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>half a manifesto...</title>
+      <link>http://www.incompleteideas.net/RLAIcourse2009/eoai.pdf</link>
+      <guid isPermaLink="true">http://www.incompleteideas.net/RLAIcourse2009/eoai.pdf</guid>
+      <pubDate>Mon, 01 Jan 2007 00:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>Robot Rights</title>
+      <link>http://www.incompleteideas.net/rlai.cs.ualberta.ca/robotrightssutton.html</link>
+      <guid isPermaLink="true">http://www.incompleteideas.net/rlai.cs.ualberta.ca/robotrightssutton.html</guid>
+      <pubDate>Wed, 13 Oct 2004 00:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>Mind is About Information</title>
+      <link>http://www.incompleteideas.net/IncIdeas/Information.html</link>
+      <guid isPermaLink="true">http://www.incompleteideas.net/IncIdeas/Information.html</guid>
+      <pubDate>Mon, 19 Nov 2001 00:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>Verification, The Key to AI</title>
+      <link>http://www.incompleteideas.net/IncIdeas/KeytoAI.html</link>
+      <guid isPermaLink="true">http://www.incompleteideas.net/IncIdeas/KeytoAI.html</guid>
+      <pubDate>Thu, 15 Nov 2001 00:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>Verification</title>
+      <link>http://www.incompleteideas.net/IncIdeas/Verification.html</link>
+      <guid isPermaLink="true">http://www.incompleteideas.net/IncIdeas/Verification.html</guid>
+      <pubDate>Wed, 14 Nov 2001 00:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>What's Wrong with AI</title>
+      <link>http://www.incompleteideas.net/IncIdeas/WrongWithAI.html</link>
+      <guid isPermaLink="true">http://www.incompleteideas.net/IncIdeas/WrongWithAI.html</guid>
+      <pubDate>Mon, 12 Nov 2001 00:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>Subjective Knowledge</title>
+      <link>http://www.incompleteideas.net/IncIdeas/SubjectiveKnowledge.html</link>
+      <guid isPermaLink="true">http://www.incompleteideas.net/IncIdeas/SubjectiveKnowledge.html</guid>
+      <pubDate>Fri, 06 Apr 2001 00:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>Mind is About Predictions</title>
+      <link>http://www.incompleteideas.net/IncIdeas/ConditionalPredictions.html</link>
+      <guid isPermaLink="true">http://www.incompleteideas.net/IncIdeas/ConditionalPredictions.html</guid>
+      <pubDate>Tue, 21 Mar 2000 00:00:00 +0000</pubDate>
+    </item>
+  </channel>
+</rss>
