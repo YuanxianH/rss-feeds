@@ -41,6 +41,14 @@ class HTMLParserTests(unittest.TestCase):
     def test_parse_date_returns_none_when_invalid(self):
         parser = HTMLParser("<html></html>", base_url="https://example.com")
         self.assertIsNone(parser._parse_date("not a date"))
+        self.assertIsNone(parser._parse_date(""))
+        self.assertIsNone(parser._parse_date("2026 年 13 月 40 日"))
+
+    def test_parse_date_accepts_chinese_calendar_text(self):
+        parser = HTMLParser("<html></html>", base_url="https://www.deepseek.com")
+        self.assertTrue(parser._parse_date("2026 年 6 月 24 日").startswith("Wed, 24 Jun 2026"))
+        self.assertTrue(parser._parse_date("2025年11月1日").startswith("Sat, 01 Nov 2025"))
+        self.assertTrue(parser._parse_date("June 24, 2026").startswith("Wed, 24 Jun 2026"))
 
     def test_parse_items_requires_items_selector(self):
         parser = HTMLParser("<article><h2>Title</h2></article>", base_url="https://example.com")

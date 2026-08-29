@@ -1,7 +1,6 @@
 """Feed 创建主逻辑"""
 
 from datetime import datetime, timezone
-from email.utils import parsedate_to_datetime
 from pathlib import Path
 from typing import Dict
 from urllib.parse import urlparse
@@ -11,10 +10,9 @@ import logging
 from .scraper import WebScraper
 from .parser import HTMLParser
 from .path_utils import resolve_output_path
-from .rss_generator import RSSGenerator
+from .rss_generator import RSSGenerator, items_oldest_first
 
 logger = logging.getLogger(__name__)
-_NAIVE_MIN = datetime.min.replace(tzinfo=timezone.utc)
 
 
 class FeedCreator:
@@ -62,18 +60,7 @@ class FeedCreator:
 
     def _order_items_for_rss(self, items: list[dict]) -> list[dict]:
         """feedgen 会反转写入顺序，因此先按时间升序，使 XML 中最新条目在前。"""
-        return sorted(items, key=self._item_sort_datetime)
-
-    @staticmethod
-    def _item_sort_datetime(item: dict) -> datetime:
-        value = item.get("pubDate") or ""
-        try:
-            parsed = parsedate_to_datetime(value)
-        except (TypeError, ValueError, IndexError):
-            return _NAIVE_MIN
-        if parsed.tzinfo is None:
-            parsed = parsed.replace(tzinfo=timezone.utc)
-        return parsed.astimezone(timezone.utc)
+        return items_oldest_first(items)
 
     def create_feed(self, config: Dict) -> bool:
         """
@@ -131,8 +118,7 @@ class FeedCreator:
             output_path = self._resolve_output_path(output)
             if options.get("persist_pubdates"):
                 items = self._persist_pubdates(items, output_path)
-            if options.get("infer_dates_from_context") or options.get("persist_pubdates"):
-                items = self._order_items_for_rss(items)
+            items = self._order_items_for_rss(items)
 
             # 4. 生成 RSS
             generator = RSSGenerator(

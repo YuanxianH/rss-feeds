@@ -15,6 +15,7 @@
 - [OpenAI Research](https://yuanxianh.github.io/rss-feeds/openai_research_only.xml)
 - [Tencent Hunyuan Research](https://yuanxianh.github.io/rss-feeds/hunyuan_research.xml)
 - [ByteDance Seed Public Papers](https://yuanxianh.github.io/rss-feeds/seed_papers.xml)
+- [DeepSeek Research Index](https://yuanxianh.github.io/rss-feeds/deepseek_research.xml)
 
 ## 公司博客
 
