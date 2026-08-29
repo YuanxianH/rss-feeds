@@ -46,6 +46,38 @@ class HTMLParserTests(unittest.TestCase):
         parser = HTMLParser("<article><h2>Title</h2></article>", base_url="https://example.com")
         self.assertEqual(parser.parse_items(selectors={}), [])
 
+    def test_parse_items_uses_anchor_text_when_container_is_link(self):
+        html = """
+        <main>
+          <p>Work at <a href="https://oaklab.example">Oak Lab</a>.</p>
+          <ul>
+            <li><a href="IncIdeas/BitterLesson.html">The Bitter Lesson</a></li>
+            <li><a href="IncIdeas/BitterLesson.html">Duplicate bitter lesson</a></li>
+            <li><a href="mailto:lynda.vang@amii.ca">media contact</a></li>
+            <li><a href="javascript:void(0)">noop</a></li>
+            <li><a href="">empty</a></li>
+          </ul>
+        </main>
+        """
+        parser = HTMLParser(html, base_url="http://www.incompleteideas.net")
+        items = parser.parse_items(
+            selectors={
+                "items": 'a[href]:not([href^="mailto:"]):not([href^="javascript:"])',
+            },
+            max_items=20,
+        )
+
+        self.assertEqual(
+            [(item["title"], item["link"]) for item in items],
+            [
+                ("Oak Lab", "https://oaklab.example"),
+                (
+                    "The Bitter Lesson",
+                    "http://www.incompleteideas.net/IncIdeas/BitterLesson.html",
+                ),
+            ],
+        )
+
 
 if __name__ == "__main__":
     unittest.main()

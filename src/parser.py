@@ -75,6 +75,9 @@ class HTMLParser:
         if title_selector := selectors.get("title"):
             if title_elem := container.select_one(title_selector):
                 item["title"] = title_elem.get("title") or title_elem.get_text(strip=True)
+        if not item.get("title") and container.name == "a":
+            # 条目容器本身就是 <a> 时，select_one 找不到后代标题，回退到自身文本
+            item["title"] = container.get("title") or container.get_text(strip=True)
 
         # 链接
         link_selector = selectors.get("link")
