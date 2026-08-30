@@ -100,3 +100,9 @@ bash -n scripts/ops/*.sh
 3. 本地 sandbox 网络失败（在受限环境）
 - 这通常是执行环境限制，不代表脚本逻辑错误
 - 在可联网环境再次验证抓取结果
+
+## 邮件
+
+这个项目不发信。不要加 SMTP、SendGrid、Mailgun 或其它投递服务。
+
+来源站如果还有邮件通讯，退订步骤见 `docs/EMAIL_UNSUBSCRIBE.md`。RSS 目录是这些通讯的替代。
