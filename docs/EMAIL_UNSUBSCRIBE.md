@@ -7,7 +7,7 @@
 没有。查过这些位置：
 
 - 源码、配置、文档、脚本里没有 SMTP / SendGrid / Mailgun / Resend / SES / Mailchimp / Buttondown / Substack 等发信集成
-- 仓库 Secrets 为空
+- workflow 不引用任何 Secrets；没有发信用的 API key
 - 唯一 workflow 是 `.github/workflows/update-rss.yml`，只抓取、测、发布 `gh-pages`
 - workflow 里的 `user_email: github-actions[bot]@users.noreply.github.com` 只是 Pages 提交的 git author，不会发邮件
 
