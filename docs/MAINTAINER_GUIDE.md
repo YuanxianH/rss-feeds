@@ -77,6 +77,13 @@ python -m compileall main.py src tests
 bash -n scripts/ops/*.sh
 ```
 
+## CI 失败自动修复（Cursor Automations）
+
+CI 失败后由 Cursor Automation 排查并开修复 PR。Cloud Agent 不能代为创建这条 Automation。
+
+配置步骤和粘贴用 prompt 见 `docs/CI_AUTOFIX_AUTOMATION.md`。
+触发器必须用 **CI completed / Checks completed**（On failure, Anyone），不要只用 Workflow run completed，否则 hourly `schedule` 失败不会启动。
+
 ## 发布与部署
 
 - 使用者流程见 `docs/DEPLOY.md`
@@ -84,6 +91,7 @@ bash -n scripts/ops/*.sh
   - workflow 是否全部通过
   - `gh-pages` 最新提交是否包含预期 XML
   - `GITHUB_TOKEN` 权限是否允许写入 Pages 分支
+  - Cursor Automation「CI Autofix」是否仍处于激活状态
 
 ## 常见故障排查
 
