@@ -7,7 +7,7 @@
     <docs>http://www.rssboard.org/rss-specification</docs>
     <generator>RSS Creator</generator>
     <language>zh-CN</language>
-    <lastBuildDate>Tue, 01 Sep 2026 04:04:08 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 01 Sep 2026 09:48:32 +0000</lastBuildDate>
     <item>
       <title>Codex CLI 0.146.0</title>
       <link>https://github.com/openai/codex/releases/tag/rust-v0.146.0</link>
@@ -5003,6 +5003,12 @@ timeouts, including deadlines longer than one hour. (
 #41384
 )
 Bug Fixes
+Vim-enabled composers now start fresh drafts in Insert mode, including after submitting messages or dispatching slash commands. (
+#41921
+)
+Automatic approval reviews can retain longer messages and a larger conversation transcript. (
+#41931
+)
 Automatic approval reviews preserve user instructions, answers, and valid authorizations across history compaction. (
 #41660
 ,
@@ -5312,7 +5318,11 @@ Preserve user text when Guardian history drops oversized images
 @copyberry
 #41861
 Keep history extension tools out of Guardian reviews
-@copyberry</description>
+@copyberry
+#41921
+Start fresh Vim drafts in Insert mode
+#41931
+Increase Guardian message transcript limits</description>
       <guid isPermaLink="false">https://developers.openai.com/codex/changelog#github-release-380164108</guid>
       <pubDate>Tue, 01 Sep 2026 00:00:00 +0000</pubDate>
     </item>
