@@ -7,11 +7,23 @@
     <docs>http://www.rssboard.org/rss-specification</docs>
     <generator>RSS Creator</generator>
     <language>zh-CN</language>
-    <lastBuildDate>Wed, 02 Sep 2026 13:21:06 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 02 Sep 2026 17:41:06 +0000</lastBuildDate>
     <item>
       <title>Introducing agentic video understanding with Gemini</title>
       <link>https://blog.google/innovation-and-ai/models-and-research/gemini-models/introducing-agentic-video-in-gemini/</link>
       <guid isPermaLink="true">https://blog.google/innovation-and-ai/models-and-research/gemini-models/introducing-agentic-video-in-gemini/</guid>
+      <pubDate>Wed, 02 Sep 2026 00:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>Proactive cyber defense for governments and enterprises</title>
+      <link>https://blog.google/innovation-and-ai/technology/safety-security/fairwind-program/</link>
+      <guid isPermaLink="true">https://blog.google/innovation-and-ai/technology/safety-security/fairwind-program/</guid>
+      <pubDate>Wed, 02 Sep 2026 00:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>Introducing Gemini 3.8 Flash and 3.8 Flash Cyber</title>
+      <link>https://blog.google/innovation-and-ai/models-and-research/gemini-models/3-8-flash-and-3-8-flash-cyber/</link>
+      <guid isPermaLink="true">https://blog.google/innovation-and-ai/models-and-research/gemini-models/3-8-flash-and-3-8-flash-cyber/</guid>
       <pubDate>Wed, 02 Sep 2026 00:00:00 +0000</pubDate>
     </item>
     <item>
@@ -39,6 +51,12 @@
       <pubDate>Sun, 02 Aug 2026 00:00:00 +0000</pubDate>
     </item>
     <item>
+      <title>Intelligent transcription with Gemini 3.5 Transcribe</title>
+      <link>https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-3-5-transcribe/</link>
+      <guid isPermaLink="true">https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-3-5-transcribe/</guid>
+      <pubDate>Sun, 02 Aug 2026 00:00:00 +0000</pubDate>
+    </item>
+    <item>
       <title>Piloting the world's first double-blind AI evaluations</title>
       <link>https://deepmind.google/blog/piloting-the-worlds-first-double-blind-ai-evaluations/</link>
       <guid isPermaLink="true">https://deepmind.google/blog/piloting-the-worlds-first-double-blind-ai-evaluations/</guid>
@@ -48,12 +66,6 @@
       <title>Gemini Omni 1.1 Flash lets you build with more control</title>
       <link>https://blog.google/innovation-and-ai/technology/developers-tools/build-with-gemini-omni-1-1-flash/</link>
       <guid isPermaLink="true">https://blog.google/innovation-and-ai/technology/developers-tools/build-with-gemini-omni-1-1-flash/</guid>
-      <pubDate>Sun, 02 Aug 2026 00:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>Intelligent transcription with Gemini 3.5 Transcribe</title>
-      <link>https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-3-5-transcribe/</link>
-      <guid isPermaLink="true">https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-3-5-transcribe/</guid>
       <pubDate>Sun, 02 Aug 2026 00:00:00 +0000</pubDate>
     </item>
     <item>
@@ -103,18 +115,6 @@
       <link>https://blog.google/innovation-and-ai/models-and-research/google-deepmind/gemini-robotics-er-2/?utm_source=deepmind.google&amp;utm_medium=referral&amp;utm_campaign=gdm&amp;utm_content=</link>
       <guid isPermaLink="true">https://blog.google/innovation-and-ai/models-and-research/google-deepmind/gemini-robotics-er-2/?utm_source=deepmind.google&amp;utm_medium=referral&amp;utm_campaign=gdm&amp;utm_content=</guid>
       <pubDate>Thu, 02 Jul 2026 00:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>Measuring the impact of learning with AI in Sierra Leone and beyond</title>
-      <link>https://deepmind.google/blog/measuring-the-impact-of-learning-with-ai-in-sierra-leone-and-beyond/</link>
-      <guid isPermaLink="true">https://deepmind.google/blog/measuring-the-impact-of-learning-with-ai-in-sierra-leone-and-beyond/</guid>
-      <pubDate>Tue, 02 Jun 2026 00:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>Fluid, natural voice translation with Gemini 3.5 Live Translate</title>
-      <link>https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-live-3-5-translate/?utm_source=deepmind.google&amp;utm_medium=referral&amp;utm_campaign=gdm&amp;utm_content=</link>
-      <guid isPermaLink="true">https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-live-3-5-translate/?utm_source=deepmind.google&amp;utm_medium=referral&amp;utm_campaign=gdm&amp;utm_content=</guid>
-      <pubDate>Tue, 02 Jun 2026 00:00:00 +0000</pubDate>
     </item>
     <item>
       <title>DiffusionGemma: 4x faster text generation</title>
