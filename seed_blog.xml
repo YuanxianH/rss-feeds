@@ -7,7 +7,7 @@
     <docs>http://www.rssboard.org/rss-specification</docs>
     <generator>RSS Creator</generator>
     <language>zh-CN</language>
-    <lastBuildDate>Thu, 03 Sep 2026 03:28:04 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 03 Sep 2026 08:40:19 +0000</lastBuildDate>
     <item>
       <title>SeedRealtime 音视频全双工大模型发布：走向全模态自然交互</title>
       <link>https://seed.bytedance.com/zh/blog/seedrealtime-%E9%9F%B3%E8%A7%86%E9%A2%91%E5%85%A8%E5%8F%8C%E5%B7%A5%E5%A4%A7%E6%A8%A1%E5%9E%8B%E5%8F%91%E5%B8%83-%E8%B5%B0%E5%90%91%E5%85%A8%E6%A8%A1%E6%80%81%E8%87%AA%E7%84%B6%E4%BA%A4%E4%BA%92</link>
@@ -151,7 +151,7 @@
       <title>解锁任意模态模型训练，字节跳动 Seed 开源 VeOmni 框架</title>
       <link>https://seed.bytedance.com/zh/blog/%E8%A7%A3%E9%94%81%E4%BB%BB%E6%84%8F%E6%A8%A1%E6%80%81%E6%A8%A1%E5%9E%8B%E8%AE%AD%E7%BB%83-%E5%AD%97%E8%8A%82%E8%B7%B3%E5%8A%A8-seed-%E5%BC%80%E6%BA%90-veomni-%E6%A1%86%E6%9E%B6</link>
       <description>可将数周的工程开发时间缩短至几天</description>
-      <guid isPermaLink="false">308</guid>
+      <guid isPermaLink="false">1788420302787</guid>
       <pubDate>Thu, 14 Aug 2025 00:00:00 +0800</pubDate>
     </item>
     <item>
@@ -165,14 +165,14 @@
       <title>Seed Research￨每秒推理速度 2146 Tokens，扩散语言模型 Seed Diffusion Preview 发布</title>
       <link>https://seed.bytedance.com/zh/blog/seed-research-%E6%AF%8F%E7%A7%92%E6%8E%A8%E7%90%86%E9%80%9F%E5%BA%A6-2146-tokens-%E6%89%A9%E6%95%A3%E8%AF%AD%E8%A8%80%E6%A8%A1%E5%9E%8B-seed-diffusion-preview-%E5%8F%91%E5%B8%83</link>
       <description>1 秒可生成超百行代码</description>
-      <guid isPermaLink="false">302</guid>
+      <guid isPermaLink="false">1788419759074</guid>
       <pubDate>Thu, 31 Jul 2025 00:00:00 +0800</pubDate>
     </item>
     <item>
       <title>Seed 端到端同声传译大模型发布：准确率接近真人，3s 延迟，实时声音复刻</title>
       <link>https://seed.bytedance.com/zh/blog/seed-%E7%AB%AF%E5%88%B0%E7%AB%AF%E5%90%8C%E5%A3%B0%E4%BC%A0%E8%AF%91%E5%A4%A7%E6%A8%A1%E5%9E%8B%E5%8F%91%E5%B8%83-%E5%87%86%E7%A1%AE%E7%8E%87%E6%8E%A5%E8%BF%91%E7%9C%9F%E4%BA%BA-3s-%E5%BB%B6%E8%BF%9F-%E5%AE%9E%E6%97%B6%E5%A3%B0%E9%9F%B3%E5%A4%8D%E5%88%BB</link>
       <description>中英同传翻译质量达到业界 SOTA，同时实现了极低的语音延迟水平。</description>
-      <guid isPermaLink="false">301</guid>
+      <guid isPermaLink="false">1788419581050</guid>
       <pubDate>Thu, 24 Jul 2025 00:00:00 +0800</pubDate>
     </item>
     <item>
@@ -186,14 +186,14 @@
       <title>Seed Research￨通用机器人模型 GR-3 发布！支持高泛化、长程任务、柔性物体双臂操作</title>
       <link>https://seed.bytedance.com/zh/blog/seed-research-%E9%80%9A%E7%94%A8%E6%9C%BA%E5%99%A8%E4%BA%BA%E6%A8%A1%E5%9E%8B-gr-3-%E5%8F%91%E5%B8%83-%E6%94%AF%E6%8C%81%E9%AB%98%E6%B3%9B%E5%8C%96-%E9%95%BF%E7%A8%8B%E4%BB%BB%E5%8A%A1-%E6%9F%94%E6%80%A7%E7%89%A9%E4%BD%93%E5%8F%8C%E8%87%82%E6%93%8D%E4%BD%9C</link>
       <description>一个可泛化、支持长程以及复杂任务的机器人操作大模型</description>
-      <guid isPermaLink="false">299</guid>
+      <guid isPermaLink="false">1788419707282</guid>
       <pubDate>Tue, 22 Jul 2025 00:00:00 +0800</pubDate>
     </item>
     <item>
       <title>Seed Research｜4B 模型数学推理接近 235B 表现，Seed 最新强化学习配方全面开源</title>
       <link>https://seed.bytedance.com/zh/blog/seed-research-4b-%E6%A8%A1%E5%9E%8B%E6%95%B0%E5%AD%A6%E6%8E%A8%E7%90%86%E6%8E%A5%E8%BF%91-235b-%E8%A1%A8%E7%8E%B0-seed-%E6%9C%80%E6%96%B0%E5%BC%BA%E5%8C%96%E5%AD%A6%E4%B9%A0%E9%85%8D%E6%96%B9%E5%85%A8%E9%9D%A2%E5%BC%80%E6%BA%90</link>
       <description>700 步 RL 训练，大幅提升小模型数学推理能力</description>
-      <guid isPermaLink="false">296</guid>
+      <guid isPermaLink="false">1788418022926</guid>
       <pubDate>Tue, 15 Jul 2025 00:00:00 +0800</pubDate>
     </item>
     <item>
@@ -214,7 +214,7 @@
       <title>Seed1.6 系列模型技术介绍</title>
       <link>https://seed.bytedance.com/zh/blog/seed1-6-%E7%B3%BB%E5%88%97%E6%A8%A1%E5%9E%8B%E6%8A%80%E6%9C%AF%E4%BB%8B%E7%BB%8D</link>
       <description>融合多模态，可“自适应思考”（含高考分数）</description>
-      <guid isPermaLink="false">263</guid>
+      <guid isPermaLink="false">1788417741632</guid>
       <pubDate>Wed, 25 Jun 2025 00:00:00 +0800</pubDate>
     </item>
     <item>
@@ -256,7 +256,7 @@
       <title>Seed-Coder 开源代码模型发布，依托 LLM 构建代码数据</title>
       <link>https://seed.bytedance.com/zh/blog/seed-coder-%E5%BC%80%E6%BA%90%E4%BB%A3%E7%A0%81%E6%A8%A1%E5%9E%8B%E5%8F%91%E5%B8%83-%E4%BE%9D%E6%89%98-llm-%E6%9E%84%E5%BB%BA%E4%BB%A3%E7%A0%81%E6%95%B0%E6%8D%AE</link>
       <description>数据流实现方法公开，BF16 精度版本开放下载</description>
-      <guid isPermaLink="false">237</guid>
+      <guid isPermaLink="false">1788415728232</guid>
       <pubDate>Mon, 19 May 2025 00:00:00 +0800</pubDate>
     </item>
     <item>
@@ -302,17 +302,17 @@
       <pubDate>Wed, 16 Apr 2025 00:00:00 +0800</pubDate>
     </item>
     <item>
-      <title>字节跳动最新思考模型，Seed-Thinking-v1.5技术细节公开</title>
-      <link>https://seed.bytedance.com/zh/blog/%E5%AD%97%E8%8A%82%E8%B7%B3%E5%8A%A8%E6%9C%80%E6%96%B0%E6%80%9D%E8%80%83%E6%A8%A1%E5%9E%8B-seed-thinking-v1-5%E6%8A%80%E6%9C%AF%E7%BB%86%E8%8A%82%E5%85%AC%E5%BC%80</link>
-      <description>4月17日API 正式上线</description>
-      <guid isPermaLink="false">1763522215224</guid>
-      <pubDate>Mon, 14 Apr 2025 00:00:00 +0800</pubDate>
-    </item>
-    <item>
       <title>Multi-SWE-bench：首个多语言代码修复基准开源</title>
       <link>https://seed.bytedance.com/zh/blog/multi-swe-bench-%E9%A6%96%E4%B8%AA%E5%A4%9A%E8%AF%AD%E8%A8%80%E4%BB%A3%E7%A0%81%E4%BF%AE%E5%A4%8D%E5%9F%BA%E5%87%86%E5%BC%80%E6%BA%90</link>
       <description>数据均来自GitHub issue，历时近一年构建。</description>
       <guid isPermaLink="false">1763522274426</guid>
+      <pubDate>Mon, 14 Apr 2025 00:00:00 +0800</pubDate>
+    </item>
+    <item>
+      <title>字节跳动最新思考模型，Seed-Thinking-v1.5技术细节公开</title>
+      <link>https://seed.bytedance.com/zh/blog/%E5%AD%97%E8%8A%82%E8%B7%B3%E5%8A%A8%E6%9C%80%E6%96%B0%E6%80%9D%E8%80%83%E6%A8%A1%E5%9E%8B-seed-thinking-v1-5%E6%8A%80%E6%9C%AF%E7%BB%86%E8%8A%82%E5%85%AC%E5%BC%80</link>
+      <description>4月17日API 正式上线</description>
+      <guid isPermaLink="false">1763522215224</guid>
       <pubDate>Mon, 14 Apr 2025 00:00:00 +0800</pubDate>
     </item>
     <item>

@@ -7,7 +7,7 @@
     <docs>http://www.rssboard.org/rss-specification</docs>
     <generator>RSS Creator</generator>
     <language>zh-CN</language>
-    <lastBuildDate>Thu, 03 Sep 2026 03:27:50 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 03 Sep 2026 08:40:07 +0000</lastBuildDate>
     <item>
       <title>MiniMax-MCP-JS</title>
       <link>https://github.com/MiniMax-AI/MiniMax-MCP-JS</link>
@@ -144,14 +144,14 @@
     <item>
       <title>Mini-Agent</title>
       <link>https://github.com/MiniMax-AI/Mini-Agent</link>
-      <description>[GitHub Repo] | A minimal yet professional single agent demo project that showcases the core execution pipeline and production-grade features of agents. | Language: Python | Stars: 3003 | Topics: agent, llm, minimax</description>
+      <description>[GitHub Repo] | A minimal yet professional single agent demo project that showcases the core execution pipeline and production-grade features of agents. | Language: Python | Stars: 3005 | Topics: agent, llm, minimax</description>
       <guid isPermaLink="true">https://github.com/MiniMax-AI/Mini-Agent</guid>
       <pubDate>Fri, 31 Oct 2025 03:56:27 +0000</pubDate>
     </item>
     <item>
       <title>MiniMax-Provider-Verifier</title>
       <link>https://github.com/MiniMax-AI/MiniMax-Provider-Verifier</link>
-      <description>[GitHub Repo] | MiniMax-Provider-Verifier offers a rigorous, vendor-agnostic way to verify whether third-party deployments of the Minimax M2 model are correct and reliable. | Language: Python | Stars: 50</description>
+      <description>[GitHub Repo] | MiniMax-Provider-Verifier offers a rigorous, vendor-agnostic way to verify whether third-party deployments of the Minimax M2 model are correct and reliable. | Language: Python | Stars: 51</description>
       <guid isPermaLink="true">https://github.com/MiniMax-AI/MiniMax-Provider-Verifier</guid>
       <pubDate>Mon, 10 Nov 2025 09:07:34 +0000</pubDate>
     </item>
@@ -172,7 +172,7 @@
     <item>
       <title>VTP</title>
       <link>https://github.com/MiniMax-AI/VTP</link>
-      <description>[GitHub Repo] | [ECCV 2026] Towards Scalable Pre-training of Visual Tokenizers for Generation | Language: Python | Stars: 505 | Topics: diffusion-model, visual-generation, visual-tokenizer</description>
+      <description>[GitHub Repo] | [ECCV 2026] Towards Scalable Pre-training of Visual Tokenizers for Generation | Language: Python | Stars: 506 | Topics: diffusion-model, visual-generation, visual-tokenizer</description>
       <guid isPermaLink="true">https://github.com/MiniMax-AI/VTP</guid>
       <pubDate>Thu, 11 Dec 2025 10:32:23 +0000</pubDate>
     </item>
@@ -235,7 +235,7 @@
     <item>
       <title>OpenRoom</title>
       <link>https://github.com/MiniMax-AI/OpenRoom</link>
-      <description>[GitHub Repo] | A browser-based desktop where AI Agent operates every app through natural language. | Language: TypeScript | Stars: 1255 | Topics: ai-agent, browser, desktop, micro-frontend, minimax, natural-language, open-source, react, typescript, vibe-coding</description>
+      <description>[GitHub Repo] | A browser-based desktop where AI Agent operates every app through natural language. | Language: TypeScript | Stars: 1256 | Topics: ai-agent, browser, desktop, micro-frontend, minimax, natural-language, open-source, react, typescript, vibe-coding</description>
       <guid isPermaLink="true">https://github.com/MiniMax-AI/OpenRoom</guid>
       <pubDate>Tue, 03 Mar 2026 04:01:01 +0000</pubDate>
     </item>
@@ -305,28 +305,28 @@
     <item>
       <title>MiniMax-H3</title>
       <link>https://huggingface.co/MiniMaxAI/MiniMax-H3</link>
-      <description>[HuggingFace Model] | image-text-to-video | Likes: 4816 | Tags: minimax-h3, diffusers, safetensors, text-to-video, image-to-video</description>
+      <description>[HuggingFace Model] | image-text-to-video | Likes: 4825 | Tags: minimax-h3, diffusers, safetensors, text-to-video, image-to-video</description>
       <guid isPermaLink="true">https://huggingface.co/MiniMaxAI/MiniMax-H3</guid>
       <pubDate>Tue, 28 Jul 2026 10:45:18 +0000</pubDate>
     </item>
     <item>
       <title>MiniMax-H3</title>
       <link>https://github.com/MiniMax-AI/MiniMax-H3</link>
-      <description>[GitHub Repo] | Language: Python | Stars: 7857</description>
+      <description>[GitHub Repo] | Language: Python | Stars: 7887</description>
       <guid isPermaLink="true">https://github.com/MiniMax-AI/MiniMax-H3</guid>
       <pubDate>Thu, 30 Jul 2026 08:41:09 +0000</pubDate>
     </item>
     <item>
       <title>MiniMax-Music3</title>
       <link>https://huggingface.co/MiniMaxAI/MiniMax-Music3</link>
-      <description>[HuggingFace Model] | text-to-audio | Likes: 1330 | Tags: diffusers, safetensors, minimax_music3, music-generation, text-to-music</description>
+      <description>[HuggingFace Model] | text-to-audio | Likes: 1335 | Tags: diffusers, safetensors, minimax_music3, music-generation, text-to-music</description>
       <guid isPermaLink="true">https://huggingface.co/MiniMaxAI/MiniMax-Music3</guid>
       <pubDate>Fri, 07 Aug 2026 12:23:29 +0000</pubDate>
     </item>
     <item>
       <title>MiniMax-Music3</title>
       <link>https://github.com/MiniMax-AI/MiniMax-Music3</link>
-      <description>[GitHub Repo] | Stars: 795</description>
+      <description>[GitHub Repo] | Stars: 798</description>
       <guid isPermaLink="true">https://github.com/MiniMax-AI/MiniMax-Music3</guid>
       <pubDate>Tue, 11 Aug 2026 08:01:03 +0000</pubDate>
     </item>
@@ -347,7 +347,7 @@
     <item>
       <title>awesome-minimax-h3-integration</title>
       <link>https://github.com/MiniMax-AI/awesome-minimax-h3-integration</link>
-      <description>[GitHub Repo] | Stars: 274</description>
+      <description>[GitHub Repo] | Stars: 275</description>
       <guid isPermaLink="true">https://github.com/MiniMax-AI/awesome-minimax-h3-integration</guid>
       <pubDate>Thu, 13 Aug 2026 05:47:03 +0000</pubDate>
     </item>

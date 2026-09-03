@@ -7,7 +7,7 @@
     <docs>http://www.rssboard.org/rss-specification</docs>
     <generator>RSS Creator</generator>
     <language>zh-CN</language>
-    <lastBuildDate>Thu, 03 Sep 2026 03:27:42 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 03 Sep 2026 08:39:58 +0000</lastBuildDate>
     <item>
       <title>MiniMax Speech 2.8: Breathing life into AI voice</title>
       <link>https://www.minimax.io/news/minimax-speech-28</link>
@@ -21,13 +21,6 @@
       <description>HONG KONG, Aug. 26, 2026 /PRNewswire/ -- MiniMax Group Inc. ("MiniMax" or the "Company"; HKEX: 00100), a leading global artificial intelligence company, today announced its unaudited financial results</description>
       <guid isPermaLink="true">https://www.minimax.io/news/minimax-announces-first-half-2026-financial-results-1787744160</guid>
       <pubDate>Wed, 26 Aug 2026 00:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>Open General Intelligence: MiniMax H3 Is Now Open Source - MiniMax News</title>
-      <link>https://www.minimax.io/news/minimax-h3-open-source</link>
-      <description>Today, we are officially open-sourcing MiniMax H3, our next-generation general-purpose video model.</description>
-      <guid isPermaLink="true">https://www.minimax.io/news/minimax-h3-open-source</guid>
-      <pubDate>Mon, 03 Aug 2026 00:00:00 +0000</pubDate>
     </item>
   </channel>
 </rss>
