@@ -7,7 +7,7 @@
     <docs>http://www.rssboard.org/rss-specification</docs>
     <generator>RSS Creator</generator>
     <language>zh-CN</language>
-    <lastBuildDate>Fri, 04 Sep 2026 03:25:45 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 04 Sep 2026 08:34:37 +0000</lastBuildDate>
     <item>
       <title>SeedRealtime 音视频全双工大模型发布：走向全模态自然交互</title>
       <link>https://seed.bytedance.com/zh/blog/seedrealtime-%E9%9F%B3%E8%A7%86%E9%A2%91%E5%85%A8%E5%8F%8C%E5%B7%A5%E5%A4%A7%E6%A8%A1%E5%9E%8B%E5%8F%91%E5%B8%83-%E8%B5%B0%E5%90%91%E5%85%A8%E6%A8%A1%E6%80%81%E8%87%AA%E7%84%B6%E4%BA%A4%E4%BA%92</link>
@@ -207,7 +207,7 @@
       <title>Seed-1.6-Embedding：基于 Seed1.6-Flash 构建的多模态向量化模型</title>
       <link>https://seed.bytedance.com/zh/blog/seed-1-6-embedding-%E5%9F%BA%E4%BA%8E-seed1-6-flash-%E6%9E%84%E5%BB%BA%E7%9A%84%E5%A4%9A%E6%A8%A1%E6%80%81%E5%90%91%E9%87%8F%E5%8C%96%E6%A8%A1%E5%9E%8B</link>
       <description>支持多模态混合检索</description>
-      <guid isPermaLink="false">269</guid>
+      <guid isPermaLink="false">1788493128340</guid>
       <pubDate>Sat, 28 Jun 2025 00:00:00 +0800</pubDate>
     </item>
     <item>
