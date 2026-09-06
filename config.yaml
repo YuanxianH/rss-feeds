@@ -264,6 +264,32 @@ jobs:
       max_pages: 10
       page_size: 50
 
+  # Qwen Research Index（CSR 页面，列表来自 page_config JSON 数组）
+  - type: "json_list_api"
+    name: "Qwen Research Index"
+    api_url: "https://qwen.ai/api/page_config?code=research.research-list"
+    method: "GET"
+    article_base_url: "https://qwen.ai/blog"
+    output: "qwen_research.xml"
+    title: "Qwen Research Index"
+    description: "Research, open-source, and release posts from the Qwen Research Index"
+    link: "https://qwen.ai/research"
+    catalog:
+      section: "research"
+    fields:
+      title: ["title"]
+      description: ["description", "introduction"]
+      author: ["author", "authors"]
+      date: ["date"]
+      slug: ["id"]
+      url_template: "https://qwen.ai/blog?id={slug}"
+    request:
+      headers:
+        Referer: "https://qwen.ai/research"
+    options:
+      max_pages: 1
+      sort: date_desc
+
   # Physical Intelligence Blog
   - type: "selector_scrape"
     name: "Physical Intelligence Blog"

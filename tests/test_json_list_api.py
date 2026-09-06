@@ -10,9 +10,11 @@ from src.jobs.base import JobContext
 from src.jobs.json_list_api import (
     JsonListApiJob,
     article_to_item,
+    article_url,
     coerce_pubdate,
     extract_page_docs,
     get_by_path,
+    sort_items,
 )
 from src.jobs.registry import create_job
 
@@ -66,6 +68,14 @@ class JsonListApiHelperTests(unittest.TestCase):
         self.assertEqual(docs, [{"id": 1}])
         self.assertEqual(total, 3)
 
+    def test_extract_page_docs_accepts_root_array(self):
+        payload = [{"id": "gspo", "title": "GSPO"}, {"id": "ofa", "title": "OFA"}]
+        docs, total = extract_page_docs(payload, {})
+        self.assertEqual(docs, payload)
+        self.assertEqual(total, 2)
+        self.assertEqual(extract_page_docs([], {}), ([], 0))
+        self.assertEqual(extract_page_docs(["not", "an", "object"], {}), (None, None))
+
     def test_article_to_item_uses_configured_fields_and_iso_dates(self):
         item = article_to_item(
             {
@@ -91,6 +101,61 @@ class JsonListApiHelperTests(unittest.TestCase):
                 "description": "Works after the page schema changes.",
                 "pubDate": "2026-08-20T08:00:00Z",
             },
+        )
+
+    def test_article_url_numeric_id_still_joins_base_path(self):
+        self.assertEqual(
+            article_url({"id": 100041}, "https://hy.tencent.com/research"),
+            "https://hy.tencent.com/research/100041",
+        )
+        self.assertIsNone(article_url({"id": "gspo"}, "https://hy.tencent.com/research"))
+
+    def test_article_url_template_accepts_string_slug(self):
+        self.assertEqual(
+            article_url(
+                {"id": "gspo"},
+                "https://qwen.ai/blog",
+                url_template="https://qwen.ai/blog?id={slug}",
+            ),
+            "https://qwen.ai/blog?id=gspo",
+        )
+
+    def test_article_to_item_uses_url_template_and_description_fallback(self):
+        item = article_to_item(
+            {
+                "id": "gspo",
+                "title": "GSPO",
+                "description": "",
+                "introduction": "RL for language models.",
+                "date": "2025-07-27T07:00:00.000Z",
+            },
+            article_base_url="https://qwen.ai/blog",
+            fields={
+                "slug": ["id"],
+                "description": ["description", "introduction"],
+                "date": ["date"],
+                "url_template": "https://qwen.ai/blog?id={slug}",
+            },
+        )
+        self.assertEqual(
+            item,
+            {
+                "title": "GSPO",
+                "link": "https://qwen.ai/blog?id=gspo",
+                "guid": "https://qwen.ai/blog?id=gspo",
+                "description": "RL for language models.",
+                "pubDate": "2025-07-27T07:00:00.000Z",
+            },
+        )
+
+    def test_sort_items_date_desc(self):
+        items = [
+            {"title": "old", "pubDate": "2022-12-24T06:54:19.000Z"},
+            {"title": "new", "pubDate": "2025-07-27T07:00:00.000Z"},
+        ]
+        self.assertEqual(
+            [item["title"] for item in sort_items(items, "date_desc")],
+            ["new", "old"],
         )
 
     def test_article_to_item_keeps_absolute_url_slugs(self):
