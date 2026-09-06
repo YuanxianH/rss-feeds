@@ -8,6 +8,7 @@ from typing import Any, Iterable
 from urllib.parse import urljoin
 
 import requests
+from dateutil import parser as date_parser
 
 from src.http_client import create_retry_session
 from src.path_utils import resolve_output_path
@@ -129,12 +130,25 @@ def _normalize_author(value: Any) -> str:
     return ", ".join(parts) if parts else text
 
 
+def apply_url_template(template: str, slug: str) -> str | None:
+    """Fill ``{slug}`` / ``{id}`` placeholders in a public article URL."""
+    text = str(template or "").strip()
+    if not text or not slug:
+        return None
+    try:
+        return text.format(slug=slug, id=slug)
+    except (KeyError, IndexError, ValueError):
+        return None
+
+
 def article_url(
     doc: dict[str, Any],
     article_base_url: str,
     slug_fields: Iterable[str] = DEFAULT_SLUG_FIELDS,
+    url_template: str = "",
 ) -> str | None:
     """Build a public article URL from slug fields or an absolute link."""
+    template = str(url_template or "").strip()
     for field in slug_fields:
         raw = first_present(doc, (field,))
         if raw is None:
@@ -144,7 +158,7 @@ def article_url(
             continue
         if text.startswith("http://") or text.startswith("https://"):
             return text
-        if field == "id":
+        if field == "id" and not template:
             try:
                 numeric = int(text)
             except ValueError:
@@ -152,6 +166,11 @@ def article_url(
             if numeric <= 0:
                 continue
             text = str(numeric)
+        if template:
+            built = apply_url_template(template, text)
+            if built:
+                return built
+            continue
         return urljoin(article_base_url.rstrip("/") + "/", text)
     return None
 
@@ -171,6 +190,7 @@ def article_to_item(
         doc,
         article_base_url,
         field_names(mapping.get("slug"), DEFAULT_SLUG_FIELDS),
+        url_template=str(mapping.get("url_template") or ""),
     )
     if not title or not link:
         return None
@@ -219,8 +239,31 @@ def select_articles(
     return items
 
 
+def _item_pubdate(item: dict[str, str]) -> datetime:
+    raw = item.get("pubDate") or ""
+    try:
+        parsed = date_parser.parse(str(raw))
+    except (TypeError, ValueError, OverflowError):
+        return datetime.min.replace(tzinfo=timezone.utc)
+    if parsed.tzinfo is None:
+        parsed = parsed.replace(tzinfo=timezone.utc)
+    return parsed
+
+
+def sort_items(items: list[dict[str, str]], sort: str) -> list[dict[str, str]]:
+    """Optionally reorder items before they are written to RSS."""
+    mode = str(sort or "").strip().lower()
+    if mode == "date_desc":
+        return sorted(items, key=_item_pubdate, reverse=True)
+    return items
+
+
 def extract_page_docs(payload: Any, fields: dict[str, Any]) -> tuple[list[Any] | None, Any]:
     """Return the item list and optional total from a JSON payload."""
+    if isinstance(payload, list):
+        if payload and not any(isinstance(item, dict) for item in payload):
+            return None, None
+        return payload, len(payload)
     if not isinstance(payload, dict):
         return None, None
     success_code = fields.get("success_code", 0)
@@ -356,8 +399,11 @@ class JsonListApiJob(FeedJob):
                 details=f"{source_label} API 返回非法 JSON: {exc}",
             )
 
-        items = select_articles(
-            docs, article_base_url=article_base_url, fields=fields
+        items = sort_items(
+            select_articles(
+                docs, article_base_url=article_base_url, fields=fields
+            ),
+            str(options.get("sort") or ""),
         )[:max_items]
         if not items:
             return JobResult(
