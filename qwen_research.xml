@@ -7,356 +7,265 @@
     <docs>http://www.rssboard.org/rss-specification</docs>
     <generator>RSS Creator</generator>
     <language>zh-CN</language>
-    <lastBuildDate>Sun, 06 Sep 2026 16:14:18 +0000</lastBuildDate>
+    <lastBuildDate>Sun, 06 Sep 2026 16:27:37 +0000</lastBuildDate>
+    <item>
+      <title>E-Commerce Bench: Long-Horizon Operations, Multi-Dimensional Evaluation</title>
+      <link>https://qwen.ai/blog?id=e-commerce-bench</link>
+      <description>Agent benchmarks over the past few years have mostly followed one pattern. A goal is handed to the model, and the model tries to reach it within a bounded number of turns, whether that means finding the treasure in a maze, producing a report, or fixing a piece of code. Performance is then scored on the quality of the deliverable or on how much of the task got done, and evaluations of this kind usu</description>
+      <guid isPermaLink="true">https://qwen.ai/blog?id=e-commerce-bench</guid>
+      <pubDate>Thu, 03 Sep 2026 10:00:00 +0800</pubDate>
+    </item>
+    <item>
+      <title>Qwen-Drive-1.0: An Initial Step towards a Vision-Language Foundation Model for Autonomous Driving</title>
+      <link>https://qwen.ai/blog?id=qwen-drive-1.0</link>
+      <description>We introduce Qwen-Drive-1.0, the first vision-language foundation model for autonomous driving that unifies 3D perception and visual question answering at the pretraining stage and further extends to motion planning, while keeping the pretrained VLM architecture entirely untouched. Built on the natively multimodal Qwen3.5-4B, it attaches two external modules. A BEV perception head serves as an exp</description>
+      <guid isPermaLink="true">https://qwen.ai/blog?id=qwen-drive-1.0</guid>
+      <pubDate>Thu, 03 Sep 2026 08:00:00 +0800</pubDate>
+    </item>
+    <item>
+      <title>Qwen3.8-Flash-Next: A New Architecture, Towards Ultimate Cost-Efficiency</title>
+      <link>https://qwen.ai/blog?id=qwen3.8-flash-next</link>
+      <description>In this release we are opening the weights of Qwen3.8-Flash-Next, a multimodal MoE model that also serves as an early preview of the architecture used in Qwen4. It plays the same role that Qwen3-Next played for Qwen3.5: the hybrid Gated DeltaNet + Gated Attention design introduced at that time has since been used across the Qwen3.5, Qwen3.6, Qwen3.7 and Qwen3.8 series. We are again releasing the a</description>
+      <guid isPermaLink="true">https://qwen.ai/blog?id=qwen3.8-flash-next</guid>
+      <pubDate>Wed, 26 Aug 2026 20:30:00 +0800</pubDate>
+    </item>
+    <item>
+      <title>Qwen3.8-Max: A New Bar for Coding and Cowork</title>
+      <link>https://qwen.ai/blog?id=qwen3.8</link>
+      <description>Today, we are officially releasing Qwen 3.8-Max, the most capable model in the Qwen family to date. This also marks the first time we will open-source the weights of a Qwen-Max-class model — the open weights will be released next week. Built upon the architectural foundation of Qwen 3.5, Qwen 3.8-Max scales to 2.4 trillion parameters, delivering comprehensive improvements across coding, work, rese</description>
+      <guid isPermaLink="true">https://qwen.ai/blog?id=qwen3.8</guid>
+      <pubDate>Mon, 03 Aug 2026 10:00:00 +0800</pubDate>
+    </item>
+    <item>
+      <title>Qwen-Image-3.0: Rich Content, Authentic Details, Deep Knowledge</title>
+      <link>https://qwen.ai/blog?id=qwen-image-3.0</link>
+      <description>We are launching Qwen-Image-3.0, the third-generation foundational image generation model in the Qwen-Image series. If the keyword for Qwen-Image-1.0 was "Precision", and the keywords for Qwen-Image-2.0 were "Precision, Variety, Completeness, Beauty, and Authenticity", then the core of Qwen-Image-3.0 comes down to a single word — "Real" (实). This "Real" is embodied across three dimensions: Ric</description>
+      <guid isPermaLink="true">https://qwen.ai/blog?id=qwen-image-3.0</guid>
+      <pubDate>Tue, 21 Jul 2026 14:00:00 +0800</pubDate>
+    </item>
+    <item>
+      <title>Qwen-AgentWorld: Language World Models for General Agents</title>
+      <link>https://qwen.ai/blog?id=qwen-agentworld</link>
+      <description>Today we release Qwen-AgentWorld, a native language world model that simulates agent environments across seven domains: Native world modeling: environment modeling is the training objective from continual pre-training onward (CPT → SFT → RL), not a post hoc adaptation on top of a general-purpose LLM. Seven domains, one model: a single model simulates text-based (MCP, Search, Terminal, SWE) and</description>
+      <guid isPermaLink="true">https://qwen.ai/blog?id=qwen-agentworld</guid>
+      <pubDate>Tue, 23 Jun 2026 11:30:30 +0800</pubDate>
+    </item>
+    <item>
+      <title>Qwen-Robot Suite: A Foundation Model Suite for Physical World Intelligence</title>
+      <link>https://qwen.ai/blog?id=qwen-robotsuite</link>
+      <description>The Qwen family of foundation models already gives strong perception and reasoning about the physical world. But seeing is not acting: the gap between vision and language understanding and physical control remains the central bottleneck for embodied intelligence. The Qwen-Robot Suite bridges this gap with three foundation models — Qwen-RobotNav, Qwen-RobotManip, and Qwen-RobotWorld. Nav unifies fi</description>
+      <guid isPermaLink="true">https://qwen.ai/blog?id=qwen-robotsuite</guid>
+      <pubDate>Tue, 16 Jun 2026 10:00:00 +0800</pubDate>
+    </item>
+    <item>
+      <title>Qwen-RobotNav: A Scalable Navigation Model Designed for an Agentic Navigation System</title>
+      <link>https://qwen.ai/blog?id=qwen-robotnav</link>
+      <description>Agentic navigation systems require a base navigation model with a configurable navigation context protocol: instruction following, object search, target tracking, and autonomous driving share the same perception-planning backbone yet demand fundamentally different context strategies for consuming the visual stream. Like the Model Context Protocol for LLM tool use, a navigation model needs a standa</description>
+      <guid isPermaLink="true">https://qwen.ai/blog?id=qwen-robotnav</guid>
+      <pubDate>Tue, 16 Jun 2026 08:00:00 +0800</pubDate>
+    </item>
+    <item>
+      <title>Qwen-RobotWorld: Boundless Worlds for Embodied Agents</title>
+      <link>https://qwen.ai/blog?id=qwen-robotworld</link>
+      <description>Embodied intelligence requires agents to perceive, reason about, and act within physical environments. World models offer a scalable path forward — but current approaches face a fundamental tension. General video generation models learn rich visual priors but lack the ability to model embodied physics. Domain-specific embodied models are tailored to individual scenarios and cannot generalize acros</description>
+      <guid isPermaLink="true">https://qwen.ai/blog?id=qwen-robotworld</guid>
+      <pubDate>Tue, 16 Jun 2026 08:00:00 +0800</pubDate>
+    </item>
+    <item>
+      <title>Qwen-RobotManip: Alignment Unlocks Scale for Robotic Manipulation Foundation Models</title>
+      <link>https://qwen.ai/blog?id=qwen-robotmanip</link>
+      <description>Qwen-Omni × Qwen-RobotManip — Qwen-Omni observes the scene, randomly proposes manipulation tasks via speech, and judges execution in real time. Each video shows Qwen-RobotManip completing  tasks on the fly with no pre-defined task list, demonstrating open-ended instruction following and generalization. Qwen-RobotManip is validated across various real-robot platforms and tasks, demonstrating str</description>
+      <guid isPermaLink="true">https://qwen.ai/blog?id=qwen-robotmanip</guid>
+      <pubDate>Tue, 16 Jun 2026 08:00:00 +0800</pubDate>
+    </item>
+    <item>
+      <title>Qwen3.7-Plus: Multimodal Agent Intelligence</title>
+      <link>https://qwen.ai/blog?id=qwen3.7-plus</link>
+      <description>&lt;style&gt; / Page-level: make tables full-width up to 1100px and centered / table { width: 85% !important; max-width: 1100px; margin: 0 auto; } &lt;/style&gt; Today we introduce Qwen3.7-Plus — a multimodal agent model that unifies vision and language into a single, versatile agent foundation. Building on Qwen3.7's strong text backbone, Qwen3.7-Plus delivers a comprehensive upgrade in vision-language capabi</description>
+      <guid isPermaLink="true">https://qwen.ai/blog?id=qwen3.7-plus</guid>
+      <pubDate>Mon, 01 Jun 2026 10:00:00 +0800</pubDate>
+    </item>
+    <item>
+      <title>Qwen-VLA: From Understanding the World to Acting in It</title>
+      <link>https://qwen.ai/blog?id=qwenvla</link>
+      <description>Over the past few years, multimodal large language models have become increasingly capable of understanding images, videos, and real-world scenes. They can recognize objects, reason about spatial relationships, answer visual questions, and solve complex multimodal reasoning tasks. But for embodied intelligence, understanding the world is only the first step. A truly embodied agent also needs to un</description>
+      <guid isPermaLink="true">https://qwen.ai/blog?id=qwenvla</guid>
+      <pubDate>Fri, 29 May 2026 17:00:00 +0800</pubDate>
+    </item>
+    <item>
+      <title>Qwen3.7: The Agent Frontier</title>
+      <link>https://qwen.ai/blog?id=qwen3.7</link>
+      <description>Today we introduce Qwen3.7-Max, our latest proprietary model designed for the agent era. Qwen3.7-Max is built to be a versatile agent foundation — equally capable of writing and debugging code, automating office workflows, and sustaining autonomous execution across hundreds or thousands of steps. What sets Qwen3.7-Max apart is the breadth and depth of its agent capabilities. It excels as a codin</description>
+      <guid isPermaLink="true">https://qwen.ai/blog?id=qwen3.7</guid>
+      <pubDate>Wed, 20 May 2026 10:00:00 +0800</pubDate>
+    </item>
+    <item>
+      <title>Qwen3.5-LiveTranslate: From Sound to Sight, From Word to Right</title>
+      <link>https://qwen.ai/blog?id=qwen3.5-livetranslate</link>
+      <description>Qwen3.5-LiveTranslate-Flash is the latest simultaneous interpretation model in the Qwen family, built on top of Qwen3.5-Omni. It delivers real-time, multimodal translation that not only hears and translates speech, but also sees and understands visual context to produce more accurate translations. Compared with its predecessor Qwen3-LiveTranslate, Qwen3.5-LiveTranslate-Flash brings major upgrades</description>
+      <guid isPermaLink="true">https://qwen.ai/blog?id=qwen3.5-livetranslate</guid>
+      <pubDate>Tue, 19 May 2026 17:40:00 +0800</pubDate>
+    </item>
+    <item>
+      <title>Qwen-Scope: Decoding Intelligence, Unleashing Potential</title>
+      <link>https://qwen.ai/blog?id=qwen-scope</link>
+      <description>Interpretability research has emerged as a critical area for understanding LLM behaviors, informing performance optimization, and enabling more controllable model outputs. Today, we are excited to introduce Qwen-Scope, an interpretability toolkit trained on the Qwen3 and Qwen3.5 series models. Specifically, we inserted and trained Sparse Autoencoders (SAEs) within Qwen’s hidden layers. By imposing</description>
+      <guid isPermaLink="true">https://qwen.ai/blog?id=qwen-scope</guid>
+      <pubDate>Thu, 30 Apr 2026 12:00:00 +0800</pubDate>
+    </item>
+    <item>
+      <title>FlashQLA: CP-/Bwd-Friendly Fused Linear Attention Kernels for GDN</title>
+      <link>https://qwen.ai/blog?id=flashqla</link>
+      <description>&lt;style&gt; .katex-display &gt; .katex { font-size: 1.1em; } .katex { font-size: 1.1em; } table .katex { font-size: 1.1em; } &lt;/style&gt; Following the release of Qwen3-Next, Gated Delta Network (GDN) has become the workhorse attention layer across the Qwen family — from Qwen3-Next-80B-A3B all the way to the subsequent Qwen3.5 / Qwen3.6 series. As models scale to 397A17B / 122A10B / 35B / 27B and context win</description>
+      <guid isPermaLink="true">https://qwen.ai/blog?id=flashqla</guid>
+      <pubDate>Tue, 28 Apr 2026 10:00:00 +0800</pubDate>
+    </item>
+    <item>
+      <title>Qwen3.6-27B: Flagship-Level Coding in a 27B Dense Model</title>
+      <link>https://qwen.ai/blog?id=qwen3.6-27b</link>
+      <description>Following the launch of Qwen3.6-Plus and Qwen3.6-35B-A3B, we are excited to open-source Qwen3.6-27B — a dense 27-billion-parameter multimodal model at the scale the community has been asking for most. Still supporting both multimodal thinking and non-thinking modes, Qwen3.6-27B delivers flagship-level agentic coding performance, surpassing the previous-generation open-source flagship Qwen3.5-397B-</description>
+      <guid isPermaLink="true">https://qwen.ai/blog?id=qwen3.6-27b</guid>
+      <pubDate>Wed, 22 Apr 2026 10:00:00 +0800</pubDate>
+    </item>
+    <item>
+      <title>Qwen3.6-Max-Preview: Smarter, Sharper, Still Evolving</title>
+      <link>https://qwen.ai/blog?id=qwen3.6-max-preview</link>
+      <description>Following the release of Qwen3.6-Plus, we are sharing an early preview of our next proprietary model: Qwen3.6-Max-Preview. Compared to Qwen3.6-Plus, this preview release brings stronger world knowledge and instruction following, along with significant agentic coding improvements across a wide range of benchmarks. As a preview, the model is still under active development — we are continuing to iter</description>
+      <guid isPermaLink="true">https://qwen.ai/blog?id=qwen3.6-max-preview</guid>
+      <pubDate>Sat, 18 Apr 2026 10:00:00 +0800</pubDate>
+    </item>
+    <item>
+      <title>Qwen3.6-35B-A3B: Agentic Coding Power, Now Open to All</title>
+      <link>https://qwen.ai/blog?id=qwen3.6-35b-a3b</link>
+      <description>Following the launch of Qwen3.6-Plus, we are excited to open-source Qwen3.6-35B-A3B — a sparse yet remarkably capable mixture-of-experts (MoE) model with 35 billion total parameters and only 3 billion active parameters. Despite its efficiency, Qwen3.6-35B-A3B delivers outstanding agentic coding performance, surpassing its predecessor Qwen3.5-35B-A3B by a wide margin and rivaling much larger dense</description>
+      <guid isPermaLink="true">https://qwen.ai/blog?id=qwen3.6-35b-a3b</guid>
+      <pubDate>Wed, 15 Apr 2026 10:00:00 +0800</pubDate>
+    </item>
+    <item>
+      <title>Qwen3.6-Plus: Towards Real World Agents</title>
+      <link>https://qwen.ai/blog?id=qwen3.6</link>
+      <description>Following the release of the Qwen3.5 series in February, we are thrilled to announce the official launch of Qwen3.6-Plus. Available immediately via our API, this release represents a massive capability upgrade over its predecessor. Most notably, we have drastically enhanced the model's agentic coding capabilities. From frontend web development to complex, repository-level problem solving, Qwen3.6-</description>
+      <guid isPermaLink="true">https://qwen.ai/blog?id=qwen3.6</guid>
+      <pubDate>Thu, 02 Apr 2026 04:00:00 +0800</pubDate>
+    </item>
+    <item>
+      <title>Qwen3.5-Omni: Scaling Up, Toward Native Omni-Modal AGI</title>
+      <link>https://qwen.ai/blog?id=qwen3.5-omni</link>
+      <description>Qwen3.5-Omni is Qwen’s latest generation of fully omnimodal LLM, supporting the understanding of text, images, audio, and audio-visual content. Both the Thinker and Talker in Qwen3.5-Omni adopt the Hybrid-Attention MoE. Qwen3.5-Omni series includes Instruct versions in three sizes: Plus, Flash, and Light, with support for 256k long-context input. The model can process more than 10 hours of audio i</description>
+      <guid isPermaLink="true">https://qwen.ai/blog?id=qwen3.5-omni</guid>
+      <pubDate>Mon, 30 Mar 2026 04:00:00 +0800</pubDate>
+    </item>
+    <item>
+      <title>Qwen3.5-Max-Preview Now Available on Arena</title>
+      <link>https://qwen.ai/blog?id=qwen3.5-max-preview</link>
+      <description>We are pleased to announce the deployment of Qwen3.5-Max-Preview on Arena, where it has demonstrated exceptional performance during the preliminary evaluations. As we proceed with final optimizations ahead of the release within the next two weeks, we invite the community to evaluate the model's capabilities via &lt;a href="https://arena.ai/" target="_blank" rel="noopener"&gt;https://arena.ai/&lt;/a&gt;.</description>
+      <guid isPermaLink="true">https://qwen.ai/blog?id=qwen3.5-max-preview</guid>
+      <pubDate>Thu, 19 Mar 2026 04:00:00 +0800</pubDate>
+    </item>
+    <item>
+      <title>Qwen3.5: Towards Native Multimodal Agents</title>
+      <link>https://qwen.ai/blog?id=qwen3.5</link>
+      <description>We are delighted to announce the official release of Qwen3.5, introducing the open-weight of the first model in the Qwen3.5 series, namely Qwen3.5-397B-A17B. As a native vision-language model, Qwen3.5-397B-A17B demonstrates outstanding results across a full range of benchmark evaluations, including reasoning, coding, agent capabilities, and multimodal understanding, empowering developers and enter</description>
+      <guid isPermaLink="true">https://qwen.ai/blog?id=qwen3.5</guid>
+      <pubDate>Mon, 16 Feb 2026 04:00:00 +0800</pubDate>
+    </item>
+    <item>
+      <title>Qwen-Image-2.0: Professional infographics, exquisite photorealism</title>
+      <link>https://qwen.ai/blog?id=qwen-image-2.0</link>
+      <description>We are launching Qwen-Image-2.0, a next-generation foundational image generation model. The key highlights of Qwen-Image-2.0 include: Professional Typography Rendering: Supports 1k-token instructions for direct generation of professional infographics, including PPTs, posters, comics, and more. Stronger Semantic Adherence: Native 2K resolution support for finely detailed realistic scenes, including</description>
+      <guid isPermaLink="true">https://qwen.ai/blog?id=qwen-image-2.0</guid>
+      <pubDate>Tue, 10 Feb 2026 13:08:30 +0800</pubDate>
+    </item>
+    <item>
+      <title>Qwen3-Coder-Next: Pushing Small Hybrid Models on Agentic Coding</title>
+      <link>https://qwen.ai/blog?id=qwen3-coder-next</link>
+      <description>--- We introduce Qwen3-Coder-Next, an open-weight language model designed specifically for coding agents and local development. Built on top of Qwen3-Next-80B-A3B-Base, which adopts a novel architecture with hybrid attention and MoE, Qwen3-Coder-Next has been agentically trained at scale on large-scale executable task synthesis, environment interaction, and reinforcement learning, obtaining strong</description>
+      <guid isPermaLink="true">https://qwen.ai/blog?id=qwen3-coder-next</guid>
+      <pubDate>Tue, 03 Feb 2026 04:00:00 +0800</pubDate>
+    </item>
+    <item>
+      <title>Qwen3-ASR &amp; Qwen3-ForcedAligner is Now Open Sourced: Robust, Streaming and Multilingual!</title>
+      <link>https://qwen.ai/blog?id=qwen3asr</link>
+      <description>&lt;style&gt; .tg-t0cb { white-space: pre-wrap; / 保留空格和换行符，且允许自动换行 / / 或者使用 white-space: pre-line; 会合并多余空格但保留换行 / } &lt;/style&gt; Qwen3-ASR family includes two powerful all-in-one speech recognition models and a novel non-autoregressive speech forced alignment model. Qwen3-ASR-1.7B and Qwen3-ASR-0.6B are ASR models that support language identifi</description>
+      <guid isPermaLink="true">https://qwen.ai/blog?id=qwen3asr</guid>
+      <pubDate>Thu, 29 Jan 2026 00:00:04 +0800</pubDate>
+    </item>
+    <item>
+      <title>Pushing Qwen3-Max-Thinking Beyond its Limits</title>
+      <link>https://qwen.ai/blog?id=qwen3-max-thinking</link>
+      <description>We present Qwen3-Max-Thinking, our latest flagship reasoning model. By scaling up model parameters and leveraging substantial computational resources for reinforcement learning, Qwen3-Max-Thinking achieves significant performance improvements across multiple dimensions, including factual knowledge, complex reasoning, instruction following, alignment with human preferences, and agent capabilities.</description>
+      <guid isPermaLink="true">https://qwen.ai/blog?id=qwen3-max-thinking</guid>
+      <pubDate>Mon, 26 Jan 2026 04:00:00 +0800</pubDate>
+    </item>
+    <item>
+      <title>Qwen3-TTS Family is Now Open Sourced: Voice Design, Clone, and Generation!</title>
+      <link>https://qwen.ai/blog?id=qwen3tts-0115</link>
+      <description>&lt;style&gt; .tg-t0cb { white-space: pre-wrap; / 保留空格和换行符，且允许自动换行 / / 或者使用 white-space: pre-line; 会合并多余空格但保留换行 / } &lt;/style&gt; Qwen3-TTS  is a series of powerful speech generation capabilities developed by Qwen, offering comprehensive support for voice clone, voice design, ultra-high-quality human-like speech generation, and natural language-</description>
+      <guid isPermaLink="true">https://qwen.ai/blog?id=qwen3tts-0115</guid>
+      <pubDate>Thu, 22 Jan 2026 00:00:04 +0800</pubDate>
+    </item>
+    <item>
+      <title>Qwen3-VL-Embedding and Qwen3-VL-Reranker: For the Next Generation of Multimodal Retrieval</title>
+      <link>https://qwen.ai/blog?id=qwen3-vl-embedding</link>
+      <description>In June 2025, we open-sourced the text-oriented Qwen3-Embedding and Qwen3-ReRanker model series, providing best-in-class performance across a variety of downstream tasks, including multilingual text retrieval, clustering, and classification, which have been widely adopted by developers in the community. Today, we are thrilled to announce the release of the Qwen3-VL-Embedding and Qwen3-VL-Reranker</description>
+      <guid isPermaLink="true">https://qwen.ai/blog?id=qwen3-vl-embedding</guid>
+      <pubDate>Thu, 08 Jan 2026 04:00:00 +0800</pubDate>
+    </item>
+    <item>
+      <title>Qwen-Image-2512: Finer Details, Greater Realism</title>
+      <link>https://qwen.ai/blog?id=qwen-image-2512</link>
+      <description>We are excited to introduce Qwen-Image-2512, the December update of Qwen-Image’s text-to-image foundational model. You are welcome to try the latest model at Qwen Chat. Compared to the base Qwen-Image model released in August, Qwen-Image-2512 features the following key improvements: Enhanced Huamn Realism Qwen-Image-2512 significantly reduces the “AI-generated” look and substantially enhances ov</description>
+      <guid isPermaLink="true">https://qwen.ai/blog?id=qwen-image-2512</guid>
+      <pubDate>Wed, 31 Dec 2025 13:08:30 +0800</pubDate>
+    </item>
     <item>
       <title>Qwen-Image-Edit-2511: Improve Consistency</title>
       <link>https://qwen.ai/blog?id=qwen-image-edit-2511</link>
-      <description>We are excited to introduce Qwen-Image-Edit-2511, an enhanced version over Qwen-Image-Edit-2509, featuring multiple improvements—including notably better consistency. To try out the latest model, please visit [Qwen Chat](https://chat.qwen.ai/?inputFeature=image_edit) and select the Image Editing fea</description>
+      <description>We are excited to introduce Qwen-Image-Edit-2511, an enhanced version over Qwen-Image-Edit-2509, featuring multiple improvements—including notably better consistency. To try out the latest model, please visit Qwen Chat and select the Image Editing feature.  Note that the online version includes certain optimizations for speed; for the best possible performance, we recommend deploying the model loc</description>
       <guid isPermaLink="true">https://qwen.ai/blog?id=qwen-image-edit-2511</guid>
-      <pubDate>Tue, 23 Dec 2025 05:08:30 +0000</pubDate>
+      <pubDate>Tue, 23 Dec 2025 13:08:30 +0800</pubDate>
     </item>
     <item>
       <title>Qwen3-TTS Steps Up: Voice Cloning and Voice Design!</title>
       <link>https://qwen.ai/blog?id=qwen3-tts-vc-voicedesign</link>
-      <description>**Qwen3-TTS** family has launched two new models: the voice design model Qwen3-TTS-VD-Flash (accessible via the [Qwen API](https://www.alibabacloud.com/help/en/model-studio/qwen-tts-voice-design)) and the voice cloning model Qwen3-TTS-VC-Flash (accessible via the [Qwen API](https://www.alibabacloud.</description>
+      <description>&lt;div style="zoom: 1.0; line-height: 3;"&gt; &lt;/div&gt; Qwen3-TTS family has launched two new models: the voice design model Qwen3-TTS-VD-Flash (accessible via the Qwen API) and the voice cloning model Qwen3-TTS-VC-Flash (accessible via the Qwen API). Key Features: Voice Design：Qwen3-TTS-VD-Flash supports complex natural language instructions, enabling fine-grained control over timbre, prosody, emotion, p</description>
       <guid isPermaLink="true">https://qwen.ai/blog?id=qwen3-tts-vc-voicedesign</guid>
-      <pubDate>Mon, 22 Dec 2025 16:00:45 +0000</pubDate>
+      <pubDate>Tue, 23 Dec 2025 00:00:45 +0800</pubDate>
     </item>
     <item>
       <title>Qwen-Image-Layered: Layered Decomposition for Inherent Editablity</title>
       <link>https://qwen.ai/blog?id=qwen-image-layered</link>
-      <description>Today, we are excited to introduce Qwen-Image-Layered, a model capable of decomposing an image into multiple RGBA layers. This layered representation unlocks inherent editability: each layer can be independently manipulated without affecting other content. Meanwhile, such a layered representation na</description>
+      <description>Today, we are excited to introduce Qwen-Image-Layered, a model capable of decomposing an image into multiple RGBA layers. This layered representation unlocks inherent editability: each layer can be independently manipulated without affecting other content. Meanwhile, such a layered representation naturally supports high-fidelity elementary operations-such as resizing, reposition, and recoloring. B</description>
       <guid isPermaLink="true">https://qwen.ai/blog?id=qwen-image-layered</guid>
-      <pubDate>Fri, 19 Dec 2025 05:08:30 +0000</pubDate>
+      <pubDate>Fri, 19 Dec 2025 13:08:30 +0800</pubDate>
     </item>
     <item>
       <title>Qwen3-Omni-Flash-2025-12-01：Hear You. See You. Follow Smarter!</title>
       <link>https://qwen.ai/blog?id=qwen3-omni-flash-20251201</link>
-      <description>**Qwen3-Omni** is a next-generation native multimodal large model capable of seamlessly processing multiple input modalities—including text, images, audio, and video—and generating both text and natural-sounding speech outputs simultaneously via real-time streaming responses. This version introduces</description>
+      <description>Qwen3-Omni is a next-generation native multimodal large model capable of seamlessly processing multiple input modalities—including text, images, audio, and video—and generating both text and natural-sounding speech outputs simultaneously via real-time streaming responses. This version introduces mul</description>
       <guid isPermaLink="true">https://qwen.ai/blog?id=qwen3-omni-flash-20251201</guid>
-      <pubDate>Mon, 08 Dec 2025 21:00:00 +0000</pubDate>
+      <pubDate>Tue, 09 Dec 2025 05:00:00 +0800</pubDate>
     </item>
     <item>
       <title>SAPO: A Stable and Performant Reinforcement Learning Method for Training Large Language Models</title>
       <link>https://qwen.ai/blog?id=sapo</link>
-      <description>Reinforcement learning (RL) has become a core ingredient in advancing the reasoning capabilities of large language models (LLMs). Modern RL pipelines enable models to solve harder mathematical problems, write complex code, and reason over multimodal inputs. In practice, group‑based policy optimizati</description>
+      <description>Reinforcement learning (RL) has become a core ingredient in advancing the reasoning capabilities of large language models (LLMs). Modern RL pipelines enable models to solve harder mathematical problems, write complex code, and reason over multimodal inputs. In practice, group‑based policy optimization—where multiple responses are sampled per prompt and their rewards are normalized within the group</description>
       <guid isPermaLink="true">https://qwen.ai/blog?id=sapo</guid>
-      <pubDate>Thu, 04 Dec 2025 20:00:00 +0000</pubDate>
+      <pubDate>Fri, 05 Dec 2025 04:00:00 +0800</pubDate>
     </item>
     <item>
       <title>Qwen3-TTS Update! 49 Timbres + 10 Languages + 9 Dialects</title>
       <link>https://qwen.ai/blog?id=qwen3-tts-1128</link>
-      <description>**Qwen3-TTS-Flash** is a flagship text-to-speech model that supports multi-timbre, multi-lingual, and multi-dialect speech synthesis. It aims to produce natural and expressive speech and is available via [Qwen API](https://help.aliyun.com/zh/model-studio/qwen-tts).Major Improvements:Qwen3-TTS offers</description>
+      <description>Qwen3-TTS-Flash is a flagship text-to-speech model that supports multi-timbre, multi-lingual, and multi-dialect speech synthesis. It aims to produce natural and expressive speech and is available via Qwen API. Major Improvements: Richer Timbres Support: Qwen3-TTS offers over 49 high-quality timbres, covering a range of genders, ages, regional traits, and character profiles to meet diverse scenario</description>
       <guid isPermaLink="true">https://qwen.ai/blog?id=qwen3-tts-1128</guid>
-      <pubDate>Thu, 04 Dec 2025 16:00:04 +0000</pubDate>
+      <pubDate>Fri, 05 Dec 2025 00:00:04 +0800</pubDate>
     </item>
     <item>
       <title>Qwen DeepResearch: When Inspiration Becomes Its Own Reason</title>
       <link>https://qwen.ai/blog?id=qwen-deepresearch</link>
-      <description>[Click here to experience the latest Qwen DeepResearch](https://chat.qwen.ai/?inputFeature=deep_research)_**How does inspiration die?**_It usually doesn’t die from “not being good enough”, but from being “too much trouble”.When a thought flashes, it’s still fragile and unverified. After a brief mome</description>
+      <description>&lt;div style="display: flex; justify-content: center;"&gt; &lt;/div&gt; Click here to experience the latest Qwen DeepResearch _How does inspiration die?_ It usually doesn’t die from “not being good enough”, but from being “too much trouble”. When a thought flashes, it’s still fragile and unverified. After a brief moment of excitement, our brains immediately begin to assess the “cost”: “How ma</description>
       <guid isPermaLink="true">https://qwen.ai/blog?id=qwen-deepresearch</guid>
-      <pubDate>Wed, 12 Nov 2025 20:59:26 +0000</pubDate>
-    </item>
-    <item>
-      <title>Qwen3-Max: Just Scale it</title>
-      <link>https://qwen.ai/blog?id=qwen3-max</link>
-      <description>Following the release of the Qwen3-2507 series, we are thrilled to introduce Qwen3-Max — our largest and most capable model to date. The preview version of Qwen3-Max-Instruct currently ranks third on</description>
-      <guid isPermaLink="true">https://qwen.ai/blog?id=qwen3-max</guid>
-      <pubDate>Wed, 24 Sep 2025 04:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>Qwen3‑LiveTranslate: Real‑Time Multimodal Interpretation — See It, Hear It, Speak It！</title>
-      <link>https://qwen.ai/blog?id=qwen3-livetranslate</link>
-      <description>**Qwen3‑LiveTranslate‑Flash** delivers high‑precision, lightning‑fast and ultra‑reliable real‑time multilingual audio and video interpretation. With the extensive capabilities of Qwen3‑Omni and traini</description>
-      <guid isPermaLink="true">https://qwen.ai/blog?id=qwen3-livetranslate</guid>
-      <pubDate>Mon, 22 Sep 2025 23:00:26 +0000</pubDate>
-    </item>
-    <item>
-      <title>Qwen3-VL: Sharper Vision, Deeper Thought, Broader Action</title>
-      <link>https://qwen.ai/blog?id=qwen3-vl</link>
-      <description>Today, we officially launch the all-new Qwen3-VL series — the most powerful vision-language model in the Qwen family to date. In this generation, we’ve made major improvements across multiple dimensio</description>
-      <guid isPermaLink="true">https://qwen.ai/blog?id=qwen3-vl</guid>
-      <pubDate>Mon, 22 Sep 2025 22:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>Travel Planner: Your Smart Travel Designer</title>
-      <link>https://qwen.ai/blog?id=agent</link>
-      <description>We are excited to introduce our **brand-new Travel Planning Assistant**, a powerful system built on a **Multi-Agent architecture** with robust  **real-world tool-calling capabilities**. It is designed</description>
-      <guid isPermaLink="true">https://qwen.ai/blog?id=agent</guid>
-      <pubDate>Mon, 22 Sep 2025 21:00:59 +0000</pubDate>
-    </item>
-    <item>
-      <title>Qwen3Guard: Real-time Safety for Your Token Stream</title>
-      <link>https://qwen.ai/blog?id=qwen3guard</link>
-      <description>We are excited to introduce Qwen3Guard, the first safety guardrail model in the Qwen family. Built upon the powerful Qwen3 foundation models and fine-tuned specifically for safety classificatoin, Qwen</description>
-      <guid isPermaLink="true">https://qwen.ai/blog?id=qwen3guard</guid>
-      <pubDate>Mon, 22 Sep 2025 20:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>Qwen-Image-Edit-2509: Multi-Image Support, Improved Consistency</title>
-      <link>https://qwen.ai/blog?id=qwen-image-edit-2509</link>
-      <description>This September, we are pleased to introduce Qwen-Image-Edit-2509, the monthly iteration of Qwen-Image-Edit. To experience the latest model, please visit [Qwen Chat](https://qwen.ai)  and select the "I</description>
-      <guid isPermaLink="true">https://qwen.ai/blog?id=qwen-image-edit-2509</guid>
-      <pubDate>Mon, 22 Sep 2025 16:08:30 +0000</pubDate>
-    </item>
-    <item>
-      <title>Qwen3-Omni: Natively Omni-Modal Foundation Models!</title>
-      <link>https://qwen.ai/blog?id=qwen3-omni</link>
-      <description>**Qwen3-Omni** is the natively end-to-end multilingual omni model. It processes text, images, audio, and video, and delivers real-time streaming responses in both text and natural speech. We introduce</description>
-      <guid isPermaLink="true">https://qwen.ai/blog?id=qwen3-omni</guid>
-      <pubDate>Sun, 21 Sep 2025 21:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>Qwen3-TTS-Flash: Multi-timbre &amp; Multi-lingual &amp; Multi-dialect Speech Synthesis.</title>
-      <link>https://qwen.ai/blog?id=qwen3-tts</link>
-      <description>**Qwen3-TTS-Flash** is a flagship text-to-speech model that supports multi-timbre, multi-lingual, and multi-dialect speech synthesis. It aims to produce natural and expressive speech and is available</description>
-      <guid isPermaLink="true">https://qwen.ai/blog?id=qwen3-tts</guid>
-      <pubDate>Sun, 21 Sep 2025 20:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>Qwen3-Next: Towards Ultimate Training &amp; Inference Efficiency</title>
-      <link>https://qwen.ai/blog?id=qwen3-next</link>
-      <description>We believe that **Context Length Scaling** and **Total Parameter Scaling** are two major trends in the future of large models. To further improve training and inference efficiency under long-context a</description>
-      <guid isPermaLink="true">https://qwen.ai/blog?id=qwen3-next</guid>
-      <pubDate>Wed, 10 Sep 2025 20:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>Qwen3 ASR: Hear clearly, transcribe smartly.</title>
-      <link>https://qwen.ai/blog?id=qwen3-asr-flash</link>
-      <description>We introduce Qwen3-ASR-Flash, a speech recognition service built upon the strong intelligence of Qwen3-Omni and large amount of multi-modal data especially ASR data on the scale of tens of millions ho</description>
-      <guid isPermaLink="true">https://qwen.ai/blog?id=qwen3-asr-flash</guid>
-      <pubDate>Mon, 08 Sep 2025 06:38:04 +0000</pubDate>
-    </item>
-    <item>
-      <title>Qwen-Image-Edit: Image Editing with Higher Quality and Efficiency</title>
-      <link>https://qwen.ai/blog?id=qwen-image-edit</link>
-      <description>We are excited to introduce Qwen-Image-Edit, the image editing version of Qwen-Image. Built upon our 20B Qwen-Image model, Qwen-Image-Edit successfully extends Qwen-Image's unique text rendering capab</description>
-      <guid isPermaLink="true">https://qwen.ai/blog?id=qwen-image-edit</guid>
-      <pubDate>Mon, 18 Aug 2025 17:30:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>Qwen-Image: Crafting with Native Text Rendering</title>
-      <link>https://qwen.ai/blog?id=qwen-image</link>
-      <description>We are thrilled to release **Qwen-Image**, a 20B MMDiT image foundation model that achieves significant advances in complex text rendering and precise image editing. To try the latest model, feel free</description>
-      <guid isPermaLink="true">https://qwen.ai/blog?id=qwen-image</guid>
-      <pubDate>Mon, 04 Aug 2025 14:08:30 +0000</pubDate>
-    </item>
-    <item>
-      <title>GSPO: Towards Scalable Reinforcement Learning for Language Models</title>
-      <link>https://qwen.ai/blog?id=gspo</link>
-      <description>Reinforcement Learning (RL) has emerged as a pivotal paradigm for scaling language models and enhancing their deep reasoning and problem-solving capabilities. To scale RL, the foremost prerequisite is</description>
-      <guid isPermaLink="true">https://qwen.ai/blog?id=gspo</guid>
-      <pubDate>Sun, 27 Jul 2025 07:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>Qwen-MT: Where Speed Meets Smart Translation</title>
-      <link>https://qwen.ai/blog?id=qwen-mt</link>
-      <description>Here we introduce the latest update of Qwen-MT (qwen-mt-turbo) via [Qwen API](https://modelstudio.console.alibabacloud.com/?tab=doc#/doc/?type=model&amp;url=https://www.alibabacloud.com/help/en/doc-detail</description>
-      <guid isPermaLink="true">https://qwen.ai/blog?id=qwen-mt</guid>
-      <pubDate>Thu, 24 Jul 2025 14:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>Qwen3-Coder: Agentic Coding in the World</title>
-      <link>https://qwen.ai/blog?id=qwen3-coder</link>
-      <description>Today, we're announcing Qwen3-Coder, our most agentic code model to date. Qwen3-Coder is available in multiple sizes, but we're excited to introduce its most powerful variant first: Qwen3-Coder-480B-A</description>
-      <guid isPermaLink="true">https://qwen.ai/blog?id=qwen3-coder</guid>
-      <pubDate>Tue, 22 Jul 2025 13:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>Time to Speak Some Dialects, Qwen-TTS!</title>
-      <link>https://qwen.ai/blog?id=qwen-tts</link>
-      <description>Here we introduce the latest update of Qwen-TTS (qwen-tts-latest or qwen-tts-2025-05-22) through Qwen API . Trained on a large-scale dataset encompassing over millions of hours of speech, Qwen-TTS achieves human-level naturalness and expressiveness. Notably, Qwen-TTS automatically adjusts prosody, pacing, and emotional inflections in response to the input text. Notably, Qwen-TTS supports the generation of 3 Chinese dialects, including Pekingese, Shanghainese, and Sichuanese.</description>
-      <guid isPermaLink="true">https://qwen.ai/blog?id=qwen-tts</guid>
-      <pubDate>Fri, 27 Jun 2025 07:01:30 +0000</pubDate>
-    </item>
-    <item>
-      <title>Qwen VLo: From "Understanding" the World to "Depicting" It</title>
-      <link>https://qwen.ai/blog?id=qwen-vlo</link>
-      <description>From the initial QwenVL to the latest Qwen2.5 VL, we have made progress in enhancing the model’s ability to understand image content. Today, we are excited to introduce a new model, Qwen VLo, a unified multimodal understanding and generation model.</description>
-      <guid isPermaLink="true">https://qwen.ai/blog?id=qwen-vlo</guid>
-      <pubDate>Thu, 26 Jun 2025 14:00:04 +0000</pubDate>
-    </item>
-    <item>
-      <title>Qwen3 Embedding: Advancing Text Embedding and Reranking Through Foundation Models</title>
-      <link>https://qwen.ai/blog?id=qwen3-embedding</link>
-      <description>We release Qwen3 Embedding series, a new proprietary model of the Qwen model family. These models are specifically designed for text embedding, retrieval, and reranking tasks, built on the Qwen3 foundation model.</description>
-      <guid isPermaLink="true">https://qwen.ai/blog?id=qwen3-embedding</guid>
-      <pubDate>Thu, 05 Jun 2025 13:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>Qwen3: Think Deeper, Act Faster</title>
-      <link>https://qwen.ai/blog?id=qwen3</link>
-      <description>We are open-weighting two MoE models: Qwen3-235B-A22B, a large model with 235 billion total parameters and 22 billion activated parameters, and Qwen3-30B-A3B, a smaller MoE model with 30 billion total parameters and 3 billion activated parameters. Additionally, six dense models are also open-weighted, including Qwen3-32B, Qwen3-14B, Qwen3-8B, Qwen3-4B, Qwen3-1.7B, and Qwen3-0.6B, under Apache 2.0 license.</description>
-      <guid isPermaLink="true">https://qwen.ai/blog?id=qwen3</guid>
-      <pubDate>Mon, 28 Apr 2025 20:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>QVQ-Max: Think with Evidence</title>
-      <link>https://qwen.ai/blog?id=qvq-max-preview</link>
-      <description>Today, we are officially releasing the first version of QVQ-Max, our visual reasoning model.</description>
-      <guid isPermaLink="true">https://qwen.ai/blog?id=qvq-max-preview</guid>
-      <pubDate>Thu, 27 Mar 2025 16:00:04 +0000</pubDate>
-    </item>
-    <item>
-      <title>Qwen2.5 Omni: See, Hear, Talk, Write, Do It All!</title>
-      <link>https://qwen.ai/blog?id=qwen2.5-omni</link>
-      <description>We release Qwen2.5-Omni, the new flagship end-to-end multimodal model in the Qwen series.</description>
-      <guid isPermaLink="true">https://qwen.ai/blog?id=qwen2.5-omni</guid>
-      <pubDate>Wed, 26 Mar 2025 16:00:45 +0000</pubDate>
-    </item>
-    <item>
-      <title>Qwen2.5-VL-32B: Smarter and Lighter</title>
-      <link>https://qwen.ai/blog?id=qwen2.5-vl-32b</link>
-      <description>Building on the Qwen2.5-VL series, we continued to optimize the model using reinforcement learning and open-sourced the new VL model with the beloved 32B parameter scale under the Apache 2.0 license — Qwen2.5-VL-32B-Instruct.</description>
-      <guid isPermaLink="true">https://qwen.ai/blog?id=qwen2.5-vl-32b</guid>
-      <pubDate>Sun, 23 Mar 2025 16:00:04 +0000</pubDate>
-    </item>
-    <item>
-      <title>QwQ-32B: Embracing the Power of Reinforcement Learning</title>
-      <link>https://qwen.ai/blog?id=qwq-32b</link>
-      <description>We are excited to introduce QwQ-32B, a model with 32 billion parameters that achieves performance comparable to DeepSeek-R1, which boasts 671 billion parameters (with 37 billion activated).</description>
-      <guid isPermaLink="true">https://qwen.ai/blog?id=qwq-32b</guid>
-      <pubDate>Wed, 05 Mar 2025 16:00:04 +0000</pubDate>
-    </item>
-    <item>
-      <title>&lt;think&gt;...&lt;/think&gt; QwQ-Max-Preview</title>
-      <link>https://qwen.ai/blog?id=qwq-max-preview</link>
-      <description>We’re happy to unveil QwQ-Max-Preview , the latest advancement in the Qwen series, designed to push the boundaries of deep reasoning and versatile problem-solving.</description>
-      <guid isPermaLink="true">https://qwen.ai/blog?id=qwq-max-preview</guid>
-      <pubDate>Mon, 24 Feb 2025 18:00:04 +0000</pubDate>
-    </item>
-    <item>
-      <title>Qwen2.5-Max: Exploring the Intelligence of Large-scale MoE Model</title>
-      <link>https://qwen.ai/blog?id=qwen2.5-max</link>
-      <description>Concurrently, we are developing Qwen2.5-Max, a large-scale MoE model that has been pretrained on over 20 trillion tokens and further post-trained with curated Supervised Fine-Tuning (SFT) and Reinforcement Learning from Human Feedback (RLHF) methodologies.</description>
-      <guid isPermaLink="true">https://qwen.ai/blog?id=qwen2.5-max</guid>
-      <pubDate>Tue, 28 Jan 2025 15:00:04 +0000</pubDate>
-    </item>
-    <item>
-      <title>Qwen2.5-1M: Deploy Your Own Qwen with Context Length up to 1M Tokens</title>
-      <link>https://qwen.ai/blog?id=qwen2.5-1m</link>
-      <description>Two months after upgrading Qwen2.5-Turbo to support context length up to one million tokens, we are back with the open-source Qwen2.5-1M models and the corresponding inference framework support.</description>
-      <guid isPermaLink="true">https://qwen.ai/blog?id=qwen2.5-1m</guid>
-      <pubDate>Sun, 26 Jan 2025 16:00:03 +0000</pubDate>
-    </item>
-    <item>
-      <title>Qwen2.5 VL! Qwen2.5 VL! Qwen2.5 VL!</title>
-      <link>https://qwen.ai/blog?id=qwen2.5-vl</link>
-      <description>We release Qwen2.5-VL, the new flagship vision-language model of Qwen and also a significant leap from the previous Qwen2-VL.</description>
-      <guid isPermaLink="true">https://qwen.ai/blog?id=qwen2.5-vl</guid>
-      <pubDate>Sun, 26 Jan 2025 11:08:30 +0000</pubDate>
-    </item>
-    <item>
-      <title>Global-batch load balance almost free lunch to improve your MoE LLM training</title>
-      <link>https://qwen.ai/blog?id=global-load-balance</link>
-      <description>The Mixture-of-Experts (MoEs) architecture has become a popular model-parameter-scale-up technique.</description>
-      <guid isPermaLink="true">https://qwen.ai/blog?id=global-load-balance</guid>
-      <pubDate>Mon, 20 Jan 2025 16:00:03 +0000</pubDate>
-    </item>
-    <item>
-      <title>Towards Effective Process Supervision in Mathematical Reasoning</title>
-      <link>https://qwen.ai/blog?id=qwen2.5-math-prm</link>
-      <description>Today, we release a new state-of-the-art PRM that outperforms existing open-source alternatives for future research in building process supervision models.</description>
-      <guid isPermaLink="true">https://qwen.ai/blog?id=qwen2.5-math-prm</guid>
-      <pubDate>Mon, 13 Jan 2025 16:00:03 +0000</pubDate>
-    </item>
-    <item>
-      <title>QVQ: To See the World with Wisdom</title>
-      <link>https://qwen.ai/blog?id=qvq-72b-preview</link>
-      <description>Imagine an AI that can look at a complex physics problem, and methodically reason its way to a solution with the confidence of a master physicist. This vision inspired us to create QVQ - an open-weight model for multimodal reasoning, built upon Qwen2-VL-72B.</description>
-      <guid isPermaLink="true">https://qwen.ai/blog?id=qvq-72b-preview</guid>
-      <pubDate>Tue, 24 Dec 2024 16:00:03 +0000</pubDate>
-    </item>
-    <item>
-      <title>QwQ: Reflect Deeply on the Boundaries of the Unknown</title>
-      <link>https://qwen.ai/blog?id=qwq-32b-preview</link>
-      <description>What does it mean to think, to question, to understand? These are the deep waters that QwQ (Qwen with Questions) wades into.</description>
-      <guid isPermaLink="true">https://qwen.ai/blog?id=qwq-32b-preview</guid>
-      <pubDate>Wed, 27 Nov 2024 16:00:03 +0000</pubDate>
-    </item>
-    <item>
-      <title>Extending the Context Length to 1M Tokens!</title>
-      <link>https://qwen.ai/blog?id=qwen2.5-turbo</link>
-      <description>After the release of Qwen2.5, we heard the community’s demand for processing longer contexts. In recent months, we have made many optimizations for the model capabilities and inference performance of extremely long context.</description>
-      <guid isPermaLink="true">https://qwen.ai/blog?id=qwen2.5-turbo</guid>
-      <pubDate>Thu, 14 Nov 2024 16:00:03 +0000</pubDate>
-    </item>
-    <item>
-      <title>Qwen2.5-Coder Series: Powerful, Diverse, Practical.</title>
-      <link>https://qwen.ai/blog?id=qwen2.5-coder-family</link>
-      <description>Today, we are excited to open source the “Powerful”, “Diverse”, and “Practical” Qwen2.5-Coder series, dedicated to continuously promoting the development of Open CodeLLMs.</description>
-      <guid isPermaLink="true">https://qwen.ai/blog?id=qwen2.5-coder-family</guid>
-      <pubDate>Mon, 11 Nov 2024 16:00:02 +0000</pubDate>
-    </item>
-    <item>
-      <title>Qwen2.5: A Party of Foundation Models!</title>
-      <link>https://qwen.ai/blog?id=qwen2.5</link>
-      <description>Today, we are excited to introduce the latest addition to the Qwen family: Qwen2.5. We are announcing what might be the largest opensource release in history! Let’s get the party started!</description>
-      <guid isPermaLink="true">https://qwen.ai/blog?id=qwen2.5</guid>
-      <pubDate>Wed, 18 Sep 2024 16:00:04 +0000</pubDate>
-    </item>
-    <item>
-      <title>Qwen2.5-LLM: Extending the boundary of LLMs</title>
-      <link>https://qwen.ai/blog?id=qwen2.5-llm</link>
-      <description>In this blog, we delve into the details of our latest Qwen2.5 series language models.</description>
-      <guid isPermaLink="true">https://qwen.ai/blog?id=qwen2.5-llm</guid>
-      <pubDate>Wed, 18 Sep 2024 16:00:03 +0000</pubDate>
-    </item>
-    <item>
-      <title>Qwen2.5-Coder: Code More, Learn More!</title>
-      <link>https://qwen.ai/blog?id=qwen2.5-coder</link>
-      <description>Today, we are excited to announce the release of the next generation of open-source coding models, Qwen2.5-Coder, and officially rename CodeQwen to Qwen-Coder.</description>
-      <guid isPermaLink="true">https://qwen.ai/blog?id=qwen2.5-coder</guid>
-      <pubDate>Wed, 18 Sep 2024 16:00:02 +0000</pubDate>
-    </item>
-    <item>
-      <title>Qwen2.5-Math: The world's leading open-sourced mathematical LLMs</title>
-      <link>https://qwen.ai/blog?id=qwen2.5-math</link>
-      <description>Today, we have upgraded it and open-sourced Qwen2.5-Math series, including base models Qwen2.5-Math-1.5B/7B/72B, instruction-tuned models Qwen2.5-Math-1.5B/7B/72B-Instruct, and mathematical reward model Qwen2.5-Math-RM-72B.</description>
-      <guid isPermaLink="true">https://qwen.ai/blog?id=qwen2.5-math</guid>
-      <pubDate>Wed, 18 Sep 2024 16:00:01 +0000</pubDate>
-    </item>
-    <item>
-      <title>Qwen2-VL: To See the World More Clearly</title>
-      <link>https://qwen.ai/blog?id=qwen2-vl</link>
-      <description>After a year’s relentless efforts, today we are thrilled to release Qwen2-VL! Qwen2-VL is the latest version of the vision language models based on Qwen2 in the Qwen model familities.</description>
-      <guid isPermaLink="true">https://qwen.ai/blog?id=qwen2-vl</guid>
-      <pubDate>Wed, 28 Aug 2024 16:24:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>Qwen2-Audio: Chat with Your Voice!</title>
-      <link>https://qwen.ai/blog?id=qwen2-audio</link>
-      <description>Today, we release Qwen2-Audio, the next version of Qwen-Audio, which is capable of accepting audio and text inputs and generating text outputs.</description>
-      <guid isPermaLink="true">https://qwen.ai/blog?id=qwen2-audio</guid>
-      <pubDate>Fri, 09 Aug 2024 08:18:19 +0000</pubDate>
-    </item>
-    <item>
-      <title>Introducing Qwen2-Math</title>
-      <link>https://qwen.ai/blog?id=qwen2-math</link>
-      <description>Qwen2-Math is a series of specialized math language models built upon the Qwen2 LLMs, which significantly outperforms the mathematical capabilities of open-source models and even closed-source models (e.g., GPT-4o).</description>
-      <guid isPermaLink="true">https://qwen.ai/blog?id=qwen2-math</guid>
-      <pubDate>Wed, 07 Aug 2024 16:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>Hello Qwen2</title>
-      <link>https://qwen.ai/blog?id=qwen2</link>
-      <description>After months of efforts, we are pleased to announce the evolution from Qwen1.5 to Qwen2.</description>
-      <guid isPermaLink="true">https://qwen.ai/blog?id=qwen2</guid>
-      <pubDate>Thu, 06 Jun 2024 16:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>Generalizing an LLM from 8k to 1M Context using Qwen-Agent</title>
-      <link>https://qwen.ai/blog?id=qwen-agent-2405</link>
-      <description>We’ve created an agent using Qwen2 models with an 8k context size to understand documents with 1M tokens, surpassing RAG and native long-context models.</description>
-      <guid isPermaLink="true">https://qwen.ai/blog?id=qwen-agent-2405</guid>
-      <pubDate>Thu, 06 Jun 2024 03:59:59 +0000</pubDate>
-    </item>
-    <item>
-      <title>Notes on Qwen-Max-0428</title>
-      <link>https://qwen.ai/blog?id=qwen-max-0428</link>
-      <description>Previously, we opensourced a series of Qwen1.5 model ranging from 0.5 to 110 billion parameters. Now, we release a larger model, Qwen-Max-0428.</description>
-      <guid isPermaLink="true">https://qwen.ai/blog?id=qwen-max-0428</guid>
-      <pubDate>Sat, 11 May 2024 10:10:00 +0000</pubDate>
+      <pubDate>Thu, 13 Nov 2025 04:59:26 +0800</pubDate>
     </item>
   </channel>
 </rss>
