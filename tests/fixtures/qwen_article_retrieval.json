@@ -32,17 +32,17 @@
         }
       },
       {
-        "id": "bbd42903-2a6c-434d-acfe-b1266a449b0a",
+        "id": "8865c9dc-9833-4aa3-8c74-81c244bec7b0",
         "type": "qwen_ai",
-        "title": "Qwen-Image-Edit-2511: Improve Consistency",
-        "path": "qwen-image-edit-2511",
+        "title": "Qwen3.8-Flash-Next: A New Architecture, Towards Ultimate Cost-Efficiency",
+        "path": "qwen3.8-flash-next",
         "language": "en-US",
         "extra": {
-          "date": "2025-12-23T13:08:30+08:00",
+          "date": "2026-08-26T20:30:00+08:00",
           "tags": ["Open-Source"],
           "author": "QwenTeam",
           "description": "",
-          "introduction": "We are excited to introduce Qwen-Image-Edit-2511."
+          "introduction": "In this release we are opening the weights of Qwen3.8-Flash-Next, a multimodal MoE model that also serves as an early preview of the architecture used in Qwen4."
         }
       }
     ]

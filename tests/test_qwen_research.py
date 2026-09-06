@@ -101,7 +101,7 @@ class QwenResearchJobTests(unittest.TestCase):
             [
                 "E-Commerce Bench: Long-Horizon Operations, Multi-Dimensional Evaluation",
                 "Qwen-Drive-1.0: An Initial Step towards a Vision-Language Foundation Model for Autonomous Driving",
-                "Qwen-Image-Edit-2511: Improve Consistency",
+                "Qwen3.8-Flash-Next: A New Architecture, Towards Ultimate Cost-Efficiency",
             ],
         )
         self.assertEqual(
@@ -109,13 +109,17 @@ class QwenResearchJobTests(unittest.TestCase):
             [
                 "https://qwen.ai/blog?id=e-commerce-bench",
                 "https://qwen.ai/blog?id=qwen-drive-1.0",
-                "https://qwen.ai/blog?id=qwen-image-edit-2511",
+                "https://qwen.ai/blog?id=qwen3.8-flash-next",
             ],
         )
         self.assertIn("Agent benchmarks", items[0].findtext("description") or "")
         self.assertIn("Qwen-Drive-1.0", items[1].findtext("description") or "")
+        self.assertIn("Qwen3.8-Flash-Next", items[2].findtext("description") or "")
         self.assertTrue(
             (items[0].findtext("pubDate") or "").startswith("Thu, 03 Sep 2026")
+        )
+        self.assertTrue(
+            (items[2].findtext("pubDate") or "").startswith("Wed, 26 Aug 2026")
         )
 
     @patch("src.jobs.json_list_api.create_retry_session")
