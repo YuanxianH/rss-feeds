@@ -1,0 +1,50 @@
+{
+  "success": true,
+  "request_id": "fixture",
+  "data": {
+    "articles": [
+      {
+        "id": "1d0eb6cc-a2bb-451a-9b10-eec572c358de",
+        "type": "qwen_ai",
+        "title": "E-Commerce Bench: Long-Horizon Operations, Multi-Dimensional Evaluation",
+        "path": "e-commerce-bench",
+        "language": "en-US",
+        "extra": {
+          "date": "2026-09-03T10:00:00+08:00",
+          "tags": ["Open-Source"],
+          "author": "QwenTeam",
+          "description": "",
+          "introduction": "Agent benchmarks over the past few years have mostly followed one pattern. A goal is handed to the model, and the model tries to reach it within a bounded number of turns."
+        }
+      },
+      {
+        "id": "6f8fb603-12d5-4ade-88c8-08b099131af9",
+        "type": "qwen_ai",
+        "title": "Qwen-Drive-1.0: An Initial Step towards a Vision-Language Foundation Model for Autonomous Driving",
+        "path": "qwen-drive-1.0",
+        "language": "en-US",
+        "extra": {
+          "date": "2026-09-03T08:00:00+08:00",
+          "tags": ["Open-Source"],
+          "author": "QwenTeam",
+          "description": "",
+          "introduction": "We introduce Qwen-Drive-1.0, the first vision-language foundation model for autonomous driving."
+        }
+      },
+      {
+        "id": "bbd42903-2a6c-434d-acfe-b1266a449b0a",
+        "type": "qwen_ai",
+        "title": "Qwen-Image-Edit-2511: Improve Consistency",
+        "path": "qwen-image-edit-2511",
+        "language": "en-US",
+        "extra": {
+          "date": "2025-12-23T13:08:30+08:00",
+          "tags": ["Open-Source"],
+          "author": "QwenTeam",
+          "description": "",
+          "introduction": "We are excited to introduce Qwen-Image-Edit-2511."
+        }
+      }
+    ]
+  }
+}

@@ -264,10 +264,11 @@ jobs:
       max_pages: 10
       page_size: 50
 
-  # Qwen Research Index（CSR 页面，列表来自 page_config JSON 数组）
+  # Qwen Research Index。页面会把旧 page_config 和 /api/v2/article/retrieval
+  # 拼在一起；2026 年新文（E-Commerce Bench、Qwen-Drive-1.0 等）只在 retrieval 里。
   - type: "json_list_api"
     name: "Qwen Research Index"
-    api_url: "https://qwen.ai/api/page_config?code=research.research-list"
+    api_url: "https://qwen.ai/api/v2/article/retrieval?type=qwen_ai&language=en-US"
     method: "GET"
     article_base_url: "https://qwen.ai/blog"
     output: "qwen_research.xml"
@@ -277,11 +278,12 @@ jobs:
     catalog:
       section: "research"
     fields:
+      list: "data.articles"
       title: ["title"]
-      description: ["description", "introduction"]
-      author: ["author", "authors"]
-      date: ["date"]
-      slug: ["id"]
+      description: ["extra.description", "extra.introduction"]
+      author: ["extra.author", "author"]
+      date: ["extra.date"]
+      slug: ["path"]
       url_template: "https://qwen.ai/blog?id={slug}"
     request:
       headers:
