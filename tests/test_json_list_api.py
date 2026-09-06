@@ -120,6 +120,32 @@ class JsonListApiHelperTests(unittest.TestCase):
             "https://qwen.ai/blog?id=gspo",
         )
 
+    def test_article_to_item_reads_nested_extra_fields(self):
+        item = article_to_item(
+            {
+                "title": "E-Commerce Bench",
+                "path": "e-commerce-bench",
+                "extra": {
+                    "date": "2026-09-03T10:00:00+08:00",
+                    "description": "",
+                    "introduction": "Agent benchmarks over the past few years.",
+                    "author": "QwenTeam",
+                },
+            },
+            article_base_url="https://qwen.ai/blog",
+            fields={
+                "slug": ["path"],
+                "description": ["extra.description", "extra.introduction"],
+                "author": ["extra.author"],
+                "date": ["extra.date"],
+                "url_template": "https://qwen.ai/blog?id={slug}",
+            },
+        )
+        self.assertEqual(item["link"], "https://qwen.ai/blog?id=e-commerce-bench")
+        self.assertEqual(item["description"], "Agent benchmarks over the past few years.")
+        self.assertEqual(item["pubDate"], "2026-09-03T10:00:00+08:00")
+        self.assertEqual(item["author"], "QwenTeam")
+
     def test_article_to_item_uses_url_template_and_description_fallback(self):
         item = article_to_item(
             {

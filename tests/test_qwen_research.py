@@ -12,9 +12,10 @@ from src.jobs.base import JobContext
 from src.jobs.json_list_api import JsonListApiJob
 
 ROOT = Path(__file__).resolve().parents[1]
-FIXTURES = Path(__file__).parent / "fixtures"
-FIXTURE = FIXTURES / "qwen_research_list.json"
-QWEN_API_URL = "https://qwen.ai/api/page_config?code=research.research-list"
+FIXTURE = Path(__file__).parent / "fixtures" / "qwen_article_retrieval.json"
+QWEN_API_URL = (
+    "https://qwen.ai/api/v2/article/retrieval?type=qwen_ai&language=en-US"
+)
 
 
 class FakeResponse:
@@ -53,12 +54,12 @@ def _qwen_job() -> dict:
     raise AssertionError("Qwen Research Index job missing from config.yaml")
 
 
-def _fixture() -> list:
+def _fixture() -> dict:
     return json.loads(FIXTURE.read_text(encoding="utf-8"))
 
 
 class QwenResearchConfigTests(unittest.TestCase):
-    def test_config_targets_research_list_api(self):
+    def test_config_targets_article_retrieval_api(self):
         job = _qwen_job()
         self.assertEqual(job["type"], "json_list_api")
         self.assertEqual(job["api_url"], QWEN_API_URL)
@@ -66,21 +67,24 @@ class QwenResearchConfigTests(unittest.TestCase):
         self.assertEqual(job["output"], "qwen_research.xml")
         self.assertEqual(job["link"], "https://qwen.ai/research")
         self.assertEqual(job["catalog"]["section"], "research")
-        self.assertEqual(job["fields"]["slug"], ["id"])
+        self.assertEqual(job["fields"]["list"], "data.articles")
+        self.assertEqual(job["fields"]["slug"], ["path"])
         self.assertEqual(
             job["fields"]["url_template"], "https://qwen.ai/blog?id={slug}"
         )
-        self.assertEqual(job["fields"]["description"], ["description", "introduction"])
+        self.assertEqual(
+            job["fields"]["description"],
+            ["extra.description", "extra.introduction"],
+        )
+        self.assertEqual(job["fields"]["date"], ["extra.date"])
         self.assertEqual(job["options"]["max_pages"], 1)
         self.assertEqual(job["options"]["sort"], "date_desc")
 
 
 class QwenResearchJobTests(unittest.TestCase):
     @patch("src.jobs.json_list_api.create_retry_session")
-    def test_job_writes_rss_from_root_array_newest_first(self, create_session):
-        session = FakeSession(
-            [FakeResponse(_fixture(), QWEN_API_URL)]
-        )
+    def test_job_writes_latest_retrieval_items_first(self, create_session):
+        session = FakeSession([FakeResponse(_fixture(), QWEN_API_URL)])
         create_session.return_value = session
         job = _qwen_job()
 
@@ -90,35 +94,38 @@ class QwenResearchJobTests(unittest.TestCase):
 
         self.assertTrue(result.success)
         self.assertEqual(len(session.calls), 1)
-        self.assertEqual(session.calls[0]["method"], "GET")
         self.assertEqual(session.calls[0]["url"], QWEN_API_URL)
         items = root.findall("./channel/item")
         self.assertEqual(
             [item.findtext("title") for item in items],
             [
-                "GSPO: Towards Scalable Reinforcement Learning for Language Models",
-                "Code with CodeQwen1.5",
-                "Chinese CLIP: Contrastive Vision-Language Pretraining in Chinese",
+                "E-Commerce Bench: Long-Horizon Operations, Multi-Dimensional Evaluation",
+                "Qwen-Drive-1.0: An Initial Step towards a Vision-Language Foundation Model for Autonomous Driving",
+                "Qwen3.8-Flash-Next: A New Architecture, Towards Ultimate Cost-Efficiency",
             ],
         )
         self.assertEqual(
             [item.findtext("link") for item in items],
             [
-                "https://qwen.ai/blog?id=gspo",
-                "https://qwen.ai/blog?id=codeqwen1.5",
-                "https://qwen.ai/blog?id=chinese-clip",
+                "https://qwen.ai/blog?id=e-commerce-bench",
+                "https://qwen.ai/blog?id=qwen-drive-1.0",
+                "https://qwen.ai/blog?id=qwen3.8-flash-next",
             ],
         )
-        self.assertIn(
-            "Reinforcement Learning has emerged as a pivotal paradigm",
-            items[0].findtext("description") or "",
+        self.assertIn("Agent benchmarks", items[0].findtext("description") or "")
+        self.assertIn("Qwen-Drive-1.0", items[1].findtext("description") or "")
+        self.assertIn("Qwen3.8-Flash-Next", items[2].findtext("description") or "")
+        self.assertTrue(
+            (items[0].findtext("pubDate") or "").startswith("Thu, 03 Sep 2026")
         )
-        self.assertTrue((items[0].findtext("pubDate") or "").startswith("Sun, 27 Jul 2025"))
+        self.assertTrue(
+            (items[2].findtext("pubDate") or "").startswith("Wed, 26 Aug 2026")
+        )
 
     @patch("src.jobs.json_list_api.create_retry_session")
-    def test_empty_array_fails(self, create_session):
+    def test_empty_articles_fails(self, create_session):
         create_session.return_value = FakeSession(
-            [FakeResponse([], QWEN_API_URL)]
+            [FakeResponse({"success": True, "data": {"articles": []}}, QWEN_API_URL)]
         )
         job = _qwen_job()
 

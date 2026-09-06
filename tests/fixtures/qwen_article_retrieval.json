@@ -1,0 +1,50 @@
+{
+  "success": true,
+  "request_id": "fixture",
+  "data": {
+    "articles": [
+      {
+        "id": "1d0eb6cc-a2bb-451a-9b10-eec572c358de",
+        "type": "qwen_ai",
+        "title": "E-Commerce Bench: Long-Horizon Operations, Multi-Dimensional Evaluation",
+        "path": "e-commerce-bench",
+        "language": "en-US",
+        "extra": {
+          "date": "2026-09-03T10:00:00+08:00",
+          "tags": ["Open-Source"],
+          "author": "QwenTeam",
+          "description": "",
+          "introduction": "Agent benchmarks over the past few years have mostly followed one pattern. A goal is handed to the model, and the model tries to reach it within a bounded number of turns."
+        }
+      },
+      {
+        "id": "6f8fb603-12d5-4ade-88c8-08b099131af9",
+        "type": "qwen_ai",
+        "title": "Qwen-Drive-1.0: An Initial Step towards a Vision-Language Foundation Model for Autonomous Driving",
+        "path": "qwen-drive-1.0",
+        "language": "en-US",
+        "extra": {
+          "date": "2026-09-03T08:00:00+08:00",
+          "tags": ["Open-Source"],
+          "author": "QwenTeam",
+          "description": "",
+          "introduction": "We introduce Qwen-Drive-1.0, the first vision-language foundation model for autonomous driving."
+        }
+      },
+      {
+        "id": "8865c9dc-9833-4aa3-8c74-81c244bec7b0",
+        "type": "qwen_ai",
+        "title": "Qwen3.8-Flash-Next: A New Architecture, Towards Ultimate Cost-Efficiency",
+        "path": "qwen3.8-flash-next",
+        "language": "en-US",
+        "extra": {
+          "date": "2026-08-26T20:30:00+08:00",
+          "tags": ["Open-Source"],
+          "author": "QwenTeam",
+          "description": "",
+          "introduction": "In this release we are opening the weights of Qwen3.8-Flash-Next, a multimodal MoE model that also serves as an early preview of the architecture used in Qwen4."
+        }
+      }
+    ]
+  }
+}
