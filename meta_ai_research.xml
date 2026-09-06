@@ -7,7 +7,14 @@
     <docs>http://www.rssboard.org/rss-specification</docs>
     <generator>RSS Creator</generator>
     <language>zh-CN</language>
-    <lastBuildDate>Sun, 06 Sep 2026 05:36:58 +0000</lastBuildDate>
+    <lastBuildDate>Sun, 06 Sep 2026 10:28:43 +0000</lastBuildDate>
+    <item>
+      <title>Alignment-Free Text-Audiobox for Voice Dubbing and Full-Duplex Dialogue Synthesis</title>
+      <link>https://ai.meta.com/research/publications/alignment-free-text-audiobox-for-voice-dubbing-and-full-duplex-dialogue-synthesis/</link>
+      <description>Min-Jae Hwang, Sho Inoue, Bokai Yu, David Kant, Dongmin Hyun, Dorian Desblancs, Gregory Antonovsky, Oleg Repin, Zehai Tu, Juan Pino, Wei-Ning Hsu</description>
+      <guid isPermaLink="true">https://ai.meta.com/research/publications/alignment-free-text-audiobox-for-voice-dubbing-and-full-duplex-dialogue-synthesis/</guid>
+      <pubDate>Sun, 06 Sep 2026 00:00:00 +0000</pubDate>
+    </item>
     <item>
       <title>WaiT for the Signal: Simple Frequency-Aware Flow-Matching</title>
       <link>https://ai.meta.com/research/publications/wait-for-the-signal-simple-frequency-aware-flow-matching/</link>
@@ -84,13 +91,6 @@
       <description>Rohit Patel, Alexandre Rezende, Steven McClain</description>
       <guid isPermaLink="true">https://ai.meta.com/research/publications/gim-evaluating-models-via-tasks-that-integrate-multiple-cognitive-domains/</guid>
       <pubDate>Sun, 17 May 2026 00:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>NeuralSet: A High-Performing Python Package for Neuro-AI</title>
-      <link>https://ai.meta.com/research/publications/neuralset-a-high-performing-python-package-for-neuro-ai/</link>
-      <description>Jean Remi King, Corentin Bel, Linnea Evanson, Julien Gadonneix, Sophia Houhamdi, Jarod Levy, Josephine Raugel, Andrea Santos Revilla, Mingfang (Lucy) Zhang, Julie Bonnaire, Charlotte Caucheteux, Alexandre Défossez, Théo Desbordes, Pablo Diego-Simón, Shubh Khanna, Juliette Millet, Pierre Orhan, Saarang Panchavati, Antoine Ratouchniak, Alexis Thual, Teon Brooks, Katelyn Begany, Yohann Benchetrit, Marlene Careil, Hubert Jacob Banville, Stéphane d'Ascoli, Simon Dahan, Jérémy Rapin</description>
-      <guid isPermaLink="true">https://ai.meta.com/research/publications/neuralset-a-high-performing-python-package-for-neuro-ai/</guid>
-      <pubDate>Tue, 12 May 2026 00:00:00 +0000</pubDate>
     </item>
     <item>
       <title>Energy-Based Models for Atomic-Resolution Protein Conformations | Facebook AI Research</title>
