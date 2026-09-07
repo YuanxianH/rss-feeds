@@ -7,7 +7,14 @@
     <docs>http://www.rssboard.org/rss-specification</docs>
     <generator>RSS Creator</generator>
     <language>zh-CN</language>
-    <lastBuildDate>Mon, 07 Sep 2026 15:34:32 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 07 Sep 2026 19:39:56 +0000</lastBuildDate>
+    <item>
+      <title>Repeat-After-Me: Black-Box Adaptive Visual Prompt Injection</title>
+      <link>https://ai.meta.com/research/publications/repeat-after-me-black-box-adaptive-visual-prompt-injection/</link>
+      <description>Sizhe Chen, Yu-Lin Tsai, Ivan Evtimov, Kamalika Chaudhuri, Raluca Ada Popa, David Wagner, Arman Zharmagambetov</description>
+      <guid isPermaLink="true">https://ai.meta.com/research/publications/repeat-after-me-black-box-adaptive-visual-prompt-injection/</guid>
+      <pubDate>Mon, 07 Sep 2026 00:00:00 +0000</pubDate>
+    </item>
     <item>
       <title>Alignment-Free Text-Audiobox for Voice Dubbing and Full-Duplex Dialogue Synthesis</title>
       <link>https://ai.meta.com/research/publications/alignment-free-text-audiobox-for-voice-dubbing-and-full-duplex-dialogue-synthesis/</link>
@@ -84,13 +91,6 @@
       <description>Dongyan Lin, Phillip Rust, Angel Villar Corrales, Alvin W. M. Tan, Mahi Luthra, Charles-Eric Saint-James, Rashel Moritz, Sheila Krogh-Jespersen, Vanessa Stark, Surya Parimi, Jiayi Shen, Youssef Benchekroun, Yosuke Higuchi, Martin Gleize, Tom Fizycki, Nicolas Hamilakis, Manel Khentout, Sho Tsuji, Balázs Kégl, Juan Pino, Michael C. Frank, Emmanuel Dupoux</description>
       <guid isPermaLink="true">https://ai.meta.com/research/publications/egobabyvlm-benchmarking-cross-modal-learning-from-naturalistic-egocentric-video-data/</guid>
       <pubDate>Tue, 19 May 2026 00:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>GIM: Evaluating models via tasks that integrate multiple cognitive domains</title>
-      <link>https://ai.meta.com/research/publications/gim-evaluating-models-via-tasks-that-integrate-multiple-cognitive-domains/</link>
-      <description>Rohit Patel, Alexandre Rezende, Steven McClain</description>
-      <guid isPermaLink="true">https://ai.meta.com/research/publications/gim-evaluating-models-via-tasks-that-integrate-multiple-cognitive-domains/</guid>
-      <pubDate>Sun, 17 May 2026 00:00:00 +0000</pubDate>
     </item>
     <item>
       <title>Energy-Based Models for Atomic-Resolution Protein Conformations | Facebook AI Research</title>
