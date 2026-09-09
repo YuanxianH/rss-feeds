@@ -7,7 +7,43 @@
     <docs>http://www.rssboard.org/rss-specification</docs>
     <generator>RSS Creator</generator>
     <language>zh-CN</language>
-    <lastBuildDate>Wed, 09 Sep 2026 08:46:20 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 09 Sep 2026 13:31:44 +0000</lastBuildDate>
+    <item>
+      <title>Chain-of-Experience for Continual LLM Improvement</title>
+      <link>https://seed.bytedance.com/zh/public_papers/chain-of-experience-for-continual-llm-improvement</link>
+      <description>Humans continuously learn from experience, whereas conventional large language model (LLM) evaluations ignore the models' ability to improve through inference-time interaction. In this paper, we study how LLMs learn from iterative experience at test time, a setting we refer to as Chain-of-Experience (CoE), where models accumulate experiential traces through iterative interactions with self or environmental feedback to form a continual improvement loop beyond zero-shot inference. We instantiate CoE with diverse feedback mechanisms, including model self-feedback and environmental signals such as correctness or public coding test pass rates, and evaluate across math, coding, and knowledge domains using 8 LLMs, including GPT-5, Gemini-2.5 Pro, Claude-4.5 Sonnet. Our study shows that leveraging iterative experience consistently outperforms feedback-free baselines, achieving substantial gains with self feedback alone, alongside a 5.6% overall improvement and 19% lower API cost across tasks and models. We further show that combining complementary feedback channels (e.g., model and correctness signals) yields additional gains, and that CoE delivers higher accuracy per token than existing test-time strategies. We observe a positive correlation between LLM base ability and improvement capacity, and show that models remain robust under weak or spurious feedback, with different feedback contributing to distinct improvement aspects and most gains emerging early in the iterations.
+
+arXiv: https://arxiv.org/pdf/2608.18027</description>
+      <guid isPermaLink="false">1788945878515</guid>
+      <pubDate>Tue, 18 Aug 2026 20:00:00 +0800</pubDate>
+    </item>
+    <item>
+      <title>Harness-IF: Evaluating Instruction Following Across Instruction Surfaces in Coding Agents</title>
+      <link>https://seed.bytedance.com/zh/public_papers/harness-if-evaluating-instruction-following-across-instruction-surfaces-in-coding-agents</link>
+      <description>When a coding agent obeys a rule, it may simply have been going to do that anyway. Existing instruction-following benchmarks cannot tell the difference: they concentrate rules in the user turn, while coding-agent benchmarks emphasize final task success. We introduce Harness-IF, which scores operational rules one at a time from execution evidence: 60 realistic multi-turn coding items drawn from a 642-rule library, 256 rules receiving verdicts, placed on the five configurable surfaces a deployed agent reads. To separate compliance from coincidence we introduce Against-Prior Accuracy (AP-Acc), which scores only rules labeled as opposing unprompted defaults, observed by re-running tasks with the rule withheld across nine probe builds and curated otherwise. Across 12 frontier models, accuracy spans 72.1-85.9% and AP-Acc 66.1-78.6%; every model is worse on against-prior rules, by 3.6 to 7.4 points (mean 5.81), and the direction survives a common-support analysis with item-clustered intervals. Aggregate scores therefore overstate compliance by a model-specific margin: prior control leaves the top build unchanged and exchanges three adjacent rank pairs. A counterbalanced conflict pilot on nine separate builds adds a second result: pooled precedence does not follow prompt depth, with system prompts, project files, and user instructions ahead of tool and skill descriptions.
+
+arXiv: https://arxiv.org/pdf/2608.11727</description>
+      <guid isPermaLink="false">1788945813291</guid>
+      <pubDate>Wed, 12 Aug 2026 20:00:00 +0800</pubDate>
+    </item>
+    <item>
+      <title>GST-Bench: Can VLMs Develop Global Spatial Awareness from Video?</title>
+      <link>https://seed.bytedance.com/zh/public_papers/gst-bench-can-vlms-develop-global-spatial-awareness-from-video</link>
+      <description>Spatial intelligence is fundamental to embodied agents, yet existing benchmarks focus on local spatial perception from single or few viewpoints, overlooking global spatial awareness over continuous, long-horizon visual streams. To address this limitation, we introduce the Global-Spatial-Temporal Benchmark (GST-Bench), a VQA benchmark for global spatial intelligence in video understanding, comprising human-verified questions derived from 6,790 minutes of synthetically generated video. It requires models to perform accurate spatial inference from novel viewpoints unseen in the input video and to map egocentric observations onto global top-down images. A comprehensive evaluation of 22 state-of-the-art VLMs exposes a striking gap between models and humans: the strongest zero-shot model attains only 42.68, far below the human score of 79.08. To probe the cause of this gap, we construct GST-Bench-Local and find that models, despite strong local spatial understanding under the same task formulation, still fail to consolidate long-horizon observations into a globally consistent scene representation. We further provide GST-Train, a dataset for global spatial reasoning, as a complementary resource to facilitate future research on this challenge.
+
+arXiv: https://arxiv.org/pdf/2608.05747</description>
+      <guid isPermaLink="false">1788945623078</guid>
+      <pubDate>Thu, 06 Aug 2026 20:00:00 +0800</pubDate>
+    </item>
+    <item>
+      <title>Sample-Efficient Learning from Agent Experience</title>
+      <link>https://seed.bytedance.com/zh/public_papers/sample-efficient-learning-from-agent-experience</link>
+      <description>Real-world agent learning is often constrained by costly environment interactions, such as running time-consuming experiments or obtaining human feedback. In-context learning offers a highly sample-efficient way for agents to learn from their own interaction histories, but its gains disappear once that experience is removed from the context. Separately, context distillation provides a mechanism for internalizing contextual information into model weights. However, applying it to agents' interaction histories without sacrificing environment sample efficiency remains underexplored. We term this problem Experience Distillation and develop an implementation that requires no further environment interaction beyond the collected experience. Experiments on 749 curated software-engineering tasks and six text-adventure games show that it retains at least 64.8\% of the gains from in-context learning across both domains, whereas direct supervised fine-tuning on the collected experience recovers only 3.8\%. Compared with classical reinforcement-learning baselines, in-context learning from trial-and-error experience followed by Experience Distillation matches their performance with at least \(9.6\times\) fewer environment samples.
+
+arXiv: https://arxiv.org/pdf/2607.21051</description>
+      <guid isPermaLink="false">1788945719301</guid>
+      <pubDate>Thu, 23 Jul 2026 20:00:00 +0800</pubDate>
+    </item>
     <item>
       <title>EdgeBench: Unveiling Scaling Laws of Learning from Real-World Environments</title>
       <link>https://seed.bytedance.com/zh/public_papers/edgebench-unveiling-scaling-laws-of-learning-from-real-world-environments</link>
@@ -16,6 +52,15 @@
 arXiv: https://arxiv.org/pdf/2607.05155</description>
       <guid isPermaLink="false">1783396707305</guid>
       <pubDate>Mon, 06 Jul 2026 00:00:00 +0800</pubDate>
+    </item>
+    <item>
+      <title>MSQA: A Natively Sourced Multilingual and Multicultural SimpleQA Benchmark</title>
+      <link>https://seed.bytedance.com/zh/public_papers/msqa-a-natively-sourced-multilingual-and-multicultural-simpleqa-benchmark</link>
+      <description>Multilingual fluency often invites a stronger assumption: a model that can speak a user's language must also understand the culture encoded by that language. We call this the Illusion of Cultural Alignment. To test this assumption directly, we introduce MSQA, a benchmark of 1,064 natively sourced questions across 11 language groups, five cultural dimensions, and three difficulty tiers. Unlike translated benchmarks, MSQA targets locally grounded knowledge and reduces shortcuts from English-centric cross-lingual transfer. Evaluating 18 LLMs, we find substantial cultural degradation and a pronounced Locality Effect: cultural competence tracks pre-training exposure more closely than general reasoning ability. We further show that common inference-time remedies do not dissolve the illusion. Models remain overconfident on unfamiliar cultural questions, repeated sampling yields unstable rather than reliable correctness, and retrieval augmentation helps unevenly on long-tail facts. These findings indicate that cultural alignment cannot be inferred from multilingual ability alone and requires deeper intervention than calibration, sampling, or retrieval at inference time
+
+arXiv: https://arxiv.org/pdf/2607.00724</description>
+      <guid isPermaLink="false">1788945520724</guid>
+      <pubDate>Wed, 01 Jul 2026 20:00:00 +0800</pubDate>
     </item>
     <item>
       <title>Towards stable and accurate electron dynamics via neural network based time-dependent variational Monte Carlo</title>
@@ -426,51 +471,6 @@ Fine-tuning on these reference-guided trajectories increases the number of solva
 arXiv: https://arxiv.org/pdf/2603.01223</description>
       <guid isPermaLink="false">1776932888749</guid>
       <pubDate>Sun, 01 Mar 2026 00:00:00 +0800</pubDate>
-    </item>
-    <item>
-      <title>How RL Unlocks the Aha Moment in Geometric Interleaved Reasoning</title>
-      <link>https://seed.bytedance.com/zh/public_papers/how-rl-unlocks-the-aha-moment-in-geometric-interleaved-reasoning</link>
-      <description>Solving complex geometric problems inherently requires interleaved reasoning: a tight alternation between constructing diagrams and performing logical deductions. Although recent Multimodal Large Language Models (MLLMs) have demonstrated strong capabilities in visual generation and plotting, we identify a counter-intuitive and underexplored phenomenon. Naively applying Supervised Fine-Tuning (SFT) on interleaved plot-solution data leads to a substantial degradation in reasoning performance compared to text-only baselines. We argue that this failure stems from a fundamental limitation of SFT, which primarily induces distributional alignment: the model learns to reproduce the surface format of interleaved plotting but fails to internalize the causal dependency between the generated plot and reasoning steps. To overcome this limitation, we propose Faire (Functional alignment for interleaved reasoning), a reinforcement learning framework that enforces three casual constraints to move beyond superficial imitation toward functional alignment. Extensive experiments show that Faire induces a qualitative shift in model behavior in which the plotting is effectively internalized, yielding competitive performance on challenging geometric reasoning benchmarks.
-
-arXiv: https://arxiv.org/pdf/2603.01070</description>
-      <guid isPermaLink="false">1776932253758</guid>
-      <pubDate>Sun, 01 Mar 2026 00:00:00 +0800</pubDate>
-    </item>
-    <item>
-      <title>Steerable Instruction Following Coding Data Synthesis with Actor-Parametric Schema Co-Evolution</title>
-      <link>https://seed.bytedance.com/zh/public_papers/steerable-instruction-following-coding-data-synthesis-with-actor-parametric-schema-co-evolution</link>
-      <description>Interpreting and following human instructions is a critical capability of large language models (LLMs) in automatic programming. However, synthesizing large-scale instruction-paired coding data remains largely unexplored and is particularly challenging when ensuring logical compatibility among multiple constraints. In this study, we propose IFCodeEvolve, an actor-schema co-evolution framework for instruction following coding data generation. By representing instructions as parametric function schema, we construct a library that covers the vast instruction space via dynamic constraint instantiation. Building upon this, Monte Carlo Tree Search (MCTS) sampler is applied to efficiently navigate this space, utilizing actor model feedback as a dynamic termination signal. Furthermore, to progressively explore challenging problems, we introduce a co-evolving paradigm that iteratively advances both the actor model and the schema library, via schema composition and mutation, based on sampler statistics. Empirical results demonstrate that IFCodeEvolve significantly boosts base model performance, with our 32B model achieving parity with proprietary SOTA models. Additionally, we contribute IFCodeBench, a comprehensive human-verified benchmark equipped with solutions and robust AST-based verification.
-
-arXiv: https://arxiv.org/pdf/2604.16322</description>
-      <guid isPermaLink="false">1776933180105</guid>
-      <pubDate>Fri, 27 Feb 2026 00:00:00 +0800</pubDate>
-    </item>
-    <item>
-      <title>CUDA Agent: Large-Scale Agentic RL for High-Performance CUDA Kernel Generation</title>
-      <link>https://seed.bytedance.com/zh/public_papers/cuda-agent-large-scale-agentic-rl-for-high-performance-cuda-kernel-generation</link>
-      <description>GPU kernel optimization is fundamental to modern deep learning but remains a highly specialized task requiring deep hardware expertise. Despite strong performance in general programming, large language models (LLMs) remain uncompetitive with compiler-based systems such as this http URL for CUDA kernel generation. Existing CUDA code generation approaches either rely on training-free refinement or fine-tune models within fixed multi-turn execution-feedback loops, but both paradigms fail to fundamentally improve the model's intrinsic CUDA optimization ability, resulting in limited performance gains. We present CUDA Agent, a large-scale agentic reinforcement learning system that develops CUDA kernel expertise through three components: a scalable data synthesis pipeline, a skill-augmented CUDA development environment with automated verification and profiling to provide reliable reward signals, and reinforcement learning algorithmic techniques enabling stable training. CUDA Agent achieves state-of-the-art results on KernelBench, delivering 100\%, 100\%, and 92\% faster rate over this http URL on KernelBench Level-1, Level-2, and Level-3 splits, outperforming the strongest proprietary models such as Claude Opus 4.5 and Gemini 3 Pro by about 40\% on the hardest Level-3 setting.
-
-arXiv: https://arxiv.org/pdf/2602.24286</description>
-      <guid isPermaLink="false">1776932059895</guid>
-      <pubDate>Fri, 27 Feb 2026 00:00:00 +0800</pubDate>
-    </item>
-    <item>
-      <title>World Guidance: World Modeling in Condition Space for Action Generation</title>
-      <link>https://seed.bytedance.com/zh/public_papers/world-guidance-world-modeling-in-condition-space-for-action-generation</link>
-      <description>Leveraging future observation modeling to facilitate action generation presents a promising avenue for enhancing the capabilities of Vision-Language-Action (VLA) models. However, existing approaches struggle to strike a balance between maintaining efficient, predictable future representations and preserving sufficient fine-grained information to guide precise action generation. To address this limitation, we propose WoG (World Guidance), a framework that maps future observations into compact conditions by injecting them into the action inference pipeline. The VLA is then trained to simultaneously predict these compressed conditions alongside future actions, thereby achieving effective world modeling within the condition space for action inference. We demonstrate that modeling and predicting this condition space not only facilitates fine-grained action generation but also exhibits superior generalization capabilities. Moreover, it learns effectively from substantial human manipulation videos. Extensive experiments across both simulation and real-world environments validate that our method significantly outperforms existing methods based on future prediction.
-
-arXiv: https://arxiv.org/pdf/2602.22010</description>
-      <guid isPermaLink="false">1776933050015</guid>
-      <pubDate>Wed, 25 Feb 2026 00:00:00 +0800</pubDate>
-    </item>
-    <item>
-      <title>FlowPortrait: Reinforcement Learning for Audio-Driven Portrait Video Generation</title>
-      <link>https://seed.bytedance.com/zh/public_papers/flowportrait-reinforcement-learning-for-audio-driven-portrait-video-generation</link>
-      <description>Generating realistic talking-head videos remains challenging due to persistent issues such as imperfect lip synchronization, unnatural motion, and evaluation metrics that correlate poorly with human perception. We propose FlowPortrait, a reinforcement-learning framework for audio-driven portrait animation built on a multimodal backbone for autoregressive audio-to-video generation. FlowPortrait introduces a human-aligned evaluation system based on Multimodal Large Language Models (MLLMs) to assess lip-sync accuracy, expressiveness, and motion quality. These signals are combined with perceptual and temporal consistency regularizers to form a stable composite reward, which is used to post-train the generator via Group Relative Policy Optimization (GRPO). Extensive experiments, including both automatic evaluations and human preference studies, demonstrate that FlowPortrait consistently produces higher-quality talking-head videos, highlighting the effectiveness of reinforcement learning for portrait animation.
-
-arXiv: https://arxiv.org/pdf/2603.00159</description>
-      <guid isPermaLink="false">1776928458300</guid>
-      <pubDate>Wed, 25 Feb 2026 00:00:00 +0800</pubDate>
     </item>
   </channel>
 </rss>
