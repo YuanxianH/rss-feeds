@@ -7,7 +7,7 @@
     <docs>http://www.rssboard.org/rss-specification</docs>
     <generator>RSS Creator</generator>
     <language>zh-CN</language>
-    <lastBuildDate>Thu, 10 Sep 2026 17:31:44 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 10 Sep 2026 20:32:25 +0000</lastBuildDate>
     <item>
       <title>Codex CLI 0.146.1</title>
       <link>https://github.com/openai/codex/releases/tag/rust-v0.146.1</link>
@@ -5723,6 +5723,71 @@ to 256 for app-server, exec, and TUI
 @copyberry</description>
       <guid isPermaLink="false">https://developers.openai.com/codex/changelog#github-release-385887902</guid>
       <pubDate>Wed, 09 Sep 2026 00:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>Codex CLI Python SDK 0.154.0</title>
+      <link>https://github.com/openai/codex/releases/tag/python-v0.154.0</link>
+      <description>Install with
+pip install --upgrade openai-codex==0.154.0
+(Python 3.10 or later). This release includes the matching
+openai-codex-cli-bin==0.154.0
+runtime.
+Add
+max
+and
+ultra
+reasoning-effort values.
+#39662
+Add
+ExternalMessage
+to synchronous and asynchronous
+run()
+and
+turn()
+calls. External content can start a turn or join an active regular turn with tool-level authority; it does not grant user authorization. Consumers receive independent event streams.
+#44086
+Add
+include_turns
+on resume/fork,
+turn_service_tier
+for one newly started turn, and
+source
+metadata. History selection changes the returned response, not model context. Existing defaults are preserved when these options are omitted.
+#44084
+Refresh generated protocol models and notifications, and preserve completion events that arrive before a turn-start response.
+#44032
+,
+#44400
+Check these migrations when upgrading:
+HookMetadata
+wraps its handler in
+.root
+. Replace accesses such as
+hook.command
+with
+hook.root.command
+, checking
+hook.root.handler_type
+before reading handler-specific fields.
+Some previously unknown notifications now have typed payloads. Read named fields instead of
+.params
+; unknown or invalid payloads still use
+UnknownNotification
+.
+Manually constructed or late-joining turn handles receive events from their attachment point. Earlier output is not replayed, so collected results can be partial; attaching after completion can raise
+TransportClosedError
+. Use
+thread.read(include_turns=True)
+for saved history. Handles returned directly by
+thread.turn(...)
+retain events from when their request is sent.
+Custom
+codex_bin
+overrides require CLI 0.151.0 or newer for
+ExternalMessage
+and the new history/per-turn options.</description>
+      <guid isPermaLink="false">https://developers.openai.com/codex/changelog#github-release-386577294</guid>
+      <pubDate>Thu, 10 Sep 2026 00:00:00 +0000</pubDate>
     </item>
   </channel>
 </rss>
