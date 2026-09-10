@@ -7,7 +7,7 @@
     <docs>http://www.rssboard.org/rss-specification</docs>
     <generator>RSS Creator</generator>
     <language>zh-CN</language>
-    <lastBuildDate>Thu, 10 Sep 2026 20:32:25 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 10 Sep 2026 22:58:10 +0000</lastBuildDate>
     <item>
       <title>Codex CLI 0.146.1</title>
       <link>https://github.com/openai/codex/releases/tag/rust-v0.146.1</link>
@@ -5723,6 +5723,30 @@ to 256 for app-server, exec, and TUI
 @copyberry</description>
       <guid isPermaLink="false">https://developers.openai.com/codex/changelog#github-release-385887902</guid>
       <pubDate>Wed, 09 Sep 2026 00:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>Codex CLI Cygwin build inputs and matching source for Windows voice</title>
+      <link>https://github.com/openai/codex/releases/tag/voice-cygwin-108b38cf67cbb731</link>
+      <description>CI-only build tools for native Windows voice releases. These archives are
+not included
+in Codex user packages.
+cygwin-build-inputs.tar.gz
+: 103 pinned Cygwin binary packages and the signed package index used by the offline build installer.
+cygwin-build-sources.tar
+: all 83 corresponding source package archives at the exact versions named by that index. It includes the upstream source, patches, and build recipes provided in Cygwin's
+-src
+packages.
+cygwin-source-map.json
+: each selected binary package mapped to its source archive and the source size and SHA-512 digest from the pinned index.
+CYGWIN-SOURCE-NOTICE.txt
+: source access and licensing notice.
+The binary and source archive SHA-256 pins live in
+.github/scripts/voice-cygwin-snapshot.json
+in the Codex repository. Cygwin describes the licensing terms at
+https://cygwin.com/licensing.html
+. Licenses vary by package; consult the corresponding source and binary package archives for their notices.</description>
+      <guid isPermaLink="false">https://developers.openai.com/codex/changelog#github-release-386594900</guid>
+      <pubDate>Thu, 10 Sep 2026 00:00:00 +0000</pubDate>
     </item>
     <item>
       <title>Codex CLI Python SDK 0.154.0</title>
