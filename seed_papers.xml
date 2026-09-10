@@ -7,7 +7,7 @@
     <docs>http://www.rssboard.org/rss-specification</docs>
     <generator>RSS Creator</generator>
     <language>zh-CN</language>
-    <lastBuildDate>Thu, 10 Sep 2026 03:35:29 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 10 Sep 2026 08:44:12 +0000</lastBuildDate>
     <item>
       <title>Chain-of-Experience for Continual LLM Improvement</title>
       <link>https://seed.bytedance.com/zh/public_papers/chain-of-experience-for-continual-llm-improvement</link>
@@ -61,6 +61,24 @@ arXiv: https://arxiv.org/pdf/2607.05155</description>
 arXiv: https://arxiv.org/pdf/2607.00724</description>
       <guid isPermaLink="false">1788945520724</guid>
       <pubDate>Wed, 01 Jul 2026 20:00:00 +0800</pubDate>
+    </item>
+    <item>
+      <title>A Unified Generative Framework for Scalable Chemical Reaction Network Exploration</title>
+      <link>https://seed.bytedance.com/zh/public_papers/a-unified-generative-framework-for-scalable-chemical-reaction-network-exploration</link>
+      <description>Chemical reaction networks (CRNs) are crucial for understanding reaction mechanisms and guiding chemical synthesis, yet the computational exploration remains limited by the combinatorial growth of chemical space, the reliability of reaction path screening, and the cost of evaluating thermodynamic and kinetic properties. Here, we present ByteCRN, an end-to-end framework for computational CRN exploration that combines chemically informed reaction enumeration with generative transition state modeling. A key component of our framework is a generative rectified flow architecture for both transition state generation and reaction validation, where it maps reactant-product pairs to candidate transition state structures and verifies connectivity by mapping back to reactants and products. This unified generative strategy replaces the most expensive steps of conventional computational workflows, namely iterative transition state search and intrinsic reaction coordinate validation, within a complete CRN construction pipeline. ByteCRN delivers a 10--100-fold acceleration over traditional workflows while maintaining high predictive fidelity for individual reactions. At the network scale, it effectively prunes $\sim$70-90% of the enumerated reactions, streamlining the exploration of complex reaction space. Its utility is illustrated through the discovery of novel pathways involving cyanoacetaldehyde and the successful modeling of the challenging $γ$-ketohydroperoxide network, demonstrating a practical, scalable approach to autonomous chemical exploration.
+
+arXiv: https://arxiv.org/pdf/2606.21002</description>
+      <guid isPermaLink="false">1789028268607</guid>
+      <pubDate>Fri, 19 Jun 2026 20:00:00 +0800</pubDate>
+    </item>
+    <item>
+      <title>Analytic Nonadiabatic Derivative Couplings Using Noncollinear Spin-Flip TDDFT</title>
+      <link>https://seed.bytedance.com/zh/public_papers/analytic-nonadiabatic-derivative-couplings-using-noncollinear-spin-flip-tddft</link>
+      <description>Nonadiabatic molecular dynamics is an important tool for investigating chemical reaction mechanisms, particularly in photochemical processes. Its central challenge is to efficiently and accurately obtain, at the electronic-structure level, the energies, nuclear forces (gradients), and nonadiabatic derivative couplings (NADCs) associated with multiple potential-energy surfaces. We have previously developed a noncollinear spin-flip time-dependent density functional theory (SF-TDDFT) based on the multicollinear approach. This method enables the computation of potential-energy surfaces and analytic nuclear gradients for multiple excited states and leads to improved energy degeneracy, spin symmetry, and formal consistency relative to collinear SF-TDDFT. In the present work, analytic NADCs are formulated within this framework. Their accuracy is assessed through comparison with finite-difference results and by evaluating the Berry phase in the vicinity of conical intersections. As an initial application, nonadiabatic molecular dynamics simulations were performed for azomethane and ethylene, showing that the analytic derivative couplings behave reasonably and stably for these systems. Since the additional computational cost of the NADCs is comparable to that of energies and gradients in SF-TDDFT, the method may be suitable for nonadiabatic dynamics simulations of moderately large molecular systems.
+
+arXiv: https://pubs.acs.org/jctcce/article-abstract/22/12/6076/5166458/Analytic-Nonadiabatic-Derivative-Couplings-Using</description>
+      <guid isPermaLink="false">1789029125019</guid>
+      <pubDate>Thu, 11 Jun 2026 00:00:00 +0800</pubDate>
     </item>
     <item>
       <title>Towards stable and accurate electron dynamics via neural network based time-dependent variational Monte Carlo</title>
@@ -345,6 +363,15 @@ arXiv: https://arxiv.org/pdf/2604.07026</description>
       <pubDate>Wed, 08 Apr 2026 00:00:00 +0800</pubDate>
     </item>
     <item>
+      <title>GPU Accelerated Minimal Auxiliary Basis Approach TDDFT for Large Organic Molecules</title>
+      <link>https://seed.bytedance.com/zh/public_papers/gpu-accelerated-minimal-auxiliary-basis-approach-tddft-for-large-organic-molecules</link>
+      <description>We introduce a GPU-accelerated implementation of time-dependent density functional theory with the minimal auxiliary basis approach (TDDFT-risp) in GPU4PySCF, together with large system demonstrations carried out using the Tamm--Dancoff approximation (TDA-risp). The method combines GPU-accelerated three-center integral evaluation, tensor contractions, exchange-space truncation, omission of hydrogen atoms from the auxiliary basis, and a host memory assisted Davidson solver. On the EXTEST42 benchmark set, a conservative 40 eV exchange cutoff yields excitation-energy errors relative to standard TDA of about 0.03--0.05 eV for low-lying states. For systems of 300 to 3000 atoms, we demonstrate that TDA-risp calculations of 15 low-lying excited states with $ω$B97XD/def2-SVP complete on a single A100 GPU with wall times ranging from minutes to hours. These results position GPU-TDDFT-risp as a practical route toward excited-state calculations for large organic and biomolecular systems with thousands of atoms.
+
+arXiv: https://arxiv.org/pdf/2603.29257</description>
+      <guid isPermaLink="false">1789028219467</guid>
+      <pubDate>Tue, 31 Mar 2026 20:00:00 +0800</pubDate>
+    </item>
+    <item>
       <title>Hessian-informed machine learning interatomic potential towards bridging theory and experiments</title>
       <link>https://seed.bytedance.com/zh/public_papers/hessian-informed-machine-learning-interatomic-potential-towards-bridging-theory-and-experiments</link>
       <description>Local curvature of potential energy surfaces is critical for predicting certain experimental observables of molecules and materials from first principles, yet it remains far beyond reach for complex systems. In this work, we introduce a Hessian-informed Machine Learning Interatomic Potential (Hi-MLIP) that captures such curvature reliably, thereby enabling accurate analysis of associated thermodynamic and kinetic phenomena. To make Hessian supervision practically viable, we develop a highly efficient training protocol, termed Hessian INformed Training (HINT), achieving two to four orders of magnitude reduction for the requirement of expensive Hessian labels. HINT integrates critical techniques, including Hessian pre-training, configuration sampling, curriculum learning and stochastic projection Hessian loss. Enabled by HINT, Hi-MLIP significantly improves transition-state search and brings Gibbs free-energy predictions close to chemical accuracy especially in data-scarce regimes. Our framework also enables accurate treatment of strongly anharmonic hydrides, reproducing phonon renormalization and superconducting critical temperatures in close agreement with experiment while bypassing the computational bottleneck of anharmonic calculations. These results establish a practical route to enhancing curvature awareness of machine learning interatomic potentials, bridging simulation and experimental observables across a wide range of systems.
@@ -433,44 +460,6 @@ arXiv: https://arxiv.org/pdf/2603.15619</description>
 arXiv: https://arxiv.org/pdf/2603.14425</description>
       <guid isPermaLink="false">1776929960107</guid>
       <pubDate>Sun, 15 Mar 2026 00:00:00 +0800</pubDate>
-    </item>
-    <item>
-      <title>Permutation invariant multi-scale full quantum neural network wavefunction</title>
-      <link>https://seed.bytedance.com/zh/public_papers/permutation-invariant-multi-scale-full-quantum-neural-network-wavefunction</link>
-      <description>Solving the intricate quantum behavior of interacting particles is key to unlocking the mysteries of condensed matter, but capturing their complex correlations across different scales remains a monumental challenge. We introduce a neural network framework that overcomes this barrier by modeling the full quantum wavefunction of a system, including electrons, nuclei and muons, directly capturing the full quantum effects beyond the Born-Oppenheimer approximation. The neural network approximates joint wavefunction of different interacting particles with a rigorous handling of permutation invariance, enabling simultaneous treatment of nuclear quantum effects and electron-nucleus-muon couplings without explicit excited states. Validated on molecular systems, this approach offers a computationally feasible way to model full quantum phenomena in complex many-body systems, establishing a direct connection between fundamental particle properties and emergent material behavior.
-
-arXiv: https://arxiv.org/pdf/2603.12233</description>
-      <guid isPermaLink="false">1776933408498</guid>
-      <pubDate>Thu, 12 Mar 2026 00:00:00 +0800</pubDate>
-    </item>
-    <item>
-      <title>On the Residual Scaling of Looped Transformers: Stability and Transferability</title>
-      <link>https://seed.bytedance.com/zh/public_papers/on-the-residual-scaling-of-looped-transformers-stability-and-transferability</link>
-      <description>Looped (weight-tied) Transformers apply a shared residual block $N$ times ($h \leftarrow h + \varepsilon\,f(h)$, same $f$ at each step), increasing effective depth without adding parameters. Prior depth-scaling analyses prescribe $\varepsilon = 1/\!\sqrt{L}$ for depth-$L$ residual networks. We show that this is insufficient for looped architectures: weight sharing makes residual updates correlated across iterations, requiring the stronger scaling $\varepsilon = 1/N$. For multi-layer blocks ($L$ unique layers looped $N$ times), we derive a factored parameterization $\varepsilon = λ/(N\!\sqrt{L})$ that separates the two sources of growth: $1/N$ controls the within-layer loop correlation, and $1/\!\sqrt{L}$ controls the across-layer variance. A key consequence is that the optimal learning rate depends only on the number of unique layers $L$, not on the loop count $N$, enabling direct hyperparameter transfer from small to large $N$ without retuning. Experiments on looped Transformers confirm that $1/N$ scaling improves trainability and yields better loss than $1/\!\sqrt{N}$ scaling across loop counts.
-
-arXiv: https://arxiv.org/pdf/2606.18524</description>
-      <guid isPermaLink="false">1782979112074</guid>
-      <pubDate>Mon, 02 Mar 2026 00:00:00 +0800</pubDate>
-    </item>
-    <item>
-      <title>Anatomy of the Modality Gap: Dissecting the Internal States of End-to-End Speech LLMs</title>
-      <link>https://seed.bytedance.com/zh/public_papers/anatomy-of-the-modality-gap-dissecting-the-internal-states-of-end-to-end-speech-llms</link>
-      <description>Recent advancements in Large Speech-Language Models have significantly bridged the gap between acoustic signals and linguistic understanding. However, a persistent performance disparity remains in speech-based input tasks compared to direct text inference. In this paper, we investigate the dynamic roots of this modality gap beyond static geometric alignment, analyzing how speech and text representations evolve layer-by-layer. We evaluate four open-weight end-to-end models on SpeechMMLU and VoiceBench BBH. Using cross-layer CKA analysis with speech-text token alignment, we find that speech representations exhibit a broad cross-layer alignment band, attributable to the redundant nature of speech where semantic content spans multiple frames. We show that these alignment patterns are structurally stable across different analysis configurations. Crucially, simple statistical calibration is insufficient and can be detrimental when applied at the input layer, indicating that the modality gap is not a mere distribution shift. Overall, our results suggest that the bottleneck lies in condensing redundant speech into stable late-layer decisions, motivating future solutions that operate at the token or temporal granularity instead of feature-level matching.
-
-arXiv: https://arxiv.org/pdf/2603.01502</description>
-      <guid isPermaLink="false">1782978780927</guid>
-      <pubDate>Mon, 02 Mar 2026 00:00:00 +0800</pubDate>
-    </item>
-    <item>
-      <title>Learn Hard Problems During RL with Reference Guided Fine-tuning</title>
-      <link>https://seed.bytedance.com/zh/public_papers/learn-hard-problems-during-rl-with-reference-guided-fine-tuning</link>
-      <description>Reinforcement learning (RL) for mathematical reasoning can suffer from reward sparsity: for challenging problems, LLM fails to sample any correct trajectories, preventing RL from receiving meaningful positive feedback. At the same time, there often exist human-written reference solutions along with the problem (e.g., problems from AoPS), but directly fine-tuning on these solutions offers no benefit because models often cannot imitate human proofs that lie outside their own reasoning distribution.
-We introduce Reference-Guided Fine-Tuning (ReGFT), a simple and effective method that utilizes human-written reference solutions to synthesize positive trajectories on hard problems and train on them before RL. For each problem, we provide the model with a partial reference solution and let it generate its own reasoning trace, ensuring the resulting trajectories remain in the model's reasoning space while still benefiting from reference guidance.
-Fine-tuning on these reference-guided trajectories increases the number of solvable problems and produces a checkpoint that receives more positive rewards during RL. Across three benchmarks (AIME24, AIME25, BeyondAIME), ReGFT consistently improves supervised accuracy, accelerates DAPO training, and raises the final performance plateau of RL. Our results show that ReGFT effectively overcomes reward sparsity and unlocks stronger RL-based mathematical reasoning.
-
-arXiv: https://arxiv.org/pdf/2603.01223</description>
-      <guid isPermaLink="false">1776932888749</guid>
-      <pubDate>Sun, 01 Mar 2026 00:00:00 +0800</pubDate>
     </item>
   </channel>
 </rss>

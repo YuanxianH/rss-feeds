@@ -7,7 +7,7 @@
     <docs>http://www.rssboard.org/rss-specification</docs>
     <generator>RSS Creator</generator>
     <language>zh-CN</language>
-    <lastBuildDate>Thu, 10 Sep 2026 03:35:28 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 10 Sep 2026 08:44:11 +0000</lastBuildDate>
     <item>
       <title>SeedRealtime 音视频全双工大模型发布：走向全模态自然交互</title>
       <link>https://seed.bytedance.com/zh/blog/seedrealtime-%E9%9F%B3%E8%A7%86%E9%A2%91%E5%85%A8%E5%8F%8C%E5%B7%A5%E5%A4%A7%E6%A8%A1%E5%9E%8B%E5%8F%91%E5%B8%83-%E8%B5%B0%E5%90%91%E5%85%A8%E6%A8%A1%E6%80%81%E8%87%AA%E7%84%B6%E4%BA%A4%E4%BA%92</link>
@@ -302,17 +302,17 @@
       <pubDate>Wed, 16 Apr 2025 00:00:00 +0800</pubDate>
     </item>
     <item>
-      <title>字节跳动最新思考模型，Seed-Thinking-v1.5技术细节公开</title>
-      <link>https://seed.bytedance.com/zh/blog/%E5%AD%97%E8%8A%82%E8%B7%B3%E5%8A%A8%E6%9C%80%E6%96%B0%E6%80%9D%E8%80%83%E6%A8%A1%E5%9E%8B-seed-thinking-v1-5%E6%8A%80%E6%9C%AF%E7%BB%86%E8%8A%82%E5%85%AC%E5%BC%80</link>
-      <description>4月17日API 正式上线</description>
-      <guid isPermaLink="false">1763522215224</guid>
-      <pubDate>Mon, 14 Apr 2025 00:00:00 +0800</pubDate>
-    </item>
-    <item>
       <title>Multi-SWE-bench：首个多语言代码修复基准开源</title>
       <link>https://seed.bytedance.com/zh/blog/multi-swe-bench-%E9%A6%96%E4%B8%AA%E5%A4%9A%E8%AF%AD%E8%A8%80%E4%BB%A3%E7%A0%81%E4%BF%AE%E5%A4%8D%E5%9F%BA%E5%87%86%E5%BC%80%E6%BA%90</link>
       <description>数据均来自GitHub issue，历时近一年构建。</description>
       <guid isPermaLink="false">1763522274426</guid>
+      <pubDate>Mon, 14 Apr 2025 00:00:00 +0800</pubDate>
+    </item>
+    <item>
+      <title>字节跳动最新思考模型，Seed-Thinking-v1.5技术细节公开</title>
+      <link>https://seed.bytedance.com/zh/blog/%E5%AD%97%E8%8A%82%E8%B7%B3%E5%8A%A8%E6%9C%80%E6%96%B0%E6%80%9D%E8%80%83%E6%A8%A1%E5%9E%8B-seed-thinking-v1-5%E6%8A%80%E6%9C%AF%E7%BB%86%E8%8A%82%E5%85%AC%E5%BC%80</link>
+      <description>4月17日API 正式上线</description>
+      <guid isPermaLink="false">1763522215224</guid>
       <pubDate>Mon, 14 Apr 2025 00:00:00 +0800</pubDate>
     </item>
     <item>
