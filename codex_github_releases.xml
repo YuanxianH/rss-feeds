@@ -7,23 +7,7 @@
     <docs>http://www.rssboard.org/rss-specification</docs>
     <generator>RSS Creator</generator>
     <language>zh-CN</language>
-    <lastBuildDate>Thu, 10 Sep 2026 22:58:10 +0000</lastBuildDate>
-    <item>
-      <title>Codex CLI 0.146.1</title>
-      <link>https://github.com/openai/codex/releases/tag/rust-v0.146.1</link>
-      <description>Bug Fixes
-Apply safer automatic-review defaults for cyber-capable models and explain permission changes in the terminal interface. (
-#37057
-)
-Changelog
-Full Changelog:
-rust-v0.146.0...rust-v0.146.1
-#37057
-[0.146] Backport safer cyber-model auto-review defaults
-@anp-oai</description>
-      <guid isPermaLink="false">https://developers.openai.com/codex/changelog#github-release-365644216</guid>
-      <pubDate>Wed, 05 Aug 2026 00:00:00 +0000</pubDate>
-    </item>
+    <lastBuildDate>Fri, 11 Sep 2026 00:56:19 +0000</lastBuildDate>
     <item>
       <title>Codex CLI 0.147.0</title>
       <link>https://github.com/openai/codex/releases/tag/rust-v0.147.0</link>
