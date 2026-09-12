@@ -7,7 +7,14 @@
     <docs>http://www.rssboard.org/rss-specification</docs>
     <generator>RSS Creator</generator>
     <language>zh-CN</language>
-    <lastBuildDate>Sat, 12 Sep 2026 19:00:05 +0000</lastBuildDate>
+    <lastBuildDate>Sat, 12 Sep 2026 21:23:32 +0000</lastBuildDate>
+    <item>
+      <title>10 AI Lessons from Driving 200+ Million Fully Autonomous Miles</title>
+      <link>https://waymo.com/blog/2026/08/10ailessons</link>
+      <description>Much of the autonomous vehicle (AV) space is uncharted territory. However, at Waymo, with more than 200 million miles driven fully autonomously, we’re one of very few companies that can look to our past to illuminate our future. Our experience has led us to ten fundamental truths that shape how we build AI. </description>
+      <guid isPermaLink="true">https://waymo.com/blog/2026/08/10ailessons</guid>
+      <pubDate>Wed, 26 Aug 2026 00:00:00 +0000</pubDate>
+    </item>
     <item>
       <title>Say hi to new Ojai in-car experience</title>
       <link>https://waymo.com/blog/2026/07/gemini-in-waymo</link>
@@ -355,13 +362,6 @@
       <description>Last year around this time, I found myself on a racetrack in Hockenheim, Germany, at Formula Student Germany as a student on the MIT/Delft team. Formula Student is an international design competition, where students with various backgrounds, ranging from mechanical and software engineering to finance and marketing, join forces to design, build, and race a prototype self-driving racecar. This project was one of the most challenging and rewarding experiences of my life; seeing an idea transform from a concept pitch and a system architecture diagram to a car driving itself on a racetrack in Germany was extremely rewarding, but by no means easy.</description>
       <guid isPermaLink="true">https://waymo.com/blog/2020/08/racers-on-your-mark</guid>
       <pubDate>Tue, 11 Aug 2020 00:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>Meet the Winners of the Waymo Open Dataset Challenges</title>
-      <link>https://waymo.com/blog/2020/07/opendataset-challenge-winners-2020</link>
-      <description>In March 2020, we launched the Waymo Open Dataset Challenges, inviting researchers to build and test their machine learning models using Waymo’s diverse self-driving dataset. We received over 100 submissions from around the world and invited the winners to present their work at our virtual Workshop on Scalability in Autonomous Driving at CVPR 2020. Today, we are excited to introduce some of the winners and their learnings.</description>
-      <guid isPermaLink="true">https://waymo.com/blog/2020/07/opendataset-challenge-winners-2020</guid>
-      <pubDate>Mon, 13 Jul 2020 00:00:00 +0000</pubDate>
     </item>
   </channel>
 </rss>
