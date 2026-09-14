@@ -7,11 +7,11 @@
     <docs>http://www.rssboard.org/rss-specification</docs>
     <generator>RSS Creator</generator>
     <language>zh-CN</language>
-    <lastBuildDate>Mon, 14 Sep 2026 00:54:30 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 14 Sep 2026 05:54:13 +0000</lastBuildDate>
     <item>
       <title>MiniMax-MCP-JS</title>
       <link>https://github.com/MiniMax-AI/MiniMax-MCP-JS</link>
-      <description>[GitHub Repo] | Official MiniMax Model Context Protocol (MCP) JavaScript implementation that provides seamless integration with MiniMax's powerful AI capabilities including image generation, video generation, text-to-speech, and voice cloning APIs. | Language: TypeScript | Stars: 128 | Topics: image-generation, mcp, mcp-server, mcp-tools, minimax, text-to-speech, video-generation</description>
+      <description>[GitHub Repo] | Official MiniMax Model Context Protocol (MCP) JavaScript implementation that provides seamless integration with MiniMax's powerful AI capabilities including image generation, video generation, text-to-speech, and voice cloning APIs. | Language: TypeScript | Stars: 129 | Topics: image-generation, mcp, mcp-server, mcp-tools, minimax, text-to-speech, video-generation</description>
       <guid isPermaLink="true">https://github.com/MiniMax-AI/MiniMax-MCP-JS</guid>
       <pubDate>Tue, 15 Apr 2025 13:02:02 +0000</pubDate>
     </item>
@@ -144,7 +144,7 @@
     <item>
       <title>Mini-Agent</title>
       <link>https://github.com/MiniMax-AI/Mini-Agent</link>
-      <description>[GitHub Repo] | A minimal yet professional single agent demo project that showcases the core execution pipeline and production-grade features of agents. | Language: Python | Stars: 3020 | Topics: agent, llm, minimax</description>
+      <description>[GitHub Repo] | A minimal yet professional single agent demo project that showcases the core execution pipeline and production-grade features of agents. | Language: Python | Stars: 3021 | Topics: agent, llm, minimax</description>
       <guid isPermaLink="true">https://github.com/MiniMax-AI/Mini-Agent</guid>
       <pubDate>Fri, 31 Oct 2025 03:56:27 +0000</pubDate>
     </item>
@@ -158,7 +158,7 @@
     <item>
       <title>MiniMax-Coding-Plan-MCP</title>
       <link>https://github.com/MiniMax-AI/MiniMax-Coding-Plan-MCP</link>
-      <description>[GitHub Repo] | Specialized MiniMax Model Context Protocol (MCP) server designed for coding-plan users, featuring AI-powered search and vision analysis APIs optimized for code development workflows | Language: Python | Stars: 101 | Topics: coding-plan, mcp, mcp-server, mcp-tools, understand-image, web-search</description>
+      <description>[GitHub Repo] | Specialized MiniMax Model Context Protocol (MCP) server designed for coding-plan users, featuring AI-powered search and vision analysis APIs optimized for code development workflows | Language: Python | Stars: 102 | Topics: coding-plan, mcp, mcp-server, mcp-tools, understand-image, web-search</description>
       <guid isPermaLink="true">https://github.com/MiniMax-AI/MiniMax-Coding-Plan-MCP</guid>
       <pubDate>Thu, 20 Nov 2025 04:48:05 +0000</pubDate>
     </item>
@@ -235,14 +235,14 @@
     <item>
       <title>OpenRoom</title>
       <link>https://github.com/MiniMax-AI/OpenRoom</link>
-      <description>[GitHub Repo] | A browser-based desktop where AI Agent operates every app through natural language. | Language: TypeScript | Stars: 1259 | Topics: ai-agent, browser, desktop, micro-frontend, minimax, natural-language, open-source, react, typescript, vibe-coding</description>
+      <description>[GitHub Repo] | A browser-based desktop where AI Agent operates every app through natural language. | Language: TypeScript | Stars: 1260 | Topics: ai-agent, browser, desktop, micro-frontend, minimax, natural-language, open-source, react, typescript, vibe-coding</description>
       <guid isPermaLink="true">https://github.com/MiniMax-AI/OpenRoom</guid>
       <pubDate>Tue, 03 Mar 2026 04:01:01 +0000</pubDate>
     </item>
     <item>
       <title>skills</title>
       <link>https://github.com/MiniMax-AI/skills</link>
-      <description>[GitHub Repo] | Language: C# | Stars: 13546</description>
+      <description>[GitHub Repo] | Language: C# | Stars: 13547</description>
       <guid isPermaLink="true">https://github.com/MiniMax-AI/skills</guid>
       <pubDate>Tue, 17 Mar 2026 07:19:25 +0000</pubDate>
     </item>
@@ -277,7 +277,7 @@
     <item>
       <title>minimax-code</title>
       <link>https://github.com/MiniMax-AI/minimax-code</link>
-      <description>[GitHub Repo] | Stars: 75</description>
+      <description>[GitHub Repo] | Stars: 76</description>
       <guid isPermaLink="true">https://github.com/MiniMax-AI/minimax-code</guid>
       <pubDate>Mon, 01 Jun 2026 12:39:40 +0000</pubDate>
     </item>
@@ -305,14 +305,14 @@
     <item>
       <title>MiniMax-H3</title>
       <link>https://huggingface.co/MiniMaxAI/MiniMax-H3</link>
-      <description>[HuggingFace Model] | image-text-to-video | Likes: 5239 | Tags: minimax-h3, diffusers, safetensors, text-to-video, image-to-video</description>
+      <description>[HuggingFace Model] | image-text-to-video | Likes: 5255 | Tags: minimax-h3, diffusers, safetensors, text-to-video, image-to-video</description>
       <guid isPermaLink="true">https://huggingface.co/MiniMaxAI/MiniMax-H3</guid>
       <pubDate>Tue, 28 Jul 2026 10:45:18 +0000</pubDate>
     </item>
     <item>
       <title>MiniMax-H3</title>
       <link>https://github.com/MiniMax-AI/MiniMax-H3</link>
-      <description>[GitHub Repo] | Language: Python | Stars: 8571</description>
+      <description>[GitHub Repo] | Language: Python | Stars: 8581</description>
       <guid isPermaLink="true">https://github.com/MiniMax-AI/MiniMax-H3</guid>
       <pubDate>Thu, 30 Jul 2026 08:41:09 +0000</pubDate>
     </item>
@@ -326,7 +326,7 @@
     <item>
       <title>MiniMax-Music3</title>
       <link>https://github.com/MiniMax-AI/MiniMax-Music3</link>
-      <description>[GitHub Repo] | Stars: 862</description>
+      <description>[GitHub Repo] | Stars: 864</description>
       <guid isPermaLink="true">https://github.com/MiniMax-AI/MiniMax-Music3</guid>
       <pubDate>Tue, 11 Aug 2026 08:01:03 +0000</pubDate>
     </item>
@@ -354,7 +354,7 @@
     <item>
       <title>MiniMax-Code-Plugins</title>
       <link>https://github.com/MiniMax-AI/MiniMax-Code-Plugins</link>
-      <description>[GitHub Repo] | Community registry and contribution toolkit for MiniMax Code plugins. | Language: JavaScript | Stars: 9</description>
+      <description>[GitHub Repo] | Community registry and contribution toolkit for MiniMax Code plugins. | Language: JavaScript | Stars: 10</description>
       <guid isPermaLink="true">https://github.com/MiniMax-AI/MiniMax-Code-Plugins</guid>
       <pubDate>Mon, 17 Aug 2026 12:23:34 +0000</pubDate>
     </item>
