@@ -7,7 +7,7 @@
     <docs>http://www.rssboard.org/rss-specification</docs>
     <generator>RSS Creator</generator>
     <language>zh-CN</language>
-    <lastBuildDate>Wed, 16 Sep 2026 19:51:50 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 16 Sep 2026 22:42:07 +0000</lastBuildDate>
     <item>
       <title>MiniMax-MCP-JS</title>
       <link>https://github.com/MiniMax-AI/MiniMax-MCP-JS</link>
@@ -221,7 +221,7 @@
     <item>
       <title>MiniMax-M2.5</title>
       <link>https://huggingface.co/MiniMaxAI/MiniMax-M2.5</link>
-      <description>[HuggingFace Model] | text-generation | Likes: 1507 | Tags: transformers, safetensors, minimax_m2, text-generation, conversational</description>
+      <description>[HuggingFace Model] | text-generation | Likes: 1508 | Tags: transformers, safetensors, minimax_m2, text-generation, conversational</description>
       <guid isPermaLink="true">https://huggingface.co/MiniMaxAI/MiniMax-M2.5</guid>
       <pubDate>Thu, 12 Feb 2026 06:05:24 +0000</pubDate>
     </item>
@@ -270,7 +270,7 @@
     <item>
       <title>MiniMax-M3</title>
       <link>https://github.com/MiniMax-AI/MiniMax-M3</link>
-      <description>[GitHub Repo] | Stars: 485</description>
+      <description>[GitHub Repo] | Stars: 486</description>
       <guid isPermaLink="true">https://github.com/MiniMax-AI/MiniMax-M3</guid>
       <pubDate>Mon, 01 Jun 2026 06:05:17 +0000</pubDate>
     </item>
@@ -305,14 +305,14 @@
     <item>
       <title>MiniMax-H3</title>
       <link>https://huggingface.co/MiniMaxAI/MiniMax-H3</link>
-      <description>[HuggingFace Model] | image-text-to-video | Likes: 5374 | Tags: minimax-h3, diffusers, safetensors, text-to-video, image-to-video</description>
+      <description>[HuggingFace Model] | image-text-to-video | Likes: 5377 | Tags: minimax-h3, diffusers, safetensors, text-to-video, image-to-video</description>
       <guid isPermaLink="true">https://huggingface.co/MiniMaxAI/MiniMax-H3</guid>
       <pubDate>Tue, 28 Jul 2026 10:45:18 +0000</pubDate>
     </item>
     <item>
       <title>MiniMax-H3</title>
       <link>https://github.com/MiniMax-AI/MiniMax-H3</link>
-      <description>[GitHub Repo] | Language: Python | Stars: 8772</description>
+      <description>[GitHub Repo] | Language: Python | Stars: 8776</description>
       <guid isPermaLink="true">https://github.com/MiniMax-AI/MiniMax-H3</guid>
       <pubDate>Thu, 30 Jul 2026 08:41:09 +0000</pubDate>
     </item>
@@ -326,7 +326,7 @@
     <item>
       <title>MiniMax-Music3</title>
       <link>https://github.com/MiniMax-AI/MiniMax-Music3</link>
-      <description>[GitHub Repo] | Stars: 883</description>
+      <description>[GitHub Repo] | Stars: 884</description>
       <guid isPermaLink="true">https://github.com/MiniMax-AI/MiniMax-Music3</guid>
       <pubDate>Tue, 11 Aug 2026 08:01:03 +0000</pubDate>
     </item>
