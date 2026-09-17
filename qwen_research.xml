@@ -7,7 +7,14 @@
     <docs>http://www.rssboard.org/rss-specification</docs>
     <generator>RSS Creator</generator>
     <language>zh-CN</language>
-    <lastBuildDate>Thu, 17 Sep 2026 13:08:19 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 17 Sep 2026 17:59:15 +0000</lastBuildDate>
+    <item>
+      <title>Qwen3.8-Omni-Flash: Omni Senses. Agentic Delivery.</title>
+      <link>https://qwen.ai/blog?id=qwen3.8-omni-flash</link>
+      <description>Today, we are launching Qwen3.8-Omni-Flash, our next-generation native omnimodal model. Its core objective is to strengthen agent capabilities in real-world productivity scenarios, advancing omnimodal models from “understanding omnimodal content” to “planning tasks, calling tools, and completing creative work.” Building on general agentic capabilities in coding, text-based knowledge work, and GUI</description>
+      <guid isPermaLink="true">https://qwen.ai/blog?id=qwen3.8-omni-flash</guid>
+      <pubDate>Fri, 18 Sep 2026 15:00:00 +0800</pubDate>
+    </item>
     <item>
       <title>E-Commerce Bench: Long-Horizon Operations, Multi-Dimensional Evaluation</title>
       <link>https://qwen.ai/blog?id=e-commerce-bench</link>
