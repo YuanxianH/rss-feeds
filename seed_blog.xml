@@ -7,7 +7,7 @@
     <docs>http://www.rssboard.org/rss-specification</docs>
     <generator>RSS Creator</generator>
     <language>zh-CN</language>
-    <lastBuildDate>Thu, 17 Sep 2026 07:18:10 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 17 Sep 2026 13:08:11 +0000</lastBuildDate>
     <item>
       <title>SeedRealtime 音视频全双工大模型发布：走向全模态自然交互</title>
       <link>https://seed.bytedance.com/zh/blog/seedrealtime-%E9%9F%B3%E8%A7%86%E9%A2%91%E5%85%A8%E5%8F%8C%E5%B7%A5%E5%A4%A7%E6%A8%A1%E5%9E%8B%E5%8F%91%E5%B8%83-%E8%B5%B0%E5%90%91%E5%85%A8%E6%A8%A1%E6%80%81%E8%87%AA%E7%84%B6%E4%BA%A4%E4%BA%92</link>
@@ -171,7 +171,7 @@
     <item>
       <title>Seed 端到端同声传译大模型发布：准确率接近真人，3s 延迟，实时声音复刻</title>
       <link>https://seed.bytedance.com/zh/blog/seed-%E7%AB%AF%E5%88%B0%E7%AB%AF%E5%90%8C%E5%A3%B0%E4%BC%A0%E8%AF%91%E5%A4%A7%E6%A8%A1%E5%9E%8B%E5%8F%91%E5%B8%83-%E5%87%86%E7%A1%AE%E7%8E%87%E6%8E%A5%E8%BF%91%E7%9C%9F%E4%BA%BA-3s-%E5%BB%B6%E8%BF%9F-%E5%AE%9E%E6%97%B6%E5%A3%B0%E9%9F%B3%E5%A4%8D%E5%88%BB</link>
-      <description>中英同传翻译质量达到业界 SOTA，同时实现了极低的语音延迟水平。</description>
+      <description>中英同传翻译质量达到业界 SOTA，同时实现了极低的语音延迟水平</description>
       <guid isPermaLink="false">1788419581050</guid>
       <pubDate>Thu, 24 Jul 2025 00:00:00 +0800</pubDate>
     </item>
@@ -269,7 +269,7 @@
     <item>
       <title>向量检索能力SOTA，字节Seed1.5-Embedding模型训练细节公开</title>
       <link>https://seed.bytedance.com/zh/blog/%E5%90%91%E9%87%8F%E6%A3%80%E7%B4%A2%E8%83%BD%E5%8A%9Bsota-%E5%AD%97%E8%8A%82seed1-5-embedding%E6%A8%A1%E5%9E%8B%E8%AE%AD%E7%BB%83%E7%BB%86%E8%8A%82%E5%85%AC%E5%BC%80</link>
-      <description>API 接口将于近期开放</description>
+      <description>API 接口已经开放</description>
       <guid isPermaLink="false">1763522137128</guid>
       <pubDate>Mon, 12 May 2025 00:00:00 +0800</pubDate>
     </item>
@@ -318,7 +318,7 @@
     <item>
       <title>Seedream 2.0 技术报告发布！数据处理、预训练、RLHF全流程公开</title>
       <link>https://seed.bytedance.com/zh/blog/seedream-2-0-%E6%8A%80%E6%9C%AF%E6%8A%A5%E5%91%8A%E5%8F%91%E5%B8%83-%E6%95%B0%E6%8D%AE%E5%A4%84%E7%90%86-%E9%A2%84%E8%AE%AD%E7%BB%83-rlhf%E5%85%A8%E6%B5%81%E7%A8%8B%E5%85%AC%E5%BC%80</link>
-      <description>文字渲染与国风出色，综合能力领先。</description>
+      <description>文字渲染与国风出色，综合能力领先</description>
       <guid isPermaLink="false">1763522369096</guid>
       <pubDate>Wed, 12 Mar 2025 00:00:00 +0800</pubDate>
     </item>
@@ -353,7 +353,7 @@
     <item>
       <title>Seed Research | 视频生成模型最新成果，可仅靠视觉认知世界！现已开源</title>
       <link>https://seed.bytedance.com/zh/blog/seed-research-%E8%A7%86%E9%A2%91%E7%94%9F%E6%88%90%E6%A8%A1%E5%9E%8B%E6%9C%80%E6%96%B0%E6%88%90%E6%9E%9C-%E5%8F%AF%E4%BB%85%E9%9D%A0%E8%A7%86%E8%A7%89%E8%AE%A4%E7%9F%A5%E4%B8%96%E7%95%8C-%E7%8E%B0%E5%B7%B2%E5%BC%80%E6%BA%90</link>
-      <description>核心作者为在读博士，已在团队长期实习 3 年。</description>
+      <description>核心作者为在读博士，已在团队长期实习 3 年</description>
       <guid isPermaLink="false">1763522830668</guid>
       <pubDate>Mon, 10 Feb 2025 00:00:00 +0800</pubDate>
     </item>
