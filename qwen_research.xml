@@ -7,7 +7,14 @@
     <docs>http://www.rssboard.org/rss-specification</docs>
     <generator>RSS Creator</generator>
     <language>zh-CN</language>
-    <lastBuildDate>Fri, 18 Sep 2026 14:13:39 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 18 Sep 2026 18:07:38 +0000</lastBuildDate>
+    <item>
+      <title>Qwen3.8-LiveTranslate: Names the speaker. Carries the meaning.</title>
+      <link>https://qwen.ai/blog?id=qwen3.8-livetranslate</link>
+      <description>Simultaneous interpretation is not only about translating fast — it must also hear clearly and translate accurately. Qwen3.8-LiveTranslate rebuilds real-time simultaneous interpretation with an Interleave architecture, improving faithfulness, fluency, and conciseness across the board, while average lagging (LAAL) drops from 2.8 seconds to 2.3 seconds. We want simultaneous interpretation to convey</description>
+      <guid isPermaLink="true">https://qwen.ai/blog?id=qwen3.8-livetranslate</guid>
+      <pubDate>Fri, 18 Sep 2026 17:30:00 +0800</pubDate>
+    </item>
     <item>
       <title>Qwen3.8-Omni-Flash: Omni Senses. Agentic Delivery.</title>
       <link>https://qwen.ai/blog?id=qwen3.8-omni-flash</link>
