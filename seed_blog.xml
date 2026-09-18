@@ -7,7 +7,7 @@
     <docs>http://www.rssboard.org/rss-specification</docs>
     <generator>RSS Creator</generator>
     <language>zh-CN</language>
-    <lastBuildDate>Fri, 18 Sep 2026 04:26:21 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 18 Sep 2026 09:27:00 +0000</lastBuildDate>
     <item>
       <title>SeedRealtime 音视频全双工大模型发布：走向全模态自然交互</title>
       <link>https://seed.bytedance.com/zh/blog/seedrealtime-%E9%9F%B3%E8%A7%86%E9%A2%91%E5%85%A8%E5%8F%8C%E5%B7%A5%E5%A4%A7%E6%A8%A1%E5%9E%8B%E5%8F%91%E5%B8%83-%E8%B5%B0%E5%90%91%E5%85%A8%E6%A8%A1%E6%80%81%E8%87%AA%E7%84%B6%E4%BA%A4%E4%BA%92</link>
@@ -30,7 +30,7 @@
       <pubDate>Mon, 20 Jul 2026 00:00:00 +0800</pubDate>
     </item>
     <item>
-      <title>不止“生成”，更懂“设计” ｜ Seedream 5.0 Pro 发布</title>
+      <title>不止“生成”，更懂“设计”｜Seedream 5.0 Pro 发布</title>
       <link>https://seed.bytedance.com/zh/blog/%E4%B8%8D%E6%AD%A2-%E7%94%9F%E6%88%90-%E6%9B%B4%E6%87%82-%E8%AE%BE%E8%AE%A1-seedream-5-0-pro-%E5%8F%91%E5%B8%83</link>
       <description>具备智能思考、高效创作和生产的多模态图像生成模型</description>
       <guid isPermaLink="false">1783417209913</guid>
@@ -51,8 +51,8 @@
       <pubDate>Tue, 23 Jun 2026 08:02:42 +0800</pubDate>
     </item>
     <item>
-      <title>Seed3D 2.0发布，更高精度、更强可用性</title>
-      <link>https://seed.bytedance.com/zh/blog/seed3d-2-0%E5%8F%91%E5%B8%83-%E6%9B%B4%E9%AB%98%E7%B2%BE%E5%BA%A6-%E6%9B%B4%E5%BC%BA%E5%8F%AF%E7%94%A8%E6%80%A7</link>
+      <title>Seed3D 2.0 发布，更高精度、更强可用性</title>
+      <link>https://seed.bytedance.com/zh/blog/seed3d-2-0-%E5%8F%91%E5%B8%83-%E6%9B%B4%E9%AB%98%E7%B2%BE%E5%BA%A6-%E6%9B%B4%E5%BC%BA%E5%8F%AF%E7%94%A8%E6%80%A7</link>
       <description>几何及纹理材质生成均达 SOTA 表现</description>
       <guid isPermaLink="false">1776683179376</guid>
       <pubDate>Thu, 23 Apr 2026 00:00:00 +0800</pubDate>
@@ -239,8 +239,8 @@
       <pubDate>Tue, 10 Jun 2025 00:00:00 +0800</pubDate>
     </item>
     <item>
-      <title>图像编辑模型SeedEdit 3.0发布！更强保持力，更高可用率</title>
-      <link>https://seed.bytedance.com/zh/blog/%E5%9B%BE%E5%83%8F%E7%BC%96%E8%BE%91%E6%A8%A1%E5%9E%8Bseededit-3-0%E5%8F%91%E5%B8%83-%E6%9B%B4%E5%BC%BA%E4%BF%9D%E6%8C%81%E5%8A%9B-%E6%9B%B4%E9%AB%98%E5%8F%AF%E7%94%A8%E7%8E%87</link>
+      <title>图像编辑模型 SeedEdit 3.0 发布！更强保持力，更高可用率</title>
+      <link>https://seed.bytedance.com/zh/blog/%E5%9B%BE%E5%83%8F%E7%BC%96%E8%BE%91%E6%A8%A1%E5%9E%8B-seededit-3-0-%E5%8F%91%E5%B8%83-%E6%9B%B4%E5%BC%BA%E4%BF%9D%E6%8C%81%E5%8A%9B-%E6%9B%B4%E9%AB%98%E5%8F%AF%E7%94%A8%E7%8E%87</link>
       <description>已在即梦网页端开启测试，豆包 App 即将上线</description>
       <guid isPermaLink="false">1763521760161</guid>
       <pubDate>Fri, 06 Jun 2025 00:00:00 +0800</pubDate>
@@ -267,8 +267,8 @@
       <pubDate>Tue, 13 May 2025 00:00:00 +0800</pubDate>
     </item>
     <item>
-      <title>向量检索能力SOTA，字节Seed1.5-Embedding模型训练细节公开</title>
-      <link>https://seed.bytedance.com/zh/blog/%E5%90%91%E9%87%8F%E6%A3%80%E7%B4%A2%E8%83%BD%E5%8A%9Bsota-%E5%AD%97%E8%8A%82seed1-5-embedding%E6%A8%A1%E5%9E%8B%E8%AE%AD%E7%BB%83%E7%BB%86%E8%8A%82%E5%85%AC%E5%BC%80</link>
+      <title>向量检索能力 SOTA，字节 Seed1.5-Embedding 模型训练细节公开</title>
+      <link>https://seed.bytedance.com/zh/blog/%E5%90%91%E9%87%8F%E6%A3%80%E7%B4%A2%E8%83%BD%E5%8A%9B-sota-%E5%AD%97%E8%8A%82-seed1-5-embedding-%E6%A8%A1%E5%9E%8B%E8%AE%AD%E7%BB%83%E7%BB%86%E8%8A%82%E5%85%AC%E5%BC%80</link>
       <description>API 接口已经开放</description>
       <guid isPermaLink="false">1763522137128</guid>
       <pubDate>Mon, 12 May 2025 00:00:00 +0800</pubDate>
@@ -302,8 +302,8 @@
       <pubDate>Wed, 16 Apr 2025 00:00:00 +0800</pubDate>
     </item>
     <item>
-      <title>字节跳动最新思考模型，Seed-Thinking-v1.5技术细节公开</title>
-      <link>https://seed.bytedance.com/zh/blog/%E5%AD%97%E8%8A%82%E8%B7%B3%E5%8A%A8%E6%9C%80%E6%96%B0%E6%80%9D%E8%80%83%E6%A8%A1%E5%9E%8B-seed-thinking-v1-5%E6%8A%80%E6%9C%AF%E7%BB%86%E8%8A%82%E5%85%AC%E5%BC%80</link>
+      <title>字节跳动最新思考模型，Seed-Thinking-v1.5 技术细节公开</title>
+      <link>https://seed.bytedance.com/zh/blog/%E5%AD%97%E8%8A%82%E8%B7%B3%E5%8A%A8%E6%9C%80%E6%96%B0%E6%80%9D%E8%80%83%E6%A8%A1%E5%9E%8B-seed-thinking-v1-5-%E6%8A%80%E6%9C%AF%E7%BB%86%E8%8A%82%E5%85%AC%E5%BC%80</link>
       <description>4 月 17 日 API 正式上线</description>
       <guid isPermaLink="false">1763522215224</guid>
       <pubDate>Mon, 14 Apr 2025 00:00:00 +0800</pubDate>
@@ -337,8 +337,8 @@
       <pubDate>Tue, 04 Mar 2025 00:00:00 +0800</pubDate>
     </item>
     <item>
-      <title>Seed Research | 形式化数学推理新SOTA！BFS-Prover模型最新开源</title>
-      <link>https://seed.bytedance.com/zh/blog/seed-research-%E5%BD%A2%E5%BC%8F%E5%8C%96%E6%95%B0%E5%AD%A6%E6%8E%A8%E7%90%86%E6%96%B0sota-bfs-prover%E6%A8%A1%E5%9E%8B%E6%9C%80%E6%96%B0%E5%BC%80%E6%BA%90</link>
+      <title>Seed Research | 形式化数学推理新 SOTA！BFS-Prover 模型最新开源</title>
+      <link>https://seed.bytedance.com/zh/blog/seed-research-%E5%BD%A2%E5%BC%8F%E5%8C%96%E6%95%B0%E5%AD%A6%E6%8E%A8%E7%90%86%E6%96%B0-sota-bfs-prover-%E6%A8%A1%E5%9E%8B%E6%9C%80%E6%96%B0%E5%BC%80%E6%BA%90</link>
       <description>化繁为简，鼓励机器深度思考</description>
       <guid isPermaLink="false">1763522622733</guid>
       <pubDate>Tue, 25 Feb 2025 00:00:00 +0800</pubDate>
@@ -353,7 +353,7 @@
     <item>
       <title>Seed Research | 视频生成模型最新成果，可仅靠视觉认知世界！现已开源</title>
       <link>https://seed.bytedance.com/zh/blog/seed-research-%E8%A7%86%E9%A2%91%E7%94%9F%E6%88%90%E6%A8%A1%E5%9E%8B%E6%9C%80%E6%96%B0%E6%88%90%E6%9E%9C-%E5%8F%AF%E4%BB%85%E9%9D%A0%E8%A7%86%E8%A7%89%E8%AE%A4%E7%9F%A5%E4%B8%96%E7%95%8C-%E7%8E%B0%E5%B7%B2%E5%BC%80%E6%BA%90</link>
-      <description>核心作者为在读博士，已在团队长期实习 3 年</description>
+      <description>去掉语言模型，让 AI 仅靠“视觉”认知世界学习知识</description>
       <guid isPermaLink="false">1763522830668</guid>
       <pubDate>Mon, 10 Feb 2025 00:00:00 +0800</pubDate>
     </item>
