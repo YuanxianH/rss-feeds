@@ -7,7 +7,14 @@
     <docs>http://www.rssboard.org/rss-specification</docs>
     <generator>RSS Creator</generator>
     <language>zh-CN</language>
-    <lastBuildDate>Sun, 20 Sep 2026 10:51:15 +0000</lastBuildDate>
+    <lastBuildDate>Sun, 20 Sep 2026 14:36:06 +0000</lastBuildDate>
+    <item>
+      <title>Qwen-Image-2.1: Compact, Efficient, and Unified Image Creation</title>
+      <link>https://qwen.ai/blog?id=qwen-image-2.1</link>
+      <description>We are excited to open-source Qwen-Image-2.1, an image model in the Qwen family that balances generation quality, inference efficiency, and cost. Qwen-Image-2.1 unifies text-to-image generation and image editing in a single model, with just 7B parameters in its visual generation component and native support for generating and editing transparent images. This update introduces four key improvements</description>
+      <guid isPermaLink="true">https://qwen.ai/blog?id=qwen-image-2.1</guid>
+      <pubDate>Sun, 20 Sep 2026 20:00:00 +0800</pubDate>
+    </item>
     <item>
       <title>Qwen3.8-LiveTranslate: Names the speaker. Carries the meaning.</title>
       <link>https://qwen.ai/blog?id=qwen3.8-livetranslate</link>

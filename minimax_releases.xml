@@ -7,7 +7,7 @@
     <docs>http://www.rssboard.org/rss-specification</docs>
     <generator>RSS Creator</generator>
     <language>zh-CN</language>
-    <lastBuildDate>Sun, 20 Sep 2026 10:50:52 +0000</lastBuildDate>
+    <lastBuildDate>Sun, 20 Sep 2026 14:35:39 +0000</lastBuildDate>
     <item>
       <title>vllm</title>
       <link>https://github.com/MiniMax-AI/vllm</link>
@@ -207,14 +207,14 @@
     <item>
       <title>mini-vela</title>
       <link>https://github.com/MiniMax-AI/mini-vela</link>
-      <description>[GitHub Repo] | Language: Python | Stars: 38</description>
+      <description>[GitHub Repo] | Language: Python | Stars: 39</description>
       <guid isPermaLink="true">https://github.com/MiniMax-AI/mini-vela</guid>
       <pubDate>Thu, 15 Jan 2026 08:58:19 +0000</pubDate>
     </item>
     <item>
       <title>MiniMax-M2.5</title>
       <link>https://huggingface.co/MiniMaxAI/MiniMax-M2.5</link>
-      <description>[HuggingFace Model] | text-generation | Likes: 1507 | Tags: transformers, safetensors, minimax_m2, text-generation, conversational</description>
+      <description>[HuggingFace Model] | text-generation | Likes: 1506 | Tags: transformers, safetensors, minimax_m2, text-generation, conversational</description>
       <guid isPermaLink="true">https://huggingface.co/MiniMaxAI/MiniMax-M2.5</guid>
       <pubDate>Thu, 12 Feb 2026 06:05:24 +0000</pubDate>
     </item>
@@ -235,7 +235,7 @@
     <item>
       <title>skills</title>
       <link>https://github.com/MiniMax-AI/skills</link>
-      <description>[GitHub Repo] | Language: C# | Stars: 13611</description>
+      <description>[GitHub Repo] | Language: C# | Stars: 13614</description>
       <guid isPermaLink="true">https://github.com/MiniMax-AI/skills</guid>
       <pubDate>Tue, 17 Mar 2026 07:19:25 +0000</pubDate>
     </item>
@@ -270,7 +270,7 @@
     <item>
       <title>minimax-code</title>
       <link>https://github.com/MiniMax-AI/minimax-code</link>
-      <description>[GitHub Repo] | An open-source coding agent for your terminal, powered by MiniMax. | Language: TypeScript | Stars: 1443 | Topics: coding-agents, harness, minimax</description>
+      <description>[GitHub Repo] | An open-source coding agent for your terminal, powered by MiniMax. | Language: TypeScript | Stars: 1475 | Topics: coding-agents, harness, minimax</description>
       <guid isPermaLink="true">https://github.com/MiniMax-AI/minimax-code</guid>
       <pubDate>Mon, 01 Jun 2026 12:39:40 +0000</pubDate>
     </item>
@@ -298,14 +298,14 @@
     <item>
       <title>MiniMax-H3</title>
       <link>https://huggingface.co/MiniMaxAI/MiniMax-H3</link>
-      <description>[HuggingFace Model] | image-text-to-video | Likes: 5508 | Tags: minimax-h3, diffusers, safetensors, text-to-video, image-to-video</description>
+      <description>[HuggingFace Model] | image-text-to-video | Likes: 5513 | Tags: minimax-h3, diffusers, safetensors, text-to-video, image-to-video</description>
       <guid isPermaLink="true">https://huggingface.co/MiniMaxAI/MiniMax-H3</guid>
       <pubDate>Tue, 28 Jul 2026 10:45:18 +0000</pubDate>
     </item>
     <item>
       <title>MiniMax-H3</title>
       <link>https://github.com/MiniMax-AI/MiniMax-H3</link>
-      <description>[GitHub Repo] | Language: Python | Stars: 8967</description>
+      <description>[GitHub Repo] | Language: Python | Stars: 8974</description>
       <guid isPermaLink="true">https://github.com/MiniMax-AI/MiniMax-H3</guid>
       <pubDate>Thu, 30 Jul 2026 08:41:09 +0000</pubDate>
     </item>
@@ -319,7 +319,7 @@
     <item>
       <title>MiniMax-Music3</title>
       <link>https://github.com/MiniMax-AI/MiniMax-Music3</link>
-      <description>[GitHub Repo] | Stars: 897</description>
+      <description>[GitHub Repo] | Stars: 898</description>
       <guid isPermaLink="true">https://github.com/MiniMax-AI/MiniMax-Music3</guid>
       <pubDate>Tue, 11 Aug 2026 08:01:03 +0000</pubDate>
     </item>
@@ -354,7 +354,7 @@
     <item>
       <title>MiniMax-Code-MiniApps</title>
       <link>https://github.com/MiniMax-AI/MiniMax-Code-MiniApps</link>
-      <description>[GitHub Repo] | Language: HTML | Stars: 5 | Topics: community, miniapp, minimax, minimax-code, minimax-code-miniapp, plugins</description>
+      <description>[GitHub Repo] | Language: HTML | Stars: 6 | Topics: community, miniapp, minimax, minimax-code, minimax-code-miniapp, plugins</description>
       <guid isPermaLink="true">https://github.com/MiniMax-AI/MiniMax-Code-MiniApps</guid>
       <pubDate>Sun, 20 Sep 2026 07:44:29 +0000</pubDate>
     </item>
