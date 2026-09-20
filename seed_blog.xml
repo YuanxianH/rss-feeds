@@ -7,7 +7,7 @@
     <docs>http://www.rssboard.org/rss-specification</docs>
     <generator>RSS Creator</generator>
     <language>zh-CN</language>
-    <lastBuildDate>Sun, 20 Sep 2026 00:46:11 +0000</lastBuildDate>
+    <lastBuildDate>Sun, 20 Sep 2026 05:50:44 +0000</lastBuildDate>
     <item>
       <title>SeedRealtime 音视频全双工大模型发布：走向全模态自然交互</title>
       <link>https://seed.bytedance.com/zh/blog/seedrealtime-%E9%9F%B3%E8%A7%86%E9%A2%91%E5%85%A8%E5%8F%8C%E5%B7%A5%E5%A4%A7%E6%A8%A1%E5%9E%8B%E5%8F%91%E5%B8%83-%E8%B5%B0%E5%90%91%E5%85%A8%E6%A8%A1%E6%80%81%E8%87%AA%E7%84%B6%E4%BA%A4%E4%BA%92</link>
@@ -183,7 +183,7 @@
       <pubDate>Wed, 23 Jul 2025 00:00:00 +0800</pubDate>
     </item>
     <item>
-      <title>Seed Research￨通用机器人模型 GR-3 发布！支持高泛化、长程任务、柔性物体双臂操作</title>
+      <title>Seed Research ￨通用机器人模型 GR-3 发布！支持高泛化、长程任务、柔性物体双臂操作</title>
       <link>https://seed.bytedance.com/zh/blog/seed-research-%E9%80%9A%E7%94%A8%E6%9C%BA%E5%99%A8%E4%BA%BA%E6%A8%A1%E5%9E%8B-gr-3-%E5%8F%91%E5%B8%83-%E6%94%AF%E6%8C%81%E9%AB%98%E6%B3%9B%E5%8C%96-%E9%95%BF%E7%A8%8B%E4%BB%BB%E5%8A%A1-%E6%9F%94%E6%80%A7%E7%89%A9%E4%BD%93%E5%8F%8C%E8%87%82%E6%93%8D%E4%BD%9C</link>
       <description>一个可泛化、支持长程以及复杂任务的机器人操作大模型</description>
       <guid isPermaLink="false">1788419707282</guid>
