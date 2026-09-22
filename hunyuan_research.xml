@@ -7,11 +7,18 @@
     <docs>http://www.rssboard.org/rss-specification</docs>
     <generator>RSS Creator</generator>
     <language>zh-CN</language>
-    <lastBuildDate>Tue, 22 Sep 2026 03:50:06 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 22 Sep 2026 09:11:24 +0000</lastBuildDate>
     <item>
       <title>Hy Image3.5 preview 发布：为专业创作提供高性价比模型</title>
       <link>https://hy.tencent.com/research/hy-image35-preview</link>
       <guid isPermaLink="true">https://hy.tencent.com/research/hy-image35-preview</guid>
+      <pubDate>Mon, 21 Sep 2026 16:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>当大模型强化学习走向规模化，Batch Size Scaling 有什么不一样？</title>
+      <link>https://hy.tencent.com/research/100116</link>
+      <description>更大的 batch 让每次更新能够处理更多序列，从而利用更多并行计算资源；但在样本预算固定时，模型可更新的次数也会减少。在强化学习中，什么时候增大 batch 才能缩短达到目标性能所需的实际时间？对于大语言模型，还必须考虑训练轨迹需要在线生成，以及生成与训练对计算资源的需求并不相同。我们建立了一个将达标所需样本数与端到端吞吐量联系起来的分析框架：只有吞吐增益超过额外的样本代价，更大的 batch 才能加速训练。这也给出了一个实用的调参顺序：先找到 batch size 变化后学习效果仍近似不变的范围，再在这个范围内优化吞吐量。GRPO 和 PPO 实验表明，重新调整学习率后，不同 batch 的学习曲线在一定范围内按累计样本数比较时大致对齐。在固定硬件上，增大 batch 使生成吞吐量最高提升 2.29 倍；我们测得的最佳 GRPO 配置在不增加 GPU 的情况下，将达到同一验证目标所需的时间缩短了 29%。</description>
+      <guid isPermaLink="true">https://hy.tencent.com/research/100116</guid>
       <pubDate>Mon, 21 Sep 2026 16:00:00 +0000</pubDate>
     </item>
     <item>
