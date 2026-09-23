@@ -7,13 +7,20 @@
     <docs>http://www.rssboard.org/rss-specification</docs>
     <generator>RSS Creator</generator>
     <language>zh-CN</language>
-    <lastBuildDate>Tue, 22 Sep 2026 21:50:49 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 23 Sep 2026 00:05:49 +0000</lastBuildDate>
     <item>
       <title>10 AI Lessons from Driving 200+ Million Fully Autonomous Miles</title>
       <link>https://waymo.com/blog/2026/08/10ailessons</link>
       <description>Much of the autonomous vehicle (AV) space is uncharted territory. However, at Waymo, with more than 200 million miles driven fully autonomously, we’re one of very few companies that can look to our past to illuminate our future. Our experience has led us to ten fundamental truths that shape how we build AI. </description>
       <guid isPermaLink="true">https://waymo.com/blog/2026/08/10ailessons</guid>
       <pubDate>Wed, 26 Aug 2026 00:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>A look under our trunk: what’s in our compute</title>
+      <link>https://waymo.com/blog/2026/08/look-under-our-trunk</link>
+      <description>Compute is the brain of the Waymo Driver, translating raw sensor data into real-time driving commands. Operating demonstrably safe, physical AI on the road demands a fundamental shift towards a system engineered for deterministic, low-latency performance. Over the past decade, we have co-designed our hardware, sensors, and algorithms side-by-side to solve the unique constraints of real-world edge compute. We’re offering the first look under our trunk to share our approach to compute, our custom silicon, and how we collaborate with industry leaders to build the most capable computing system on the road.</description>
+      <guid isPermaLink="true">https://waymo.com/blog/2026/08/look-under-our-trunk</guid>
+      <pubDate>Thu, 20 Aug 2026 00:00:00 +0000</pubDate>
     </item>
     <item>
       <title>Say hi to new Ojai in-car experience</title>
@@ -355,13 +362,6 @@
       <description>Imagine a tiny city where you control everything that happens on the streets. You manage how many cars zip down the roads and how fast they are going. You dictate how many cyclists are on a roundabout or whether they follow the road rules. The “weather” around the vehicle can change multiple times a day from blue skies and sunshine one minute to heavy rain showers the next, but only if you want it that way. One may say such a city doesn’t exist, but if you drive out to the middle of Merced County in California, you’ll find it at Castle, a former Air Force Base our team uses to help build the World’s Most Experienced Driver™. </description>
       <guid isPermaLink="true">https://waymo.com/blog/2020/09/the-waymo-drivers-training-regime</guid>
       <pubDate>Thu, 10 Sep 2020 00:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>Racers on your mark: Creating a space for students to engage with the full self-driving stack</title>
-      <link>https://waymo.com/blog/2020/08/racers-on-your-mark</link>
-      <description>Last year around this time, I found myself on a racetrack in Hockenheim, Germany, at Formula Student Germany as a student on the MIT/Delft team. Formula Student is an international design competition, where students with various backgrounds, ranging from mechanical and software engineering to finance and marketing, join forces to design, build, and race a prototype self-driving racecar. This project was one of the most challenging and rewarding experiences of my life; seeing an idea transform from a concept pitch and a system architecture diagram to a car driving itself on a racetrack in Germany was extremely rewarding, but by no means easy.</description>
-      <guid isPermaLink="true">https://waymo.com/blog/2020/08/racers-on-your-mark</guid>
-      <pubDate>Tue, 11 Aug 2020 00:00:00 +0000</pubDate>
     </item>
   </channel>
 </rss>
