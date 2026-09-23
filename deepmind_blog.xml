@@ -7,7 +7,7 @@
     <docs>http://www.rssboard.org/rss-specification</docs>
     <generator>RSS Creator</generator>
     <language>zh-CN</language>
-    <lastBuildDate>Wed, 23 Sep 2026 15:24:19 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 23 Sep 2026 19:32:20 +0000</lastBuildDate>
     <item>
       <title>Introducing agentic video understanding with Gemini</title>
       <link>https://blog.google/innovation-and-ai/models-and-research/gemini-models/introducing-agentic-video-in-gemini/</link>
@@ -36,6 +36,18 @@
       <title>Introducing Gemini 3.8 Live and 3.8 Live Extended Thinking</title>
       <link>https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-3-8-live-gemini-3-8-live-extended-thinking/</link>
       <guid isPermaLink="true">https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-3-8-live-gemini-3-8-live-extended-thinking/</guid>
+      <pubDate>Wed, 23 Sep 2026 00:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>Gemini 3.8 text-to-speech says hello</title>
+      <link>https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-3-8-text-to-speech/</link>
+      <guid isPermaLink="true">https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-3-8-text-to-speech/</guid>
+      <pubDate>Wed, 23 Sep 2026 00:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>Advancing Private AI Compute with secure, server-side memory</title>
+      <link>https://deepmind.google/blog/advancing-private-ai-compute-with-secure-server-side-memory/</link>
+      <guid isPermaLink="true">https://deepmind.google/blog/advancing-private-ai-compute-with-secure-server-side-memory/</guid>
       <pubDate>Wed, 23 Sep 2026 00:00:00 +0000</pubDate>
     </item>
     <item>
@@ -133,18 +145,6 @@
       <link>https://blog.google/innovation-and-ai/models-and-research/google-deepmind/gemini-robotics-er-2/?utm_source=deepmind.google&amp;utm_medium=referral&amp;utm_campaign=gdm&amp;utm_content=</link>
       <guid isPermaLink="true">https://blog.google/innovation-and-ai/models-and-research/google-deepmind/gemini-robotics-er-2/?utm_source=deepmind.google&amp;utm_medium=referral&amp;utm_campaign=gdm&amp;utm_content=</guid>
       <pubDate>Thu, 23 Jul 2026 00:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>Securing the future of AI agents</title>
-      <link>https://deepmind.google/blog/securing-the-future-of-ai-agents/</link>
-      <guid isPermaLink="true">https://deepmind.google/blog/securing-the-future-of-ai-agents/</guid>
-      <pubDate>Tue, 23 Jun 2026 00:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>Google DeepMind and A24 announce first-of-its-kind research partnership</title>
-      <link>https://blog.google/innovation-and-ai/models-and-research/google-deepmind/deepmind-a24-research-partnership/?utm_source=deepmind.google&amp;utm_medium=referral&amp;utm_campaign=gdm&amp;utm_content=</link>
-      <guid isPermaLink="true">https://blog.google/innovation-and-ai/models-and-research/google-deepmind/deepmind-a24-research-partnership/?utm_source=deepmind.google&amp;utm_medium=referral&amp;utm_campaign=gdm&amp;utm_content=</guid>
-      <pubDate>Tue, 23 Jun 2026 00:00:00 +0000</pubDate>
     </item>
     <item>
       <title>Introducing computer use in Gemini 3.5 Flash</title>
