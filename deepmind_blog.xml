@@ -7,7 +7,7 @@
     <docs>http://www.rssboard.org/rss-specification</docs>
     <generator>RSS Creator</generator>
     <language>zh-CN</language>
-    <lastBuildDate>Thu, 24 Sep 2026 13:20:34 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 24 Sep 2026 18:17:45 +0000</lastBuildDate>
     <item>
       <title>Introducing agentic video understanding with Gemini</title>
       <link>https://blog.google/innovation-and-ai/models-and-research/gemini-models/introducing-agentic-video-in-gemini/</link>
@@ -48,6 +48,12 @@
       <title>Advancing Private AI Compute with secure, server-side memory</title>
       <link>https://deepmind.google/blog/advancing-private-ai-compute-with-secure-server-side-memory/</link>
       <guid isPermaLink="true">https://deepmind.google/blog/advancing-private-ai-compute-with-secure-server-side-memory/</guid>
+      <pubDate>Thu, 24 Sep 2026 00:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>Introducing Gemini 3.8 Live with Live Avatar</title>
+      <link>https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-3-8-live-with-live-avatar/?utm_source=deepmind.google&amp;utm_medium=referral&amp;utm_campaign=gdm&amp;utm_content=</link>
+      <guid isPermaLink="true">https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-3-8-live-with-live-avatar/?utm_source=deepmind.google&amp;utm_medium=referral&amp;utm_campaign=gdm&amp;utm_content=</guid>
       <pubDate>Thu, 24 Sep 2026 00:00:00 +0000</pubDate>
     </item>
     <item>
@@ -145,12 +151,6 @@
       <link>https://blog.google/innovation-and-ai/models-and-research/google-deepmind/gemini-robotics-er-2/?utm_source=deepmind.google&amp;utm_medium=referral&amp;utm_campaign=gdm&amp;utm_content=</link>
       <guid isPermaLink="true">https://blog.google/innovation-and-ai/models-and-research/google-deepmind/gemini-robotics-er-2/?utm_source=deepmind.google&amp;utm_medium=referral&amp;utm_campaign=gdm&amp;utm_content=</guid>
       <pubDate>Fri, 24 Jul 2026 00:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>Introducing computer use in Gemini 3.5 Flash</title>
-      <link>https://blog.google/innovation-and-ai/models-and-research/gemini-models/introducing-computer-use-gemini-3-5-flash/?utm_source=deepmind.google&amp;utm_medium=referral&amp;utm_campaign=gdm&amp;utm_content=</link>
-      <guid isPermaLink="true">https://blog.google/innovation-and-ai/models-and-research/gemini-models/introducing-computer-use-gemini-3-5-flash/?utm_source=deepmind.google&amp;utm_medium=referral&amp;utm_campaign=gdm&amp;utm_content=</guid>
-      <pubDate>Wed, 24 Jun 2026 00:00:00 +0000</pubDate>
     </item>
     <item>
       <title>Start building with Nano Banana 2 Lite and Gemini Omni Flash</title>
