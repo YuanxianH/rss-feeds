@@ -7,7 +7,7 @@
     <docs>http://www.rssboard.org/rss-specification</docs>
     <generator>RSS Creator</generator>
     <language>zh-CN</language>
-    <lastBuildDate>Tue, 29 Sep 2026 20:29:39 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 30 Sep 2026 00:06:19 +0000</lastBuildDate>
     <item>
       <title>Codex CLI 0.155.0</title>
       <link>https://github.com/openai/codex/releases/tag/rust-v0.155.0</link>
@@ -3975,6 +3975,43 @@ Isolate realtime auth fallback test from startup prewarm
 Prevent message-board notifications from reopening final answers
 @eknight-oai</description>
       <guid isPermaLink="false">https://developers.openai.com/codex/changelog#github-release-398926954</guid>
+      <pubDate>Tue, 29 Sep 2026 00:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>Codex CLI 0.159.1</title>
+      <link>https://github.com/openai/codex/releases/tag/rust-v0.159.1</link>
+      <description>New Features
+Added GPT-6.1 Sol as the default model in the bundled catalog and Amazon Bedrock Mantle and Runtime catalogs. (
+#49323
+,
+#49342
+)
+Changelog
+Full Changelog:
+rust-v0.159.0...rust-v0.159.1
+#49323
+[0.159] Prepare 0.159.1 release backports
+@andrewgu-oai
+#49342
+[0.159] Backport GPT-6.1 Sol Bedrock catalogs
+@celia-oai</description>
+      <guid isPermaLink="false">https://developers.openai.com/codex/changelog#github-release-399499631</guid>
+      <pubDate>Tue, 29 Sep 2026 00:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>Codex CLI 0.159.2</title>
+      <link>https://github.com/openai/codex/releases/tag/rust-v0.159.2</link>
+      <description>Bug Fixes
+Suppressed console windows flashing on Windows when Codex launches background processes and sandboxed commands. (
+#49385
+)
+Changelog
+Full Changelog:
+rust-v0.159.1...rust-v0.159.2
+#49385
+[0.159] Backport Windows console suppression for 0.159.2
+@andrewgu-oai</description>
+      <guid isPermaLink="false">https://developers.openai.com/codex/changelog#github-release-399607589</guid>
       <pubDate>Tue, 29 Sep 2026 00:00:00 +0000</pubDate>
     </item>
   </channel>
