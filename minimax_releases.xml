@@ -7,18 +7,11 @@
     <docs>http://www.rssboard.org/rss-specification</docs>
     <generator>RSS Creator</generator>
     <language>zh-CN</language>
-    <lastBuildDate>Fri, 02 Oct 2026 01:21:46 +0000</lastBuildDate>
-    <item>
-      <title>MiniMax-AI.github.io</title>
-      <link>https://github.com/MiniMax-AI/MiniMax-AI.github.io</link>
-      <description>[GitHub Repo] | The official GitHub Page for MiniMax | Language: HTML | Stars: 73 | Topics: text-to-speech, tts</description>
-      <guid isPermaLink="true">https://github.com/MiniMax-AI/MiniMax-AI.github.io</guid>
-      <pubDate>Fri, 09 May 2025 09:35:01 +0000</pubDate>
-    </item>
+    <lastBuildDate>Fri, 02 Oct 2026 08:03:44 +0000</lastBuildDate>
     <item>
       <title>awesome-minimax-integrations</title>
       <link>https://github.com/MiniMax-AI/awesome-minimax-integrations</link>
-      <description>[GitHub Repo] | Explore these applications integrating MiniMax's multimodal API to see how text, vision, and speech processing capabilities are incorporated into various software. | Stars: 79</description>
+      <description>[GitHub Repo] | Explore these applications integrating MiniMax's multimodal API to see how text, vision, and speech processing capabilities are incorporated into various software. | Stars: 80</description>
       <guid isPermaLink="true">https://github.com/MiniMax-AI/awesome-minimax-integrations</guid>
       <pubDate>Tue, 20 May 2025 12:11:35 +0000</pubDate>
     </item>
@@ -130,7 +123,7 @@
     <item>
       <title>Mini-Agent</title>
       <link>https://github.com/MiniMax-AI/Mini-Agent</link>
-      <description>[GitHub Repo] | A minimal yet professional single agent demo project that showcases the core execution pipeline and production-grade features of agents. | Language: Python | Stars: 3044 | Topics: agent, llm, minimax</description>
+      <description>[GitHub Repo] | A minimal yet professional single agent demo project that showcases the core execution pipeline and production-grade features of agents. | Language: Python | Stars: 3045 | Topics: agent, llm, minimax</description>
       <guid isPermaLink="true">https://github.com/MiniMax-AI/Mini-Agent</guid>
       <pubDate>Fri, 31 Oct 2025 03:56:27 +0000</pubDate>
     </item>
@@ -263,7 +256,7 @@
     <item>
       <title>minimax-code</title>
       <link>https://github.com/MiniMax-AI/minimax-code</link>
-      <description>[GitHub Repo] | An open-source coding agent for your terminal, powered by MiniMax. | Language: TypeScript | Stars: 1951 | Topics: coding-agents, harness, minimax</description>
+      <description>[GitHub Repo] | An open-source coding agent for your terminal, powered by MiniMax. | Language: TypeScript | Stars: 1953 | Topics: coding-agents, harness, minimax</description>
       <guid isPermaLink="true">https://github.com/MiniMax-AI/minimax-code</guid>
       <pubDate>Mon, 01 Jun 2026 12:39:40 +0000</pubDate>
     </item>
@@ -291,14 +284,14 @@
     <item>
       <title>MiniMax-H3</title>
       <link>https://huggingface.co/MiniMaxAI/MiniMax-H3</link>
-      <description>[HuggingFace Model] | image-text-to-video | Likes: 5817 | Tags: minimax-h3, diffusers, safetensors, text-to-video, image-to-video</description>
+      <description>[HuggingFace Model] | image-text-to-video | Likes: 5823 | Tags: minimax-h3, diffusers, safetensors, text-to-video, image-to-video</description>
       <guid isPermaLink="true">https://huggingface.co/MiniMaxAI/MiniMax-H3</guid>
       <pubDate>Tue, 28 Jul 2026 10:45:18 +0000</pubDate>
     </item>
     <item>
       <title>MiniMax-H3</title>
       <link>https://github.com/MiniMax-AI/MiniMax-H3</link>
-      <description>[GitHub Repo] | Language: Python | Stars: 9447</description>
+      <description>[GitHub Repo] | Language: Python | Stars: 9453</description>
       <guid isPermaLink="true">https://github.com/MiniMax-AI/MiniMax-H3</guid>
       <pubDate>Thu, 30 Jul 2026 08:41:09 +0000</pubDate>
     </item>
@@ -354,9 +347,16 @@
     <item>
       <title>OpenAgentCore</title>
       <link>https://github.com/MiniMax-AI/OpenAgentCore</link>
-      <description>[GitHub Repo] | Open-source, self-hosted implementation of the OpenAI Agents API with multiple native harnesses. | Language: Go | Stars: 116 | Topics: agent-runtime, ai-agents, claude-code, codex, coding-agent, llm, mcp, openai, openai-agents-api, sandbox, self-hosted</description>
+      <description>[GitHub Repo] | Open-source, self-hosted implementation of the OpenAI Agents API with multiple native harnesses. | Language: Go | Stars: 124 | Topics: agent-runtime, ai-agents, claude-code, codex, coding-agent, llm, mcp, openai, openai-agents-api, sandbox, self-hosted</description>
       <guid isPermaLink="true">https://github.com/MiniMax-AI/OpenAgentCore</guid>
       <pubDate>Mon, 21 Sep 2026 03:18:15 +0000</pubDate>
+    </item>
+    <item>
+      <title>homebrew-tap</title>
+      <link>https://github.com/MiniMax-AI/homebrew-tap</link>
+      <description>[GitHub Repo] | Language: Shell</description>
+      <guid isPermaLink="true">https://github.com/MiniMax-AI/homebrew-tap</guid>
+      <pubDate>Fri, 02 Oct 2026 03:02:22 +0000</pubDate>
     </item>
   </channel>
 </rss>
