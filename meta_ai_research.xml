@@ -7,7 +7,49 @@
     <docs>http://www.rssboard.org/rss-specification</docs>
     <generator>RSS Creator</generator>
     <language>zh-CN</language>
-    <lastBuildDate>Fri, 02 Oct 2026 15:28:40 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 02 Oct 2026 20:25:39 +0000</lastBuildDate>
+    <item>
+      <title>The Strict Threshold for Gaussian Ellipsoid Fitting</title>
+      <link>https://ai.meta.com/research/publications/the-strict-threshold-for-gaussian-ellipsoid-fitting/</link>
+      <description>Aykut Arslan</description>
+      <guid isPermaLink="true">https://ai.meta.com/research/publications/the-strict-threshold-for-gaussian-ellipsoid-fitting/</guid>
+      <pubDate>Fri, 02 Oct 2026 00:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>Finite-Time Blow-Up of Radial Negative-Energy Solutions for the Mass-Critical Biharmonic Nonlinear Schrödinger Equation</title>
+      <link>https://ai.meta.com/research/publications/finite-time-blow-up-of-radial-negative-energy-solutions-for-the-mass-critical-biharmonic-nonlinear-schrodinger-equation/</link>
+      <description>Leonard Dinh</description>
+      <guid isPermaLink="true">https://ai.meta.com/research/publications/finite-time-blow-up-of-radial-negative-energy-solutions-for-the-mass-critical-biharmonic-nonlinear-schrodinger-equation/</guid>
+      <pubDate>Fri, 02 Oct 2026 00:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>Semiabelian Groups Need Not Be Monomial</title>
+      <link>https://ai.meta.com/research/publications/semiabelian-groups-need-not-be-monomial/</link>
+      <description>Joseph Phillip Brennan, Milana Golich</description>
+      <guid isPermaLink="true">https://ai.meta.com/research/publications/semiabelian-groups-need-not-be-monomial/</guid>
+      <pubDate>Fri, 02 Oct 2026 00:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>String Two-Point Function = Height Function on a Curve</title>
+      <link>https://ai.meta.com/research/publications/string-two-point-function-height-function-on-a-curve/</link>
+      <description>Anindya Dey, Gabriel Herczeg, An Huang, Nicolas Jaramillo Torres, Jacob H. Swenberg</description>
+      <guid isPermaLink="true">https://ai.meta.com/research/publications/string-two-point-function-height-function-on-a-curve/</guid>
+      <pubDate>Fri, 02 Oct 2026 00:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>On Solvable Evolution Algebras and a Conjecture by García-Martínez and Pérez-Rodríguez</title>
+      <link>https://ai.meta.com/research/publications/on-solvable-evolution-algebras-and-a-conjecture-by-garcia-martinez-and-perez-rodriguez/</link>
+      <description>Andres Barei Bueno</description>
+      <guid isPermaLink="true">https://ai.meta.com/research/publications/on-solvable-evolution-algebras-and-a-conjecture-by-garcia-martinez-and-perez-rodriguez/</guid>
+      <pubDate>Fri, 02 Oct 2026 00:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>Tightness of the Cycle-Based Relaxation for Completed Length-Three Alpha-Cycles</title>
+      <link>https://ai.meta.com/research/publications/tightness-of-the-cycle-based-relaxation-for-completed-length-three-alpha-cycles/</link>
+      <description>Aykut Arslan</description>
+      <guid isPermaLink="true">https://ai.meta.com/research/publications/tightness-of-the-cycle-based-relaxation-for-completed-length-three-alpha-cycles/</guid>
+      <pubDate>Fri, 02 Oct 2026 00:00:00 +0000</pubDate>
+    </item>
     <item>
       <title>MaD-RL: Matching Distributions for Calibrating LLMs with Reinforcement Learning</title>
       <link>https://ai.meta.com/research/publications/mad-rl-matching-distributions-for-calibrating-llms-with-reinforcement-learning/</link>
@@ -49,48 +91,6 @@
       <description>Zilin Xiao, Qi Ma, Jason Chen, Xintao Chen, Avinash Atreya, Hanjie Chen, Vicente Ordonez</description>
       <guid isPermaLink="true">https://ai.meta.com/research/publications/learning-to-reason-by-analogy-via-retrieval-augmented-reinforcement-fine-tuning/</guid>
       <pubDate>Fri, 17 Jul 2026 00:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>S-EMBER: A Large-Scale Benchmark for Streaming Egocentric Memory Retrieval</title>
-      <link>https://ai.meta.com/research/publications/s-ember-a-large-scale-benchmark-for-streaming-egocentric-memory-retrieval/</link>
-      <description>Xiaodong Wang, Xuanyi Zhao, Pedro Rodriguez, Devendra Singh Sachan, Barlas Oguz, Seungwhan Moon, Shang-Wen Li, Gargi Ghosh, Xin Dong, Wen-Tau Yih</description>
-      <guid isPermaLink="true">https://ai.meta.com/research/publications/s-ember-a-large-scale-benchmark-for-streaming-egocentric-memory-retrieval/</guid>
-      <pubDate>Mon, 13 Jul 2026 00:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>Interpreting Physics in Video World Models</title>
-      <link>https://ai.meta.com/research/publications/interpreting-physics-in-video-world-models/</link>
-      <description>Sonia Joseph, Quentin Garrido, Randall Balestriero, Matthew Kowal, Thomas Fel, Shahab Bakhtiari, Blake Richards, Mike Rabbat</description>
-      <guid isPermaLink="true">https://ai.meta.com/research/publications/interpreting-physics-in-video-world-models/</guid>
-      <pubDate>Fri, 03 Jul 2026 00:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>Accurate Decoding of Natural Sentences from Non-Invasive Brain Recordings</title>
-      <link>https://ai.meta.com/research/publications/accurate-decoding-of-natural-sentences-from-non-invasive-brain-recordings/</link>
-      <description>Mingfang (Lucy) Zhang *, Jarod Levy *, Cédric Rommel, Jérémy Rapin, Corentin Bel, Julie Bonnaire, Daniel Nieto, Pierre Bourdillon, Svetlana Pinet, Stéphane d'Ascoli, Thomas Moreau, Jean Remi King</description>
-      <guid isPermaLink="true">https://ai.meta.com/research/publications/accurate-decoding-of-natural-sentences-from-non-invasive-brain-recordings/</guid>
-      <pubDate>Mon, 29 Jun 2026 00:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>Superintelligent Retrieval Agent: The Next Frontier of Agentic Retrieval</title>
-      <link>https://ai.meta.com/research/publications/superintelligent-retrieval-agent-the-next-frontier-of-agentic-retrieval/</link>
-      <description>Zeyu Yang, Qi Ma, Jason Chen, Anshumali Shrivastava</description>
-      <guid isPermaLink="true">https://ai.meta.com/research/publications/superintelligent-retrieval-agent-the-next-frontier-of-agentic-retrieval/</guid>
-      <pubDate>Fri, 05 Jun 2026 00:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>AutoformBot: Formalizing Mathematics at Scale</title>
-      <link>https://ai.meta.com/research/publications/autoformbot-formalizing-mathematics-at-scale/</link>
-      <description>Ahmad Rammal, Niket Patel, Amaury Hayat, Julia Kempe, Remi Munos, Charles Arnal, Vivien Cabannes</description>
-      <guid isPermaLink="true">https://ai.meta.com/research/publications/autoformbot-formalizing-mathematics-at-scale/</guid>
-      <pubDate>Wed, 27 May 2026 00:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>Misalignment Between Backpropagation and the Hierarchy of Brain Responses to Images</title>
-      <link>https://ai.meta.com/research/publications/misalignment-between-backpropagation-and-the-hierarchy-of-brain-responses-to-images/</link>
-      <description>Josephine Raugel, Max Seitzer, Marc Szafraniec, Huy V. Vo, Jérémy Rapin, Patrick Labatut, Piotr Bojanowski, Valentin Wyart, Jean Remi King</description>
-      <guid isPermaLink="true">https://ai.meta.com/research/publications/misalignment-between-backpropagation-and-the-hierarchy-of-brain-responses-to-images/</guid>
-      <pubDate>Tue, 26 May 2026 00:00:00 +0000</pubDate>
     </item>
     <item>
       <title>Energy-Based Models for Atomic-Resolution Protein Conformations | Facebook AI Research</title>
