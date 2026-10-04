@@ -7,7 +7,7 @@
     <docs>http://www.rssboard.org/rss-specification</docs>
     <generator>RSS Creator</generator>
     <language>zh-CN</language>
-    <lastBuildDate>Sun, 04 Oct 2026 19:17:14 +0000</lastBuildDate>
+    <lastBuildDate>Sun, 04 Oct 2026 22:51:18 +0000</lastBuildDate>
     <item>
       <title>awesome-minimax-integrations</title>
       <link>https://github.com/MiniMax-AI/awesome-minimax-integrations</link>
@@ -256,7 +256,7 @@
     <item>
       <title>minimax-code</title>
       <link>https://github.com/MiniMax-AI/minimax-code</link>
-      <description>[GitHub Repo] | An open-source coding agent for your terminal, powered by MiniMax. | Language: TypeScript | Stars: 1963 | Topics: coding-agents, harness, minimax</description>
+      <description>[GitHub Repo] | An open-source coding agent for your terminal, powered by MiniMax. | Language: TypeScript | Stars: 1964 | Topics: coding-agents, harness, minimax</description>
       <guid isPermaLink="true">https://github.com/MiniMax-AI/minimax-code</guid>
       <pubDate>Mon, 01 Jun 2026 12:39:40 +0000</pubDate>
     </item>
@@ -284,14 +284,14 @@
     <item>
       <title>MiniMax-H3</title>
       <link>https://huggingface.co/MiniMaxAI/MiniMax-H3</link>
-      <description>[HuggingFace Model] | image-text-to-video | Likes: 5883 | Tags: minimax-h3, diffusers, safetensors, text-to-video, image-to-video</description>
+      <description>[HuggingFace Model] | image-text-to-video | Likes: 5887 | Tags: minimax-h3, diffusers, safetensors, text-to-video, image-to-video</description>
       <guid isPermaLink="true">https://huggingface.co/MiniMaxAI/MiniMax-H3</guid>
       <pubDate>Tue, 28 Jul 2026 10:45:18 +0000</pubDate>
     </item>
     <item>
       <title>MiniMax-H3</title>
       <link>https://github.com/MiniMax-AI/MiniMax-H3</link>
-      <description>[GitHub Repo] | Language: Python | Stars: 9540</description>
+      <description>[GitHub Repo] | Language: Python | Stars: 9541</description>
       <guid isPermaLink="true">https://github.com/MiniMax-AI/MiniMax-H3</guid>
       <pubDate>Thu, 30 Jul 2026 08:41:09 +0000</pubDate>
     </item>
@@ -347,7 +347,7 @@
     <item>
       <title>OpenAgentCore</title>
       <link>https://github.com/MiniMax-AI/OpenAgentCore</link>
-      <description>[GitHub Repo] | Open-source, self-hosted implementation of the OpenAI Agents API with multiple native harnesses. | Language: Go | Stars: 168 | Topics: agent-runtime, ai-agents, claude-code, codex, coding-agent, llm, mcp, openai, openai-agents-api, sandbox, self-hosted</description>
+      <description>[GitHub Repo] | Open-source, self-hosted implementation of the OpenAI Agents API with multiple native harnesses. | Language: Go | Stars: 171 | Topics: agent-runtime, ai-agents, claude-code, codex, coding-agent, llm, mcp, openai, openai-agents-api, sandbox, self-hosted</description>
       <guid isPermaLink="true">https://github.com/MiniMax-AI/OpenAgentCore</guid>
       <pubDate>Mon, 21 Sep 2026 03:18:15 +0000</pubDate>
     </item>
