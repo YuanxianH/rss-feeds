@@ -7,7 +7,7 @@
     <docs>http://www.rssboard.org/rss-specification</docs>
     <generator>RSS Creator</generator>
     <language>zh-CN</language>
-    <lastBuildDate>Mon, 05 Oct 2026 18:02:58 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 06 Oct 2026 00:38:31 +0000</lastBuildDate>
     <item>
       <title>Codex CLI 0.156.0</title>
       <link>https://github.com/openai/codex/releases/tag/rust-v0.156.0</link>
@@ -3509,6 +3509,23 @@ Fix model provider lookup for TUI history
 @andrewgu-oai</description>
       <guid isPermaLink="false">https://developers.openai.com/codex/changelog#github-release-401312540</guid>
       <pubDate>Thu, 01 Oct 2026 00:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>Codex CLI 0.160.1</title>
+      <link>https://github.com/openai/codex/releases/tag/rust-v0.160.1</link>
+      <description>Bug Fixes
+Preserve
+SYSTEMROOT
+,
+TEMP
+, and
+TMP
+when launching remote stdio MCP servers with explicitly configured remote environment variables, allowing Unix hosts to retain the Windows executor's startup environment.
+Changelog
+#51121
+: Backport Windows remote MCP environment preservation to 0.160.</description>
+      <guid isPermaLink="false">https://developers.openai.com/codex/changelog#github-release-404001397</guid>
+      <pubDate>Mon, 05 Oct 2026 00:00:00 +0000</pubDate>
     </item>
   </channel>
 </rss>
