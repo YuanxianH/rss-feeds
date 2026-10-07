@@ -1,0 +1,763 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0">
+  <channel>
+    <title>Grok Bot Changelog</title>
+    <link>https://x.ai/changelog/bot</link>
+    <description>New features, improvements, and fixes in each Grok Bot release</description>
+    <docs>http://www.rssboard.org/rss-specification</docs>
+    <generator>RSS Creator</generator>
+    <language>zh-CN</language>
+    <lastBuildDate>Wed, 07 Oct 2026 11:12:48 +0000</lastBuildDate>
+    <item>
+      <title>Main Bot and more reliable updates (0.66.0)</title>
+      <link>https://x.ai/changelog/bot#v0.66.0</link>
+      <description>New
+Choose a primary Bot, marked Main Bot with a star, that checks in proactively and coordinates work with your other Bots; requires Grok Bot 0.59.0 or later.
+Improved
+In Slack threads, the Bot's status line shows what it's working on and stays up during long steps. Teams
+Fixed
+Update downloads resume after your computer sleeps, and on Mac a copy running from a disk image or Downloads offers Move to Applications.
+A Bot that hangs on an unresponsive command or computer stops itself with a note, and your next message picks up where it left off.
+Your phone notifies you about each Bot reply only once, and never for Bot chats you've deleted.</description>
+      <guid isPermaLink="true">https://x.ai/changelog/bot#v0.66.0</guid>
+      <pubDate>Fri, 02 Oct 2026 00:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>Team Bot voice chat and automatic updates (0.65.0)</title>
+      <link>https://x.ai/changelog/bot#v0.65.0</link>
+      <description>New
+Teammates can start a voice chat with a Team Bot, and the call stays in their own conversation with it. Teams
+Improved
+Automatic Updates is on by default, so Grok Bot restarts to apply updates while you're away; turn it off in Settings → Updates.
+Your phone skips notifications for a Bot you're viewing on your computer, and resumes them once the computer locks, sleeps, or sits idle.
+Team Bot setup goes card to card with no Bot messages in between, and each card shows its step, like Step 2 of 5. Teams
+Fixed
+When you connect an app, sign-in shows why it failed or that its link expired, and Reopen or Retry starts a fresh sign-in.</description>
+      <guid isPermaLink="true">https://x.ai/changelog/bot#v0.65.0</guid>
+      <pubDate>Wed, 30 Sep 2026 00:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>Team Bot managers and refreshed avatars (0.64.0)</title>
+      <link>https://x.ai/changelog/bot#v0.64.0</link>
+      <description>New
+Email and Slack draft cards offer Disable drafts for this Bot, so that Bot sends messages directly; ask the Bot to turn drafts back on.
+The creator of a published Team Bot can add teammates under Managers, who can then change its profile, skills, plugins, secrets, and Slack app. Teams
+Improved
+Bot avatars have a refreshed look with bigger eyes, and the avatar editor adds square, sparkle, clover, flower, heart, house, and star shapes.
+Links in Bot messages show the site's icon next to the underlined link text.
+When a Bot needs a login or other form filled, its chat card opens a Secure Form window showing the site's name and icon.</description>
+      <guid isPermaLink="true">https://x.ai/changelog/bot#v0.64.0</guid>
+      <pubDate>Wed, 30 Sep 2026 00:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>Slack approvals and faster browsing (0.63.0)</title>
+      <link>https://x.ai/changelog/bot#v0.63.0</link>
+      <description>New
+In Slack threads, a Bot that needs your approval posts a Review an action card only you can answer, instead of dropping the action. Teams
+You can ask a Team Bot in Slack to message one of your own Bots, and the reply comes to you privately in Grok Bot. Teams
+Improved
+Adding a plugin that needs sign-in, such as Gmail, from Marketplace starts its sign-in right away instead of stopping at Added.
+Bots move through websites faster, with shorter waits for pages to settle after each click or form submission.
+Marketplace focuses on plugins: Featured Bots and Bot search results no longer appear, and the search box reads Search plugins.
+A Team Bot you own that's ready to publish shows Publish at the top of its details pane, replacing the Publish to team card. Teams
+Fixed
+Grok Bot signs in and connects on networks with a TLS-inspecting proxy, using root certificates installed on your computer.
+When you use up your plan's included usage, Grok Bot shows the usage limit notice instead of Bot failed to respond.
+After a Bot says it's on your request and does the work, it sends you the result instead of going quiet.
+Settings → Usage &amp; Billing shows your included usage and when it resets, instead of saying your plan has none.
+A Bot keeps the voice, speed, and language you set for it instead of resetting them to the defaults.
+In the Tasks tab of a Bot's details pane, deleted or expired cloud agent runs leave the Coding list, and stalled statuses show Status unavailable.
+A Bot you create while the app is open shows its latest message preview and unread dot in the sidebar right away.
+Team Bots with names Slack rejects, such as emoji or non-Latin names, can still be added to Slack under a Slack-safe name. Teams</description>
+      <guid isPermaLink="true">https://x.ai/changelog/bot#v0.63.0</guid>
+      <pubDate>Tue, 29 Sep 2026 00:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>Quotes, lists, and spell check (0.62.0)</title>
+      <link>https://x.ai/changelog/bot#v0.62.0</link>
+      <description>New
+Select text in a chat and press Cmd/Ctrl+L, or choose Add to prompt, to quote it in your next message.
+Type - or 1. to start a bulleted or numbered list in the composer; Shift+Enter adds an item, Tab nests it, and Enter still sends.
+Grok Bot underlines misspelled words as you type and offers suggestions and Add to Dictionary on right-click; turn it off with Check Spelling While Typing.
+On the Manage Team Bots page in the dashboard, team admins can search by Bot or creator name and delete a teammate's Team Bot. Teams
+Improved
+A Bot's info pane has a Library tab listing the pages, files, and links it has shared, grouped into Today, This week, and Older.
+When 1Password isn't connected, Bots ask for site logins with a form in the chat, offering Connect 1Password only if you have the app.
+A Team Bot's info pane shows how many plugins, secrets, skills, and files it has, and a Publish to team card once it's ready. Teams
+When your Slack workspace needs admin approval, the Add to Slack dialog asks you to Send request in Slack before showing Awaiting admin approval. Teams
+Fixed
+When a Bot asks you to connect an app in chat, it resumes the task on its own once you finish signing in.
+A message that didn't go through shows Failed to send with Resend and Delete, instead of being stuck on Not delivered yet.
+Desktop and phone notifications arrive as soon as a Bot sends a message, instead of only when it finishes working.
+Emails a Bot sends through Gmail go to the recipients it names, not to a saved draft's original recipients.
+Deleted Bots free their screens on the shared computer, so other Bots' browser actions no longer fail because every screen is taken.
+When a Bot sends several images to Slack, every image is posted, not just the first.
+A Bot stays signed in to websites when its computer's browser restarts.</description>
+      <guid isPermaLink="true">https://x.ai/changelog/bot#v0.62.0</guid>
+      <pubDate>Mon, 28 Sep 2026 00:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>Team Bots (0.61.0)</title>
+      <link>https://x.ai/changelog/bot#v0.61.0</link>
+      <description>New
+Team Bots let you publish one Bot for your whole team, and teammates chat with it in the app or Slack, each in their own conversation. Teams
+Choose Publish to Team in a Bot's Share menu to make a team copy with its chat and memories, or Start fresh; your original Bot stays private. Teams
+A new Team Bot walks you through plugins, secrets, skills, and files one card at a time, and only you can see it until you choose Publish to team. Teams
+Owners edit a Team Bot's name, description, plugins, secrets, skills, files, and Slack app from its details, and Unpublish takes it away from teammates. Teams
+Teammates find Team Bots under Team Bots in New chat, see the ones they add in the sidebar, and get a greeting with Try asking suggestions. Teams
+A Team Bot asks before using your connected plugins; Always allow covers that Bot or every Team Bot until you choose Clear connector preferences. Teams
+Teammates' use of a Team Bot counts against their own allowance, and the Bot keeps private notes for each person across the app, Slack, and routines. Teams
+Team Bots work in Slack: they reply in threads, read channels they've joined, answer workflow mentions, start new posts, and keep links, code, and tables intact. Teams
+Ask a Team Bot in Slack to set up, change, pause, or delete your routines; link your Slack account under Settings → General → Team Bots. Teams
+Team admins can add a Team Bot for the whole team or chosen groups from Manage team bots on the dashboard, and members can't hide it. Teams
+Fixed
+Files a Bot says it's sending you reach the chat more reliably instead of silently going missing.</description>
+      <guid isPermaLink="true">https://x.ai/changelog/bot#v0.61.0</guid>
+      <pubDate>Sat, 26 Sep 2026 00:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>Outlook drafts and more reliable replies (0.60.0)</title>
+      <link>https://x.ai/changelog/bot#v0.60.0</link>
+      <description>New
+Editable email drafts work with Outlook: review a Bot's new email in chat, then choose Send email to send it from your Outlook account.
+Improved
+The sidebar's Marketplace button is now Connect apps, with logos of featured plugins beside it.
+Wide tables in Bot messages keep their full layout in narrow windows and scroll sideways instead of squeezing into tall columns.
+Emoji reactions on messages arrive with a short animation that pops the emoji into place.
+Fixed
+Bots reply more reliably instead of ending a turn silently, including after using tools or when background work you're waiting on finishes.
+Bot messages show real line breaks and quotation marks instead of stray backslashes, and links at the end of a line open the right page.
+If an unpaid invoice or a plan without Grok Bot stops a Bot's reply, the app and Slack say why instead of a generic error.
+Searching for a Bot by name in New chat, Search, or @mentions finds Bots whose names contain what you typed, with exact matches first.
+When the image provider declines an avatar description, the avatar editor explains why and suggests rewording it.
+Creating a Bot from New chat reliably opens the new Bot instead of sometimes stalling after it's created.</description>
+      <guid isPermaLink="true">https://x.ai/changelog/bot#v0.60.0</guid>
+      <pubDate>Sat, 26 Sep 2026 00:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>Team Secrets and a centered layout (0.59.0)</title>
+      <link>https://x.ai/changelog/bot#v0.59.0</link>
+      <description>New
+Expired Auto-review cards offer Always allow this in the future, so you aren't asked about that action again.
+Admins can store Team Secrets on the Grok Bot dashboard, and Team Setup scripts receive them as environment variables. Enterprise
+Improved
+When you message a busy Bot, it answers you before working through queued updates from other Bots, Cloud Agents, and background tasks.
+On wide windows, chats and the message box stay in a centered column, and wide tables in replies can stretch across it.
+Hitting a usage or spend limit shows the full limit banner, with buttons like Upgrade, Set Spend Limit, or Request Upgrade to ask your admins.
+Bots use built-in guides with direct links and steps for popular travel, food, shopping, and shipping sites.
+Fixed
+When you send several messages in quick succession, the Bot answers all of them, including the first.
+Bots with a lot of saved memory or skills reply without a several-second pause, and save and forget memories reliably.
+Bot replies in long chats stay visible instead of flickering in and then disappearing when you open or reload the chat.
+When the Bot's computer is briefly unreachable or an automatic computer update fails, chat keeps working without interrupting you with a dialog.
+On Windows, a downloaded update installs when you quit, and on macOS, a failed update install is retried instead of keeping the old version.</description>
+      <guid isPermaLink="true">https://x.ai/changelog/bot#v0.59.0</guid>
+      <pubDate>Fri, 25 Sep 2026 00:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>New languages, sidebar, and accessibility (0.58.0)</title>
+      <link>https://x.ai/changelog/bot#v0.58.0</link>
+      <description>New
+You can choose Czech, Danish, Finnish, Hungarian, or Norwegian Bokmål under Language in Settings, and Follow System selects them when your computer uses one.
+With Terminate Inactive Computers on, members' Grok Bot computers are terminated after 30 days without use. Enterprise
+Improved
+Search and New chat are round buttons atop the sidebar, Marketplace sits in its footer, and the Bot's name in the chat header opens conversation details.
+Grok Bot reconnects faster after sleep or a network change, and brief reconnects or computer updates no longer put a banner across the window.
+Action Recording logs more Bot activity, including tool results and handoffs to subagents and cloud agents, and redacts card numbers and access tokens. Enterprise
+Screen readers announce more of the app, including suggestions, new questions, and message authors, and keyboard focus is visible and stays inside full-screen viewers.
+Fixed
+When a Bot can't reply because of a usage limit, rate limit, or timeout, the chat shows a card that says why.
+Anyone with Grok Bot access can play a Bot's voice memos without being asked to upgrade their plan.
+Auto-review rules you add while a Bot is working, such as with Always allow, stay saved.
+If you hang up a voice chat while a Bot is still working on your request, it finishes and posts the result in the chat.
+A Bot can use a plugin whose only connected account has a label, such as a labeled Outlook account.
+The sidebar keeps your Bots in the same order through reloads and relaunches, and opening a Bot leaves it in place.
+Voice chats use the microphone you choose under Microphone in Settings, and fall back to your default microphone if it's unavailable.
+Bots reconnect to your local computer after a reboot instead of reporting that it isn't connected.</description>
+      <guid isPermaLink="true">https://x.ai/changelog/bot#v0.58.0</guid>
+      <pubDate>Tue, 22 Sep 2026 00:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>Projects and richer link previews (0.57.0)</title>
+      <link>https://x.ai/changelog/bot#v0.57.0</link>
+      <description>New
+A Bot can start a Project when you ask for one: a Cloud Agent that plans the work and runs its own agents.
+Improved
+Link cards and previews show real titles for private Notion pages, GitHub issues and pull requests, and Slack messages using your connected accounts.
+While a Bot's voice memo plays, its transcript highlights each word in sync with the audio, and clicking a word jumps playback there.
+Hidden Bots is a collapsible section at the bottom of the sidebar, and a hidden Bot's menu offers Show in sidebar to bring it back.
+Messages you send show as sent right away, and a small progress bar appears only if one takes over two seconds to reach the Bot.
+A Bot's sidebar menu drops Edit Profile, Duplicate, and template items; use View conversation details to edit the profile and the share menu for templates.
+Audit Logs record more Grok Bot activity, including computers, group chats, templates, skills, plugins, routines, and deleting or sharing a Bot. Enterprise
+Fixed
+Bots reply to questions they can answer from their own knowledge instead of sometimes stopping without replying.
+A Bot's browser stays connected when other Bots on the same computer use theirs, waits longer for slow pages, and reconnects if it drops.
+A Bot's Waiting for you status in the sidebar clears once it's no longer waiting, instead of getting stuck.
+A Bot's sidebar preview shows its latest message even when it's a form, photo, widget, or approval request, instead of going blank.</description>
+      <guid isPermaLink="true">https://x.ai/changelog/bot#v0.57.0</guid>
+      <pubDate>Fri, 18 Sep 2026 00:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>GitHub, spreadsheets, and clearer approvals (0.56.0)</title>
+      <link>https://x.ai/changelog/bot#v0.56.0</link>
+      <description>Improved
+Bots can work with GitHub releases, tags, labels, sub-issues, discussions, and collaborators, create branches, and submit one pull request review covering several files.
+Review an action cards say in one sentence what the Bot wants to do and keep the command and reasoning behind View the full request.
+Spreadsheet previews let you select cells and ranges, move with the arrow keys, copy with Cmd/Ctrl+C, and show up to 10,000 rows.
+When you tell a Bot to stop, it also stops the other Bots it handed work to and the Cloud Agents it started.
+Fixed
+Marketplace shows plugin changes, such as connecting, disconnecting, removing, or signing in, as soon as they finish.
+Routines that watch a single GitHub pull request run only for events on that pull request.
+Changing a Bot's avatar shape and color applies every pick right away, even when you click through them quickly.
+One-time reminder routines show Once with their date and time.
+Bot computers that are asleep apply an admin's latest Network Controls when they next wake. Enterprise</description>
+      <guid isPermaLink="true">https://x.ai/changelog/bot#v0.56.0</guid>
+      <pubDate>Thu, 17 Sep 2026 00:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>Setup Checklist and form filling (0.55.0)</title>
+      <link>https://x.ai/changelog/bot#v0.55.0</link>
+      <description>Improved
+The Grok Bot dashboard's Setup Checklist groups steps into Recommended and Optional and adds steps for plugins, Slack or Microsoft Teams, and network settings. Teams
+The About dialog shows when your copy of the app was built, and Copy version info includes the build date.
+Fixed
+Disconnect on the built-in GitHub plugin works even when your Grok Bot computer is unavailable or running an older version.
+When a Bot fills your answers from a chat form into a page, it also fills address and other fields that unlock only when clicked.
+On sign-in pages that keep fields filled while logging you in, the Bot checks whether a 1Password sign-in worked instead of handing you the screen.</description>
+      <guid isPermaLink="true">https://x.ai/changelog/bot#v0.55.0</guid>
+      <pubDate>Wed, 16 Sep 2026 00:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>Search, HEIC photos, and 1Password (0.54.0)</title>
+      <link>https://x.ai/changelog/bot#v0.54.0</link>
+      <description>New
+Organization admins can choose Delete VMs and Data under Manage selected to remove members' Grok Bot computers along with their stored data. Enterprise
+Improved
+The search palette (Cmd/Ctrl+K) shows matching Bots, settings, actions, and routines before messages; wrap your search in quotes to see every matching message.
+A Bot you create from a template greets you in your app language instead of always in English.
+Fixed
+HEIC and HEIF photos, like those from an iPhone, show as images in the conversation, media viewer, and Media tab instead of as file attachments.
+Bots sign in with 1Password on more sites and let 1Password fill one-time codes and passwords instead of asking you to type them.
+The built-in GitHub plugin appears in Marketplace search with a Connect button, and its page lists its tools so you can turn each one off.
+Secret request cards say why a save failed and keep what you typed so you can try again.</description>
+      <guid isPermaLink="true">https://x.ai/changelog/bot#v0.54.0</guid>
+      <pubDate>Wed, 16 Sep 2026 00:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>1Password, file uploads, and time zones (0.53.0)</title>
+      <link>https://x.ai/changelog/bot#v0.53.0</link>
+      <description>New
+On a Mac, connect 1Password from the Marketplace so your Bot can sign in with your saved logins, asking you first unless you turn on Auto fill.
+Bots can upload files to Google Drive or OneDrive, or attach them to a Gmail draft.
+Improved
+Your Bot's computer uses your time zone, so websites and its clock match where you are.
+Click an open image to zoom in, and close the viewer with Escape, the close button, or a click outside the image.
+Fixed
+Stopping your Bot also stops anything still running on its computer.
+Bots fill sign-in fields even when they sit partly off the screen.
+Phone notifications show your Bot's picture.
+You can finish connecting Bitbucket from Grok Bot.
+A Bot created by another Bot now shows up in your sidebar.</description>
+      <guid isPermaLink="true">https://x.ai/changelog/bot#v0.53.0</guid>
+      <pubDate>Tue, 15 Sep 2026 00:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>GitHub connection and routine pausing (0.52.0)</title>
+      <link>https://x.ai/changelog/bot#v0.52.0</link>
+      <description>New
+You can pause a routine and resume it later.
+Improved
+The built-in GitHub connection in the Marketplace shows whether your account is connected, with Connect GitHub when it isn't.
+Sidebar rows no longer show the time of the last message, and the collapsed sidebar has a Marketplace shortcut.
+Fixed
+Bots no longer send a second acknowledgment after they've already replied.
+Clicks and typing on your Bot's computer still work when Grok Bot can't check the page first.
+Scrolling sideways in a code block no longer slides the whole message.
+Your Bot's browser no longer offers to save passwords after it signs in.
+Approval cards close when their time runs out.
+Pressing Enter on Update ready restarts to update.</description>
+      <guid isPermaLink="true">https://x.ai/changelog/bot#v0.52.0</guid>
+      <pubDate>Tue, 15 Sep 2026 00:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>First Bot setup, routines, and scrolling (0.51.0)</title>
+      <link>https://x.ai/changelog/bot#v0.51.0</link>
+      <description>New
+Setup now creates your first Bot for you.
+You can delete a routine, which also stops its future runs.
+Your Bot can change its own title and the shape and color of its avatar.
+Improved
+Each Bot reopens on the tab you last had open, even after a restart.
+Fixed
+Long conversations scroll all the way back, and you can drag the scrollbar to the top.
+A new account shows the Bot you created, and deleting your last Bot removes it from the list.
+Take over shows the screen your Bot is actually using.</description>
+      <guid isPermaLink="true">https://x.ai/changelog/bot#v0.51.0</guid>
+      <pubDate>Mon, 14 Sep 2026 00:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>Route web traffic through your computer (0.50.0)</title>
+      <link>https://x.ai/changelog/bot#v0.50.0</link>
+      <description>New
+Turn on Route egress through this desktop in Settings to send web traffic from your Bot's computer through your own computer instead of the cloud.
+Fixed
+Requests to use your computer keep the command and details open, so you can read them before you answer.</description>
+      <guid isPermaLink="true">https://x.ai/changelog/bot#v0.50.0</guid>
+      <pubDate>Fri, 11 Sep 2026 00:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>Repository access, search, and file links (0.49.0)</title>
+      <link>https://x.ai/changelog/bot#v0.49.0</link>
+      <description>New
+When your Bot needs access to a repository, a card lets you connect GitHub, GitLab, Bitbucket, or Azure DevOps, and the Bot continues once access is granted.
+Click a file path in a message to open that file from your Bot's computer.
+Improved
+Search shows everything in one list, with files, links, and routines appearing once you type.
+Pictures and videos open full screen, with download, close, and playback controls.
+Your Bot's computer keeps its browser sign-ins when it restarts.
+Teammates who aren't admins can invite people to Grok Bot. Teams
+Fixed
+Messages keep their paragraph and list line breaks.
+Connecting a service brings you back to Grok Bot, and a declined connection names the service.
+Muted Bots no longer add to the dock badge.</description>
+      <guid isPermaLink="true">https://x.ai/changelog/bot#v0.49.0</guid>
+      <pubDate>Fri, 11 Sep 2026 00:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>Multiple accounts and a new Marketplace (0.48.0)</title>
+      <link>https://x.ai/changelog/bot#v0.48.0</link>
+      <description>New
+Add more than one account and switch between them from the account menu; each keeps its own Bots and data on this computer.
+Add a Bot straight from its row in the Marketplace.
+Enterprise admins with Conversation Insights see their team's top Grok Bot use cases on the Grok Bot page, with a link to the full breakdown. Enterprise
+Improved
+The Marketplace has one homepage for plugins and Bots, with featured picks, plugins popular with your team, and categories to browse.
+Marketplace search finds plugins, Bots, and categories as you type.
+Fixed
+Connectors that use an API key show Connected once they're connected.
+A link to a Bot that's no longer available says so, and Back returns to the Marketplace.</description>
+      <guid isPermaLink="true">https://x.ai/changelog/bot#v0.48.0</guid>
+      <pubDate>Wed, 09 Sep 2026 00:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>Usage &amp; Billing and chat renaming (0.46.0)</title>
+      <link>https://x.ai/changelog/bot#v0.46.0</link>
+      <description>New
+Right-click a chat to rename it.
+Improved
+Usage &amp; Billing shows your weekly usage and plan, the chat warns you near your weekly limit, and you can set a monthly on-demand limit.
+Fixed
+Usage &amp; Billing updates your on-demand limit when you come back from adding a payment method.
+Links in an email draft keep their wording when the message is sent.
+When your Bot's computer runs low on memory, closed browser tabs stay closed instead of all reloading.
+Leftover browser tabs no longer ask you to use a security key.
+Your Bot fills a sign-in form even when the page words its labels in a different order.</description>
+      <guid isPermaLink="true">https://x.ai/changelog/bot#v0.46.0</guid>
+      <pubDate>Wed, 09 Sep 2026 00:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>Email and Slack drafts, and admin Auto-review (0.45.0)</title>
+      <link>https://x.ai/changelog/bot#v0.45.0</link>
+      <description>New
+Your Bot can write an email or Slack message as a draft for you to review, then Send or Discard it.
+Enterprise admins can require Auto-review and add team-wide Auto-Review Rules; members see it marked Required by your admin. Enterprise
+Improved
+After you submit a form, your Bot fills the visible fields, and a page change no longer makes you type them again.
+Fixed
+A new Bot introduces itself instead of leaving the chat empty.
+After you reset your Bot's computer, it's ready as soon as it reconnects, and anything you typed is still there.
+Bots read every message from your other Bots, even when several arrive while they're busy.
+Linux deb and rpm installs show when an update is available and tell you to update through your package manager.</description>
+      <guid isPermaLink="true">https://x.ai/changelog/bot#v0.45.0</guid>
+      <pubDate>Tue, 08 Sep 2026 00:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>Chat forms, timestamps, and AutoFill (0.44.0)</title>
+      <link>https://x.ai/changelog/bot#v0.44.0</link>
+      <description>New
+When your Bot needs something like a sign-in, it asks with a form in the chat and fills the page for you, instead of handing you its computer.
+Hover over a message from your Bot to see when it was sent.
+On a Mac, right-click a text field to use AutoFill.
+Improved
+Requests to use your computer now appear in the chat.
+Before sending feedback for you, your Bot asks whether you'd like a reply from the support team.
+Fixed
+Tab inserts a tab in the message box, and multi-line pastes keep their indentation.
+Brief connection problems no longer sign you out or show your computer as disconnected.
+Videos and files from your Bot's computer no longer stop after the first 4 MB.
+When you're signed out, a connection problem no longer covers the sign-in screen.</description>
+      <guid isPermaLink="true">https://x.ai/changelog/bot#v0.44.0</guid>
+      <pubDate>Sun, 06 Sep 2026 00:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>Bots in the Marketplace and plugin setup (0.41.0)</title>
+      <link>https://x.ai/changelog/bot#v0.41.0</link>
+      <description>New
+The Marketplace now lists Bots you can add as well as plugins, with categories, search, and a page for each Bot.
+Bots made by the Grok Bot team carry a Verified badge in the Marketplace.
+Improved
+While your Bot's computer connects, Connecting shows until the screen is ready.
+When Grok Bot access is limited to certain groups, invites explain that they don't grant access and link to Manage Access. Enterprise
+Fixed
+Plugin setup shows checkboxes, menus, and number fields when a plugin asks for them, and saved secrets appear as dots.
+Text you type while creating a Bot stays in that Bot's chat.
+Pull request links keep the words you wrote for them.</description>
+      <guid isPermaLink="true">https://x.ai/changelog/bot#v0.41.0</guid>
+      <pubDate>Fri, 04 Sep 2026 00:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>Enterprise access, languages, and Support menu (0.40.0)</title>
+      <link>https://x.ai/changelog/bot#v0.40.0</link>
+      <description>New
+Grok Bot is now available to every Enterprise team, not only early-access organizations. Enterprise
+Grok Bot is available in Urdu, Thai, and Bengali.
+Audit Logs record when Bots are created, when Grok Bot access changes, and team setup changes. Enterprise
+Improved
+Help Center, Send Feedback, and About now sit under Support in the account menu, next to Get Grok Bot for mobile.
+Creating a Bot shows Creating… on its row while you stay in your current chat.
+Card requests say Approve, and a declined, failed, or expired request says no charge was made.</description>
+      <guid isPermaLink="true">https://x.ai/changelog/bot#v0.40.0</guid>
+      <pubDate>Thu, 03 Sep 2026 00:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>Vietnamese, Indonesian, and greetings (0.39.0)</title>
+      <link>https://x.ai/changelog/bot#v0.39.0</link>
+      <description>New
+Grok Bot is available in Vietnamese and Indonesian.
+Improved
+A new Bot greets you in the language Grok Bot is set to.
+The Language list shows each language's name both in your current language and in its own.
+Plugin categories appear in your language.
+Reopening your Bot's computer keeps showing the last screen until it reconnects.
+Fixed
+Your Bots and their files stay put when your Bot's computer restarts while it can't read them.
+Pausing or deleting a routine also cancels runs that were waiting.
+The account menu keeps showing your weekly usage and accounts when a refresh fails.
+Follow System picks the right Chinese for Cantonese, Traditional or Simplified.</description>
+      <guid isPermaLink="true">https://x.ai/changelog/bot#v0.39.0</guid>
+      <pubDate>Thu, 03 Sep 2026 00:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>Group Access and sidebar names (0.38.0)</title>
+      <link>https://x.ai/changelog/bot#v0.38.0</link>
+      <description>Improved
+Manage Group Access sits next to the switch that turns Grok Bot on, and group limits you save apply as soon as it's back on. Enterprise
+Fixed
+The sidebar keeps your name when your profile can't be loaded.</description>
+      <guid isPermaLink="true">https://x.ai/changelog/bot#v0.38.0</guid>
+      <pubDate>Thu, 03 Sep 2026 00:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>Setup choices, sharing menu, and follow-ups (0.37.0)</title>
+      <link>https://x.ai/changelog/bot#v0.37.0</link>
+      <description>New
+Setup asks which tools you use every day, including Cursor.
+Enterprise admins see how many days are left in their Grok Bot trial on the dashboard Overview. Enterprise
+Improved
+Share as template, Update template, and View template details are in the share menu in the chat header.
+Fixed
+Your Bot's activity stays visible when you send a follow-up while it's still working.
+Chats you've already read stay read after an update.
+A Bot added from a template shows its name only once in the sidebar.
+Allow once works even when Execution on this computer is set to Never allow.
+Only one security-key prompt opens at a time, and closing it keeps it closed.
+Auto-review can ask you to approve Mac automation commands.
+Grok Bot works when your team limits who can use Cloud Agents.</description>
+      <guid isPermaLink="true">https://x.ai/changelog/bot#v0.37.0</guid>
+      <pubDate>Thu, 03 Sep 2026 00:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>Copy links, routine chats, and Always allow (0.36.0)</title>
+      <link>https://x.ai/changelog/bot#v0.36.0</link>
+      <description>New
+Right-click a pull request in the chat to copy its link.
+Improved
+A routine's runs open in their own chat, and Close Chat brings you back.
+Fixed
+Always allow under Execution on this computer now lets your Bot use your computer without asking.
+Hide from sidebar hides every Bot you've selected.</description>
+      <guid isPermaLink="true">https://x.ai/changelog/bot#v0.36.0</guid>
+      <pubDate>Wed, 02 Sep 2026 00:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>Longer tasks, purchases, and shared Bots (0.35.0)</title>
+      <link>https://x.ai/changelog/bot#v0.35.0</link>
+      <description>Improved
+Your Bot keeps working through long jobs and page-by-page browsing instead of stopping early.
+Team admins can send a link that opens Invite Your Team to Grok Bot. Teams
+Fixed
+Purchases you decline stay Declined, and unanswered ones are marked Expired.
+Opening a shared Bot again shows its latest version, including its integrations.
+Routines, feedback, and notifications stay on the team you selected.</description>
+      <guid isPermaLink="true">https://x.ai/changelog/bot#v0.35.0</guid>
+      <pubDate>Wed, 02 Sep 2026 00:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>Pull request previews and Bots in sections (0.34.0)</title>
+      <link>https://x.ai/changelog/bot#v0.34.0</link>
+      <description>New
+Pull request links in messages show the number, title, and whether it's open, draft, merged, or closed.
+Your Bot can create a new Bot inside one of your sidebar sections.
+Improved
+Each routine on a shared Bot describes what it does instead of repeating its name.
+Fixed
+The New Bot shortcut closes Search first, so the two no longer stack.
+A Bot's avatar updates in the sidebar as soon as it changes.
+Approving an expired purchase asks for a fresh one, and a new purchase replaces one still waiting for an answer.</description>
+      <guid isPermaLink="true">https://x.ai/changelog/bot#v0.34.0</guid>
+      <pubDate>Tue, 01 Sep 2026 00:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>Group Access, team trials, and Link cards (0.33.0)</title>
+      <link>https://x.ai/changelog/bot#v0.33.0</link>
+      <description>New
+Enterprise admins can let every team member use Grok Bot or limit it to specific groups with Group Access. Enterprise
+Enterprise admins can start a Grok Bot trial for their team from the dashboard, and Bot settings show when the trial ends. Enterprise
+When you approve a purchase, Pay with lets you choose a saved card from your Link wallet.
+Fixed
+Numbered lists keep their numbering when a paragraph sits between items, and line breaks in messages and tables show up.
+A chat that fails to load after a connection problem tries again on its own.
+When you're not on a team, Grok Bot follows your account's privacy setting.
+Moving a Bot into another sidebar section keeps it there.
+A notice tells you when routines were paused while you were away.</description>
+      <guid isPermaLink="true">https://x.ai/changelog/bot#v0.33.0</guid>
+      <pubDate>Tue, 01 Sep 2026 00:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>International typing and team setup (0.32.0)</title>
+      <link>https://x.ai/changelog/bot#v0.32.0</link>
+      <description>Improved
+The team page offers Set up Grok Bot until your team turns it on, then links to a getting started guide and usage. Teams
+Fixed
+Typing on your Bot's computer follows your input method, so Korean, Japanese, Chinese, and accented letters come through as you composed them.</description>
+      <guid isPermaLink="true">https://x.ai/changelog/bot#v0.32.0</guid>
+      <pubDate>Tue, 01 Sep 2026 00:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>Onboarding, team invites, and HTML previews (0.31.0)</title>
+      <link>https://x.ai/changelog/bot#v0.31.0</link>
+      <description>New
+Onboarding asks what you'll be working on most and suggests Bots for that kind of work.
+Team admins can invite their whole team to Grok Bot, or pick specific groups and members. Teams
+A Setup Checklist on the dashboard walks admins through plugins, Slack, GitHub, sign-in, and inviting teammates. Teams
+Opening an HTML file your Bot made shows a preview, with Source for the code, and links in it open in your browser.
+A Cloud Agent's open button lets you choose Open in Web or Open in Cursor, and remembers your choice.
+When a firewall or VPN blocks your Bot's computer, Grok Bot says it can't reach it and offers Retry.
+Improved
+You can create more than 50 Bots.
+Hourly, interval, and daily routines run on a schedule counted from when you create them.
+Fixed
+Files you attach and dictation stay with the Bot you started them in, even if you switch Bots.
+A Cloud Agent your Bot started isn't launched twice when a launch is retried, and your Bot hears when it finishes.
+On Linux, links that open Grok Bot launch the app.
+Images you attach show thumbnails on Windows.</description>
+      <guid isPermaLink="true">https://x.ai/changelog/bot#v0.31.0</guid>
+      <pubDate>Tue, 01 Sep 2026 00:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>Template sharing, Link purchases, and languages (0.30.0)</title>
+      <link>https://x.ai/changelog/bot#v0.30.0</link>
+      <description>New
+Share a Bot as a template: choose whether your team or anyone can use it, and others add their own copy from the link.
+When your Bot wants to buy something, a card shows the amount for you to Allow or Deny, then Link completes the payment.
+Team admins choose whether members can share templates publicly or only within the team. Teams
+Action Recording on the dashboard records members' Grok Bot actions to your team's audit log. Enterprise
+Grok Bot is available in Arabic, Ukrainian, Dutch, Greek, Afrikaans, and Hebrew, with right-to-left layouts for Arabic and Hebrew.
+Command-Shift-V, or Ctrl-Shift-V, pastes text into the message box without formatting.
+You can approve a task on one computer from another computer where you're signed in.
+Enterprise usage settings show a Personal Usage chart of your spend against last month and your limit. Enterprise
+Improved
+Jump to lists matching Bots above actions and messages.
+Send Feedback lets you ask for a response.
+Fixed
+Pasting an image attaches it as a file, and the cursor stays in view after you paste a long message.
+Your Bot's browser switches to the tab it picks and reloads pages that fail to open.</description>
+      <guid isPermaLink="true">https://x.ai/changelog/bot#v0.30.0</guid>
+      <pubDate>Fri, 28 Aug 2026 00:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>Computers in Settings and phone replies (0.29.0)</title>
+      <link>https://x.ai/changelog/bot#v0.29.0</link>
+      <description>New
+Settings has a Computer section listing your computers, where you choose Always allow, Ask every time, or Never allow for actions on each one.
+Notifications from the Grok app on your phone show your Bot's reply.
+Improved
+You can drag the details pane wider, up to the chat's minimum width.
+Fixed
+Your Bot's computer starts when you belong to more than one team.</description>
+      <guid isPermaLink="true">https://x.ai/changelog/bot#v0.29.0</guid>
+      <pubDate>Thu, 27 Aug 2026 00:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>Russian, Turkish, Italian, and Swedish (0.28.0)</title>
+      <link>https://x.ai/changelog/bot#v0.28.0</link>
+      <description>New
+Grok Bot is available in Russian, Turkish, Italian, and Swedish, and follows your computer's language.
+Improved
+Settings and plugin links your Bot writes show the real name of the setting or plugin.
+Fixed
+Signing in stops waiting after five minutes, so you can try again.</description>
+      <guid isPermaLink="true">https://x.ai/changelog/bot#v0.28.0</guid>
+      <pubDate>Wed, 26 Aug 2026 00:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>Pro and SuperGrok access, and webhook data (0.27.0)</title>
+      <link>https://x.ai/changelog/bot#v0.27.0</link>
+      <description>New
+Cursor Pro subscribers can now use Grok Bot, as can SuperGrok and X Premium+ subscribers who link their account.
+Improved
+Admin setup on the dashboard shows Enabled once your team finishes setting up Grok Bot. Teams
+Routines started by a webhook receive the request body, so your Bot can act on what was sent.
+Fixed
+If a chat can't load, Grok Bot says so and offers Retry.</description>
+      <guid isPermaLink="true">https://x.ai/changelog/bot#v0.27.0</guid>
+      <pubDate>Tue, 25 Aug 2026 00:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>App menu, right-to-left typing, and updates (0.26.0)</title>
+      <link>https://x.ai/changelog/bot#v0.26.0</link>
+      <description>New
+The app menu has Settings…, Check for Updates, and Restart to Update when an update is ready.
+Improved
+Typing in Arabic, Hebrew, and other right-to-left languages starts on the right, and replies that mix directions lay out each paragraph correctly.
+Unread Bots appear first in the search palette.
+Update Grok Bot's Computer explains when an update only touches the software your Bots run on, so installed apps stay.
+Fixed
+Grok Bot uses the team you picked at sign-in the first time it loads your teams.
+Alerts, feedback, and About open on top of Settings.
+When an update is required, the Update required screen covers the whole window.</description>
+      <guid isPermaLink="true">https://x.ai/changelog/bot#v0.26.0</guid>
+      <pubDate>Tue, 25 Aug 2026 00:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>Multi-select questions and on-demand limits (0.25.0)</title>
+      <link>https://x.ai/changelog/bot#v0.25.0</link>
+      <description>New
+When your Bot asks a question that allows several answers, select the ones you want and press Submit.
+On an individual plan, set your monthly on-demand limit to None, Fixed, or Unlimited in Usage &amp; Billing.
+A GitHub routine can watch a single pull request, including when it closes, and removes itself once the pull request merges or closes.
+Download a diagram in the chat as a PNG image.
+Click a Bot mentioned in a conversation to open it.
+Improved
+When your included usage runs out, team members can upgrade to a Premium seat, alongside Ultra and SuperGrok Heavy.
+A Bot you delete disappears from the sidebar as soon as you confirm, and you're told if deleting fails.
+Fixed
+Text you paste into the message box stays plain, and anything you type right after sending is kept.
+Messages that start with a link show the rest of their text, and the link stays clickable.
+Grok Bot uses the team you selected for rules, Usage &amp; Billing, and Computers, and switches to a team you can still use if yours is gone.
+Privacy Mode keeps a conversation off your Bot's computer when it must not be stored.
+Your Bot's computer finishes restoring its files, including ones with long names.</description>
+      <guid isPermaLink="true">https://x.ai/changelog/bot#v0.25.0</guid>
+      <pubDate>Tue, 25 Aug 2026 00:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>Setting links, team sign-in, and voice input (0.24.0)</title>
+      <link>https://x.ai/changelog/bot#v0.24.0</link>
+      <description>New
+Hover a settings or plugin title and choose Copy link to share a direct link to it.
+Right-click a video and choose Save video… to keep it.
+If you belong to more than one team, sign-in asks you to pick one.
+Onboarding and the access screen show the email you're signed in with, with Log out.
+Improved
+Voice input detects the language you speak instead of assuming your app or system language.
+Sign out explains that it removes the account and its local data from this computer, and your Bots and chats return when you sign in again.
+Fixed
+Today and Yesterday update after midnight, and attachments stay on the day you sent them.
+Links into Grok Bot open the right page instead of only bringing the window forward.
+If you message your Bot while a routine is running, the routine runs again afterward.</description>
+      <guid isPermaLink="true">https://x.ai/changelog/bot#v0.24.0</guid>
+      <pubDate>Fri, 21 Aug 2026 00:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>Team setup and translation fixes (0.22.0)</title>
+      <link>https://x.ai/changelog/bot#v0.22.0</link>
+      <description>Fixed
+Setting up Grok Bot on the dashboard uses the team you selected. Teams
+Spanish and French translations of plugin counts, routine schedules, and alert statuses read correctly.</description>
+      <guid isPermaLink="true">https://x.ai/changelog/bot#v0.22.0</guid>
+      <pubDate>Thu, 20 Aug 2026 00:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>App languages, emoji, and webhook routines (0.21.0)</title>
+      <link>https://x.ai/changelog/bot#v0.21.0</link>
+      <description>New
+Pick the app's language under Appearance, including Simplified and Traditional Chinese, Japanese, Korean, Hindi, Spanish, Portuguese, French, German, and Polish.
+Type : in the message box to pick an emoji, or finish a short name with : to insert it.
+Routines can start from a webhook, with their own Webhook URL and Webhook key.
+Download an attachment from the message menu, or use Download all when a message has several.
+Enterprise admins can save Team Setup scripts on the dashboard that run on every member's Bot computer. Enterprise
+Enterprise admins can set a network access policy for their team's Bots from the dashboard. Enterprise
+Improved
+Dictation follows your system language, and Enter stops a recording.
+Updating or recreating your Bot's computer explains that files and logins stay while installed apps and packages are removed.
+Plugins opens with your plugins, category filters, and a Team Plugins section.
+Fixed
+Files search finds files on your Bot's computer, and says Search unavailable when it can't run.
+Grok Bot reconnects to your computer after sleep or a dropped connection, so actions on it keep working.
+When your sign-in expires, Grok Bot asks you to sign in again.</description>
+      <guid isPermaLink="true">https://x.ai/changelog/bot#v0.21.0</guid>
+      <pubDate>Wed, 19 Aug 2026 00:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>Dictation, formatting, and clearer errors (0.20.0)</title>
+      <link>https://x.ai/changelog/bot#v0.20.0</link>
+      <description>New
+Press or hold ⌘D (Ctrl+D on Windows and Linux) to dictate into the message field, and Send message sends the transcript as soon as it's ready.
+Rename a plugin's default account with Edit default account.
+Improved
+Your Bot's computer can hold Shift, Ctrl, Alt, or Command while it clicks, drags, and scrolls.
+When a reply fails, Grok Bot explains what happened in plain language.
+Your Bot cancels, archives, and unarchives Cloud Agents as soon as you ask.
+Fixed
+Replies show underline, subscript, superscript, and highlight formatting.</description>
+      <guid isPermaLink="true">https://x.ai/changelog/bot#v0.20.0</guid>
+      <pubDate>Fri, 14 Aug 2026 00:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>Manage Plan, scrolling, and Bot naming (0.19.0)</title>
+      <link>https://x.ai/changelog/bot#v0.19.0</link>
+      <description>New
+Settings has Manage Plan, showing the upgrade options for your account.
+When your included usage runs out, you can upgrade to Ultra or link a SuperGrok Heavy subscription.
+A Scroll to bottom button appears above the message field when you scroll up.
+Settings has Use hardware acceleration under General → System, on by default on a Mac, with Restart to Apply.
+Improved
+Settings, search, and confirmations say Bot instead of Agent.
+The message field stays at the bottom of the chat, even when the chat is empty.
+Start a computer update from Settings with Update Grok Bot's Computer.
+Requests to run a command on your computer hide the command until you choose Show the command.
+Fixed
+Help Center opens the Grok Bot docs.
+⌘V pastes into a terminal on your Bot's computer.
+Allow, Never, and Deny now clear a stuck request to run commands on your computer.</description>
+      <guid isPermaLink="true">https://x.ai/changelog/bot#v0.19.0</guid>
+      <pubDate>Fri, 14 Aug 2026 00:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>Cancel Trial in Usage &amp; Billing (0.18.0)</title>
+      <link>https://x.ai/changelog/bot#v0.18.0</link>
+      <description>New
+You can end a free trial early with Cancel Trial in Usage &amp; Billing, which removes any remaining trial credits.</description>
+      <guid isPermaLink="true">https://x.ai/changelog/bot#v0.18.0</guid>
+      <pubDate>Wed, 12 Aug 2026 00:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>More routine triggers and pull request links (0.17.0)</title>
+      <link>https://x.ai/changelog/bot#v0.17.0</link>
+      <description>New
+Members with a Standard seat on a self-serve team can use Grok Bot through a linked SuperGrok Heavy subscription. Teams
+Improved
+Your Bot can create routines that start from a Microsoft Teams message, a Linear issue, a Sentry alert, or a PagerDuty incident.
+Auto-review asks before your Bot runs a task you didn't ask for.
+Pull request links open where you or your team chose, or on GitHub if neither has chosen.
+Fixed
+The account row in the sidebar opens the account menu, even during setup.
+Your Bot stops showing that it's working once a background task finishes.
+A connector that stops responding times out after three minutes, so your Bot can carry on.
+Update Grok Bot's Computer finishes and keeps file permissions and shortcuts.
+Choosing a shape or color keeps a picture you added until you press Set avatar.</description>
+      <guid isPermaLink="true">https://x.ai/changelog/bot#v0.17.0</guid>
+      <pubDate>Wed, 12 Aug 2026 00:00:00 +0000</pubDate>
+    </item>
+  </channel>
+</rss>
