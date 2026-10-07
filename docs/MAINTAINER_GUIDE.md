@@ -19,7 +19,7 @@ rss_creator/
 1. `main.py`
 - 读取 `config.yaml`
 - 调用 `src/jobs/runner.py` 处理 `jobs[]`
-- 生成 RSS 后由 `src/site_index.py` 从模板和样式生成静态目录
+- 生成 RSS 后由 `src/site_index.py` 从模板和样式生成静态目录，并写出 `feeds/subscriptions.opml`
 - 默认严格模式下，任一任务失败返回退出码 `1`
 
 2. `.github/workflows/update-rss.yml`
@@ -61,7 +61,8 @@ python main.py -v
 
 6. 为页面结构保存最小 HTML/JSON fixture，并补脱网单元测试。
 
-`feeds/index.html`、`feeds/assets/` 和 XML 都是生成产物，不要手工编辑或提交。
+`feeds/index.html`、`feeds/subscriptions.opml`、`feeds/assets/` 和 XML 都是生成产物，不要手工编辑或提交。
+订阅清单只来自已启用的 `config.yaml` jobs（标题、输出文件名、链接、描述、catalog section），按首页相同分区分组，不要另写一份 feed 列表。
 首页源文件位于 `src/templates/` 与 `src/site_assets/`。
 
 ## 测试与检查

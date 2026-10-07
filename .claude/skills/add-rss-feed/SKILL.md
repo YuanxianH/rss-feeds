@@ -7,8 +7,8 @@ description: >
 
 # Add RSS Feed
 
-Run commands from the repository root. Feed XML, `feeds/index.html`, and
-`feeds/assets/` are generated output; never edit or commit them.
+Run commands from the repository root. Feed XML, `feeds/index.html`,
+`feeds/subscriptions.opml`, and `feeds/assets/` are generated output; never edit or commit them.
 
 ## Choose a job type
 

@@ -45,7 +45,7 @@ python main.py --allow-partial
 - **部分上游临时失败**：`--allow-partial` 已允许部分成功。不要把整体失败改成吞掉所有错误。
 - **外部宕机 / 限流且无安全代码修复**：不要开 PR，说明原因后停止。
 
-生成产物（`feeds/*.xml`、`feeds/index.html`、`feeds/assets/`）不要提交。
+生成产物（`feeds/*.xml`、`feeds/index.html`、`feeds/subscriptions.opml`、`feeds/assets/`）不要提交。
 
 ## 4. 迭代到真正修好
 

@@ -4,6 +4,7 @@ from __future__ import annotations
 
 from dataclasses import dataclass
 from datetime import datetime, timedelta, timezone
+from email.utils import format_datetime as format_rfc822_datetime
 from email.utils import parsedate_to_datetime
 from html import escape
 import logging
@@ -11,6 +12,7 @@ from pathlib import Path
 import re
 import shutil
 from string import Template
+from urllib.parse import urljoin
 from xml.etree import ElementTree as ET
 
 logger = logging.getLogger(__name__)
@@ -28,6 +30,7 @@ DEFAULT_SITE = {
     "description": "Subscribe to AI research, engineering, and release feeds.",
 }
 STALE_AFTER = timedelta(days=2)
+OPML_FILENAME = "subscriptions.opml"
 SOURCE_DIR = Path(__file__).resolve().parent
 TEMPLATE_PATH = SOURCE_DIR / "templates" / "index.html"
 STYLESHEET_PATH = SOURCE_DIR / "site_assets" / "site.css"
@@ -51,7 +54,7 @@ class FeedCard:
 
 
 def generate_site_index(config: dict, feeds_dir: str) -> Path:
-    """Render the directory and copy its static stylesheet."""
+    """Render the directory, OPML subscription list, and static stylesheet."""
     feeds_path = Path(feeds_dir)
     feeds_path.mkdir(parents=True, exist_ok=True)
     assets_path = feeds_path / "assets"
@@ -76,6 +79,7 @@ def generate_site_index(config: dict, feeds_dir: str) -> Path:
         (card.updated_sort for card in all_cards if card.updated_sort),
         default=None,
     )
+    _write_subscriptions_opml(feeds_path / OPML_FILENAME, site=site, jobs=jobs)
     template = Template(TEMPLATE_PATH.read_text(encoding="utf-8"))
     output_path = feeds_path / "index.html"
     output_path.write_text(
@@ -88,6 +92,7 @@ def generate_site_index(config: dict, feeds_dir: str) -> Path:
             latest_build=escape(
                 _format_datetime(latest_build) if latest_build else "Awaiting first build"
             ),
+            opml_href=escape(OPML_FILENAME, quote=True),
             section_nav=_render_section_nav(grouped_cards),
             sections=_render_sections(grouped_cards),
         ),
@@ -95,6 +100,69 @@ def generate_site_index(config: dict, feeds_dir: str) -> Path:
     )
     logger.info("Generated landing page: %s", output_path)
     return output_path
+
+
+def _write_subscriptions_opml(path: Path, *, site: dict, jobs: list[dict]) -> None:
+    """Write one OPML file for every enabled job that has an output filename."""
+    site_url = str(site.get("url") or DEFAULT_SITE["url"])
+    grouped: dict[str, list[dict[str, str]]] = {section: [] for section in SECTION_ORDER}
+    for job in jobs:
+        outline = _job_opml_outline(job, site_url)
+        if outline is None:
+            continue
+        section = _normalize_section((job.get("catalog") or {}).get("section"))
+        grouped[section].append(outline)
+
+    root = ET.Element("opml", {"version": "2.0"})
+    head = ET.SubElement(root, "head")
+    ET.SubElement(head, "title").text = str(site.get("title") or DEFAULT_SITE["title"])
+    timestamp = format_rfc822_datetime(datetime.now(timezone.utc))
+    ET.SubElement(head, "dateCreated").text = timestamp
+    ET.SubElement(head, "dateModified").text = timestamp
+    body = ET.SubElement(root, "body")
+    for section in SECTION_ORDER:
+        outlines = sorted(
+            grouped[section],
+            key=lambda item: (item["title"].lower(), item["xmlUrl"]),
+        )
+        if not outlines:
+            continue
+        title, _description = SECTION_META[section]
+        group = ET.SubElement(body, "outline", {"text": title, "title": title})
+        for outline in outlines:
+            ET.SubElement(group, "outline", outline)
+
+    ET.indent(root, space="  ")
+    ET.ElementTree(root).write(path, encoding="utf-8", xml_declaration=True)
+    logger.info("Generated OPML subscription list: %s", path)
+
+
+def _job_opml_outline(job: dict, site_url: str) -> dict[str, str] | None:
+    output_name = str(job.get("output") or "").strip()
+    if not output_name:
+        logger.warning("Skipping OPML entry for job without output: %s", job.get("name"))
+        return None
+    title = _normalize_text(
+        str(job.get("title") or job.get("name") or output_name or "Untitled feed")
+    )
+    outline = {
+        "type": "rss",
+        "text": title,
+        "title": title,
+        "xmlUrl": _public_feed_url(site_url, output_name),
+    }
+    if html_url := _resolve_source_url(job, {}):
+        outline["htmlUrl"] = html_url
+    if description := _normalize_text(str(job.get("description") or "")):
+        outline["description"] = description
+    return outline
+
+
+def _public_feed_url(site_url: str, output_name: str) -> str:
+    base = site_url.strip() or DEFAULT_SITE["url"]
+    if not base.endswith("/"):
+        base += "/"
+    return urljoin(base, output_name.lstrip("/"))
 
 
 def _build_feed_card(job: dict, feeds_path: Path, *, now: datetime) -> FeedCard:
