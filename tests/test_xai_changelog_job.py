@@ -119,6 +119,38 @@ class XaiChangelogTests(unittest.TestCase):
             xml.index("Grok Build 1.0.46"),
         )
 
+    @patch("src.jobs.xai_changelog.WebScraper.fetch")
+    def test_same_day_versions_keep_page_order(self, fetch):
+        fetch.return_value = """
+        <article>
+          <time datetime="2026-09-30"></time>
+          <div>
+            <h2 id="v0.65.0">Voice chat</h2>
+            <ul><li>Newer same-day notes.</li></ul>
+          </div>
+        </article>
+        <article>
+          <time datetime="2026-09-30"></time>
+          <div>
+            <h2 id="v0.64.0">Managers</h2>
+            <ul><li>Older same-day notes.</li></ul>
+          </div>
+        </article>
+        """
+        config = {
+            "type": "xai_changelog",
+            "name": "Grok Bot Changelog",
+            "url": BOT_URL,
+            "output": "grok_bot_changelog.xml",
+            "options": {"impersonate": "chrome"},
+        }
+        with tempfile.TemporaryDirectory() as temp_dir:
+            result = XaiChangelogJob(config).run(JobContext(feeds_dir=Path(temp_dir)))
+            xml = (Path(temp_dir) / "grok_bot_changelog.xml").read_text(encoding="utf-8")
+
+        self.assertTrue(result.success)
+        self.assertLess(xml.index("Voice chat (0.65.0)"), xml.index("Managers (0.64.0)"))
+
     @patch("src.jobs.xai_changelog.WebScraper.fetch", return_value=None)
     def test_job_fails_when_fetch_returns_nothing(self, _fetch):
         config = _jobs_by_output()["grok_build_changelog.xml"]

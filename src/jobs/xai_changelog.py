@@ -9,13 +9,14 @@ from __future__ import annotations
 
 import logging
 import re
+from datetime import datetime, timezone
 from pathlib import Path
 from urllib.parse import urlsplit, urlunsplit
 
 from bs4 import BeautifulSoup, Tag
 
 from src.path_utils import resolve_output_path
-from src.rss_generator import RSSGenerator, items_oldest_first
+from src.rss_generator import RSSGenerator, parse_pubdate
 from src.scraper import WebScraper
 
 from .base import FeedJob, JobContext, JobResult
@@ -26,6 +27,7 @@ logger = logging.getLogger(__name__)
 DEFAULT_MAX_ITEMS = 300
 DEFAULT_IMPERSONATE = "chrome"
 _VERSION_ID = re.compile(r"^v(\d+(?:\.\d+)+)(?:-\d{4}-\d{2}-\d{2})?$")
+_MIN_PUBDATE = datetime.min.replace(tzinfo=timezone.utc)
 
 
 def changelog_entry_url(page_url: str, anchor_id: str) -> str:
@@ -127,6 +129,22 @@ def _normalize_whitespace(value: str) -> str:
     return re.sub(r"\s+", " ", value).strip()
 
 
+def _items_for_rss(items: list[dict[str, str]]) -> list[dict[str, str]]:
+    """Return oldest-first items so feedgen's reversed write is newest-first.
+
+    Versions that share a pubDate stay in page order: the later block is
+    written first, and the reverse puts the earlier block back on top.
+    """
+    decorated = list(enumerate(items))
+    decorated.sort(
+        key=lambda pair: (
+            parse_pubdate(pair[1].get("pubDate")) or _MIN_PUBDATE,
+            -pair[0],
+        )
+    )
+    return [item for _, item in decorated]
+
+
 @register_job
 class XaiChangelogJob(FeedJob):
     """Build an RSS feed from an x.ai product changelog page."""
@@ -166,7 +184,7 @@ class XaiChangelogJob(FeedJob):
             link=str(self.config.get("link") or url.split("#", 1)[0]),
             description=str(self.config.get("description") or f"{self.name} RSS Feed"),
         )
-        generator.add_items(items_oldest_first(items))
+        generator.add_items(_items_for_rss(items))
         success = generator.generate(str(output_path))
         details = f"输出: {Path(output_path).name} ({len(items)} 条)" if success else "RSS 生成失败"
         return JobResult(name=self.name, success=success, details=details)
