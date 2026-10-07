@@ -7,12 +7,84 @@
     <docs>http://www.rssboard.org/rss-specification</docs>
     <generator>RSS Creator</generator>
     <language>zh-CN</language>
-    <lastBuildDate>Wed, 07 Oct 2026 14:19:06 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 07 Oct 2026 20:27:19 +0000</lastBuildDate>
     <item>
-      <title>Main Bot and more reliable updates (0.66.0)</title>
+      <title>Slide decks and Bot-colored chats (0.68.1)</title>
+      <link>https://x.ai/changelog/bot#v0.68.1</link>
+      <description>New
+Your messages in a 1:1 Bot chat take that Bot's color; set Accent to Black in Settings → General to turn it off. Requires Grok Bot 0.64.0 or later.
+Bots can build slide decks with you, showing sample slides to choose from, and deliver them as PowerPoint files or Google Slides.
+Bots can send formatted emails from a draft card, so recipients see headings, bold text, and lists.
+Bots can search your Gmail Spam folder and move a message back to your inbox.
+Team Bots can mention a Slack user group so its members get notified, while @here and @channel still don't ping anyone. Teams
+Improved
+Typing / in the composer no longer opens a menu of skills and actions.
+Bots work faster on their computer: actions settle sooner, screenshots come back quicker, and new windows skip a five-second wait.
+The Bot's computer has a 1920 × 1200 screen, up from 1280 × 800, giving more room when you watch it or take over.
+In Slack threads it follows, a Team Bot stays quiet on untagged replies that don't need it, such as emoji-only replies. Teams
+Fixed
+Gmail actions fail less often: send and reply no longer report a missing tool, and Bots wait out Google's rate limits.
+Email drafts show up as a card in the chat, a Send cut off by Stop still goes out, and attachments keep their file names.
+The Bot's browser recovers from a crashed tab, handles large uploads, and gives up on a stuck page after 25 seconds.
+Stop or a new message ends a Bot that's stuck on an unresponsive step within about 30 seconds.
+Secure Forms fill into the page the Bot has open, and checkout card fields get a Secure Form instead of a screen handoff.
+When X or Vercel needs you to sign in again, the Bot shows a reconnect card instead of retrying or giving up.
+If the app's window crashes, Grok Bot reloads it instead of leaving it blank.</description>
+      <guid isPermaLink="true">https://x.ai/changelog/bot#v0.68.1</guid>
+      <pubDate>Wed, 07 Oct 2026 00:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>New languages and computer removal (0.68.0)</title>
+      <link>https://x.ai/changelog/bot#v0.68.0</link>
+      <description>New
+Marathi, Tamil, Telugu, Swahili, and Hausa join the Language options in Settings.
+Settings → Computer shows Remove for your other computers, and a removed computer tells you to restart Grok Bot to add it back.
+Email drafts can go out from a verified Gmail send-as address, with a From picker when you have more than one.
+Searching the command palette also finds plugins, and Enter opens the plugin's page.
+Improved
+Approval cards ask whether to allow the Bot by name and quote its instruction, and Settings calls saved rules Custom Rules.
+Notifications and the per-Bot notification switch now say the Bot is waiting for you.
+Right-click a routine in the details pane for Pause, Resume, Test, Edit, and Delete; clicking a routine no longer opens its detail view.
+Hovering a pull request link shows a preview card with its status and title instead of a plain tooltip.
+Opening the computer full screen shows the live view right away instead of a second Connecting screen.
+The Unassigned section in the sidebar can be dragged, or moved with Move up and Move down, like your own sections.
+Fixed
+Copying or saving a large image, or opening a large JSON or Markdown file, no longer freezes the app.
+Switching chats no longer flashes an empty transcript, and older messages you scrolled back to stay when the app reconnects.
+Gmail draft cards include your signature, logo included, and say Couldn't send this draft when Send doesn't go through.
+Copied replies keep their line breaks and link URLs when you paste them into email, Slack, or plain text.
+Team Bots no longer appear in the primary Bot picker, and a refused change says Team Bots can't be a primary Bot. Teams</description>
+      <guid isPermaLink="true">https://x.ai/changelog/bot#v0.68.0</guid>
+      <pubDate>Mon, 05 Oct 2026 00:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>Connect Apps and new working status (0.67.0)</title>
+      <link>https://x.ai/changelog/bot#v0.67.0</link>
+      <description>Improved
+Marketplace is now Connect Apps, with category chips under the search, Recommended for you first, and Bot templates on the web.
+While a Bot works, its status uses new phrases like Thinking it through and Working on your computer, without the Bot's name in front.
+Approval cards show when your Ask first rule paused an action or Always allow added a rule, with Edit rule to change it in Settings.
+Connected Google accounts show their email address instead of default on connector cards and in the account list.
+On Windows, Use hardware acceleration is now on by default, as on Mac, and a choice you already made is kept.
+Copy link on a Team Bot shares an x.ai link, and links you already shared keep working. Teams
+Fixed
+Connecting an app finishes even when another app is using its sign-in port, and a failed sign-in page explains why.
+Connector cards that ask you to sign in again, or to add a second account, offer Authorize for that account instead of showing Added.
+When a Gmail reply-all fails, the draft card says Message not delivered instead of showing it as sent.
+Stop in Settings stops every running chat so Update unlocks, and a Settings page that fails after an update offers Restart.
+Routine schedules no longer claim an interval that doesn't repeat, a failed pause or resume shows an error, and deleted routines' chips show (deleted).
+The dock badge no longer counts unread messages from Bots that were deleted.
+On Mac, the Back and Forward buttons on Logitech mice now work.
+Sidebar avatars no longer freeze with one eye bigger than the other.
+When a team admin turns off Route traffic through this computer, Settings → Computer says so, and a failed load of your team's settings offers Retry. Teams</description>
+      <guid isPermaLink="true">https://x.ai/changelog/bot#v0.67.0</guid>
+      <pubDate>Fri, 02 Oct 2026 00:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>Proactivity, primary Bot and more reliable updates (0.66.0)</title>
       <link>https://x.ai/changelog/bot#v0.66.0</link>
       <description>New
-Choose a primary Bot, marked Main Bot with a star, that checks in proactively and coordinates work with your other Bots; requires Grok Bot 0.59.0 or later.
+Your primary Bot, marked with a star, will now spot work it can take off your plate and offer to handle it. Requires Grok Bot 0.59.0 or later.
 Improved
 In Slack threads, the Bot's status line shows what it's working on and stays up during long steps. Teams
 Fixed
