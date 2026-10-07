@@ -24,6 +24,7 @@ Run commands from the repository root. Feed XML, `feeds/index.html`, and
 | `hunyuan_research` | Hunyuan preset of `json_list_api` |
 | `openai_research_filter` | Filter an existing RSS feed by category |
 | `codex_changelog` | Codex changelog release entries |
+| `xai_changelog` | xAI changelog version blocks without article links (Grok Bot, Grok Build). Plain requests get Cloudflare 403; the job uses curl_cffi Chrome impersonation |
 
 Prefer `selector_scrape` for regular HTML. Use `dynamic_site` when article links
 exist outside repeated cards or inside embedded data. Add a site-specific job

@@ -5,3 +5,4 @@ feedgen==1.0.0
 PyYAML==6.0.3
 python-dateutil==2.9.0.post0
 schedule==1.2.2
+curl_cffi==0.16.3
