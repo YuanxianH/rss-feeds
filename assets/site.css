@@ -83,6 +83,26 @@ a:focus-visible {
   font-size: 0.8rem;
 }
 
+.subscribe-all {
+  margin: 16px 0 0;
+}
+
+.subscribe-all a {
+  display: inline-block;
+  padding: 7px 11px;
+  border: 1px solid color-mix(in srgb, var(--accent) 40%, var(--line));
+  border-radius: 5px;
+  background: var(--surface);
+  color: var(--accent);
+  font-size: 0.86rem;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.subscribe-all a:hover {
+  border-color: var(--accent);
+}
+
 .section-nav {
   display: flex;
   gap: 8px;

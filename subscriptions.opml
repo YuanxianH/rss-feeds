@@ -1,0 +1,36 @@
+<?xml version='1.0' encoding='utf-8'?>
+<opml version="2.0">
+  <head>
+    <title>AI RSS Network</title>
+    <dateCreated>Wed, 07 Oct 2026 13:00:27 +0000</dateCreated>
+    <dateModified>Wed, 07 Oct 2026 13:00:27 +0000</dateModified>
+  </head>
+  <body>
+    <outline text="Research" title="Research">
+      <outline type="rss" text="ByteDance Seed Public Papers" title="ByteDance Seed Public Papers" xmlUrl="https://yuanxianh.github.io/rss-feeds/seed_papers.xml" htmlUrl="https://seed.bytedance.com/zh/public_papers" description="Public research papers from ByteDance Seed" />
+      <outline type="rss" text="DeepSeek Research Index" title="DeepSeek Research Index" xmlUrl="https://yuanxianh.github.io/rss-feeds/deepseek_research.xml" htmlUrl="https://www.deepseek.com/news/" description="Research papers and technical reports from DeepSeek's Research Index" />
+      <outline type="rss" text="Meta AI Research Publications" title="Meta AI Research Publications" xmlUrl="https://yuanxianh.github.io/rss-feeds/meta_ai_research.xml" htmlUrl="https://ai.meta.com/results/?content_types%5B0%5D=publication" description="Latest research publications from Meta AI" />
+      <outline type="rss" text="OpenAI Research" title="OpenAI Research" xmlUrl="https://yuanxianh.github.io/rss-feeds/openai_research_only.xml" htmlUrl="https://openai.com/news/rss.xml" description="Research posts filtered from the official OpenAI RSS feed" />
+      <outline type="rss" text="Qwen Research Index" title="Qwen Research Index" xmlUrl="https://yuanxianh.github.io/rss-feeds/qwen_research.xml" htmlUrl="https://qwen.ai/research" description="Research, open-source, and release posts from the Qwen Research Index" />
+      <outline type="rss" text="Tencent Hunyuan Research" title="Tencent Hunyuan Research" xmlUrl="https://yuanxianh.github.io/rss-feeds/hunyuan_research.xml" htmlUrl="https://hy.tencent.com/research" description="Research publications and technical posts from Tencent Hunyuan (混元)" />
+      <outline type="rss" text="Waymo Research" title="Waymo Research" xmlUrl="https://yuanxianh.github.io/rss-feeds/waymo_research.xml" htmlUrl="https://waymo.com/intl/zh-cn/research/" description="Latest research publications from Waymo" />
+    </outline>
+    <outline text="Blogs" title="Blogs">
+      <outline type="rss" text="ByteDance Seed Blog" title="ByteDance Seed Blog" xmlUrl="https://yuanxianh.github.io/rss-feeds/seed_blog.xml" htmlUrl="https://seed.bytedance.com/zh/blog" description="Technical blog posts from ByteDance Seed" />
+      <outline type="rss" text="Google DeepMind Blog" title="Google DeepMind Blog" xmlUrl="https://yuanxianh.github.io/rss-feeds/deepmind_blog.xml" htmlUrl="https://deepmind.google/blog/" description="Discover the latest AI breakthroughs, projects, and updates from Google DeepMind" />
+      <outline type="rss" text="Incomplete Ideas Blog" title="Incomplete Ideas Blog" xmlUrl="https://yuanxianh.github.io/rss-feeds/incompleteideas_blog.xml" htmlUrl="http://www.incompleteideas.net/" description="Posts from the Incomplete Ideas blog on Rich Sutton's homepage" />
+      <outline type="rss" text="Kimi Research Articles &amp; Technical Blogs" title="Kimi Research Articles &amp; Technical Blogs" xmlUrl="https://yuanxianh.github.io/rss-feeds/kimi_blog.xml" htmlUrl="https://www.kimi.ai/blog/" description="Explore Kimi research articles, technical blogs, and benchmark releases" />
+      <outline type="rss" text="MiniMax News" title="MiniMax News" xmlUrl="https://yuanxianh.github.io/rss-feeds/minimax_blog.xml" htmlUrl="https://www.minimax.io/news" description="Latest news and updates from MiniMax" />
+      <outline type="rss" text="MiniMax Official Blog" title="MiniMax Official Blog" xmlUrl="https://yuanxianh.github.io/rss-feeds/minimax_official_blog.xml" htmlUrl="https://www.minimax.io/blog" description="Official product, research, and engineering posts from MiniMax" />
+      <outline type="rss" text="Physical Intelligence Blog" title="Physical Intelligence Blog" xmlUrl="https://yuanxianh.github.io/rss-feeds/pi_blog.xml" htmlUrl="https://www.pi.website/" description="Latest blog posts and research from Physical Intelligence" />
+      <outline type="rss" text="Waymo Blog - Technology" title="Waymo Blog - Technology" xmlUrl="https://yuanxianh.github.io/rss-feeds/waymo_blog_tech.xml" htmlUrl="https://waymo.com/blog/search/?t=Technology" description="Technology posts from the Waymo blog" />
+      <outline type="rss" text="Zhipu AI Research" title="Zhipu AI Research" xmlUrl="https://yuanxianh.github.io/rss-feeds/zhipu_research.xml" htmlUrl="https://www.zhipuai.cn/zh/research" description="Research and technical blogs from Zhipu AI (智谱)" />
+    </outline>
+    <outline text="Releases" title="Releases">
+      <outline type="rss" text="Codex GitHub Releases" title="Codex GitHub Releases" xmlUrl="https://yuanxianh.github.io/rss-feeds/codex_github_releases.xml" htmlUrl="https://developers.openai.com/codex/changelog#github-release" description="GitHub release entries from the official Codex changelog" />
+      <outline type="rss" text="Grok Bot Changelog" title="Grok Bot Changelog" xmlUrl="https://yuanxianh.github.io/rss-feeds/grok_bot_changelog.xml" htmlUrl="https://x.ai/changelog/bot" description="New features, improvements, and fixes in each Grok Bot release" />
+      <outline type="rss" text="Grok Build Changelog" title="Grok Build Changelog" xmlUrl="https://yuanxianh.github.io/rss-feeds/grok_build_changelog.xml" htmlUrl="https://x.ai/changelog/build" description="Release notes for Grok Build" />
+      <outline type="rss" text="MiniMax Releases" title="MiniMax Releases" xmlUrl="https://yuanxianh.github.io/rss-feeds/minimax_releases.xml" htmlUrl="https://huggingface.co/MiniMaxAI" description="MiniMax model releases on HuggingFace and new GitHub repositories" />
+    </outline>
+  </body>
+</opml>
