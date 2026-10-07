@@ -168,6 +168,36 @@ jobs:
     catalog:
       section: "releases"
 
+  # x.ai changelogs. 每个版本是一个 h2 锚点加更新说明，没有独立文章链接。
+  # 普通 requests 会被 Cloudflare 403，job 使用 curl_cffi Chrome 模拟。
+  - type: "xai_changelog"
+    name: "Grok Bot Changelog"
+    url: "https://x.ai/changelog/bot"
+    output: "grok_bot_changelog.xml"
+    title: "Grok Bot Changelog"
+    description: "New features, improvements, and fixes in each Grok Bot release"
+    link: "https://x.ai/changelog/bot"
+    catalog:
+      section: "releases"
+    options:
+      impersonate: "chrome"
+      max_items: 300
+      timeout: 30
+
+  - type: "xai_changelog"
+    name: "Grok Build Changelog"
+    url: "https://x.ai/changelog/build"
+    output: "grok_build_changelog.xml"
+    title: "Grok Build Changelog"
+    description: "Release notes for Grok Build"
+    link: "https://x.ai/changelog/build"
+    catalog:
+      section: "releases"
+    options:
+      impersonate: "chrome"
+      max_items: 300
+      timeout: 30
+
   # Kimi Blog（kimi.com 已 301 到 kimi.ai 的 Next.js 站点）
   - type: "kimi_blog"
     name: "Kimi Blog"

@@ -14,6 +14,7 @@ from .openai_research import OpenAIResearchFilterJob  # noqa: F401
 from .seed_bytedance import SeedBytedanceJob  # noqa: F401
 from .selector_scrape import SelectorScrapeJob  # noqa: F401
 from .waymo_blog import WaymoBlogTechnologyJob  # noqa: F401
+from .xai_changelog import XaiChangelogJob  # noqa: F401
 from .zhipu_research import ZhipuResearchJob  # noqa: F401
 
 __all__ = ["JobRunner"]
