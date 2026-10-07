@@ -6,6 +6,7 @@
     <title>$title</title>
     <meta name="description" content="$description">
     <link rel="canonical" href="$site_url">
+    <link rel="alternate" type="text/x-opml" title="All subscriptions" href="$opml_href">
     <link rel="icon" href="data:,">
     <link rel="stylesheet" href="assets/site.css">
   </head>
@@ -16,6 +17,7 @@
         <a class="site-title" href="$site_url">$title</a>
         <p>$tagline</p>
         <p class="last-build">Latest successful build: $latest_build</p>
+        <p class="subscribe-all"><a href="$opml_href" download="$opml_href">Download all subscriptions (OPML)</a></p>
       </header>
 
       <nav class="section-nav" aria-label="Feed categories">

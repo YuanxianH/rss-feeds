@@ -63,8 +63,10 @@ python -m http.server 8000
 - `feeds/seed_papers.xml`
 - `feeds/deepseek_research.xml`
 
-`feeds/index.html` 和 `feeds/assets/site.css` 也会自动生成，用于本地预览；
-这些文件不需要手工编辑。
+`feeds/index.html`、`feeds/subscriptions.opml` 和 `feeds/assets/site.css` 也会自动生成，用于本地预览；
+这些文件不需要手工编辑。首页头部有 OPML 下载链接。`subscriptions.opml` 列出
+`config.yaml` 里每个已启用 job，按目录分区分组；新增 job 后，下一次
+`python main.py` 会重新生成这个文件和首页链接。
 
 ## 常用命令
 

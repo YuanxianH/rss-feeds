@@ -3,7 +3,7 @@
 这个仓库把没有 RSS 的 AI 实验室 / 公司网站做成 Feed，由
 `.github/workflows/update-rss.yml`（显示名 **Update RSS Feeds**）每小时抓取并发布到 `gh-pages`。
 
-Feed XML、`feeds/index.html` 和 `feeds/assets/` 是生成产物，不要手工编辑或提交。
+Feed XML、`feeds/index.html`、`feeds/subscriptions.opml` 和 `feeds/assets/` 是生成产物，不要手工编辑或提交。
 
 ## 常用命令
 

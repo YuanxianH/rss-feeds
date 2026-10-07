@@ -96,7 +96,7 @@ Also stop (no new PR) if an open PR already exists whose title or branch clearly
 - Prefer config.yaml selector / path_prefix / JSON mapping updates for upstream site changes. Add a dedicated job only when the source needs a special API.
 - Add or update offline fixtures and unit tests when the page structure changed.
 - Do not skip tests to make CI green unless you can justify a genuine flake skip.
-- Do not commit generated feeds XML or feeds/index.html.
+- Do not commit generated feeds XML, feeds/index.html, or feeds/subscriptions.opml.
 - Do not push to main. Do not merge.
 
 # When not to open a PR
