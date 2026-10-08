@@ -7,7 +7,7 @@
     <docs>http://www.rssboard.org/rss-specification</docs>
     <generator>RSS Creator</generator>
     <language>zh-CN</language>
-    <lastBuildDate>Wed, 07 Oct 2026 20:27:18 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 08 Oct 2026 00:46:18 +0000</lastBuildDate>
     <item>
       <title>awesome-minimax-integrations</title>
       <link>https://github.com/MiniMax-AI/awesome-minimax-integrations</link>
@@ -221,7 +221,7 @@
     <item>
       <title>skills</title>
       <link>https://github.com/MiniMax-AI/skills</link>
-      <description>[GitHub Repo] | Language: C# | Stars: 13670</description>
+      <description>[GitHub Repo] | Language: C# | Stars: 13671</description>
       <guid isPermaLink="true">https://github.com/MiniMax-AI/skills</guid>
       <pubDate>Tue, 17 Mar 2026 07:19:25 +0000</pubDate>
     </item>
@@ -284,21 +284,21 @@
     <item>
       <title>MiniMax-H3</title>
       <link>https://huggingface.co/MiniMaxAI/MiniMax-H3</link>
-      <description>[HuggingFace Model] | image-text-to-video | Likes: 5964 | Tags: minimax-h3, diffusers, safetensors, text-to-video, image-to-video</description>
+      <description>[HuggingFace Model] | image-text-to-video | Likes: 5968 | Tags: minimax-h3, diffusers, safetensors, text-to-video, image-to-video</description>
       <guid isPermaLink="true">https://huggingface.co/MiniMaxAI/MiniMax-H3</guid>
       <pubDate>Tue, 28 Jul 2026 10:45:18 +0000</pubDate>
     </item>
     <item>
       <title>MiniMax-H3</title>
       <link>https://github.com/MiniMax-AI/MiniMax-H3</link>
-      <description>[GitHub Repo] | Language: Python | Stars: 9641</description>
+      <description>[GitHub Repo] | Language: Python | Stars: 9642</description>
       <guid isPermaLink="true">https://github.com/MiniMax-AI/MiniMax-H3</guid>
       <pubDate>Thu, 30 Jul 2026 08:41:09 +0000</pubDate>
     </item>
     <item>
       <title>MiniMax-Music3</title>
       <link>https://huggingface.co/MiniMaxAI/MiniMax-Music3</link>
-      <description>[HuggingFace Model] | text-to-audio | Likes: 1427 | Tags: diffusers, safetensors, minimax_music3, music-generation, text-to-music</description>
+      <description>[HuggingFace Model] | text-to-audio | Likes: 1429 | Tags: diffusers, safetensors, minimax_music3, music-generation, text-to-music</description>
       <guid isPermaLink="true">https://huggingface.co/MiniMaxAI/MiniMax-Music3</guid>
       <pubDate>Fri, 07 Aug 2026 12:23:29 +0000</pubDate>
     </item>
@@ -347,14 +347,14 @@
     <item>
       <title>OpenAgentCore</title>
       <link>https://github.com/MiniMax-AI/OpenAgentCore</link>
-      <description>[GitHub Repo] | Open-source, self-hosted implementation of the OpenAI Agents API with multiple native harnesses. | Language: Go | Stars: 196 | Topics: agent-runtime, ai-agents, claude-code, codex, coding-agent, llm, mcp, openai, openai-agents-api, sandbox, self-hosted</description>
+      <description>[GitHub Repo] | Open-source, self-hosted implementation of the OpenAI Agents API with multiple native harnesses. | Language: Go | Stars: 197 | Topics: agent-runtime, ai-agents, claude-code, codex, coding-agent, llm, mcp, openai, openai-agents-api, sandbox, self-hosted</description>
       <guid isPermaLink="true">https://github.com/MiniMax-AI/OpenAgentCore</guid>
       <pubDate>Mon, 21 Sep 2026 03:18:15 +0000</pubDate>
     </item>
     <item>
       <title>homebrew-tap</title>
       <link>https://github.com/MiniMax-AI/homebrew-tap</link>
-      <description>[GitHub Repo] | Language: Shell</description>
+      <description>[GitHub Repo] | Language: Shell | Stars: 1</description>
       <guid isPermaLink="true">https://github.com/MiniMax-AI/homebrew-tap</guid>
       <pubDate>Fri, 02 Oct 2026 03:02:22 +0000</pubDate>
     </item>
