@@ -7,7 +7,122 @@
     <docs>http://www.rssboard.org/rss-specification</docs>
     <generator>RSS Creator</generator>
     <language>zh-CN</language>
-    <lastBuildDate>Thu, 08 Oct 2026 21:06:01 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 09 Oct 2026 01:47:31 +0000</lastBuildDate>
+    <item>
+      <title>Grok Build 1.0.50</title>
+      <link>https://x.ai/changelog/build#v1.0.50-2026-10-06</link>
+      <description>grok worktree rm without -f refuses to delete worktrees that are in use or have unsaved changes, and exits with an error
+Compact mode collapses recaps and keeps inner spacing on tall terminals
+Clicking the git branch in the header copies the full branch name
+Long branch names abbreviate on narrow terminals and stay copyable
+A targeted cancel stops only the response the client asked to stop
+Compact mode hides the dock, or the tasks pane, the same way Ctrl+G does
+A timestamps setting offers off, minimal, and on in Settings and /timestamps
+Shell command output shows "Running …" while a command executes and "Ran …" when it finishes
+Live preview pins include whether an app was observed behind the URL
+The command palette ( Ctrl+P ) and the model picker open at the same width as the settings modal
+Tables show copy buttons that export TSV, CSV, or Markdown for spreadsheets
+The dashboard shows which worktree each session belongs to, shows the -m model in the new-agent box, and lets you toggle worktree mode in the folder picker
+Shell permission decisions prompt or approve commands that match the permission manager
+Cancelled turns mark unanswered tool calls as cancelled instead of succeeded
+Long error messages in the /usage and /session-info modals wrap instead of being cut off
+Status messages and subagent rows no longer use em dashes
+A stalled model call during a turn retries before the turn fails
+The queue pane and Ctrl+; still appear and work when the dock is hidden with Ctrl+G
+Long sessions stay connected when the conversation is larger than 4 MiB
+Permission rules accept native tool names such as run_terminal_command and Shell
+/rewind places the text cursor at the end of the restored prompt
+A failed file write leaves the previous contents in place instead of an empty file
+/loop and scheduler_create accept non-ASCII intervals such as 5分 without crashing the session
+Naming only one scheduler tool in --disallowed-tools no longer makes the other two fail startup
+Closing a busy tab no longer sends its queued prompts to the model
+grok --cwd a stays in a instead of running inside a/a
+The terminal title shows "Action Required" when any background session is waiting on approval
+Headless grok accepts a prompt on piped stdin instead of trying to open the UI
+[features] title_refresh = false in requirements.toml disables title refresh even when GROK_TITLE_REFRESH is set
+Custom notification commands under [[ui.notifications.hooks]] run when their events match
+An admin pin of [cli] use_leader = false keeps --leader from starting a leader process
+When several MCP servers expose a tool with the same name, search_tool returns all of them
+Grok windows editing settings at the same time no longer drop or corrupt config.toml entries such as MCP servers or permission rules
+web_fetch rejects a huge file before downloading it into memory
+memory_get no longer returns a file that exceeds the read limit
+Continue to run no longer kills commands that are running inside background subagents
+memory_search finds Japanese, Chinese, and Korean words inside longer notes
+Drafts the model saves show up under their real titles in /feedback
+Imagine replies that are not valid images are rejected instead of being saved as .jpg files
+A workflow file that fails to parse reports that file and the parse error, instead of "unknown workflow"
+Re-encoded images keep the orientation from their EXIF tags
+Image and log paths reported after /fork --worktree point at real files
+Tab characters in terminal command output are kept when the output is shown to the model
+Transparent images stay PNG when they are re-encoded, instead of turning black
+The bundled ripgrep is available to terminal commands, even on images that do not install it
+Request bodies stay under a configured max_request_bytes limit
+The effort level stays the same after a bare /model switch, instead of jumping to the new model default
+Ctrl+\ and other modified digits no longer select an option on a permission or cancel card
+Feedback submissions report success or failure accurately, without an early thanks or a repeated prefix
+grok doctor names the config file or setting that prevents Grok from starting, instead of reporting zero issues
+Recap summaries show up on screen without scrolling
+grok doctor fix opens its confirmation on Cancel, so it does not edit shell or tmux config by accident
+Slash commands run in any case, such as /COMPACT or /Compact
+/context no longer shows an auto-compact threshold the agent did not report
+Agent text stops redrawing the pager when a tool call interrupts the sentence
+CLI tool calls no longer fail or overflow when the workspace directory is gone or the output is huge
+Logs written to a file, or written when NO_COLOR is set, are plain text
+A prompt fails immediately, with a clear message, when the session working directory is gone, instead of failing later or recreating it
+grok -w works in repositories that use a separate git dir, and shows a clear error outside a git repo or on an empty repo
+Shell tool descriptions state the real output truncation limit, and grep respects globs relative to the session directory
+Compaction messages scroll into view instead of sitting below the bottom of the screen after a turn
+Git-mode worktrees created with -w keep uncommitted changes
+Worktrees created with --worktree-ref no longer contain the wrong submodule contents or LFS pointer text
+Worktree creation shows the same clear error on every path
+A failed worktree create shows a clear error on the home screen
+Merge and rebase conflicts show up in the changes list
+Starting a new session with durable rewind checkpoints on no longer crashes
+A managed permission file with one bad key keeps its valid rules
+Two worktree creates with the same label at the same time both succeed, instead of one failing with "already exists"
+grok worktree rm without -f no longer deletes a folder that only shares a name with a removed worktree
+Discard changes only the files you select, not similarly named files
+One bad permission-rule entry no longer drops the other rules in that section
+Chat Completions streams that end without a finish reason are retried instead of returning partial output
+grok worktree rm by label refuses when that label exists in more than one repo
+grep respects Read deny rules that use a leading ./
+Command hooks no longer spike memory when they print a lot of output
+Retry waits differ between processes</description>
+      <guid isPermaLink="true">https://x.ai/changelog/build#v1.0.50-2026-10-06</guid>
+      <pubDate>Tue, 06 Oct 2026 00:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>Grok Build 1.0.49</title>
+      <link>https://x.ai/changelog/build#v1.0.49-2026-10-02</link>
+      <description>Hook permission prompts appear in every approval mode
+Web searches, fetches, and image generation follow the prompt_policy setting and rule decisions before they prompt
+Allow once on a permission card applies only to the next shell command
+pkill -f and pgrep -f are rejected earlier when the pattern would kill their own shell wrapper</description>
+      <guid isPermaLink="true">https://x.ai/changelog/build#v1.0.49-2026-10-02</guid>
+      <pubDate>Fri, 02 Oct 2026 00:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>Grok Build 1.0.48</title>
+      <link>https://x.ai/changelog/build#v1.0.48-2026-10-02</link>
+      <description>/rewind lists only prompts you typed, and skips automatic runtime turns
+Custom model tables in config.toml keep the original model notice banner
+read_file , search_replace , and grep handle large files, special files, and binary content more reliably, and surface clearer errors
+Ask rules for WebSearch and WebFetch show a prompt instead of running on their own
+Cancelling one tool call no longer kills commands started by other parallel calls
+After login, a refused prompt is not retried on its own; the sign-in block needs a manual resend</description>
+      <guid isPermaLink="true">https://x.ai/changelog/build#v1.0.48-2026-10-02</guid>
+      <pubDate>Fri, 02 Oct 2026 00:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>Grok Build 1.0.47</title>
+      <link>https://x.ai/changelog/build#v1.0.47-2026-10-01</link>
+      <description>A model switch from the agent updates the displayed model list and context window
+Error messages on the home and login screens wrap on a narrow terminal
+Clicking the Goal chip opens the goal panel even when workflow runs are present
+Sessions in a repository with an .envrc file start faster</description>
+      <guid isPermaLink="true">https://x.ai/changelog/build#v1.0.47-2026-10-01</guid>
+      <pubDate>Thu, 01 Oct 2026 00:00:00 +0000</pubDate>
+    </item>
     <item>
       <title>Grok Build 1.0.46</title>
       <link>https://x.ai/changelog/build#v1.0.46-2026-09-30</link>
