@@ -7,14 +7,7 @@
     <docs>http://www.rssboard.org/rss-specification</docs>
     <generator>RSS Creator</generator>
     <language>zh-CN</language>
-    <lastBuildDate>Fri, 09 Oct 2026 08:35:40 +0000</lastBuildDate>
-    <item>
-      <title>0.162.0-alpha.17</title>
-      <link>https://github.com/openai/codex/releases/tag/rust-v0.162.0-alpha.17</link>
-      <description>Release 0.162.0-alpha.17</description>
-      <guid isPermaLink="false">tag:github.com,2008:Repository/965415649/rust-v0.162.0-alpha.17</guid>
-      <pubDate>Tue, 06 Oct 2026 22:09:21 +0000</pubDate>
-    </item>
+    <lastBuildDate>Fri, 09 Oct 2026 15:53:28 +0000</lastBuildDate>
     <item>
       <title>0.162.0-alpha.17.1</title>
       <link>https://github.com/openai/codex/releases/tag/rust-v0.162.0-alpha.17.1</link>
@@ -861,6 +854,13 @@ Ignore ripgrep configuration when expanding sandbox deny globs
       <description>Release 0.163.0-alpha.2</description>
       <guid isPermaLink="false">tag:github.com,2008:Repository/965415649/rust-v0.163.0-alpha.2</guid>
       <pubDate>Fri, 09 Oct 2026 02:06:41 +0000</pubDate>
+    </item>
+    <item>
+      <title>0.163.0-alpha.4</title>
+      <link>https://github.com/openai/codex/releases/tag/rust-v0.163.0-alpha.4</link>
+      <description>Release 0.163.0-alpha.4</description>
+      <guid isPermaLink="false">tag:github.com,2008:Repository/965415649/rust-v0.163.0-alpha.4</guid>
+      <pubDate>Fri, 09 Oct 2026 13:45:56 +0000</pubDate>
     </item>
   </channel>
 </rss>
