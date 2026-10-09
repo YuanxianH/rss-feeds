@@ -7,14 +7,7 @@
     <docs>http://www.rssboard.org/rss-specification</docs>
     <generator>RSS Creator</generator>
     <language>zh-CN</language>
-    <lastBuildDate>Fri, 09 Oct 2026 15:53:28 +0000</lastBuildDate>
-    <item>
-      <title>0.162.0-alpha.17.1</title>
-      <link>https://github.com/openai/codex/releases/tag/rust-v0.162.0-alpha.17.1</link>
-      <description>Release 0.162.0-alpha.17.1</description>
-      <guid isPermaLink="false">tag:github.com,2008:Repository/965415649/rust-v0.162.0-alpha.17.1</guid>
-      <pubDate>Thu, 08 Oct 2026 00:07:10 +0000</pubDate>
-    </item>
+    <lastBuildDate>Fri, 09 Oct 2026 20:37:18 +0000</lastBuildDate>
     <item>
       <title>0.162.0-alpha.18</title>
       <link>https://github.com/openai/codex/releases/tag/rust-v0.162.0-alpha.18</link>
@@ -847,6 +840,21 @@ Ignore ripgrep configuration when expanding sandbox deny globs
       <description>Release 0.163.0-alpha.1</description>
       <guid isPermaLink="false">tag:github.com,2008:Repository/965415649/rust-v0.163.0-alpha.1</guid>
       <pubDate>Thu, 08 Oct 2026 21:24:42 +0000</pubDate>
+    </item>
+    <item>
+      <title>0.162.1</title>
+      <link>https://github.com/openai/codex/releases/tag/rust-v0.162.1</link>
+      <description>Bug Fixes
+Fixed a TUI crash when asynchronous questions contain multiple lines, preserving line breaks and complete hyperlink destinations. (
+#51866
+)
+Fixed startup failures caused by differences between a running background server's feature settings and CLI defaults. Compatibility checks now apply only to explicit command-line feature overrides. (
+#52648
+)
+Full Changelog:
+rust-v0.162.0...rust-v0.162.1</description>
+      <guid isPermaLink="false">tag:github.com,2008:Repository/965415649/rust-v0.162.1</guid>
+      <pubDate>Fri, 09 Oct 2026 19:47:24 +0000</pubDate>
     </item>
     <item>
       <title>0.163.0-alpha.2</title>
