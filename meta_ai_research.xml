@@ -7,7 +7,14 @@
     <docs>http://www.rssboard.org/rss-specification</docs>
     <generator>RSS Creator</generator>
     <language>zh-CN</language>
-    <lastBuildDate>Tue, 13 Oct 2026 18:00:28 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 13 Oct 2026 23:11:56 +0000</lastBuildDate>
+    <item>
+      <title>AutoformBench: A Lean Formalization Benchmark for Advanced Mathematics</title>
+      <link>https://ai.meta.com/research/publications/autoformbench-a-lean-formalization-benchmark-for-advanced-mathematics/</link>
+      <description>Charles Arnal, Ahmad Rammal, Niket Patel, Fabian Gloeckle, Bartosz Piotrowski, Amaury Hayat, Julia Kempe, Remi Munos, Vivien Cabannes</description>
+      <guid isPermaLink="true">https://ai.meta.com/research/publications/autoformbench-a-lean-formalization-benchmark-for-advanced-mathematics/</guid>
+      <pubDate>Tue, 13 Oct 2026 00:00:00 +0000</pubDate>
+    </item>
     <item>
       <title>The Strict Threshold for Gaussian Ellipsoid Fitting</title>
       <link>https://ai.meta.com/research/publications/the-strict-threshold-for-gaussian-ellipsoid-fitting/</link>
@@ -84,13 +91,6 @@
       <description>Pierre Chambon, Kunhao Zheng, Juliette Decugis, Benoît Sagot, Gabriel Synnaeve</description>
       <guid isPermaLink="true">https://ai.meta.com/research/publications/reinforcement-learning-for-code-optimization/</guid>
       <pubDate>Wed, 29 Jul 2026 00:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>Learning to Reason by Analogy via Retrieval-Augmented Reinforcement Fine-Tuning</title>
-      <link>https://ai.meta.com/research/publications/learning-to-reason-by-analogy-via-retrieval-augmented-reinforcement-fine-tuning/</link>
-      <description>Zilin Xiao, Qi Ma, Jason Chen, Xintao Chen, Avinash Atreya, Hanjie Chen, Vicente Ordonez</description>
-      <guid isPermaLink="true">https://ai.meta.com/research/publications/learning-to-reason-by-analogy-via-retrieval-augmented-reinforcement-fine-tuning/</guid>
-      <pubDate>Fri, 17 Jul 2026 00:00:00 +0000</pubDate>
     </item>
     <item>
       <title>Energy-Based Models for Atomic-Resolution Protein Conformations | Facebook AI Research</title>
