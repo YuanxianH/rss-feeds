@@ -7,7 +7,111 @@
     <docs>http://www.rssboard.org/rss-specification</docs>
     <generator>RSS Creator</generator>
     <language>zh-CN</language>
-    <lastBuildDate>Mon, 12 Oct 2026 21:36:58 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 13 Oct 2026 02:53:24 +0000</lastBuildDate>
+    <item>
+      <title>Grok Build 1.0.52</title>
+      <link>https://x.ai/changelog/build#v1.0.52-2026-10-11</link>
+      <description>Added support for OSC 7501 and the Rex terminal
+Expanded tool-call groups stay expanded as new calls join them, and Ctrl+E expands or collapses thinking faster in long transcripts
+Project hooks in a repository subfolder load when you launch inside that folder
+HTTP hooks to localhost work, and bad hook URLs are reported at load time
+Command status-line scripts see the current turn prompt ID and start time while the turn is active
+/model switches that fail no longer change the footer or the saved default model
+Export and copy refuse to overwrite an existing file, and show a clear message
+Shell commands no longer keep running after you quit grok, or after grok receives a signal
+Approval cards for background subagents no longer disappear when the parent turn ends
+grok worktree rm and gc no longer delete a worktree that an open session is using
+Pasted images over 50 MB are rejected with a clear message instead of being dropped silently
+grok -p --effort warns when the model ignores the flag, and refuses invalid effort levels
+Approval notifications name the session that needs approval
+grok worktree rm refuses to delete git repositories, .git folders, or any directory grok did not create
+grep and list_dir report a clear error when a search times out or fails, or the folder cannot be read, instead of returning no results
+Cancelled terminal commands show the command that was stopped
+Wrapped URLs in prompts and quotes link to the complete address
+Restarting after a model switch no longer reverts to the previous model
+Long tool turns that include PostToolUse hook output compact instead of hitting the prompt length limit
+Headless prompts that start with a byte-order mark no longer send that mark to the model, and no longer break JSON prompt files
+MCP tool replies that contain invalid characters no longer cause the call to time out
+Context overflow errors trigger automatic compaction instead of failing the turn
+Inline tags in agent replies no longer break line layout
+/workflow stop picks the correct live run
+Auto-compaction stops after three context refills in a row instead of looping
+Minimal mode shows the permission prompt instead of a hidden plan or cancel panel when both are present
+Approval cards close the block viewer so the card is visible
+The in-session resume picker matches the ungrouped layout on the welcome screen when that layout is configured</description>
+      <guid isPermaLink="true">https://x.ai/changelog/build#v1.0.52-2026-10-11</guid>
+      <pubDate>Sun, 11 Oct 2026 00:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>Grok Build 1.0.51</title>
+      <link>https://x.ai/changelog/build#v1.0.51-2026-10-09</link>
+      <description>Cancel and edit-resend on long sessions no longer revert workspace files
+Memory is only an on or off switch ( [memory] enabled )
+The /share command and session sharing are removed from the CLI
+Headless grok -p waits for background goals to finish and reports their outcome
+/density and the Tool call density setting control how much detail tool calls show
+Slash command completion updates live when skills change, and shows the correct name for files under commands/
+/feedback Drafts supports G / Home and End to jump to the first or last draft
+Pinned dashboard sessions stay in the order you pinned them, and survive restarts
+Shift+Enter , Ctrl+. , Ctrl+/ , and Ctrl+[ / ] work inside tmux when extended-keys are enabled
+grok -p --output-format json reports the worktree folder used, including after -w name collisions
+Bare hook commands such as my-guard run from PATH when they are not next to the hook file
+grok sessions list and /resume show worktree sessions started from the same subfolder, and hide sessions from a sibling submodule
+/exit in a dashboard details view closes only that session
+--background-wait-timeout also stops an active headless goal after the timeout
+/workflow lists, stops, and resumes background workflow runs, and those runs appear in the tasks pane with a stop button
+Hooks that ask about web searches or file deletes show the hook name on the approval card
+Hook load errors in /hooks can be expanded
+grok worktree works inside Jujutsu repositories
+Images pasted with skill commands such as /pr-workflow are sent to the model
+Ctrl+C on a goal pauses the goal
+grok -p runs auth_provider_command when no login is stored
+Reopening a chat with an active goal continues the goal
+--allowed-tools is accepted as an alias for --allow in headless mode
+Slash command suggestions no longer hide the text after the cursor
+Sessions that open without a model list use Auto
+Very large pasted prompts are offloaded to a file instead of being sent inline
+Sign-in failures show a clear next step instead of a raw error
+Logging out stops running turns on local sessions
+Typing, arrows, Enter, or send-now ( Ctrl+Enter ) no longer answers a permission, question, or MCP prompt card
+/find keeps match counts accurate while output streams, and scrolls to the wrapped row that contains the match
+Images from tools are validated so a bad file no longer breaks the turn
+Dragging images from a file manager onto a terminal attaches them
+Plan comments added while a revision runs are preserved and sent when the plan is approved
+--disallowed-tools accepts the names shown to the model, such as run_terminal_command and spawn_subagent
+Long pastes without bracketed-paste markers are read in full instead of stalling after about 1 KB
+Worktree creation no longer hangs when the repo contains named pipes or sockets
+Write approval cards show the existing file contents that will be replaced
+Ctrl+C during a turn cancels the turn even when a modal is open
+grok -w opens at the worktree root, with a note, when the original launch folder is missing
+/cd and the location picker accept quoted or escaped folder paths
+Large file writes or many screenshots no longer end the session
+/delete with extra text shows an error instead of deleting the current session
+Number-key picks in the dashboard peek no longer go to the wrong agent after Up/Down
+Worktrees created with -w stay tracked when GROK_HOME is a symlink
+grok worktree rm and gc clean up names after a folder is deleted by hand, and restore names after a db rebuild
+grok worktree list shows unfinished copies left by an interrupted create
+grok worktree rm without -f keeps worktrees when the unsaved-work check fails or times out
+grok worktree rm and gc remove worktrees whose only untracked content is empty folders
+Typing a hidden command such as /cd runs it instead of a near-match skill
+@ -file completion no longer accepts a match from an earlier query when you type quickly
+MCP tool calls show hook permission prompts, and cards name the hook
+Multi-select questions let you toggle several answers with number keys before submitting
+/workflow stop and /workflow resume target the live run
+Dialogs such as /feedback stay readable on a short terminal, and failed send status wraps inside the dialog
+Headless goal runs no longer print a spurious "Goal paused" after completion
+Background shell commands fail immediately when the working directory does not exist, and no longer flip back to running when late output arrives
+Closing a session in the dashboard no longer leaves it listed under Inactive
+/compact on an empty session no longer resets the reported context window
+With goals disabled, a headless /goal line is treated as a normal prompt
+Only slash commands at the start of a message trigger skills
+--system-prompt appends rules from --append-system-prompt
+Project skills are labeled correctly for nested projects
+Opening the resume picker is faster on machines with many worktrees
+grok worktree commands start faster by skipping model catalog work at boot</description>
+      <guid isPermaLink="true">https://x.ai/changelog/build#v1.0.51-2026-10-09</guid>
+      <pubDate>Fri, 09 Oct 2026 00:00:00 +0000</pubDate>
+    </item>
     <item>
       <title>Grok Build 1.0.50</title>
       <link>https://x.ai/changelog/build#v1.0.50-2026-10-06</link>
