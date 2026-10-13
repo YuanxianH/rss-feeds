@@ -7,7 +7,16 @@
     <docs>http://www.rssboard.org/rss-specification</docs>
     <generator>RSS Creator</generator>
     <language>zh-CN</language>
-    <lastBuildDate>Tue, 13 Oct 2026 02:53:38 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 13 Oct 2026 10:14:49 +0000</lastBuildDate>
+    <item>
+      <title>Periodic Weak Spots: Phase Sensitivity from Chunked KV-Cache Compression</title>
+      <link>https://seed.bytedance.com/zh/public_papers/periodic-weak-spots-phase-sensitivity-from-chunked-kv-cache-compression</link>
+      <description>Chunked KV-cache compression reduces the memory and attention costs of long-context inference by compressing windows of consecutive tokens into fewer cache entries at a fixed stride. Such compression also introduces a new positional coordinate: a token's phase, or its position relative to compression-window boundaries. We uncover a systematic asymmetry in models using such compression: the same information can be easy to retrieve at one phase and difficult at another. We call this periodic variation in retrieval performance phase sensitivity. In large open-weight models with such compression, long-context retrieval accuracy can differ by up to 40 percentage points across phases, revealing periodic weak spots that average benchmark scores can conceal. To investigate this behavior, we pretrain a family of transformers from scratch across multiple KV-compression designs, reproducing phase sensitivity across the variants. Mechanistic analysis using causal interventions in these models reveals phase specialization: different attention components contribute asymmetrically to retrieving information at different source phases. We further analyze idealized retrieval models, showing how gradient flow dynamics may favor sharp phase specialization. Evaluating models with chunked KV-cache compression thus requires measuring across compression phases: high average accuracy can coexist with systematic positional failures.
+
+arXiv: https://arxiv.org/pdf/2609.36322</description>
+      <guid isPermaLink="false">1791871731369</guid>
+      <pubDate>Mon, 28 Sep 2026 20:00:00 +0800</pubDate>
+    </item>
     <item>
       <title>Chain-of-Experience for Continual LLM Improvement</title>
       <link>https://seed.bytedance.com/zh/public_papers/chain-of-experience-for-continual-llm-improvement</link>
@@ -460,15 +469,6 @@ arXiv: https://openreview.net/pdf?id=h2yhNcbwSL</description>
 arXiv: https://arxiv.org/pdf/2603.15619</description>
       <guid isPermaLink="false">1776933531915</guid>
       <pubDate>Mon, 16 Mar 2026 00:00:00 +0800</pubDate>
-    </item>
-    <item>
-      <title>Disentangling Tensor Network States with Deep Neural Network</title>
-      <link>https://seed.bytedance.com/zh/public_papers/disentangling-tensor-network-states-with-deep-neural-network</link>
-      <description>We introduce Neural Tensor Network States (νTNS), a variational many-body wave-function ansatz that integrates deep neural networks with tensor-network architectures. In the νTNS framework, a neural network serves as a disentangler of the wave-function, transforming the physical degrees of freedom into renormalized variables with much less entanglement. The renormalized state is then efficiently encoded by a back-flow tensor network. This construction yields a compact yet highly expressive representation of strongly correlated quantum states. Using convolutional neural networks combined with matrix product states as a concrete implementation, we obtain state-of-the-art variational energies for the spin-1/2 J1-J2 Heisenberg model on the square lattice at the highly frustrated point J2/J1=0.5, for systems up to 20×20 with periodic boundary conditions. Finite-size scaling of spin, dimer, and plaquette correlations exhibits power-law decay without magnetic or valence-bond long-range order, consistent with a gapless quantum spin-liquid ground state at that this http URL νTNS framework is flexible and naturally extensible to other neural and tensor-network structures, offering a general platform for investigating strongly correlated quantum many-body systems.
-
-arXiv: https://arxiv.org/pdf/2603.14425</description>
-      <guid isPermaLink="false">1776929960107</guid>
-      <pubDate>Sun, 15 Mar 2026 00:00:00 +0800</pubDate>
     </item>
   </channel>
 </rss>
