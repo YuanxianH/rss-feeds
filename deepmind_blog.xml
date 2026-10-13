@@ -7,11 +7,23 @@
     <docs>http://www.rssboard.org/rss-specification</docs>
     <generator>RSS Creator</generator>
     <language>zh-CN</language>
-    <lastBuildDate>Tue, 13 Oct 2026 10:14:15 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 13 Oct 2026 18:00:23 +0000</lastBuildDate>
     <item>
       <title>EmbeddingGemma 2: an open, lightweight multimodal embedding model</title>
       <link>https://blog.google/innovation-and-ai/technology/developers-tools/embeddinggemma-2/?utm_source=deepmind.google&amp;utm_medium=referral&amp;utm_campaign=gdm&amp;utm_content=</link>
       <guid isPermaLink="true">https://blog.google/innovation-and-ai/technology/developers-tools/embeddinggemma-2/?utm_source=deepmind.google&amp;utm_medium=referral&amp;utm_campaign=gdm&amp;utm_content=</guid>
+      <pubDate>Tue, 13 Oct 2026 00:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>Gemini 4 Argon for Robotics</title>
+      <link>https://developers.googleblog.com/gemini-4-argon-for-robotics?utm_source=deepmind.google&amp;utm_medium=referral&amp;utm_campaign=gdm&amp;utm_content=</link>
+      <guid isPermaLink="true">https://developers.googleblog.com/gemini-4-argon-for-robotics?utm_source=deepmind.google&amp;utm_medium=referral&amp;utm_campaign=gdm&amp;utm_content=</guid>
+      <pubDate>Tue, 13 Oct 2026 00:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>Gemini 4 Argon: Built to solve your hardest problems</title>
+      <link>https://blog.google/innovation-and-ai/models-and-research/gemini-models/introducing-gemini-4-argon/</link>
+      <guid isPermaLink="true">https://blog.google/innovation-and-ai/models-and-research/gemini-models/introducing-gemini-4-argon/</guid>
       <pubDate>Tue, 13 Oct 2026 00:00:00 +0000</pubDate>
     </item>
     <item>
@@ -121,18 +133,6 @@
       <link>https://blog.google/innovation-and-ai/technology/developers-tools/build-with-gemini-omni-1-1-flash/</link>
       <guid isPermaLink="true">https://blog.google/innovation-and-ai/technology/developers-tools/build-with-gemini-omni-1-1-flash/</guid>
       <pubDate>Thu, 13 Aug 2026 00:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>Introducing Gemini 3.6 Flash, 3.5 Flash-Lite, and 3.5 Flash Cyber</title>
-      <link>https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-3-6-flash-3-5-flash-lite-3-5-flash-cyber/?utm_source=deepmind.google&amp;utm_medium=referral&amp;utm_campaign=gdm&amp;utm_content=</link>
-      <guid isPermaLink="true">https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-3-6-flash-3-5-flash-lite-3-5-flash-cyber/?utm_source=deepmind.google&amp;utm_medium=referral&amp;utm_campaign=gdm&amp;utm_content=</guid>
-      <pubDate>Mon, 13 Jul 2026 00:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>Introducing Gemini 3.5 Flash Cyber</title>
-      <link>https://deepmind.google/blog/introducing-gemini-3-5-flash-cyber/</link>
-      <guid isPermaLink="true">https://deepmind.google/blog/introducing-gemini-3-5-flash-cyber/</guid>
-      <pubDate>Mon, 13 Jul 2026 00:00:00 +0000</pubDate>
     </item>
     <item>
       <title>Accelerating the frontiers of scientific discovery: Google’s $40M commitment to the Genesis Mission</title>

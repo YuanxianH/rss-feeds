@@ -7,7 +7,67 @@
     <docs>http://www.rssboard.org/rss-specification</docs>
     <generator>RSS Creator</generator>
     <language>zh-CN</language>
-    <lastBuildDate>Tue, 13 Oct 2026 10:14:34 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 13 Oct 2026 18:00:46 +0000</lastBuildDate>
+    <item>
+      <title>Bot email addresses, X search, and in-chat apps (0.70.2)</title>
+      <link>https://x.ai/changelog/bot#v0.70.2</link>
+      <description>New
+Bots can claim their own email address and receive mail there, and email they send from it waits for your approval on a draft card.
+Bots can search X and read posts and profiles without you connecting an X account.
+Connectors that come with an app, such as Figma, Notion, and Canva, can show it as an interactive card in the chat.
+Bots can pay with X Money or Stripe Link.
+Bots can find a Bot template that fits what you describe and link it in the chat.
+On Mac, View Unread in the View menu shows only Bots with unread messages in the sidebar.
+Press Cmd+F or Ctrl+F on an open page to search it in a Find in page bar.
+You can rename a page from its title, and the new name shows everywhere.
+Shared pages have a title bar with Download, which saves a PDF, plus Try Grok Bot for visitors and Share for the owner.
+Adding Glean asks for your Glean MCP URL and connects it after you sign in to Glean in your browser.
+QuickBooks Online is available to connect.
+Bots can save a web page as a PDF from their browser and send audio files such as MP3, M4A, and WAV.
+The full-screen video player has a speed menu, and voice calls offer 0.5x speed.
+Teammates can approve Auto-review requests, including Always allow, from their own direct message with a Team Bot. Teams
+Improved
+Before an action it can't undo, such as sending, posting, buying, or deleting, a Bot checks your own messages for approval.
+After a bank or brokerage connector returns data, the Bot asks before sharing it anywhere else.
+Bots acknowledge your message before they start longer work.
+Reactions sit on the message bubble, the quick row includes your recent emoji, and each person shows only their latest reaction.
+Reply quotes show the quoted text and jump to the replied message when clicked, and selecting text shows an Add to chat pill.
+The full-screen computer view opens in Watching until you press Take control.
+When a Bot's computer is asleep, the Computer tab shows a Wake button that wakes it in place.
+Computer settings separate Your computer from the Bot's computer, and Updates shows only app updates.
+After saving a routine, the Bot sums up what it does and who receives the result, and each run delivers there.
+When you give a Bot a connector link, it installs the matching plugin from the catalog when there is one.
+Bots can wait for a background command on their computer to finish, shown as Waiting on results.
+When GitHub refuses a repository or Vercel a team, the Bot suggests ones it can reach or asks you to reconnect.
+Canvases and documents are both labeled Page.
+Typing # in the composer no longer opens the pull request picker.
+Fixed
+Connector calls fail less often: Bots fix wrongly shaped arguments and accept Notion links and Slack channel names before sending.
+When a connector rate-limits your account, Bots wait for the retry delay instead of calling it in a loop.
+Slack, Gmail, and Outlook drafts retry through temporary rate limits and say if they still couldn't send.
+Gmail drafts use your default send-as address and add your own signature, not one quoted from someone else.
+Files and images Bots send from their computer arrive in the chat, ahead of any question card.
+Opening a file while the Bot's computer is asleep wakes it and opens the file.
+When chats, pages, skills, routines, or plugins fail to load, the app shows the error with Try again and keeps what it last loaded.
+Search finds message text and attachment names in all chats, including the open one.
+The Bot's browser keeps downloads under their own file names and starts again after its profile folder is removed.
+Outlook shows its Authorize card when a change needs more permission, and Bots stop retrying on deleted or protected items.
+All-day calendar events stay on the right date, and Bots check your other calendars before saying an event is missing.
+Plugins installed from chat or the web are ready on the Bot's computer, and local plugins such as Xero get the settings you entered.
+Long messages show Show more right away, so opening a chat no longer jumps.
+Publishing, sharing, or deleting a Bot, and adding one from a template, work while its computer is asleep or unreachable.
+Switching chats or focusing the window no longer wakes a sleeping computer.
+Switching accounts lands on the new account within seconds, even when another computer is asleep.
+Pinned Bots stay in sync between the desktop and the phone.
+If the window keeps crashing, Grok Bot offers to reload it or quit, and a window left blank after an update relaunches.
+Bots no longer sign you out of a connector while repairing it, and a connector account you sign out of stays signed out.
+When a model isn't available in your region, the turn stops and explains why, and Bots fall back to Grok.
+In Slack, Bots answer messages whose thread they can't read, and asking a teammate's Bot no longer adds it to your sidebar.
+On Linux, the app stays responsive and can quit while a notification is showing.
+Usage &amp; Billing shows your plan name on Current plan, and the usage meter labels its percentage as used.</description>
+      <guid isPermaLink="true">https://x.ai/changelog/bot#v0.70.2</guid>
+      <pubDate>Sun, 11 Oct 2026 00:00:00 +0000</pubDate>
+    </item>
     <item>
       <title>Slide decks and Bot-colored chats (0.68.1)</title>
       <link>https://x.ai/changelog/bot#v0.68.1</link>

@@ -7,7 +7,7 @@
     <docs>http://www.rssboard.org/rss-specification</docs>
     <generator>RSS Creator</generator>
     <language>zh-CN</language>
-    <lastBuildDate>Tue, 13 Oct 2026 10:14:33 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 13 Oct 2026 18:00:45 +0000</lastBuildDate>
     <item>
       <title>awesome-minimax-integrations</title>
       <link>https://github.com/MiniMax-AI/awesome-minimax-integrations</link>
@@ -102,7 +102,7 @@
     <item>
       <title>MiniMax-M2</title>
       <link>https://huggingface.co/MiniMaxAI/MiniMax-M2</link>
-      <description>[HuggingFace Model] | text-generation | Likes: 1508 | Tags: transformers, safetensors, minimax_m2, text-generation, conversational</description>
+      <description>[HuggingFace Model] | text-generation | Likes: 1509 | Tags: transformers, safetensors, minimax_m2, text-generation, conversational</description>
       <guid isPermaLink="true">https://huggingface.co/MiniMaxAI/MiniMax-M2</guid>
       <pubDate>Wed, 22 Oct 2025 13:45:10 +0000</pubDate>
     </item>
@@ -123,7 +123,7 @@
     <item>
       <title>Mini-Agent</title>
       <link>https://github.com/MiniMax-AI/Mini-Agent</link>
-      <description>[GitHub Repo] | A minimal yet professional single agent demo project that showcases the core execution pipeline and production-grade features of agents. | Language: Python | Stars: 3052 | Topics: agent, llm, minimax</description>
+      <description>[GitHub Repo] | A minimal yet professional single agent demo project that showcases the core execution pipeline and production-grade features of agents. | Language: Python | Stars: 3054 | Topics: agent, llm, minimax</description>
       <guid isPermaLink="true">https://github.com/MiniMax-AI/Mini-Agent</guid>
       <pubDate>Fri, 31 Oct 2025 03:56:27 +0000</pubDate>
     </item>
@@ -179,7 +179,7 @@
     <item>
       <title>MiniMax-M2.1</title>
       <link>https://huggingface.co/MiniMaxAI/MiniMax-M2.1</link>
-      <description>[HuggingFace Model] | text-generation | Likes: 1367 | Tags: transformers, safetensors, minimax_m2, text-generation, conversational</description>
+      <description>[HuggingFace Model] | text-generation | Likes: 1368 | Tags: transformers, safetensors, minimax_m2, text-generation, conversational</description>
       <guid isPermaLink="true">https://huggingface.co/MiniMaxAI/MiniMax-M2.1</guid>
       <pubDate>Sat, 20 Dec 2025 05:45:05 +0000</pubDate>
     </item>
@@ -200,7 +200,7 @@
     <item>
       <title>MiniMax-M2.5</title>
       <link>https://huggingface.co/MiniMaxAI/MiniMax-M2.5</link>
-      <description>[HuggingFace Model] | text-generation | Likes: 1519 | Tags: transformers, safetensors, minimax_m2, text-generation, conversational</description>
+      <description>[HuggingFace Model] | text-generation | Likes: 1520 | Tags: transformers, safetensors, minimax_m2, text-generation, conversational</description>
       <guid isPermaLink="true">https://huggingface.co/MiniMaxAI/MiniMax-M2.5</guid>
       <pubDate>Thu, 12 Feb 2026 06:05:24 +0000</pubDate>
     </item>
@@ -256,7 +256,7 @@
     <item>
       <title>minimax-code</title>
       <link>https://github.com/MiniMax-AI/minimax-code</link>
-      <description>[GitHub Repo] | An open-source coding agent for your terminal, powered by MiniMax. | Language: TypeScript | Stars: 2027 | Topics: coding-agents, harness, minimax</description>
+      <description>[GitHub Repo] | An open-source coding agent for your terminal, powered by MiniMax. | Language: TypeScript | Stars: 2026 | Topics: coding-agents, harness, minimax</description>
       <guid isPermaLink="true">https://github.com/MiniMax-AI/minimax-code</guid>
       <pubDate>Mon, 01 Jun 2026 12:39:40 +0000</pubDate>
     </item>
@@ -284,28 +284,28 @@
     <item>
       <title>MiniMax-H3</title>
       <link>https://huggingface.co/MiniMaxAI/MiniMax-H3</link>
-      <description>[HuggingFace Model] | image-text-to-video | Likes: 6097 | Tags: minimax-h3, diffusers, safetensors, text-to-video, image-to-video</description>
+      <description>[HuggingFace Model] | image-text-to-video | Likes: 6107 | Tags: minimax-h3, diffusers, safetensors, text-to-video, image-to-video</description>
       <guid isPermaLink="true">https://huggingface.co/MiniMaxAI/MiniMax-H3</guid>
       <pubDate>Tue, 28 Jul 2026 10:45:18 +0000</pubDate>
     </item>
     <item>
       <title>MiniMax-H3</title>
       <link>https://github.com/MiniMax-AI/MiniMax-H3</link>
-      <description>[GitHub Repo] | Language: Python | Stars: 9872</description>
+      <description>[GitHub Repo] | Language: Python | Stars: 9890</description>
       <guid isPermaLink="true">https://github.com/MiniMax-AI/MiniMax-H3</guid>
       <pubDate>Thu, 30 Jul 2026 08:41:09 +0000</pubDate>
     </item>
     <item>
       <title>MiniMax-Music3</title>
       <link>https://huggingface.co/MiniMaxAI/MiniMax-Music3</link>
-      <description>[HuggingFace Model] | text-to-audio | Likes: 1448 | Tags: diffusers, safetensors, minimax_music3, music-generation, text-to-music</description>
+      <description>[HuggingFace Model] | text-to-audio | Likes: 1449 | Tags: diffusers, safetensors, minimax_music3, music-generation, text-to-music</description>
       <guid isPermaLink="true">https://huggingface.co/MiniMaxAI/MiniMax-Music3</guid>
       <pubDate>Fri, 07 Aug 2026 12:23:29 +0000</pubDate>
     </item>
     <item>
       <title>MiniMax-Music3</title>
       <link>https://github.com/MiniMax-AI/MiniMax-Music3</link>
-      <description>[GitHub Repo] | Stars: 945</description>
+      <description>[GitHub Repo] | Stars: 947</description>
       <guid isPermaLink="true">https://github.com/MiniMax-AI/MiniMax-Music3</guid>
       <pubDate>Tue, 11 Aug 2026 08:01:03 +0000</pubDate>
     </item>

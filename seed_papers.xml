@@ -7,7 +7,7 @@
     <docs>http://www.rssboard.org/rss-specification</docs>
     <generator>RSS Creator</generator>
     <language>zh-CN</language>
-    <lastBuildDate>Tue, 13 Oct 2026 10:14:49 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 13 Oct 2026 18:00:59 +0000</lastBuildDate>
     <item>
       <title>Periodic Weak Spots: Phase Sensitivity from Chunked KV-Cache Compression</title>
       <link>https://seed.bytedance.com/zh/public_papers/periodic-weak-spots-phase-sensitivity-from-chunked-kv-cache-compression</link>
@@ -16,6 +16,33 @@
 arXiv: https://arxiv.org/pdf/2609.36322</description>
       <guid isPermaLink="false">1791871731369</guid>
       <pubDate>Mon, 28 Sep 2026 20:00:00 +0800</pubDate>
+    </item>
+    <item>
+      <title>HarnessDev: Can LLMs Create and Evolve Their Own Agent Harness?</title>
+      <link>https://seed.bytedance.com/zh/public_papers/harnessdev-can-llms-create-and-evolve-their-own-agent-harness</link>
+      <description>As agents move from research prototypes to deployed tools, their capability increasingly depends on model-external execution infrastructure, commonly termed the agent harness. Changing this harness while holding model weights fixed can substantially alter task performance. Current agent evaluations typically report downstream performance under a chosen harness, leaving a model's ability to develop the harness itself comparatively underexplored. We introduce HarnessDev, a benchmark that shifts the unit of evaluation from task outputs to runnable infrastructure. HarnessDev covers two stages. In Creation, the agent starts from a minimal seed and a small number of cases, then builds a complete execution system. In Evolution, it starts from its own created harness and iteratively revises it using downstream execution feedback, with the goal of improving benchmark performance. We then evaluate each constructed harness on capability (task success on held-out benchmarks) and efficiency (execution-token cost). The reported Creation results cover six creator LLMs, four domains, and five downstream benchmarks totaling 2,207 unique downstream instances, with hidden evaluation tasks withheld from development. We find that generated harnesses remain substantially behind mature human-engineered references on code and on search and research, while matching or exceeding the selected references on writing and machine-learning experimentation, with large variation in execution cost. Evolution produces some performance gains, but they are unstable and transfer only partially to held-out tasks. Experiments with a fixed runtime model further show that the gains depend strongly on the model executing the harness, indicating limited transfer across models.
+
+arXiv: https://arxiv.org/pdf/2609.01437</description>
+      <guid isPermaLink="false">1791900842117</guid>
+      <pubDate>Tue, 01 Sep 2026 20:00:00 +0800</pubDate>
+    </item>
+    <item>
+      <title>S3Gym: Can LLMs Turn Self-Testing and Self-Judging into Self-Improvement?</title>
+      <link>https://seed.bytedance.com/zh/public_papers/s3gym-can-llms-turn-self-testing-and-self-judging-into-self-improvement</link>
+      <description>Large language models (LLMs) increasingly interact with external environments and accumulate substantial behavioral experience, yet existing agent benchmarks largely evaluate them as fixed policies. It therefore remains unclear whether an agent can actively test its behavior, judge the resulting experience, and use that experience to improve future decisions. We introduce \textbf{S\textsuperscript{3}Gym}, an interactive benchmark for evaluating LLM self-improvement through three coupled capabilities: \textbf{Self-Testing}, \textbf{Self-Judging}, and \textbf{Self-Improvement}. S$^3$Gym separates permissive exploration from strict held-out evaluation and instantiates this protocol in seven text-based games with executable environment verifiers. We evaluate three pathways for incorporating interaction experience: direct History ICL, score-conditioned Summary Memory, and parameter Training. Our experiments reveal that self-improvement is neither automatic nor uniform. Context-level experience improves performance for several model--game pairs, but the most effective pathway depends strongly on the task structure: summaries are beneficial when experience can be compressed into reusable strategic rules, yet often underperform raw history when success depends on precise, state-contingent information. Parameter training produces substantial gains on some tasks, but also exhibits unstable improvement and severe negative transfer on others. These findings show that recognizing successful actions is insufficient; agents must also transform feedback into executable and transferable policies. S$^3$Gym provides a unified framework for diagnosing this process and identifying the bottlenecks that prevent agents from translating interaction experience into reliable self-improvement.
+
+arXiv: https://arxiv.org/pdf/2608.31100</description>
+      <guid isPermaLink="false">1791900774400</guid>
+      <pubDate>Mon, 31 Aug 2026 20:00:00 +0800</pubDate>
+    </item>
+    <item>
+      <title>Aspire: Can Models Self-Evolve from Vague Goals?</title>
+      <link>https://seed.bytedance.com/zh/public_papers/aspire-can-models-self-evolve-from-vague-goals</link>
+      <description>Many important forms of human learning begin with a vague goal, such as "become a better physicist" or "improve at research." Learners must interpret the goal, identify capability gaps, decide how to learn, and determine whether they have actually improved. In contrast, existing work on LLM self-evolution typically begins with tasks and evaluation metrics specified by humans, reducing self-evolution to optimizing an explicit objective rather than deciding what and how to learn. We introduce ASPIRE, a benchmark for vague-goal-driven self-evolution. ASPIRE provides only a natural-language capability goal while downstream evaluation tasks remain hidden. The agent must operationalize the goal by choosing data and update methods, constructing training and validation signals, and deciding when to evaluate. ASPIRE supports both model-weight and agent-harness evolution in a unified interactive environment and evaluates the resulting systems on a hidden, expert-authored set of 520 items spanning six goals. Our experiments show that vague goals redirect search effort toward goal interpretation. Current agents routinely complete training and harness-editing loops, but weight-level gains remain sparse and unstable, and the strongest evolved harness remains below the engineered Qwen-Agent reference. Agents often train on mismatched data and trust narrow self-evaluations, so local gains fail to transfer to hidden evaluation and continued search and training can erase earlier improvements.
+
+arXiv: https://arxiv.org/pdf/2608.31111</description>
+      <guid isPermaLink="false">1791900694457</guid>
+      <pubDate>Mon, 31 Aug 2026 20:00:00 +0800</pubDate>
     </item>
     <item>
       <title>Chain-of-Experience for Continual LLM Improvement</title>
@@ -442,33 +469,6 @@ arXiv: https://arxiv.org/pdf/2603.23386</description>
 arXiv: https://arxiv.org/pdf/2603.22274</description>
       <guid isPermaLink="false">1776665446376</guid>
       <pubDate>Mon, 23 Mar 2026 00:00:00 +0800</pubDate>
-    </item>
-    <item>
-      <title>Beyond Token Eviction: Mixed-Dimension Budget Allocation for Efficient KV Cache Compression</title>
-      <link>https://seed.bytedance.com/zh/public_papers/beyond-token-eviction-mixed-dimension-budget-allocation-for-efficient-kv-cache-compression</link>
-      <description>Key-value (KV) caching is widely used to accelerate transformer inference, but its memory cost grows linearly with input length, limiting long-context deployment. Existing token eviction methods reduce memory by discarding less important tokens, which can be viewed as a coarse form of dimensionality reduction that assigns each token either zero or full dimension. We propose MixedDimKV, a mixed-dimension KV cache compression method that allocates dimensions to tokens at a more granular level, and MixedDimKV-H, which further integrates head-level importance information. Experiments on long-context benchmarks show that MixedDimKV outperforms prior KV cache compression methods that do not rely on head-level importance profiling. When equipped with the same head-level importance information, MixedDimKV-H consistently outperforms HeadKV. Notably, our approach achieves comparable performance to full attention on LongBench with only 6.25% of the KV cache. Furthermore, in the Needle-in-a-Haystack test, our solution maintains 100% accuracy at a 50K context length while using as little as 0.26% of the cache.
-
-arXiv: https://arxiv.org/pdf/2603.20616</description>
-      <guid isPermaLink="false">1776932180702</guid>
-      <pubDate>Sat, 21 Mar 2026 00:00:00 +0800</pubDate>
-    </item>
-    <item>
-      <title>FlexTrain: Scalable Hybrid-Parallel Training with Elastic Resource Utilization and Consistent Accuracy</title>
-      <link>https://seed.bytedance.com/zh/public_papers/flextrain-scalable-hybrid-parallel-training-with-elastic-resource-utilization-and-consistent-accuracy</link>
-      <description>Large language model (LLM) training has become a critical workload in shared GPU clusters. However, our observations reveal that these clusters suffer from significant underutilization. To address this inefficiency, various elastic training techniques have been developed to dynamically adjust GPU allocations to harness idle resources. Despite their potential, these methods have seen limited deployment in production environments due to three major challenges: accuracy inconsistency, excessive profiling overhead, and limited flexibility. In this paper, we propose FlexTrain, an elastic training system that achieves consistent model accuracy, high training efficiency, and effective resource utilization. FlexTrain prioritizes adjustments to the pipeline parallelism (PP) degree to preserve deterministic computation and maintain accuracy consistency, while also supporting data parallelism (DP) scaling to further enhance throughput under relaxed consistency requirements. It generates optimal PP schedules, predicts training performance under different configurations, and makes scaling decisions based on job submission intervals, scaling overhead, and expected throughput gains. Evaluation results show that FlexTrain can achieve up to 1.73× speedup for elastic jobs while preserving consistent accuracy, and up to 2.27× when accuracy consistency is relaxed, compared to conventional non-elastic scheduling strategy.
-
-arXiv: https://openreview.net/pdf?id=h2yhNcbwSL</description>
-      <guid isPermaLink="false">1782991128267</guid>
-      <pubDate>Fri, 20 Mar 2026 00:00:00 +0800</pubDate>
-    </item>
-    <item>
-      <title>Mixture-of-Depths Attention</title>
-      <link>https://seed.bytedance.com/zh/public_papers/mixture-of-depths-attention</link>
-      <description>Scaling depth is a key driver for large language models (LLMs). Yet, as LLMs become deeper, they often suffer from signal degradation: informative features formed in shallow layers are gradually diluted by repeated residual updates, making them harder to recover in deeper layers. We introduce mixture-of-depths attention (MoDA), a mechanism that allows each attention head to attend to sequence KV pairs at the current layer and depth KV pairs from preceding layers. We further describe a hardware-efficient algorithm for MoDA that resolves non-contiguous memory-access patterns, achieving 97.3% of FlashAttention-2's efficiency at a sequence length of 64K. Experiments on 1.5B-parameter models demonstrate that MoDA consistently outperforms strong baselines. Notably, it improves average perplexity by 0.2 across 10 validation benchmarks and increases average performance by 2.11% on 10 downstream tasks, with a negligible 3.7% FLOPs computational overhead. We also find that combining MoDA with post-norm yields better performance than using it with pre-norm. These results suggest that MoDA is a promising primitive for depth scaling.
-
-arXiv: https://arxiv.org/pdf/2603.15619</description>
-      <guid isPermaLink="false">1776933531915</guid>
-      <pubDate>Mon, 16 Mar 2026 00:00:00 +0800</pubDate>
     </item>
   </channel>
 </rss>
