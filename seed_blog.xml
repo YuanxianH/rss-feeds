@@ -7,7 +7,13 @@
     <docs>http://www.rssboard.org/rss-specification</docs>
     <generator>RSS Creator</generator>
     <language>zh-CN</language>
-    <lastBuildDate>Wed, 14 Oct 2026 09:25:53 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 14 Oct 2026 14:55:55 +0000</lastBuildDate>
+    <item>
+      <title>Seed Alignment &amp; Preparedness 全球顶尖人才招募启动</title>
+      <link>https://seed.bytedance.com/zh/blog/seed-alignment-preparedness-%E5%85%A8%E7%90%83%E9%A1%B6%E5%B0%96%E4%BA%BA%E6%89%8D%E6%8B%9B%E5%8B%9F%E5%90%AF%E5%8A%A8</link>
+      <guid isPermaLink="false">1791946231297</guid>
+      <pubDate>Wed, 14 Oct 2026 00:00:00 +0800</pubDate>
+    </item>
     <item>
       <title>SeedRealtime 音视频全双工大模型发布：走向全模态自然交互</title>
       <link>https://seed.bytedance.com/zh/blog/seedrealtime-%E9%9F%B3%E8%A7%86%E9%A2%91%E5%85%A8%E5%8F%8C%E5%B7%A5%E5%A4%A7%E6%A8%A1%E5%9E%8B%E5%8F%91%E5%B8%83-%E8%B5%B0%E5%90%91%E5%85%A8%E6%A8%A1%E6%80%81%E8%87%AA%E7%84%B6%E4%BA%A4%E4%BA%92</link>
@@ -349,13 +355,6 @@
       <description>推理速度较 MoE 提升 2-6 倍，论文已被 ICLR 2025 接收</description>
       <guid isPermaLink="false">1763522793930</guid>
       <pubDate>Wed, 12 Feb 2025 00:00:00 +0800</pubDate>
-    </item>
-    <item>
-      <title>Seed Research | 视频生成模型最新成果，可仅靠视觉认知世界！现已开源</title>
-      <link>https://seed.bytedance.com/zh/blog/seed-research-%E8%A7%86%E9%A2%91%E7%94%9F%E6%88%90%E6%A8%A1%E5%9E%8B%E6%9C%80%E6%96%B0%E6%88%90%E6%9E%9C-%E5%8F%AF%E4%BB%85%E9%9D%A0%E8%A7%86%E8%A7%89%E8%AE%A4%E7%9F%A5%E4%B8%96%E7%95%8C-%E7%8E%B0%E5%B7%B2%E5%BC%80%E6%BA%90</link>
-      <description>去掉语言模型，让 AI 仅靠“视觉”认知世界学习知识</description>
-      <guid isPermaLink="false">1763522830668</guid>
-      <pubDate>Mon, 10 Feb 2025 00:00:00 +0800</pubDate>
     </item>
   </channel>
 </rss>
