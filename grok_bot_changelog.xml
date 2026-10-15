@@ -7,7 +7,7 @@
     <docs>http://www.rssboard.org/rss-specification</docs>
     <generator>RSS Creator</generator>
     <language>zh-CN</language>
-    <lastBuildDate>Thu, 15 Oct 2026 18:55:27 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 15 Oct 2026 21:59:40 +0000</lastBuildDate>
     <item>
       <title>Bot email addresses, X search, and in-chat apps (0.70.2)</title>
       <link>https://x.ai/changelog/bot#v0.70.2</link>
@@ -28,28 +28,42 @@ The full-screen video player has a speed menu, and voice calls offer 0.5x speed.
 Teammates can approve Auto-review requests, including Always allow, from their own direct message with a Team Bot. Teams
 Improved
 Before an action it can't undo, such as sending, posting, buying, or deleting, a Bot checks your own messages for approval.
+Browser approval cards describe actions in plain words, such as Open a new tab in Grok Bot's browser, and a saved Allow rule applies the same way on every tool.
+When more than one account could send an email, the Bot asks which address to use, then tells you the address it sent from.
+When a sign-in emails a code or link, the Bot reads it from your connected Gmail or Outlook, or its own inbox, instead of asking you.
 After a bank or brokerage connector returns data, the Bot asks before sharing it anywhere else.
 Bots acknowledge your message before they start longer work.
 Reactions sit on the message bubble, the quick row includes your recent emoji, and each person shows only their latest reaction.
 Reply quotes show the quoted text and jump to the replied message when clicked, and selecting text shows an Add to chat pill.
+While a Bot works with nothing to report, a 1:1 chat shows just its animated avatar.
+While attachments upload, your message shows a Sending… bar that fills as the files upload.
 The full-screen computer view opens in Watching until you press Take control.
 When a Bot's computer is asleep, the Computer tab shows a Wake button that wakes it in place.
 Computer settings separate Your computer from the Bot's computer, and Updates shows only app updates.
+Updates to Grok Bot's computer run without status pills in the sidebar; you see a notice only if one leaves the computer unreachable.
 After saving a routine, the Bot sums up what it does and who receives the result, and each run delivers there.
 When you give a Bot a connector link, it installs the matching plugin from the catalog when there is one.
+Connect Apps lists the most-installed plugins first, search also finds plugins whose description matches, and a search with no results says so.
 Bots can wait for a background command on their computer to finish, shown as Waiting on results.
 When GitHub refuses a repository or Vercel a team, the Bot suggests ones it can reach or asks you to reconnect.
+Adding an MCP server on a private Tailscale network now explains that Grok Bot can't reach it yet and suggests exposing it with Tailscale Funnel.
 Canvases and documents are both labeled Page.
 Typing # in the composer no longer opens the pull request picker.
 Fixed
 Connector calls fail less often: Bots fix wrongly shaped arguments and accept Notion links and Slack channel names before sending.
 When a connector rate-limits your account, Bots wait for the retry delay instead of calling it in a loop.
+With 1Password connected, browser and computer actions retry through brief connection errors instead of stopping.
 Slack, Gmail, and Outlook drafts retry through temporary rate limits and say if they still couldn't send.
+Slack messages a Bot drafts no longer turn into one raw code block when sent.
 Gmail drafts use your default send-as address and add your own signature, not one quoted from someone else.
+Bot emails with non-English names or subjects no longer bounce, replies to them stay in the same thread, and small images in incoming mail are kept.
+When Agent email is off for your team or account, the Bot says so instead of calling it a temporary problem.
 Files and images Bots send from their computer arrive in the chat, ahead of any question card.
 Opening a file while the Bot's computer is asleep wakes it and opens the file.
 When chats, pages, skills, routines, or plugins fail to load, the app shows the error with Try again and keeps what it last loaded.
 Search finds message text and attachment names in all chats, including the open one.
+The open chat is marked read when you relaunch the app, come back to your computer, or click its row again.
+While a Bot searches the web or reads pages, the chat and Slack show what it's doing, such as Digging around, instead of Working in Cursor.
 The Bot's browser keeps downloads under their own file names and starts again after its profile folder is removed.
 Outlook shows its Authorize card when a change needs more permission, and Bots stop retrying on deleted or protected items.
 All-day calendar events stay on the right date, and Bots check your other calendars before saying an event is missing.
@@ -63,6 +77,8 @@ If the window keeps crashing, Grok Bot offers to reload it or quit, and a window
 Bots no longer sign you out of a connector while repairing it, and a connector account you sign out of stays signed out.
 When a model isn't available in your region, the turn stops and explains why, and Bots fall back to Grok.
 In Slack, Bots answer messages whose thread they can't read, and asking a teammate's Bot no longer adds it to your sidebar.
+Connecting Slack from the dashboard on grok.com now brings you back there to finish linking your Slack account.
+In voice calls, the Bot knows today's date in your time zone instead of sometimes using tomorrow's.
 On Linux, the app stays responsive and can quit while a notification is showing.
 Usage &amp; Billing shows your plan name on Current plan, and the usage meter labels its percentage as used.</description>
       <guid isPermaLink="true">https://x.ai/changelog/bot#v0.70.2</guid>
