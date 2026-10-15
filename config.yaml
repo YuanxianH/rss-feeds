@@ -355,6 +355,23 @@ jobs:
       infer_dates_from_context: true
       persist_pubdates: true
 
+  # World Labs（李飞飞创办）官方博客
+  - type: "selector_scrape"
+    name: "World Labs Blog"
+    url: "https://www.worldlabs.ai/blog"
+    output: "worldlabs_blog.xml"
+    title: "World Labs Blog"
+    description: "Research, product, and company updates from World Labs"
+    link: "https://www.worldlabs.ai/blog"
+    selectors:
+      items: "a.group[href]:has(h2)"
+      title: "h2"
+      description: "h2 + p"
+      date: "p:has(> span)"
+      author: "p:has(> span) > span"
+    catalog:
+      section: "blogs"
+
   # 示例配置
   # - type: "selector_scrape"
   #   name: "Example"

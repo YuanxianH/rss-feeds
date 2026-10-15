@@ -38,6 +38,38 @@ class HTMLParserTests(unittest.TestCase):
         self.assertEqual(items[1]["link"], "https://example.com/b")
         self.assertTrue(items[0]["pubDate"].endswith("+0000"))
 
+    def test_parse_items_falls_back_to_date_element_own_text(self):
+        html = """
+        <article>
+          <h2>Announcement</h2>
+          <a href="/announcement">Read</a>
+          <p>September 28, 2026<!-- --><span>World Labs team</span></p>
+        </article>
+        """
+        parser = HTMLParser(html, base_url="https://example.com")
+        items = parser.parse_items(
+            selectors={"items": "article", "title": "h2", "link": "a", "date": "p"},
+            max_items=5,
+        )
+
+        self.assertEqual(items[0]["pubDate"], "Mon, 28 Sep 2026 00:00:00 +0000")
+
+    def test_parse_items_omits_date_when_date_element_own_text_is_invalid(self):
+        html = """
+        <article>
+          <h2>Announcement</h2>
+          <a href="/announcement">Read</a>
+          <p>Read more <span>x</span></p>
+        </article>
+        """
+        parser = HTMLParser(html, base_url="https://example.com")
+        items = parser.parse_items(
+            selectors={"items": "article", "title": "h2", "link": "a", "date": "p"},
+            max_items=5,
+        )
+
+        self.assertIsNone(items[0]["pubDate"])
+
     def test_parse_date_returns_none_when_invalid(self):
         parser = HTMLParser("<html></html>", base_url="https://example.com")
         self.assertIsNone(parser._parse_date("not a date"))

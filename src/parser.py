@@ -1,6 +1,6 @@
 """HTML 解析模块"""
 
-from bs4 import BeautifulSoup
+from bs4 import BeautifulSoup, Comment
 from typing import List, Dict, Optional
 from datetime import datetime, timezone
 from dateutil import parser as date_parser
@@ -127,6 +127,18 @@ class HTMLParser:
             if date_elem := container.select_one(date_selector):
                 date_text = date_elem.get("datetime") or date_elem.get_text(strip=True)
                 item["pubDate"] = self._parse_date(date_text)
+                if not item["pubDate"]:
+                    own_text = " ".join(
+                        " ".join(
+                            str(text)
+                            for text in date_elem.find_all(
+                                string=True, recursive=False
+                            )
+                            if not isinstance(text, Comment)
+                        ).split()
+                    )
+                    if own_text and own_text != date_text:
+                        item["pubDate"] = self._parse_date(own_text)
 
         # 作者
         if author_selector := selectors.get("author"):
