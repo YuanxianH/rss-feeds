@@ -54,6 +54,22 @@ class HTMLParserTests(unittest.TestCase):
 
         self.assertEqual(items[0]["pubDate"], "Mon, 28 Sep 2026 00:00:00 +0000")
 
+    def test_parse_items_does_not_fallback_to_date_without_explicit_year(self):
+        html = """
+        <article>
+          <h2>Announcement</h2>
+          <a href="/announcement">Read</a>
+          <p>Sep 28 <span>2025</span></p>
+        </article>
+        """
+        parser = HTMLParser(html, base_url="https://example.com")
+        items = parser.parse_items(
+            selectors={"items": "article", "title": "h2", "link": "a", "date": "p"},
+            max_items=5,
+        )
+
+        self.assertIsNone(items[0]["pubDate"])
+
     def test_parse_items_omits_date_when_date_element_own_text_is_invalid(self):
         html = """
         <article>

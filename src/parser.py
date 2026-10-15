@@ -15,6 +15,7 @@ _CHINESE_DATE = re.compile(
 )
 _SLASH_DATE = re.compile(r"\b(\d{1,2}/\d{1,2}/\d{2,4})\b")
 _YEAR_DATE = re.compile(r"\b((?:18|19|20)\d{2})\b")
+_EXPLICIT_YEAR = re.compile(r"\b(?:19|20)\d{2}\b")
 _CONTEXT_PARENTS = {"li", "small", "span", "p", "td"}
 _CONTEXT_PARENT_MAX_CHARS = 200
 
@@ -137,7 +138,11 @@ class HTMLParser:
                             if not isinstance(text, Comment)
                         ).split()
                     )
-                    if own_text and own_text != date_text:
+                    if (
+                        own_text
+                        and own_text != date_text
+                        and _EXPLICIT_YEAR.search(own_text)
+                    ):
                         item["pubDate"] = self._parse_date(own_text)
 
         # 作者
