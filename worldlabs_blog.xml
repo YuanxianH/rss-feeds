@@ -1,0 +1,145 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0">
+  <channel>
+    <title>World Labs Blog</title>
+    <link>https://www.worldlabs.ai/blog</link>
+    <description>Research, product, and company updates from World Labs</description>
+    <docs>http://www.rssboard.org/rss-specification</docs>
+    <generator>RSS Creator</generator>
+    <language>zh-CN</language>
+    <lastBuildDate>Thu, 15 Oct 2026 16:32:02 +0000</lastBuildDate>
+    <item>
+      <title>To Seek a Newer World</title>
+      <link>https://drfeifei.substack.com/worldlabs-joining-amd</link>
+      <description>Our journey from World Labs to AMD</description>
+      <guid isPermaLink="true">https://drfeifei.substack.com/worldlabs-joining-amd</guid>
+      <pubDate>Mon, 28 Sep 2026 00:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>World Labs is Joining AMD</title>
+      <link>https://www.worldlabs.ai/blog/amd-announcement</link>
+      <description>Accelerating the future of AI research and compute</description>
+      <guid isPermaLink="true">https://www.worldlabs.ai/blog/amd-announcement</guid>
+      <pubDate>Mon, 28 Sep 2026 00:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>Atlas: A World Model for Spatial Intelligence</title>
+      <link>https://www.worldlabs.ai/blog/atlas</link>
+      <description>Introducing Atlas, our new omni world model for spatial intelligence.</description>
+      <guid isPermaLink="true">https://www.worldlabs.ai/blog/atlas</guid>
+      <pubDate>Tue, 01 Sep 2026 00:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>The Next Frontier of AI Is Spatial Intelligence</title>
+      <link>https://www.youtube.com/watch?v=-tabaM5l3s0</link>
+      <description>Martin Casado (a16z) sits down with Fei-Fei Li and Yunzhu Li to discuss the SceniX acquisition, how simulation unlocks the next generation of robotics, and why training robots isn't like training LLMs</description>
+      <guid isPermaLink="true">https://www.youtube.com/watch?v=-tabaM5l3s0</guid>
+      <pubDate>Tue, 28 Jul 2026 00:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>Building Worlds That Train Robots</title>
+      <link>https://www.worldlabs.ai/blog/real-to-sim-to-real</link>
+      <description>Real-to-sim-to-real (R2S2R)  as a scalable engine for training and evaluating robot policies</description>
+      <guid isPermaLink="true">https://www.worldlabs.ai/blog/real-to-sim-to-real</guid>
+      <pubDate>Tue, 28 Jul 2026 00:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>World Labs Acquires SceniX</title>
+      <link>https://www.worldlabs.ai/blog/scenix</link>
+      <description>Advancing Spatial Intelligence for Robotics</description>
+      <guid isPermaLink="true">https://www.worldlabs.ai/blog/scenix</guid>
+      <pubDate>Tue, 21 Jul 2026 00:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>A Functional Taxonomy of World Models</title>
+      <link>https://www.worldlabs.ai/blog/taxonomy-of-world-models</link>
+      <description>Renderers, Simulators, Planners, and the Loop That Connects Them</description>
+      <guid isPermaLink="true">https://www.worldlabs.ai/blog/taxonomy-of-world-models</guid>
+      <pubDate>Wed, 03 Jun 2026 00:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>Streaming 3DGS worlds on the web</title>
+      <link>https://www.worldlabs.ai/blog/spark-2.0</link>
+      <description>A technical deep dive into Spark 2.0's streamable, Level-of-Detail system for 3D Gaussian Splatting.</description>
+      <guid isPermaLink="true">https://www.worldlabs.ai/blog/spark-2.0</guid>
+      <pubDate>Tue, 14 Apr 2026 00:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>3D as code</title>
+      <link>https://www.worldlabs.ai/blog/3d-as-code</link>
+      <description>Text became the universal interface for software; 3D is becoming the universal interface for space. It’s the medium that allows humans and AI systems to generate, edit, simulate, and share worlds together.</description>
+      <guid isPermaLink="true">https://www.worldlabs.ai/blog/3d-as-code</guid>
+      <pubDate>Tue, 03 Mar 2026 00:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>World Labs Announces New Funding</title>
+      <link>https://www.worldlabs.ai/blog/funding-2026</link>
+      <description>An update on our vision for spatial intelligence in 2026.</description>
+      <guid isPermaLink="true">https://www.worldlabs.ai/blog/funding-2026</guid>
+      <pubDate>Wed, 18 Feb 2026 00:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>Announcing the World API</title>
+      <link>https://www.worldlabs.ai/blog/announcing-the-world-api</link>
+      <description>A public API for generating explorable 3D worlds from text, images, and video — bringing Marble's world modeling capabilities into your applications.</description>
+      <guid isPermaLink="true">https://www.worldlabs.ai/blog/announcing-the-world-api</guid>
+      <pubDate>Wed, 21 Jan 2026 00:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>Marble: A Multimodal World Model</title>
+      <link>https://www.worldlabs.ai/blog/marble-world-model</link>
+      <description>Marble, our frontier multimodal world model, is available to everyone starting today</description>
+      <guid isPermaLink="true">https://www.worldlabs.ai/blog/marble-world-model</guid>
+      <pubDate>Wed, 12 Nov 2025 00:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>From Words to Worlds: Spatial Intelligence is AI’s Next Frontier</title>
+      <link>https://drfeifei.substack.com/p/from-words-to-worlds-spatial-intelligence</link>
+      <description>A manifesto piece explaining what spatial intelligence is, why it matters, and how we’re building the world models that will unlock it—with impact that will reshape creativity, embodied intelligence, and human progress.</description>
+      <guid isPermaLink="true">https://drfeifei.substack.com/p/from-words-to-worlds-spatial-intelligence</guid>
+      <pubDate>Mon, 10 Nov 2025 00:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>Content 3.0 in the GenAI Era</title>
+      <link>https://www.ted.com/talks/christoph_lassner_what_if_you_could_talk_to_your_favorite_character_in_a_movie</link>
+      <description>Christoph Lassner on how generative AI leads to a new medium with dynamically evolving characters and worlds-and what this means for storytelling and the future of digital content.</description>
+      <guid isPermaLink="true">https://www.ted.com/talks/christoph_lassner_what_if_you_could_talk_to_your_favorite_character_in_a_movie</guid>
+      <pubDate>Tue, 28 Oct 2025 00:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>RTFM: A Real-Time Frame Model</title>
+      <link>https://www.worldlabs.ai/blog/rtfm</link>
+      <description>A research preview of RTFM, a new generative world model that generates video in real-time as you interact with it.</description>
+      <guid isPermaLink="true">https://www.worldlabs.ai/blog/rtfm</guid>
+      <pubDate>Thu, 16 Oct 2025 00:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>Generating Bigger and Better Worlds</title>
+      <link>https://www.worldlabs.ai/blog/bigger-better-worlds</link>
+      <description>Announcing our latest breakthrough in 3D world generation with larger, more detailed environments and improved fidelity.</description>
+      <guid isPermaLink="true">https://www.worldlabs.ai/blog/bigger-better-worlds</guid>
+      <pubDate>Tue, 16 Sep 2025 00:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>Generating Worlds</title>
+      <link>https://www.worldlabs.ai/blog/generating-worlds</link>
+      <description>Sharing our early progress toward persistent, navigable 3D worlds you can explore in your browser.</description>
+      <guid isPermaLink="true">https://www.worldlabs.ai/blog/generating-worlds</guid>
+      <pubDate>Mon, 02 Dec 2024 00:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>A New Frontier</title>
+      <link>https://www.youtube.com/watch?v=vIXfYFB7aBI</link>
+      <description>A look at the next frontier of AI—spatial, world‑model‑driven experiences—and what they enable for creators and developers.</description>
+      <guid isPermaLink="true">https://www.youtube.com/watch?v=vIXfYFB7aBI</guid>
+      <pubDate>Fri, 20 Sep 2024 00:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>With Spatial Intelligence, AI Will Understand the Real World</title>
+      <link>https://www.ted.com/talks/fei_fei_li_with_spatial_intelligence_ai_will_understand_the_real_world</link>
+      <description>Fei‑Fei Li describes how “spatial intelligence” — AI that perceives, reasons about and acts within 3D space — will let machines truly understand and interact with our physical world.</description>
+      <guid isPermaLink="true">https://www.ted.com/talks/fei_fei_li_with_spatial_intelligence_ai_will_understand_the_real_world</guid>
+      <pubDate>Thu, 16 May 2024 00:00:00 +0000</pubDate>
+    </item>
+  </channel>
+</rss>

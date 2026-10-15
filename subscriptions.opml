@@ -2,8 +2,8 @@
 <opml version="2.0">
   <head>
     <title>AI RSS Network</title>
-    <dateCreated>Thu, 15 Oct 2026 14:05:02 +0000</dateCreated>
-    <dateModified>Thu, 15 Oct 2026 14:05:02 +0000</dateModified>
+    <dateCreated>Thu, 15 Oct 2026 16:32:02 +0000</dateCreated>
+    <dateModified>Thu, 15 Oct 2026 16:32:02 +0000</dateModified>
   </head>
   <body>
     <outline text="Research" title="Research">
@@ -24,6 +24,7 @@
       <outline type="rss" text="MiniMax Official Blog" title="MiniMax Official Blog" xmlUrl="https://yuanxianh.github.io/rss-feeds/minimax_official_blog.xml" htmlUrl="https://www.minimax.io/blog" description="Official product, research, and engineering posts from MiniMax" />
       <outline type="rss" text="Physical Intelligence Blog" title="Physical Intelligence Blog" xmlUrl="https://yuanxianh.github.io/rss-feeds/pi_blog.xml" htmlUrl="https://www.pi.website/" description="Latest blog posts and research from Physical Intelligence" />
       <outline type="rss" text="Waymo Blog - Technology" title="Waymo Blog - Technology" xmlUrl="https://yuanxianh.github.io/rss-feeds/waymo_blog_tech.xml" htmlUrl="https://waymo.com/blog/search/?t=Technology" description="Technology posts from the Waymo blog" />
+      <outline type="rss" text="World Labs Blog" title="World Labs Blog" xmlUrl="https://yuanxianh.github.io/rss-feeds/worldlabs_blog.xml" htmlUrl="https://www.worldlabs.ai/blog" description="Research, product, and company updates from World Labs" />
       <outline type="rss" text="Zhipu AI Research" title="Zhipu AI Research" xmlUrl="https://yuanxianh.github.io/rss-feeds/zhipu_research.xml" htmlUrl="https://www.zhipuai.cn/zh/research" description="Research and technical blogs from Zhipu AI (智谱)" />
     </outline>
     <outline text="Releases" title="Releases">
