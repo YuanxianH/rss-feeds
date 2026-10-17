@@ -7,58 +7,3206 @@
     <docs>http://www.rssboard.org/rss-specification</docs>
     <generator>RSS Creator</generator>
     <language>zh-CN</language>
-    <lastBuildDate>Sat, 17 Oct 2026 01:08:56 +0000</lastBuildDate>
+    <lastBuildDate>Sat, 17 Oct 2026 06:41:55 +0000</lastBuildDate>
     <item>
-      <title>0.163.0-alpha.9</title>
-      <link>https://github.com/openai/codex/releases/tag/rust-v0.163.0-alpha.9</link>
-      <description>Release 0.163.0-alpha.9</description>
-      <guid isPermaLink="false">tag:github.com,2008:Repository/965415649/rust-v0.163.0-alpha.9</guid>
-      <pubDate>Tue, 13 Oct 2026 15:52:39 +0000</pubDate>
+      <title>Codex CLI 0.156.1</title>
+      <link>https://github.com/openai/codex/releases/tag/rust-v0.156.1</link>
+      <description>New Features
+Choose GPT-6 Sol or GPT-6 Luna from the model picker. The rate-limit switch prompt now recommends GPT-6 Luna. (
+#47405
+)
+Changelog
+Full Changelog:
+rust-v0.156.0...rust-v0.156.1
+#47405
+[hotfix 0.156.0] Add GPT-6 Sol and Luna to the model catalog (
+#47332
+)
+@imac-oai</description>
+      <guid isPermaLink="false">https://developers.openai.com/codex/changelog#github-release-394258789</guid>
+      <pubDate>Wed, 23 Sep 2026 00:00:00 +0000</pubDate>
     </item>
     <item>
-      <title>0.163.0-alpha.10</title>
-      <link>https://github.com/openai/codex/releases/tag/rust-v0.163.0-alpha.10</link>
-      <description>Release 0.163.0-alpha.10</description>
-      <guid isPermaLink="false">tag:github.com,2008:Repository/965415649/rust-v0.163.0-alpha.10</guid>
-      <pubDate>Tue, 13 Oct 2026 19:12:24 +0000</pubDate>
+      <title>Codex CLI 0.157.0</title>
+      <link>https://github.com/openai/codex/releases/tag/rust-v0.157.0</link>
+      <description>New Features
+Added GPT-6 Sol and Luna, including Amazon Bedrock support and migration prompts for older models. (
+#47332
+,
+#47347
+)
+Enabled fullscreen transcripts by default and added Shift-click to extend text selections. (
+#47178
+,
+#47414
+)
+Enabled automatic background-server startup for eligible interactive sessions, with recovery choices when server settings are incompatible. (
+#47179
+,
+#47318
+)
+Added an
+f
+shortcut to fork conversations open in another app, preserving drafts and queued prompts. (
+#47185
+)
+Made
+/import
+available in remote sessions and local background-server sessions. (
+#47317
+)
+Improved terminal rendering with Unicode bullets, checkboxes, aligned equations, and optimization notation. (
+#47191
+,
+#47322
+)
+Bug Fixes
+Preserved active voice conversations when switching threads. (
+#47381
+)
+Recovered unsent question answers into the composer when turns end, without disrupting active history searches. (
+#47422
+,
+#47423
+)
+Respected tmux mouse settings and restored native scrollback for Terminal.app over SSH in automatic screen mode. (
+#47399
+,
+#47417
+)
+Fixed configured proxy routing for realtime connections and standalone web search, including search redirects. (
+#47101
+,
+#47142
+,
+#47204
+)
+Added retries for transient file-upload failures and increased the upload timeout to five minutes. (
+#47122
+,
+#47393
+)
+Enforced network restrictions across redirects and ongoing HTTP and WebSocket traffic, including cancellation when policy changes revoke access. (
+#47389
+,
+#47407
+)
+Changelog
+Full Changelog:
+rust-v0.156.0...rust-v0.157.0
+#47063
+Add a partial index for agent message board root posts
+@jif-oai
+#47064
+Stop redundant message-board reads when limits reach one
+@jif-oai
+#47065
+Deduplicate deprecation notices in the TUI transcript
+@etraut-openai
+#47068
+Highlight selected newlines in the transcript view
+@etraut-openai
+#47073
+Wait for thread idle in Guardian context budget tests
+@jif-oai
+#47074
+Refresh host-supplied cloud skills at turn startup
+@TAFOYA-OAI
+#47075
+Include attributed previews in agent message board notifications
+@jif-oai
+#47077
+Serialize environment updates and cancel removed pending attachments
+@sayan-oai
+#47079
+Mask daemon socket paths exposed through ancestor bind mounts
+@nicksteele-oai
+#47081
+Track cumulative MCP attribution across requests and thread history
+@peilin-openai
+#47082
+Show the voice toggle in the TUI shortcut overlay
+@etraut-openai
+#47083
+Extract per-thread enrichment into a dedicated async helper
+@aibrahim-oai
+#47084
+Avoid building a host SQLite driver for SQLx macros
+@aibrahim-oai
+#47085
+Update model catalog descriptions and GPT-5.6-Sol priority
+@andrewgu-oai
+#47086
+Format analytics credit usage with consistent decimal precision
+@fcoury-oai
+#47088
+Disable unused default dependency features
+@aibrahim-oai
+#47089
+Centralize JSON-RPC response serialization through payloads
+@aibrahim-oai
+#47094
+Restrict Unix local MCP servers to stdio descriptors
+@yuzhu-oai
+#47095
+Remove the
+rust-release-prepare
+workflow
+@andrewgu-oai
+#47096
+Keep TUI hints immediately above the composer
+@fcoury-oai
+#47100
+Preserve assistant answers in bounded TUI task responses
+@etraut-openai
+#47101
+Honor configured proxies for realtime WebSocket connections
+@celia-oai
+#47106
+Preserve originating turn metadata for yielded skill calls
+@eddie-openai
+#47108
+Preserve required Windows runtime variables for filesystem helpers
+@iceweasel-oai
+#47112
+Lowercase the retry hint for conversations open in another app
+@fcoury-oai
+#47113
+Persist thread creator identity in rollouts and SQLite
+@nornagon-openai
+#47114
+Preserve and expose thread item lifecycle timestamps
+@chiam-oai
+#47116
+Honor the configured product SKU in remote plugin requests
+@jessedu-oai
+#47118
+Support model-catalog overrides for Code Mode tool messages
+@rhan-oai
+#47121
+Pass thread IDs to attachment uploads
+@kchainani-oai
+#47122
+Increase OpenAI file blob upload timeout from 60 seconds to 5 minutes
+@wilkes-oai
+#47125
+Add extra policy configuration for Guardian reviews
+@won-openai
+#47129
+Preserve foreign working directories in extension tool environments
+@anp-oai
+#47130
+Remove the
+ultrafast
+service tier from
+gpt-5.6-sol
+@andrewgu-oai
+#47132
+Support caller-provided MITM CAs in the network proxy
+@viyatb-oai
+#47137
+Prevent horizontal transcript selection from triggering autoscroll
+@imac-oai
+#47142
+Honor system proxy settings for standalone web search
+@celia-oai
+#47143
+Extract exec-server CLI startup into a dedicated module
+@anp-oai
+#47149
+Update code mode catalog snapshot hashes
+@andrewgu-oai
+#47155
+Ignore stale thread-close notifications after resuming a thread
+@etraut-openai
+#47158
+Harden gateway OAuth credential persistence and error redaction
+@alexsong-oai
+#47159
+Expose HTTP origins in MCP server status
+@frantic-openai
+#47162
+Apply workspace routing to Guardian v2 classifier requests
+@acrognale-oai
+#47170
+Add explicit gateway login control and authentication status
+@alexsong-oai
+#47174
+Preserve empty cell metadata under pending tool-call pressure
+@ningyi-oai
+#47178
+Enable the fullscreen transcript by default
+@etraut-openai
+#47179
+Enable automatic daemon startup by default
+@etraut-openai
+#47185
+Allow forking conversations locked by another app in the TUI
+@fcoury-oai
+#47191
+Render aligned equations and optimization notation in TUI math
+@etraut-openai
+#47199
+Separate thread preparation from execution persistence
+@dermanyang-oai
+#47204
+Resolve proxy routes for standalone web search redirects
+@celia-oai
+#47207
+Add explicit gateway OAuth sign-in to app-server
+@alexsong-oai
+#47212
+Preserve MCP request trace context across transport workers
+@bromano-oai
+#47235
+Route multi-agent spawning through
+SpawnRequest
+@jif-oai
+#47236
+Suppress agent message board notifications to the post author
+@jif-oai
+#47240
+Prevent V2 agent eviction from racing with queued messages
+@jif-oai
+#47244
+Centralize agent resume handling in
+LocalAgentControl
+@jif-oai
+#47248
+Add explicit app and account targets to MCP resource reads
+@victor-openai
+#47249
+Drop descendant channel posts from retained remote compaction v2 history
+@jif-oai
+#47252
+Return agent snapshots from
+close_agent
+@jif-oai
+#47257
+Preserve explicit message-board unsubscribes when posting
+@jif-oai
+#47258
+Test spawn settings reporting after child removal
+@jif-oai
+#47259
+Subscribe authors to message-board channels created by posting
+@jif-oai
+#47263
+Expose hosted plugin extensions in app-server summaries
+@victor-openai
+#47267
+Stream agent snapshots from local status subscriptions
+@jif-oai
+#47271
+Implement
+AgentControl
+for
+LocalAgentControl
+@jif-oai
+#47272
+Allow Guardian sync review across compaction hash differences
+@felixxia-oai
+#47275
+Enable Guardian thread context by default
+@felixxia-oai
+#47281
+Add regression coverage for message board unsubscribe persistence
+@jif-oai
+#47287
+Update the Guardian extra-policy snapshot for retained instructions
+@felixxia-oai
+#47292
+Consolidate agent operations in the
+AgentControl
+implementation
+@jif-oai
+#47301
+Separate local agent runtime state from controller handles
+@jif-oai
+#47302
+Use compact display metadata for Guardian review threads
+@charliemarsh-oai
+#47303
+Clean up legacy Guardian thread metadata in SQLite
+@charliemarsh-oai
+#47317
+Enable
+/import
+in remote and local daemon sessions
+@etraut-openai
+#47318
+Offer explicit recovery for incompatible background servers
+@etraut-openai
+#47319
+Match agent status symbols to the selected row style
+@etraut-openai
+#47320
+Fix Escape navigation in read-only agent sessions
+@etraut-openai
+#47321
+Honor the system clock preference across more TUI timestamps
+@etraut-openai
+#47322
+Render TUI Markdown lists with Unicode bullets and checkboxes
+@etraut-openai
+#47323
+Persist resume metadata in compaction checkpoints
+@owenlin0
+#47325
+Keep report reason tags within Sentry limits
+@ningyi-oai
+#47326
+Restrict MCP OAuth authorization endpoints to HTTP(S)
+@viyatb-oai
+#47327
+Preserve image generation request IDs on failure
+@chrisdong-oai
+#47329
+Standardize TUI menu description wording and punctuation
+@etraut-openai
+#47330
+Identify failed SQLite databases in
+codex doctor
+output
+@dkovalenko-oai
+#47331
+Avoid redundant spacing above the transcript composer
+@fcoury-oai
+#47332
+Add GPT-6 Sol and Luna to the model catalog
+@andrewgu-oai
+#47338
+Move the activity inspection hint into keyboard shortcut help
+@fcoury-oai
+#47340
+Add conditional turn interruption that preserves pending input
+@pmccrary-oai
+#47342
+Skip stored title lookups for ephemeral forks
+@keyz
+#47347
+Add GPT-6 Sol and Luna to Amazon Bedrock catalogs
+@celia-oai
+#47348
+Overlap subagent spawn persistence and clean up cancelled children
+@owenlin0
+#47349
+Move plugin recommendations into developer context
+@adaley-openai
+#47350
+Reuse cloud skill catalogs across turns until invalidated
+@hlevy-openai
+#47353
+Preserve
+invalid_prompt
+as a distinct error classification
+@rennie-openai
+#47355
+Reserve spacing after recaps at the transcript tail
+@fcoury-oai
+#47358
+Color paths and URLs in
+codex doctor
+by check status
+@dkovalenko-oai
+#47360
+Preserve user prompt URL destinations across terminal widths
+@fcoury-oai
+#47361
+Restrict Windows sandbox default object access to the logon session
+@viyatb-oai
+#47362
+Bound inbound exec-server requests across client transports
+@viyatb-oai
+#47365
+Resume model context from the latest compaction boundary
+@owenlin0
+#47369
+Overlap agent metadata reads when resuming a V2 root
+@vkg-oai
+#47375
+Add an opt-in preference for the local MXC sandbox
+@iceweasel-oai
+#47377
+Add opt-in reasoning status for realtime V3 delegations
+@guinness-oai
+#47380
+Route TUI voice controls through the app
+@etraut-openai
+#47381
+Keep voice conversations running across TUI thread navigation
+@etraut-openai
+#47382
+Show a voice badge in the agents overview
+@etraut-openai
+#47384
+Restore composer hints after clearing selection at the transcript bottom
+@fcoury-oai
+#47389
+Enforce network policy throughout HTTP and WebSocket requests
+@acrognale-oai
+#47393
+Retry transient OpenAI file blob upload failures
+@mtsui-oai
+#47397
+Refresh bundled model metadata and instructions
+@andrewgu-oai
+#47399
+Respect tmux mouse settings in fullscreen and overlays
+@fcoury-oai
+#47407
+Enforce application network policy across app-server requests
+@acrognale-oai
+#47408
+Enforce application network policy for AWS auth and telemetry
+@acrognale-oai
+#47410
+Honor network policy in remote control and recover remote execution
+@acrognale-oai
+#47411
+Apply shared network policy throughout embedded Codex startup
+@acrognale-oai
+#47413
+Cache decrypted gateway OAuth secrets per backend
+@charliemarsh-oai
+#47414
+Support Shift-click to extend transcript selections
+@etraut-openai
+#47417
+Use native scrollback for Terminal.app over SSH in auto mode
+@fcoury-oai
+#47422
+Recover unsent question drafts when TUI turns end
+@imac-oai
+#47423
+Preserve history search during background draft recovery
+@imac-oai
+#47424
+Clear pending async question notifications when turns end
+@imac-oai
+#47428
+Apply inherited environment settings at turn boundaries
+@sayan-oai
+#47435
+Allow environment selection updates during an active turn
+@sayan-oai
+#47437
+Stabilize retry timing and WebSocket tests
+@anp-oai</description>
+      <guid isPermaLink="false">https://developers.openai.com/codex/changelog#github-release-396234532</guid>
+      <pubDate>Fri, 25 Sep 2026 00:00:00 +0000</pubDate>
     </item>
     <item>
-      <title>0.163.0-alpha.10.1</title>
-      <link>https://github.com/openai/codex/releases/tag/rust-v0.163.0-alpha.10.1</link>
-      <description>Release 0.163.0-alpha.10.1</description>
-      <guid isPermaLink="false">tag:github.com,2008:Repository/965415649/rust-v0.163.0-alpha.10.1</guid>
-      <pubDate>Wed, 14 Oct 2026 20:55:38 +0000</pubDate>
+      <title>Codex CLI 0.157.1</title>
+      <link>https://github.com/openai/codex/releases/tag/rust-v0.157.1</link>
+      <description>Chores
+Release highlights could not be determined: the supplied PR index is empty, and the GitHub tag comparison returned 404.
+Changelog
+Full Changelog:
+rust-v0.157.0...rust-v0.157.1</description>
+      <guid isPermaLink="false">https://developers.openai.com/codex/changelog#github-release-397006677</guid>
+      <pubDate>Sat, 26 Sep 2026 00:00:00 +0000</pubDate>
     </item>
     <item>
-      <title>0.163.0-alpha.11</title>
-      <link>https://github.com/openai/codex/releases/tag/rust-v0.163.0-alpha.11</link>
-      <description>Release 0.163.0-alpha.11</description>
-      <guid isPermaLink="false">tag:github.com,2008:Repository/965415649/rust-v0.163.0-alpha.11</guid>
-      <pubDate>Wed, 14 Oct 2026 03:34:27 +0000</pubDate>
+      <title>Codex CLI 0.158.0</title>
+      <link>https://github.com/openai/codex/releases/tag/rust-v0.158.0</link>
+      <description>New Features
+Configure copy-on-select and right-click paste in the fullscreen TUI. Copied transcript selections now preserve Markdown formatting. (
+#47639
+,
+#47896
+,
+#48118
+)
+Connect to MCP servers that require pre-registered OAuth client secrets, including through
+codex mcp add --oauth-client-secret
+. (
+#47891
+)
+Secure direct exec-server WebSocket connections with bearer tokens, including connections configured through app-server. (
+#47601
+,
+#47648
+)
+Image generation and editing can explicitly request transparent backgrounds, and edits now accept file-backed conversation images. (
+#47484
+,
+#47956
+)
+Terminal input approval is enabled by default for commands running with elevated permissions; runtime-only grants no longer cause unnecessary reviews. (
+#47799
+,
+#48073
+)
+Bug Fixes
+Fixed Windows sandbox failures involving ordinary Windows 10 paths, rejected stored credentials, and large permission policies. (
+#47672
+,
+#47695
+,
+#47919
+)
+Fixed Linux sandbox startup with nested writable roots and preserved Git metadata protections across writable roots on Linux and macOS. (
+#47623
+,
+#47974
+)
+macOS patch operations now recognize system path aliases covered by existing permissions, avoiding unnecessary approval prompts. (
+#47879
+)
+Approval reviews now retry when new user input arrives, so a status question does not automatically abort a pending action. (
+#47819
+)
+Mermaid flowcharts now render quoted labels and ampersands; unsupported diagrams explain why they fall back to source. (
+#47572
+,
+#47678
+)
+Command completion events now include early output and report process-launch failures to clients. (
+#47529
+,
+#47665
+)
+Changelog
+Full Changelog:
+rust-v0.157.0...rust-v0.158.0
+#47441
+Use secondary text styling for the transcript footer shortcut hint
+@etraut-openai
+#47447
+Extract WebSocket authentication into
+codex-websocket-auth
+@euroelessar
+#47458
+Parallelize instruction refresh and tool preparation
+@hlevy-openai
+#47484
+Add explicit background control to image generation
+@alicec-oai
+#47520
+Route session agent operations through
+AgentControl
+@jif-oai
+#47529
+Emit command lifecycle events for unified exec launch failures
+@steipete-oai
+#47536
+Route agent lookups and V2 context through
+AgentControl
+@jif-oai
+#47539
+Test interrupted one-shot command launch failure persistence
+@jif-oai
+#47540
+Add an option to disable multi-agent v2 direct messaging
+@jif-oai
+#47565
+Classify rollout read failures by reason and progress
+@jif-oai
+#47568
+Record sandbox backends in command execution analytics
+@iceweasel-oai
+#47571
+Wait for idle before injecting remote compaction test history
+@felixxia-oai
+#47572
+Explain Mermaid rendering fallbacks in the TUI
+@etraut-openai
+#47582
+Retain assistant context for Guardian authorization reviews
+@felixxia-oai
+#47584
+Preserve streamed assistant message order in retained context
+@felixxia-oai
+#47585
+Preserve delivered assistant messages in Guardian retained context
+@felixxia-oai
+#47589
+Keep unfinished link destinations out of rich streaming previews
+@etraut-openai
+#47590
+Serialize numeric custom reasoning effort as JSON numbers
+@dylan-hurd-oai
+#47591
+Stream daemon executable hashing off the async runtime
+@etraut-openai
+#47596
+Refresh realtime context for each model request
+@reia-oai
+#47597
+Guard prerelease channel and canary updates against older versions
+@imac-oai
+#47601
+Add opt-in WebSocket authentication to exec-server
+@euroelessar
+#47603
+Add a reap-only drop policy for child processes
+@charliemarsh-oai
+#47604
+Extend child commands with session and descriptor controls
+@charliemarsh-oai
+#47605
+Route pipe processes through the shared child launcher
+@charliemarsh-oai
+#47610
+Use native POSIX spawning for command hooks
+@charliemarsh-oai
+#47611
+Use the shared process launcher for Unix shell snapshots
+@charliemarsh-oai
+#47612
+Launch Linux pipe processes through a fresh setup helper
+@freeqaz-openai
+#47613
+Expand Linux spawn-helper lifecycle test coverage
+@charliemarsh-oai
+#47617
+Route Linux PTY launches through the process setup helper
+@charliemarsh-oai
+#47618
+Prefer Shift-arrow hints for queued messages and questions
+@imac-oai
+#47619
+Add bounded buffering for global operation metrics
+@celia-oai
+#47620
+Add portable project trust lookup APIs
+@seanh-oai
+#47623
+Fix read-only metadata mount ordering for nested writable roots
+@jif-oai
+#47624
+Recognize
+user_message
+tools in Guardian authorization context
+@ankushg
+#47625
+Allow history and notes without experimental context capability
+@pmccrary-oai
+#47629
+Route V2 child loading through
+AgentControl
+@jif-oai
+#47630
+Bind Guardian reviews to the action's target environment
+@jif-oai
+#47633
+Route message board agent resolution through the selected controller
+@jif-oai
+#47635
+Overlap startup WebSocket preconnect with tool discovery
+@bromano-oai
+#47638
+Classify retryable exec-server preparation errors by type
+@mtsui-oai
+#47639
+Add configurable copy-on-select for transcript selections
+@fcoury-oai
+#47641
+Honor Retry-After and preserve server retry deadlines
+@anp-oai
+#47642
+Add model-specific prefixes to indirect tool descriptions
+@rhan-oai
+#47647
+Apply Guardian computer-use review to the Browser connector
+@johnl-oai
+#47648
+Support bearer tokens for app-server executor connections
+@euroelessar
+#47649
+Add opt-in OTLP logging for final agent responses
+@xli-oai
+#47653
+Attach inherited rollout history to diagnostic reports
+@dkovalenko-oai
+#47654
+Make Linux descriptor cleanup fork-safe
+@yuzhu-oai
+#47655
+Bump the exec-server stable compatibility test to Codex 0.156.1
+@imac-oai
+#47657
+Restrict the default Bedrock GovCloud model catalog
+@jackz100
+#47662
+Expose tool dispatch and timing observations to extensions
+@euroelessar
+#47663
+Preserve managed network policy in route-aware transports
+@jackz100
+#47665
+Preserve early unified exec output in completion events
+@sdcoffey
+#47670
+Support model-specific descriptions for agent message board tools
+@eknight-oai
+#47672
+Fix no-reparse directory opens on Windows 10
+@zm-oai
+#47673
+Clarify registered Windows sandbox setup errors
+@zm-oai
+#47677
+Support model catalog overrides for MCP resource tool specs
+@rhan-oai
+#47678
+Support quoted labels and ampersands in Mermaid flowcharts
+@etraut-openai
+#47679
+Add extension hooks for model requests and response streams
+@euroelessar
+#47680
+Add exec-server RPC timing and process startup tracing
+@anp-oai
+#47683
+Add executor capability discovery V2 infrastructure
+@TAFOYA-OAI
+#47686
+Make thread-owned Guardian context always enabled
+@felixxia-oai
+#47688
+Remove legacy Guardian authorization evidence paths
+@felixxia-oai
+#47689
+Make Guardian thread context capture unconditional
+@felixxia-oai
+#47690
+Remove obsolete Guardian context capture mode branches
+@felixxia-oai
+#47691
+Materialize rollout persistence for pending inter-agent messages
+@dermanyang-oai
+#47693
+Configure curl retries for DotSlash installation in CI
+@anp-oai
+#47695
+Repair rejected Windows sandbox credentials during provisioning
+@zm-oai
+#47696
+Avoid the shutdown timeout in the lagged-event test
+@jgershen-oai
+#47698
+Allow WebSocket test server shutdown while waiting for requests
+@jgershen-oai
+#47701
+Allow idle threads to prewarm and repair WebSocket connections
+@vkg-oai
+#47703
+Preserve account network policy for ChatGPT backend requests
+@jackz100
+#47704
+Fix spawn flag typing and isolate project configuration tests
+@seanh-oai
+#47709
+Route resume prewarm through the cached WebSocket session
+@vkg-oai
+#47712
+Update unified exec output buffers atomically
+@sdcoffey
+#47713
+Reduce dependency coupling in shared configuration crates
+@aibrahim-oai
+#47714
+Preserve tool result metadata more selectively under size limits
+@ningyi-oai
+#47717
+Avoid recursive TUI event dispatch for model picker selections
+@etraut-openai
+#47741
+Attribute tool telemetry to the invoking turn's product SKU
+@rennie-openai
+#47742
+Honor network policy in history notes and image generation extensions
+@jackz100
+#47745
+Skip startup prewarm preparation when the WebSocket is ready
+@vkg-oai
+#47748
+Align Cargo and Bazel Rust debug information defaults
+@aibrahim-oai
+#47751
+Reduce generic code duplication in RPC and Markdown rendering
+@aibrahim-oai
+#47755
+Centralize typed app-server response decoding
+@aibrahim-oai
+#47757
+Refactor tool telemetry product SKU matching to use an allowlist
+@rennie-openai
+#47758
+Preserve more tool metadata within outgoing message budgets
+@ningyi-oai
+#47773
+Honor catalog schemas for asynchronous user input
+@rhan-oai
+#47797
+Support close-on-exec attachments without changing PTY semantics
+@jif-oai
+#47799
+Enable terminal input approval by default
+@jif-oai
+#47808
+Allow hosts to provide agent controllers through ThreadManager
+@jif-oai
+#47811
+Preserve explicit user goal updates in Guardian authorization
+@felixxia-oai
+#47813
+Fix sleep interruption test event handling and fixture lifetime
+@felixxia-oai
+#47814
+Fix a lost wakeup in the unified exec termination test
+@felixxia-oai
+#47817
+Stabilize thread resume and memory dual-write tests
+@jif-oai
+#47819
+Retry Guardian reviews when authorization changes
+@teddywyly-oai
+#47820
+Add integration coverage for host agent controllers
+@jif-oai
+#47824
+Allow four concurrent threads in the multi-agent resume test
+@felixxia-oai
+#47828
+Wait for login completion in recommended plugin tests
+@felixxia-oai
+#47830
+Bind Guardian async scores to target environment permissions
+@jif-oai
+#47832
+Stabilize Rosetta test timing and retry delay telemetry
+@jif-oai
+#47847
+Keep the TUI responsive during clipboard copies
+@fcoury-oai
+#47851
+Preserve human overrides across repeated heartbeat instructions
+@felixxia-oai
+#47852
+Avoid blocking async proxy resolution on the system proxy cache
+@jif-oai
+#47856
+Initialize media estimates outside the global cache lock
+@jif-oai
+#47858
+Validate loaded plugins outside the cache lock
+@jif-oai
+#47861
+Avoid nested read locking when rendering browser sign-in
+@jif-oai
+#47867
+Render remote permission paths using executor context
+@iceweasel-oai
+#47870
+Add opt-in OTLP logging for Guardian assessments
+@jif-oai
+#47871
+Fix PID reservation test race and update guardian heartbeat snapshot
+@jif-oai
+#47873
+Measure deferred tool namespace fragments before and after truncation
+@mzeng-openai
+#47879
+Fix macOS system-alias matching in patch permission checks
+@felixxia-oai
+#47881
+Use Tokio's clock for TUI paste timing
+@charliemarsh-oai
+#47886
+Preserve diagnostic logs when SQLite logging fails
+@dkovalenko-oai
+#47887
+Warn users when SQLite diagnostic log writes fail
+@dkovalenko-oai
+#47889
+Include TUI client logs in diagnostic uploads
+@etraut-openai
+#47891
+Support client secrets for pre-registered MCP OAuth clients
+@willwang-openai
+#47894
+Clean up temporary Codex homes after TUI tests
+@fcoury-oai
+#47896
+Preserve Markdown formatting when copying transcript selections
+@fcoury-oai
+#47898
+Preserve local-binding inheritance in environment network policies
+@seanh-oai
+#47899
+Add diagnostic reasons to MCP attribution errors
+@peilin-openai
+#47900
+Default local threads to paginated history
+@owenlin0
+#47901
+Add bounded credential-storage telemetry helpers
+@celia-oai
+#47902
+Avoid repeated table clones during config merging
+@imac-oai
+#47903
+Move config key alias normalization ahead of merging
+@imac-oai
+#47904
+Support nested canonical paths in config key aliases
+@imac-oai
+#47908
+Alias
+tui.whimsy
+to
+tui.effects.starfield
+@imac-oai
+#47912
+Fix attestation routing during thread startup
+@charliemarsh-oai
+#47913
+Add an opt-in flag to defer mailbox preemption
+@jif-oai
+#47915
+Reuse verified V8 checksum manifests from the artifact cache
+@aibrahim-oai
+#47918
+Parameterize the turn-start originator header test
+@aibrahim-oai
+#47919
+Transport large Windows sandbox launch payloads through the environment
+@malsamiri-oai
+#47920
+Allow directory moves under global Seatbelt basename denies
+@chess-oai
+#47922
+Allow full-access Windows setup to provision through registered Core
+@zm-oai
+#47924
+Make project trust lookup paths explicit and defer root resolution
+@seanh-oai
+#47926
+Retry file blob uploads on HTTP 502 and 504
+@mtsui-oai
+#47927
+Use
+127.0.0.1
+for local login redirects
+@willwang-openai
+#47932
+Remove GPT-5.4 from bundled catalogs and preserve migration prompts
+@andrewgu-oai
+#47934
+Apply the unchanged-model compaction shortcut to all session sources
+@hlevy-openai
+#47935
+Allow cached catalogs to satisfy MCP startup readiness
+@hlevy-openai
+#47936
+Make MCP and Code Mode input schema budgets configurable
+@vivi
+#47937
+Add direct replies for thread settings updates
+@sayan-oai
+#47939
+Separate selected plugin identities from MCP contributions
+@sayan-oai
+#47943
+Remove unused Windows world-writable audit code
+@iceweasel-oai
+#47945
+Parameterize the thread initialization analytics test by originator
+@eddie-openai
+#47946
+Add an in-memory agent message board for ephemeral sessions
+@jif-oai
+#47947
+Expand root authorization context to 16 messages
+@felixxia-oai
+#47951
+Use prebuilt V8 archives for Bazel on macOS and GNU Linux
+@aibrahim-oai
+#47952
+Prune expired in-memory message board registry entries
+@jif-oai
+#47954
+Move fullscreen startup tips into the transcript
+@etraut-openai
+#47956
+Support file references in image edit requests
+@kchainani-oai
+#47957
+Bound tool-call observations to the outgoing Responses message budget
+@ningyi-oai
+#47962
+Request transparent huge pages for Cargo and eligible Bazel rustc jobs
+@aibrahim-oai
+#47964
+Preserve the client-agent header for Amazon Bedrock Runtime
+@celia-oai
+#47967
+Surface Flex capacity failures as a distinct terminal error
+@sdcoffey
+#47968
+Handle Btrfs device mismatches when masking daemon sockets
+@etraut-openai
+#47970
+Expose current environment selections for a running turn
+@sayan-oai
+#47971
+Add Pro Max plan support and update Pro display names
+@etraut-openai
+#47974
+Preserve Git directory protections across writable roots
+@aionescu-oai
+#47975
+Prevent stale voice answers from reappearing during speech recovery
+@etraut-openai
+#47981
+Prepare MCP calls directly from advertised tool identities
+@hlevy-openai
+#47984
+Add multi-agent spawn latency and failure metrics
+@owenlin0
+#47988
+Reuse MCP handlers across equivalent bindings
+@hlevy-openai
+#47989
+Add startup-only PID namespace inheritance to exec-server
+@open-matt
+#48004
+Respect configured authentication in the thread manager sample
+@celia-oai
+#48015
+Validate tool suggestion install URLs before showing the app link
+@aionescu-oai
+#48017
+Test same-cell permission grants and strict review in code mode
+@anp-oai
+#48035
+Remove plugin extension metadata from discovery and summaries
+@victor-openai
+#48060
+Deduplicate retained instructions across Guardian reviews
+@felixxia-oai
+#48069
+Handle early command yields in the Guardian network approval test
+@jif-oai
+#48072
+Skip message-board notification previews when there are no recipients
+@jif-oai
+#48073
+Avoid stdin approval for runtime-only permission grants
+@jif-oai
+#48077
+Add Serde support to agent message board request types
+@jif-oai
+#48078
+Replay exec-server shell snapshots through unnamed files
+@jif-oai
+#48098
+Preserve recent authorization context for Guardian reviews
+@felixxia-oai
+#48099
+Honor shell environment policy in legacy snapshots
+@jif-oai
+#48100
+Add an HTTP client for remote agent message boards
+@jif-oai
+#48101
+Show multiline command previews in
+/ps
+@etraut-openai
+#48109
+Deduplicate retained instructions against Guardian transcripts
+@felixxia-oai
+#48110
+Deduplicate retained instructions in async Guardian context
+@felixxia-oai
+#48115
+Preserve user text parts during local compaction
+@felixxia-oai
+#48116
+Allow reasoning shortcuts to reach Max
+@etraut-openai
+#48118
+Add configurable right-click paste to the fullscreen TUI
+@fcoury-oai
+#48119
+Prevent worker completion races in the guardian authorization test
+@felixxia-oai
+#48121
+Keep startup drafts visible during command center session handoff
+@etraut-openai
+#48123
+Add early yielding for code-mode observations
+@pakrym-oai
+#48130
+Use request notifications in the cloud config loader lifetime test
+@felixxia-oai
+#48132
+Allow Left to open the command center from read-only conversations
+@etraut-openai</description>
+      <guid isPermaLink="false">https://developers.openai.com/codex/changelog#github-release-397962047</guid>
+      <pubDate>Mon, 28 Sep 2026 00:00:00 +0000</pubDate>
     </item>
     <item>
-      <title>rust-v0.163.0-alpha.12</title>
-      <link>https://github.com/openai/codex/releases/tag/rust-v0.163.0-alpha.12</link>
-      <description>Release 0.163.0-alpha.12</description>
-      <guid isPermaLink="false">tag:github.com,2008:Repository/965415649/rust-v0.163.0-alpha.12</guid>
-      <pubDate>Wed, 14 Oct 2026 09:38:13 +0000</pubDate>
+      <title>Codex CLI 0.159.0</title>
+      <link>https://github.com/openai/codex/releases/tag/rust-v0.159.0</link>
+      <description>New Features
+Opt-in
+instant_interrupt
+lets new input steer Codex during model responses or long-running code-mode calls. (
+#48135
+,
+#48141
+)
+New sessions get a compact welcome screen and consistent headers, with occasional tips during and after turns. (
+#48513
+,
+#48562
+,
+#48352
+)
+The warnings viewer dismisses reviewed warnings when closed; press
+k
+to keep one for later. (
+#48205
+,
+#48206
+)
+You can scroll the transcript while deciding whether to implement a plan. (
+#48805
+)
+Native Mermaid rendering supports more flowchart edges, labels, and node groups. (
+#48814
+,
+#48895
+)
+App-server clients can paginate thread history from a specific item. (
+#48151
+)
+Bug Fixes
+Windows launches avoid stray console windows for MCP servers, code-mode hosts, and piped commands; restrictive launchers can fall back to embedded mode. (
+#48138
+,
+#48238
+,
+#48483
+,
+#48491
+)
+Copying transcript selections preserves Markdown tables, formatting, and significant whitespace. More terminals now copy automatically on selection. (
+#48548
+,
+#48549
+,
+#48469
+)
+Blank sessions retain drafts when switching tasks, and threads can be archived and listed before their first turn. (
+#48628
+,
+#48828
+,
+#48199
+)
+Local ChatGPT sign-in opens the browser reliably; onboarding also provides a shortcut to copy the login link. (
+#48502
+,
+#48544
+)
+Approved commands retain explicit filesystem denials, and
+.aws
+directories are protected by default under writable roots. (
+#48155
+,
+#48176
+)
+Fixed macOS TLS access in network-enabled sandboxes and remote environments that require proxy access. (
+#48565
+,
+#48198
+)
+Chores
+Removed automatic follow-up prompt suggestions and the
+tui.prompt_suggestions
+setting. (
+#48621
+)
+Removed the bundled
+plugin-creator
+skill. (
+#48604
+)
+Changelog
+Full Changelog:
+rust-v0.158.0...rust-v0.159.0
+#48135
+Add opt-in code-mode yielding on new user input
+@pakrym-oai
+#48138
+Suppress console windows when spawning the code-mode host on Windows
+@zm-oai
+#48141
+Preempt model responses when new user input arrives
+@pakrym-oai
+#48143
+Preserve executor MCP credential boundaries across reconnects
+@rreichel3-oai
+#48151
+Add item anchors to
+thread/items/list
+pagination
+@btraut-openai
+#48155
+Preserve filesystem denials when preparing approved commands
+@viyatb-oai
+#48157
+Allow Windows daemon launches with residual job membership
+@etraut-openai
+#48158
+Fix Guardian retained context spacing and empty assistant handling
+@olliem-oai
+#48168
+Generate unique exec-server process IDs for every request
+@sdcoffey
+#48174
+Preserve usage limit windows in turn and compaction analytics
+@rhan-oai
+#48176
+Protect
+.aws
+directories under sandbox writable roots
+@jackz100
+#48187
+Fix zsh alias quoting in sourced shell snapshots
+@jif-oai
+#48190
+Bound agent message board SSE frames before parsing
+@jif-oai
+#48197
+Optimize
+blake3
+in Bazel fastbuilds
+@jif-oai
+#48198
+Honor execution environment proxy requirements
+@seanh-oai
+#48199
+Keep archived threads with empty previews visible in listings
+@acrognale-oai
+#48200
+Extract Responses header conversion into a shared module
+@anp-oai
+#48205
+Dismiss viewed TUI warnings when closing the viewer
+@fcoury-oai
+#48206
+Add a keep-and-next action to the warnings viewer
+@fcoury-oai
+#48207
+Preserve queued output for observers during code-mode termination
+@pakrym-oai
+#48211
+Keep Codex visible during external editor handoff
+@etraut-openai
+#48213
+Isolate executable fixture copies in CLI tests on Linux
+@jif-oai
+#48222
+Preserve late result metadata for truncated code-mode calls
+@ningyi-oai
+#48224
+Preserve model and access program pairs during compaction
+@jamy-OAI
+#48229
+Extract Responses failure parsing into a dedicated module
+@anp-oai
+#48238
+Suppress console windows for local Windows MCP servers
+@malsamiri-oai
+#48272
+Prevent Windows daemon launches from retaining launcher stdio
+@zm-oai
+#48318
+Keep TUI reconnect attempts running until the shared deadline
+@etraut-openai
+#48344
+Preserve tool metadata for OpenAI provider endpoint overrides
+@peilin-openai
+#48350
+Display reconnect commands on a separate line
+@etraut-openai
+#48352
+Show turn tips while working and after completion in the TUI
+@fcoury-oai
+#48353
+Stabilize skill catalogs across executor availability changes
+@vkg-oai
+#48469
+Default to copying transcript selections in more terminals
+@fcoury-oai
+#48483
+Prevent console windows for piped Windows child processes
+@fcoury-oai
+#48489
+Fix Mermaid shape, relationship, and state description parsing
+@etraut-openai
+#48491
+Fall back to embedded mode under restrictive Windows launchers
+@fcoury-oai
+#48502
+Fix ChatGPT browser sign-in for local app servers
+@etraut-openai
+#48508
+Preserve WebSocket continuations when steering a turn
+@pakrym-oai
+#48513
+Refresh the TUI welcome screen for new sessions
+@fcoury-oai
+#48531
+Add context to Windows sandbox runtime registration errors
+@zm-oai
+#48544
+Make onboarding login links easier to copy
+@etraut-openai
+#48547
+Fade blossom replays back to the idle state
+@fcoury-oai
+#48548
+Preserve table cell source metadata through TUI rendering
+@fcoury-oai
+#48549
+Preserve Markdown tables and whitespace when copying TUI responses
+@fcoury-oai
+#48551
+Fix TUI math rendering for zero and big wedge expressions
+@etraut-openai
+#48560
+Keep working tips stable during transcript interaction
+@fcoury-oai
+#48562
+Use a consistent borderless session header in the TUI
+@fcoury-oai
+#48565
+Allow macOS TLS trust evaluation in network-enabled Seatbelt profiles
+@winston-openai
+#48568
+Allow exec-server to proxy permitted private IPs upstream
+@open-matt
+#48574
+Preserve deferred tool namespace names before descriptions
+@adaley-openai
+#48575
+Allow provisioned executors more time to come online
+@richardopenai
+#48604
+Remove the bundled
+plugin-creator
+skill
+@martinauyeung-oai
+#48611
+Centralize persistent mode enablement checks
+@alishobeiri-oai
+#48621
+Remove follow-up prompt suggestions from the TUI
+@etraut-openai
+#48623
+Preserve empty Markdown list markers in the TUI
+@etraut-openai
+#48626
+Stop showing previous-session summaries when switching TUI sessions
+@etraut-openai
+#48628
+Preserve blank TUI sessions when switching tasks
+@etraut-openai
+#48643
+Set the provisioned macOS CLI bundle name to ChatGPT
+@riley-oai
+#48646
+Fix the session-start helper call in the command center test
+@etraut-openai
+#48686
+Remove WebSocket headers and tool payloads from info logs
+@chess-oai
+#48724
+Prevent Linux ETXTBSY races in MCP stdio tests
+@jif-oai
+#48725
+Retain confirmed Code Mode messages for Guardian reviews
+@ankushg
+#48727
+Centralize executable fixture creation to avoid Linux ETXTBSY races
+@jif-oai
+#48754
+Render
+/status
+without borders and wrap long values
+@fcoury-oai
+#48757
+Match TUI status shimmer timing to desktop headers
+@fcoury-oai
+#48761
+Show hidden output line counts in compact terminal activity
+@fcoury-oai
+#48764
+Preserve MCP app resource URIs without defaulting display mode
+@victor-openai
+#48772
+Fix Unix socket connections through long symlink paths
+@etraut-openai
+#48775
+Match pinned transcript headers to the original prompt style
+@etraut-openai
+#48776
+Remove the
+current
+badge from TUI task rows
+@etraut-openai
+#48779
+Preserve independent Guardian history across parent compaction
+@felixxia-oai
+#48783
+Add single-server MCP status discovery with thread connection reuse
+@victor-openai
+#48796
+Add opt-in structured errors for Guardian circuit-breaker interruptions
+@won-openai
+#48799
+Fix SGR mouse reporting for Windows terminal capture
+@etraut-openai
+#48800
+Use the terminal palette for ordered Markdown list markers
+@etraut-openai
+#48805
+Allow transcript wheel scrolling while a modal is open
+@fcoury-oai
+#48807
+Show short turn durations in TUI completion footers
+@fcoury-oai
+#48812
+Add history-aware prewarming for idle threads
+@vkg-oai
+#48814
+Preserve punctuation and semicolons in Mermaid labels
+@etraut-openai
+#48819
+Use explicit histogram buckets for tool and skill context metrics
+@mzeng-openai
+#48824
+Keep voice RTP timestamps aligned to 20 ms packets
+@bc-openai
+#48827
+Show a hand pointer over transcript links in Ghostty and Kitty
+@bc-openai
+#48828
+Allow archiving threads before their first turn
+@bc-openai
+#48829
+Wait briefly for the Windows sandbox provisioning service to start
+@zm-oai
+#48830
+Show a short, neutral TUI interruption notice
+@fcoury-oai
+#48895
+Expand native Mermaid flowchart syntax support
+@etraut-openai
+#48973
+Isolate realtime auth fallback test from startup prewarm
+@jif-oai
+#48982
+Prevent message-board notifications from reopening final answers
+@eknight-oai</description>
+      <guid isPermaLink="false">https://developers.openai.com/codex/changelog#github-release-398926954</guid>
+      <pubDate>Tue, 29 Sep 2026 00:00:00 +0000</pubDate>
     </item>
     <item>
-      <title>rust-v0.163.0-alpha.13</title>
-      <link>https://github.com/openai/codex/releases/tag/rust-v0.163.0-alpha.13</link>
-      <description>Release 0.163.0-alpha.13</description>
-      <guid isPermaLink="false">tag:github.com,2008:Repository/965415649/rust-v0.163.0-alpha.13</guid>
-      <pubDate>Wed, 14 Oct 2026 14:46:39 +0000</pubDate>
+      <title>Codex CLI 0.159.1</title>
+      <link>https://github.com/openai/codex/releases/tag/rust-v0.159.1</link>
+      <description>New Features
+Added GPT-6.1 Sol as the default model in the bundled catalog and Amazon Bedrock Mantle and Runtime catalogs. (
+#49323
+,
+#49342
+)
+Changelog
+Full Changelog:
+rust-v0.159.0...rust-v0.159.1
+#49323
+[0.159] Prepare 0.159.1 release backports
+@andrewgu-oai
+#49342
+[0.159] Backport GPT-6.1 Sol Bedrock catalogs
+@celia-oai</description>
+      <guid isPermaLink="false">https://developers.openai.com/codex/changelog#github-release-399499631</guid>
+      <pubDate>Tue, 29 Sep 2026 00:00:00 +0000</pubDate>
     </item>
     <item>
-      <title>0.163.0-alpha.10.2</title>
-      <link>https://github.com/openai/codex/releases/tag/rust-v0.163.0-alpha.10.2</link>
-      <description>Release 0.163.0-alpha.10.2</description>
-      <guid isPermaLink="false">tag:github.com,2008:Repository/965415649/rust-v0.163.0-alpha.10.2</guid>
-      <pubDate>Thu, 15 Oct 2026 18:33:04 +0000</pubDate>
+      <title>Codex CLI 0.159.2</title>
+      <link>https://github.com/openai/codex/releases/tag/rust-v0.159.2</link>
+      <description>Bug Fixes
+Suppressed console windows flashing on Windows when Codex launches background processes and sandboxed commands. (
+#49385
+)
+Changelog
+Full Changelog:
+rust-v0.159.1...rust-v0.159.2
+#49385
+[0.159] Backport Windows console suppression for 0.159.2
+@andrewgu-oai</description>
+      <guid isPermaLink="false">https://developers.openai.com/codex/changelog#github-release-399607589</guid>
+      <pubDate>Tue, 29 Sep 2026 00:00:00 +0000</pubDate>
     </item>
     <item>
-      <title>0.163.0</title>
+      <title>Codex CLI 0.159.3</title>
+      <link>https://github.com/openai/codex/releases/tag/rust-v0.159.3</link>
+      <description>New Features
+Eligible local sessions signed in with ChatGPT can now show optional reminders to complete account security setup. (
+#49744
+)
+Changelog
+Full Changelog:
+rust-v0.159.2...rust-v0.159.3
+#49744
+[0.159] Backport account security setup reminders for 0.159.3
+@andrewgu-oai</description>
+      <guid isPermaLink="false">https://developers.openai.com/codex/changelog#github-release-400492869</guid>
+      <pubDate>Wed, 30 Sep 2026 00:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>Codex CLI 0.160.0</title>
+      <link>https://github.com/openai/codex/releases/tag/rust-v0.160.0</link>
+      <description>New Features
+Browse older tasks in the agent command center with a keyboard-accessible “Show more” action. (
+#49106
+)
+Select transcript text and paste with middle-click in fullscreen mode on supported local Linux X11 terminals. (
+#49112
+)
+Start sessions outside a project with workspace defaults when policy permits, and restore saved permissions when resuming. (
+#49160
+)
+Added opt-in Guardian review capabilities to retrieve earlier user instructions and include context from agent handoffs. (
+#49036
+,
+#49057
+)
+Bug Fixes
+Unsent queued messages now resume after reconnection once uncertain submissions are resolved, avoiding duplicate sends. (
+#49105
+)
+The terminal UI now preserves server provider, reasoning-summary, and verbosity settings and shows the correct sessions in resume and fork history. (
+#49144
+,
+#49161
+,
+#49171
+)
+Fixed Windows sandbox PowerShell fallbacks and long-path permission repairs, and suppressed unwanted console windows from background helpers. (
+#49019
+,
+#49058
+,
+#49098
+,
+#49164
+,
+#49386
+)
+Subagents now retain environments that are still starting and receive their configuration or preparation failure. (
+#49075
+)
+Prevented SQLite stalls during connection setup and logging, and surfaced initialization errors instead of masking them as timeouts. (
+#49032
+,
+#49102
+)
+Explicit provider model catalogs no longer include unsupported bundled models or reuse stale entries after refresh failures. (
+#49135
+)
+Documentation
+Clarified how provider credentials use the configured storage backend and how
+env_key
+identifies the API-key environment variable. (
+#49118
+)
+Chores
+Reduced repeated plugin-loading work by caching parsed manifests and reusing HTTP connections for remote plugin requests. (
+#49099
+,
+#49100
+)
+Added background reclamation of unused log database space to reduce disk usage. (
+#49069
+)
+Changelog
+Full Changelog:
+rust-v0.159.0...rust-v0.160.0
+#48983
+Avoid full metadata rewrites for thread timestamp updates
+@jif-oai
+#49000
+Isolate the memory startup metadata test from Git enrichment
+@jif-oai
+#49019
+Use a compatible PowerShell fallback for the Windows MXC sandbox
+@iceweasel-oai
+#49028
+Use the numeric ioctl value in the macOS sandbox policy
+@aionescu-oai
+#49031
+Clarify ChatGPT sign-in success copy
+@bc-openai
+#49032
+Avoid SQLite stalls from connection setup and stderr span logging
+@jif-oai
+#49036
+Add opt-in conversation history retrieval to Guardian reviews
+@felixxia-oai
+#49037
+Show the Plan mode cycling hint in the fullscreen status line
+@fcoury-oai
+#49038
+Preserve encrypted agent messages in Guardian reviews
+@felixxia-oai
+#49041
+Copy selections within inline code as plain text
+@fcoury-oai
+#49043
+Update Pro plan display names in the TUI
+@etraut-openai
+#49057
+Add handoff-aware root context for Guardian reviews
+@jif-oai
+#49058
+Fix Windows sandbox ACL repair for long runtime paths
+@darius-oai
+#49060
+Update Guardian messaging snapshots for native agent messages
+@dkovalenko-oai
+#49065
+Update Guardian handoff snapshot for separate agent messages
+@cassirer-openai
+#49067
+Keep configuration values out of Windows sandbox policy events
+@zm-oai
+#49069
+Reclaim unused SQLite log database pages in the background
+@dkovalenko-oai
+#49073
+Surface realtime voice catalog failures in the TUI
+@etraut-openai
+#49074
+Propagate Cargo package versions to Bazel Rust targets
+@tamird
+#49075
+Preserve pending environments when spawning subagents
+@sayan-oai
+#49076
+Avoid collecting unused Git metadata in skill analytics
+@tamird
+#49079
+Update and centralize TUI subscription labels
+@etraut-openai
+#49082
+Skip remote Git discovery for Guardian diff paths
+@jif-oai
+#49084
+Track app-server running turns incrementally
+@tamird
+#49089
+Render follow-up directive labels in the TUI and copied responses
+@etraut-openai
+#49093
+Simplify startup promotions to platform-specific desktop app tips
+@etraut-openai
+#49096
+Update
+h2
+from 0.4.16 to 0.4.19 in Cargo and Bazel lockfiles
+@cassirer-openai
+#49097
+Notify lifecycle extensions of compaction usage limits
+@xli-oai
+#49098
+Resolve Windows sandbox PowerShell fallbacks on the exec server
+@zm-oai
+#49099
+Cache parsed plugin manifests across plugin workflows
+@dkovalenko-oai
+#49100
+Reuse the HTTP connection pool for remote plugin requests
+@dkovalenko-oai
+#49102
+Preserve SQLite vacuum modes and surface pool initialization errors
+@bc-openai
+#49103
+Balance Windows Bazel test shards using duration estimates
+@jgershen-oai
+#49105
+Resume unsent TUI input after reconnecting
+@etraut-openai
+#49106
+Add history pagination to the agent command center
+@bc-openai
+#49112
+Add X11 primary selection and middle-click paste support
+@fcoury-oai
+#49114
+Point remote compaction tests at the mock ChatGPT server
+@OLI-OAI
+#49117
+Attribute analytics requests to each thread's product SKU
+@papayo-oai
+#49118
+Correct provider authentication storage documentation
+@celia-oai
+#49119
+Add recovery guidance to content-filter retries
+@won-openai
+#49127
+Deduplicate cloud and executor skill listings before budgeting
+@TAFOYA-OAI
+#49130
+Move content-filter guidance into the shared Responses retry handler
+@won-openai
+#49135
+Treat explicit provider model catalogs as authoritative
+@andrewgu-oai
+#49136
+Remove the plus separator after Option symbols in TUI key hints
+@bc-openai
+#49138
+Expose original error details to turn lifecycle contributors
+@bryanashley
+#49144
+Preserve server reasoning summary and verbosity settings in the TUI
+@etraut-openai
+#49145
+Hide reasoning summary settings in
+/status
+for server connections
+@etraut-openai
+#49147
+Simplify cloud task base URL normalization
+@akira-oai
+#49153
+Omit blockquote markers when copying quoted selections in the TUI
+@bc-openai
+#49160
+Support projectless TUI sessions with workspace defaults
+@etraut-openai
+#49161
+Honor app-server provider defaults in the TUI
+@etraut-openai
+#49164
+Suppress Windows console windows for background subprocesses
+@etraut-openai
+#49171
+Fix model provider lookup for TUI history
+@etraut-openai
+#49386
+[0.160] Backport remaining Windows console fix to frozen alpha.6
+@andrewgu-oai
+#49763
+[0.160] Backport maintenance-line catalog and security reminder updates
+@andrewgu-oai</description>
+      <guid isPermaLink="false">https://developers.openai.com/codex/changelog#github-release-401312540</guid>
+      <pubDate>Thu, 01 Oct 2026 00:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>Codex CLI 0.160.1</title>
+      <link>https://github.com/openai/codex/releases/tag/rust-v0.160.1</link>
+      <description>Bug Fixes
+Preserve
+SYSTEMROOT
+,
+TEMP
+, and
+TMP
+when launching remote stdio MCP servers with explicitly configured remote environment variables, allowing Unix hosts to retain the Windows executor's startup environment.
+Changelog
+#51121
+: Backport Windows remote MCP environment preservation to 0.160.</description>
+      <guid isPermaLink="false">https://developers.openai.com/codex/changelog#github-release-404001397</guid>
+      <pubDate>Mon, 05 Oct 2026 00:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>Codex CLI 0.161.0</title>
+      <link>https://github.com/openai/codex/releases/tag/rust-v0.161.0</link>
+      <description>New Features
+GPT-6.1 Sol is now the default model in the bundled and Amazon Bedrock catalogs. (
+#49318
+,
+#49339
+)
+Amazon Bedrock supports multi-agent V2 and Ultra reasoning on compatible models; Bedrock Mantle also accepts AWS GovCloud regions. (
+#49345
+,
+#49813
+)
+Sign in to MCP servers from an active terminal session with
+/mcp login &lt;name&gt;
+. (
+#49290
+)
+Choose your microphone, speaker, and microphone input channels for voice conversations, with preferences saved locally. (
+#49437
+,
+#49836
+)
+Daybreak is opt-in through
+--enable cli_daybreak
+or
+features.cli_daybreak=true
+;
+daybreak=true
+alone is insufficient. By default, controls and indicators are hidden,
+/daybreak
+is unavailable, and automatic Cyber routing is omitted—even for saved Daybreak threads. Saved preferences remain intact. Opt-in routing requires eligible ChatGPT sign-in, the OpenAI provider, and advertised model/program support. (
+#49856
+,
+#49858
+,
+#49859
+,
+#49861
+,
+#51207
+)
+Select a Cyber access program per turn with
+codex exec --cyber-access-program
+or the TypeScript SDK’s
+cyberAccessProgram
+option. The explicit exec override remains available with
+cli_daybreak
+disabled and leaves the saved choice unchanged. (
+#49939
+,
+#51207
+)
+Bug Fixes
+Approved filesystem escalation can now grant broader write access while preserving denied reads and network restrictions. Background tasks retain their originating turn’s permissions. (
+#49353
+,
+#49880
+)
+Explicit launch permissions survive terminal reconnects and new sessions, while implicit client settings no longer overwrite server or saved-thread web-search settings. (
+#49809
+,
+#49799
+)
+Elevated Windows terminal sessions can start using an embedded server, and sandboxed PowerShell preserves relative paths beneath protected user profiles. (
+#49855
+,
+#49690
+)
+Enter correctly submits buffered input after paste detection expires, including in Vim insert mode. (
+#49810
+)
+Thread resume includes the latest committed history. Startup detects recoverable SQLite corruption earlier and preserves damaged databases as backups. (
+#49599
+,
+#49701
+)
+Responses retries and WebSocket-to-HTTP fallback honor server retry guidance, reducing premature failures during overload. (
+#49441
+)
+Documentation
+Authentication guidance now accounts for keyring storage instead of implying credentials always reside in
+auth.json
+. (
+#49361
+)
+Chores
+Publishing an older alpha or hotfix no longer moves npm alpha tags backward. (
+#49704
+)
+Changelog
+Full Changelog:
+rust-v0.160.0...rust-v0.161.0
+#49246
+Use executable fixture copying in the bundled bwrap test
+@felixxia-oai
+#49257
+Allow Guardian cached approvals with incomplete root context
+@felixxia-oai
+#49260
+Restrict enterprise MCP auth and fail closed on config refresh
+@nicksteele-oai
+#49261
+Preserve Windows sandbox runner launch errors
+@zm-oai
+#49262
+Trace turn phases and correlate accepted input with turns
+@jif-oai
+#49266
+Remove the remote agent message board client README
+@jif-oai
+#49267
+Support remote agent message boards in multi-agent sessions
+@jif-oai
+#49269
+Preserve thread overrides and cloud policy validity during config reloads
+@nicksteele-oai
+#49275
+Isolate realtime conversation tests from Responses prewarm connections
+@felixxia-oai
+#49276
+Enable enterprise MCP sign-in and account-scoped grant cleanup
+@nicksteele-oai
+#49277
+Avoid a turn teardown race in the Guardian agent message test
+@felixxia-oai
+#49280
+Restrict capability roots to captured turn environments
+@miz-openai
+#49286
+Model exec-server session attachment state as an enum
+@jif-oai
+#49290
+Add
+/mcp login &lt;name&gt;
+to the TUI
+@nicksteele-oai
+#49294
+Record Guardian context mode in review and classification telemetry
+@felixxia-oai
+#49295
+Simplify configuration fingerprint canonicalization
+@jif-oai
+#49297
+Scan the session index backwards for batch thread name lookups
+@jif-oai
+#49300
+Compact the inline hidden tag buffer once per chunk
+@jif-oai
+#49305
+Batch metadata reads when resolving thread names
+@jif-oai
+#49308
+Run piped legacy Windows sandbox processes without a console
+@etraut-openai
+#49312
+Notify parent agents when Guardian stops a subagent
+@jif-oai
+#49316
+Bump taiki-e/install-action to v2.87.21 in CI setup
+@jgershen-oai
+#49318
+Add GPT-6.1 Sol as the default catalog model
+@andrewgu-oai
+#49325
+Retry Windows sandbox runner logon once on error 1056
+@zm-oai
+#49330
+Keep remote control reconnect backoff capped during sustained failures
+@yansenzhou-oai
+#49332
+Clean up canceled exec-server RPC requests immediately
+@jif-oai
+#49339
+Add GPT-6.1 Sol to Bedrock catalogs and make it the default
+@celia-oai
+#49345
+Enable multi-agent V2 and Ultra reasoning on Amazon Bedrock
+@celia-oai
+#49353
+Allow approved filesystem escalation while preserving denied reads
+@viyatb-oai
+#49357
+Continue Markdown blockquotes when pasting multiline text
+@bc-openai
+#49360
+Carry shell invocation metadata and report executor PATH directories
+@anp-oai
+#49361
+Clarify credential storage wording across authentication UI and docs
+@celia-oai
+#49369
+Update Bedrock GPT-6 Sol catalog tests to expect multi-agent V2
+@celia-oai
+#49379
+Compile hook matchers during discovery
+@jif-oai
+#49384
+Track credential storage outcomes and redact sensitive errors
+@celia-oai
+#49388
+Fix Windows path inference for opaque URIs with slash prefixes
+@dkovalenko-oai
+#49389
+Serialize tests that share Windows sandbox accounts
+@jgershen-oai
+#49392
+Add attributed MCP OAuth credential storage telemetry
+@celia-oai
+#49395
+Remove randomized greetings from TUI session headers
+@etraut-openai
+#49401
+Preserve live tool-call metadata across request windows
+@ningyi-oai
+#49403
+Add an experimental flag for bundled tools in login shells
+@anp-oai
+#49406
+Support explicit cyber access programs with OpenAI API keys
+@julee-oai
+#49407
+Recover exec-server sessions after environment info timeouts
+@vivi
+#49408
+Compare tool call metadata in the recorder refresh test
+@euroelessar
+#49411
+Bind the app-server time provider to a local variable
+@euroelessar
+#49414
+Filter graceful shutdown guard and trigger traces from SQLite logs
+@dkovalenko-oai
+#49415
+Truncate input text in protocol debug output
+@dkovalenko-oai
+#49416
+Omit payloads from multiline ANSI warnings
+@dkovalenko-oai
+#49424
+Infer Windows UNC paths with forward and mixed slashes
+@dkovalenko-oai
+#49425
+Prune diagnostic logs periodically by age and database size
+@dkovalenko-oai
+#49426
+Enable analytics by default for daemon-launched app servers
+@bc-openai
+#49432
+Preserve bootstrap discovery across authentication changes
+@cooper-oai
+#49437
+Add local audio device selection to TUI voice settings
+@bc-openai
+#49441
+Honor server retry advice across Responses retries and fallback
+@anp-oai
+#49444
+Use
+memrchr
+to find newlines in reverse JSONL scans
+@btraut-openai
+#49467
+Restore executor tool paths after login shell startup
+@anp-oai
+#49472
+Use server-authoritative permissions in the TUI
+@etraut-openai
+#49473
+Use the rmcp SDK for enterprise-managed token exchanges
+@nicksteele-oai
+#49475
+Complete turn abort callbacks before emitting terminal events
+@euroelessar
+#49478
+Discover and validate MCP authorization servers before ID-JAG exchange
+@nicksteele-oai
+#49480
+Add experimental thread prediction protocol types
+@keyz
+#49489
+Add regression coverage for account switches between analytics batches
+@anp-oai
+#49517
+Add a fork shortcut to the TUI command center
+@etraut-openai
+#49560
+Add an opt-in model catalog to multi-agent context
+@jif-oai
+#49564
+Copy selected file paths as plain text in the TUI
+@fcoury-oai
+#49584
+Skip host skill discovery for Guardian reviews
+@jif-oai
+#49595
+Make the strict network approval test independent of request order
+@jif-oai
+#49598
+Persist explicit user goal edits in model history
+@felixxia-oai
+#49599
+Return authoritative replay history when resuming a thread
+@felixxia-oai
+#49600
+Reuse unchanged history snapshots when resuming threads
+@felixxia-oai
+#49624
+Use server authentication for explicit remote session commands
+@cooper-oai
+#49642
+Allow managed requirements to disable the Windows MXC sandbox
+@iceweasel-oai
+#49675
+Serialize Responses routing fields before large inputs
+@jbeckwith-oai
+#49678
+Escape command drafts when recovering question answers
+@imac-oai
+#49683
+Add a managed feature gate for in-app voice
+@vishnu-oai
+#49686
+Deliver remote message board notifications to active turns
+@jif-oai
+#49689
+Export skill invocation events through OpenTelemetry
+@jif-oai
+#49690
+Preserve PowerShell relative paths in the elevated Windows sandbox
+@johnl-oai
+#49692
+Keep compressed rollout snippet searches on one blocking worker
+@npancha-openai
+#49693
+Move thread history projection into one blocking task
+@charliemarsh-oai
+#49694
+Batch rollout listing scans on cancellable blocking workers
+@charliemarsh-oai
+#49696
+Make exec-server file reads cancellable between chunks
+@charliemarsh-oai
+#49701
+Detect SQLite corruption during startup and preserve recovery backups
+@dkovalenko-oai
+#49702
+Rename exec-server file handle management identifiers
+@anp-oai
+#49704
+Prevent npm alpha dist-tags from moving backward
+@imac-oai
+#49706
+Upgrade the argument comment lint toolchain and Dylint
+@tamird
+#49708
+Move session index I/O off async runtime threads
+@charliemarsh-oai
+#49710
+Classify SQLite corruption using typed error codes
+@dkovalenko-oai
+#49712
+Avoid full-string scans in token-budget truncation
+@jif-oai
+#49713
+Remove repository-local Codex guidance, skills, and environment config
+@anp-oai
+#49714
+Decouple API-key cyber access programs from model discovery
+@julee-oai
+#49715
+Add account security setup reminders to the TUI
+@dennyku
+#49778
+Define exec-server protocol types for streamed file writes
+@anp-oai
+#49781
+Include the environment's MXC backend in MCP sandbox metadata
+@zm-oai
+#49782
+Clean up process groups for failed shell snapshot captures
+@jif-oai
+#49783
+Preserve background thread requests when forking in the TUI
+@etraut-openai
+#49784
+Add a requirements feature gate for the browser annotation API
+@tepman-oai
+#49785
+Persist empty paginated threads when naming them
+@rd-oai
+#49786
+Clarify V2 spawn model override guidance for context catalogs
+@jif-oai
+#49787
+Remove
+AGENTS.md
+from Bazel core test data
+@andrewgu-oai
+#49792
+Add retained conversation support to Guardian async sampling
+@felixxia-oai
+#49793
+Add conversation mode to Guardian v2 async classification
+@felixxia-oai
+#49795
+Avoid duplicate sync reviews in Guardian classifier continuations
+@felixxia-oai
+#49796
+Deduplicate Guardian retained-context omission notices
+@felixxia-oai
+#49798
+Share cached exec-server environment info with Arc
+@anp-oai
+#49799
+Preserve server web-search settings in the TUI
+@etraut-openai
+#49800
+Allow cleanup of replay-only side conversations with missing threads
+@bc-openai
+#49801
+Update the Rust toolchain action for argument-comment linting
+@andrewgu-oai
+#49804
+Use platform-specific modifier labels in TUI shortcut hints
+@bc-openai
+#49805
+Add capability-gated writable file streams to the exec-server client
+@anp-oai
+#49806
+Accept unknown Codex error variants in the app-server protocol
+@anp-oai
+#49807
+Enable API-key model discovery by default
+@andrewgu-oai
+#49809
+Preserve local launch permissions across TUI sessions and reconnects
+@etraut-openai
+#49810
+Flush expired paste bursts before handling Enter
+@bc-openai
+#49811
+Handle unsupported
+fs/writeBlock
+requests in exec-server
+@anp-oai
+#49812
+Move shadow skill ranking off the turn preparation path
+@vkg-oai
+#49813
+Support AWS GovCloud regions for Amazon Bedrock Mantle
+@alexsong-oai
+#49814
+Add coordinated shutdown for local agent trees
+@owenlin0
+#49816
+Remove browser-open success messages from the TUI
+@bc-openai
+#49817
+Add an advisory Bedrock GovCloud requirements check
+@alexsong-oai
+#49818
+Use dedicated parameters for sandboxed file opens
+@anp-oai
+#49819
+Recover daemon startup and updater re-exec after cwd deletion
+@etraut-openai
+#49822
+Box the resume future in the agents overview permissions test
+@sayan-oai
+#49835
+Clarify service tier default save errors in the TUI
+@etraut-openai
+#49836
+Allow microphone channel selection for voice conversations
+@bc-openai
+#49843
+Preserve daemon diagnostics and include updater logs in reports
+@etraut-openai
+#49846
+Capture host-supplied extension data for each turn
+@sayan-oai
+#49847
+Persist world-state snapshots alongside rendered context
+@pakrym-oai
+#49850
+Launch Windows daemon children in a dedicated working directory
+@etraut-openai
+#49852
+Improve diagnostics for report attachment failures
+@dkovalenko-oai
+#49855
+Use embedded mode for elevated Windows TUI sessions
+@etraut-openai
+#49856
+Support Daybreak selection in
+codex exec
+@etraut-openai
+#49857
+Use the model catalog to select TUI cyber refusal guidance
+@etraut-openai
+#49858
+Add a persistent
+/daybreak
+toggle to the TUI
+@etraut-openai
+#49859
+Honor Daybreak settings in TUI continuations and background tasks
+@etraut-openai
+#49861
+Add Daybreak state to the status line and terminal title
+@etraut-openai
+#49867
+Update elevated-launch warning snapshot to use
+⌃o
+for copy
+@etraut-openai
+#49874
+Point usage and credit links to ChatGPT settings
+@etraut-openai
+#49875
+Decouple TUI startup presentation from execution configuration
+@etraut-openai
+#49876
+Remove personality plumbing from the TUI
+@etraut-openai
+#49880
+Bind permission grants to the originating turn
+@anp-oai
+#49894
+Return world-state snapshots and context updates together
+@pakrym-oai
+#49898
+Scope extension filesystem access to callback permissions
+@anp-oai
+#49910
+Preserve validation errors for invalid TUI keybindings
+@etraut-openai
+#49912
+Respect approval policies in temporary structured threads
+@etraut-openai
+#49939
+Add per-turn Cyber access program selection to exec and the SDK
+@mldangelo-oai
+#49946
+Prevent stale file search results from being labeled with a new query
+@jif-oai
+#49951
+Include preceding assistant context in Guardian sender reviews
+@jif-oai
+#49956
+Cache the placeholder regex for MCP hook argument expansion
+@jif-oai
+#49959
+Test session index thread-name append and removal
+@jif-oai
+#49972
+Share byte buffers across exec-server output chunks
+@jif-oai
+#49987
+Add renewable EMA HTTP authentication and credential versioning
+@nicksteele-oai
+#49993
+Preserve the async Guardian history prefix as retained context changes
+@felixxia-oai</description>
+      <guid isPermaLink="false">https://developers.openai.com/codex/changelog#github-release-405921402</guid>
+      <pubDate>Wed, 07 Oct 2026 00:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>Codex CLI 0.162.0</title>
+      <link>https://github.com/openai/codex/releases/tag/rust-v0.162.0</link>
+      <description>New Features
+Add tools for creating and listing managed Git worktrees from trusted local projects when the worktrees feature is enabled. (
+#50148
+)
+Pin tasks in the agent Command Center with
+p
+and keep them in a shared Pinned group when supported by the server. (
+#51500
+)
+Navigate and copy transcript blocks with
+/copy
+, use
+Ctrl+Insert
+to copy selections, and tune mouse-wheel scrolling with
+tui.mouse_scroll_speed
+. (
+#50434
+,
+#50215
+,
+#50209
+)
+Make URLs clickable in approval headers, questions, MCP prompts, warnings, banners, and verification prompts, including when links wrap across lines. (
+#51439
+,
+#51449
+,
+#51450
+,
+#51451
+,
+#51452
+,
+#51458
+)
+Configure live web access and remote compaction capabilities for custom Responses-compatible model providers. (
+#50459
+)
+Add JavaScript helpers for streaming promise results as they settle, plus opt-in ranked tool search in Code Mode. (
+#51126
+,
+#51209
+)
+Bug Fixes
+Respect server model and reasoning-summary defaults for new TUI threads while retaining explicit launch overrides. (
+#50013
+,
+#50811
+,
+#50913
+)
+Preserve existing CRLF line endings in
+apply_patch
+updates without requiring an opt-in. (
+#51203
+)
+Fix Linux sandbox startup with multiple denied files, reject writable sandbox-construction executables, and keep ripgrep configuration from weakening deny-glob masks. (
+#50059
+,
+#51211
+,
+#51407
+,
+#51527
+)
+Restore ordinary drive-letter file access on Windows 10 and match Windows sandbox temp permissions to the child process environment. (
+#51511
+,
+#51512
+)
+Honor server
+Retry-After
+advice for retryable Responses and WebSocket failures. (
+#50418
+,
+#51440
+)
+Fix archive checksum verification when installing through Windows PowerShell with PowerShell 7 module paths present. (
+#51257
+)
+Chores
+Publish a signed PowerShell installer with Windows releases. (
+#51158
+)
+Keep older stable releases and prereleases from replacing newer stable download targets or installer aliases. (
+#51186
+,
+#51425
+)
+Changelog
+Full Changelog:
+rust-v0.161.0...rust-v0.162.0
+#50013
+Honor server model defaults when starting fresh TUI threads
+@etraut-openai
+#50018
+Use descriptor-safe helpers for executable test fixtures
+@jif-oai
+#50019
+Protect the guardian decisions API key from environment forwarding
+@swastik-oai
+#50026
+Preserve user restrictions in Guardian handoff context
+@jif-oai
+#50035
+Follow MCP tool pagination in legacy protocol mode
+@jif-oai
+#50039
+Keep transcript Find results readable after closing the query
+@fcoury-oai
+#50045
+Keep transcript Find expansion scoped to the current match
+@fcoury-oai
+#50046
+Stabilize Windows voice build cache keys across tool reinstalls
+@anp-oai
+#50050
+Keep plugin and skill snapshots scoped to each step
+@sayan-oai
+#50052
+Preserve question context in recovered TUI answer drafts
+@imac-oai
+#50054
+Check token estimate filtering directly on the tracing subscriber
+@tamird
+#50058
+Upgrade Windows bindings to
+windows-sys
+0.61.2
+@tamird
+#50059
+Fix Linux sandbox startup with multiple denied files
+@yuzhu-oai
+#50066
+Add a bounded Decisions transport for Guardian comparison classification
+@swastik-oai
+#50082
+Enable dynamic tool inheritance for fresh V2 subagents
+@ke-oai
+#50083
+Add paginated reverse lookup for thread attachments
+@joeytrasatti-openai
+#50087
+Preserve queued agent mail across session eviction
+@jif-oai
+#50093
+Prevent shared instruction providers from delegating to themselves
+@bryanashley
+#50094
+Add attachment owner lookup to the app-server
+@joeytrasatti-openai
+#50099
+Add opt-in Decisions comparison for Guardian V2
+@swastik-oai
+#50105
+Consolidate chat composer footer logic in
+footer_state
+@imac-oai
+#50109
+Keep fullscreen prompts bounded and scrollable
+@imac-oai
+#50112
+Centralize TUI loading glyphs and frame scheduling
+@imac-oai
+#50113
+Add a native gRPC client for cloud thread resume and attach
+@bc-openai
+#50128
+Expose the model selected for a running turn's next step
+@sayan-oai
+#50129
+Preserve Windows environment variables for remote MCP servers
+@aidanv-oai
+#50131
+Add opt-in JSON diagnostics for TCP tunnels
+@richardopenai
+#50140
+Use the server permission catalog for TUI permission shortcuts
+@etraut-openai
+#50148
+Add managed worktree tools to the TUI
+@bc-openai
+#50162
+Bound in-flight file opens in exec-server
+@anp-oai
+#50166
+Upgrade
+age
+to 0.12.1 and remove the obsolete advisory exception
+@michaelm-openai
+#50177
+Enable writable file streaming in exec-server
+@anp-oai
+#50183
+Add
+dots
+to issue labeler guidance
+@etraut-openai
+#50189
+Replace the Figma OAuth exception with Mercado Pago
+@mzeng-openai
+#50199
+Restore the account email in
+/status
+after account updates
+@etraut-openai
+#50200
+Report the configured TUI mode in
+codex doctor
+@etraut-openai
+#50207
+Release stable Markdown tables into scrollback during streaming
+@etraut-openai
+#50209
+Make transcript mouse scroll speed configurable
+@etraut-openai
+#50215
+Support Ctrl+Insert for copying TUI selections
+@etraut-openai
+#50216
+Use the shared text editor for command-center task renaming
+@bc-openai
+#50219
+Bound tmux option probes to one second
+@etraut-openai
+#50273
+Record Guardian V2 Decisions agreement and latency metrics
+@swastik-oai
+#50339
+Add end-to-end coverage for MCP sandbox state enforcement
+@bolinfest
+#50345
+Keep the subagent picker consistent with thread archive state
+@etraut-openai
+#50348
+Back off automatic remote control reconnects with jitter
+@cooper-oai
+#50354
+Skip unrelated subtrees during config alias normalization
+@btraut-openai
+#50359
+Render ANSI styles in TUI hook system messages
+@etraut-openai
+#50360
+Remove initial messages from session configuration events
+@owenlin0
+#50375
+Use printable ASCII terminal titles under GNU Screen
+@imac-oai
+#50380
+Fix thread unloading after disconnect during MCP startup
+@yuzhu-oai
+#50384
+Allow opting into 16 KiB ARM64 code pages for macOS signing
+@chess-oai
+#50389
+Honor configured keybindings before transcript navigation
+@etraut-openai
+#50396
+Honor pager bindings for transcript page keys
+@bc-openai
+#50402
+Consolidate command execution output into
+aggregated_output
+@owenlin0
+#50416
+Clarify Git worktree choices for new and forked conversations
+@bc-openai
+#50418
+Honor Retry-After headers in failed Responses events
+@anp-oai
+#50427
+Cap persisted command output in paginated history at 64 KiB
+@owenlin0
+#50431
+Preserve terminal hyperlinks in agents overview previews
+@bc-openai
+#50433
+Allow API-key accounts to use Daybreak in the TUI
+@etraut-openai
+#50434
+Add keyboard copy selection to the owned transcript
+@bc-openai
+#50435
+Persist additional tool definitions in rollout history
+@pakrym-oai
+#50437
+Add a CLI command to uninstall the legacy Windows sandbox
+@chess-oai
+#50441
+Support ordered response items in world-state context updates
+@pakrym-oai
+#50442
+Preserve native USD amounts in thread usage responses
+@asohrabi-oai
+#50443
+Stabilize paused-time code-mode service tests
+@seanh-oai
+#50445
+Assert that only direct tool calls emit timing events
+@seanh-oai
+#50446
+Bundle rollout attachments into a gzip tar archive
+@dkovalenko-oai
+#50447
+Remove the provider capability gate for tool namespaces
+@pakrym-oai
+#50454
+Measure rollout persistence size reductions
+@owenlin0
+#50458
+Truncate oversized MCP results in paginated thread history
+@owenlin0
+#50459
+Add capability overrides for custom model providers
+@celia-oai
+#50462
+Populate thread previews from delegated task inputs
+@bc-openai
+#50464
+Add the
+incremental_tools
+feature flag
+@pakrym-oai
+#50465
+Retry registry authentication outages and jitter executor reconnects
+@apanasenko-oai
+#50467
+Copy transcript selections as literal text while preserving rich HTML
+@fcoury-oai
+#50470
+Account for JSON overhead when truncating MCP tool results
+@owenlin0
+#50472
+Enable Ultrafast service tiers for Amazon Bedrock Astra models
+@celia-oai
+#50477
+Use the app-server default output cap for TUI workspace commands
+@etraut-openai
+#50480
+Skip managed config loading for registered Windows sandbox refreshes
+@zm-oai
+#50499
+Include installer stderr in daemon update failures
+@etraut-openai
+#50503
+Use Enter to accept transcript Find results and Escape to cancel
+@fcoury-oai
+#50504
+Center TUI confirmations over their retained backdrop
+@bc-openai
+#50505
+Keep Command Center selection adjacent after task removal
+@bc-openai
+#50507
+Record Windows sandbox service stop diagnostics
+@zm-oai
+#50510
+Require GovCloud guidance acknowledgment after Bedrock setup
+@jackz100
+#50516
+Add scenario coverage for remote
+/compact
+context preservation
+@pakrym-oai
+#50525
+Reject unknown TUI keys in strict config validation
+@etraut-openai
+#50531
+Persist realtime transcript tails before closure without inference
+@guinness-oai
+#50536
+Keep shared MCP types stable in Code Mode exec descriptions
+@aibrahim-oai
+#50540
+Send incremental tool catalog updates in Responses Lite
+@pakrym-oai
+#50546
+Keep MCP resource helpers available in code mode
+@aibrahim-oai
+#50555
+Skip daemon auto-start for Windows-mounted WSL homes
+@etraut-openai
+#50558
+Avoid reading the current directory when resolving absolute paths
+@etraut-openai
+#50559
+Distinguish daemon release identity from executable contents
+@etraut-openai
+#50562
+Keep Code Mode tool discovery guidance stable across catalog changes
+@aibrahim-oai
+#50564
+Allow transcript selection and copying while bottom modals are open
+@etraut-openai
+#50687
+Keep third-party tools deferred in strict Code Mode Only
+@aibrahim-oai
+#50695
+Preserve local Markdown link labels in the TUI
+@bc-openai
+#50700
+Let the transport create the Windows remote-control socket directory
+@etraut-openai
+#50720
+Decode Windows Terminal's mapped Shift+Enter sequence
+@bc-openai
+#50727
+Show model and reasoning effort near the top of task details
+@etraut-openai
+#50741
+Keep environment-backed tools exposed across readiness changes
+@won-openai
+#50756
+Show unavailable slash commands when searched in side conversations
+@bc-openai
+#50764
+Allow
+/archive
+while a turn is running
+@bc-openai
+#50781
+Restrict TUI MCP startup notifications to owned threads
+@etraut-openai
+#50782
+Retry Windows daemon release publication on transient file locks
+@etraut-openai
+#50786
+Remember Command Center grouping across launches
+@bc-openai
+#50788
+Open slash commands from empty drafts in Vim Normal mode
+@bc-openai
+#50802
+Fall back to mklink when Windows daemon junction updates are denied
+@etraut-openai
+#50803
+Use the managed daemon for eligible remote-control launches
+@etraut-openai
+#50804
+Preserve review lifecycle ordering on failure
+@etraut-openai
+#50808
+Prune TUI snapshots and consolidate behavior tests
+@etraut-openai
+#50811
+Honor server reasoning summary defaults in new TUI threads
+@etraut-openai
+#50913
+Use server model defaults for connected TUI fresh starts
+@etraut-openai
+#50940
+Recover malformed Windows deny-read ACL state safely
+@zm-oai
+#50962
+Gate stable environment tool exposure behind a feature flag
+@aibrahim-oai
+#50964
+Track inference tool changes in turn analytics
+@aibrahim-oai
+#50977
+Isolate tracing in the strict third-party tool deferral test
+@alishobeiri-oai
+#51061
+Gate Guardian continuation tests on classifier request capture
+@jif-oai
+#51063
+Honor prior cancellation before starting Codex delegates
+@jif-oai
+#51064
+Ignore stale refresh responses in agents overview tests
+@jif-oai
+#51065
+Scope Guardian V2 response timing to snapshot sampling
+@swastik-oai
+#51067
+Use issuing-step context for Guardian MCP elicitation reviews
+@jif-oai
+#51070
+Preserve trusted-tool context in Guardian Decisions requests
+@swastik-oai
+#51117
+Install full context in compaction replacement history
+@pakrym-oai
+#51119
+Clarify incremental tool namespace updates in Responses Lite
+@akira-oai
+#51126
+Add promise settlement streaming helpers to code mode
+@cconger
+#51133
+Allow Guardian Decisions to fall back to
+OPENAI_API_KEY
+@swastik-oai
+#51137
+Recover Guardian reviews from parent checkpoints
+@felixxia-oai
+#51139
+Force fresh Guardian sessions for parent-checkpoint recovery
+@felixxia-oai
+#51140
+Isolate Guardian checkpoint recovery flags per review attempt
+@felixxia-oai
+#51156
+Send base instructions as Responses input messages
+@pakrym-oai
+#51157
+Enforce required environment skills before model inference
+@anp-oai
+#51158
+Sign the PowerShell installer in Windows releases
+@chess-oai
+#51184
+Remove obsolete Guardian thread-context enables from tests
+@felixxia-oai
+#51185
+Retry transient gRPC code-mode session admission failures
+@cassirer-openai
+#51186
+Prevent stable release pointers from moving backward
+@andrewgu-oai
+#51188
+Record base instructions in incremental tool history
+@pakrym-oai
+#51191
+Clean up Unix app-server control-socket startup lock files
+@etraut-openai
+#51192
+Wait for SIGCONT when resuming the TUI
+@etraut-openai
+#51193
+Test thread archiving before the first turn
+@btraut-openai
+#51194
+Add browser extension request headers to config requirements
+@jn-openai
+#51198
+Allow concurrent release builds while serializing publication
+@andrewgu-oai
+#51200
+Upgrade Bazel to 9.2.0 and refresh the module lockfile
+@anp-oai
+#51202
+Distinguish namespace removals in incremental tool updates
+@akira-oai
+#51203
+Make apply_patch preserve line endings unconditionally
+@charliemarsh-oai
+#51206
+Record initialization analytics for resumed subagents
+@peilin-openai
+#51207
+Gate CLI Daybreak controls and selection behind an opt-in feature
+@julee-oai
+#51209
+Add ranked tool discovery to JavaScript code mode
+@zamoshchin-openai
+#51211
+Reject sandbox-writable bubblewrap executables from PATH
+@viyatb-oai
+#51215
+Measure raw MCP tool catalog sizes in telemetry
+@owenlin0
+#51217
+Preserve review targets and scope misalignment continuation metadata
+@yunhan-wei
+#51220
+Honor the OTLP metrics temporality preference
+@daniel-oai
+#51221
+Separate environment requests from runtime selections
+@anp-oai
+#51223
+Remove legacy personality template metadata
+@rhan-oai
+#51230
+Make session lookup pagination stable and report listing failures
+@etraut-openai
+#51235
+Remove default model labels from TUI model pickers
+@etraut-openai
+#51241
+Add a partial answer message phase
+@rb-oai
+#51249
+Handle partial answers consistently across agent workflows
+@rb-oai
+#51253
+Enforce Fast and Ultra Fast policies independently
+@dpatel-oai
+#51256
+Start the Windows sandbox service during registered Core setup
+@zm-oai
+#51257
+Fix installer checksum verification under Windows PowerShell
+@zm-oai
+#51260
+Handle partial answers in realtime routing and thread search
+@rb-oai
+#51329
+Remove partial-history subagent forks
+@jif-oai
+#51330
+Measure total Guardian approval decision duration
+@jif-oai
+#51331
+Track sub-agent result delivery outcomes
+@jif-oai
+#51332
+Record multi-agent wait duration by outcome
+@jif-oai
+#51333
+Record the multi-agent version in turn analytics
+@jif-oai
+#51334
+Count Guardian denial-limit interruptions in telemetry
+@jif-oai
+#51335
+Update collaboration snapshots for full-history fork instructions
+@jif-oai
+#51347
+Measure shell snapshot use and wait time per command
+@jif-oai
+#51350
+Allow larger shell snapshots when replaying from a file
+@jif-oai
+#51355
+Add bounded diagnostics for agent spawn failures
+@jif-oai
+#51378
+Keep Guardian v2 WebSocket pools warm with concurrent replenishment
+@jif-oai
+#51391
+Make URLs in asynchronous question titles clickable
+@charliemarsh-oai
+#51396
+Let late low-risk scores complete pending Guardian reviews
+@jif-oai
+#51400
+Prevent later Guardian scores from releasing earlier pending reviews
+@jif-oai
+#51402
+Preserve turn attribution across recovery and compaction
+@eddie-openai
+#51407
+Protect ripgrep lookup during Linux sandbox construction
+@viyatb-oai
+#51411
+Suppress repeated image paste presses in legacy terminals
+@etraut-openai
+#51415
+Expose and persist turn lineage across the app server
+@eddie-openai
+#51419
+Preserve turn attribution when queued mail wakes durable sleep
+@eddie-openai
+#51420
+Finish idle thread unloads after slow shutdown
+@jif-oai
+#51421
+Include root turn IDs in host-owned Apps tool calls
+@eddie-openai
+#51422
+Accept environment requests at thread and turn settings boundaries
+@anp-oai
+#51425
+Skip stable installer alias publishing for prereleases
+@zsol-openai
+#51426
+Remove the Bazel JVM override for Windows ARM64 voice builds
+@anp-oai
+#51427
+Prevent invalidated wakeups from starting a turn
+@jif-oai
+#51433
+Show hook status messages as titles in the hooks browser
+@abhinav-oai
+#51439
+Preserve clickable URLs in TUI approval headers
+@charliemarsh-oai
+#51440
+Honor Retry-After in WebSocket error events
+@anp-oai
+#51441
+Fix core integration tests for updated turn APIs
+@anp-oai
+#51449
+Make URLs clickable in TUI user input questions
+@charliemarsh-oai
+#51450
+Make URLs clickable in MCP elicitation prompts
+@charliemarsh-oai
+#51451
+Make URLs in the TUI warnings viewer clickable
+@charliemarsh-oai
+#51452
+Make banner URLs clickable across wrapped lines
+@charliemarsh-oai
+#51457
+Preserve status usage hyperlinks when the URL wraps
+@charliemarsh-oai
+#51458
+Make URLs clickable in user verification prompts
+@charliemarsh-oai
+#51459
+Preserve wrapped help links in Windows sandbox prompts
+@charliemarsh-oai
+#51460
+Retry realtime sideband attachment while an existing call activates
+@bullman-oai
+#51463
+Record resolved model and reasoning effort in sub-agent activity
+@sdcoffey
+#51465
+Add an optional JSON transcript format for Guardian
+@felixxia-oai
+#51466
+Keep Guardian transcript records structured through budget recovery
+@felixxia-oai
+#51467
+Keep submission logs useful without exposing payloads
+@chess-oai
+#51470
+Raise the managed app-server file descriptor limit on Unix
+@etraut-openai
+#51471
+Preserve clickable URLs in pending input previews
+@charliemarsh-oai
+#51472
+Preserve clickable URLs in TUI selection rows
+@charliemarsh-oai
+#51473
+Preserve URL destinations in wrapped hook details
+@charliemarsh-oai
+#51480
+Preserve tool declaration mode across resumed context windows
+@pakrym-oai
+#51482
+Use PathUri for skill identity and path matching
+@anp-oai
+#51483
+Add correlated, credential-free rendezvous connection diagnostics
+@alexi-openai
+#51491
+Classify executor capability root ownership independently of parsing
+@stevenlee-oai
+#51492
+Remove obsolete fields from persisted turn context
+@pakrym-oai
+#51493
+Bind capability roots to environment selections
+@anp-oai
+#51499
+Load rollout history on a single blocking worker
+@charliemarsh-oai
+#51500
+Add shared task pinning to the agent command center
+@etraut-openai
+#51502
+Bound relay connection attempts and handle pongs during blocked writes
+@alexi-openai
+#51503
+Expose selected environments to MCP contributors
+@mtsui-oai
+#51510
+Preserve live TUI settings when configuration reloads fail
+@imac-oai
+#51511
+Fix Windows 10 drive-letter opens for no-follow filesystem operations
+@zm-oai
+#51512
+Align Windows sandbox temp permissions with the child environment
+@zm-oai
+#51515
+Expose detailed agent tree shutdown failure reports
+@keitht-openai
+#51517
+Pass thread persistence intent to attachment uploads
+@kchainani-oai
+#51525
+Preserve the CLI MXC preference in executor config reads
+@zm-oai
+#51527
+Ignore ripgrep configuration when expanding sandbox deny globs
+@viyatb-oai</description>
+      <guid isPermaLink="false">https://developers.openai.com/codex/changelog#github-release-407151970</guid>
+      <pubDate>Thu, 08 Oct 2026 00:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>Codex CLI 0.162.1</title>
+      <link>https://github.com/openai/codex/releases/tag/rust-v0.162.1</link>
+      <description>Bug Fixes
+Fixed a TUI crash when asynchronous questions contain multiple lines, preserving line breaks and complete hyperlink destinations. (
+#51866
+)
+Fixed startup failures caused by differences between a running background server's feature settings and CLI defaults. Compatibility checks now apply only to explicit command-line feature overrides. (
+#52648
+)
+Full Changelog:
+rust-v0.162.0...rust-v0.162.1</description>
+      <guid isPermaLink="false">https://developers.openai.com/codex/changelog#github-release-408271623</guid>
+      <pubDate>Fri, 09 Oct 2026 00:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>Codex CLI 0.163.0</title>
       <link>https://github.com/openai/codex/releases/tag/rust-v0.163.0</link>
       <description>New Features
 Open
@@ -863,22 +4011,8 @@ Enable Cyber access programs for API-key sessions by default
 #53723
 Wire V2 capability discovery through exec-server RPC
 @TAFOYA-OAI</description>
-      <guid isPermaLink="false">tag:github.com,2008:Repository/965415649/rust-v0.163.0</guid>
-      <pubDate>Thu, 15 Oct 2026 21:33:06 +0000</pubDate>
-    </item>
-    <item>
-      <title>0.164.0-alpha.1</title>
-      <link>https://github.com/openai/codex/releases/tag/rust-v0.164.0-alpha.1</link>
-      <description>Release 0.164.0-alpha.1</description>
-      <guid isPermaLink="false">tag:github.com,2008:Repository/965415649/rust-v0.164.0-alpha.1</guid>
-      <pubDate>Fri, 16 Oct 2026 15:00:24 +0000</pubDate>
-    </item>
-    <item>
-      <title>0.164.0-alpha.2</title>
-      <link>https://github.com/openai/codex/releases/tag/rust-v0.164.0-alpha.2</link>
-      <description>Release 0.164.0-alpha.2</description>
-      <guid isPermaLink="false">tag:github.com,2008:Repository/965415649/rust-v0.164.0-alpha.2</guid>
-      <pubDate>Fri, 16 Oct 2026 17:39:39 +0000</pubDate>
+      <guid isPermaLink="false">https://developers.openai.com/codex/changelog#github-release-414286110</guid>
+      <pubDate>Thu, 15 Oct 2026 00:00:00 +0000</pubDate>
     </item>
   </channel>
 </rss>
