@@ -7,7 +7,7 @@
     <docs>http://www.rssboard.org/rss-specification</docs>
     <generator>RSS Creator</generator>
     <language>zh-CN</language>
-    <lastBuildDate>Sat, 17 Oct 2026 11:27:54 +0000</lastBuildDate>
+    <lastBuildDate>Sat, 17 Oct 2026 15:10:58 +0000</lastBuildDate>
     <item>
       <title>Periodic Weak Spots: Phase Sensitivity from Chunked KV-Cache Compression</title>
       <link>https://seed.bytedance.com/zh/public_papers/periodic-weak-spots-phase-sensitivity-from-chunked-kv-cache-compression</link>
@@ -361,114 +361,6 @@ arXiv: https://arxiv.org/pdf/2604.15311</description>
 arXiv: https://arxiv.org/pdf/2604.14148</description>
       <guid isPermaLink="false">1782376870645</guid>
       <pubDate>Wed, 15 Apr 2026 00:00:00 +0800</pubDate>
-    </item>
-    <item>
-      <title>Continuous Adversarial Flow Models</title>
-      <link>https://seed.bytedance.com/zh/public_papers/continuous-adversarial-flow-models</link>
-      <description>We propose continuous adversarial flow models, a type of continuous-time flow model trained with an adversarial objective. Unlike flow matching, which uses a fixed mean-squared-error criterion, our approach introduces a learned discriminator to guide training. This change in objective induces a different generalized distribution, which empirically produces samples that are better aligned with the target data distribution. Our method is primarily proposed for post-training existing flow-matching models, although it can also train models from scratch. On the ImageNet 256px generation task, our post-training substantially improves the guidance-free FID of latent-space SiT from 8.26 to 3.63 and of pixel-space JiT from 7.17 to 3.57. It also improves guided generation, reducing FID from 2.06 to 1.53 for SiT and from 1.86 to 1.80 for JiT. We further evaluate our approach on text-to-image generation, where it achieves improved results on both the GenEval and DPG benchmarks.
-
-arXiv: https://arxiv.org/pdf/2604.11521</description>
-      <guid isPermaLink="false">1782376602943</guid>
-      <pubDate>Mon, 13 Apr 2026 00:00:00 +0800</pubDate>
-    </item>
-    <item>
-      <title>Protenix-v2: Broadening the Reach of Structure Prediction and Biomolecular Design</title>
-      <link>https://seed.bytedance.com/zh/public_papers/protenix-v2-broadening-the-reach-of-structure-prediction-and-biomolecular-design</link>
-      <description>Advances in biomolecular modeling have broadened the range of problems addressable by structure prediction and design models. Here, we present results from Protenix-v2, a system spanning high-accuracy structure prediction and biomolecular design. On the structure prediction side, Protenix-v2 achieves antibody-antigen success rates with up to 13-point gains over Protenix-v1, while 5-seed performance surpasses previous 1000-seed results. On the design side, Protenix-v2 demonstrates a 100% target-level success rate in novelty-controlled VHH-Fc campaigns, reaching hit rates up to 48%. Crucially, the model enables hit discovery on difficult GPCR targets with hit rates of 16%–88% (VHH-Fc) and up to 50% (mAb) under 16–30 testing budgets per target. Resulting hits show high developability and diversity. Beyond antibody tasks, we report improved ligand-related plausibility and successful cross-variant SARS-CoV-2 spike RBD mini-binder design. These results establish Protenix-v2 as a robust and powerful model for accelerated drug discovery.
-
-arXiv: https://www.biorxiv.org/content/10.64898/2026.04.10.717613v1.full.pdf</description>
-      <guid isPermaLink="false">1782375764694</guid>
-      <pubDate>Sat, 11 Apr 2026 00:00:00 +0800</pubDate>
-    </item>
-    <item>
-      <title>Nexus: Same Pretraining Loss, Better Downstream Generalization via Common Minima</title>
-      <link>https://seed.bytedance.com/zh/public_papers/nexus-same-pretraining-loss-better-downstream-generalization-via-common-minima</link>
-      <description>The foundational capabilities of large language models are acquired during pretraining on internet-scale, highly heterogeneous data mixtures. In this work, we investigate an interesting geometric question regarding the converged state of pretraining: Does the model converge to a common minimizer across all data sources (e.g., \cref{fig:cwa_illustration:close}), or merely a minimizer of the summed loss (e.g., \cref{fig:cwa_illustration:distant})? We hypothesize that the geometric "closeness" of task-specific minima is intrinsically linked to downstream generalization. We reveal that standard optimizers (e.g., AdamW) often converge to points where task-specific minima are distant from each other. To address this, we propose the Nexus optimizer, which encourages the closeness of these minima by maximizing gradient similarity during optimization. Experiments across models ranging from 130M to 3B parameters, various data mixtures and hyperparameter schedules, show that Nexus \textit{significantly boosts downstream performance}, despite \textit{achieving the same pretraining loss} (see \cref{fig:demo:benchmark}). Notably, on the 3B model, Nexus reduces the out-of-distribution loss by 0.012 and yields up to a 15.0\% accuracy improvement on complex reasoning tasks (e.g., GSM8k). This finding challenges the reliance on pretraining loss as the sole proxy for model evaluation and demonstrates the importance of implicit biases in unlocking downstream generalization.
-
-arXiv: https://arxiv.org/pdf/2604.09258</description>
-      <guid isPermaLink="false">1782982764131</guid>
-      <pubDate>Fri, 10 Apr 2026 00:00:00 +0800</pubDate>
-    </item>
-    <item>
-      <title>Topological invariant of periodic many body wavefunction from charge pumping simulation</title>
-      <link>https://seed.bytedance.com/zh/public_papers/topological-invariant-of-periodic-many-body-wavefunction-from-charge-pumping-simulation</link>
-      <description>Many-body topological quantum states host exotic quantum phenomena and lie at the forefront of developing next-generation quantum technologies. Recently emerged neural network wavefunction methods have established themselves as a powerful computational framework for accessing these states, enabling the variational machine learning calculation of the system's ground state wavefunction. However, reliable computation of topological invariants remains an open challenge when the whole deterministic energy spectrum is not available. In this work, we introduce a robust approach to determining topological invariant based on simulating the charge pumping process, by monitoring the response of polarization upon flux insertion. By applying this method, we accurately extract the Chern numbers for Abelian fractional Chern insulators. Our approach also enables the first neural-network-wavefunction-based identification of anomalous composite Fermi liquid states. Our work resolves a key bottleneck in applying neural network wavefunctions to correlated topological matter, and the method proposed is also generally applicable to other many-body approaches, thereby opening up new avenues for future research in this field.
-
-arXiv: https://arxiv.org/pdf/2604.08702</description>
-      <guid isPermaLink="false">1782980598033</guid>
-      <pubDate>Thu, 09 Apr 2026 00:00:00 +0800</pubDate>
-    </item>
-    <item>
-      <title>Not all tokens contribute equally to diffusion learning</title>
-      <link>https://seed.bytedance.com/zh/public_papers/not-all-tokens-contribute-equally-to-diffusion-learning</link>
-      <description>With the rapid development of conditional diffusion models, significant progress has been made in text-to-video generation. However, we observe that these models often neglect semantically important tokens during inference, leading to biased or incomplete generations under classifier-free guidance. We attribute this issue to two key factors: distributional bias caused by the long-tailed token frequency in training data, and spatial misalignment in cross-attention where semantically important tokens are overshadowed by less informative ones. To address these issues, we propose Distribution-Aware Rectification and Spatial Ensemble (DARE), a unified framework that improves semantic guidance in diffusion models from the perspectives of distributional debiasing and spatial consistency. First, we introduce Distribution-Rectified Classifier-Free Guidance (DR-CFG), which regularizes the training process by dynamically suppressing dominant tokens with low semantic density, encouraging the model to better capture underrepresented semantic cues and learn a more balanced conditional distribution. This design mitigates the risk of the model distribution overfitting to tokens with low semantic density. Second, we propose Spatial Representation Alignment (SRA), which adaptively reweights cross-attention maps according to token importance and enforces representation consistency, enabling semantically important tokens to exert stronger spatial guidance during generation. This mechanism effectively prevents low semantic-density tokens from dominating the attention allocation, thereby avoiding the dilution of the spatial and distributional guidance provided by high semantic-density tokens. Extensive experiments on multiple benchmark datasets demonstrate that DARE consistently improves generation fidelity and semantic alignment, achieving significant gains over existing approaches.
-
-arXiv: https://arxiv.org/pdf/2604.07026</description>
-      <guid isPermaLink="false">1776933724828</guid>
-      <pubDate>Wed, 08 Apr 2026 00:00:00 +0800</pubDate>
-    </item>
-    <item>
-      <title>GPU Accelerated Minimal Auxiliary Basis Approach TDDFT for Large Organic Molecules</title>
-      <link>https://seed.bytedance.com/zh/public_papers/gpu-accelerated-minimal-auxiliary-basis-approach-tddft-for-large-organic-molecules</link>
-      <description>We introduce a GPU-accelerated implementation of time-dependent density functional theory with the minimal auxiliary basis approach (TDDFT-risp) in GPU4PySCF, together with large system demonstrations carried out using the Tamm--Dancoff approximation (TDA-risp). The method combines GPU-accelerated three-center integral evaluation, tensor contractions, exchange-space truncation, omission of hydrogen atoms from the auxiliary basis, and a host memory assisted Davidson solver. On the EXTEST42 benchmark set, a conservative 40 eV exchange cutoff yields excitation-energy errors relative to standard TDA of about 0.03--0.05 eV for low-lying states. For systems of 300 to 3000 atoms, we demonstrate that TDA-risp calculations of 15 low-lying excited states with $ω$B97XD/def2-SVP complete on a single A100 GPU with wall times ranging from minutes to hours. These results position GPU-TDDFT-risp as a practical route toward excited-state calculations for large organic and biomolecular systems with thousands of atoms.
-
-arXiv: https://arxiv.org/pdf/2603.29257</description>
-      <guid isPermaLink="false">1789028219467</guid>
-      <pubDate>Tue, 31 Mar 2026 20:00:00 +0800</pubDate>
-    </item>
-    <item>
-      <title>Hessian-informed machine learning interatomic potential towards bridging theory and experiments</title>
-      <link>https://seed.bytedance.com/zh/public_papers/hessian-informed-machine-learning-interatomic-potential-towards-bridging-theory-and-experiments</link>
-      <description>Local curvature of potential energy surfaces is critical for predicting certain experimental observables of molecules and materials from first principles, yet it remains far beyond reach for complex systems. In this work, we introduce a Hessian-informed Machine Learning Interatomic Potential (Hi-MLIP) that captures such curvature reliably, thereby enabling accurate analysis of associated thermodynamic and kinetic phenomena. To make Hessian supervision practically viable, we develop a highly efficient training protocol, termed Hessian INformed Training (HINT), achieving two to four orders of magnitude reduction for the requirement of expensive Hessian labels. HINT integrates critical techniques, including Hessian pre-training, configuration sampling, curriculum learning and stochastic projection Hessian loss. Enabled by HINT, Hi-MLIP significantly improves transition-state search and brings Gibbs free-energy predictions close to chemical accuracy especially in data-scarce regimes. Our framework also enables accurate treatment of strongly anharmonic hydrides, reproducing phonon renormalization and superconducting critical temperatures in close agreement with experiment while bypassing the computational bottleneck of anharmonic calculations. These results establish a practical route to enhancing curvature awareness of machine learning interatomic potentials, bridging simulation and experimental observables across a wide range of systems.
-
-arXiv: https://arxiv.org/pdf/2603.25373</description>
-      <guid isPermaLink="false">1776665736498</guid>
-      <pubDate>Thu, 26 Mar 2026 00:00:00 +0800</pubDate>
-    </item>
-    <item>
-      <title>Towards Generalizable Robotic Data Flywheel: High-Dimensional Factorization and Composition</title>
-      <link>https://seed.bytedance.com/zh/public_papers/towards-generalizable-robotic-data-flywheel-high-dimensional-factorization-and-composition</link>
-      <description>The lack of sufficiently diverse data, coupled with limited data efficiency, remains a major bottleneck for generalist robotic models, yet systematic strategies for collecting and curating such data are not fully explored. Task diversity arises from implicit factors that are sparsely distributed across multiple dimensions and are difficult to define explicitly. To address this challenge, we propose F-ACIL, a heuristic factor-aware compositional iterative learning framework that enables structured data factorization and promotes compositional generalization. F-ACIL decomposes the data distribution into structured factor spaces such as object, action, and environment. Based on the factorized formulation, we develop a factor-wise data collection and an iterative training paradigm that promotes compositional generalization over the high-dimensional factor space, leading to more effective utilization of real-world robotic demonstrations. With extensive real-world experiments, we show that F-ACIL can achieve more than 45% performance gains with 5-10× fewer demonstrations comparing to that of which without the strategy. The results suggest that structured factorization offers a practical pathway toward efficient compositional generalization in real-world robotic learning. We believe F-ACIL can inspire more systematic research on building generalizable robotic data flywheel strategies.
-
-arXiv: https://arxiv.org/pdf/2603.25583</description>
-      <guid isPermaLink="false">1776666117326</guid>
-      <pubDate>Thu, 26 Mar 2026 00:00:00 +0800</pubDate>
-    </item>
-    <item>
-      <title>TopoMesh: High-Fidelity Mesh Autoencoding via Topological Unification</title>
-      <link>https://seed.bytedance.com/zh/public_papers/topomesh-high-fidelity-mesh-autoencoding-via-topological-unification</link>
-      <description>The dominant paradigm for high-fidelity 3D generation relies on a VAE-Diffusion pipeline, where the VAE's reconstruction capability sets a firm upper bound on generation quality. A fundamental challenge limiting existing VAEs is the representation mismatch between ground-truth meshes and network predictions: GT meshes have arbitrary, variable topology, while VAEs typically predict fixed-structure implicit fields (\eg, SDF on regular grids). This inherent misalignment prevents establishing explicit mesh-level correspondences, forcing prior work to rely on indirect supervision signals such as SDF or rendering losses. Consequently, fine geometric details, particularly sharp features, are poorly preserved during reconstruction. To address this, we introduce TopoMesh, a sparse voxel-based VAE that unifies both GT and predicted meshes under a shared Dual Marching Cubes (DMC) topological framework. Specifically, we convert arbitrary input meshes into DMC-compliant representations via a remeshing algorithm that preserves sharp edges using an L∞ distance metric. Our decoder outputs meshes in the same DMC format, ensuring that both predicted and target meshes share identical topological structures. This establishes explicit correspondences at the vertex and face level, allowing us to derive explicit mesh-level supervision signals for topology, vertex positions, and face orientations with clear gradients. Our sparse VAE architecture employs this unified framework and is trained with Teacher Forcing and progressive resolution training for stable and efficient convergence. Extensive experiments demonstrate that TopoMesh significantly outperforms existing VAEs in reconstruction fidelity, achieving superior preservation of sharp features and geometric details.
-
-arXiv: https://arxiv.org/pdf/2603.24278</description>
-      <guid isPermaLink="false">1776933945083</guid>
-      <pubDate>Wed, 25 Mar 2026 00:00:00 +0800</pubDate>
-    </item>
-    <item>
-      <title>UniGRPO: Unified Policy Optimization for Reasoning-Driven Visual Generation</title>
-      <link>https://seed.bytedance.com/zh/public_papers/unigrpo-unified-policy-optimization-for-reasoning-driven-visual-generation</link>
-      <description>Unified models capable of interleaved generation have emerged as a promising paradigm, with the community increasingly converging on autoregressive modeling for text and flow matching for image generation. To advance this direction, we propose a unified reinforcement learning framework tailored for interleaved generation. We validate our approach on its fundamental unit: a single round of reasoning-driven image generation, where the model first expands the user prompt through reasoning, followed by image synthesis. Formulating this multimodal generation process as a Markov Decision Process with sparse terminal rewards, we introduce UniGRPO to jointly optimize text and image generation policies using GRPO. Adopting a minimalist methodology to avoid over-design, we leverage established training recipes for both modalities by seamlessly integrating standard GRPO for reasoning and FlowGRPO for visual synthesis. To ensure scalability to multi-round interleaved generation, we introduce two critical modifications to the original FlowGRPO: (1) eliminating classifier-free guidance to maintain linear, unbranched rollouts, which is essential for scaling to complex scenarios involving multi-turn interactions and multi-condition generation (e.g., editing); and (2) replacing the standard latent KL penalty with an MSE penalty directly on the velocity fields, providing a more robust and direct regularization signal to mitigate reward hacking effectively. Our experiments demonstrate that this unified training recipe significantly enhances image generation quality through reasoning, providing a robust and scalable baseline for the future post-training of fully interleaved models.
-
-arXiv: https://arxiv.org/pdf/2603.23500</description>
-      <guid isPermaLink="false">1776933641787</guid>
-      <pubDate>Tue, 24 Mar 2026 00:00:00 +0800</pubDate>
-    </item>
-    <item>
-      <title>SIMART: Decomposing Monolithic Meshes into Sim-ready Articulated Assets via MLLM</title>
-      <link>https://seed.bytedance.com/zh/public_papers/simart-decomposing-monolithic-meshes-into-sim-ready-articulated-assets-via-mllm</link>
-      <description>High-quality articulated 3D assets are indispensable for embodied AI and physical simulation, yet 3D generation still focuses on static meshes, leaving a gap in "sim-ready" interactive objects. Most recent articulated object creation methods rely on multi-stage pipelines that accumulate errors across decoupled modules. Alternatively, unified MLLMs offer a single-stage path to joint static asset understanding and sim-ready asset generation. However dense voxel-based 3D tokenization yields long 3D token sequences and high memory overhead, limiting scalability to complex articulated objects. To address this, we propose SIMART, a unified MLLM framework that jointly performs part-level decomposition and kinematic prediction. By introducing a Sparse 3D VQ-VAE, SIMART reduces token counts by 70% vs. dense voxel tokens, enabling high-fidelity multi-part assemblies. SIMART achieves state-of-the-art performance on PartNet-Mobility and in-the-wild AIGC datasets, and enables physics-based robotic simulation.
-
-arXiv: https://arxiv.org/pdf/2603.23386</description>
-      <guid isPermaLink="false">1776666339989</guid>
-      <pubDate>Tue, 24 Mar 2026 00:00:00 +0800</pubDate>
-    </item>
-    <item>
-      <title>Development and large-scale benchmarks of a protein-ligand absolute binding free energy toolkit</title>
-      <link>https://seed.bytedance.com/zh/public_papers/development-and-large-scale-benchmarks-of-a-protein-ligand-absolute-binding-free-energy-toolkit</link>
-      <description>Absolute binding free energy (ABFE) calculations offer a theoretically rigorous approach for predicting protein--ligand binding affinities without the scaffold constraints of relative binding free energy (RBFE) perturbations. However, broad adoption of ABFE in high-throughput hit discovery campaigns has been hindered by high computational costs and a lack of large-scale validation. Here, we present Felis, an open-source, automated, and scalable toolkit designed for high-throughput ABFE calculations. Paired with ByteFF, a previously developed data-driven molecular mechanics force field for drug-like molecules, Felis achieves ranking performance comparable to state-of-the-art RBFE methods on a diverse dataset comprising 43 protein targets and 859 ligands. Furthermore, we demonstrate robust convergence and ranking performance of Felis on a more challenging KRAS(G12D) dataset, where some ligands and the cofactor are highly charged. Crucially, all Felis predictions in this study were generated in a strict zero-shot manner, eschewing custom force-field modifications and alchemical schedule fine-tuning. This demonstrates the viability of Felis as an effective, ready-to-use tool for computational structure-based drug design.
-
-arXiv: https://arxiv.org/pdf/2603.22274</description>
-      <guid isPermaLink="false">1776665446376</guid>
-      <pubDate>Mon, 23 Mar 2026 00:00:00 +0800</pubDate>
     </item>
   </channel>
 </rss>
