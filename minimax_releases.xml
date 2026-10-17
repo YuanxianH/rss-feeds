@@ -7,7 +7,7 @@
     <docs>http://www.rssboard.org/rss-specification</docs>
     <generator>RSS Creator</generator>
     <language>zh-CN</language>
-    <lastBuildDate>Sat, 17 Oct 2026 06:41:55 +0000</lastBuildDate>
+    <lastBuildDate>Sat, 17 Oct 2026 11:27:39 +0000</lastBuildDate>
     <item>
       <title>awesome-minimax-integrations</title>
       <link>https://github.com/MiniMax-AI/awesome-minimax-integrations</link>
@@ -221,7 +221,7 @@
     <item>
       <title>skills</title>
       <link>https://github.com/MiniMax-AI/skills</link>
-      <description>[GitHub Repo] | Language: C# | Stars: 13713</description>
+      <description>[GitHub Repo] | Language: C# | Stars: 13711</description>
       <guid isPermaLink="true">https://github.com/MiniMax-AI/skills</guid>
       <pubDate>Tue, 17 Mar 2026 07:19:25 +0000</pubDate>
     </item>
@@ -256,14 +256,14 @@
     <item>
       <title>minimax-code</title>
       <link>https://github.com/MiniMax-AI/minimax-code</link>
-      <description>[GitHub Repo] | An open-source coding agent for your terminal, powered by MiniMax. | Language: TypeScript | Stars: 2041 | Topics: coding-agents, harness, minimax</description>
+      <description>[GitHub Repo] | An open-source coding agent for your terminal, powered by MiniMax. | Language: TypeScript | Stars: 2042 | Topics: coding-agents, harness, minimax</description>
       <guid isPermaLink="true">https://github.com/MiniMax-AI/minimax-code</guid>
       <pubDate>Mon, 01 Jun 2026 12:39:40 +0000</pubDate>
     </item>
     <item>
       <title>MiniMax-M3</title>
       <link>https://huggingface.co/MiniMaxAI/MiniMax-M3</link>
-      <description>[HuggingFace Model] | image-text-to-text | Likes: 1582 | Tags: transformers, safetensors, minimax_m3_vl, image-text-to-text, multimodal</description>
+      <description>[HuggingFace Model] | image-text-to-text | Likes: 1583 | Tags: transformers, safetensors, minimax_m3_vl, image-text-to-text, multimodal</description>
       <guid isPermaLink="true">https://huggingface.co/MiniMaxAI/MiniMax-M3</guid>
       <pubDate>Tue, 02 Jun 2026 07:49:31 +0000</pubDate>
     </item>
@@ -284,14 +284,14 @@
     <item>
       <title>MiniMax-H3</title>
       <link>https://huggingface.co/MiniMaxAI/MiniMax-H3</link>
-      <description>[HuggingFace Model] | image-text-to-video | Likes: 6178 | Tags: minimax-h3, diffusers, safetensors, text-to-video, image-to-video</description>
+      <description>[HuggingFace Model] | image-text-to-video | Likes: 6181 | Tags: minimax-h3, diffusers, safetensors, text-to-video, image-to-video</description>
       <guid isPermaLink="true">https://huggingface.co/MiniMaxAI/MiniMax-H3</guid>
       <pubDate>Tue, 28 Jul 2026 10:45:18 +0000</pubDate>
     </item>
     <item>
       <title>MiniMax-H3</title>
       <link>https://github.com/MiniMax-AI/MiniMax-H3</link>
-      <description>[GitHub Repo] | Language: Python | Stars: 10059</description>
+      <description>[GitHub Repo] | Language: Python | Stars: 10066</description>
       <guid isPermaLink="true">https://github.com/MiniMax-AI/MiniMax-H3</guid>
       <pubDate>Thu, 30 Jul 2026 08:41:09 +0000</pubDate>
     </item>
@@ -305,7 +305,7 @@
     <item>
       <title>MiniMax-Music3</title>
       <link>https://github.com/MiniMax-AI/MiniMax-Music3</link>
-      <description>[GitHub Repo] | Stars: 961</description>
+      <description>[GitHub Repo] | Stars: 962</description>
       <guid isPermaLink="true">https://github.com/MiniMax-AI/MiniMax-Music3</guid>
       <pubDate>Tue, 11 Aug 2026 08:01:03 +0000</pubDate>
     </item>
@@ -340,7 +340,7 @@
     <item>
       <title>MiniMax-Code-MiniApps</title>
       <link>https://github.com/MiniMax-AI/MiniMax-Code-MiniApps</link>
-      <description>[GitHub Repo] | Language: JavaScript | Stars: 23 | Topics: community, miniapp, minimax, minimax-code, minimax-code-miniapp, plugins</description>
+      <description>[GitHub Repo] | Language: JavaScript | Stars: 25 | Topics: community, miniapp, minimax, minimax-code, minimax-code-miniapp, plugins</description>
       <guid isPermaLink="true">https://github.com/MiniMax-AI/MiniMax-Code-MiniApps</guid>
       <pubDate>Sun, 20 Sep 2026 07:44:29 +0000</pubDate>
     </item>
