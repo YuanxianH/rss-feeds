@@ -7,7 +7,140 @@
     <docs>http://www.rssboard.org/rss-specification</docs>
     <generator>RSS Creator</generator>
     <language>zh-CN</language>
-    <lastBuildDate>Sun, 18 Oct 2026 20:15:00 +0000</lastBuildDate>
+    <lastBuildDate>Sun, 18 Oct 2026 22:50:50 +0000</lastBuildDate>
+    <item>
+      <title>Grok Build 1.0.62</title>
+      <link>https://x.ai/changelog/build#v1.0.62-2026-10-16</link>
+      <description>Headless mode ( grok -p ) waits for the follow-up turn that a finished background task starts before exiting, and a --background-wait-timeout that stops pending work exits with an error instead of success
+Cold /resume from the dashboard overlay keeps the overlay attached, so you can still back out with Left or Ctrl+\
+Enter on a highlighted slash command with optional arguments runs the command instead of leaving a trailing space in the composer
+CLI commands such as grok models , grok sessions and grok export no longer crash when their output pipe closes early, such as when piped to head , or when the output device is full
+grok update and grok login no longer crash when stdout or stderr is closed or unwritable</description>
+      <guid isPermaLink="true">https://x.ai/changelog/build#v1.0.62-2026-10-16</guid>
+      <pubDate>Fri, 16 Oct 2026 00:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>Grok Build 1.0.61</title>
+      <link>https://x.ai/changelog/build#v1.0.61-2026-10-16</link>
+      <description>Resume picker finds sessions whose titles contain every word you type, in any order
+/resume &lt;id or name&gt; opens the session directly when the ID or title matches exactly one session, instead of always opening the picker
+Dashboard peek text can be selected by dragging over it with the mouse, and the selection is copied to the clipboard when you release
+Workflow run views scroll toward newer agents when you wheel down the agent roster, instead of snapping back
+Hook spawn failures on Windows name the program that failed to start, such as PowerShell or Git Bash, instead of blaming the hook script</description>
+      <guid isPermaLink="true">https://x.ai/changelog/build#v1.0.61-2026-10-16</guid>
+      <pubDate>Fri, 16 Oct 2026 00:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>Grok Build 1.0.60</title>
+      <link>https://x.ai/changelog/build#v1.0.60-2026-10-15</link>
+      <description>grok --resume &lt;title&gt; lists matching sessions newest first with when each was last updated, and suggests similar titles when nothing matches
+Shift+Y in the fullscreen markdown viewer copies the code block under the cursor
+grok --resume &lt;title&gt; with a title that matches no local session reports the miss right away instead of trying a remote restore and asking you to sign in
+Esc on the first question in a session opened from the dashboard moves focus to the scrollback, as it does in a standalone session, instead of returning to the dashboard</description>
+      <guid isPermaLink="true">https://x.ai/changelog/build#v1.0.60-2026-10-15</guid>
+      <pubDate>Thu, 15 Oct 2026 00:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>Grok Build 1.0.59</title>
+      <link>https://x.ai/changelog/build#v1.0.59-2026-10-14</link>
+      <description>Dashboard /loop without a prompt shows its usage instead of starting a new session
+grok --resume &lt;title&gt; matches a title whatever separates its words, so fix-login-bug finds "Fix login bug"
+[Copy] buttons appear under code blocks in finished replies, labeled with the language or file name of the code
+Dashboard peek replies waiting on a clipboard paste are canceled with a toast when you move the peek to another row or press Esc, instead of being sent later
+grok worktree rm no longer suggests -f for a worktree that -f would also refuse to remove
+Advanced PowerShell inline hooks that read $input run with a warning instead of failing
+Hooks that return continue: false stop the turn instead of being ignored
+Copy rows under code blocks, tables, and diagrams display correctly after switching between minimal and fullscreen modes
+Copying a code block or a whole reply keeps its original tabs instead of turning them into spaces</description>
+      <guid isPermaLink="true">https://x.ai/changelog/build#v1.0.59-2026-10-14</guid>
+      <pubDate>Wed, 14 Oct 2026 00:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>Grok Build 1.0.58</title>
+      <link>https://x.ai/changelog/build#v1.0.58-2026-10-14</link>
+      <description>Minor bug fixes</description>
+      <guid isPermaLink="true">https://x.ai/changelog/build#v1.0.58-2026-10-14</guid>
+      <pubDate>Wed, 14 Oct 2026 00:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>Grok Build 1.0.57</title>
+      <link>https://x.ai/changelog/build#v1.0.57-2026-10-14</link>
+      <description>Minor bug fixes</description>
+      <guid isPermaLink="true">https://x.ai/changelog/build#v1.0.57-2026-10-14</guid>
+      <pubDate>Wed, 14 Oct 2026 00:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>Grok Build 1.0.56</title>
+      <link>https://x.ai/changelog/build#v1.0.56-2026-10-13</link>
+      <description>Minor bug fixes</description>
+      <guid isPermaLink="true">https://x.ai/changelog/build#v1.0.56-2026-10-13</guid>
+      <pubDate>Tue, 13 Oct 2026 00:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>Grok Build 1.0.55</title>
+      <link>https://x.ai/changelog/build#v1.0.55-2026-10-13</link>
+      <description>Minor bug fixes</description>
+      <guid isPermaLink="true">https://x.ai/changelog/build#v1.0.55-2026-10-13</guid>
+      <pubDate>Tue, 13 Oct 2026 00:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>Grok Build 1.0.54</title>
+      <link>https://x.ai/changelog/build#v1.0.54-2026-10-12</link>
+      <description>/resume takes an optional session id or title and opens the picker filtered to matching sessions
+Pasted Windows line endings reach the model as newlines, markdown images no longer show a stray "!", and dollar amounts that are not math stay plain text
+Write approval cards show a binary or unreadable file as unreadable instead of garbled text
+Prompts you send while a session is resuming at startup are queued and sent once it loads instead of staying in the composer
+A corrupt session list no longer stops new sessions from registering: grok keeps a backup, salvages the rows it can read, and warns you
+Wrapped URLs in shell command descriptions link to the full address on every row
+Worktree forks ( grok -w -r or /fork into a worktree) run in and show the worktree path, so a shell command no longer edits the original checkout
+Links are clickable in herdr panes
+Memory search shows the matching part of a long line instead of cutting it off before the match
+/memory skips a symlinked note instead of failing the whole listing
+Startup is faster when TMUX names a tmux server that has stopped
+Failed MCP tool rows wrap the error to the screen width and keep its line breaks
+[skills].ignore matches a symlinked SKILL.md by the folder that holds it
+Failed file reads expand to show why they failed
+Send now ( Ctrl+Enter ) on a slash command runs or queues it as a command instead of sending it as a prompt
+The idle welcome screen uses less CPU
+Typing in a prompt that holds large pastes is faster, and prompt undo history is capped so deleted pastes no longer stay in memory
+Long sessions use less memory after long replies scroll off screen</description>
+      <guid isPermaLink="true">https://x.ai/changelog/build#v1.0.54-2026-10-12</guid>
+      <pubDate>Mon, 12 Oct 2026 00:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>Grok Build 1.0.53</title>
+      <link>https://x.ai/changelog/build#v1.0.53-2026-10-12</link>
+      <description>Wrapped shell commands in tool and background-task rows copy back as one line
+/hooks lists load errors from inline hooks and from plugins
+--tools and --disallowed-tools also apply in the interactive TUI
+/goal pauses after three continuations in a row with no tool call; run /goal resume to continue
+Quitting warns when it would stop a running workflow and asks you to confirm with a second quit
+Multi-file edits show how many other files the edit changed
+Worktrees created from a repository subfolder report the repository root as their source in grok worktree list and grok worktree show
+/feedback stays open while you type when a permission request, question, or MCP prompt arrives
+Persistent shell runs your command even when restoring its saved state fails
+/fork is refused while an approval request is open, so the approval keys keep answering that request
+grok --help and grok --version no longer create a .grok folder
+Wrapped URLs in tool headers link to the full address on every row
+/workflow stop and /workflow pause no longer pick a run from a loose fuzzy match, and headless -p runs print each refused approval request to stderr
+Workflow run views list agents outside a declared phase and count only finished agents as done
+Parallel MCP tool calls that ask for input each show their own prompt
+/feedback Drafts load the valid drafts when one saved draft is invalid
+grok sessions list and /resume keep working when one session directory is unreadable
+grok plugin install interrupted mid-clone on Linux no longer leaves a partial folder that blocks the retry
+Hooks you disabled stay disabled when the disabled-hooks file cannot be read
+Edit diffs mark removed and added lines with - and + when color is off
+Session usage keeps every turn when two windows write to the same session
+Failed directory listings expand to show why they failed
+Stdio MCP servers expand a leading ~ in their command and arguments to your home directory
+Editing a queued command such as /compact is refused with a message, so your new text is kept
+/docs opens the exact guide or picker you type
+grok inspect warns when a known [features] key in config.toml has a non-boolean value
+Send now ( Ctrl+Enter ) no longer answers the stop-subagents panel or an MCP prompt card
+@-mentions reuse the file list until the folder tree changes, so suggestions appear faster</description>
+      <guid isPermaLink="true">https://x.ai/changelog/build#v1.0.53-2026-10-12</guid>
+      <pubDate>Mon, 12 Oct 2026 00:00:00 +0000</pubDate>
+    </item>
     <item>
       <title>Grok Build 1.0.52</title>
       <link>https://x.ai/changelog/build#v1.0.52-2026-10-11</link>
