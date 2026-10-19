@@ -7,7 +7,14 @@
     <docs>http://www.rssboard.org/rss-specification</docs>
     <generator>RSS Creator</generator>
     <language>zh-CN</language>
-    <lastBuildDate>Mon, 19 Oct 2026 12:27:08 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 19 Oct 2026 19:06:04 +0000</lastBuildDate>
+    <item>
+      <title>Muse Glimmer 30B: An On-Device Agentic Model</title>
+      <link>https://ai.meta.com/research/publications/muse-glimmer-30b-an-on-device-agentic-model/</link>
+      <description>Muse Glimmer team</description>
+      <guid isPermaLink="true">https://ai.meta.com/research/publications/muse-glimmer-30b-an-on-device-agentic-model/</guid>
+      <pubDate>Mon, 19 Oct 2026 00:00:00 +0000</pubDate>
+    </item>
     <item>
       <title>Return Visits, Admission, and Mortality After Leaving Without Being Seen Among Emergency Department Patients With Behavioral Health Presentations</title>
       <link>https://ai.meta.com/research/publications/return-visits-admission-and-mortality-after-leaving-without-being-seen-among-emergency-department-patients-with-behavioral-health-presentations/</link>
@@ -84,13 +91,6 @@
       <description>Charles Arnal, Ahmad Rammal, Niket Patel, Fabian Gloeckle, Bartosz Piotrowski, Amaury Hayat, Julia Kempe, Remi Munos, Vivien Cabannes</description>
       <guid isPermaLink="true">https://ai.meta.com/research/publications/autoformbench-a-lean-formalization-benchmark-for-advanced-mathematics/</guid>
       <pubDate>Tue, 13 Oct 2026 00:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>Tightness of the Cycle-Based Relaxation for Completed Length-Three Alpha-Cycles</title>
-      <link>https://ai.meta.com/research/publications/tightness-of-the-cycle-based-relaxation-for-completed-length-three-alpha-cycles/</link>
-      <description>Aykut Arslan</description>
-      <guid isPermaLink="true">https://ai.meta.com/research/publications/tightness-of-the-cycle-based-relaxation-for-completed-length-three-alpha-cycles/</guid>
-      <pubDate>Fri, 02 Oct 2026 00:00:00 +0000</pubDate>
     </item>
     <item>
       <title>Energy-Based Models for Atomic-Resolution Protein Conformations | Facebook AI Research</title>
