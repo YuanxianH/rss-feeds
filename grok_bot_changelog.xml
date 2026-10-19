@@ -7,7 +7,118 @@
     <docs>http://www.rssboard.org/rss-specification</docs>
     <generator>RSS Creator</generator>
     <language>zh-CN</language>
-    <lastBuildDate>Mon, 19 Oct 2026 19:06:19 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 19 Oct 2026 23:24:29 +0000</lastBuildDate>
+    <item>
+      <title>Smarter notifications and larger file attachments (0.71.2)</title>
+      <link>https://x.ai/changelog/bot#v0.71.2</link>
+      <description>New
+Bots can send from a tagged form of their email address, like name+shop@, and a routine on that tag runs only for its mail.
+Forms a Bot asks you to fill in can arrive with known fields filled in, and you can edit them before you submit.
+While a paid account merge is still moving this account's data, Settings shows Your accounts are being merged, with Contact Support if it runs long.
+Team admins can turn off Messaging between Bots under Bot capabilities on the dashboard, so members' Bots can't message or hand work to other Bots. Teams
+Enterprise team admins can recreate, terminate, or delete members' Grok Bot computers from Manage Bot Computers on the dashboard or through the Admin API. Enterprise
+When a Bot's computer runs low on disk, the Bot tells you once, names the biggest files, and deletes them only if you agree.
+Improved
+While you use Grok Bot on a Mac or Windows PC, Bot replies and questions notify you there instead of your phone. Requires Grok Bot 0.70.2 or later.
+You can attach files up to 250 MB and videos up to 1 GB, and the Bot says when a video is too large to watch. Requires Grok Bot 0.70.2 or later.
+One message can carry up to 20 attachments instead of 6, and a notice says how many weren't added past the 200 MB total.
+Images a Bot creates or captures, and files from cloud agents it started, load in the chat while its computer is asleep.
+If a voice chat's connection drops, the call reconnects and continues the same conversation instead of ending.
+Bots can use up to 200 skills from your installed plugins instead of 24, so skills from plugins you add are no longer left out.
+When a Bot's computer is asleep, clicking the Computer is asleep preview wakes it in place, replacing the separate Wake button.
+Grok Bot opens while the Bot's computer is still starting, instead of waiting behind a full-window Setting up Grok Bot's computer screen.
+Sending while the Bot's computer wakes no longer shows Waiting to send… under your message or Waking your computer… in the message box.
+Bots can archive, move, delete, flag, or mark many Outlook messages as read or unread in one step instead of one at a time.
+At checkout, Bots use card details or photos you send in chat, asking only for missing fields or a verification code in a Secure Form.
+When GitHub can't see a repository, the Bot stops retrying and gives you a link to the GitHub page where you grant access.
+Bot searches on X with date limits, minimum likes or reposts, or filters X doesn't support now return posts instead of being rejected.
+When a Bot asks you to choose with a question card, it no longer repeats the question and options in a message beside it.
+Email drafts from a Bot's own address show attachments as file cards, marked when they can't be sent, changed since attached, are too large, or weren't scanned.
+Merging accounts finishes when both accounts have files on the Bot's computer, keeping both sets and adding (from transferred account) to clashing file names.
+In Team Bot Slack setup, Connect goes straight to Slack, Awaiting admin approval offers Resubmit, and a denied request shows when it was denied. Teams
+When a Team Bot asks to use your connected account, the card explains the access covers only your own messages and others can't use it. Teams
+Captions in the full-screen image viewer show formatting and clickable links, and images keep their size as you page between them.
+In a Bot's info pane, the name reads as plain text until you hover or click to rename it, and screen readers announce it as editable.
+On approval cards, the rule under labels such as Paused by your Ask first rule shows as plain text, without a box or quotation marks.
+Animated Bot avatars in the sidebar and a chat's activity line move more smoothly.
+When GitHub isn't connected, the Bot offers a single Connect GitHub action instead of listing every GitHub tool.
+A voice call from your phone wakes the Bot's sleeping computer, so the Bot can work with what you said after the call.
+Fixed
+While the Bot's computer is asleep, Grok Bot keeps what it loaded and says Your computer is asleep instead of showing Couldn't refresh or connection errors.
+When the Bot's computer updates, a working Bot reconnects to the new computer and keeps going.
+When the Bot's computer fails to wake, the Bot says it couldn't start instead of retrying as if it were still starting up.
+Images and files a Bot shares from its computer still load in the chat when the app can't fetch them from that computer directly.
+Opening a file right after you send it shows its contents instead of File unavailable.
+When the server fails an attachment upload, Grok Bot says Couldn't upload an attachment and keeps your draft, instead of asking you to check your connection.
+When your computer sleeps, Bots treat it as disconnected within two minutes and say so right away, instead of waiting for commands to time out.
+After a Wi-Fi, VPN, or other network change, Bots can run tasks on your computer right away instead of finding it unreachable.
+Commands a Bot runs on your computer keep going through brief connection stalls and long waits instead of failing as temporarily unreachable.
+If work is meant for one of your computers that's offline, the Bot tells you instead of running it on another computer without asking.
+Background jobs a Bot starts on your Mac, such as a local server, keep running after the command returns.
+Plugin and Auto-review settings changes keep reaching the Bot's computer after Grok Bot reconnects, instead of stalling until a restart.
+When a Bot asks to wait on a command longer than the time limit, it's told the limit right away instead of timing out.
+When a safety check blocks a Bot's reply, the chat shows Blocked by a safety check and Try a different message instead of a generic error.
+Tables in Bot replies stay within the reply's width and scroll sideways when they need more room.
+Attachments in one message that share a file name are numbered, such as report.pdf (2), so you can open or remove the right one.
+On Windows, pasting text copied from a list into the message box keeps it inline instead of splitting it into extra paragraphs.
+On Windows and Linux, text copied from a chat pastes into other apps with non-English characters and curly quotes intact.
+Opening Grok Bot to a restored chat no longer flashes a Couldn't refresh bar above the message box.
+Switching accounts or signing back in shows the app's loading frame instead of a blank white window.
+Switching accounts while a queued message is canceled or refused no longer puts its text and attachments in the other account's message box.
+Accounts without Grok Bot access finish setup and see just the access notice, without setup or load errors.
+When the Bot you had open is deleted on another device, Grok Bot opens another of your Bots instead of an empty pane.
+Deleting several Bots at once still deletes the rest when one fails, and the alert names only the Bot that failed.
+Sidebar section changes that can't be saved stay put with Can't reach your computer and Retry, then save once your computer is reachable.
+In the collapsed sidebar, a Bot list that can't load shows a warning icon with retry instead of text squeezed letter by letter.
+The full-screen computer view no longer shows a cut-off snippet of a subagent's instructions or a Couldn't load subagents line.
+When a Bot's routines fail to load, Couldn't load routines appears inside the Routines section of its details pane.
+With the details pane open and no Bot selected, a failed primary Bot load shows Couldn't load and Try again.
+When a Bot's skills can't be loaded, the @ menu no longer shows a Couldn't load skills row.
+The sidebar's number shortcut badges no longer stay on screen after you change zoom with Cmd or Ctrl.
+In the collapsed sidebar, the More unreads button is a circle with its arrow centered.
+When you drag Bots or sections in the sidebar, screen readers announce their names and where they land.
+Screen readers announce a Bot's reply even when it arrives after the announcement that the Bot stopped.
+When you Tab to a link and its preview card opens, keyboard focus moves into the card.
+When a Bot changes a routine while the app is briefly disconnected, the Routines list updates once it reconnects, without a reload.
+After onboarding creates your primary Bot, the Introducing your primary Bot chooser no longer asks you to pick one again.
+After you answer a request to use your computer, the Bot's sidebar row shows Allowed, Denied, or Expired instead of Permission required.
+When you pause and keep talking in a voice chat, the transcript extends your line instead of repeating it, and leaves out noise tags.
+Connector calls no longer time out after one minute: they wait up to two minutes for a reply, and longer while the connector reports progress.
+Bots see the full parameters of tools on connectors from Grok, so they call those tools correctly instead of guessing.
+Bots hit X's rate limit less often when searching X or reading posts, and a rate-limited call no longer counts toward your X read limit.
+Bots work with a specific Stripe customer, invoice, subscription, or payment on the first try instead of hitting a missing parameter error.
+Stop also ends a Bot's background subagents, so their results no longer wake the Bot afterward, and their pending approval cards expire.
+When you hand the Bot's computer back with I'm done or Skip, the Bot posts its answer in the chat instead of sometimes staying silent.
+Scripts a Bot runs in its browser no longer fail over extra or out-of-range settings, so browser tasks finish more often.
+Secure Form fills fields on more websites, including inside embedded frames from other sites, instead of leaving them empty.
+When a routine needs to sign in to a site, it asks you in chat at that step instead of quietly stopping.
+Bots ask for logins and other multi-field details on one Secure Form instead of a secret request card that holds a single value.
+Screenshot, computer, and browser actions keep working when you haven't connected 1Password, instead of failing on a saved-login check.
+Messaging from another time zone updates the zone the Bot uses for schedules and reminders right away, unless you chose one under Timezone in Settings.
+Bots with any shape the avatar editor offers, such as sparkle or star, can be shared as templates without the Bot changing its look.
+Emails that arrive in a Bot's own inbox keep each link's web address, so the Bot can open verification and sign-in links.
+Email sent to a Bot's own address arrives even when its subject, sender address, or thread references are very long.
+After you choose Disable drafts for a Bot, it sends email from its own address right away, without a draft card.
+After a Bot claims an email address, opening Email or Plugins shows it as Connected instead of still offering Connect.
+When you allow a Team Bot to use one of your plugins, its tools work right away instead of the Bot failing to find them. Teams
+Plugins on a Team Bot use the settings your team admin entered, such as a Datadog site, when the Bot has none of its own. Teams
+A Team Bot still named New team bot with no description shows Draft, not Published to your team, until you rename it or add a description. Teams
+Grok Bot works under your selected team even when another team you're on uses Privacy Mode (Legacy), as long as the selected team doesn't.
+Account merges that move many Bots finish in one go instead of failing and showing Your account merge is taking longer than usual.
+When a downloaded update is withdrawn, Restart to Update goes away and Grok Bot keeps your current version, even when you quit on a Mac.
+An update download that keeps restarting from the beginning waits between tries and then stops with an error instead of retrying nonstop.
+When the update server sends a broken response, Settings says The update server returned an invalid response instead of blaming your connection.
+Restart to Update shows Restarting… and waits up to two minutes for commands a Bot is running on your computer to finish.
+When an update replaces Grok Bot's files while it runs, reloading or crash recovery relaunches the app instead of showing a blank window.
+On Linux deb and rpm installs, Update required links the latest package, leading with it when the package repository doesn't have the update yet.
+On Windows and Linux, opening Grok Bot while it's still quitting reopens it after the quit instead of leaving nothing open.
+GitHub tools stay available after a connection block and work once you reconnect, without starting a new chat.
+When Gmail refuses to open a full thread, the Bot still answers from the thread's first message.
+A connector that still needs Allow keeps its name, so the Bot asks you to allow it instead of saying it can't find it.
+A Bot keeps its connector tools while its computer is asleep, starting up, or not created yet, instead of losing them for that turn.</description>
+      <guid isPermaLink="true">https://x.ai/changelog/bot#v0.71.2</guid>
+      <pubDate>Wed, 14 Oct 2026 00:00:00 +0000</pubDate>
+    </item>
     <item>
       <title>Bot email addresses, X search, and in-chat apps (0.70.2)</title>
       <link>https://x.ai/changelog/bot#v0.70.2</link>
