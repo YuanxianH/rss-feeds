@@ -7,7 +7,14 @@
     <docs>http://www.rssboard.org/rss-specification</docs>
     <generator>RSS Creator</generator>
     <language>zh-CN</language>
-    <lastBuildDate>Mon, 19 Oct 2026 05:50:23 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 19 Oct 2026 12:27:23 +0000</lastBuildDate>
+    <item>
+      <title>MiniMax M3.1 Flash: Redefining Agent Performance and Cost - MiniMax Research</title>
+      <link>https://www.minimax.io/blog/minimax-m31f</link>
+      <description>Today, we officially roll out MiniMax M3.1 Flash. As a next-generation Flash model, M3.1 Flash delivers a generational leap in agentic tasks, coding, Computer Use and cybersecurity, while making online inference nearly three times faster and reducing usage costs by 70%.</description>
+      <guid isPermaLink="true">https://www.minimax.io/blog/minimax-m31f</guid>
+      <pubDate>Mon, 19 Oct 2026 00:00:00 +0000</pubDate>
+    </item>
     <item>
       <title>MiniMax Music 3.0: Next-Generation Open-Weights, Production-Ready &amp; Versatile Music Model - MiniMax Research</title>
       <link>https://www.minimax.io/blog/minimax-music-3-0-next-generation-open-weights-production-ready-versatile-music-model</link>
