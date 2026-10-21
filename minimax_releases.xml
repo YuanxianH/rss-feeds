@@ -7,7 +7,7 @@
     <docs>http://www.rssboard.org/rss-specification</docs>
     <generator>RSS Creator</generator>
     <language>zh-CN</language>
-    <lastBuildDate>Wed, 21 Oct 2026 18:27:56 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 21 Oct 2026 22:11:08 +0000</lastBuildDate>
     <item>
       <title>awesome-minimax-integrations</title>
       <link>https://github.com/MiniMax-AI/awesome-minimax-integrations</link>
@@ -25,7 +25,7 @@
     <item>
       <title>SynLogic</title>
       <link>https://github.com/MiniMax-AI/SynLogic</link>
-      <description>[GitHub Repo] | [NeurIPS 2025] The official repo of SynLogic: Synthesizing Verifiable Reasoning Data at Scale for Learning Logical Reasoning and Beyond | Language: Python | Stars: 210 | Topics: large-language-models, llms, logical-reasoning, synlogic</description>
+      <description>[GitHub Repo] | [NeurIPS 2025] The official repo of SynLogic: Synthesizing Verifiable Reasoning Data at Scale for Learning Logical Reasoning and Beyond | Language: Python | Stars: 211 | Topics: large-language-models, llms, logical-reasoning, synlogic</description>
       <guid isPermaLink="true">https://github.com/MiniMax-AI/SynLogic</guid>
       <pubDate>Fri, 23 May 2025 14:54:08 +0000</pubDate>
     </item>
@@ -228,7 +228,7 @@
     <item>
       <title>cli</title>
       <link>https://github.com/MiniMax-AI/cli</link>
-      <description>[GitHub Repo] | Generate text, images, video, speech, and music by MiniMax. | Language: TypeScript | Stars: 2200 | Topics: ai</description>
+      <description>[GitHub Repo] | Generate text, images, video, speech, and music by MiniMax. | Language: TypeScript | Stars: 2201 | Topics: ai</description>
       <guid isPermaLink="true">https://github.com/MiniMax-AI/cli</guid>
       <pubDate>Wed, 25 Mar 2026 15:34:45 +0000</pubDate>
     </item>
@@ -284,14 +284,14 @@
     <item>
       <title>MiniMax-H3</title>
       <link>https://huggingface.co/MiniMaxAI/MiniMax-H3</link>
-      <description>[HuggingFace Model] | image-text-to-video | Likes: 6265 | Tags: minimax-h3, diffusers, safetensors, text-to-video, image-to-video</description>
+      <description>[HuggingFace Model] | image-text-to-video | Likes: 6269 | Tags: minimax-h3, diffusers, safetensors, text-to-video, image-to-video</description>
       <guid isPermaLink="true">https://huggingface.co/MiniMaxAI/MiniMax-H3</guid>
       <pubDate>Tue, 28 Jul 2026 10:45:18 +0000</pubDate>
     </item>
     <item>
       <title>MiniMax-H3</title>
       <link>https://github.com/MiniMax-AI/MiniMax-H3</link>
-      <description>[GitHub Repo] | Language: Python | Stars: 10271</description>
+      <description>[GitHub Repo] | Language: Python | Stars: 10282</description>
       <guid isPermaLink="true">https://github.com/MiniMax-AI/MiniMax-H3</guid>
       <pubDate>Thu, 30 Jul 2026 08:41:09 +0000</pubDate>
     </item>
