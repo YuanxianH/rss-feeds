@@ -7,7 +7,7 @@
     <docs>http://www.rssboard.org/rss-specification</docs>
     <generator>RSS Creator</generator>
     <language>zh-CN</language>
-    <lastBuildDate>Thu, 22 Oct 2026 13:33:56 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 22 Oct 2026 18:22:38 +0000</lastBuildDate>
     <item>
       <title>EmbeddingGemma 2: an open, lightweight multimodal embedding model</title>
       <link>https://blog.google/innovation-and-ai/technology/developers-tools/embeddinggemma-2/?utm_source=deepmind.google&amp;utm_medium=referral&amp;utm_campaign=gdm&amp;utm_content=</link>
@@ -36,6 +36,12 @@
       <title>Accelerating the search for antimicrobial peptides with Google Antigravity</title>
       <link>https://deepmind.google/blog/accelerating-antimicrobial-discovery/</link>
       <guid isPermaLink="true">https://deepmind.google/blog/accelerating-antimicrobial-discovery/</guid>
+      <pubDate>Thu, 22 Oct 2026 00:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>Beyond tree cover: mapping the world’s forest types</title>
+      <link>https://deepmind.google/blog/beyond-tree-cover-mapping-the-worlds-forest-types/</link>
+      <guid isPermaLink="true">https://deepmind.google/blog/beyond-tree-cover-mapping-the-worlds-forest-types/</guid>
       <pubDate>Thu, 22 Oct 2026 00:00:00 +0000</pubDate>
     </item>
     <item>
@@ -151,12 +157,6 @@
       <link>https://blog.google/innovation-and-ai/technology/developers-tools/build-with-gemini-omni-1-1-flash/</link>
       <guid isPermaLink="true">https://blog.google/innovation-and-ai/technology/developers-tools/build-with-gemini-omni-1-1-flash/</guid>
       <pubDate>Sat, 22 Aug 2026 00:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>Gemini Robotics ER 2: powering robotics with video understanding, task orchestration, and multi-robot collaboration</title>
-      <link>https://blog.google/innovation-and-ai/models-and-research/google-deepmind/gemini-robotics-er-2/?utm_source=deepmind.google&amp;utm_medium=referral&amp;utm_campaign=gdm&amp;utm_content=</link>
-      <guid isPermaLink="true">https://blog.google/innovation-and-ai/models-and-research/google-deepmind/gemini-robotics-er-2/?utm_source=deepmind.google&amp;utm_medium=referral&amp;utm_campaign=gdm&amp;utm_content=</guid>
-      <pubDate>Wed, 22 Jul 2026 00:00:00 +0000</pubDate>
     </item>
   </channel>
 </rss>
