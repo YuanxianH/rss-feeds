@@ -7,7 +7,41 @@
     <docs>http://www.rssboard.org/rss-specification</docs>
     <generator>RSS Creator</generator>
     <language>zh-CN</language>
-    <lastBuildDate>Fri, 23 Oct 2026 18:09:14 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 23 Oct 2026 21:54:04 +0000</lastBuildDate>
+    <item>
+      <title>Vault, email forwarding, and fewer approval cards (0.75.5)</title>
+      <link>https://x.ai/changelog/bot#v0.75.5</link>
+      <description>New
+Bots can save your logins, cards, and contact info to a Vault in Settings and fill them in to sign in or check out. Requires Grok Bot 0.75.2 or later.
+Bots can forward an email from their own inbox with its original formatting, images, and attachments. Requires Grok Bot 0.75.2 or later.
+Bots record who asked for each message they post in Slack, so anyone in the thread can ask who requested it.
+For Halloween, you can give a Bot a pumpkin shape when you create it or change its avatar. Requires Grok Bot 0.75.2 or later.
+Improved
+Auto-review asks less often for an action you asked for in your own words.
+After you deny an approval card, the Bot stops and doesn't try that action again until you send another message.
+Emails and Slack messages you ask a Bot to send go out once Auto-review allows them, while sends on routine and other turns still wait as drafts.
+When the Bot hands you its computer to sign in to a site that has a connector, it also offers that connector's connect card.
+Asking a Bot about your X account connects X through your linked X account, even if you removed the X plugin.
+Connecting X also connects X Money through the same account, and asking about your X Money balance, activity, or card installs X Money.
+Your routines can run up to 300 times an hour in total instead of 100, and each routine up to 200 times.
+With Route traffic through this computer on, Settings shows how many sites were blocked because they resolve to a private or VPN address.
+Teammates in their own DM with a Team Bot can react to messages, quote with Add to chat, and answer cards. Teams
+Team Bots name connectors as your plugin list does, such as Google Slides, when they ask to use one or say whose they used. Teams
+If your Grok Business seat doesn't cover Grok Bot yet, the usage limit message says to ask your Grok Business admin to connect your team.
+Fixed
+Auto-review falls back to an approval card less often, retrying a check that fails and reviewing long chats instead of stopping.
+Auto-review no longer waves through an action your request said to stop before, such as sending a message you asked only to draft.
+Asking a Bot about your X followers gets a plain answer that X doesn't offer it, instead of a browser sign-in to X.
+After an account merge, you keep managing the Bots you created and can share them with your team.
+Plugins with several servers, such as Salesforce, show each server as its own row, so you can see and sign in to every one.
+In Slack, Bots answer thread replies that were also sent to the channel, as they do other thread replies.
+On a Team Bot's Share this Bot card, someone who manages the Bot through a group sees their role as Manager. Teams
+Work a Team Bot hands off in a shared chat can use the connectors you allowed, and its reply says whose connector it used. Teams
+When a Team Bot's routine replies in a Slack thread, the Bot follows the thread and answers later replies without an @mention. Teams
+After you reset a chat whose first message was blocked, new messages get replies instead of an error.</description>
+      <guid isPermaLink="true">https://x.ai/changelog/bot#v0.75.5</guid>
+      <pubDate>Fri, 23 Oct 2026 00:00:00 +0000</pubDate>
+    </item>
     <item>
       <title>Pages, new chat cards, and video creation (0.75.2)</title>
       <link>https://x.ai/changelog/bot#v0.75.2</link>
