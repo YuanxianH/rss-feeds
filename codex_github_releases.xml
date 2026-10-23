@@ -7,7 +7,7 @@
     <docs>http://www.rssboard.org/rss-specification</docs>
     <generator>RSS Creator</generator>
     <language>zh-CN</language>
-    <lastBuildDate>Fri, 23 Oct 2026 13:10:21 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 23 Oct 2026 18:09:14 +0000</lastBuildDate>
     <item>
       <title>0.164.0-alpha.8</title>
       <link>https://github.com/openai/codex/releases/tag/rust-v0.164.0-alpha.8</link>
@@ -1188,11 +1188,11 @@ Require managed configuration from the configured server
       <pubDate>Fri, 23 Oct 2026 04:50:58 +0000</pubDate>
     </item>
     <item>
-      <title>rust-v0.165.0-alpha.1</title>
+      <title>0.165.0-alpha.1</title>
       <link>https://github.com/openai/codex/releases/tag/rust-v0.165.0-alpha.1</link>
       <description>Release 0.165.0-alpha.1</description>
       <guid isPermaLink="false">tag:github.com,2008:Repository/965415649/rust-v0.165.0-alpha.1</guid>
-      <pubDate>Fri, 23 Oct 2026 12:40:54 +0000</pubDate>
+      <pubDate>Fri, 23 Oct 2026 14:18:55 +0000</pubDate>
     </item>
   </channel>
 </rss>
