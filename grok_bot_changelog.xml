@@ -7,7 +7,93 @@
     <docs>http://www.rssboard.org/rss-specification</docs>
     <generator>RSS Creator</generator>
     <language>zh-CN</language>
-    <lastBuildDate>Fri, 23 Oct 2026 01:18:30 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 23 Oct 2026 07:06:43 +0000</lastBuildDate>
+    <item>
+      <title>Pages, new chat cards, and video creation (0.75.2)</title>
+      <link>https://x.ai/changelog/bot#v0.75.2</link>
+      <description>New
+Bots can build Pages, such as reports, memos, and dashboards, that you edit together or have the Bot keep up to date.
+Bots can create videos from a description or from an image you share.
+You can pin Library pages, files, and links to a Pinned section that stays at the top and syncs across your devices.
+The dashboard's Pages section lists the Pages you've shared, where you can unshare or delete them.
+Hovering over or focusing a Library row shows a preview with who sent the item, when, and who can see a Page.
+Bots can pay with Shop Pay, through Shop checkout where a store accepts it and with a one-time Shop card elsewhere.
+You can connect X Money in one tap from a chat, the connector page, or checkout, after signing in to X if no X account is linked.
+Page owners can share a Page with their whole organization or with another team in it. Teams
+Team admins can limit who can share Pages with everyone on the team. Teams
+Team admins can turn on link previews that show a Team Bot's name, description, color, and shape wherever its link is posted. Teams
+A keyboard shortcuts sheet opens with ⌘/ and from Help, the profile menu, and the command palette.
+Typing &gt; at the start of a composer line starts a block quote, and Backspace at the start of a quoted line lifts it back out.
+You can reorder attachments in the composer by dragging them or by pressing Alt with the arrow keys.
+You can connect Zoho CRM and choose your account's regional data center before you sign in.
+Team admins can upload a team icon, shown in workspace selectors and on Team Bots. Teams
+Team Bot owners and managers can let collaborators create routines from Configure. Teams
+Pages can capture the pointer and fill the screen.
+The GitHub connector can list your repositories, compare commits, list a pull request's commits, and read branch and issue comments.
+The built-in Gmail connection can attach files to drafts and sends, reply all, add a note when forwarding, and set label colors.
+Bots can create, update, or delete several Google Calendar events in one step, and edited events no longer shift to a different time.
+Routines can read the Bot's inboxes.
+A task the Bot hands off can create images and videos for the chat.
+A shared Team Bot's welcome in a team or group chat includes a Chat with me link, and an owner-only Bot greets only its owner. Teams
+Enterprise team admins can permanently delete a member's Grok Bot data from Manage Member Computers and Data in Security &amp; Compliance, or through the Admin API. Enterprise
+Improved
+Cards in chat have a new design, from approvals and questions to files, links, and tables.
+The Bot details pane is one column, with a profile you click to edit above Media, Computer, and Routines tabs.
+Voice calls can draw on your earlier calls and recent chat with the Bot.
+The Bot opens links before sending them and leaves out broken ones.
+Auto-review approval cards describe the action in one sentence, name the app with its logo, and flag irreversible or sensitive changes.
+When you name a service, the Bot shows that connector's connect card in its first reply.
+When a connector signs you out or rejects a sign-in, the Bot says why, such as a restricted Google account, and how to fix it.
+When a routine hits a signed-out connector, the chat shows that connector's Reconnect card, at most once a day.
+Before a browser or desktop task that takes a few minutes, the Bot tells you it will take a while.
+If you already shared a password or code in the chat, the Bot uses it instead of refusing to continue.
+Pull requests, issues, and repositories mentioned in replies are links.
+When the Bot asks how to pay, you choose on a card.
+What a personal Bot saves to memory in one chat is remembered in all your chats with it, and only you can change it.
+Deleting a Bot permanently erases its conversations, memory, routines, and attachments, and removes its Slack app.
+The first email a Bot sends to someone new includes a one-click unsubscribe link.
+In Slack, asking the Bot to investigate, research, or check something gets a researched answer instead of a quick reply.
+Deleting your account first lists what you'd lose, and linking an already unified Grok account offers to merge into it instead of failing.
+Source links in replies show as compact citation chips, and company names as ticker pills.
+Number columns in chat tables line up on the decimal point, with header sublines, summary rows, and footnotes.
+Files you send show as cards with their type, name, and size, and captioned images offer Copy and Download on hover.
+Your reactions show the moment you tap them, and the message no longer shifts under your pointer.
+The Library opens faster for people with many Team Bots.
+Team Bots shared with you open straight to their saved conversation. Teams
+Browser sign-in waits up to 20 minutes and offers Copy link, and Reopen link resumes the same sign-in instead of starting over.
+Connect Apps shows each plugin's own logo, and setting up a plugin with your own OAuth client lists the callback URLs to register.
+A webhook routine's menu shows its URL and key, and the key stays hidden until you reveal it.
+Fixed
+Scrolling back quickly through a long chat no longer stalls before older messages load.
+Search results from further back in a chat open on the right message, even right after launch.
+Desktop notifications show Bot replies as plain text with full links, and skip replies you already read on another device.
+Voice calls survive network drops and crashes, pick your microphone back up when it reconnects, and the Bot can answer while you're muted.
+Pressing Enter once while recording a voice note sends it.
+Keyboard shortcuts, including ⌘F and the command palette, work while a Page is open, and the palette no longer closes the Page.
+Pressing Back while a Page is open closes the Page and stays on its Bot, instead of jumping to the Bot you viewed before.
+A Page's Share menu shows its current visibility, even after it changed on another device or the dashboard.
+When a message can't be saved, the app says whether your computer is out of disk space.
+The desktop app connects directly unless you've turned on a system proxy, which fixes loading behind some corporate proxies.
+When sign-in can't connect, the app asks you to check your connection instead of saying it stopped waiting for your browser.
+A new or reinstalled desktop app skips onboarding for an account that already finished it.
+Typing a follow-up leaves an open question card unanswered instead of answering it.
+Bot names mentioned with @ in a reply open that Bot's chat.
+Turning a Bot's tool on or off applies the state you saw, so an outdated list can't turn a blocked tool back on.
+When creating a Bot or publishing a Bot template is refused, the app shows the reason.
+Page cards and titles update as soon as the Bot renames a Page, and older Page cards open its latest version.
+Connect Apps waits longer for your plugins instead of showing Couldn't refresh, and built-in plugins no longer offer an Uninstall that failed.
+Buying credits, turning on auto top-up, and saving a spend limit show a confirmation or an error in the desktop app.
+Reactions and card answers you add while a Bot is working stay after its turn ends.
+An approval you don't answer in time leaves a chat line that names what expired.
+Large Google Slides edits update the live deck.
+Emails a Bot sends through Gmail show your name and the signature saved for that address, and reply drafts stay in their thread.
+Bot pictures larger than about 3 MB now save.
+A routine's result still reaches you if you send a message before the Bot finishes handing it off.
+Pausing and resuming a routine keeps your last choice, even when you tap from two devices.
+After an account merge, the remaining account keeps its Grok Bot email inbox and connector settings.</description>
+      <guid isPermaLink="true">https://x.ai/changelog/bot#v0.75.2</guid>
+      <pubDate>Thu, 22 Oct 2026 00:00:00 +0000</pubDate>
+    </item>
     <item>
       <title>Smarter notifications and larger file attachments (0.71.2)</title>
       <link>https://x.ai/changelog/bot#v0.71.2</link>
