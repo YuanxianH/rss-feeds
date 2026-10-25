@@ -7,7 +7,17 @@
     <docs>http://www.rssboard.org/rss-specification</docs>
     <generator>RSS Creator</generator>
     <language>zh-CN</language>
-    <lastBuildDate>Sun, 25 Oct 2026 10:57:15 +0000</lastBuildDate>
+    <lastBuildDate>Sun, 25 Oct 2026 14:55:26 +0000</lastBuildDate>
+    <item>
+      <title>Recycler: Cost-Free Latent Reasoning via Hidden State Recycling</title>
+      <link>https://seed.bytedance.com/zh/public_papers/recycler-cost-free-latent-reasoning-via-hidden-state-recycling</link>
+      <description>Standard autoregressive decoding links successive steps only through sampled discrete tokens, discarding the continuous semantics encoded in previous hidden states. In contrast, recurrent multitoken prediction (MTP) heads propagate both token embeddings and hidden states across steps. Remarkably, an MTP head with only ∼ 2% of the backbone parameters achieves a loss comparable to that of a standalone model ∼ 25% its size, underscoring the value of continuous hidden state feedback. Motivated by this observation, we introduce Recycler, a simple and effective architecture
+that feeds both embedding and the previous token’s hidden state through a lightweight adapter into the next step, preserving richer cross-step semantics with negligible decoding overhead. We develop a complete training and inference pipeline covering pretraining, SFT, continued pretraining and RL. Experiments demonstrate strong parameter efficiency, particularly in reasoning and mathematics. Although earlier integration yields larger gains, Recycler remains effective when introduced at later stages, outperforming models with 2–3× more parameters.
+
+arXiv: https://lf3-static.bytednsdoc.com/obj/eden-cn/hyvsmeh7uhobf/recycler_arxiv%20(2).pdf</description>
+      <guid isPermaLink="false">1792932657675</guid>
+      <pubDate>Sun, 25 Oct 2026 00:00:00 +0800</pubDate>
+    </item>
     <item>
       <title>Periodic Weak Spots: Phase Sensitivity from Chunked KV-Cache Compression</title>
       <link>https://seed.bytedance.com/zh/public_papers/periodic-weak-spots-phase-sensitivity-from-chunked-kv-cache-compression</link>
@@ -460,15 +470,6 @@ arXiv: https://arxiv.org/pdf/2603.23500</description>
 arXiv: https://arxiv.org/pdf/2603.23386</description>
       <guid isPermaLink="false">1776666339989</guid>
       <pubDate>Tue, 24 Mar 2026 00:00:00 +0800</pubDate>
-    </item>
-    <item>
-      <title>Development and large-scale benchmarks of a protein-ligand absolute binding free energy toolkit</title>
-      <link>https://seed.bytedance.com/zh/public_papers/development-and-large-scale-benchmarks-of-a-protein-ligand-absolute-binding-free-energy-toolkit</link>
-      <description>Absolute binding free energy (ABFE) calculations offer a theoretically rigorous approach for predicting protein--ligand binding affinities without the scaffold constraints of relative binding free energy (RBFE) perturbations. However, broad adoption of ABFE in high-throughput hit discovery campaigns has been hindered by high computational costs and a lack of large-scale validation. Here, we present Felis, an open-source, automated, and scalable toolkit designed for high-throughput ABFE calculations. Paired with ByteFF, a previously developed data-driven molecular mechanics force field for drug-like molecules, Felis achieves ranking performance comparable to state-of-the-art RBFE methods on a diverse dataset comprising 43 protein targets and 859 ligands. Furthermore, we demonstrate robust convergence and ranking performance of Felis on a more challenging KRAS(G12D) dataset, where some ligands and the cofactor are highly charged. Crucially, all Felis predictions in this study were generated in a strict zero-shot manner, eschewing custom force-field modifications and alchemical schedule fine-tuning. This demonstrates the viability of Felis as an effective, ready-to-use tool for computational structure-based drug design.
-
-arXiv: https://arxiv.org/pdf/2603.22274</description>
-      <guid isPermaLink="false">1776665446376</guid>
-      <pubDate>Mon, 23 Mar 2026 00:00:00 +0800</pubDate>
     </item>
   </channel>
 </rss>
