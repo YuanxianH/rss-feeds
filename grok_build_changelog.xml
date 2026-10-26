@@ -7,7 +7,45 @@
     <docs>http://www.rssboard.org/rss-specification</docs>
     <generator>RSS Creator</generator>
     <language>zh-CN</language>
-    <lastBuildDate>Mon, 26 Oct 2026 03:43:53 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 26 Oct 2026 09:51:32 +0000</lastBuildDate>
+    <item>
+      <title>Grok Build 1.0.70</title>
+      <link>https://x.ai/changelog/build#v1.0.70-2026-10-23</link>
+      <description>Answered questions now have a blank line between them, except in compact mode ( /compact-mode )
+/plugins now counts only the plugin skills that load, and says how many were skipped because they link outside the plugin folder</description>
+      <guid isPermaLink="true">https://x.ai/changelog/build#v1.0.70-2026-10-23</guid>
+      <pubDate>Fri, 23 Oct 2026 00:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>Grok Build 1.0.69</title>
+      <link>https://x.ai/changelog/build#v1.0.69-2026-10-23</link>
+      <description>Dashboard directory grouping now shows a header with the folder path and agent count above each folder of agents
+Dashboard location (branch and folder) now sits on the dispatch box top border instead of its own header row
+/resume on the dashboard now lists sessions from every folder, with the current folder and its checkouts first
+Welcome menu now lists Resume session ( Ctrl+R ) above New worktree ( Ctrl+W )
+[ui] simple_mode is retired and no longer has any effect; sessions always open with the prompt focused
+grok doctor and /doctor now point out a leftover [ui] vim_mode key (now [keys] vim ) or the retired [ui] simple_mode key in your config
+Quitting Grok returns you to your shell sooner</description>
+      <guid isPermaLink="true">https://x.ai/changelog/build#v1.0.69-2026-10-23</guid>
+      <pubDate>Fri, 23 Oct 2026 00:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>Grok Build 1.0.68</title>
+      <link>https://x.ai/changelog/build#v1.0.68-2026-10-22</link>
+      <description>Worktree create and fork now list files that could not be copied and any mode changes that were lost
+Vim navigation is now one setting, [keys] vim ( off or nav ), also set with /vim-mode ; the older [ui] vim_mode still works
+Terminal theme now draws a subtle band behind your prompts using the colors your terminal reports
+Mode-switch toast now shows the mode name (Agent, Plan, Ask) in the color of that mode
+Change-directory picker ( Ctrl+L on the dashboard) opens with the path field unfocused, like the /resume search
+Image placeholders in the transcript now show whether the actual image was sent or only the text was typed
+Worktree create now fails cleanly instead of falling back when it cannot copy tracked files or runs out of disk space
+Running Grok sessions are no longer broken when an update deletes their binary
+Dashboard model picks now keep their selected context window when spawning the next session
+Send Now prompts and rewound turns now correctly restore and mark any images that were originally sent
+Resumed sessions now show the correct sent or struck-through state for image placeholders</description>
+      <guid isPermaLink="true">https://x.ai/changelog/build#v1.0.68-2026-10-22</guid>
+      <pubDate>Thu, 22 Oct 2026 00:00:00 +0000</pubDate>
+    </item>
     <item>
       <title>Grok Build 1.0.67</title>
       <link>https://x.ai/changelog/build#v1.0.67-2026-10-21</link>
