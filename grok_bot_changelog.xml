@@ -7,15 +7,43 @@
     <docs>http://www.rssboard.org/rss-specification</docs>
     <generator>RSS Creator</generator>
     <language>zh-CN</language>
-    <lastBuildDate>Mon, 26 Oct 2026 21:26:50 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 27 Oct 2026 01:15:27 +0000</lastBuildDate>
+    <item>
+      <title>Auto-review rule cards and smarter connectors (0.75.8)</title>
+      <link>https://x.ai/changelog/bot#v0.75.8</link>
+      <description>New
+In the app, a Bot can offer to add, change, or remove one of your Auto-review rules on a card you confirm. 0.75.2+ Requires Grok Bot 0.75.2 or later
+Improved
+Auto-review takes a second look before showing an approval card, so fewer safe actions need one.
+A Bot's status line shows up right after you send, even for quick replies.
+When background work finishes, the Bot completes what you asked, including steps you said to take once it was done, and says what it would do next instead of acting on its own or on another agent's approval. 0.75.2+ Requires Grok Bot 0.75.2 or later
+Auto-review no longer counts a Bot saving or editing one of its routines as risky by itself.
+Auto-review approval cards in Slack describe the action, as they do in the app.
+Scheduling uses the calendar you've connected, Google Calendar or Outlook Calendar, and offers to connect one only when neither is.
+In a chat only you can see, a Bot reads your own private files without asking first.
+When a Bot installs a plugin while working, it can use the plugin's skills right away.
+People not on a Team Bot's share list, including teammates, no longer have access to it until an owner shares it with them. Teams
+Fixed
+When a connector such as X adds tools or fields, Bots can use them without you reconnecting it.
+A connector whose sign-in expired shows Authenticate in the app instead of Connected, matching what the Bot says. 0.71.2+ Requires Grok Bot 0.71.2 or later
+Images a connector returns as files reach the Bot as images, and other binary files are no longer read as garbled text.
+X Money connects in one tap for more X accounts, and if it can't connect yours, the Bot says so instead of offering a sign-in.
+When a Bot posts to Slack for you, such as from a routine, your phone isn't notified and its unread badge doesn't go up.
+In Slack, when a safety check blocks a Bot's reply, the Bot says so and suggests trying a different message.
+For most accounts, with Route traffic through this computer on, the connection comes back as soon as the Bot's computer wakes.
+A Team Bot's routines can read Slack channels you and the Bot are both in, instead of refusing every read. Teams
+When a Team Bot edits one of its own Slack messages, the message shows a muted (edited) label. Teams</description>
+      <guid isPermaLink="true">https://x.ai/changelog/bot#v0.75.8</guid>
+      <pubDate>Sat, 24 Oct 2026 00:00:00 +0000</pubDate>
+    </item>
     <item>
       <title>Vault, email forwarding, and fewer approval cards (0.75.5)</title>
       <link>https://x.ai/changelog/bot#v0.75.5</link>
       <description>New
-Bots can save your logins, cards, and contact info to a Vault in Settings and fill them in to sign in or check out. Requires Grok Bot 0.75.2 or later.
-Bots can forward an email from their own inbox with its original formatting, images, and attachments. Requires Grok Bot 0.75.2 or later.
+Bots can save your logins, cards, and contact info to a Vault in Settings and fill them in to sign in or check out. 0.75.2+ Requires Grok Bot 0.75.2 or later
+Bots can forward an email from their own inbox with its original formatting, images, and attachments. 0.75.2+ Requires Grok Bot 0.75.2 or later
 Bots record who asked for each message they post in Slack, so anyone in the thread can ask who requested it.
-For Halloween, you can give a Bot a pumpkin shape when you create it or change its avatar. Requires Grok Bot 0.75.2 or later.
+For Halloween, you can give a Bot a pumpkin shape when you create it or change its avatar. 0.75.2+ Requires Grok Bot 0.75.2 or later
 Improved
 Auto-review asks less often for an action you asked for in your own words.
 After you deny an approval card, the Bot stops and doesn't try that action again until you send another message.
@@ -139,8 +167,8 @@ Team admins can turn off Messaging between Bots under Bot capabilities on the da
 Enterprise team admins can recreate, terminate, or delete members' Grok Bot computers from Manage Bot Computers on the dashboard or through the Admin API. Enterprise
 When a Bot's computer runs low on disk, the Bot tells you once, names the biggest files, and deletes them only if you agree.
 Improved
-While you use Grok Bot on a Mac or Windows PC, Bot replies and questions notify you there instead of your phone. Requires Grok Bot 0.70.2 or later.
-You can attach files up to 250 MB and videos up to 1 GB, and the Bot says when a video is too large to watch. Requires Grok Bot 0.70.2 or later.
+While you use Grok Bot on a Mac or Windows PC, Bot replies and questions notify you there instead of your phone. 0.70.2+ Requires Grok Bot 0.70.2 or later
+You can attach files up to 250 MB and videos up to 1 GB, and the Bot says when a video is too large to watch. 0.70.2+ Requires Grok Bot 0.70.2 or later
 One message can carry up to 20 attachments instead of 6, and a notice says how many weren't added past the 200 MB total.
 Images a Bot creates or captures, and files from cloud agents it started, load in the chat while its computer is asleep.
 If a voice chat's connection drops, the call reconnects and continues the same conversation instead of ending.
@@ -319,7 +347,7 @@ Usage &amp; Billing shows your plan name on Current plan, and the usage meter la
       <title>Slide decks and Bot-colored chats (0.68.1)</title>
       <link>https://x.ai/changelog/bot#v0.68.1</link>
       <description>New
-Your messages in a 1:1 Bot chat take that Bot's color; set Accent to Black in Settings → General to turn it off. Requires Grok Bot 0.64.0 or later.
+Your messages in a 1:1 Bot chat take that Bot's color; set Accent to Black in Settings → General to turn it off. 0.64.0+ Requires Grok Bot 0.64.0 or later
 Bots can build slide decks with you, showing sample slides to choose from, and deliver them as PowerPoint files or Google Slides.
 Bots can send formatted emails from a draft card, so recipients see headings, bold text, and lists.
 Bots can search your Gmail Spam folder and move a message back to your inbox.
@@ -391,7 +419,7 @@ When a team admin turns off Route traffic through this computer, Settings → Co
       <title>Proactivity, primary Bot and more reliable updates (0.66.0)</title>
       <link>https://x.ai/changelog/bot#v0.66.0</link>
       <description>New
-Your primary Bot, marked with a star, will now spot work it can take off your plate and offer to handle it. Requires Grok Bot 0.59.0 or later.
+Your primary Bot, marked with a star, will now spot work it can take off your plate and offer to handle it. 0.59.0+ Requires Grok Bot 0.59.0 or later
 Improved
 In Slack threads, the Bot's status line shows what it's working on and stays up during long steps. Teams
 Fixed
