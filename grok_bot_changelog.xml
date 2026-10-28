@@ -7,7 +7,149 @@
     <docs>http://www.rssboard.org/rss-specification</docs>
     <generator>RSS Creator</generator>
     <language>zh-CN</language>
-    <lastBuildDate>Tue, 27 Oct 2026 23:35:58 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 28 Oct 2026 04:34:49 +0000</lastBuildDate>
+    <item>
+      <title>Permissions, Vault payments, and question cards (0.77.0)</title>
+      <link>https://x.ai/changelog/bot#v0.77.0</link>
+      <description>New
+1Password connects without a shared vault: you approve each login in 1Password, which fills it in the Bot's browser without the Bot seeing it. 0.68.0+ Requires Grok Bot 0.68.0 or later
+Import Memory to Grok Bot, in Settings, brings your preferences and context from another AI assistant into your primary Bot. 0.75.2+ Requires Grok Bot 0.75.2 or later
+Bots can ask several questions on one card that steps through them, with Your own answer when none of the choices fit.
+Tables in chat have a copy button that copies them for Slack or as markdown, and wide tables open full screen with zoom.
+The Vault has a Payments tab where you pick the payment method Bots use first, and you still approve every purchase.
+Address fields in forms and the Vault suggest streets as you type, and a ZIP code fills in the city and state.
+When Gmail signs you out, such as after Google revokes access, your primary Bot tells you in its chat and offers to reconnect.
+After you connect your first app, the Bot offers one more that pairs with it, such as Google Calendar after Gmail.
+Português (Portugal) joins the app's languages, and Brazilian Portuguese is now labeled Português (Brasil).
+Right-click an emoji to pin it, and pinned emoji lead your quick reactions.
+Page owners can delete a Page from the Library, which removes it for everyone it was shared with.
+Order Concierge and Deal Watcher templates track your orders, refunds, and returns, and watch prices and coupons, never buying without your OK.
+Bots can update a saved Vault entry's name, hint, and card details for you.
+Custom MCP servers that use a private certificate authority work once you approve that authority.
+In a DM with a Team Bot, teammates can have it message other Team Bots they can use. Teams
+In Slack, Team Bots can edit messages they posted and remove reactions they added. Teams
+Team admins can limit Bot sharing to admins, and share controls then say Your admin has disabled Bot sharing. Teams
+Enterprise audit logs record changes to a team's trusted CA certificates. Enterprise
+Improved
+Grok Bot has a new typeface for text and code, including on Pages. 0.68.0+ Requires Grok Bot 0.68.0 or later
+A Bot's working status is a short phrase in your language, in the app and in Slack.
+Connector buttons say Connect everywhere, a signed-out connector shows Not connected, and Your plugins offers Reconnect for one that stopped working. 0.75.2+ Requires Grok Bot 0.75.2 or later
+In Connect Apps, Add installs a plugin and opens its sign-in in one click, and Add and Uninstall finish as soon as they're saved. 0.75.2+ Requires Grok Bot 0.75.2 or later
+Plugins show Connecting… while you sign in and Connected once you're done.
+Auto-review lets through more private actions you can undo without an approval card, and keeps an approval when only your open tabs change.
+Background work you start in your own words no longer asks for Auto-review approval to start.
+Auto-review approval cards stay open for 30 minutes instead of 10, in the app and in Slack.
+Settings has a Permissions section that lists Auto-review rules under Always Ask and Allow without Asking, each with its own Add Rule button. 0.75.2+ Requires Grok Bot 0.75.2 or later
+Auto-review rule cards in chat show each rule as a sentence and name any older Allow rule removed to make room.
+Approval cards name a connector by its service, adding the account when two accounts share a name.
+Dictation writes words into the message box while you're still speaking.
+Email draft cards have a Discard button again, so you can drop a draft without sending it.
+Section headings in Settings, such as Appearance, now have Copy link too, not just individual settings.
+The command palette shows each Bot's latest message and link text instead of markdown, and on a Mac moves with Ctrl-N and Ctrl-P.
+The dock badge counts unread conversations instead of unread messages.
+Wide tables show scroll arrows when you hover over them.
+Vault entries have a Hints field that tells Bots when to use each one.
+Saved addresses, phones, and emails appear together as Contact info in the Vault, and one contact can hold several emails and phone numbers.
+Bots try your saved Vault logins and cards before a password manager or another way to pay.
+The Vault lists the Bot's own email first, and editing a saved login shows the password masked, with Remove on the form.
+When an app you ask for isn't installed, the Bot checks the plugin catalog and links the app's page in Connect Apps.
+When the Bot hands you its computer to sign in to sites like Google, GitHub, or QuickBooks, it offers their connector, and connecting ends the handoff.
+When an app connects without a sign-in, the Bot carries on with your task in the same reply.
+The Bot removes or renames a connector only when you name that change yourself.
+A plugin's accounts row says when a sign-in is waiting or didn't finish.
+When you name an app in Chinese, Japanese, or Korean, plugin search finds it by those words or retries with its English name.
+Slack message drafts show a formatted preview and who the message notifies, and warn you when Slack can't confirm the channel.
+In Slack, the Bot checks what a reply is answering before acting, and in DMs it answers follow-ups in their thread.
+In shared Slack conversations, the Bot checks each post against who can read it before sending.
+Someone who DMs a Bot in Slack without a linked account gets one Connect Slack account notice.
+When a safety filter stops a computer task, the Bot tries again on another model before asking you to do that step.
+Browser screenshots the Bot saves keep their full size, including tall pages, instead of a smaller copy.
+Keys that apps on the Bot's computer store in the system keyring, such as Okta Verify's, now survive when the computer is recreated.
+The Bot pays in a set order instead of asking which wallet to use, and offers Link one-time cards only in the US and Canada.
+Asked what happens if an order goes wrong, the Bot cites only protections it has read and doesn't promise refunds.
+When X Money isn't set up on your X account, the Bot links the Money tab on X.
+When you ask a Bot to schedule something and no calendar is connected, it offers Google Calendar first, or Outlook Calendar if you use Outlook.
+When your plan doesn't include routines, the Bot names the plan that does.
+Every email a Bot sends from its own address to one other person now includes a one-click unsubscribe, not just the first.
+Bots no longer send email to addresses that have permanently bounced.
+Follow-ups to a running cloud agent the Bot started reach it right away.
+Pictures on a Page fade in, and broken ones show their description.
+File icons in chat and the Library have a new design.
+Opening or closing the details pane slides the chat along with it.
+Dialogs share consistent widths, and Connect Apps and the keyboard shortcuts sheet are wider.
+With several apps connected, the sidebar footer folds Connect apps into an icon beside your name and no longer flashes open at launch.
+Settings shows a single banner for combining your subscriptions into one plan.
+Plugins a team admin wouldn't allow show Disabled by team admin. Teams
+Team admins choose whether members can publish Bot templates publicly, only to the team, or not at all. Teams
+Fixed
+1Password fills recover from more problems, such as a sleeping extension or an expired approval, and the Bot continues as soon as you approve.
+On Windows and Linux, the Bot notices an installed 1Password app and can offer to connect it.
+A message the server already accepted stays delivered, and Resend on one marked Not delivered yet sends it.
+The chat stays steady while you scroll past tables and links or after zooming, and dragging a selection past a wide table scrolls it.
+Desktop notifications close once you read the reply or the Bot stops waiting, and use the Bot's current name.
+Answered questions stay answered, and unread counts no longer jump back.
+Opening a chat shows its messages even when marking it read fails.
+Images you send no longer flash gray after uploading, and camera photos keep their upright size.
+In a long chat, two messages sent a moment apart both get answers.
+When one of your Bots wakes another to do work, the second Bot's questions come to the chat where you asked.
+Saved logins and cards fill more reliably, including on subdomains and Shopify checkouts, and stay out of unrelated fields.
+Importing passwords from a CSV file skips each login's notes so long ones don't block it, and a full Vault says how many didn't fit.
+Background work stops calling a connector that signed you out and tells you to reconnect it.
+Connect cards appear only when a connector says you need to sign in, not for other errors.
+Connect cards keep waiting while your newest sign-in page is open, and a refused sign-in sends you back to Grok Bot with the reason.
+Connector sign-ins can finish up to an hour after you start them.
+When Google throttles requests, Google apps stay connected and the Bot says to try again later instead of asking you to reconnect.
+A Google account without Gmail stays connected, and the Bot asks for an account that has Gmail.
+Adding a second Gmail or Google Drive account opens Google's account picker, and removing one account leaves the others in place.
+Gmail replies quote the original so Gmail folds the thread, signature logos stay inline, and failed Gmail reads and sends retry.
+Ask first and Block rules for Gmail searches and reads hold even when the Bot calls them by another name.
+Signing in from a connect card resumes the Bot for more apps, such as QuickBooks, Zoho, and Workday, and for teammates on a Team Bot.
+Jira and Confluence requests find your site on the first try.
+Vercel runtime log requests that reach past your plan's retention return the logs it keeps.
+A connector whose server refuses registration shows Error instead of a sign-in that can't work.
+A connector access card that expires or is interrupted says so, and the Bot knows the action didn't run.
+When background work needs one of your apps, the Bot asks with an allow card in the app, or Allow once and Skip in Slack.
+In Slack, people without a linked Grok Bot account can't use the owner's logins or private data through the owner's Bot.
+In Slack, a Bot can still read its thread and channels when a Slack connector is also connected or connector lookup fails.
+In Slack, a message the Bot sends without naming a conversation posts once, in the current conversation.
+After a failed Slack turn, a retry reads the whole thread.
+Slack routines that listen for messages see images on the message that started them.
+Settings and sidebar changes that can't be saved go back to the saved state, and folder changes from two devices no longer overwrite each other.
+When usage can't load, Usage &amp; Billing keeps the last reading with Try again, even after a relaunch.
+When an update is ready while a Bot is working, Grok Bot offers Stop and Update.
+A Bot's template skills show under Private skills, labeled From template.
+Links to Grok Bot inside a Page open in the app, and a Page opened from the Library shows a save made while it loaded.
+After you're removed from a team, your personal Pages show in the Library again.
+Teammates see Pages shared with the team in a Team Bot's Library, under Shared with your team. Teams
+Mentions of Bots with names longer than one word open that Bot.
+Names, titles, and instructions cut at a length limit no longer split an emoji.
+The full-screen media viewer's title follows the item on screen.
+The computer view leaves Waking up once the screen is ready.
+Taking over the Bot's computer to sign in with a security key opens the security key prompt.
+The Bot's computer stays up when memory runs low and recovers faster after a crash, so fewer turns end on Couldn't Reach Grok Bot's Computer.
+Commands on the Bot's computer that wait for input, such as package install prompts, finish instead of hanging.
+The Bot's browser keeps site logins after its last window closes, and Apple ID sign-in forms fill correctly.
+With Route traffic through this computer on, plain http pages load, and the Bot says when your computer goes offline.
+Commands a Bot runs on your computer keep going while a file copies to it.
+Commits a cloud agent makes keep your co-author line.
+Reconnect on X Money starts a fresh sign-in.
+The time zone picker includes Europe/Kyiv.
+In right-to-left languages, full-screen viewer close buttons sit clear of the window controls.
+White connector logos stay visible in the light theme.
+After an account merge, an account with no Bots sees Meet Grok Bot.
+Going Back from a plugin whose sign-in you didn't finish shows Connect again instead of Reconnect. 0.75.2+ Requires Grok Bot 0.75.2 or later
+The Cumulative Spend chart scales to the spend it shows. Enterprise
+Linked teammates on a Team Bot use their own connectors and memory. Teams
+A Team Bot that acknowledges a request without answering follows up with the answer. Teams
+A published Team Bot no longer says everyone on the team can use it. Teams
+Share on a Team Bot's team access card gives the team access. Teams
+In a teammate's 1:1 with a Team Bot, notes about them saved in another chat carry over. Teams
+In a teammate's own chat with your Team Bot, computer permission buttons are disabled. Teams
+On a Team Bot, a teammate whose app account has a label can sign in from the connect card. Teams
+Team Bots follow the skill guide of a connector a teammate allowed. Teams</description>
+      <guid isPermaLink="true">https://x.ai/changelog/bot#v0.77.0</guid>
+      <pubDate>Mon, 26 Oct 2026 00:00:00 +0000</pubDate>
+    </item>
     <item>
       <title>Auto-review rule cards and smarter connectors (0.75.8)</title>
       <link>https://x.ai/changelog/bot#v0.75.8</link>
