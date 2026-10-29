@@ -7,7 +7,116 @@
     <docs>http://www.rssboard.org/rss-specification</docs>
     <generator>RSS Creator</generator>
     <language>zh-CN</language>
-    <lastBuildDate>Wed, 28 Oct 2026 22:29:47 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 29 Oct 2026 02:12:10 +0000</lastBuildDate>
+    <item>
+      <title>Shopping cards and subscription templates (0.78.1)</title>
+      <link>https://x.ai/changelog/bot#v0.78.1</link>
+      <description>New
+Shopping with a Bot shows products as cards with photos, rating, price, and store, plus up to two badges such as Top rated.
+Three or four product results scroll in a carousel, and you can swipe through each product's photos.
+On a product page, in-stock options come first, options no store has are disabled, and Buy now starts an order you approve.
+After you place an order, the Bot tracks it and tells you when it ships or arrives, and shipment cards show the carrier and stage.
+Connect Shop Pay in the Vault's Payments tab, then pick it in Pay with or make it the payment method Bots use first.
+The Try it, don't pay for it template starts a free trial for you and cancels it, or reminds you, before it bills.
+The Find unused subscriptions template cancels plans you pick from the ones you still pay for, and Watch subscription prices checks renewal prices.
+Bots can cancel a subscription or look up its price and renewal date, and confirm with you before changing anything.
+On an Apple silicon Mac, the Intel version of Grok Bot offers to download the Apple silicon version.
+Editing a Vault contact offers Add email, Add phone, and Make primary.
+Bots can start cloud agents in a custom mode you name, and keep replying to them in it.
+In Share, Who has access lists your team and organization, and a Team Bot can be limited to Only you. Teams
+Managers can add logins to a Team Bot's own Vault in Configure, under Tools, and the Bot signs in with them for the team. Teams
+Improved
+App cards, plugin rows, sign-in errors, and connector errors the Bot relays show the connector's name instead of an internal ID.
+The Bot's browser types one character at a time and moves the mouse on every website it fills in.
+On Cloudflare, Coinbase, Gusto, YouTube, Railway, Google Ads, Meta Ads, and TikTok for Business sign-in pages, the Bot offers that connector.
+In Slack, people whose account isn't linked learn that some features are limited and how to link it, including in threads the Bot follows.
+Where Grok Bot offered a free trial, it now offers Get Grok Bot with a unified plan and See Unified Plans.
+When a connector needs a permission its connection can't request, the Bot says reconnecting won't help.
+When you set up Grok Bot from X, the first reply no longer waits for all of your X data to load.
+Asking what a Bot can connect to leads with up to three apps to connect.
+Bots apply several Page edits at once, and leave the Page unchanged if any edit doesn't fit.
+Secure Forms that only ask for a sign-in code arrive without an extra explanation.
+Computer settings name the Bots that updating the computer would stop.
+Approval and draft cards no longer name the older Allow rule removed to make room on a full list.
+Connect apps lists apps you connected through Grok under From Grok, and every Connect button there has the same width.
+The Vault toolbar stays on one row with a More menu, and Vault settings use the same card style as other settings.
+Share in a Page header matches the Share button on Team Bots, and the share dialog's intro wraps more evenly.
+Attachments staged in the message box are more compact.
+In the full-screen viewer, captions sit closer to the image.
+The Add skills dialog no longer shows a Back button on its library step.
+The Get Grok Bot for mobile menu item is shorter in Portuguese.
+Usage breakdowns from a Bot label the catch-all row Deleted bots, group chats and other people's bots.
+When your team limits sharing, share controls say Only team admins can share Bots. Teams
+A team Page appears in the Library under every Bot that published it. Teams
+Team Bot Library rows show a Pin button on hover, and a pinned row keeps its pin visible. Teams
+When a Team Bot routine needs one of your connectors, it asks in the routine's Slack thread and tags you. Teams
+On the team dashboard, Bot computers groups setup scripts, setup files, and team secrets, and one Security &amp; compliance card holds computer controls. Teams
+The team dashboard's Status card has Download and Copy link for the desktop app. Teams
+The Grok Bot admin page says Shared Bots, with Manage Shared Bots and Create Bot. Teams
+Fixed
+Copy on a reply keeps headings, lists, and links when you paste into Slack, Gmail, Docs, or Notion, and copied selections paste as markdown.
+Scrolling a long chat after you resize the window no longer jumps.
+Specific working statuses show right away, while generic ones like Working on it and Thinking wait a moment first.
+For a greeting, thanks, or small talk, the working status says "is on it" or "is working on it".
+Update installs the version you clicked, and an open Update ready dialog switches to the newest finished download.
+Update stays on Restarting… until the restart begins, and when a restart is refused, every Update button says why.
+Single-choice question cards show Something else again, so you can type your own answer.
+In question cards, Enter no longer sends your typed answer while an input method is still composing text.
+The Bot's computer card stays on Asleep during brief background wakes and shows Waking up… as soon as you wake it.
+A Bot can take back a reaction it added to your message, and the reaction comes off in the chat.
+Task lists and thread names refresh after the app reconnects instead of staying stale.
+Switching accounts no longer lets a late reply from the previous account change or pin the new account's main Bot.
+Clicking the current Bot in the sidebar closes an open Page.
+The Drop files to add to chat overlay no longer gets stuck when a Page opens or closes during a drag.
+Diagrams on a Page wrap long labels instead of clipping them, and lines meet each node at its own point.
+A pull request chip whose status can't load stays plain in the sentence, and its hover card offers Try again.
+The usage limit banner closes once you're back under your limit.
+Back from a connector returns to the screen you came from and keeps your Vault tab.
+After 10 minutes, a connect card asks Still signing in? instead of saying the sign-in didn't finish.
+When a connector is briefly busy signing in, its connect card and Slack sign-in link still appear.
+A connector sign-in that needs setup first says what to add and opens the plugin page.
+Signing in to a Google account that's already connected reuses it, with one reconnect card instead of several.
+Google Calendar asks you to reconnect only when signing in again can grant the missing permission.
+Connector tools stay listed when a connector changes while its tool list is loading.
+When a plugin isn't available, the Bot says so instead of listing the whole catalog.
+Connect cards for Railway, Square, TradingView, and Google Ads appear only on those services' own pages.
+Gmail drafts the Bot writes in plain text open in rich text, so they read well on a phone and send without hard line breaks.
+Gmail drafts and sends can attach a file from the Bot's computer in more cases.
+Bot emails retry once when the mail server connection times out.
+A Slack connect link opened while signed in to another account works once you sign in as the right account and connect again.
+Remove from Slack now disconnects Slack.
+With Route traffic through this computer on, Settings says when Grok Bot's computer is asleep and that routing reconnects when it wakes.
+With Route traffic through this computer on, pages no longer fail right away when only another host on them is refused.
+Approved browser actions no longer fail on some Bot computers when the page hasn't changed.
+The computer view follows the browser tab the Bot brings to the front.
+Saving a file from the Bot's computer shows Couldn't save this file if the file changes during the download.
+Files already saved in another chat, such as Slack uploads to a Team Bot, save in the new chat instead of failing.
+When the Bot's computer has been refusing saves, Reset and Recover keep the current disk instead of restoring an older backup.
+Grok Bot starts your computer while your accounts are being merged.
+Routines made in a new Bot's first chat run in your time zone instead of UTC.
+Two saves to the same memory at once no longer overwrite each other.
+Image creation stops with a clear error when a reference image can't be read, instead of ignoring it.
+Spend totals the Bot records use the right currency, so other currencies aren't counted as US dollars.
+Bots using the built-in code review tools act with your access and never approve your own pull request.
+Order cards leave out Ship to for orders that ship nothing, and orders through a store's connector pay with that connector's own options.
+The Tailscale plugin shows Not available yet on accounts that can't use it, instead of installing a plugin that can't connect.
+In Connect Apps, logos made of a single glyph show whole in their tiles.
+Under General, an account with no name shows Enter your name on the Account card.
+Clicking a webhook routine opens its details, including the webhook URL.
+In Turkish, emoji search matches a typed dotted I.
+Buying a plan during desktop sign-in returns you to the approval screen, so the app finishes signing in.
+Share works for people on more than one team with no team selected. Teams
+A Team Bot's Shared with your team list shows only Pages that Bot made. Teams
+Shared with you includes a large team's most-used Bots when the list is too long to show every Bot. Teams
+The Team Bots list loads when one access check times out instead of failing. Teams
+People on several teams with none selected can publish a public Bot template when their teams allow it. Teams
+Team Bots search Slack when asked instead of refusing after a note that other sessions can't be opened. Teams
+Team Bots explain correctly where a teammate's Slack channel listener reports. Teams
+A Team Bot tells managers they can change its name and picture from their own chat with it. Teams
+With Terminate Inactive Computers on, a computer counts as inactive after 30 days without a message to any of its Bots. Enterprise</description>
+      <guid isPermaLink="true">https://x.ai/changelog/bot#v0.78.1</guid>
+      <pubDate>Tue, 27 Oct 2026 00:00:00 +0000</pubDate>
+    </item>
     <item>
       <title>Permissions, Vault payments, and question cards (0.77.0)</title>
       <link>https://x.ai/changelog/bot#v0.77.0</link>
