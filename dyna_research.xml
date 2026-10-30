@@ -1,0 +1,54 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0">
+  <channel>
+    <title>DYNA Research</title>
+    <link>https://www.dyna.co/research</link>
+    <description>Research posts from DYNA Robotics on world-action models, dexterity, and production deployments</description>
+    <docs>http://www.rssboard.org/rss-specification</docs>
+    <generator>RSS Creator</generator>
+    <language>zh-CN</language>
+    <lastBuildDate>Fri, 30 Oct 2026 16:51:18 +0000</lastBuildDate>
+    <item>
+      <title>Dyna-2.1: A Physical Agent for End-to-End Workflows</title>
+      <link>https://www.dyna.co/dyna-2.1</link>
+      <guid isPermaLink="true">https://www.dyna.co/dyna-2.1</guid>
+      <pubDate>Mon, 28 Sep 2026 00:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>Not Just a Model, But a Product</title>
+      <link>https://www.dyna.co/research/scaling-customer-deployments</link>
+      <guid isPermaLink="true">https://www.dyna.co/research/scaling-customer-deployments</guid>
+      <pubDate>Thu, 27 Aug 2026 00:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>Training Dyna-2 at million-hour scale, repeatably</title>
+      <link>https://www.dyna.co/research/dyna-2-infrastructure</link>
+      <guid isPermaLink="true">https://www.dyna.co/research/dyna-2-infrastructure</guid>
+      <pubDate>Mon, 17 Aug 2026 00:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>Dyna-2: A 1-Million-Hour Scaling Law for World-Action Models</title>
+      <link>https://www.dyna.co/dyna-2</link>
+      <guid isPermaLink="true">https://www.dyna.co/dyna-2</guid>
+      <pubDate>Sat, 15 Aug 2026 00:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>Dyna-1 Pre-Training: Zero-Shot Dexterity Is Here</title>
+      <link>https://www.dyna.co/research/pre-training</link>
+      <guid isPermaLink="true">https://www.dyna.co/research/pre-training</guid>
+      <pubDate>Thu, 20 Nov 2025 00:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>Open-World Dexterity and Live Demos around the World</title>
+      <link>https://www.dyna.co/research/open-world-dexterity</link>
+      <guid isPermaLink="true">https://www.dyna.co/research/open-world-dexterity</guid>
+      <pubDate>Wed, 15 Oct 2025 00:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>Dynamism v1 (Dyna-1) Model: A Breakthrough in Performance and Production-Ready Embodied AI</title>
+      <link>https://www.dyna.co/research/dyna-1</link>
+      <guid isPermaLink="true">https://www.dyna.co/research/dyna-1</guid>
+      <pubDate>Tue, 24 Jun 2025 00:00:00 +0000</pubDate>
+    </item>
+  </channel>
+</rss>

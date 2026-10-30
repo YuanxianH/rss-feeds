@@ -2,13 +2,14 @@
 <opml version="2.0">
   <head>
     <title>AI RSS Network</title>
-    <dateCreated>Fri, 30 Oct 2026 15:40:00 +0000</dateCreated>
-    <dateModified>Fri, 30 Oct 2026 15:40:00 +0000</dateModified>
+    <dateCreated>Fri, 30 Oct 2026 16:51:18 +0000</dateCreated>
+    <dateModified>Fri, 30 Oct 2026 16:51:18 +0000</dateModified>
   </head>
   <body>
     <outline text="Research" title="Research">
       <outline type="rss" text="ByteDance Seed Public Papers" title="ByteDance Seed Public Papers" xmlUrl="https://yuanxianh.github.io/rss-feeds/seed_papers.xml" htmlUrl="https://seed.bytedance.com/zh/public_papers" description="Public research papers from ByteDance Seed" />
       <outline type="rss" text="DeepSeek Research Index" title="DeepSeek Research Index" xmlUrl="https://yuanxianh.github.io/rss-feeds/deepseek_research.xml" htmlUrl="https://www.deepseek.com/news/" description="Research papers and technical reports from DeepSeek's Research Index" />
+      <outline type="rss" text="DYNA Research" title="DYNA Research" xmlUrl="https://yuanxianh.github.io/rss-feeds/dyna_research.xml" htmlUrl="https://www.dyna.co/research" description="Research posts from DYNA Robotics on world-action models, dexterity, and production deployments" />
       <outline type="rss" text="Meta AI Research Publications" title="Meta AI Research Publications" xmlUrl="https://yuanxianh.github.io/rss-feeds/meta_ai_research.xml" htmlUrl="https://ai.meta.com/results/?content_types%5B0%5D=publication" description="Latest research publications from Meta AI" />
       <outline type="rss" text="OpenAI Research" title="OpenAI Research" xmlUrl="https://yuanxianh.github.io/rss-feeds/openai_research_only.xml" htmlUrl="https://openai.com/news/rss.xml" description="Research posts filtered from the official OpenAI RSS feed" />
       <outline type="rss" text="Qwen Research Index" title="Qwen Research Index" xmlUrl="https://yuanxianh.github.io/rss-feeds/qwen_research.xml" htmlUrl="https://qwen.ai/research" description="Research, open-source, and release posts from the Qwen Research Index" />

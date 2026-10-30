@@ -7,7 +7,7 @@
     <docs>http://www.rssboard.org/rss-specification</docs>
     <generator>RSS Creator</generator>
     <language>zh-CN</language>
-    <lastBuildDate>Fri, 30 Oct 2026 15:39:39 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 30 Oct 2026 16:50:52 +0000</lastBuildDate>
     <item>
       <title>SynLogic</title>
       <link>https://github.com/MiniMax-AI/SynLogic</link>
@@ -207,7 +207,7 @@
     <item>
       <title>skills</title>
       <link>https://github.com/MiniMax-AI/skills</link>
-      <description>[GitHub Repo] | Language: C# | Stars: 13744</description>
+      <description>[GitHub Repo] | Language: C# | Stars: 13745</description>
       <guid isPermaLink="true">https://github.com/MiniMax-AI/skills</guid>
       <pubDate>Tue, 17 Mar 2026 07:19:25 +0000</pubDate>
     </item>
@@ -242,7 +242,7 @@
     <item>
       <title>minimax-code</title>
       <link>https://github.com/MiniMax-AI/minimax-code</link>
-      <description>[GitHub Repo] | An open-source coding agent for your terminal, powered by MiniMax. | Language: TypeScript | Stars: 2145 | Topics: coding-agents, harness, minimax</description>
+      <description>[GitHub Repo] | An open-source coding agent for your terminal, powered by MiniMax. | Language: TypeScript | Stars: 2146 | Topics: coding-agents, harness, minimax</description>
       <guid isPermaLink="true">https://github.com/MiniMax-AI/minimax-code</guid>
       <pubDate>Mon, 01 Jun 2026 12:39:40 +0000</pubDate>
     </item>
@@ -277,7 +277,7 @@
     <item>
       <title>MiniMax-H3</title>
       <link>https://github.com/MiniMax-AI/MiniMax-H3</link>
-      <description>[GitHub Repo] | Language: Python | Stars: 10979</description>
+      <description>[GitHub Repo] | Language: Python | Stars: 10987</description>
       <guid isPermaLink="true">https://github.com/MiniMax-AI/MiniMax-H3</guid>
       <pubDate>Thu, 30 Jul 2026 08:41:09 +0000</pubDate>
     </item>
@@ -347,14 +347,14 @@
     <item>
       <title>MiniMax-M3.1-Flash</title>
       <link>https://huggingface.co/MiniMaxAI/MiniMax-M3.1-Flash</link>
-      <description>[HuggingFace Model] | image-text-to-text | Likes: 497 | Tags: transformers, safetensors, minimax_m3_vl, image-text-to-text, multimodal</description>
+      <description>[HuggingFace Model] | image-text-to-text | Likes: 499 | Tags: transformers, safetensors, minimax_m3_vl, image-text-to-text, multimodal</description>
       <guid isPermaLink="true">https://huggingface.co/MiniMaxAI/MiniMax-M3.1-Flash</guid>
       <pubDate>Sat, 17 Oct 2026 06:37:50 +0000</pubDate>
     </item>
     <item>
       <title>mcode-stack</title>
       <link>https://github.com/MiniMax-AI/mcode-stack</link>
-      <description>[GitHub Repo] | The workflows and skills the MiniMax Code team uses to build MiniMax Code. Open source, install and use. | Language: Python | Stars: 452 | Topics: agent-skills, ai-coding, claude-skills, coding-agent, harness-engineering, minimax-code</description>
+      <description>[GitHub Repo] | The workflows and skills the MiniMax Code team uses to build MiniMax Code. Open source, install and use. | Language: Python | Stars: 455 | Topics: agent-skills, ai-coding, claude-skills, coding-agent, harness-engineering, minimax-code</description>
       <guid isPermaLink="true">https://github.com/MiniMax-AI/mcode-stack</guid>
       <pubDate>Wed, 28 Oct 2026 02:17:41 +0000</pubDate>
     </item>
