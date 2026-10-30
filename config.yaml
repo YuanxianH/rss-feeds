@@ -372,6 +372,21 @@ jobs:
     catalog:
       section: "blogs"
 
+  # DYNA Robotics 研究索引（服务端渲染的文章列表，含桌面与移动两套相同条目）
+  - type: "selector_scrape"
+    name: "DYNA Research"
+    url: "https://www.dyna.co/research"
+    output: "dyna_research.xml"
+    title: "DYNA Research"
+    description: "Research posts from DYNA Robotics on world-action models, dexterity, and production deployments"
+    link: "https://www.dyna.co/research"
+    selectors:
+      items: "a.border-t[href]:has(p.font-saans):has(p.font-mono)"
+      title: "p.font-saans"
+      date: "p.font-mono"
+    catalog:
+      section: "research"
+
   # 示例配置
   # - type: "selector_scrape"
   #   name: "Example"
