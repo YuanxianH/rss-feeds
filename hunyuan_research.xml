@@ -7,7 +7,14 @@
     <docs>http://www.rssboard.org/rss-specification</docs>
     <generator>RSS Creator</generator>
     <language>zh-CN</language>
-    <lastBuildDate>Mon, 02 Nov 2026 07:24:27 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 02 Nov 2026 17:57:22 +0000</lastBuildDate>
+    <item>
+      <title>Hyra 2.0：自动化科研的下一步</title>
+      <link>https://hy.tencent.com/research/hyra2</link>
+      <description>AutoResearch的下半场，从「抽卡刷题」转向「工具升级」。</description>
+      <guid isPermaLink="true">https://hy.tencent.com/research/hyra2</guid>
+      <pubDate>Sun, 01 Nov 2026 16:00:00 +0000</pubDate>
+    </item>
     <item>
       <title>Hy Image3.5 preview 发布：为专业创作提供高性价比模型</title>
       <link>https://hy.tencent.com/research/hy-image35-preview</link>
