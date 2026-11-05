@@ -7,11 +7,17 @@
     <docs>http://www.rssboard.org/rss-specification</docs>
     <generator>RSS Creator</generator>
     <language>zh-CN</language>
-    <lastBuildDate>Thu, 05 Nov 2026 11:57:35 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 05 Nov 2026 19:49:58 +0000</lastBuildDate>
     <item>
       <title>Agentic cheminformatics with Google Antigravity</title>
       <link>https://deepmind.google/blog/agentic-cheminformatics-with-google-antigravity/</link>
       <guid isPermaLink="true">https://deepmind.google/blog/agentic-cheminformatics-with-google-antigravity/</guid>
+      <pubDate>Thu, 05 Nov 2026 00:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>Gemini Omni 1.2 Flash: Fast and cost-effective with longer clips</title>
+      <link>https://blog.google/innovation-and-ai/technology/developers-tools/introducing-gemini-omni-1-2-flash/?utm_source=deepmind.google&amp;utm_medium=referral&amp;utm_campaign=gdm&amp;utm_content=</link>
+      <guid isPermaLink="true">https://blog.google/innovation-and-ai/technology/developers-tools/introducing-gemini-omni-1-2-flash/?utm_source=deepmind.google&amp;utm_medium=referral&amp;utm_campaign=gdm&amp;utm_content=</guid>
       <pubDate>Thu, 05 Nov 2026 00:00:00 +0000</pubDate>
     </item>
     <item>
@@ -139,12 +145,6 @@
       <link>https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-4-argon/?utm_source=deepmind.google&amp;utm_medium=referral&amp;utm_campaign=gdm&amp;utm_content=</link>
       <guid isPermaLink="true">https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-4-argon/?utm_source=deepmind.google&amp;utm_medium=referral&amp;utm_campaign=gdm&amp;utm_content=</guid>
       <pubDate>Sat, 05 Sep 2026 00:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>Intelligent transcription with Gemini 3.5 Transcribe</title>
-      <link>https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-3-5-transcribe/</link>
-      <guid isPermaLink="true">https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-3-5-transcribe/</guid>
-      <pubDate>Wed, 05 Aug 2026 00:00:00 +0000</pubDate>
     </item>
     <item>
       <title>Piloting the world's first double-blind AI evaluations</title>
