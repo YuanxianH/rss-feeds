@@ -7,7 +7,7 @@
     <docs>http://www.rssboard.org/rss-specification</docs>
     <generator>RSS Creator</generator>
     <language>zh-CN</language>
-    <lastBuildDate>Wed, 04 Nov 2026 22:32:02 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 05 Nov 2026 03:18:06 +0000</lastBuildDate>
     <item>
       <title>SynLogic-32B</title>
       <link>https://huggingface.co/MiniMaxAI/SynLogic-32B</link>
@@ -263,14 +263,14 @@
     <item>
       <title>MiniMax-H3</title>
       <link>https://huggingface.co/MiniMaxAI/MiniMax-H3</link>
-      <description>[HuggingFace Model] | image-text-to-video | Likes: 6581 | Tags: minimax-h3, diffusers, safetensors, text-to-video, image-to-video</description>
+      <description>[HuggingFace Model] | image-text-to-video | Likes: 6587 | Tags: minimax-h3, diffusers, safetensors, text-to-video, image-to-video</description>
       <guid isPermaLink="true">https://huggingface.co/MiniMaxAI/MiniMax-H3</guid>
       <pubDate>Tue, 28 Jul 2026 10:45:18 +0000</pubDate>
     </item>
     <item>
       <title>MiniMax-H3</title>
       <link>https://github.com/MiniMax-AI/MiniMax-H3</link>
-      <description>[GitHub Repo] | Language: Python | Stars: 11397</description>
+      <description>[GitHub Repo] | Language: Python | Stars: 11413</description>
       <guid isPermaLink="true">https://github.com/MiniMax-AI/MiniMax-H3</guid>
       <pubDate>Thu, 30 Jul 2026 08:41:09 +0000</pubDate>
     </item>
@@ -347,14 +347,14 @@
     <item>
       <title>mcode-stack</title>
       <link>https://github.com/MiniMax-AI/mcode-stack</link>
-      <description>[GitHub Repo] | The workflows and skills the MiniMax Code team uses to build MiniMax Code. Open source, install and use. | Language: Python | Stars: 535 | Topics: agent-skills, ai-coding, claude-skills, coding-agent, harness-engineering, minimax-code</description>
+      <description>[GitHub Repo] | The workflows and skills the MiniMax Code team uses to build MiniMax Code. Open source, install and use. | Language: Python | Stars: 537 | Topics: agent-skills, ai-coding, claude-skills, coding-agent, harness-engineering, minimax-code</description>
       <guid isPermaLink="true">https://github.com/MiniMax-AI/mcode-stack</guid>
       <pubDate>Wed, 28 Oct 2026 02:17:41 +0000</pubDate>
     </item>
     <item>
       <title>mcode-agent-table</title>
       <link>https://github.com/MiniMax-AI/mcode-agent-table</link>
-      <description>[GitHub Repo] | BYOB Table Protocol v0.1 and reference implementation: bring your own agent (MiniMax Code and others) to one shared table for any-topology discussion and collaboration. | Language: JavaScript | Stars: 34 | Topics: agents, byob, mcp, minimax, multi-agent, protocol</description>
+      <description>[GitHub Repo] | BYOB Table Protocol v0.1 and reference implementation: bring your own agent (MiniMax Code and others) to one shared table for any-topology discussion and collaboration. | Language: JavaScript | Stars: 36 | Topics: agents, byob, mcp, minimax, multi-agent, protocol</description>
       <guid isPermaLink="true">https://github.com/MiniMax-AI/mcode-agent-table</guid>
       <pubDate>Tue, 03 Nov 2026 12:29:06 +0000</pubDate>
     </item>
