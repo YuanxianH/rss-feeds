@@ -7,7 +7,7 @@
     <docs>http://www.rssboard.org/rss-specification</docs>
     <generator>RSS Creator</generator>
     <language>zh-CN</language>
-    <lastBuildDate>Thu, 05 Nov 2026 03:18:06 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 05 Nov 2026 11:58:28 +0000</lastBuildDate>
     <item>
       <title>SynLogic-32B</title>
       <link>https://huggingface.co/MiniMaxAI/SynLogic-32B</link>
@@ -53,7 +53,7 @@
     <item>
       <title>MiniMax-M1</title>
       <link>https://github.com/MiniMax-AI/MiniMax-M1</link>
-      <description>[GitHub Repo] | MiniMax-M1, the world's first open-weight, large-scale hybrid-attention reasoning model. | Language: Python | Stars: 3187 | Topics: large-language-models, llm, minimax-m1, reasoning-models</description>
+      <description>[GitHub Repo] | MiniMax-M1, the world's first open-weight, large-scale hybrid-attention reasoning model. | Language: Python | Stars: 3185 | Topics: large-language-models, llm, minimax-m1, reasoning-models</description>
       <guid isPermaLink="true">https://github.com/MiniMax-AI/MiniMax-M1</guid>
       <pubDate>Sat, 14 Jun 2025 08:54:06 +0000</pubDate>
     </item>
@@ -102,7 +102,7 @@
     <item>
       <title>Mini-Agent</title>
       <link>https://github.com/MiniMax-AI/Mini-Agent</link>
-      <description>[GitHub Repo] | A minimal yet professional single agent demo project that showcases the core execution pipeline and production-grade features of agents. | Language: Python | Stars: 3070 | Topics: agent, llm, minimax</description>
+      <description>[GitHub Repo] | A minimal yet professional single agent demo project that showcases the core execution pipeline and production-grade features of agents. | Language: Python | Stars: 3069 | Topics: agent, llm, minimax</description>
       <guid isPermaLink="true">https://github.com/MiniMax-AI/Mini-Agent</guid>
       <pubDate>Fri, 31 Oct 2025 03:56:27 +0000</pubDate>
     </item>
@@ -200,7 +200,7 @@
     <item>
       <title>skills</title>
       <link>https://github.com/MiniMax-AI/skills</link>
-      <description>[GitHub Repo] | Language: C# | Stars: 13780</description>
+      <description>[GitHub Repo] | Language: C# | Stars: 13790</description>
       <guid isPermaLink="true">https://github.com/MiniMax-AI/skills</guid>
       <pubDate>Tue, 17 Mar 2026 07:19:25 +0000</pubDate>
     </item>
@@ -235,7 +235,7 @@
     <item>
       <title>minimax-code</title>
       <link>https://github.com/MiniMax-AI/minimax-code</link>
-      <description>[GitHub Repo] | An open-source coding agent for your terminal, powered by MiniMax. | Language: TypeScript | Stars: 2174 | Topics: coding-agents, harness, minimax</description>
+      <description>[GitHub Repo] | An open-source coding agent for your terminal, powered by MiniMax. | Language: TypeScript | Stars: 2176 | Topics: coding-agents, harness, minimax</description>
       <guid isPermaLink="true">https://github.com/MiniMax-AI/minimax-code</guid>
       <pubDate>Mon, 01 Jun 2026 12:39:40 +0000</pubDate>
     </item>
@@ -263,14 +263,14 @@
     <item>
       <title>MiniMax-H3</title>
       <link>https://huggingface.co/MiniMaxAI/MiniMax-H3</link>
-      <description>[HuggingFace Model] | image-text-to-video | Likes: 6587 | Tags: minimax-h3, diffusers, safetensors, text-to-video, image-to-video</description>
+      <description>[HuggingFace Model] | image-text-to-video | Likes: 6599 | Tags: minimax-h3, diffusers, safetensors, text-to-video, image-to-video</description>
       <guid isPermaLink="true">https://huggingface.co/MiniMaxAI/MiniMax-H3</guid>
       <pubDate>Tue, 28 Jul 2026 10:45:18 +0000</pubDate>
     </item>
     <item>
       <title>MiniMax-H3</title>
       <link>https://github.com/MiniMax-AI/MiniMax-H3</link>
-      <description>[GitHub Repo] | Language: Python | Stars: 11413</description>
+      <description>[GitHub Repo] | Language: Python | Stars: 11459</description>
       <guid isPermaLink="true">https://github.com/MiniMax-AI/MiniMax-H3</guid>
       <pubDate>Thu, 30 Jul 2026 08:41:09 +0000</pubDate>
     </item>
@@ -305,7 +305,7 @@
     <item>
       <title>awesome-minimax-h3-integration</title>
       <link>https://github.com/MiniMax-AI/awesome-minimax-h3-integration</link>
-      <description>[GitHub Repo] | Stars: 546</description>
+      <description>[GitHub Repo] | Stars: 547</description>
       <guid isPermaLink="true">https://github.com/MiniMax-AI/awesome-minimax-h3-integration</guid>
       <pubDate>Thu, 13 Aug 2026 05:47:03 +0000</pubDate>
     </item>
@@ -319,7 +319,7 @@
     <item>
       <title>MiniMax-Code-MiniApps</title>
       <link>https://github.com/MiniMax-AI/MiniMax-Code-MiniApps</link>
-      <description>[GitHub Repo] | We believe the Agent is evolving into the next-generation operating system (OS). In this paradigm shift, a plugin is no longer just a feature extension: a plugin is software, and a plugin is an app (a Mini App). | Language: JavaScript | Stars: 69 | Topics: community, miniapp, minimax, minimax-code, minimax-code-miniapp, plugins</description>
+      <description>[GitHub Repo] | We believe the Agent is evolving into the next-generation operating system (OS). In this paradigm shift, a plugin is no longer just a feature extension: a plugin is software, and a plugin is an app (a Mini App). | Language: JavaScript | Stars: 70 | Topics: community, miniapp, minimax, minimax-code, minimax-code-miniapp, plugins</description>
       <guid isPermaLink="true">https://github.com/MiniMax-AI/MiniMax-Code-MiniApps</guid>
       <pubDate>Sun, 20 Sep 2026 07:44:29 +0000</pubDate>
     </item>
@@ -347,14 +347,14 @@
     <item>
       <title>mcode-stack</title>
       <link>https://github.com/MiniMax-AI/mcode-stack</link>
-      <description>[GitHub Repo] | The workflows and skills the MiniMax Code team uses to build MiniMax Code. Open source, install and use. | Language: Python | Stars: 537 | Topics: agent-skills, ai-coding, claude-skills, coding-agent, harness-engineering, minimax-code</description>
+      <description>[GitHub Repo] | The workflows and skills the MiniMax Code team uses to build MiniMax Code. Open source, install and use. | Language: Python | Stars: 541 | Topics: agent-skills, ai-coding, claude-skills, coding-agent, harness-engineering, minimax-code</description>
       <guid isPermaLink="true">https://github.com/MiniMax-AI/mcode-stack</guid>
       <pubDate>Wed, 28 Oct 2026 02:17:41 +0000</pubDate>
     </item>
     <item>
       <title>mcode-agent-table</title>
       <link>https://github.com/MiniMax-AI/mcode-agent-table</link>
-      <description>[GitHub Repo] | BYOB Table Protocol v0.1 and reference implementation: bring your own agent (MiniMax Code and others) to one shared table for any-topology discussion and collaboration. | Language: JavaScript | Stars: 36 | Topics: agents, byob, mcp, minimax, multi-agent, protocol</description>
+      <description>[GitHub Repo] | BYOB Table Protocol v0.1 and reference implementation: bring your own agent (MiniMax Code and others) to one shared table for any-topology discussion and collaboration. | Language: JavaScript | Stars: 50 | Topics: agents, byob, mcp, minimax, multi-agent, protocol</description>
       <guid isPermaLink="true">https://github.com/MiniMax-AI/mcode-agent-table</guid>
       <pubDate>Tue, 03 Nov 2026 12:29:06 +0000</pubDate>
     </item>
