@@ -7,7 +7,7 @@
     <docs>http://www.rssboard.org/rss-specification</docs>
     <generator>RSS Creator</generator>
     <language>zh-CN</language>
-    <lastBuildDate>Sat, 07 Nov 2026 15:30:51 +0000</lastBuildDate>
+    <lastBuildDate>Sat, 07 Nov 2026 19:58:37 +0000</lastBuildDate>
     <item>
       <title>SynLogic-32B</title>
       <link>https://huggingface.co/MiniMaxAI/SynLogic-32B</link>
@@ -200,7 +200,7 @@
     <item>
       <title>skills</title>
       <link>https://github.com/MiniMax-AI/skills</link>
-      <description>[GitHub Repo] | Language: C# | Stars: 13796</description>
+      <description>[GitHub Repo] | Language: C# | Stars: 13797</description>
       <guid isPermaLink="true">https://github.com/MiniMax-AI/skills</guid>
       <pubDate>Tue, 17 Mar 2026 07:19:25 +0000</pubDate>
     </item>
@@ -235,7 +235,7 @@
     <item>
       <title>minimax-code</title>
       <link>https://github.com/MiniMax-AI/minimax-code</link>
-      <description>[GitHub Repo] | An open-source coding agent for your terminal, powered by MiniMax. | Language: TypeScript | Stars: 2192 | Topics: coding-agents, harness, minimax</description>
+      <description>[GitHub Repo] | An open-source coding agent for your terminal, powered by MiniMax. | Language: TypeScript | Stars: 2193 | Topics: coding-agents, harness, minimax</description>
       <guid isPermaLink="true">https://github.com/MiniMax-AI/minimax-code</guid>
       <pubDate>Mon, 01 Jun 2026 12:39:40 +0000</pubDate>
     </item>
@@ -263,14 +263,14 @@
     <item>
       <title>MiniMax-H3</title>
       <link>https://huggingface.co/MiniMaxAI/MiniMax-H3</link>
-      <description>[HuggingFace Model] | image-text-to-video | Likes: 6646 | Tags: minimax-h3, diffusers, safetensors, text-to-video, image-to-video</description>
+      <description>[HuggingFace Model] | image-text-to-video | Likes: 6649 | Tags: minimax-h3, diffusers, safetensors, text-to-video, image-to-video</description>
       <guid isPermaLink="true">https://huggingface.co/MiniMaxAI/MiniMax-H3</guid>
       <pubDate>Tue, 28 Jul 2026 10:45:18 +0000</pubDate>
     </item>
     <item>
       <title>MiniMax-H3</title>
       <link>https://github.com/MiniMax-AI/MiniMax-H3</link>
-      <description>[GitHub Repo] | Language: Python | Stars: 11584</description>
+      <description>[GitHub Repo] | Language: Python | Stars: 11587</description>
       <guid isPermaLink="true">https://github.com/MiniMax-AI/MiniMax-H3</guid>
       <pubDate>Thu, 30 Jul 2026 08:41:09 +0000</pubDate>
     </item>
@@ -354,7 +354,7 @@
     <item>
       <title>mcode-agent-table</title>
       <link>https://github.com/MiniMax-AI/mcode-agent-table</link>
-      <description>[GitHub Repo] | BYOB Table Protocol v0.1 and reference implementation: bring your own agent (MiniMax Code and others) to one shared table for any-topology discussion and collaboration. | Language: JavaScript | Stars: 53 | Topics: agents, byob, mcp, minimax, multi-agent, protocol</description>
+      <description>[GitHub Repo] | BYOB Table Protocol v0.1 and reference implementation: bring your own agent (MiniMax Code and others) to one shared table for any-topology discussion and collaboration. | Language: JavaScript | Stars: 54 | Topics: agents, byob, mcp, minimax, multi-agent, protocol</description>
       <guid isPermaLink="true">https://github.com/MiniMax-AI/mcode-agent-table</guid>
       <pubDate>Tue, 03 Nov 2026 12:29:06 +0000</pubDate>
     </item>
