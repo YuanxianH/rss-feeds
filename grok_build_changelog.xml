@@ -7,7 +7,176 @@
     <docs>http://www.rssboard.org/rss-specification</docs>
     <generator>RSS Creator</generator>
     <language>zh-CN</language>
-    <lastBuildDate>Mon, 09 Nov 2026 09:20:44 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 09 Nov 2026 20:30:37 +0000</lastBuildDate>
+    <item>
+      <title>Grok Build 1.0.77</title>
+      <link>https://x.ai/changelog/build#v1.0.77-2026-11-05</link>
+      <description>[ui] kitty_keyboard = "query" lets Shift+Enter insert newlines in unidentified terminals
+Quote copy now preserves &amp; in links, and double-clicks no longer fold thoughts when missing text
+MCP server connections no longer restart unnecessarily on session reloads or updates
+Ctrl+L now works on more screens, and copy hints match what actually copies to the clipboard
+Context usage shown in the footer no longer drops to zero or shows stale values after a rewind
+Rows in the /resume list now expand and collapse the same way they do inside a session</description>
+      <guid isPermaLink="true">https://x.ai/changelog/build#v1.0.77-2026-11-05</guid>
+      <pubDate>Thu, 05 Nov 2026 00:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>Grok Build 1.0.76</title>
+      <link>https://x.ai/changelog/build#v1.0.76-2026-11-04</link>
+      <description>Ctrl+L redraws the screen after a terminal clear without flashing
+Shell commands correctly handle startup functions containing special characters</description>
+      <guid isPermaLink="true">https://x.ai/changelog/build#v1.0.76-2026-11-04</guid>
+      <pubDate>Wed, 04 Nov 2026 00:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>Grok Build 1.0.75</title>
+      <link>https://x.ai/changelog/build#v1.0.75-2026-11-04</link>
+      <description>Permission rules that do not load, such as a rule that does not parse or a .claude/settings.json that is not valid JSON, show a warning when a session opens instead of being skipped silently
+Cmd+Up / Cmd+Down and Ctrl+Home / Ctrl+End move the cursor to the start or end of the whole prompt, and with Shift they select to there
+Send now shows as Enter Enter in the footer where Ctrl+Enter arrives as plain Enter , such as inside tmux with its default settings
+Clicking a link or file that cannot open, such as over SSH with no display, shows why, for example "Can't open links over SSH"
+Left on an empty prompt opens the dashboard from any session or the welcome screen, not only from a session you opened from the dashboard
+Workflow status lines say how many agents are still running instead of how many exist
+Ctrl+L in the scrollback adds the selected message or highlighted text to the prompt as a quote; open Extensions with /plugins instead
+Notes above a queued prompt, such as a model switch result or a ready worktree, stay on screen when the prompt starts instead of scrolling out of view
+Stop buttons in the dock stop a background run while its approval card is open, instead of doing nothing until you answer the card
+Rejecting a change keeps edits you saved to the file yourself, even when Grok missed the save, instead of overwriting them
+grok --resume &lt;id&gt; opens the session in the folder it was recorded in, wherever you launch Grok from, instead of refusing
+Windows: on older consoles such as plain cmd.exe and Windows PowerShell windows, the ▶ , ⏸ and ◌ marks in todo, workflow and list rows show as characters the console can draw instead of empty boxes
+Generated image and video paths with wide characters such as Chinese, Japanese or emoji fit their row and keep the file name, and Windows paths keep it too
+The rewind confirmation no longer crashes Grok on a short terminal or when you shrink the window while it is open
+Footer and status bars in narrow terminals drop or shorten the items that do not fit, instead of painting them over each other or cutting buttons off
+Cut-off Fetch, Web Search and MCP tool output ends with the same … +N lines · &lt;key&gt; to view all row as code cells, naming your viewer key, and one hidden line reads +1 line
+16-color terminals show the paste label and tool accents in the muted gray other secondary text uses, and the paste label brackets no longer vanish on the light theme
+A question card's Enter:submit button, the dashboard session popup's [✗] , and collapsed workflow rows highlight under the mouse pointer like other clickable controls
+Emoji and keycap symbols are measured at the width the terminal draws them, so rows no longer run past their box or lose their …
+/export to a named pipe that nothing is reading fails right away instead of freezing Grok until it is killed
+Typing a digit or symbol while the scrollback has focus, with vim keys off, moves focus to the prompt and types it there, as letters already do; ? still opens the command palette
+grok sessions delete no longer fails with "Directory not empty" when another process is still writing into the session's folder
+Dashboard rows stay in Working while a session's background subagents or workflow runs are going, and stopping the row ends them
+Code blocks inside quotes render every line under the quote's bars, quote copies turn reference links into inline links, and lines after multi-line math are numbered correctly
+Disabling a project's hook in /hooks applies only to that repository, instead of also skipping hooks with the same name in other repositories
+Turning a skill on or off in the Skills tab saves only [skills].disabled to config.toml , so an organization's managed skill folders and ignore list keep applying</description>
+      <guid isPermaLink="true">https://x.ai/changelog/build#v1.0.75-2026-11-04</guid>
+      <pubDate>Wed, 04 Nov 2026 00:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>Grok Build 1.0.74</title>
+      <link>https://x.ai/changelog/build#v1.0.74-2026-11-02</link>
+      <description>Messages between subagents appear as left-aligned rows under the bullet that name the sender and recipient, replacing the centered rows
+Shift+Enter inserts a newline in VS Code and other xterm.js-based terminals that use the Kitty keyboard protocol
+/mcps : when a browser cannot open an MCP server's sign-in URL, the URL shows in a panel you can copy with c or the [copy the url] button
+Shell approval cards say when Auto-review blocked a command or could not review it, and Ctrl+F shows the reviewer's explanation
+! mode Tab completion offers commands installed as symlinks, such as Homebrew, npm, rustup and Debian alternatives binaries
+Quotes in replies get a [Copy] button that copies the whole quote as Markdown without its &gt; markers
+Named subagent links open on a plain click, so they work over SSH from macOS where a modified click cannot reach Grok
+@ paths outside the workspace: an @ path that starts with / , ~/ or ../ lists files from that folder; set [ui] at_picker_outside_workspace = false to turn it off
+Picked @ files in the prompt can be edited in place: Backspace at the end of one reopens the picker on its path, and Left or Right puts the cursor inside it to change the path
+Built-in skills, agents and workflows are refreshed when their local cache's manifest is missing or corrupt, instead of staying outdated or failing every sync
+Ctrl+Y on a question card no longer closes it without an answer; while you type an answer, it pastes back text cut with Ctrl+K
+/new tabs show the context window you just switched to before the new session replies
+Resumed sessions show a background command's completion in the turn that ran it, with its real run time instead of about 0.0s
+grok update still runs when --sandbox or config sets a sandbox profile, unless Grok is already running confined
+A code block [Copy] in the transcript copies while a queued prompt is open for editing, instead of copying nothing or closing the edit
+grok logout stays signed out when another running Grok refreshes its sign-in, instead of signing you back in on the next launch
+Opening links and files from the TUI no longer leaves a zombie process behind for each click
+A failed session delete shows the "Could not delete session" prefix once, so the reason is no longer cut off
+Windows: Grok exits fully after a startup error, a /minimal or /fullscreen switch, or a signal, instead of sometimes hanging
+Grok running confined in a sandbox never starts an update on its own and tells you to run grok update instead
+Quitting to install an update with Ctrl+U on the welcome screen exits within the usual exit deadline instead of sometimes hanging after "Update installed"
+grok update --force-reinstall , or grok update --version with the installed version, keeps your working grok on Linux and macOS when the download fails its checks, instead of deleting it
+Windows installers check that the downloaded build runs before replacing grok.exe and agent.exe , and keep the existing install when it does not, such as when a proxy serves a blocked-download page
+Command-line arguments that are not valid UTF-8 no longer crash grok at startup: paths such as --cwd accept them, and text such as -p gets a usage error
+Installers keep the installed grok when a proxy or cache returns an empty download, instead of replacing it with an empty file and reporting success
+Environment variables with non-UTF-8 bytes no longer stop Grok from starting
+Workflow run lines in the transcript end with what the run returned instead of a bare colon, /tasks shows the time it was taken, and polling an unknown task id leaves a row with its error
+Headless runs stopped by Ctrl-C or SIGTERM end their json , streaming-json or streaming-messages-json output with a closing record that keeps the run's outcome, instead of cutting off the stream
+macOS: the TUI no longer freezes when it runs inside a sandbox that blocks the window server
+grok -p --resume shows why a session could not load instead of always "Session does not exist", and with --output-format json a resume, continue or fork that fails before the session opens prints one JSON error
+Sessions with an unrecognized reasoning effort or unreadable bytes in their history resume instead of failing: the session runs at the model's default effort and says so once, and the unreadable lines are left out of the transcript
+Windows: on older consoles such as plain cmd.exe and Windows PowerShell windows, status marks and selection arrows in workflow views, the dashboard, and the feedback and extensions dialogs show as &gt; , • , √ or x instead of empty boxes
+File paths with spaces in inline code, such as ~/Library/Application Support/... , link to the whole path when it exists instead of stopping at the first space
+Feedback that cannot be sent leads with the outcome, such as "Could not send feedback. Saved to Drafts.", then gives the reason and says to retry from /feedback
+Dialog tab labels, shortcuts and settings rows that do not fit end in … instead of being cut off
+Prompt history search highlights matched letters in the same color as other fuzzy lists, and the counts on the / and @ menu borders are dimmed like other border captions
+Dashboard: the peek header reads Responding while a reply streams, and the Esc footer hint reads new agent like the other lowercase hints
+Custom agent files saved with a UTF-8 byte order mark, as some Windows editors write them, load instead of being skipped
+Running markers in workflow views and MCP servers that are still starting use the theme's running color, like other progress indicators
+Minimal mode: "Sign-in failed" shows in the error color instead of the warning color
+A larger context window picked with /context-window stays in effect, so compaction no longer starts early after the session sits idle, after a failed request such as a rate limit, or until you restart
+Long sessions use less memory: finished Markdown blocks far off screen release their rendered layout, and search still finds their text
+Typing no longer lags when ffmpeg is not installed and PATH holds slow directories, such as Windows drives under WSL
+Long pastes that arrive as keystrokes, such as pastes on native Windows or in terminals without bracketed paste, no longer freeze the prompt for seconds while the plan-mode tip is on
+Pasting long single-line text such as logs, JSON or base64 into the prompt no longer freezes the TUI for seconds
+File watching on Linux no longer keeps a CPU core busy for about a minute after startup in large repositories
+Lower CPU use while subagents run: the TUI repaints only for animations on screen
+grok --resume &lt;id&gt; opens much faster on large session stores, reading only the resumed session instead of every session</description>
+      <guid isPermaLink="true">https://x.ai/changelog/build#v1.0.74-2026-11-02</guid>
+      <pubDate>Mon, 02 Nov 2026 00:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>Grok Build 1.0.73</title>
+      <link>https://x.ai/changelog/build#v1.0.73-2026-10-28</link>
+      <description>Page Up / Page Down , Home and End move the selection in /skills and other pickers
+Automatic updates stop retrying a new version that fails to start on this machine until a newer version is out, and each launch says to run grok update to see why
+Gruvbox dark theme ( gruvbox-dark-hard ), selectable with /theme
+Start in multiline in /settings ( [ui] multiline_default ) starts new sessions and the dashboard in multiline mode, where Enter inserts a newline
+Windows: quitting Grok ends grok.exe once the terminal is restored, so the shell no longer sometimes waits with no prompt
+Several Send nows in a row no longer label the turns they stop "Turn cancelled by user" or jump the transcript view
+--restore-code : when the code restore fails, your uncommitted and untracked files stay in the working tree instead of in a stash
+Windows: shortcuts typed with Shift -held symbols or AZERTY digit keys work
+Queued images show as green chips in the queue pane, as in the prompt
+Typing while the transcript has focus moves any character, including non-ASCII text, to the prompt, and leaves a pending card or plan approval as it is
+Worktree creation notes stay on screen when a queued prompt starts
+Session load errors show the whole reason instead of cutting out the middle of a long message
+Lines with | that are not a Markdown table wrap like other text instead of being cut off at the terminal edge
+Transcript selection stays on the same row when a row above it is removed
+Kitty graphics protocol: images Grok hides are freed in the terminal, so they no longer use its memory
+--restore-code restores its own stash even when another worktree changes the stash list meanwhile, and keeps your changes stashed when a post-checkout hook fails after the checkout</description>
+      <guid isPermaLink="true">https://x.ai/changelog/build#v1.0.73-2026-10-28</guid>
+      <pubDate>Wed, 28 Oct 2026 00:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>Grok Build 1.0.72</title>
+      <link>https://x.ai/changelog/build#v1.0.72-2026-10-27</link>
+      <description>Relative file paths in the agent's output, such as src/app/main.rs , open on click when the file exists under the session's folder, as absolute paths already do
+Subagent and background task ids mentioned in the transcript open that subagent's view or the task's output on click
+Pull-request numbers such as #123 in the agent's replies open that pull request on the session repository's forge
+Subagents named in a reply show as the subagent's label instead of its raw id once the reply finishes, as a link that opens its transcript
+/workflow runs detail view: → or a click focuses a phase's agent list, ↑ / ↓ pick an agent, Enter opens it, and ← returns to the phases
+Feedback draft rows show on their own instead of inside a group of tool rows, and opening one shows the /feedback Drafts tab with that draft selected
+Warp: clicking a URL that wraps across rows opens the whole URL instead of only its first row
+/delete confirmation starts on Cancel, so pressing Enter no longer deletes the session; press 1 to delete
+Max thoughts width ( /settings , [ui].max_thoughts_width ) sets how wide thinking blocks wrap; it previously had no effect
+Dashboard shows the new folder on the dispatch box's top border right after a Ctrl+L or /cd pick
+Custom models on the Responses API with a custom base_url no longer fail every turn with an HTTP 400 schema error for use_tool
+/feedback Drafts tab keeps the selected draft when the list reloads, such as after leaving Drafts and coming back
+MCP tools built with FastMCP or the official MCP SDK send their result to the model once instead of twice, so each call uses about half the context
+Plan review notes accept every key, so a note that starts with a no longer approves the plan
+MCP servers over stdio no longer lose part of a long reply line, such as a large tool list, when a read is interrupted</description>
+      <guid isPermaLink="true">https://x.ai/changelog/build#v1.0.72-2026-10-27</guid>
+      <pubDate>Tue, 27 Oct 2026 00:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>Grok Build 1.0.71</title>
+      <link>https://x.ai/changelog/build#v1.0.71-2026-10-26</link>
+      <description>ui.single_ctrl_c_quit = true lets a single Ctrl+C quit when no draft or unfinished work would be lost. It is also under Editor in /settings ; the default still asks for a second press
+Image chips in the prompt use the same green as sent images in the transcript
+Hovering an image chip in the transcript shows the image that was sent, or why it was not attached
+Hooks accept "failClosed": true : when such a hook times out or crashes, the tool call is denied or the prompt is blocked instead of going ahead
+Vim editing in the prompt (experimental): set [keys] vim = "all" in config.toml for Insert and Normal modes with vim motions, operators, counts and undo. The prompt's info line shows NORMAL or INSERT
+Inline images display in Noctty on Windows
+Answers to the agent's questions show one row per question and answer, and end in … only when the text is cut
+Prompt vim cursor is a block in Normal mode and a bar in Insert mode; ui.cursor_blink sets whether they blink
+Minimal mode starts its info row with the prompt's vim mode ( NORMAL or INSERT ), and NORMAL is shown in bold
+Image chips in your messages stay whole on one row when the message wraps
+Images the server rejects are removed from the conversation, so the notice that images were left out no longer repeats, and grows, on every later turn
+Feedback draft rows show the draft's state: drafted, declined, cancelled or failed
+A slash menu closed with Esc no longer reopens by itself when the command list refreshes, such as right after startup
+Turn failed rows no longer repeat a generic "Request failed:" before the error</description>
+      <guid isPermaLink="true">https://x.ai/changelog/build#v1.0.71-2026-10-26</guid>
+      <pubDate>Mon, 26 Oct 2026 00:00:00 +0000</pubDate>
+    </item>
     <item>
       <title>Grok Build 1.0.70</title>
       <link>https://x.ai/changelog/build#v1.0.70-2026-10-23</link>
