@@ -7,7 +7,14 @@
     <docs>http://www.rssboard.org/rss-specification</docs>
     <generator>RSS Creator</generator>
     <language>zh-CN</language>
-    <lastBuildDate>Mon, 09 Nov 2026 01:30:39 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 09 Nov 2026 09:20:54 +0000</lastBuildDate>
+    <item>
+      <title>生成更真实，百轮编辑更稳定｜Seedream 5.5 发布</title>
+      <link>https://seed.bytedance.com/zh/blog/%E7%94%9F%E6%88%90%E6%9B%B4%E7%9C%9F%E5%AE%9E-%E7%99%BE%E8%BD%AE%E7%BC%96%E8%BE%91%E6%9B%B4%E7%A8%B3%E5%AE%9A-seedream-5-5-%E5%8F%91%E5%B8%83</link>
+      <description>非编辑区域像素级保持，真实感与小字渲染显著提升</description>
+      <guid isPermaLink="false">1794186749126</guid>
+      <pubDate>Mon, 09 Nov 2026 00:00:00 +0800</pubDate>
+    </item>
     <item>
       <title>Seed Alignment &amp; Preparedness 全球顶尖人才招募启动</title>
       <link>https://seed.bytedance.com/zh/blog/seed-alignment-preparedness-%E5%85%A8%E7%90%83%E9%A1%B6%E5%B0%96%E4%BA%BA%E6%89%8D%E6%8B%9B%E5%8B%9F%E5%90%AF%E5%8A%A8</link>
@@ -348,13 +355,6 @@
       <description>化繁为简，鼓励机器深度思考</description>
       <guid isPermaLink="false">1763522622733</guid>
       <pubDate>Tue, 25 Feb 2025 00:00:00 +0800</pubDate>
-    </item>
-    <item>
-      <title>Seed Research | 全新超稀疏架构，推理成本较 MoE 最高可降 83%！</title>
-      <link>https://seed.bytedance.com/zh/blog/seed-research-%E5%85%A8%E6%96%B0%E8%B6%85%E7%A8%80%E7%96%8F%E6%9E%B6%E6%9E%84-%E6%8E%A8%E7%90%86%E6%88%90%E6%9C%AC%E8%BE%83-moe-%E6%9C%80%E9%AB%98%E5%8F%AF%E9%99%8D-83</link>
-      <description>推理速度较 MoE 提升 2-6 倍，论文已被 ICLR 2025 接收</description>
-      <guid isPermaLink="false">1763522793930</guid>
-      <pubDate>Wed, 12 Feb 2025 00:00:00 +0800</pubDate>
     </item>
   </channel>
 </rss>
