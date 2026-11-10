@@ -7,14 +7,17 @@
     <docs>http://www.rssboard.org/rss-specification</docs>
     <generator>RSS Creator</generator>
     <language>zh-CN</language>
-    <lastBuildDate>Tue, 10 Nov 2026 12:17:14 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 10 Nov 2026 20:19:29 +0000</lastBuildDate>
     <item>
       <title>Shared page themes and call card fixes (0.79.3)</title>
       <link>https://x.ai/changelog/bot#v0.79.3</link>
       <description>New
 Shared Pages have a title bar button, Switch to dark theme or Switch to light theme, that remembers your choice.
+People from a shared Slack workspace can message a Team Bot directly, and a different person starts a new conversation. Teams
 Improved
 When the usual page fetch fails, the Bot reads the page directly instead of opening it in a browser.
+Orders placed through a connected store are tracked until they arrive.
+A revoked X Money connection stays signed out until you tap Connect in the app, and saying yes in chat doesn't reconnect it.
 Unanswered and failed call cards offer Copy conversation ID.
 Fixed
 A busy or unreachable phone call now shows No answer instead of Didn't go through.
@@ -33,12 +36,16 @@ On an Enterprise trial, the Bot replies instead of saying it hit a usage limit. 
       <link>https://x.ai/changelog/bot#v0.79.2</link>
       <description>New
 Asked to find a gift, the Bot asks for the recipient, budget, occasion, and deliver-by date, and never orders one that arrives late.
-Booking a flight on Delta, American, Alaska, JetBlue, or Frontier follows that site's steps, and a booking that stops ends with a link to finish.
+On several major US airline sites, booking a flight follows the site's steps, and a booking that stops ends with a link to finish.
 Gmail and Outlook draft cards list attached files, and Send includes them.
 When a web page hides instructions for AI agents, the Bot tells you it found them and didn't follow them.
 A message you send in New chat while Create New Bot is still running goes to the new Bot and stays on screen.
 Settings offers Slovenščina, and the app opens in Slovenian when your system language is Slovenian.
 The Bot's computer can run ssh and psql .
+The Library has filters for Pinned, All, Pages, Media, Links, Files, and Apps.
+With one Bot, the sidebar hides behind a toggle. With two to four it shows as a narrow rail, and with five or more in full.
+Setting up an AWS plugin asks for an AWS access key ID, secret access key, optional session token, and region.
+The Bot can create and edit images of real people, using reference photos for well-known ones.
 Admins can set a Bot Computer Retention Period, after which inactive members' Bot computers are terminated. Teams
 Improved
 The desktop app has a new flat Grok Bot icon.
@@ -53,6 +60,15 @@ Connector search lists name matches first, so typing salesf shows Salesforce at 
 Connector icons share one size and a contrasting background, so they stay visible in both themes.
 To share text with a live phone call, a card asks Send this to your call?, and you can edit the text first.
 Asking a Bot to save a file to its Library puts it in Bot's files for everyone who can use the Bot.
+Apps that a connector returns inside its answer show as interactive cards in the chat.
+Microsoft connector sign-ins open with your account already filled in.
+A connector sign-in your organization's admin blocked says it is blocked by your organization, with details to send your admin.
+On a Google Docs, Sheets, or Slides page, the Bot offers that app's connector, adding it if needed, before handing you the browser.
+Asked about a Google app you haven't added, the Bot can offer to add its connector.
+When a connector on the Bot's computer fails to start, the Bot names the likely fix, such as a missing command, permission, or credential.
+In a meeting, the Bot answers a request from you or a manager without first holding its reply for review.
+Email the Bot reads or writes joins hard-wrapped lines back into paragraphs and lists.
+After you approve a Link payment, a Done in Link page sends you back to Grok Bot.
 Fixed
 Before placing an order, the Bot rechecks the shipping and total you approved, and tells you if the charged total differs.
 With no saved card, the Bot opens a secure Card number form before the order card, and Pay uses that card.
@@ -77,6 +93,13 @@ When 1Password doesn't finish connecting, the message asks you to try connecting
 Choosing a time zone on your phone, with Set Time Zone Automatically off, sets the Bot's clock to that zone.
 The Bot's computer runs Node.js scripts, including ones that start with #!/usr/bin/node .
 When routine history cannot load, the Bot says it cannot check recent runs instead of saying the routine never ran.
+If a connector sign-in times out, coming back to the app picks it up again, and finishes it if you already signed in.
+When one of your Gmail accounts signs out, the Bot names that account, and its reconnect card signs that account back in.
+Gmail drafts end with your account signature once, and drafts the Bot saves to Gmail keep it.
+In Slack, the Bot can open more file types, including files shared earlier in the thread.
+A routine run that needs a connector sign-in fails with Connector needs a sign-in, and says to connect it from the card in your Bot's chat.
+When a provider rejects a connector's Client Secret, the message says to update the Client Secret in its settings, then reconnect.
+A connector on the Bot's computer that stops running starts again, so the Bot can keep using it.
 A custom connector your team policy blocks shows the admin's reason instead of Something went wrong. Teams</description>
       <guid isPermaLink="true">https://x.ai/changelog/bot#v0.79.2</guid>
       <pubDate>Thu, 05 Nov 2026 00:00:00 +0000</pubDate>
@@ -86,11 +109,16 @@ A custom connector your team policy blocks shows the admin's reason instead of S
       <link>https://x.ai/changelog/bot#v0.78.5</link>
       <description>New
 A scheduled reorder of your usual list asks for one approval per order, and that approval shows the checkout total.
+You can connect your personal tailnet from the Tailscale plugin, so Bots can reach MCP servers on it.
+When a reply needs your Tailscale device, the chat shows a Tailscale connect card.
 Improved
 Linking a Slack workspace ends on a page that names the workspace, with See your connections and Open Slack.
+Routines you schedule can run on your Bot computer while it is connected to your tailnet, and it runs only what you send it yourself.
+When Google ends a connector's access again soon after you reconnect, the Bot explains why it may not last and links your Google security checkup.
 Fixed
 While a checkout is still finishing, the order card stays on Order submitted instead of saying the order couldn't be confirmed.
 Greetings and small talk keep a working line such as Thinking it through while the Bot replies.
+Tailscale no longer signs you out when your login is briefly missing, and a real sign-out says why.
 In the last day, usage reset and trial labels count down in hours or minutes.</description>
       <guid isPermaLink="true">https://x.ai/changelog/bot#v0.78.5</guid>
       <pubDate>Wed, 04 Nov 2026 00:00:00 +0000</pubDate>
@@ -100,7 +128,12 @@ In the last day, usage reset and trial labels count down in hours or minutes.</d
       <link>https://x.ai/changelog/bot#v0.78.4</link>
       <description>New
 The Bot can ask for a refund on a subscription charge, and lists each way to ask before it sends or submits anything.
+When a Bot starts a cloud agent, the chat shows their exchange as a conversation, with the agent's icon and name.
+The Tasks pane lists cloud agents a Bot started as Working, Run failed, or Status unavailable, and a finished one shows Working again when a follow-up starts.
+Dictation can go out as a voice memo, which plays in the chat and has Show transcript.
+A Team Bot can suggest other team Bots that fit a request and link to a chat with one. Teams
 Improved
+Pull request links in replies update their status when the pull request merges or closes, without restarting the app. 0.72.0+ Requires Grok Bot 0.72.0 or later
 When the Bot rebuilds a usual order, it opens with what's out of stock and what changed price.
 For greetings and quick replies, the status line names the work instead of saying the Bot is on it.
 After you connect apps on the desktop, onboarding no longer asks for your email in the chat.
@@ -109,6 +142,7 @@ After you approve a flight, stay, or grocery cart and its total, the Bot pays on
 When a site asks for payment for a plan, credits, a top-up, or a domain, the Bot handles checkout instead of handing you the screen.
 Checkout with a saved card always waits for you to tap Pay on the order card before filling in the card.
 Auto-review shows fewer unneeded approval cards when its check is slow or the conversation is long.
+The Bot no longer shows a connect card for a connector account that needs no sign-in.
 Mentioning a Bot in Slack without a linked account shows a Link Account button and sends you a private link.
 Slack Connect uploads such as PDFs, images, and text files now load in the chat.
 In Slack, connector permission cards ask only about the connector the Bot is using, with Allow once and Skip.
@@ -317,7 +351,7 @@ Opening a chat shows its messages even when marking it read fails.
 Images you send no longer flash gray after uploading, and camera photos keep their upright size.
 In a long chat, two messages sent a moment apart both get answers.
 When one of your Bots wakes another to do work, the second Bot's questions come to the chat where you asked.
-Saved logins and cards fill more reliably, including on subdomains and Shopify checkouts, and stay out of unrelated fields.
+Saved logins and cards fill more reliably, including on subdomains and online store checkouts, and stay out of unrelated fields.
 Importing passwords from a CSV file skips each login's notes so long ones don't block it, and a full Vault says how many didn't fit.
 Background work stops calling a connector that signed you out and tells you to reconnect it.
 Connect cards appear only when a connector says you need to sign in, not for other errors.

@@ -7,28 +7,7 @@
     <docs>http://www.rssboard.org/rss-specification</docs>
     <generator>RSS Creator</generator>
     <language>zh-CN</language>
-    <lastBuildDate>Tue, 10 Nov 2026 12:17:12 +0000</lastBuildDate>
-    <item>
-      <title>SynLogic-32B</title>
-      <link>https://huggingface.co/MiniMaxAI/SynLogic-32B</link>
-      <description>[HuggingFace Model] | text-generation | Likes: 17 | Tags: transformers, safetensors, qwen2, text-generation, LLM</description>
-      <guid isPermaLink="true">https://huggingface.co/MiniMaxAI/SynLogic-32B</guid>
-      <pubDate>Fri, 30 May 2025 12:06:34 +0000</pubDate>
-    </item>
-    <item>
-      <title>SynLogic-Mix-3-32B</title>
-      <link>https://huggingface.co/MiniMaxAI/SynLogic-Mix-3-32B</link>
-      <description>[HuggingFace Model] | text-generation | Likes: 21 | Tags: transformers, safetensors, qwen2, text-generation, LLM</description>
-      <guid isPermaLink="true">https://huggingface.co/MiniMaxAI/SynLogic-Mix-3-32B</guid>
-      <pubDate>Fri, 30 May 2025 13:32:06 +0000</pubDate>
-    </item>
-    <item>
-      <title>SynLogic-7B</title>
-      <link>https://huggingface.co/MiniMaxAI/SynLogic-7B</link>
-      <description>[HuggingFace Model] | text-generation | Likes: 29 | Tags: transformers, safetensors, qwen2, text-generation, LLM</description>
-      <guid isPermaLink="true">https://huggingface.co/MiniMaxAI/SynLogic-7B</guid>
-      <pubDate>Tue, 03 Jun 2025 03:00:03 +0000</pubDate>
-    </item>
+    <lastBuildDate>Tue, 10 Nov 2026 20:19:27 +0000</lastBuildDate>
     <item>
       <title>MiniMax-Text-01-hf</title>
       <link>https://huggingface.co/MiniMaxAI/MiniMax-Text-01-hf</link>
@@ -200,14 +179,14 @@
     <item>
       <title>skills</title>
       <link>https://github.com/MiniMax-AI/skills</link>
-      <description>[GitHub Repo] | Language: C# | Stars: 13812</description>
+      <description>[GitHub Repo] | Language: C# | Stars: 13814</description>
       <guid isPermaLink="true">https://github.com/MiniMax-AI/skills</guid>
       <pubDate>Tue, 17 Mar 2026 07:19:25 +0000</pubDate>
     </item>
     <item>
       <title>cli</title>
       <link>https://github.com/MiniMax-AI/cli</link>
-      <description>[GitHub Repo] | Generate text, images, video, speech, and music by MiniMax. | Language: TypeScript | Stars: 2209 | Topics: ai</description>
+      <description>[GitHub Repo] | Generate text, images, video, speech, and music by MiniMax. | Language: TypeScript | Stars: 2210 | Topics: ai</description>
       <guid isPermaLink="true">https://github.com/MiniMax-AI/cli</guid>
       <pubDate>Wed, 25 Mar 2026 15:34:45 +0000</pubDate>
     </item>
@@ -235,7 +214,7 @@
     <item>
       <title>minimax-code</title>
       <link>https://github.com/MiniMax-AI/minimax-code</link>
-      <description>[GitHub Repo] | An open-source coding agent for your terminal, powered by MiniMax. | Language: TypeScript | Stars: 2206 | Topics: coding-agents, harness, minimax</description>
+      <description>[GitHub Repo] | An open-source coding agent for your terminal, powered by MiniMax. | Language: TypeScript | Stars: 2209 | Topics: coding-agents, harness, minimax</description>
       <guid isPermaLink="true">https://github.com/MiniMax-AI/minimax-code</guid>
       <pubDate>Mon, 01 Jun 2026 12:39:40 +0000</pubDate>
     </item>
@@ -263,21 +242,21 @@
     <item>
       <title>MiniMax-H3</title>
       <link>https://huggingface.co/MiniMaxAI/MiniMax-H3</link>
-      <description>[HuggingFace Model] | image-text-to-video | Likes: 6702 | Tags: minimax-h3, diffusers, safetensors, text-to-video, image-to-video</description>
+      <description>[HuggingFace Model] | image-text-to-video | Likes: 6720 | Tags: minimax-h3, diffusers, safetensors, text-to-video, image-to-video</description>
       <guid isPermaLink="true">https://huggingface.co/MiniMaxAI/MiniMax-H3</guid>
       <pubDate>Tue, 28 Jul 2026 10:45:18 +0000</pubDate>
     </item>
     <item>
       <title>MiniMax-H3</title>
       <link>https://github.com/MiniMax-AI/MiniMax-H3</link>
-      <description>[GitHub Repo] | Language: Python | Stars: 11688</description>
+      <description>[GitHub Repo] | Language: Python | Stars: 11708</description>
       <guid isPermaLink="true">https://github.com/MiniMax-AI/MiniMax-H3</guid>
       <pubDate>Thu, 30 Jul 2026 08:41:09 +0000</pubDate>
     </item>
     <item>
       <title>MiniMax-Music3</title>
       <link>https://huggingface.co/MiniMaxAI/MiniMax-Music3</link>
-      <description>[HuggingFace Model] | text-to-audio | Likes: 1513 | Tags: diffusers, safetensors, minimax_music3, music-generation, text-to-music</description>
+      <description>[HuggingFace Model] | text-to-audio | Likes: 1516 | Tags: diffusers, safetensors, minimax_music3, music-generation, text-to-music</description>
       <guid isPermaLink="true">https://huggingface.co/MiniMaxAI/MiniMax-Music3</guid>
       <pubDate>Fri, 07 Aug 2026 12:23:29 +0000</pubDate>
     </item>
@@ -305,7 +284,7 @@
     <item>
       <title>awesome-minimax-h3-integration</title>
       <link>https://github.com/MiniMax-AI/awesome-minimax-h3-integration</link>
-      <description>[GitHub Repo] | Stars: 552</description>
+      <description>[GitHub Repo] | Stars: 553</description>
       <guid isPermaLink="true">https://github.com/MiniMax-AI/awesome-minimax-h3-integration</guid>
       <pubDate>Thu, 13 Aug 2026 05:47:03 +0000</pubDate>
     </item>
@@ -340,16 +319,23 @@
     <item>
       <title>MiniMax-M3.1-Flash</title>
       <link>https://huggingface.co/MiniMaxAI/MiniMax-M3.1-Flash</link>
-      <description>[HuggingFace Model] | image-text-to-text | Likes: 567 | Tags: transformers, safetensors, minimax_m3_vl, image-text-to-text, multimodal</description>
+      <description>[HuggingFace Model] | image-text-to-text | Likes: 572 | Tags: transformers, safetensors, minimax_m3_vl, image-text-to-text, multimodal</description>
       <guid isPermaLink="true">https://huggingface.co/MiniMaxAI/MiniMax-M3.1-Flash</guid>
       <pubDate>Sat, 17 Oct 2026 06:37:50 +0000</pubDate>
     </item>
     <item>
       <title>mcode-stack</title>
       <link>https://github.com/MiniMax-AI/mcode-stack</link>
-      <description>[GitHub Repo] | The workflows and skills the MiniMax Code team uses to build MiniMax Code. Open source, install and use. | Language: HTML | Stars: 649 | Topics: agent-skills, ai-coding, claude-skills, coding-agent, harness-engineering, minimax-code</description>
+      <description>[GitHub Repo] | The workflows and skills the MiniMax Code team uses to build MiniMax Code. Open source, install and use. | Language: HTML | Stars: 669 | Topics: agent-skills, ai-coding, claude-skills, coding-agent, harness-engineering, minimax-code</description>
       <guid isPermaLink="true">https://github.com/MiniMax-AI/mcode-stack</guid>
       <pubDate>Wed, 28 Oct 2026 02:17:41 +0000</pubDate>
+    </item>
+    <item>
+      <title>MiniMax-H3-Image</title>
+      <link>https://huggingface.co/MiniMaxAI/MiniMax-H3-Image</link>
+      <description>[HuggingFace Model] | text-to-image | Likes: 300 | Tags: minimax-h3, diffusers, safetensors, text-to-image, image-to-image</description>
+      <guid isPermaLink="true">https://huggingface.co/MiniMaxAI/MiniMax-H3-Image</guid>
+      <pubDate>Tue, 03 Nov 2026 06:34:36 +0000</pubDate>
     </item>
     <item>
       <title>mcode-agent-table</title>
@@ -357,6 +343,20 @@
       <description>[GitHub Repo] | BYOB Table Protocol v0.1 and reference implementation: bring your own agent (MiniMax Code and others) to one shared table for any-topology discussion and collaboration. | Language: JavaScript | Stars: 54 | Topics: agents, byob, mcp, minimax, multi-agent, protocol</description>
       <guid isPermaLink="true">https://github.com/MiniMax-AI/mcode-agent-table</guid>
       <pubDate>Tue, 03 Nov 2026 12:29:06 +0000</pubDate>
+    </item>
+    <item>
+      <title>MiniMax-H3-Image-PE</title>
+      <link>https://huggingface.co/MiniMaxAI/MiniMax-H3-Image-PE</link>
+      <description>[HuggingFace Model] | text-generation | Likes: 24 | Tags: transformers, safetensors, qwen3_5, image-text-to-text, prompt-expansion</description>
+      <guid isPermaLink="true">https://huggingface.co/MiniMaxAI/MiniMax-H3-Image-PE</guid>
+      <pubDate>Sun, 08 Nov 2026 15:35:23 +0000</pubDate>
+    </item>
+    <item>
+      <title>MiniMax-H3-Image</title>
+      <link>https://github.com/MiniMax-AI/MiniMax-H3-Image</link>
+      <description>[GitHub Repo] | Stars: 30</description>
+      <guid isPermaLink="true">https://github.com/MiniMax-AI/MiniMax-H3-Image</guid>
+      <pubDate>Mon, 09 Nov 2026 17:11:00 +0000</pubDate>
     </item>
   </channel>
 </rss>

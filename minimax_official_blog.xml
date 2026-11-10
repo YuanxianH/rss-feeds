@@ -7,7 +7,14 @@
     <docs>http://www.rssboard.org/rss-specification</docs>
     <generator>RSS Creator</generator>
     <language>zh-CN</language>
-    <lastBuildDate>Tue, 10 Nov 2026 12:17:11 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 10 Nov 2026 20:19:26 +0000</lastBuildDate>
+    <item>
+      <title>MiniMax H3-Image: Bringing 4K Image Generation into the 10-Second Era - MiniMax Research</title>
+      <link>https://www.minimax.io/blog/minimax-h3-image</link>
+      <description>Today, we're releasing MiniMax H3-Image, an open-weight image generation model built on H3. It supports text-to-image generation, reference-based generation, and image editing.</description>
+      <guid isPermaLink="true">https://www.minimax.io/blog/minimax-h3-image</guid>
+      <pubDate>Wed, 11 Nov 2026 00:00:00 +0000</pubDate>
+    </item>
     <item>
       <title>Introducing MiniMax Code Mini App</title>
       <link>https://www.minimax.io/blog/minimax-code-mini-app-1792650729</link>
