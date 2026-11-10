@@ -7,7 +7,123 @@
     <docs>http://www.rssboard.org/rss-specification</docs>
     <generator>RSS Creator</generator>
     <language>zh-CN</language>
-    <lastBuildDate>Mon, 09 Nov 2026 20:30:36 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 10 Nov 2026 03:16:51 +0000</lastBuildDate>
+    <item>
+      <title>Shared page themes and call card fixes (0.79.3)</title>
+      <link>https://x.ai/changelog/bot#v0.79.3</link>
+      <description>New
+Shared Pages have a title bar button, Switch to dark theme or Switch to light theme, that remembers your choice.
+Improved
+When the usual page fetch fails, the Bot reads the page directly instead of opening it in a browser.
+Unanswered and failed call cards offer Copy conversation ID.
+Fixed
+A busy or unreachable phone call now shows No answer instead of Didn't go through.
+When someone interrupts a phone call, the live transcript shows only the part of the Bot's line they heard.
+Disconnecting 1Password no longer shows a Service Unavailable message or leaves the plugin page on Connected.
+When nobody takes back a computer the Bot handed you, the chat stops showing Waiting for you after 24 hours.
+With a team selected, Always allow on a local command saves, and your computer is no longer listed as Another computer.
+Email the spam filter holds is kept so the Bot can read it when you ask, and it still doesn't wake you.
+A failed Microsoft Teams admin sign-in shows Microsoft's error, with Try again and Back to dashboard. Teams
+On an Enterprise trial, the Bot replies instead of saying it hit a usage limit. Enterprise</description>
+      <guid isPermaLink="true">https://x.ai/changelog/bot#v0.79.3</guid>
+      <pubDate>Fri, 06 Nov 2026 00:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>New app icon and gift requests (0.79.2)</title>
+      <link>https://x.ai/changelog/bot#v0.79.2</link>
+      <description>New
+Asked to find a gift, the Bot asks for the recipient, budget, occasion, and deliver-by date, and never orders one that arrives late.
+Booking a flight on Delta, American, Alaska, JetBlue, or Frontier follows that site's steps, and a booking that stops ends with a link to finish.
+Gmail and Outlook draft cards list attached files, and Send includes them.
+When a web page hides instructions for AI agents, the Bot tells you it found them and didn't follow them.
+A message you send in New chat while Create New Bot is still running goes to the new Bot and stays on screen.
+Settings offers Slovenščina, and the app opens in Slovenian when your system language is Slovenian.
+The Bot's computer can run ssh and psql .
+Admins can set a Bot Computer Retention Period, after which inactive members' Bot computers are terminated. Teams
+Improved
+The desktop app has a new flat Grok Bot icon.
+After you tap Pay, a blocked checkout continues in the same run, and the reply can include the order number and total.
+While shopping, the Bot enters only discount codes you or a tool gave it, and tells you when a site rejects one.
+The Bot searches your connected Gopuff store, or searches products, without asking you to connect Gopuff first.
+Signing in at gopuff.com offers a Let Grok Bot use Gopuff card with Add.
+Commands that open or unlock your Tesla, or let someone drive it, always ask for your approval.
+Auto-review cards say what paused an action: your Ask first rule, your team's Ask first rule, or your Needs approval setting.
+Chat search shows Searched recent messages, with Search older to look further back.
+Connector search lists name matches first, so typing salesf shows Salesforce at the top.
+Connector icons share one size and a contrasting background, so they stay visible in both themes.
+To share text with a live phone call, a card asks Send this to your call?, and you can edit the text first.
+Asking a Bot to save a file to its Library puts it in Bot's files for everyone who can use the Bot.
+Fixed
+Before placing an order, the Bot rechecks the shipping and total you approved, and tells you if the charged total differs.
+With no saved card, the Bot opens a secure Card number form before the order card, and Pay uses that card.
+Card fields inside payment frames and on other checkout sites fill in, instead of the Bot handing you the screen.
+Shopping cards show the product's photos and the chosen color's photo, and later colors and sizes show their price.
+A View at store page for a store the Bot manages opens in the app instead of This page could not be opened.
+After you approve a Link payment, the Bot keeps checking for about ten minutes before saying the request is still pending.
+Files you upload from your phone are copied onto the Bot's computer, so it can open them.
+A one-off routine turns off after it runs instead of firing again next year.
+You're offline shows only when your computer is offline, and an unreachable Bot computer gets its own message.
+Long Library histories no longer hang the app, and Load older history loads the next batch.
+An open Page reloads to its latest version after a reconnect, and a Page that fails to load retries once.
+A finished coding run shows Merged when its pull request merges, instead of staying on Ready for review.
+On Windows, Grok Bot no longer freezes for seconds the first time it loads a JPEG.
+Switching back to a chat no longer makes the text jump, and opening a task no longer flashes the main chat.
+A Bot created while the list was unavailable appears on its own instead of after Try again.
+Search with no matches says No results, and going back from a plugin opened in search returns to that search.
+The usage chart shows the same usage as the meter, including for a team you belong to.
+In dark mode, Purchase Credits in Top up your balance shows its label instead of a blank white button.
+Pages that pass very large or looping connector data no longer crash the app.
+When 1Password doesn't finish connecting, the message asks you to try connecting again.
+Choosing a time zone on your phone, with Set Time Zone Automatically off, sets the Bot's clock to that zone.
+The Bot's computer runs Node.js scripts, including ones that start with #!/usr/bin/node .
+When routine history cannot load, the Bot says it cannot check recent runs instead of saying the routine never ran.
+A custom connector your team policy blocks shows the admin's reason instead of Something went wrong. Teams</description>
+      <guid isPermaLink="true">https://x.ai/changelog/bot#v0.79.2</guid>
+      <pubDate>Thu, 05 Nov 2026 00:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>Scheduled reorders and Slack linking (0.78.5)</title>
+      <link>https://x.ai/changelog/bot#v0.78.5</link>
+      <description>New
+A scheduled reorder of your usual list asks for one approval per order, and that approval shows the checkout total.
+Improved
+Linking a Slack workspace ends on a page that names the workspace, with See your connections and Open Slack.
+Fixed
+While a checkout is still finishing, the order card stays on Order submitted instead of saying the order couldn't be confirmed.
+Greetings and small talk keep a working line such as Thinking it through while the Bot replies.
+In the last day, usage reset and trial labels count down in hours or minutes.</description>
+      <guid isPermaLink="true">https://x.ai/changelog/bot#v0.78.5</guid>
+      <pubDate>Wed, 04 Nov 2026 00:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>Refund requests and smoother checkout (0.78.4)</title>
+      <link>https://x.ai/changelog/bot#v0.78.4</link>
+      <description>New
+The Bot can ask for a refund on a subscription charge, and lists each way to ask before it sends or submits anything.
+Improved
+When the Bot rebuilds a usual order, it opens with what's out of stock and what changed price.
+For greetings and quick replies, the status line names the work instead of saying the Bot is on it.
+After you connect apps on the desktop, onboarding no longer asks for your email in the chat.
+Fixed
+After you approve a flight, stay, or grocery cart and its total, the Bot pays on its own and asks again only if something material changes.
+When a site asks for payment for a plan, credits, a top-up, or a domain, the Bot handles checkout instead of handing you the screen.
+Checkout with a saved card always waits for you to tap Pay on the order card before filling in the card.
+Auto-review shows fewer unneeded approval cards when its check is slow or the conversation is long.
+Mentioning a Bot in Slack without a linked account shows a Link Account button and sends you a private link.
+Slack Connect uploads such as PDFs, images, and text files now load in the chat.
+In Slack, connector permission cards ask only about the connector the Bot is using, with Allow once and Skip.
+Routines on a private Slack channel, DM, or group DM run only while you're still a member through your linked Slack account.
+When the Bot reads Microsoft Teams messages, pasted links keep their address so it can open them.
+Removing and reconnecting a Microsoft Teams Bot no longer leaves a duplicate in Teams search.
+An MCP server on a private Tailscale network now says to connect your tailnet from the Tailscale plugin, then try again.
+The usage warning banner hides when the open chat already shows a usage-limit card.
+After your accounts merge, the weekly usage-limit card clears once your usage recovers.
+Deleting your Grok Bot account no longer times out when you have many computers.
+GitHub shows Disabled by team admin only when your team MCP rules actually block it. Teams
+Plugin installs follow your team's allowlist, and a blocked plugin says Your team admin has disabled this plugin's MCP servers. Teams</description>
+      <guid isPermaLink="true">https://x.ai/changelog/bot#v0.78.4</guid>
+      <pubDate>Tue, 03 Nov 2026 00:00:00 +0000</pubDate>
+    </item>
     <item>
       <title>Shopping cards and subscription templates (0.78.1)</title>
       <link>https://x.ai/changelog/bot#v0.78.1</link>
