@@ -7,7 +7,42 @@
     <docs>http://www.rssboard.org/rss-specification</docs>
     <generator>RSS Creator</generator>
     <language>zh-CN</language>
-    <lastBuildDate>Wed, 11 Nov 2026 17:02:28 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 12 Nov 2026 00:11:55 +0000</lastBuildDate>
+    <item>
+      <title>Meetings, Microsoft Teams, and shared connectors (1.0.1)</title>
+      <link>https://x.ai/changelog/bot#v1.0.1</link>
+      <description>New
+On Team, Enterprise, and Ultra plans, a Bot can join a Google Meet, Zoom, or Microsoft Teams call from a link, answer in the meeting chat, and send a summary afterward.
+Team Bots can join Microsoft Teams: a team admin turns it on, an owner or Manager connects the Bot, and a Teams admin approves it. Teams
+Owners and Managers can share their own app login as a shared connector, once a team admin turns on Allow Shared Logins. Teams
+What teammates teach a Team Bot waits under Review learnings until the owner or a Manager approves it. Teams
+Team admins can limit who shares Bots with Bot sharing. Teams
+A Bot's Voice menu has a Speed slider from 0.5x to 2x and a card for each voice, and a call's settings show the same controls.
+An expired order card offers Check price again, which asks the Bot for a fresh order card.
+Improved
+Wide tables in a reply expand into the empty space beside the message.
+A thumbs down on a reply settles on a thank-you without asking for reasons.
+Send Feedback has Include additional device diagnostics, which stays off unless you check it.
+A new Bot that takes longer than usual to set up says Still creating instead of failing, and what you type stays in the box.
+When a team admin has turned off a connector, its Connect button says Disabled by team admin.
+The Update button in the sidebar footer stays a round icon, and its tooltip says Restart to update.
+Typing -&gt; in the message box turns it into an arrow.
+Brazilian Portuguese reads more naturally across the app.
+Teammates' comments on a Team Bot's Pages reach the Bot. Teams
+Custom MCP connectors on a Team Bot show as shared with everyone, without a Share my account option. Teams
+On a turn with nothing to report, the Bot no longer sends a message that only says it's done.
+Fixed
+Files up to 250 MB on the Bot's computer no longer make a reply fail.
+Escape closes only the top dialog or menu, and one Escape from an empty search closes Connect Apps.
+Cmd+Enter or Ctrl+Enter in a dialog no longer sends the chat message behind it.
+Clicking Connected on a plugin in Connect Apps opens that plugin.
+Team Bot account lists in Configure no longer get stuck loading. Teams
+Names and previews are never cut off in the middle of an emoji.
+A finished phone call card shows its text once when expanded.
+On Linux, the AppImage shows its icon in the taskbar after installing.</description>
+      <guid isPermaLink="true">https://x.ai/changelog/bot#v1.0.1</guid>
+      <pubDate>Wed, 11 Nov 2026 00:00:00 +0000</pubDate>
+    </item>
     <item>
       <title>Shared page themes and call card fixes (0.79.3)</title>
       <link>https://x.ai/changelog/bot#v0.79.3</link>
