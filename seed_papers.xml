@@ -7,7 +7,7 @@
     <docs>http://www.rssboard.org/rss-specification</docs>
     <generator>RSS Creator</generator>
     <language>zh-CN</language>
-    <lastBuildDate>Sun, 15 Nov 2026 23:50:10 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 16 Nov 2026 05:20:47 +0000</lastBuildDate>
     <item>
       <title>Recycler: Cost-Free Latent Reasoning via Hidden State Recycling</title>
       <link>https://seed.bytedance.com/zh/public_papers/recycler-cost-free-latent-reasoning-via-hidden-state-recycling</link>
@@ -19,6 +19,51 @@ arXiv: https://lf3-static.bytednsdoc.com/obj/eden-cn/hyvsmeh7uhobf/recycler_arxi
       <pubDate>Sun, 25 Oct 2026 00:00:00 +0800</pubDate>
     </item>
     <item>
+      <title>Full-Duplex Interaction with Speech, Expressions and Gestures</title>
+      <link>https://seed.bytedance.com/zh/public_papers/full-duplex-interaction-with-speech-expressions-and-gestures</link>
+      <description>Human face-to-face conversation requires coordinating speech, gestures and expressions across both speaking and listening. We present ELLSA 2, an end-to-end full-duplex dialogue model that jointly optimizes speech interaction and streaming gesture-expression generation. An autoregressive, chunk-wise synthesizer combines pretrained acoustic features with distinct listening and speaking hidden states from the dialogue backbone and speech synthesizer, enabling continuous non-verbal generation even when the model is verbally silent. To translate dialogue understanding into vivid semantic gestures, we introduce contextual semantic calls and template guidance, separating whether to invoke an available semantic gesture from how to realize it. We also establish a curated data and evaluation pipeline for dialog-aware co-speech gesture generation and investigate reference-based multimodal large language models (MLLMs) as automatic judges. Experiments show that ELLSA 2 remains highly competitive with open-source full-duplex speech interaction models and outperforms cascaded baselines across dialog-aware gesture and expression metrics. Semantic template guidance further significantly improves semantic gesture quality. Strong system-level correlations with human judgments support these reference-based scores as useful preliminary metrics for full-duplex and semantic gesture assessment. Together, these results advance dialogue modeling from spoken responses toward coordinated multimodal interaction.
+
+arXiv: https://arxiv.org/pdf/2610.21452</description>
+      <guid isPermaLink="false">1794799809157</guid>
+      <pubDate>Thu, 15 Oct 2026 20:00:00 +0800</pubDate>
+    </item>
+    <item>
+      <title>Cortex: Consolidating Context into Parametric Memory</title>
+      <link>https://seed.bytedance.com/zh/public_papers/cortex-consolidating-context-into-parametric-memory</link>
+      <description>Context can improve large language model performance, but these gains may be lost after context removal. Inspired by biological systems consolidation, we formulate Memory Consolidation (MC) as internalizing these gains while preserving non-target capabilities, connecting context-specified editing, skill learning, and behavioral steering under a common objective. We introduce a five-task-family testbed measuring consolidation and retention under single, batch, and sequential updates. We propose Cortex, which generates prospective queries to anticipate uses of context and distills context-conditioned outputs into mergeable low-rank or structural feed-forward network updates. Across 4B--120B dense and mixture-of-experts backbones, including both text-only and multimodal models, Cortex lies on the empirical consolidation--retention Pareto frontier in most evaluated settings. After 50 sequential factual edits on a 14B model, Cortex-Structural recovers 88.9% of the context-induced gain while retaining 99.8% of original non-target performance.
+
+arXiv: https://arxiv.org/pdf/2610.20399</description>
+      <guid isPermaLink="false">1794800207061</guid>
+      <pubDate>Wed, 14 Oct 2026 20:00:00 +0800</pubDate>
+    </item>
+    <item>
+      <title>ObsSpec: Accelerating Agentic Reinforcement Learning with Observation Speculation</title>
+      <link>https://seed.bytedance.com/zh/public_papers/obsspec-accelerating-agentic-reinforcement-learning-with-observation-speculation</link>
+      <description>Tool-using agents alternate between model generation and tool execution, waiting for each tool call to complete before starting the next generation. This sequential execution is costly during agentic reinforcement learning (RL), which requires large batches of multi-turn rollouts. We introduce ObsSpec, an observation speculation pipeline for agentic RL that uses a small world model to predict tool outputs while the environment executes, allowing the policy to begin its next generation early. ObsSpec retains speculative work only when the predicted and actual observations match exactly, making rollout collection lossless, while co-training keeps the world model up to date as the policy learns. On terminal-use tasks, predictions from a 0.6B world model exactly match actual observations in 66.4% of attempts and arrive roughly 16 times faster. Using these predictions, ObsSpec reduces agent latency by 9.3% and 14.2% for 8B and 32B policies. Across controlled experiments, we characterize the regimes in which ObsSpec reduces agent latency under shared policy resources. Finally, because ObsSpec overlaps policy generation with tool execution, it is architecturally compatible with existing techniques for accelerating RL. Code is available at https://github.com/kylemontgomery1/verl-recipe/tree/obsspec/obsspec.
+
+arXiv: https://arxiv.org/pdf/2610.15246</description>
+      <guid isPermaLink="false">1794800111884</guid>
+      <pubDate>Sun, 11 Oct 2026 20:00:00 +0800</pubDate>
+    </item>
+    <item>
+      <title>One Model, Multiple Compute Budgets: Multi-Ratio ConceptMoE for Flexible Compute Across Turns</title>
+      <link>https://seed.bytedance.com/zh/public_papers/one-model-multiple-compute-budgets-multi-ratio-conceptmoe-for-flexible-compute-across-turns</link>
+      <description>Large language models typically support different inference budgets through separate model sizes or fixed compute configurations. In multi-turn interactions, however, compute demand can vary substantially across turns. Using a high-compute model for every turn wastes computation, while routing among independent models may require rebuilding model-specific history states after switches. We therefore ask whether a single shared model can support multiple compute budgets that can be flexibly assigned across turns. We introduce Multi-Ratio ConceptMoE, which jointly supports token-to-concept compression ratios of 2, 4, and 8 (CR2/CR4/CR8) within a shared backbone. Lightweight full-token modules reduce compression-independent cost, ratio-specific boundary routers support distinct compression levels, and cross-ratio training enables mixed-ratio processing within the same context. Across PTBench and SFTBench, the three fixed modes outperform their compute-matched MoE baselines in all 6 comparisons while remaining competitive with independently trained fixed-ratio specialists. On CodeChat and CoSQL, mixed-ratio inference improves the accuracy--compute trade-off, outperforming the Large MoE by 5.87 and 2.68 percentage points while reducing FLOPs by 41.1% and 12.3%, respectively. Under the same turn-wise budget schedule, Multi-Ratio ConceptMoE further reduces FLOPs by 78.4% and 46.9% relative to routing among independent models. These results demonstrate that a single shared model can provide multiple compute budgets for flexible compute allocation across turns.
+
+arXiv: https://arxiv.org/pdf/2610.14074</description>
+      <guid isPermaLink="false">1794799411504</guid>
+      <pubDate>Thu, 08 Oct 2026 20:00:00 +0800</pubDate>
+    </item>
+    <item>
+      <title>FastCI: Efficient GPU-Intensive CI for LLM Training Frameworks</title>
+      <link>https://seed.bytedance.com/zh/public_papers/fastci-efficient-gpu-intensive-ci-for-llm-training-frameworks</link>
+      <description>As large language models (LLMs) keep growing in size and complexity, their training frameworks evolve at a rapid pace as well. Therefore, continuous integration (CI) is critical for maintaining the quality and stability of these frameworks. However, unlike traditional software, CI for LLM training frameworks relies on GPU-intensive tests, which usually involve complete model training or evaluation. This leads CI itself to become a new bottleneck for fast-paced development. In this paper, we introduce FastCI, a framework that improves the efficiency of CI for LLM training frameworks. FastCI leverages runtime evidence to select affected tests and prune tests that execute changed code in equivalent contexts. Then FastCI prioritizes high-risk tests to expose potential failures earlier, and optimizes test workloads along dimensions outside the intended validation scope of each test. Evaluated on the CI workload of our LLM training framework, FastCI reduces the CI latency by 77.5% and the GPU resource usage by 63.9%, while improving the modified code coverage retention by 3.2%, compared with the currently deployed CI pipelines. FastCI has now been integrated into the CI pipelines of our LLM training framework at ByteDance.
+
+arXiv: https://arxiv.org/pdf/2610.01967</description>
+      <guid isPermaLink="false">1794799988726</guid>
+      <pubDate>Thu, 01 Oct 2026 20:00:00 +0800</pubDate>
+    </item>
+    <item>
       <title>Periodic Weak Spots: Phase Sensitivity from Chunked KV-Cache Compression</title>
       <link>https://seed.bytedance.com/zh/public_papers/periodic-weak-spots-phase-sensitivity-from-chunked-kv-cache-compression</link>
       <description>Chunked KV-cache compression reduces the memory and attention costs of long-context inference by compressing windows of consecutive tokens into fewer cache entries at a fixed stride. Such compression also introduces a new positional coordinate: a token's phase, or its position relative to compression-window boundaries. We uncover a systematic asymmetry in models using such compression: the same information can be easy to retrieve at one phase and difficult at another. We call this periodic variation in retrieval performance phase sensitivity. In large open-weight models with such compression, long-context retrieval accuracy can differ by up to 40 percentage points across phases, revealing periodic weak spots that average benchmark scores can conceal. To investigate this behavior, we pretrain a family of transformers from scratch across multiple KV-compression designs, reproducing phase sensitivity across the variants. Mechanistic analysis using causal interventions in these models reveals phase specialization: different attention components contribute asymmetrically to retrieving information at different source phases. We further analyze idealized retrieval models, showing how gradient flow dynamics may favor sharp phase specialization. Evaluating models with chunked KV-cache compression thus requires measuring across compression phases: high average accuracy can coexist with systematic positional failures.
@@ -26,6 +71,15 @@ arXiv: https://lf3-static.bytednsdoc.com/obj/eden-cn/hyvsmeh7uhobf/recycler_arxi
 arXiv: https://arxiv.org/pdf/2609.36322</description>
       <guid isPermaLink="false">1791871731369</guid>
       <pubDate>Mon, 28 Sep 2026 20:00:00 +0800</pubDate>
+    </item>
+    <item>
+      <title>EmbodiedSWE: Coding Agents for Long Horizon Dexterous Robotics</title>
+      <link>https://seed.bytedance.com/zh/public_papers/embodiedswe-coding-agents-for-long-horizon-dexterous-robotics</link>
+      <description>We study coding agents for long-horizon, dexterous robotics and ask whether their solutions can provide scalable supervision for learning general robot policies. To test this, we develop EMBODIEDSWE-BENCH, a simulation benchmark for coding agents spanning contact-rich manipulation, deformable objects, and long-horizon tasks requiring up to half an hour of continuous interaction. We find that frontier coding agents can solve complex long-horizon tasks and transfer prior solutions across both tasks and embodiments. We also design supporting tools that help agents more effectively solve these tasks. However, the resulting solutions require substantial iterative interaction and are typically specialized to individual task instances. We therefore introduce EMBODIEDSWE-GEN, which expands a single solution from coding agent into large diverse trajectories for training a VLA. VLA performance improves with more generated demonstrations, and agent-aided diversification improves generalization to held-out task variations. We also show that a VLA finetuned solely on coding-agent-generated simulation demonstrations completes a long-horizon task on real robot. Together, our framework uses coding agents to solve complex robotics tasks and turn verified solutions into scalable supervision for robot policies.
+
+arXiv: https://arxiv.org/pdf/2609.27308</description>
+      <guid isPermaLink="false">1794799914500</guid>
+      <pubDate>Wed, 23 Sep 2026 20:00:00 +0800</pubDate>
     </item>
     <item>
       <title>HarnessDev: Can LLMs Create and Evolve Their Own Agent Harness?</title>
@@ -416,60 +470,6 @@ arXiv: https://arxiv.org/pdf/2604.08702</description>
 arXiv: https://arxiv.org/pdf/2604.07026</description>
       <guid isPermaLink="false">1776933724828</guid>
       <pubDate>Wed, 08 Apr 2026 00:00:00 +0800</pubDate>
-    </item>
-    <item>
-      <title>GPU Accelerated Minimal Auxiliary Basis Approach TDDFT for Large Organic Molecules</title>
-      <link>https://seed.bytedance.com/zh/public_papers/gpu-accelerated-minimal-auxiliary-basis-approach-tddft-for-large-organic-molecules</link>
-      <description>We introduce a GPU-accelerated implementation of time-dependent density functional theory with the minimal auxiliary basis approach (TDDFT-risp) in GPU4PySCF, together with large system demonstrations carried out using the Tamm--Dancoff approximation (TDA-risp). The method combines GPU-accelerated three-center integral evaluation, tensor contractions, exchange-space truncation, omission of hydrogen atoms from the auxiliary basis, and a host memory assisted Davidson solver. On the EXTEST42 benchmark set, a conservative 40 eV exchange cutoff yields excitation-energy errors relative to standard TDA of about 0.03--0.05 eV for low-lying states. For systems of 300 to 3000 atoms, we demonstrate that TDA-risp calculations of 15 low-lying excited states with $ω$B97XD/def2-SVP complete on a single A100 GPU with wall times ranging from minutes to hours. These results position GPU-TDDFT-risp as a practical route toward excited-state calculations for large organic and biomolecular systems with thousands of atoms.
-
-arXiv: https://arxiv.org/pdf/2603.29257</description>
-      <guid isPermaLink="false">1789028219467</guid>
-      <pubDate>Tue, 31 Mar 2026 20:00:00 +0800</pubDate>
-    </item>
-    <item>
-      <title>Hessian-informed machine learning interatomic potential towards bridging theory and experiments</title>
-      <link>https://seed.bytedance.com/zh/public_papers/hessian-informed-machine-learning-interatomic-potential-towards-bridging-theory-and-experiments</link>
-      <description>Local curvature of potential energy surfaces is critical for predicting certain experimental observables of molecules and materials from first principles, yet it remains far beyond reach for complex systems. In this work, we introduce a Hessian-informed Machine Learning Interatomic Potential (Hi-MLIP) that captures such curvature reliably, thereby enabling accurate analysis of associated thermodynamic and kinetic phenomena. To make Hessian supervision practically viable, we develop a highly efficient training protocol, termed Hessian INformed Training (HINT), achieving two to four orders of magnitude reduction for the requirement of expensive Hessian labels. HINT integrates critical techniques, including Hessian pre-training, configuration sampling, curriculum learning and stochastic projection Hessian loss. Enabled by HINT, Hi-MLIP significantly improves transition-state search and brings Gibbs free-energy predictions close to chemical accuracy especially in data-scarce regimes. Our framework also enables accurate treatment of strongly anharmonic hydrides, reproducing phonon renormalization and superconducting critical temperatures in close agreement with experiment while bypassing the computational bottleneck of anharmonic calculations. These results establish a practical route to enhancing curvature awareness of machine learning interatomic potentials, bridging simulation and experimental observables across a wide range of systems.
-
-arXiv: https://arxiv.org/pdf/2603.25373</description>
-      <guid isPermaLink="false">1776665736498</guid>
-      <pubDate>Thu, 26 Mar 2026 00:00:00 +0800</pubDate>
-    </item>
-    <item>
-      <title>Towards Generalizable Robotic Data Flywheel: High-Dimensional Factorization and Composition</title>
-      <link>https://seed.bytedance.com/zh/public_papers/towards-generalizable-robotic-data-flywheel-high-dimensional-factorization-and-composition</link>
-      <description>The lack of sufficiently diverse data, coupled with limited data efficiency, remains a major bottleneck for generalist robotic models, yet systematic strategies for collecting and curating such data are not fully explored. Task diversity arises from implicit factors that are sparsely distributed across multiple dimensions and are difficult to define explicitly. To address this challenge, we propose F-ACIL, a heuristic factor-aware compositional iterative learning framework that enables structured data factorization and promotes compositional generalization. F-ACIL decomposes the data distribution into structured factor spaces such as object, action, and environment. Based on the factorized formulation, we develop a factor-wise data collection and an iterative training paradigm that promotes compositional generalization over the high-dimensional factor space, leading to more effective utilization of real-world robotic demonstrations. With extensive real-world experiments, we show that F-ACIL can achieve more than 45% performance gains with 5-10× fewer demonstrations comparing to that of which without the strategy. The results suggest that structured factorization offers a practical pathway toward efficient compositional generalization in real-world robotic learning. We believe F-ACIL can inspire more systematic research on building generalizable robotic data flywheel strategies.
-
-arXiv: https://arxiv.org/pdf/2603.25583</description>
-      <guid isPermaLink="false">1776666117326</guid>
-      <pubDate>Thu, 26 Mar 2026 00:00:00 +0800</pubDate>
-    </item>
-    <item>
-      <title>TopoMesh: High-Fidelity Mesh Autoencoding via Topological Unification</title>
-      <link>https://seed.bytedance.com/zh/public_papers/topomesh-high-fidelity-mesh-autoencoding-via-topological-unification</link>
-      <description>The dominant paradigm for high-fidelity 3D generation relies on a VAE-Diffusion pipeline, where the VAE's reconstruction capability sets a firm upper bound on generation quality. A fundamental challenge limiting existing VAEs is the representation mismatch between ground-truth meshes and network predictions: GT meshes have arbitrary, variable topology, while VAEs typically predict fixed-structure implicit fields (\eg, SDF on regular grids). This inherent misalignment prevents establishing explicit mesh-level correspondences, forcing prior work to rely on indirect supervision signals such as SDF or rendering losses. Consequently, fine geometric details, particularly sharp features, are poorly preserved during reconstruction. To address this, we introduce TopoMesh, a sparse voxel-based VAE that unifies both GT and predicted meshes under a shared Dual Marching Cubes (DMC) topological framework. Specifically, we convert arbitrary input meshes into DMC-compliant representations via a remeshing algorithm that preserves sharp edges using an L∞ distance metric. Our decoder outputs meshes in the same DMC format, ensuring that both predicted and target meshes share identical topological structures. This establishes explicit correspondences at the vertex and face level, allowing us to derive explicit mesh-level supervision signals for topology, vertex positions, and face orientations with clear gradients. Our sparse VAE architecture employs this unified framework and is trained with Teacher Forcing and progressive resolution training for stable and efficient convergence. Extensive experiments demonstrate that TopoMesh significantly outperforms existing VAEs in reconstruction fidelity, achieving superior preservation of sharp features and geometric details.
-
-arXiv: https://arxiv.org/pdf/2603.24278</description>
-      <guid isPermaLink="false">1776933945083</guid>
-      <pubDate>Wed, 25 Mar 2026 00:00:00 +0800</pubDate>
-    </item>
-    <item>
-      <title>UniGRPO: Unified Policy Optimization for Reasoning-Driven Visual Generation</title>
-      <link>https://seed.bytedance.com/zh/public_papers/unigrpo-unified-policy-optimization-for-reasoning-driven-visual-generation</link>
-      <description>Unified models capable of interleaved generation have emerged as a promising paradigm, with the community increasingly converging on autoregressive modeling for text and flow matching for image generation. To advance this direction, we propose a unified reinforcement learning framework tailored for interleaved generation. We validate our approach on its fundamental unit: a single round of reasoning-driven image generation, where the model first expands the user prompt through reasoning, followed by image synthesis. Formulating this multimodal generation process as a Markov Decision Process with sparse terminal rewards, we introduce UniGRPO to jointly optimize text and image generation policies using GRPO. Adopting a minimalist methodology to avoid over-design, we leverage established training recipes for both modalities by seamlessly integrating standard GRPO for reasoning and FlowGRPO for visual synthesis. To ensure scalability to multi-round interleaved generation, we introduce two critical modifications to the original FlowGRPO: (1) eliminating classifier-free guidance to maintain linear, unbranched rollouts, which is essential for scaling to complex scenarios involving multi-turn interactions and multi-condition generation (e.g., editing); and (2) replacing the standard latent KL penalty with an MSE penalty directly on the velocity fields, providing a more robust and direct regularization signal to mitigate reward hacking effectively. Our experiments demonstrate that this unified training recipe significantly enhances image generation quality through reasoning, providing a robust and scalable baseline for the future post-training of fully interleaved models.
-
-arXiv: https://arxiv.org/pdf/2603.23500</description>
-      <guid isPermaLink="false">1776933641787</guid>
-      <pubDate>Tue, 24 Mar 2026 00:00:00 +0800</pubDate>
-    </item>
-    <item>
-      <title>SIMART: Decomposing Monolithic Meshes into Sim-ready Articulated Assets via MLLM</title>
-      <link>https://seed.bytedance.com/zh/public_papers/simart-decomposing-monolithic-meshes-into-sim-ready-articulated-assets-via-mllm</link>
-      <description>High-quality articulated 3D assets are indispensable for embodied AI and physical simulation, yet 3D generation still focuses on static meshes, leaving a gap in "sim-ready" interactive objects. Most recent articulated object creation methods rely on multi-stage pipelines that accumulate errors across decoupled modules. Alternatively, unified MLLMs offer a single-stage path to joint static asset understanding and sim-ready asset generation. However dense voxel-based 3D tokenization yields long 3D token sequences and high memory overhead, limiting scalability to complex articulated objects. To address this, we propose SIMART, a unified MLLM framework that jointly performs part-level decomposition and kinematic prediction. By introducing a Sparse 3D VQ-VAE, SIMART reduces token counts by 70% vs. dense voxel tokens, enabling high-fidelity multi-part assemblies. SIMART achieves state-of-the-art performance on PartNet-Mobility and in-the-wild AIGC datasets, and enables physics-based robotic simulation.
-
-arXiv: https://arxiv.org/pdf/2603.23386</description>
-      <guid isPermaLink="false">1776666339989</guid>
-      <pubDate>Tue, 24 Mar 2026 00:00:00 +0800</pubDate>
     </item>
   </channel>
 </rss>

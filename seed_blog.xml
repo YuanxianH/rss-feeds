@@ -7,7 +7,13 @@
     <docs>http://www.rssboard.org/rss-specification</docs>
     <generator>RSS Creator</generator>
     <language>zh-CN</language>
-    <lastBuildDate>Sun, 15 Nov 2026 23:50:09 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 16 Nov 2026 05:20:46 +0000</lastBuildDate>
+    <item>
+      <title>Seed STEM 计划｜分子逆合成挑战赛启动</title>
+      <link>https://seed.bytedance.com/zh/blog/seed-stem-%E8%AE%A1%E5%88%92-%E5%88%86%E5%AD%90%E9%80%86%E5%90%88%E6%88%90%E6%8C%91%E6%88%98%E8%B5%9B%E5%90%AF%E5%8A%A8</link>
+      <guid isPermaLink="false">1794791950696</guid>
+      <pubDate>Mon, 16 Nov 2026 00:00:00 +0800</pubDate>
+    </item>
     <item>
       <title>生成更真实，百轮编辑更稳定｜Seedream 5.5 发布</title>
       <link>https://seed.bytedance.com/zh/blog/%E7%94%9F%E6%88%90%E6%9B%B4%E7%9C%9F%E5%AE%9E-%E7%99%BE%E8%BD%AE%E7%BC%96%E8%BE%91%E6%9B%B4%E7%A8%B3%E5%AE%9A-seedream-5-5-%E5%8F%91%E5%B8%83</link>
@@ -348,13 +354,6 @@
       <description>历时半年，填补长尾知识评估空白</description>
       <guid isPermaLink="false">1763522447835</guid>
       <pubDate>Tue, 04 Mar 2025 00:00:00 +0800</pubDate>
-    </item>
-    <item>
-      <title>Seed Research | 形式化数学推理新 SOTA！BFS-Prover 模型最新开源</title>
-      <link>https://seed.bytedance.com/zh/blog/seed-research-%E5%BD%A2%E5%BC%8F%E5%8C%96%E6%95%B0%E5%AD%A6%E6%8E%A8%E7%90%86%E6%96%B0-sota-bfs-prover-%E6%A8%A1%E5%9E%8B%E6%9C%80%E6%96%B0%E5%BC%80%E6%BA%90</link>
-      <description>化繁为简，鼓励机器深度思考</description>
-      <guid isPermaLink="false">1763522622733</guid>
-      <pubDate>Tue, 25 Feb 2025 00:00:00 +0800</pubDate>
     </item>
   </channel>
 </rss>
