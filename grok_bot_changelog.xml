@@ -7,7 +7,47 @@
     <docs>http://www.rssboard.org/rss-specification</docs>
     <generator>RSS Creator</generator>
     <language>zh-CN</language>
-    <lastBuildDate>Wed, 18 Nov 2026 18:42:19 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 19 Nov 2026 00:59:46 +0000</lastBuildDate>
+    <item>
+      <title>Tool permissions and routine reconnect cards (1.2.3)</title>
+      <link>https://x.ai/changelog/bot#v1.2.3</link>
+      <description>New
+Connector pages let you set each tool to Always allow, Auto-review, Needs approval, or Blocked. 0.70.2+ Requires Grok Bot 0.70.2 or later
+Clicking a message button in an MCP App puts its text in the chat box, ready for you to send.
+Signing up for Grok Bot requires you to be 18 or older.
+Team admins can limit which tools the built-in GitHub connector offers, and the Bot says when a team admin limited a tool. Teams
+Improved
+When a routine needs you to reconnect an account, its reconnect card also arrives as a notification and as a Slack or Microsoft Teams direct message. 0.79.2+ Requires Grok Bot 0.79.2 or later
+A routine that loses a connector sign-in skips its scheduled runs until you sign back in.
+Routines can read the earlier conversation in the chat they run in.
+When a connector one of the Bot's helpers uses is signed out, a reconnect card appears in your chat. 0.79.2+ Requires Grok Bot 0.79.2 or later
+For a site that has a connector, the Bot uses the connector, or shows its connect card, before opening the browser.
+The Bot keeps separate memories for people and organizations, your profile, your standing instructions, and your projects.
+Asking for an X post when X isn't connected shows the X connect card. 1.1.0+ Requires Grok Bot 1.1.0 or later
+With a saved card and no top-up rule, Buy credits opens with automatic top-up turned on. 1.1.0+ Requires Grok Bot 1.1.0 or later
+Each turn keeps its own MCP App card, so a later card no longer replaces an earlier one.
+When booking flights, the Bot follows each airline's own booking steps, and sends you the link instead of clicking again when a final purchase can't be confirmed.
+In Slack and X Chat, asking for a connector your team admin blocked gets a reply that it is blocked and why. Teams
+When a team rule blocks one of the Bot's tools, the Bot tells you a team admin can change it in the team's MCP settings. Teams
+The built-in GitHub connector follows your team's MCP allowlist, so it is off unless a rule allows it. Teams
+Team admin MCP rules also stop plugins your identity provider manages, and the connector list marks them Blocked by team admin. Enterprise
+Team data retention also deletes meeting transcripts and notes older than the team's limit. Teams
+Fixed
+The usage limit tray goes away after you add credits.
+After you change plans, the usage limit warning clears once the new plan takes effect.
+When a connector you already connected is missing its tools, the Bot reloads them and continues in the same reply.
+Pressing Send again on a draft card while the first send is still running no longer leaves the card stuck on Sending.
+Photos and PDFs you send from the phone reach your Bot's computer, so it can open them.
+Macs show their computer name instead of their network host name on permission cards and in the computer list.
+Product searches try again once when the search service briefly fails.
+Published Pages no longer stall, jump, or lose their scroll position on screen when you print them.
+Personal MCP servers saved in the app follow your team's MCP allowlist and the 100-server limit.
+While a call transfer is still ringing, the Bot no longer says the transfer failed.
+On a Bot's own Slack app, a former owner is no longer treated as the owner and is asked to link their account.
+When a Bot's owner has no seat on the Bot's team, the Bot says so once instead of retrying. Teams</description>
+      <guid isPermaLink="true">https://x.ai/changelog/bot#v1.2.3</guid>
+      <pubDate>Wed, 18 Nov 2026 00:00:00 +0000</pubDate>
+    </item>
     <item>
       <title>Flight redesign and hotel maps (1.2.0)</title>
       <link>https://x.ai/changelog/bot#v1.2.0</link>
