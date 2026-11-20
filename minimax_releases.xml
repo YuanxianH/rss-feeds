@@ -7,14 +7,7 @@
     <docs>http://www.rssboard.org/rss-specification</docs>
     <generator>RSS Creator</generator>
     <language>zh-CN</language>
-    <lastBuildDate>Fri, 20 Nov 2026 09:47:21 +0000</lastBuildDate>
-    <item>
-      <title>MiniMax-M1-40k</title>
-      <link>https://huggingface.co/MiniMaxAI/MiniMax-M1-40k</link>
-      <description>[HuggingFace Model] | text-generation | Likes: 185 | Tags: transformers, safetensors, minimax_m1, text-generation, vllm</description>
-      <guid isPermaLink="true">https://huggingface.co/MiniMaxAI/MiniMax-M1-40k</guid>
-      <pubDate>Thu, 05 Jun 2025 08:42:49 +0000</pubDate>
-    </item>
+    <lastBuildDate>Fri, 20 Nov 2026 18:23:55 +0000</lastBuildDate>
     <item>
       <title>MiniMax-M1-80k</title>
       <link>https://huggingface.co/MiniMaxAI/MiniMax-M1-80k</link>
@@ -74,21 +67,21 @@
     <item>
       <title>Mini-Agent</title>
       <link>https://github.com/MiniMax-AI/Mini-Agent</link>
-      <description>[GitHub Repo] | A minimal yet professional single agent demo project that showcases the core execution pipeline and production-grade features of agents. | Language: Python | Stars: 3077 | Topics: agent, llm, minimax</description>
+      <description>[GitHub Repo] | A minimal yet professional single agent demo project that showcases the core execution pipeline and production-grade features of agents. | Language: Python | Stars: 3078 | Topics: agent, llm, minimax</description>
       <guid isPermaLink="true">https://github.com/MiniMax-AI/Mini-Agent</guid>
       <pubDate>Fri, 31 Oct 2025 03:56:27 +0000</pubDate>
     </item>
     <item>
       <title>MiniMax-Provider-Verifier</title>
       <link>https://github.com/MiniMax-AI/MiniMax-Provider-Verifier</link>
-      <description>[GitHub Repo] | MiniMax-Provider-Verifier offers a rigorous, vendor-agnostic way to verify whether third-party deployments of the Minimax M2 model are correct and reliable. | Language: Python | Stars: 53</description>
+      <description>[GitHub Repo] | MiniMax-Provider-Verifier offers a rigorous, vendor-agnostic way to verify whether third-party deployments of the Minimax M2 model are correct and reliable. | Language: Python | Stars: 54</description>
       <guid isPermaLink="true">https://github.com/MiniMax-AI/MiniMax-Provider-Verifier</guid>
       <pubDate>Mon, 10 Nov 2025 09:07:34 +0000</pubDate>
     </item>
     <item>
       <title>MiniMax-Coding-Plan-MCP</title>
       <link>https://github.com/MiniMax-AI/MiniMax-Coding-Plan-MCP</link>
-      <description>[GitHub Repo] | Specialized MiniMax Model Context Protocol (MCP) server designed for coding-plan users, featuring AI-powered search and vision analysis APIs optimized for code development workflows | Language: Python | Stars: 101 | Topics: coding-plan, mcp, mcp-server, mcp-tools, understand-image, web-search</description>
+      <description>[GitHub Repo] | Specialized MiniMax Model Context Protocol (MCP) server designed for coding-plan users, featuring AI-powered search and vision analysis APIs optimized for code development workflows | Language: Python | Stars: 102 | Topics: coding-plan, mcp, mcp-server, mcp-tools, understand-image, web-search</description>
       <guid isPermaLink="true">https://github.com/MiniMax-AI/MiniMax-Coding-Plan-MCP</guid>
       <pubDate>Thu, 20 Nov 2025 04:48:05 +0000</pubDate>
     </item>
@@ -172,7 +165,7 @@
     <item>
       <title>skills</title>
       <link>https://github.com/MiniMax-AI/skills</link>
-      <description>[GitHub Repo] | Language: C# | Stars: 13878</description>
+      <description>[GitHub Repo] | Language: C# | Stars: 13877</description>
       <guid isPermaLink="true">https://github.com/MiniMax-AI/skills</guid>
       <pubDate>Tue, 17 Mar 2026 07:19:25 +0000</pubDate>
     </item>
@@ -235,21 +228,21 @@
     <item>
       <title>MiniMax-H3</title>
       <link>https://huggingface.co/MiniMaxAI/MiniMax-H3</link>
-      <description>[HuggingFace Model] | image-text-to-video | Likes: 7183 | Tags: minimax-h3, diffusers, safetensors, text-to-video, image-to-video</description>
+      <description>[HuggingFace Model] | image-text-to-video | Likes: 7213 | Tags: minimax-h3, diffusers, safetensors, text-to-video, image-to-video</description>
       <guid isPermaLink="true">https://huggingface.co/MiniMaxAI/MiniMax-H3</guid>
       <pubDate>Tue, 28 Jul 2026 10:45:18 +0000</pubDate>
     </item>
     <item>
       <title>MiniMax-H3</title>
       <link>https://github.com/MiniMax-AI/MiniMax-H3</link>
-      <description>[GitHub Repo] | Language: Python | Stars: 12070</description>
+      <description>[GitHub Repo] | Language: Python | Stars: 12083</description>
       <guid isPermaLink="true">https://github.com/MiniMax-AI/MiniMax-H3</guid>
       <pubDate>Thu, 30 Jul 2026 08:41:09 +0000</pubDate>
     </item>
     <item>
       <title>MiniMax-Music3</title>
       <link>https://huggingface.co/MiniMaxAI/MiniMax-Music3</link>
-      <description>[HuggingFace Model] | text-to-audio | Likes: 1547 | Tags: diffusers, safetensors, minimax_music3, music-generation, text-to-music</description>
+      <description>[HuggingFace Model] | text-to-audio | Likes: 1549 | Tags: diffusers, safetensors, minimax_music3, music-generation, text-to-music</description>
       <guid isPermaLink="true">https://huggingface.co/MiniMaxAI/MiniMax-Music3</guid>
       <pubDate>Fri, 07 Aug 2026 12:23:29 +0000</pubDate>
     </item>
@@ -277,14 +270,14 @@
     <item>
       <title>awesome-minimax-h3-integration</title>
       <link>https://github.com/MiniMax-AI/awesome-minimax-h3-integration</link>
-      <description>[GitHub Repo] | MiniMax H3 Integrations, a community index of models, tools and projects for MiniMax H3 and MiniMax-H3-Image. | Language: Python | Stars: 584</description>
+      <description>[GitHub Repo] | MiniMax H3 Integrations, a community index of models, tools and projects for MiniMax H3 and MiniMax-H3-Image. | Language: Python | Stars: 587</description>
       <guid isPermaLink="true">https://github.com/MiniMax-AI/awesome-minimax-h3-integration</guid>
       <pubDate>Thu, 13 Aug 2026 05:47:03 +0000</pubDate>
     </item>
     <item>
       <title>MiniMax-Code-Plugins</title>
       <link>https://github.com/MiniMax-AI/MiniMax-Code-Plugins</link>
-      <description>[GitHub Repo] | Community registry and contribution toolkit for MiniMax Code plugins. | Language: JavaScript | Stars: 25</description>
+      <description>[GitHub Repo] | Community registry and contribution toolkit for MiniMax Code plugins. | Language: JavaScript | Stars: 26</description>
       <guid isPermaLink="true">https://github.com/MiniMax-AI/MiniMax-Code-Plugins</guid>
       <pubDate>Mon, 17 Aug 2026 12:23:34 +0000</pubDate>
     </item>
@@ -298,7 +291,7 @@
     <item>
       <title>OpenAgentCore</title>
       <link>https://github.com/MiniMax-AI/OpenAgentCore</link>
-      <description>[GitHub Repo] | The OpenAI Agents API, open source and self-hosted. Run Codex, Claude Code or MiniMax Code on your own machines with your own models, through the official OpenAI SDK. | Language: Go | Stars: 335 | Topics: agent-runtime, ai-agents, claude-code, codex, coding-agent, llm, mcp, openai, openai-agents-api, sandbox, self-hosted</description>
+      <description>[GitHub Repo] | The OpenAI Agents API, open source and self-hosted. Run Codex, Claude Code or MiniMax Code on your own machines with your own models, through the official OpenAI SDK. | Language: Go | Stars: 341 | Topics: agent-runtime, ai-agents, claude-code, codex, coding-agent, llm, mcp, openai, openai-agents-api, sandbox, self-hosted</description>
       <guid isPermaLink="true">https://github.com/MiniMax-AI/OpenAgentCore</guid>
       <pubDate>Mon, 21 Sep 2026 03:18:15 +0000</pubDate>
     </item>
@@ -326,28 +319,28 @@
     <item>
       <title>MiniMax-H3-Image</title>
       <link>https://huggingface.co/MiniMaxAI/MiniMax-H3-Image</link>
-      <description>[HuggingFace Model] | text-to-image | Likes: 1661 | Tags: minimax-h3, diffusers, safetensors, text-to-image, image-to-image</description>
+      <description>[HuggingFace Model] | text-to-image | Likes: 1682 | Tags: minimax-h3, diffusers, safetensors, text-to-image, image-to-image</description>
       <guid isPermaLink="true">https://huggingface.co/MiniMaxAI/MiniMax-H3-Image</guid>
       <pubDate>Tue, 03 Nov 2026 06:34:36 +0000</pubDate>
     </item>
     <item>
       <title>mcode-agent-table</title>
       <link>https://github.com/MiniMax-AI/mcode-agent-table</link>
-      <description>[GitHub Repo] | BYOB Table Protocol v0.1 and reference implementation: bring your own agent (MiniMax Code and others) to one shared table for any-topology discussion and collaboration. | Language: JavaScript | Stars: 57 | Topics: agents, byob, mcp, minimax, multi-agent, protocol</description>
+      <description>[GitHub Repo] | BYOB Table Protocol v0.1 and reference implementation: bring your own agent (MiniMax Code and others) to one shared table for any-topology discussion and collaboration. | Language: JavaScript | Stars: 58 | Topics: agents, byob, mcp, minimax, multi-agent, protocol</description>
       <guid isPermaLink="true">https://github.com/MiniMax-AI/mcode-agent-table</guid>
       <pubDate>Tue, 03 Nov 2026 12:29:06 +0000</pubDate>
     </item>
     <item>
       <title>MiniMax-H3-Image-PE</title>
       <link>https://huggingface.co/MiniMaxAI/MiniMax-H3-Image-PE</link>
-      <description>[HuggingFace Model] | text-generation | Likes: 132 | Tags: transformers, safetensors, qwen3_5, image-text-to-text, prompt-expansion</description>
+      <description>[HuggingFace Model] | text-generation | Likes: 133 | Tags: transformers, safetensors, qwen3_5, image-text-to-text, prompt-expansion</description>
       <guid isPermaLink="true">https://huggingface.co/MiniMaxAI/MiniMax-H3-Image-PE</guid>
       <pubDate>Sun, 08 Nov 2026 15:35:23 +0000</pubDate>
     </item>
     <item>
       <title>MiniMax-H3-Image</title>
       <link>https://github.com/MiniMax-AI/MiniMax-H3-Image</link>
-      <description>[GitHub Repo] | MiniMax-H3-Image, an open-weight model for 16-megapixel image generation and editing. | Language: Python | Stars: 430 | Topics: agent-skills, diffusion-models, image-editing, image-generation, minimax-h3-image, text-to-image</description>
+      <description>[GitHub Repo] | MiniMax-H3-Image, an open-weight model for 16-megapixel image generation and editing. | Language: Python | Stars: 434 | Topics: agent-skills, diffusion-models, image-editing, image-generation, minimax-h3-image, text-to-image</description>
       <guid isPermaLink="true">https://github.com/MiniMax-AI/MiniMax-H3-Image</guid>
       <pubDate>Mon, 09 Nov 2026 17:11:00 +0000</pubDate>
     </item>
@@ -357,6 +350,13 @@
       <description>[GitHub Repo]</description>
       <guid isPermaLink="true">https://github.com/MiniMax-AI/Cyber</guid>
       <pubDate>Fri, 20 Nov 2026 03:52:34 +0000</pubDate>
+    </item>
+    <item>
+      <title>Research</title>
+      <link>https://github.com/MiniMax-AI/Research</link>
+      <description>[GitHub Repo] | Language: TeX | Stars: 5</description>
+      <guid isPermaLink="true">https://github.com/MiniMax-AI/Research</guid>
+      <pubDate>Fri, 20 Nov 2026 09:44:13 +0000</pubDate>
     </item>
   </channel>
 </rss>
