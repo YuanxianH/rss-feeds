@@ -7,7 +7,14 @@
     <docs>http://www.rssboard.org/rss-specification</docs>
     <generator>RSS Creator</generator>
     <language>zh-CN</language>
-    <lastBuildDate>Thu, 19 Nov 2026 18:00:30 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 20 Nov 2026 01:04:22 +0000</lastBuildDate>
+    <item>
+      <title>Unbundling Multimodal Vision Encoding</title>
+      <link>https://ai.meta.com/research/publications/unbundling-multimodal-vision-encoding/</link>
+      <description>Ellis Brown, Chris Hoang, Shang-Wen Li, Mike Lewis, Marjan Ghazvininejad, Luke Zettlemoyer, Lucas Beyer, Mengye Ren, Jakob Verbeek, Saining Xie, Hu Xu</description>
+      <guid isPermaLink="true">https://ai.meta.com/research/publications/unbundling-multimodal-vision-encoding/</guid>
+      <pubDate>Thu, 12 Nov 2026 00:00:00 +0000</pubDate>
+    </item>
     <item>
       <title>GSLM2: Multi-Stream Speech Representation Learning and Generative Spoken Language Modeling</title>
       <link>https://ai.meta.com/research/publications/gslm2-multi-stream-speech-representation-learning-and-generative-spoken-language-modeling/</link>
@@ -28,13 +35,6 @@
       <description>Muse Glimmer team</description>
       <guid isPermaLink="true">https://ai.meta.com/research/publications/muse-glimmer-30b-an-on-device-agentic-model/</guid>
       <pubDate>Mon, 19 Oct 2026 00:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>Remission of Type 2 Diabetes in Linked Health Records: Uncommon, Short-Lived, and More Often Ended by Treatment Restart Than by Rising HbA1c</title>
-      <link>https://ai.meta.com/research/publications/remission-of-type-2-diabetes-in-linked-health-records-uncommon-short-lived-and-more-often-ended-by-treatment-restart-than-by-rising-hba1c/</link>
-      <description>Roberto Lobelo</description>
-      <guid isPermaLink="true">https://ai.meta.com/research/publications/remission-of-type-2-diabetes-in-linked-health-records-uncommon-short-lived-and-more-often-ended-by-treatment-restart-than-by-rising-hba1c/</guid>
-      <pubDate>Wed, 14 Oct 2026 00:00:00 +0000</pubDate>
     </item>
     <item>
       <title>Temporal Patterns of Arrhythmia and Conduction Disorder Diagnoses After Infective Endocarditis</title>
