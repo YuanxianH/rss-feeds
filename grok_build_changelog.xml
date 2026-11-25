@@ -7,7 +7,63 @@
     <docs>http://www.rssboard.org/rss-specification</docs>
     <generator>RSS Creator</generator>
     <language>zh-CN</language>
-    <lastBuildDate>Tue, 24 Nov 2026 17:07:24 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 25 Nov 2026 01:59:10 +0000</lastBuildDate>
+    <item>
+      <title>Grok Build 1.0.92</title>
+      <link>https://x.ai/changelog/build#v1.0.92-2026-11-19</link>
+      <description>MCP tool results that contain images now include those images in headless streaming and JSON output
+Clickable file:// links to local files now open the file the same way bare paths do
+Question cards in minimal mode now keep the first option visible instead of scrolling it off-screen
+Session resume errors now give the same helpful instruction on every route instead of suggesting the TUI picker
+grok inspect now shows the hooks a headless run would actually load, with a note for those that still need folder trust
+Image paste with grok wrap now works when Grok runs inside a remote tmux or through a second wrap
+grok no longer watches every directory when only tracking the current git branch</description>
+      <guid isPermaLink="true">https://x.ai/changelog/build#v1.0.92-2026-11-19</guid>
+      <pubDate>Thu, 19 Nov 2026 00:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>Grok Build 1.0.91</title>
+      <link>https://x.ai/changelog/build#v1.0.91-2026-11-19</link>
+      <description>Arrow keys on the welcome screen now move through the menu directly from the prompt
+Ctrl+F or /fork now offers to fork a session that another Grok window has open, shown as a notice instead of a turn-failed error
+--system-prompt-file &lt;path&gt; lets you load a system prompt override from a file
+-p now accepts flags after it and joins any extra words into the prompt; bare -p reads from stdin
+Ctrl+[ and Ctrl+] now switch between all open sessions, including fresh ones that have no typed content yet
+Headless JSON errors now preserve any reply text already printed before failure
+Hooks list now shows the timeout and command of each hook on collapsed rows
+Mouse wheel in Konsole now scrolls three lines per notch, as in Konsole itself
+Direct MCP tool calls now truncate oversized results and spill them to files</description>
+      <guid isPermaLink="true">https://x.ai/changelog/build#v1.0.91-2026-11-19</guid>
+      <pubDate>Thu, 19 Nov 2026 00:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>Grok Build 1.0.90</title>
+      <link>https://x.ai/changelog/build#v1.0.90-2026-11-18</link>
+      <description>/mcps now shows the hosted connectors section even before any have been added, and lets you re-authenticate a hosted connector with i then y to choose fresh permissions
+Answering No with text on a subagent card shows the subagent reply in the main chat
+Sessions switch models when their model is removed from the available list
+Queued subagent messages no longer show the queued label or surrounding quotes; the marker reads read-only
+Caret no longer disappears when typing fills the last row of the prompt
+LaTeX math renders paired bars, \middle , and angle brackets correctly
+Terms notice disappears automatically once the matching account is known
+Account, tier and access gate from a slow sign-in are applied even if they arrive after startup
+Resumed long sessions show older history before queued prompts are sent
+Local question cards no longer show an unused free-text input
+Goal paused after 3 rounds without progress explains why it stopped itself
+Tab completion list on very short terminals no longer hides the selected entry
+Settings saves write only the keys you changed, and clearing a setting removes its key from config.toml
+Background tasks interrupted by quitting a session show as cancelled
+Headless --continue gives a clearer message when the local session list is permanently incomplete instead of always suggesting a retry
+Outcome line for /compact appears before any prompt typed during the compaction
+Worktree forks preserve the original session title even when the source is renamed during creation
+Subagent views send slash-like notes as text instead of refusing them
+Dashboard modals and pickers keep keyboard focus and swallow Ctrl+\ until closed
+Sandbox profile failures are reported on stderr, the welcome screen, and /doctor instead of failing silently; allow paths containing ~ expand to your home directory, and unknown keys in sandbox.toml are reported as errors
+Dashboard row highlights render correctly in Apple Terminal
+Tasks pane no longer shows an invented duration for a shell that is no longer running</description>
+      <guid isPermaLink="true">https://x.ai/changelog/build#v1.0.90-2026-11-18</guid>
+      <pubDate>Wed, 18 Nov 2026 00:00:00 +0000</pubDate>
+    </item>
     <item>
       <title>Grok Build 1.0.89</title>
       <link>https://x.ai/changelog/build#v1.0.89-2026-11-17</link>
