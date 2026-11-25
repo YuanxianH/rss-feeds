@@ -7,7 +7,7 @@
     <docs>http://www.rssboard.org/rss-specification</docs>
     <generator>RSS Creator</generator>
     <language>zh-CN</language>
-    <lastBuildDate>Wed, 25 Nov 2026 11:07:38 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 25 Nov 2026 21:14:15 +0000</lastBuildDate>
     <item>
       <title>Agentic cheminformatics with Google Antigravity</title>
       <link>https://deepmind.google/blog/agentic-cheminformatics-with-google-antigravity/</link>
@@ -66,6 +66,12 @@
       <title>Finding faster quantum algorithms with agents and formal verification</title>
       <link>https://deepmind.google/blog/finding-faster-quantum-algorithms-with-agents-and-formal-verification/</link>
       <guid isPermaLink="true">https://deepmind.google/blog/finding-faster-quantum-algorithms-with-agents-and-formal-verification/</guid>
+      <pubDate>Wed, 25 Nov 2026 00:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>From spectrum to structure: Identifying molecules with Mass Spec Skills for Google Antigravity</title>
+      <link>https://deepmind.google/blog/interpreting-mass-spectra-with-google-antigravity/</link>
+      <guid isPermaLink="true">https://deepmind.google/blog/interpreting-mass-spectra-with-google-antigravity/</guid>
       <pubDate>Wed, 25 Nov 2026 00:00:00 +0000</pubDate>
     </item>
     <item>
@@ -133,12 +139,6 @@
       <link>https://deepmind.google/blog/speeding-up-planning-decisions-with-ai/</link>
       <guid isPermaLink="true">https://deepmind.google/blog/speeding-up-planning-decisions-with-ai/</guid>
       <pubDate>Sun, 25 Oct 2026 00:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>Advancing Private AI Compute with secure, server-side memory</title>
-      <link>https://deepmind.google/blog/advancing-private-ai-compute-with-secure-server-side-memory/</link>
-      <guid isPermaLink="true">https://deepmind.google/blog/advancing-private-ai-compute-with-secure-server-side-memory/</guid>
-      <pubDate>Fri, 25 Sep 2026 00:00:00 +0000</pubDate>
     </item>
     <item>
       <title>Introducing Gemini 3.8 Live with Live Avatar</title>

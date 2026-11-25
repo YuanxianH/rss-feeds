@@ -7,7 +7,121 @@
     <docs>http://www.rssboard.org/rss-specification</docs>
     <generator>RSS Creator</generator>
     <language>zh-CN</language>
-    <lastBuildDate>Wed, 25 Nov 2026 11:08:14 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 25 Nov 2026 21:14:48 +0000</lastBuildDate>
+    <item>
+      <title>Smarter Slack Bots, restock alerts, org controls (1.3.0)</title>
+      <link>https://x.ai/changelog/bot#v1.3.0</link>
+      <description>New
+When a Bot hands work to another Bot, the answer comes back in your Slack direct message, with a Connect button for anything that Bot still needs.
+A Slack thread reply can also be shown in the channel when you ask for it to be shared there.
+The Bot can forward a Slack message as a link, and a message from a private conversation stays in that conversation.
+Saying a Bot's name in a Slack group direct message wakes that Bot, the same as an @mention does.
+Whoever a Slack post was written for can ask the Bot to delete it.
+In a one-to-one Slack direct message the Bot can answer in the main chat instead of always opening a thread.
+On a voice call, a question about a product is answered aloud and the product cards go to your chat.
+The Bot can name who was in a meeting it joined.
+A sold-out product card offers Notify me, which watches that seller and tells you when the item is back in stock.
+A single-product card on iPhone and Android shows Buy now whenever the chat can buy it.
+On an order with several products, clicking an item opens that product page with the options you ordered already selected.
+An email draft can carry a Bcc, on the draft card and in Mac Mail.
+Settings lists the devices on your account and can remove a phone that is offline.
+An organization can limit its members to connecting accounts on the organization's own domains.
+A widget one of the Bot's helpers opens, such as a Salesforce card, now shows in your chat.
+When your X Money balance is short, the purchase is refused before a card is issued and the Bot asks you to add funds or pay another way.
+With Ashby connected, the Bot can answer recruiting questions about candidates, interviews, jobs, and offers.
+Typing @ in chat also lists team Bots you can reach but have not added yet.
+A saved card its bank refused shows Needs an update in your Vault, and the Bot asks for the detail the bank refused before it reports the failure.
+An editable Gmail draft that shows a signature has a Remove signature control, and the mail goes out without it. 0.79.2+ Requires Grok Bot 0.79.2 or later
+Signing in to Microsoft with a work or school account can connect Microsoft Teams along with the other Microsoft apps. 1.0.1+ Requires Grok Bot 1.0.1 or later
+Connecting Outlook, Outlook Calendar, or OneDrive offers a work or school account, with a separate choice for a personal Outlook.com, Hotmail, or Live account. 0.75.2+ Requires Grok Bot 0.75.2 or later
+When Okta, Warp, or Salesforce ends a connection, the Bot sends a short note with a card to sign in again.
+In Microsoft Teams, someone who has not linked a Grok Bot account can still get a reply from the team's Bot, with a one-time note on what linking adds. Teams
+Team admins can require approval before someone who opens an invite link joins, and review those requests on a Requests tab on the Members page. Teams
+Improved
+A purchase that needs your approval shows an approval card that settles to Approved, Declined, or Expired to match the answer you gave.
+An approval that arrives after the Bot stopped waiting wakes it so it can finish the purchase and tell you.
+Slack replies are one short plain paragraph, without bold labels, headings, or lists unless you asked for a breakdown.
+The Bot follows Slack channel etiquette, such as not answering a thank-you with another message.
+A Slack voice or video clip the Bot cannot play is answered from Slack's own transcript, and a reply can use each speaker's local time.
+Hotel results show estimated nightly prices in your own currency, lead with the nightly price, and rate out of 5 beside the star.
+After a hotel search finds nothing in budget, the Bot shows the closest rooms over it, or searches the web and says those prices are not live.
+Checkout keeps three Link cards beside your other wallets and lists any further Link cards last.
+Before sending an order card the Bot checks the page has somewhere to type a card, and otherwise names the ways that page takes payment.
+After a decline, a sold-out item, or a price change, the Bot repeats what the checkout page said.
+On a product page the store, title, price, and details can be selected, and selecting text no longer opens the store.
+Three or more X drafts in one message sit in a single sideways carousel, and a sent draft reads Replied, Posted, or Sent.
+The invite dialog turns typed addresses into removable pills, labels the field Emails, and closes with a toast once every invite sends.
+Settings, menus, dialogs, and error titles across the app use sentence case.
+Skill rows show a readable name with a one-line description, and every skill row, chip, and card uses the same open-book icon.
+Connector sign-in pages carry that connector's logo beside the Grok Bot mark, and a canceled sign-in shows a neutral page.
+Links inside a PDF work in the viewer: an outside link opens, and a link to another page jumps there.
+Image markup is always available on a staged image, as Mark up image on desktop and Edit on mobile.
+The Bot follows a loaded skill in full, including the middle of a long one.
+After handing work to a helper, the Bot either finishes the turn or sends you a status.
+A connector that failed to start is listed with its last error and a hint for fixing its command.
+In Microsoft Teams, asking the Bot to greet or ping a person or another Bot @mentions that whole name, and a Bot mentioned that way wakes and can answer.
+People on a personal plan can create a team and invite teammates in one dialog.
+If a reply would leave part of your request undone and the Bot can finish it, the Bot does that work before it answers.
+When a hotel search fails, the Bot still answers with hotel names and a lowest price for your stay.
+When a background task finds a connector that is not installed, your chat shows a card to add it.
+Connect apps shows the app list right away while it checks which apps are connected. 1.0.1+ Requires Grok Bot 1.0.1 or later
+App lists, search suggestions, and connector cards show shorter app names with a one-sentence description. 0.75.2+ Requires Grok Bot 0.75.2 or later
+A plugin whose account still needs signing in shows Connect at the top of its page, which reads Connecting… during sign-in and Retry if it fails. 0.75.2+ Requires Grok Bot 0.75.2 or later
+Asking for an app matches singular and plural words, so grocery also finds a listing that says groceries.
+A delivery address is checked for coverage before it is saved, and after you pay for a delivery order the Bot says whether it was placed or why it failed.
+After a Bot is copied to a new account, its first reply names the apps that need a fresh sign-in.
+When your Auto-review Allow list is full, saving another rule replaces the one used least, keeping any rule saved in the last week.
+Fixed
+Card numbers, expiry dates, and security codes copied into a saved memory are replaced with removed placeholders.
+A saved card is left untyped when a checkout box is meant for a postal code, email, phone, or name, and split card fields are filled in full.
+When a store refuses a saved card's brand, the Bot names the brands that page takes and offers a card the store accepts.
+A checkout that reports an order reference counts as confirmed, and Pay with no checkout started says so and points you at your email.
+A shopping card with a missing photo tries the next one and falls back to an image icon instead of leaving a gap.
+Product photos with busy edges or cut-out backgrounds sit on a blurred copy or a white backdrop instead of gray bars.
+Where to buy lists each offer under the seller it came from, so Buy now and Notify me follow that seller.
+After a progress update the Bot sends only the new part of its answer, instead of repeating what you already read.
+A refused or failed view of the Bot's computer says the view is off, unavailable, or failed to load, instead of sitting on Connecting.
+Opening the Bot's computer shows its screen even when the computer answers slowly, and a denied screen fails at once.
+A message keeps retrying after a dropped or busy request and then lands, instead of stopping at Failed to send.
+Library skills past the old limit of 100 load, search, and save, and an empty save names the field that is missing.
+Save As and Download keep a file's extension on Windows, Download all saves every image into one folder, and a dotfile keeps its name.
+Pasting styled text from a document inserts the text instead of staging it as an image attachment, and a pasted secret keeps its line breaks.
+Shift+Enter on an empty bullet leaves the list instead of stacking more empty bullets.
+Clicks in the gaps between sidebar rows and pinned tiles land on the nearest one.
+A Bot name in a chat chip wraps with the message, and a reply that names a Bot shows that Bot's own avatar and color.
+Edits typed while dictation is on stay in the box, and a drag selection in the composer stays put.
+A sign-in you cancel in the app still finishes when the browser hands you back.
+A plugin row with one signed-in account reads Connected when another account on the same connector still needs to connect.
+A custom connector whose process has stopped starts again and the refused call is tried once more.
+Connecting an app says Added while its skills finish syncing, and the skills appear when the sync is done.
+A Bot tagged in a Slack or Microsoft Teams thread keeps hearing later messages instead of leaving after five silent replies.
+A new Team Bot's first direct message shows its shared description instead of its private instructions.
+Signing out ends the Grok Bot session, and a time zone counts as saved only once the server stores it for the signed-in account.
+A scheduled routine that hits a passing database error runs on its retry instead of being dropped.
+A departing member's scheduled meetings are cancelled, and their personal routines pause with a note in the Bot's chat.
+After buying a plan, Grok Bot grants access on the next check instead of holding a cached refusal for up to five minutes.
+A 1Password pairing failure explains how to disconnect Grok Bot and connect again, and a connect that races a token refresh still saves the key.
+In a conversation several people can read, the Bot refuses to save or forget notes meant for only one person.
+A large write to a git control file asks you to approve it first.
+Destructive Google Analytics tools ask for approval before they run, and the card gives that reason.
+A Slack draft shows the other person's name on its To row, and no draft card is offered for a Slack Connect conversation.
+The usage line in the account menu stops at 99% until usage reaches the limit, and the weekly tray clears once on-demand spend is on.
+A reply made of table rows that left out the divider row renders as a table.
+Switching views no longer slides the details pane shut and open, and creating a Bot keeps the header lined up with the pane.
+Before saying an app is not connected or cannot do something, the Bot checks that app's connection.
+Connecting Microsoft Teams no longer needs an admin to approve channel-message access first, and chats work without it.
+Microsoft Teams shows in the connector catalog, and a team Bot can install it.
+A routine's report reaches your chat when the Bot's computer is on your private network.
+Connect on a chat card for a server reachable only on your private network opens sign-in and finishes it. 1.1.0+ Requires Grok Bot 1.1.0 or later
+Connecting X Money tries another of your X accounts when the first one has no X Money account.
+When a site in the Bot's browser asks for a security key and none is plugged in, the prompt says so and stops after a short wait.
+Removed
+Shopping cards no longer carry follow-up buttons under the products, on desktop and on the phone.
+Flight rows no longer show Best, Cheapest, or Fastest marks, or the pills that compared a row with the top pick.
+Book and Refresh prices no longer sit under the hotel detail card.</description>
+      <guid isPermaLink="true">https://x.ai/changelog/bot#v1.3.0</guid>
+      <pubDate>Tue, 24 Nov 2026 00:00:00 +0000</pubDate>
+    </item>
     <item>
       <title>Tool permissions and routine reconnect cards (1.2.3)</title>
       <link>https://x.ai/changelog/bot#v1.2.3</link>
