@@ -7,7 +7,43 @@
     <docs>http://www.rssboard.org/rss-specification</docs>
     <generator>RSS Creator</generator>
     <language>zh-CN</language>
-    <lastBuildDate>Wed, 25 Nov 2026 21:15:05 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 26 Nov 2026 03:59:47 +0000</lastBuildDate>
+    <item>
+      <title>Split-KV: Efficient Context Parallelism for Training Diffusion Drafters</title>
+      <link>https://seed.bytedance.com/zh/public_papers/split-kv-efficient-context-parallelism-for-training-diffusion-drafters</link>
+      <description>Diffusion drafters accelerate speculative decoding by denoising multiple draft tokens in parallel. Their training uses anchor sampling to construct compact draft queries and performs cross-attention with a block-sparse mask over a much longer context. We empirically show that acceptance length remains stable as context scales with a fixed query budget, while increasing the query budget yields diminishing quality gains, jointly establishing a practical regime with queries far shorter than the context. No existing context parallelism (CP) method jointly exploits this query--context asymmetry and meets the nonlinear, sample-dependent load-balancing requirement created by anchor sampling. We present Split-KV, an exact CP method that keeps key/value shards local and limits per-layer attention communication to query-sized tensors, making this communication independent of context length. Its global query view further enables a cost-aware longest-processing-time-first (LPT) strategy that balances context key/value chunks by their realized attention cost. At a CP size of 64, Split-KV retains 85--91\% weak-scaling efficiency and achieves up to $3.67\times$ speedup over the fastest available CP baseline. LPT achieves $&lt;$1\% imbalance and plans three orders of magnitude faster than the best load-balancing baseline. Code is available at https://github.com/zxgx/verl.
+
+arXiv: https://arxiv.org/pdf/2611.05926v1</description>
+      <guid isPermaLink="false">1795664837330</guid>
+      <pubDate>Wed, 04 Nov 2026 20:00:00 +0800</pubDate>
+    </item>
+    <item>
+      <title>LaQX: A JAX Toolkit for Neural Quantum State Simulations of Lattice Quantum Many-Body Models</title>
+      <link>https://seed.bytedance.com/zh/public_papers/laqx-a-jax-toolkit-for-neural-quantum-state-simulations-of-lattice-quantum-many-body-models</link>
+      <description>Neural quantum states provide accurate variational representations for interacting lattice fermions and spins. Turning a new ansatz into a reproducible calculation, however, requires coordinated implementations of the Hamiltonian, sampling, optimization, observables, and accelerator parallelism. We present LaQX (Lattice Quantum simulation based on jaX), an open-source neural quantum state library based on JAX that organizes these components through common functional interfaces. Beyond ground-state variational Monte Carlo, LaQX supports excited-state calculations, Green's Function Monte Carlo refinement, adiabatic evolution, and real-time evolution with time-dependent variational Monte Carlo. It consolidates methods developed in recent high-accuracy neural quantum state studies of the Hubbard model and frustrated magnets, and the package has been used to investigate the triangular-lattice Hofstadter-Hubbard model. We document these capabilities with reproducible calculations for Hubbard, $J_1$-$J_2$ Heisenberg, altermagnetic Hubbard, and interacting Hofstadter models. Function-oriented modules separate the scientific components and limit the source context needed for extensions by human developers and large language models. Source code, documentation, and executable examples are available at https://github.com/bytedance/laqx.
+
+arXiv: https://arxiv.org/pdf/2611.04333</description>
+      <guid isPermaLink="false">1795664428988</guid>
+      <pubDate>Tue, 03 Nov 2026 20:00:00 +0800</pubDate>
+    </item>
+    <item>
+      <title>Do Visual RL Gains Scale at Test Time? A Quantile View of Post-Training</title>
+      <link>https://seed.bytedance.com/zh/public_papers/do-visual-rl-gains-scale-at-test-time-a-quantile-view-of-post-training</link>
+      <description>Reinforcement learning (RL) post-training improves the single-sample quality of visual generative models, but deployment often provides additional inference compute through Best-of-N sampling. Whether RL gains transfer under such test-time scaling, particularly on difficult held-out tasks, remains poorly understood in the visual domain. Our central contribution is to systematically identify and characterize a failure mode of scaling transfer in visual RL: across multiple RL methods, model backbones, and evaluations spanning compositional generation, text rendering, and preference alignment, higher single-sample reward does not necessarily imply a better quality-compute frontier. RL gains may attenuate, saturate, or even reverse at large sampling budgets, with the base model eventually outperforming its post-trained counterpart. We explain these regimes through a quantile-transfer framework, showing that Best-of-N places increasing weight on the upper tail of the reward distribution as N grows. Consequently, RL can improve typical samples while compressing or degrading the rare high-quality outcomes that test-time scaling exploits. As a simple intervention motivated by this analysis, we introduce Quantile Utility Policy Optimization (QUPO), which optimizes a controllable mixture of quantile utilities corresponding to different inference budgets. Experiments on SD3.5-M and BAGEL show that QUPO better preserves upper-tail quality and substantially improves scaling on challenging held-out prompts relative to standard RL post-training. Our results suggest that visual generative models should be evaluated and optimized not only for single-sample quality, but for how post-training reshapes the full reward distribution that inference-time scaling exploits.
+
+arXiv: https://arxiv.org/pdf/2611.02366</description>
+      <guid isPermaLink="false">1795664389882</guid>
+      <pubDate>Mon, 02 Nov 2026 20:00:00 +0800</pubDate>
+    </item>
+    <item>
+      <title>Exploring Fractional Quantum Hall States with Deep Learning: From Abelian to Non-Abelian Phases</title>
+      <link>https://seed.bytedance.com/zh/public_papers/exploring-fractional-quantum-hall-states-with-deep-learning-from-abelian-to-non-abelian-phases</link>
+      <description>Fractional quantum Hall systems host strongly correlated topological phases with potential applications in topological quantum computation, yet identifying their microscopic ground states remains challenging because competing phases are often nearly degenerate and Landau-level mixing is difficult to treat. Here, we introduce a symmetry-adapted neural-network wavefunction that describes Abelian and non-Abelian states while incorporating all Landau levels. The method accurately captures composite-fermion liquids and the emergence of Wigner crystallization at low filling. When the first Landau level is partially filled, finite-size overlaps and entanglement spectra provide evidence consistent with $\bar{2}^{k}1^{k+1}$-type parton phases at $ν=4/3$ and $7/5$, while the $ν=3/2$ state exhibits anti-Pfaffian-like entanglement structure. These results demonstrate that neural-network wavefunctions offer a flexible framework for studying competing topological orders in fractional quantum Hall systems.
+
+arXiv: https://arxiv.org/pdf/2610.38533</description>
+      <guid isPermaLink="false">1795664273535</guid>
+      <pubDate>Wed, 28 Oct 2026 20:00:00 +0800</pubDate>
+    </item>
     <item>
       <title>Recycler: Cost-Free Latent Reasoning via Hidden State Recycling</title>
       <link>https://seed.bytedance.com/zh/public_papers/recycler-cost-free-latent-reasoning-via-hidden-state-recycling</link>
@@ -17,6 +53,15 @@ that feeds both embedding and the previous token’s hidden state through a ligh
 arXiv: https://lf3-static.bytednsdoc.com/obj/eden-cn/hyvsmeh7uhobf/recycler_arxiv%20(2).pdf</description>
       <guid isPermaLink="false">1792932657675</guid>
       <pubDate>Sun, 25 Oct 2026 00:00:00 +0800</pubDate>
+    </item>
+    <item>
+      <title>Neural Network Fractional Quantum Hall States with Learnable Orbital Pair Matrix Factors: Balancing Physical Priors and Flexibility</title>
+      <link>https://seed.bytedance.com/zh/public_papers/neural-network-fractional-quantum-hall-states-with-learnable-orbital-pair-matrix-factors-balancing-physical-priors-and-flexibility</link>
+      <description>Neural network fractional quantum Hall (FQH) states offer a promising alternative for capturing Landau level (LL) mixing and for understanding FQH physics, yet the incorporation of physical priors has so far been limited to the minimal exact constraints built into the ansatz. Working in spherical geometry, we show that the network's flexibility suffers both when only minimal additional physical priors are supplied and when priors such as flux attachment are imposed rigidly. In the former case, the monopole harmonic product orbital (MHPO) ansatz is difficult to optimize, whereas in the latter, the expressivity of the neural network is restricted. We therefore propose the orbital pair matrix factor MHPO (MHPO-M) ansatz, which balances physical priors against flexibility by not only replacing the fixed Laughlin structure with learnable pair factors but also making them dependent on both the electron configurations and the orbitals. Across $ν=1/5$, $1/3$, and $2/5$, MHPO-M achieves the lowest variational energy among the tested variants, and a factorized orbital readout based on it enables scaling to 35 electrons, with energies competitive with trends inferred from three-LL exact-diagonalization results. These results demonstrate that physical priors can be appropriately incorporated without sacrificing the flexibility of neural network wavefunctions, opening a promising path toward accurate, scalable modeling of FQH systems with LL mixing.
+
+arXiv: https://arxiv.org/pdf/2610.28095</description>
+      <guid isPermaLink="false">1795664707723</guid>
+      <pubDate>Tue, 20 Oct 2026 20:00:00 +0800</pubDate>
     </item>
     <item>
       <title>Full-Duplex Interaction with Speech, Expressions and Gestures</title>
@@ -413,51 +458,6 @@ arXiv: https://arxiv.org/pdf/2605.15157</description>
 arXiv: https://arxiv.org/pdf/2605.14973</description>
       <guid isPermaLink="false">1782376720158</guid>
       <pubDate>Thu, 14 May 2026 00:00:00 +0800</pubDate>
-    </item>
-    <item>
-      <title>Training Long-Context Vision-Language Models Effectively with Generalization Beyond 128K Context</title>
-      <link>https://seed.bytedance.com/zh/public_papers/training-long-context-vision-language-models-effectively-with-generalization-beyond-128k-context</link>
-      <description>Long-context modeling is becoming a core capability of modern large vision-language models (LVLMs), enabling sustained context management across long-document understanding, video analysis, and multi-turn tool use in agentic workflows. Yet practical training recipes remain insufficiently explored, particularly for designing and balancing long-context data mixtures. In this work, we present a systematic study of long-context continued pre-training for LVLMs, extending a 7B model from 32K to 128K context with extensive ablations on long-document data. We first show that long-document VQA is substantially more effective than OCR transcription. Building on this observation, our ablations further yield three key findings: i) for sequence-length distribution, balanced data outperforms target-length-focused data (e.g., 128K), suggesting that long-context ability requires generalizable key-information retrieval across various lengths and positions; ii) retrieval remains the primary bottleneck, favoring retrieval-heavy mixtures with modest reasoning data for task diversity; and iii) pure long-document VQA largely preserves short-context capabilities, suggesting that instruction-formatted long data reduces the need for short-data mixing. Based on these findings, we introduce MMProLong, obtained by long-context continued pre-training from Qwen2.5-VL-7B with only a 5B-token budget. MMProLong improves long-document VQA scores by 7.1% and maintains strong performance at 256K and 512K contexts beyond its 128K training window, without additional training. It further generalizes to webpage-based multimodal needle retrieval, long-context vision-text compression, and long-video understanding without task-specific supervision. Overall, our study establishes a practical LongPT recipe and an empirical foundation for advancing long-context vision-language models.
-
-arXiv: https://arxiv.org/pdf/2605.13831</description>
-      <guid isPermaLink="false">1782903901466</guid>
-      <pubDate>Wed, 13 May 2026 00:00:00 +0800</pubDate>
-    </item>
-    <item>
-      <title>Towards Robust Sequential Decomposition for Complex Image Editing</title>
-      <link>https://seed.bytedance.com/zh/public_papers/towards-robust-sequential-decomposition-for-complex-image-editing</link>
-      <description>Recent advances in visual generative models have enabled high-fidelity image editing guided by human instructions. However, these models often struggle with complex instructions involving combinatorial editing operations or inter-step dependencies. This difficulty stems from the limitations of two canonical paradigms: (1) single-turn editing, which attempts to apply all instructed edits in one pass, often fails to parse the complex instruction accurately and causes undesired edits; and (2) sequential editing can decompose the task into simpler steps but suffers from compounding errors introduced by the sequential execution, leading to low-fidelity results. To derive a robust solution for complex image editing, we examine editing behaviors of different paradigms under a unified in-context editing framework, and study how the benefits of sequential decomposition can be balanced against its error-accumulation drawbacks. We further develop a synthetic data pipeline that constructs editing tasks of varying instruction complexity, allowing us to curate a large-scale editing dataset with high-quality decomposed sequences. By finetuning on synthetic data, we discovered that with properly designed editing paradigms, sequential decomposition yields robust improvements even as task complexity increases. Furthermore, the decomposition skills learned from synthetic tasks can transfer to real images by co-training with real-world editing data, demonstrating the promise of sim-to-real generalization for tackling complex image editing across broader domains.
-
-arXiv: https://arxiv.org/abs/2605.09233</description>
-      <guid isPermaLink="false">1782905081711</guid>
-      <pubDate>Sun, 10 May 2026 00:00:00 +0800</pubDate>
-    </item>
-    <item>
-      <title>TDDFT Gradients and Nonadiabatic Couplings with Minimal Auxiliary Basis Set Approximation for Fewest-Switches Surface Hopping Dynamics</title>
-      <link>https://seed.bytedance.com/zh/public_papers/tddft-gradients-and-nonadiabatic-couplings-with-minimal-auxiliary-basis-set-approximation-for-fewest-switches-surface-hopping-dynamics</link>
-      <description>The electronic structure calculations remain a major bottleneck in ab initio nonadiabatic molecular dynamics. We develop an efficient TDDFT-based FSSH implementation in the GPU4PySCF package for medium-sized molecular systems. Our approach combines density fitting, TDDFT with minimal auxiliary basis sets (TDDFT-ris), and an approximate Z-vector solver to reduce the computational cost of TDDFT excited states and derivative coupling calculations. These approximations introduce negligible errors in realistic FSSH workloads while maintaining high computational efficiency. Benchmark results show that, for 73-atom systems with a triple-ζ basis set, individual electronic structure calculations are completed within one minute on a single NVIDIA A100 GPU.
-
-arXiv: https://arxiv.org/abs/2605.06489</description>
-      <guid isPermaLink="false">1782904955389</guid>
-      <pubDate>Thu, 07 May 2026 00:00:00 +0800</pubDate>
-    </item>
-    <item>
-      <title>Continuous Latent Diffusion Language Model</title>
-      <link>https://seed.bytedance.com/zh/public_papers/continuous-latent-diffusion-language-model</link>
-      <description>Large language models have achieved remarkable success under the autoregressive paradigm, yet high-quality text generation need not be tied to a fixed left-to-right order. Existing alternatives still struggle to jointly achieve generation efficiency, scalable representation learning, and effective global semantic modeling. We propose Cola DLM, a hierarchical latent diffusion language model that frames text generation through hierarchical information decomposition. Cola DLM first learns a stable text-to-latent mapping with a Text VAE, then models a global semantic prior in continuous latent space with a block-causal DiT, and finally generates text through conditional decoding. From a unified Markov-path perspective, its diffusion process performs latent prior transport rather than token-level observation recovery, thereby separating global semantic organization from local textual realization. This design yields a more flexible non-autoregressive inductive bias, supports semantic compression and prior fitting in continuous space, and naturally extends to other continuous modalities. Through experiments spanning 4 research questions, 8 benchmarks, strictly matched ~2B-parameter autoregressive and LLaDA baselines, and scaling curves up to about 2000 EFLOPs, we identify an effective overall configuration of Cola DLM and verify its strong scaling behavior for text generation. Taken together, the results establish hierarchical continuous latent prior modeling as a principled alternative to strictly token-level language modeling, where generation quality and scaling behavior may better reflect model capability than likelihood, while also suggesting a concrete path toward unified modeling across discrete text and continuous modalities.
-
-arXiv: https://arxiv.org/pdf/2605.06548</description>
-      <guid isPermaLink="false">1782904790925</guid>
-      <pubDate>Thu, 07 May 2026 00:00:00 +0800</pubDate>
-    </item>
-    <item>
-      <title>Agentic Discovery of Exchange-Correlation Density Functionals</title>
-      <link>https://seed.bytedance.com/zh/public_papers/agentic-discovery-of-exchange-correlation-density-functionals</link>
-      <description>The development of accurate exchange-correlation (XC) functionals remains a longstanding challenge in density functional theory (DFT). The vast majority of XC functionals have been hand designed by human researchers combining physical insight, exact constraints, and empirical fitting. Recent advances in large language models enable a systematic, automated alternative to this human-driven design loop. This report presents an agentic search system in which an LLM proposes structured functional-form changes guided by evolutionary history. The system attempts to improve functional performance through an iterative plan-execute-summarize loop, where improvements are measurable by optimizing functional parameters against a standard thermochemistry dataset, then evaluating performance on a held-out subset. The strongest discovered functional, SAFS26-a (Seed Agentic Functional Search 2026), improves upon the gold-standard {\omega}B97M-V baseline by ~9%. These results also surface a cautionary lesson for AI-assisted science: models powerful enough to discover genuine improvements are equally capable of exploiting unphysical shortcuts to game the benchmark; domain expertise translated into explicitly enforced constraints remains essential to keeping results scientifically grounded.
-
-arXiv: https://arxiv.org/pdf/2605.05460</description>
-      <guid isPermaLink="false">1782377277100</guid>
-      <pubDate>Wed, 06 May 2026 00:00:00 +0800</pubDate>
     </item>
   </channel>
 </rss>
