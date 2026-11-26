@@ -7,7 +7,34 @@
     <docs>http://www.rssboard.org/rss-specification</docs>
     <generator>RSS Creator</generator>
     <language>zh-CN</language>
-    <lastBuildDate>Thu, 26 Nov 2026 03:59:47 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 26 Nov 2026 13:45:52 +0000</lastBuildDate>
+    <item>
+      <title>OpGuard: Bitwise Alignment for Precise and General Debugging of Production LLM Training</title>
+      <link>https://seed.bytedance.com/zh/public_papers/opguard-bitwise-alignment-for-precise-and-general-debugging-of-production-llm-training</link>
+      <description>Large-scale LLM training runs on many GPUs for weeks atop rapidly evolving software stacks. Bugs or hardware glitches can silently corrupt the computation and only surface much later. Debugging becomes finding a needle in a haystack across time. Developers often use another training run and compare their loss, gradient norms, etc. But these aggregate signals are noisy and easily diluted across millions of operations, offering little guidance on why the divergence occurs. This paper introduces bitwise alignment as a correctness oracle and debugging primitive for LLM training, and OpGuard, a practical system that realizes it at production scale. OpGuard discovers semantic-stable operator boundaries across heterogeneous training stacks, and wraps them with lightweight fingerprinting. A schedule-tolerant mapper computes the longest prefix where two executions produce bitwise-identical tensors. The first mismatching point becomes a pivot for debugging and is presented with rich context. By carefully controlling benign nondeterminism, OpGuard makes the first mismatch strong evidence of error. OpGuard has been deployed at ByteDance across pre-training and post-training workloads. It diagnosed over twenty production issues, including subtle kernel races and silent data corruptions missed by existing checks, reducing debugging time from days to minutes.
+
+arXiv: https://www.usenix.org/system/files/osdi26-zhou-ziming.pdf</description>
+      <guid isPermaLink="false">1795674360169</guid>
+      <pubDate>Sat, 14 Nov 2026 00:00:00 +0800</pubDate>
+    </item>
+    <item>
+      <title>Trajectory-Regularized Distribution Distillation for One-Step Generation</title>
+      <link>https://seed.bytedance.com/zh/public_papers/trajectory-regularized-distribution-distillation-for-one-step-generation</link>
+      <description>Distilling flow matching models for one-step generation generally follows two paradigms. Trajectory alignment supervises the student with the teacher's probability flow ODE, but its performance degrades under very small sampling budgets. Distribution matching directly optimizes the generated distribution, but estimating its reverse Kullback-Leibler gradient typically requires a separate network to track the evolving student score. We propose trajectory-regularized distribution distillation (TRD), which combines distribution-level and trajectory-level supervision through a momentum-mixture policy predicted in a single student forward pass. This policy serves simultaneously as a one-step generator, an estimator of the student's marginal velocity that removes the need for a second trainable network in distribution matching, and a closed-form time-dependent velocity field supervised along the teacher ODE trajectory. Experiments on SANA-1.6B and Stable Diffusion 3.5 show that TRD outperforms representative consistency and distribution matching baselines in generation quality and training efficiency for both one-step and few-step generation, with a trade-off in sample diversity.
+
+arXiv: https://arxiv.org/pdf/2611.12978</description>
+      <guid isPermaLink="false">1795672942300</guid>
+      <pubDate>Sun, 08 Nov 2026 20:00:00 +0800</pubDate>
+    </item>
+    <item>
+      <title>Training-Free Predictive Spatio-Temporal Token Pruning for Few-Step Autoregressive Video Diffusion</title>
+      <link>https://seed.bytedance.com/zh/public_papers/training-free-predictive-spatio-temporal-token-pruning-for-few-step-autoregressive-video-diffusion</link>
+      <description>Few-step autoregressive (AR) video diffusion models generate videos chunk by chunk and have made efficient video generation practical. However, further accelerating these models toward real-time generation remains challenging, as few-step distillation leaves little cross-step redundancy for existing training-free caching methods to exploit. We revisit this regime and identify two token-level redundancy patterns: cross-frame redundancy from static content shared across adjacent frames, and cross-step redundancy from tokens that converge early during denoising. Crucially, we find that early clean estimates along the model's own denoising trajectory provide an effective online signal for locating both patterns, requiring no retraining, auxiliary predictor, or reference video. Based on these findings, we propose PreSTP (Predictive Spatio-Temporal Token Pruning), a training-free framework that constructs a unified token-wise redundancy mask from cross-frame similarity and cross-step convergence. Tokens marked as redundant skip subsequent computation under a consistent last-computed-value restoration rule, and a content-adaptive mask reuse strategy further reduces dense probing cost. On 5-second generation, PreSTP achieves 1.52x-3.20x speedups and a better efficiency-fidelity trade-off than coarse-grained caching baselines such as TeaCache and FlowCache. On 30-second generation, it reaches up to 1.96x speedup while improving VBench-Long and suppressing long-horizon drift. Notably, it continues to reduce inference cost even in the extreme one-step regime, where cross-step redundancy vanishes entirely and coarse step-wise caching is no longer applicable.
+
+arXiv: https://arxiv.org/pdf/2611.07551v1</description>
+      <guid isPermaLink="false">1795673098893</guid>
+      <pubDate>Thu, 05 Nov 2026 20:00:00 +0800</pubDate>
+    </item>
     <item>
       <title>Split-KV: Efficient Context Parallelism for Training Diffusion Drafters</title>
       <link>https://seed.bytedance.com/zh/public_papers/split-kv-efficient-context-parallelism-for-training-diffusion-drafters</link>
@@ -36,6 +63,24 @@ arXiv: https://arxiv.org/pdf/2611.02366</description>
       <pubDate>Mon, 02 Nov 2026 20:00:00 +0800</pubDate>
     </item>
     <item>
+      <title>Learning-to-Memorize: Dynamic Context Management for Long-Horizon Autoregressive Video Generation</title>
+      <link>https://seed.bytedance.com/zh/public_papers/learning-to-memorize-dynamic-context-management-for-long-horizon-autoregressive-video-generation</link>
+      <description>Autoregressive video generation has achieved impressive results on short clips, yet generating long videos remains challenging due to error accumulation over extended horizons, where each predicted frame depends on potentially imperfect previous frames. Existing approaches typically rely on static context management strategies, such as sliding-window caches that discard early frames or fixed sink frames that permanently preserve initial content. These designs either lose critical long-range context or anchor generation to outdated information, which can lead to degraded fidelity, motion stagnation, and reduced diversity. In this paper, we propose Learning to Memorize (L2M), a learned context memory management framework that dynamically retains, evicts, and evolves historical frames according to predicted importance. The framework consists of an importance prediction router that estimates the relevance of each historical frame, degradation-aware training that improves robustness to noisy or corrupted context, and a dynamic memory initialization and evolution mechanism that updates long-term memory using exponential moving average (EMA) importance scores. This allows high-quality frames to replace stale anchors and enables memory to adapt naturally to scene evolution. Trained with a teacher-student distillation objective and sparsity regularization, L2M makes efficient use of a fixed KV-cache budget while preserving the most informative contextual information. Extensive experiments demonstrate that L2M improves long-horizon video generation quality and temporal consistency over existing baselines, providing a learned strategy for context memory management in long autoregressive video generation.
+
+arXiv: https://arxiv.org/pdf/2611.01858</description>
+      <guid isPermaLink="false">1795675166757</guid>
+      <pubDate>Sun, 01 Nov 2026 20:00:00 +0800</pubDate>
+    </item>
+    <item>
+      <title>Hierarchical Residuals: A Minimalist Decoupling of Residual Width from Compute Width</title>
+      <link>https://seed.bytedance.com/zh/public_papers/hierarchical-residuals-a-minimalist-decoupling-of-residual-width-from-compute-width</link>
+      <description>Residual connections underpin Transformers, but they implicitly tie the residual width carried through depth to the compute width used inside each layer. We introduce Hierarchical Residuals (HiRes), a minimalist architectural change that decouples these dimensions, widening the residual state while keeping per-layer compute width fixed. HiRes groups layers into blocks: standard d-dimensional PreNorm layers operate inside each block, while a wider D-dimensional PostNorm outer residual connects blocks. Learned read/write projections bridge the two spaces at block boundaries, leaving individual Transformer layers unchanged. Across different model sizes and depths, HiRes consistently outperforms vanilla residual addition, with fitted scaling laws indicating a 1.30-fold improvement in FLOPs efficiency. On OLMoE-1B-7B pretraining for 500B tokens, HiRes achieves 0.0208 lower training loss and 1.14-point higher downstream accuracy. HiRes is also competitive with other residual expansion methods such as VWN, mHC and AttnRes with less activation memory and I/O costs. Built from only dense projections and normalizations, it requires neither specialized kernels nor infrastructure-level optimizations. HiRes thus exposes residual width as a practical scaling variable using only standard operators.
+
+arXiv: https://arxiv.org/pdf/2610.41711v1</description>
+      <guid isPermaLink="false">1795673201650</guid>
+      <pubDate>Fri, 30 Oct 2026 20:00:00 +0800</pubDate>
+    </item>
+    <item>
       <title>Exploring Fractional Quantum Hall States with Deep Learning: From Abelian to Non-Abelian Phases</title>
       <link>https://seed.bytedance.com/zh/public_papers/exploring-fractional-quantum-hall-states-with-deep-learning-from-abelian-to-non-abelian-phases</link>
       <description>Fractional quantum Hall systems host strongly correlated topological phases with potential applications in topological quantum computation, yet identifying their microscopic ground states remains challenging because competing phases are often nearly degenerate and Landau-level mixing is difficult to treat. Here, we introduce a symmetry-adapted neural-network wavefunction that describes Abelian and non-Abelian states while incorporating all Landau levels. The method accurately captures composite-fermion liquids and the emergence of Wigner crystallization at low filling. When the first Landau level is partially filled, finite-size overlaps and entanglement spectra provide evidence consistent with $\bar{2}^{k}1^{k+1}$-type parton phases at $ν=4/3$ and $7/5$, while the $ν=3/2$ state exhibits anti-Pfaffian-like entanglement structure. These results demonstrate that neural-network wavefunctions offer a flexible framework for studying competing topological orders in fractional quantum Hall systems.
@@ -43,6 +88,15 @@ arXiv: https://arxiv.org/pdf/2611.02366</description>
 arXiv: https://arxiv.org/pdf/2610.38533</description>
       <guid isPermaLink="false">1795664273535</guid>
       <pubDate>Wed, 28 Oct 2026 20:00:00 +0800</pubDate>
+    </item>
+    <item>
+      <title>Reinforcement Learning Done Right for Explicit Confidence Targets</title>
+      <link>https://seed.bytedance.com/zh/public_papers/reinforcement-learning-done-right-for-explicit-confidence-targets</link>
+      <description>Large language models (LLMs) can produce plausible but incorrect answers when they are uncertain, which can mislead users and undermine model reliability. Training models to abstain with reinforcement learning is a natural approach, but most existing methods use a fixed error penalty and therefore cannot adapt their behavior to different confidence requirements at inference time. We study \emph{explicit confidence targets}, where a user specifies a target \(p\) in the prompt and the model directly chooses whether to answer or abstain, with the goal of achieving an accuracy of at least \(p\) among answered questions. However, learning to respond to different confidence targets with a single model has proven difficult, and prior attempts have failed to distinguish different targets. We show that this failure comes from two problems: the reward signal that distinguishes different values of $p$ is often lost during optimization, while the original error penalty grows without bound as $p$ approaches one. We propose RLEC (\textbf{R}einforcement \textbf{L}earning with \textbf{E}xplicit \textbf{C}onfidence Targets), which preserves the learning signal needed to distinguish confidence targets, introduces a stable reward family that keeps the desired answer condition unchanged, and uses reward scheduling to balance effective learning and training stability. Together, these designs enable the first successful training of a single LLM for explicit confidence target control. Extensive experiments across diverse benchmarks and model scales show that RLEC largely preserves general capabilities and achieves competitive calibration performance. RLEC also supports fine-grained target control without an external decision system or threshold calibration after training. By making explicit confidence targets part of the trained policy, RLEC opens a new and more direct path toward behavioral calibration.
+
+arXiv: https://arxiv.org/pdf/2610.35059</description>
+      <guid isPermaLink="false">1795672988818</guid>
+      <pubDate>Mon, 26 Oct 2026 20:00:00 +0800</pubDate>
     </item>
     <item>
       <title>Recycler: Cost-Free Latent Reasoning via Hidden State Recycling</title>
@@ -62,6 +116,15 @@ arXiv: https://lf3-static.bytednsdoc.com/obj/eden-cn/hyvsmeh7uhobf/recycler_arxi
 arXiv: https://arxiv.org/pdf/2610.28095</description>
       <guid isPermaLink="false">1795664707723</guid>
       <pubDate>Tue, 20 Oct 2026 20:00:00 +0800</pubDate>
+    </item>
+    <item>
+      <title>TriTD: Tri-Partite Trajectory-Distribution Distillation for Real-Time Autoregressive Video Generation</title>
+      <link>https://seed.bytedance.com/zh/public_papers/tritd-tri-partite-trajectory-distribution-distillation-for-real-time-autoregressive-video-generation</link>
+      <description>Autoregressive (AR) video diffusion has emerged as a leading paradigm for efficient video generation, yet its practical deployment remains bottlenecked by the trade-off between generation quality and inference efficiency. We attribute this bottleneck to three error sources in AR rollouts: the base model error, the train-inference distribution mismatch, and the upstream error propagation. Building on this decomposition, we derive closed-form upper bounds on the per-step and cumulative errors, providing a principled basis for jointly optimizing generation quality and inference efficiency. Guided by this analysis, we propose TriTD, a Tri-Partite Trajectory-Distribution co-optimized distillation framework with three complementary modules. First, for ODE initialization, we adopt a Next-Node Trajectory Distillation (NTD) objective, which shortens the supervision horizon and admits a lower regression-error floor. Second, we introduce Chunk-Graded Noising (CGN), a monotonically non-decreasing per-chunk noising schedule that helps narrow the expected train-inference noise mismatch and removes redundant KV-cache updates, yielding substantial speedups at no quality cost. Third, we propose Orthogonal-Parallel DMD (OP-DMD), a distribution-matching loss that retains the original DMD supervision while introducing an additional regression constraint in the orthogonal subspace to suppress off-axis drift, improving both training stability and final generation quality. Extensive experiments show that TriTD consistently surpasses existing baselines in visual quality while reaching a real-time throughput of 26.8 FPS on a single H100 GPU, delivering a balanced quality-efficiency solution for interactive streaming video generation.
+
+arXiv: https://arxiv.org/pdf/2610.26165</description>
+      <guid isPermaLink="false">1795675118561</guid>
+      <pubDate>Mon, 19 Oct 2026 20:00:00 +0800</pubDate>
     </item>
     <item>
       <title>Full-Duplex Interaction with Speech, Expressions and Gestures</title>
@@ -136,6 +199,15 @@ arXiv: https://arxiv.org/pdf/2609.30840</description>
       <pubDate>Fri, 25 Sep 2026 20:00:00 +0800</pubDate>
     </item>
     <item>
+      <title>AdaMAP: Learning Adaptive Multi-Action Prediction with Grounded Dreaming Guidance</title>
+      <link>https://seed.bytedance.com/zh/public_papers/adamap-learning-adaptive-multi-action-prediction-with-grounded-dreaming-guidance</link>
+      <description>arge agentic models can now operate in complex digital games by pretraining on web-scale data, but gameplay trajectories often contain highly redundant actions. Single-action agents can exploit this redundancy spuriously by copying recent actions, leading to causal confusion. Fixed-length action chunks reduce this ambiguity by predicting multiple future actions at once, but their open-loop execution accumulates errors because the agent cannot adapt to new observations during the chunk. The agent should therefore learn when to act for longer without feedback and when to stop early for a new observation. We introduce AdaMAP (Adaptive Multi-Action Prediction), an adaptive multi-action prediction framework that directly generates variable-horizon action chunks, interleaves actions with grounded visual dreams that provide verifiable future constraints, and optimizes the resulting policy with offline imitation learning followed by online MAP-PPO. Across Minecraft and VizDoom, \method{} improves multi-action control, with a 3.6-percentage-point gain in average Minecraft success over fixed-horizon RL. The learned horizons vary systematically across tasks and games, suggesting that adaptive multi-action prediction discovers useful temporal abstractions.
+
+arXiv: https://openreview.net/pdf?id=2Wzu7RgcCE</description>
+      <guid isPermaLink="false">1795675040758</guid>
+      <pubDate>Fri, 25 Sep 2026 00:00:00 +0800</pubDate>
+    </item>
+    <item>
       <title>EmbodiedSWE: Coding Agents for Long Horizon Dexterous Robotics</title>
       <link>https://seed.bytedance.com/zh/public_papers/embodiedswe-coding-agents-for-long-horizon-dexterous-robotics</link>
       <description>We study coding agents for long-horizon, dexterous robotics and ask whether their solutions can provide scalable supervision for learning general robot policies. To test this, we develop EMBODIEDSWE-BENCH, a simulation benchmark for coding agents spanning contact-rich manipulation, deformable objects, and long-horizon tasks requiring up to half an hour of continuous interaction. We find that frontier coding agents can solve complex long-horizon tasks and transfer prior solutions across both tasks and embodiments. We also design supporting tools that help agents more effectively solve these tasks. However, the resulting solutions require substantial iterative interaction and are typically specialized to individual task instances. We therefore introduce EMBODIEDSWE-GEN, which expands a single solution from coding agent into large diverse trajectories for training a VLA. VLA performance improves with more generated demonstrations, and agent-aided diversification improves generalization to held-out task variations. We also show that a VLA finetuned solely on coding-agent-generated simulation demonstrations completes a long-horizon task on real robot. Together, our framework uses coding agents to solve complex robotics tasks and turn verified solutions into scalable supervision for robot policies.
@@ -161,6 +233,15 @@ arXiv: https://arxiv.org/pdf/2609.22755</description>
 arXiv: https://arxiv.org/pdf/2609.22870</description>
       <guid isPermaLink="false">1794808988372</guid>
       <pubDate>Sat, 19 Sep 2026 20:00:00 +0800</pubDate>
+    </item>
+    <item>
+      <title>SMELT: Scaling Laws for Compute-Matched MoE Looped Transformers</title>
+      <link>https://seed.bytedance.com/zh/public_papers/smelt-scaling-laws-for-compute-matched-moe-looped-transformers</link>
+      <description>Looped Transformers increase effective depth by iterating a shared block of layers, but most evaluations compare at fixed model size, conflating architectural advantage with extra FLOPs. We study looping on Mixture-of-Experts Transformers while closely matching per-token FLOPs, total non-embedding parameters, and KV cache. Through a series of ablations, we arrive at a recipe we call SMELT (Sparse MoE Transformer, middle layers Loop Twice), which loops the middle half of layers twice while matching the unlooped Baseline on all three budgets. We scale SMELT across four sizes up to 54B non-embedding parameters and fit a separate Chinchilla-style scaling law for each architecture. SMELT's loss drops faster with compute, saving 6.8--18.0\% of training FLOPs on the compute-optimal frontier. The advantage transfers to downstream benchmarks beyond what validation loss predicts, is largest on Code, and grows with sample length and the number of in-context examples. Mechanistic analysis shows that the second visit reduces the attention sink and redirects mass toward content-relevant tokens, an inductive bias that may underlie the observed performance gains. These results show that looping can improve Transformers even under budget matching, offering a practical recipe that turns depth reuse into measurable gains.
+
+arXiv: https://arxiv.org/pdf/2609.01343</description>
+      <guid isPermaLink="false">1795673173361</guid>
+      <pubDate>Tue, 01 Sep 2026 20:00:00 +0800</pubDate>
     </item>
     <item>
       <title>HarnessDev: Can LLMs Create and Evolve Their Own Agent Harness?</title>
@@ -235,6 +316,15 @@ arXiv: https://arxiv.org/pdf/2608.04196</description>
       <pubDate>Tue, 04 Aug 2026 20:00:00 +0800</pubDate>
     </item>
     <item>
+      <title>Scaling Properties of Text Conditioning in Visual Generation</title>
+      <link>https://seed.bytedance.com/zh/public_papers/scaling-properties-of-text-conditioning-in-visual-generation</link>
+      <description>We study empirical scaling properties for text conditioning in visual generation. Such properties have rarely been measured because diffusion loss does not scale with the number of tokens in natural-language prompts. Surprisingly, we find that the converged diffusion loss scales with the amount of structured language in the prompt. To quantify structured language, we adapt two complementary measures: a white-box likelihood metric (GPG) and a black-box attribute metric (ED). Across controlled training runs, the converged diffusion loss decreases approximately linearly with GPG and follows a power law with ED. Guided by these scaling properties, we improve \emph{diffusability} by constructing structured prompts with semantic and geometric annotations derived from images, and improve \emph{promptability} by training a prompter through supervised fine-tuning, cold-start, and verifier-gated on-policy distillation. The resulting system outperforms all evaluated open-weight models on nearly every compositional, reasoning, and world-knowledge benchmark, while matching or surpassing the strongest closed-weight models on most evaluations.
+
+arXiv: https://arxiv.org/pdf/2607.29679</description>
+      <guid isPermaLink="false">1795675086007</guid>
+      <pubDate>Fri, 31 Jul 2026 20:00:00 +0800</pubDate>
+    </item>
+    <item>
       <title>TableVerse: A Large-scale Tabletop Dataset with Real-world Grounded Layouts for Generalizable Manipulation</title>
       <link>https://seed.bytedance.com/zh/public_papers/tableverse-a-large-scale-tabletop-dataset-with-real-world-grounded-layouts-for-generalizable-manipulation</link>
       <description>The development of generalizable robotic manipulation policies is inherently bounded by the availability of large-scale, high-fidelity scene data. While recent automated synthesis methods attempt to bridge this gap via text-to-layout hallucination or simplified procedural generation, they frequently suffer from physical implausibility and fail to capture the complex, dense clutter of actual human environments. In this paper, we introduce TableVerse, a fully automated Real2Sim pipeline that shifts the paradigm from imaginative layout generation to deterministic reconstruction from unstructured, in-the-wild image data. Our framework seamlessly processes unscripted internet media into high-fidelity, simulation-ready tabletop environments with accurate metric scales, authentic topologies, and verified mechanical stability. Furthermore, an automated task-conditioned trajectory generation framework is integrated to synthesize high-quality, collision-free pick-and-place demonstrations. Leveraging this complete pipeline, we construct the TableVerse-100K Dataset, a large-scale corpus comprising 100,000 unique, physically consistent environments paired with interactive manipulation trajectories. By capturing diverse asset compositions, realistic spatial distributions, and high-quality demonstrations, TableVerse-100K establishes a highly scalable and high-fidelity data foundation, providing significant value to facilitate future research in generalizable robotic manipulation tasks.
@@ -260,6 +350,34 @@ arXiv: https://arxiv.org/pdf/2607.21051</description>
 arXiv: https://arxiv.org/pdf/2607.19686</description>
       <guid isPermaLink="false">1794809132471</guid>
       <pubDate>Wed, 22 Jul 2026 20:00:00 +0800</pubDate>
+    </item>
+    <item>
+      <title>Reflex: Event-Driven Automated Fault Localization for Large-Scale LLM Training</title>
+      <link>https://seed.bytedance.com/zh/public_papers/reflex-event-driven-automated-fault-localization-for-large-scale-llm-training</link>
+      <description>Training Large Language Models (LLMs) at scale presents formidable reliability challenges, where frequent infrastructure failures incur prohibitive financial costs. Current fault localization (i.e., pinpointing faulty nodes) remains predominantly reactive and manual, severely constraining training throughput. We conduct a comprehensive empirical study of 2,943 LLM training failures collected over six months from a production environment. The analysis yields three critical insights: (1) effective diagnosis necessitates fusing full-stack visibility with longitudinal profiling to establish spatio-temporal context; (2) diagnosing implicit failures requires modeling the compound impact of pervasive benign anomalies; and (3) robust detection demands hardware-aware strategies adaptable to heterogeneous infrastructure.
+Guided by these insights, we propose Reflex, a real-time event-driven framework for automated fault localization. Reflex constructs a spatio-temporal context via longitudinal feature engineering to capture cumulative degradation. It employs interpretable event attribution to decode implicit failure patterns by disentangling dependencies among weak signals. Furthermore, the system ensures robustness across heterogeneous infrastructure through adaptive noise suppression and dynamic thresholding. Deployed in Platform-X, Reflex delivers precise and efficient fault localization, achieving an F1-score of 0.88 with a diagnosis latency of 1.6s under high concurrency. Finally, we open-source an anonymized dataset of production-grade alert traces to facilitate community research.
+
+arXiv: https://dl.acm.org/doi/epdf/10.1145/3803437.3805245</description>
+      <guid isPermaLink="false">1795675702773</guid>
+      <pubDate>Fri, 17 Jul 2026 00:00:00 +0800</pubDate>
+    </item>
+    <item>
+      <title>SDCs in the Wild: Characterizing and Diagnosing SDC-Defective GPUs in Production LLM Training</title>
+      <link>https://seed.bytedance.com/zh/public_papers/sdcs-in-the-wild-characterizing-and-diagnosing-sdc-defective-gpus-in-production-llm-training</link>
+      <description>Silent Data Corruption (SDC) has emerged as a critical reliability bottleneck in Large Language Model (LLM) training, where hardware faults are frequently indistinguishable from software anomalies. While standard industry practice relies on synthetic microbenchmarks for fault isolation, our experience shows these methods miss over 60% of defective devices. To understand this gap, we present a comprehensive characterization of 23 SDC-defective GPUs harvested from a large-scale production cluster. Our analysis reveals three key insights: (1) SDCs are not confined to new hardware but often arise later due to aging; (2) SDCs are highly data-dependent and unit-specific, meaning devices that pass general stress tests often fail under specific training input data; and (3) standard ECC and thermal protections fail to capture these logic-level bit flips. Driven by these findings, we propose SDCHunter, an automated diagnosis system for detecting SDC-defective GPUs in a large-scale training cluster. Instead of relying on generic benchmarks, SDCHunter employs execution replay with the exact training workload and input data that triggered the failure. Deployed at ByteDance, SDCHunter successfully mitigated 40 SDC incidents in production.
+
+arXiv: https://www.usenix.org/system/files/osdi26-zheng.pdf</description>
+      <guid isPermaLink="false">1795673993055</guid>
+      <pubDate>Tue, 14 Jul 2026 00:00:00 +0800</pubDate>
+    </item>
+    <item>
+      <title>Teaching the Old Dog New Tricks: Building Efficient Data Pipelines for Large-Scale LLM Pre-Training</title>
+      <link>https://seed.bytedance.com/zh/public_papers/teaching-the-old-dog-new-tricks-building-efficient-data-pipelines-for-large-scale-llm-pre-training</link>
+      <description>Data pipelines play a critical role in the performance of large-scale pre-training jobs running on thousands of GPUs. In this work, we present a comprehensive quantitative analysis of data access patterns from production workloads and reveal three previously underreported bottlenecks. First, cross-datacenter traffic emerges as a major source of latency when evaluating in-training models using remote checkpoints. Second, checkpoint loading during startup phases frequently suffers from I/O contention that delays job initialization. Third, data transformation during loading becomes a significant and CPU-intensive bottleneck for multimodal models. Guided by these findings, we introduce three optimizations: global-namespace-based predictive checkpoint replication, proactive hot-file replication, and offloading data transformation to storage-tier CPU resources. Crucially, we demonstrate that these optimizations are not system-specific but address fundamental architectural mismatches in the LLM era. They are broadly applicable to both legacy and modern storage systems, offering a high-return path to upgrade infrastructure with minimal engineering intrusion. Together, these techniques reduce wasted GPU hours per evaluation from 16,800 to 4,000, shorten checkpoint loading time at each training start by 40.8%, and reduce training stalls caused by dataloading by 63.2%.
+
+arXiv: https://www.usenix.org/system/files/osdi26-chen-luofan.pdf</description>
+      <guid isPermaLink="false">1795673604175</guid>
+      <pubDate>Tue, 14 Jul 2026 00:00:00 +0800</pubDate>
     </item>
     <item>
       <title>EdgeBench: Unveiling Scaling Laws of Learning from Real-World Environments</title>
@@ -341,123 +459,6 @@ arXiv: https://arxiv.org/pdf/2606.24742</description>
 arXiv: https://arxiv.org/pdf/2606.21002</description>
       <guid isPermaLink="false">1789028268607</guid>
       <pubDate>Fri, 19 Jun 2026 20:00:00 +0800</pubDate>
-    </item>
-    <item>
-      <title>Analytic Nonadiabatic Derivative Couplings Using Noncollinear Spin-Flip TDDFT</title>
-      <link>https://seed.bytedance.com/zh/public_papers/analytic-nonadiabatic-derivative-couplings-using-noncollinear-spin-flip-tddft</link>
-      <description>Nonadiabatic molecular dynamics is an important tool for investigating chemical reaction mechanisms, particularly in photochemical processes. Its central challenge is to efficiently and accurately obtain, at the electronic-structure level, the energies, nuclear forces (gradients), and nonadiabatic derivative couplings (NADCs) associated with multiple potential-energy surfaces. We have previously developed a noncollinear spin-flip time-dependent density functional theory (SF-TDDFT) based on the multicollinear approach. This method enables the computation of potential-energy surfaces and analytic nuclear gradients for multiple excited states and leads to improved energy degeneracy, spin symmetry, and formal consistency relative to collinear SF-TDDFT. In the present work, analytic NADCs are formulated within this framework. Their accuracy is assessed through comparison with finite-difference results and by evaluating the Berry phase in the vicinity of conical intersections. As an initial application, nonadiabatic molecular dynamics simulations were performed for azomethane and ethylene, showing that the analytic derivative couplings behave reasonably and stably for these systems. Since the additional computational cost of the NADCs is comparable to that of energies and gradients in SF-TDDFT, the method may be suitable for nonadiabatic dynamics simulations of moderately large molecular systems.
-
-arXiv: https://pubs.acs.org/jctcce/article-abstract/22/12/6076/5166458/Analytic-Nonadiabatic-Derivative-Couplings-Using</description>
-      <guid isPermaLink="false">1789029125019</guid>
-      <pubDate>Thu, 11 Jun 2026 00:00:00 +0800</pubDate>
-    </item>
-    <item>
-      <title>Towards stable and accurate electron dynamics via neural network based time-dependent variational Monte Carlo</title>
-      <link>https://seed.bytedance.com/zh/public_papers/towards-stable-and-accurate-electron-dynamics-via-neural-network-based-time-dependent-variational-monte-carlo</link>
-      <description>Real-time dynamics of interacting electrons lies at the interface between quantum mechanics and non-equilibrium physics, governing the microscopic origin of ultrafast phenomena of molecules and nano-materials. Though neural network variational Monte Carlo has achieved unprecedented accuracy for stationary state calculations, its extension to real-time evolution remains challenging. In this work, we introduce the neural basis time-dependent variational Monte Carlo framework, which achieves stable and highly accurate simulations of electron dynamics. By constraining the time evolution to a compact, customized manifold spanned by the neural basis, we effectively bypass instability issues and achieve long-term stable evolution. Moreover, we demonstrate that this framework yields benchmark-quality accuracy in simulating the laser-driven dipole responses of the hydrogen atom and a stretched hydrogen molecule, and accurately extracts the dynamic polarizabilities of helium and beryllium atoms. Our work reveals the vast potential of neural network wavefunctions for accurately describing real-time electron dynamics and establishes a promising new route for first-principles simulations of complex, time-dependent electronic phenomena.
-
-arXiv: https://arxiv.org/pdf/2606.05850</description>
-      <guid isPermaLink="false">1782904028245</guid>
-      <pubDate>Thu, 04 Jun 2026 00:00:00 +0800</pubDate>
-    </item>
-    <item>
-      <title>MetaPoint: Unlocking Precise Spatial Control in Agentic Visual Generation</title>
-      <link>https://seed.bytedance.com/zh/public_papers/metapoint-unlocking-precise-spatial-control-in-agentic-visual-generation</link>
-      <description>Generative visual models fundamentally struggle with precise spatial control. This arises from a core disconnect: models can process textual descriptions of space but cannot directly map numerical coordinates onto the 2D image canvas. We introduce MetaPoint, a method that bridges this gap by representing a continuous 2D coordinate as a single, special token. Crucially, MetaPoint requires no new architectural components; it directly leverages the model's inherent positional encoding schemes to interpret these coordinates, treating our token as a virtual point on the canvas. This lightweight approach enables pixel-level control of an object's position with one token or its bounding box with two, all without requiring architectural changes or bespoke attention masking. The MetaPoint tokens are designed to be compositional, serving as spatial primitives. This allows a planner agent to decompose a high-level user request into a structured sequence of primitives for the generator. By providing a simple, precise, and scalable building block for spatial control, MetaPoint unlocks more powerful compositional generative agents and enables intuitive, interactive editing systems.
-
-arXiv: https://arxiv.org/pdf/2606.05031</description>
-      <guid isPermaLink="false">1782904147094</guid>
-      <pubDate>Wed, 03 Jun 2026 00:00:00 +0800</pubDate>
-    </item>
-    <item>
-      <title>Unified Video-Action Joint Denoising for Dexterous Action and Data Generation</title>
-      <link>https://seed.bytedance.com/zh/public_papers/unified-video-action-joint-denoising-for-dexterous-action-and-data-generation</link>
-      <description>Recent world action models leverage video foundation models by aligning broad visual-dynamics priors with executable robot actions. We revisit this alignment from a distributional perspective. Existing formulations typically narrow the aligned prior into an observation-conditioned policy distribution over future actions. In contrast, we keep the distribution broader by modeling the joint space of interaction videos and executable hand trajectories under multiple conditioning regimes. We propose Donk, a unified video-action denoising model for dexterous hands. With language, an initial image, and the initial hand state, Donk samples future videos and bimanual MANO trajectories as an action policy. Without the image condition, the same denoising architecture samples paired video-action rollouts from a text-conditioned distribution, turning the aligned video prior into a data engine. Across action, video, and text-only generation evaluations, Donk improves dexterous trajectory accuracy, preserves strong video fidelity, and produces smooth text-conditioned action rollouts under the same unified training recipe.
-
-arXiv: https://arxiv.org/pdf/2606.03868</description>
-      <guid isPermaLink="false">1794811784777</guid>
-      <pubDate>Tue, 02 Jun 2026 20:00:00 +0800</pubDate>
-    </item>
-    <item>
-      <title>TTT-VLA: Test-Time Latent Prompt Optimization for Vision-Language-Action Models</title>
-      <link>https://seed.bytedance.com/zh/public_papers/ttt-vla-test-time-latent-prompt-optimization-for-vision-language-action-models</link>
-      <description>Vision-Language-Action (VLA) models trained on large-scale data have made remarkable progress, but they remain vulnerable to distribution shifts at deployment time. Recent VLA models suggest that prompts can serve as an efficient interface for steering policy behavior, but existing prompt-based steering typically relies on external guidance. This raises a natural question: can test-time training (TTT) for VLA be achieved by optimizing a prompt, so that the steering interface itself can be learned and adapted from interaction? We address this question with TTT-VLA, a test-time training framework based on Latent Prompt Optimization (LPO). During training, the latent prompt is learned with an additional proxy task, providing an extra learned conditioning signal for policy learning. At test time, TTT is performed by collecting interaction data from the current environment and optimizing only the latent prompt on those data using the proxy task's self-supervised signal, without modifying the policy itself. Experiments on SimplerEnv demonstrate that the proposed method consistently improves task success rates in both single- and multi-embodiment settings. Further analysis shows that the gains arise primarily from correcting a small number of critical decisions rather than globally altering policy behavior. These results suggest that LPO provides an effective and practical pathway for deployment-time improvement of foundation manipulation policies.
-
-arXiv: https://arxiv.org/pdf/2606.03127</description>
-      <guid isPermaLink="false">1794810372828</guid>
-      <pubDate>Tue, 02 Jun 2026 20:00:00 +0800</pubDate>
-    </item>
-    <item>
-      <title>Representation Forcing for Bottleneck-Free Unified Multimodal Models</title>
-      <link>https://seed.bytedance.com/zh/public_papers/representation-forcing-for-bottleneck-free-unified-multimodal-models</link>
-      <description>Unified multimodal models (UMMs) aim to handle perception and generation in a single model. Yet existing UMMs still rely on a frozen, separately pretrained VAE for image generation, imposing a structural bottleneck. Naively removing it introduces a quality gap, as the model must learn both high-level structure and low-level details from raw pixels. In this paper, we propose Representation Forcing (RF), a technique that closes this gap by making representation prediction a native capability of the model. Concretely, RF forces the decoder to autoregressively predict visual representations as intermediate tokens before pixels; these tokens then stay in context to guide pixel diffusion within the same backbone. By turning representations from perception outputs into generation targets, RF eliminates the need for any external generative latent space. We find that RF benefits both understanding and generation. On image generation, our pixel-space model with RF matches state-of-the-art VAE-based unified models. On image understanding, pixel-space RF generally outperforms its VAE-based variant. Together, these results offer an effective step toward end-to-end, bottleneck-free UMMs.
-
-arXiv: https://arxiv.org/pdf/2605.31604</description>
-      <guid isPermaLink="false">1794810502631</guid>
-      <pubDate>Fri, 29 May 2026 20:00:00 +0800</pubDate>
-    </item>
-    <item>
-      <title>Task-Focused Memorization for Multimodal Agents</title>
-      <link>https://seed.bytedance.com/zh/public_papers/task-focused-memorization-for-multimodal-agents</link>
-      <description>Long-term memory is essential for multimodal agents to build coherent experience, accumulate world knowledge, and achieve continual learning. However, constructing effective memory goes beyond memory module design and basic requirements such as accuracy and fidelity; the key challenge lies in determining what to memorize. Multimodal agents, such as embodied agents, continuously perceive, reason, and act in real or virtual environments, receiving an unbounded stream of multimodal observations. From this combinatorial explosion of information, an agent must selectively retain content that is relevant to its role in the environment and valuable for future tasks. To bridge this gap, we frame memory generation as a learnable memorization policy and introduce TaskMem (Task-focused Memorization Policy Learning), a reinforcement-learning-based framework that enables the policy to dynamically adjust its focus to the demands of real tasks encountered in the environment. TaskMem adopts a two-phase training paradigm: Phase One learns how to memorize by optimizing memory quality under fundamental fidelity requirements; Phase Two occurs after deployment, where the agent learns what to memorize by tuning an adapter on its base MLLM, using recent environment tasks to define a reward model that guides the memorization policy toward task-relevant content. To evaluate our approach, we reformulate VideoMME, EgoLife, and EgoTempo into streaming benchmarks that simulate a realistic setting in which an agent processes streaming observations and handles tasks arriving online. To isolate memory assessment, the questions must be answered using only the agent's memory, without access to raw video. Built on Qwen3-VL-30B-A3B, TaskMem improves VQA accuracy by 6.3%, 7.0%, and 5.3% on these benchmarks, respectively.
-
-arXiv: https://arxiv.org/pdf/2605.31075</description>
-      <guid isPermaLink="false">1780985303142</guid>
-      <pubDate>Fri, 29 May 2026 00:00:00 +0800</pubDate>
-    </item>
-    <item>
-      <title>More Expressive Feedforward Layers: Part I. Token-Adaptive Mixing of Activations</title>
-      <link>https://seed.bytedance.com/zh/public_papers/more-expressive-feedforward-layers-part-i-token-adaptive-mixing-of-activations</link>
-      <description>Feedforward network (FFN) layers account for a large fraction of parameters and nonlinear expressivity in Transformer-based large language models (LLMs). Despite the evolution from ReLU and GELU to gated variants such as SwiGLU, most FFN designs still use a single fixed activation function, applying the same nonlinear transformation to all tokens. In this work, we propose Mixture of Activations (MoA), a token-adaptive FFN design that mixes a dictionary of activation functions using lightweight input-dependent gates while sharing the same linear projections. As an input-independent counterpart, we also introduce learnable activations (LA), which form linear combinations of activation functions for both ReLU-type and SwiGLU-type FFNs. Theoretically, we establish strict finite-width expressive separations among fixed-activation FFNs, LA, and MoA: LA strictly contains fixed-activation FFNs, while MoA strictly contains LA, with the additional expressivity arising from input-dependent nonlinear hybridization. Empirically, we evaluate MoA through extensive pre-training experiments on dense and MoE language models ranging from 0.12B to 2B parameters under different token budgets, optimizers, and learning rate schedules. MoA consistently achieves lower terminal loss and exhibits more favorable scaling behavior than well-tuned baselines, with minimal parameter and computational overhead. These results suggest that token-adaptive activation mixing is a simple and effective mechanism for improving FFN expressivity in LLMs.
-
-arXiv: https://arxiv.org/pdf/2605.26647</description>
-      <guid isPermaLink="false">1782903797665</guid>
-      <pubDate>Tue, 26 May 2026 00:00:00 +0800</pubDate>
-    </item>
-    <item>
-      <title>LLMs as Noisy Channels: A Shannon Perspective on Model Capacity and Scaling Laws</title>
-      <link>https://seed.bytedance.com/zh/public_papers/llms-as-noisy-channels-a-shannon-perspective-on-model-capacity-and-scaling-laws</link>
-      <description>Existing scaling laws for Large Language Models (LLMs), predominantly monotonic power laws, fail to explain emerging non-monotonic phenomena such as catastrophic overtraining and quantization-induced degradation, where performance deteriorates despite increased compute. We propose the Shannon Scaling Law, a unified theoretical framework that models LLM training as information transmission over a noisy channel, grounded in the Shannon-Hartley theorem. By mapping model parameters to channel bandwidth and training tokens to signal power, our formulation explicitly captures the interaction between learning signal and intrinsic noise. This perspective reveals a fundamental Shannon capacity for LLMs: scaling model size or data without preserving a sufficient signal-to-noise ratio (SNR) inevitably amplifies noise, inducing a transition from monotonic improvement to U-shaped performance degradation. We validate our theory through experiments on Pythia and OLMo2 under perturbations, including Gaussian noise, quantization and supervised fine-tuning on math, QA and code tasks. The Shannon Scaling Law consistently outperforms classical scaling laws and recent perturbation-aware laws, achieving strong $R^2$ scores and accurately capturing loss basins missed by prior approaches. It also extrapolates: fitted on $\leq$6.9B Pythia models with $\leq$180B tokens, it predicts the unseen 12B model up to 307B tokens at pooled $R^2{=}0.847$, while monotonic baselines collapse.
-
-arXiv: https://arxiv.org/pdf/2605.23901</description>
-      <guid isPermaLink="false">1794813431682</guid>
-      <pubDate>Fri, 22 May 2026 20:00:00 +0800</pubDate>
-    </item>
-    <item>
-      <title>Charon: A Unified and Fine-Grained Simulator for Large-Scale LLM Training and Inference</title>
-      <link>https://seed.bytedance.com/zh/public_papers/charon-a-unified-and-fine-grained-simulator-for-large-scale-llm-training-and-inference</link>
-      <description>Deploying large-scale LLM training and inference with optimal performance is exceptionally challenging due to a complex design space of parallelism strategies, system optimizations, and hardware configurations. Accurate and rapid performance simulation is critical for guiding optimization efforts and system studies by validating "what-if" Hooker Figure hypotheses. To address this, we introduce Charon, a unified, modular, and fine-grained simulator for accurately predicting LLM performance. Experiments show Charon achieves high accuracy across different models and configurations, with an overall prediction error consistently under 5.35%, and even under 3.74% for training with a large-scale GPU cluster. In a practical inference deployment case, Charon discovered a configuration that improved system throughput over an engineering-tuned baseline, demonstrating its significant real-world value.
-
-arXiv: https://arxiv.org/pdf/2605.17164</description>
-      <guid isPermaLink="false">1782375289718</guid>
-      <pubDate>Sat, 16 May 2026 00:00:00 +0800</pubDate>
-    </item>
-    <item>
-      <title>UAM: A Dual-Stream Perspective on Forgetting in VLA Training</title>
-      <link>https://seed.bytedance.com/zh/public_papers/uam-a-dual-stream-perspective-on-forgetting-in-vla-training</link>
-      <description>Vision--language--action (VLA) models are typically built by fine-tuning a pretrained vision--language model (VLM) on action data. However, we show that this standard recipe systematically erodes the VLM's multimodal competence, a side effect we call the embodiment tax. But do VLAs have to forget? Inspired by the two-stream organization of biological vision, we trace this degradation to a structural bottleneck: current VLAs ask a single encoder to support both language-grounded semantics and control-relevant visual features, whereas biological vision separates recognition and visuomotor control into distinct pathways. Building on this view, we propose the Unified Action Model (UAM), which adds a parallel Dorsal Expert, an analog of the brain's dorsal pathway. To make the Dorsal Expert an effective second pathway and reduce the control-learning burden on the VLM, we initialize it from a pretrained generative model and train it with a mid-level reasoning objective that predicts visual dynamics. This design allows us to train the whole VLA end-to-end on action data alone: with no parameter freezing, no gradient stopping, and no auxiliary VL co-training, UAM retains over 95% of the underlying VLM's multimodal capability and at the same time achieves the highest average success rate among baselines on a variety of manipulation tasks that probe out-of-distribution generalization, including unseen objects, novel object--target compositions, and instruction variation. Together, these results suggest that semantic preservation in VLAs can emerge from architectural separation itself, rather than being enforced by frozen weights or auxiliary data replay, and that this preserved semantic capability can naturally transfer from VLMs to semantic generalization in actions.
-
-arXiv: https://arxiv.org/pdf/2605.15735</description>
-      <guid isPermaLink="false">1782904319221</guid>
-      <pubDate>Fri, 15 May 2026 00:00:00 +0800</pubDate>
-    </item>
-    <item>
-      <title>Hand-in-the-Loop: Improving VLA Policies for Dexterous Manipulation via Seamless Hand-Arm Intervention</title>
-      <link>https://seed.bytedance.com/zh/public_papers/hand-in-the-loop-improving-vla-policies-for-dexterous-manipulation-via-seamless-hand-arm-intervention</link>
-      <description>Vision-Language-Action (VLA) models are prone to compounding errors in dexterous manipulation, where high-dimensional action spaces and contact-rich dynamics amplify small policy deviations over long horizons. While Interactive Imitation Learning (IIL) can refine policies through human correction data, applying it to high-degree-of-freedom (DoF) robotic hands remains challenging due to a command mismatch between human teleoperation and policy execution at the intervention moment, which causes abrupt robot-hand configuration changes, or "gesture jumps". We present Hand-in-the-Loop (HandITL), a seamless human-in-the-loop intervention method that blends human corrective intent with autonomous policy execution to avoid gesture jumps during bimanual dexterous manipulation. Compared with taking over control using direct teleoperation, HandITL reduces intervention jitter by 99.8% and preserves robust post-intervention manipulation, reducing grasp failures by 87.5% and mean completion time by 19.1%. We validate HandITL on tasks requiring bimanual coordination, tool use, and fine-grained long-horizon manipulation. When used to collect correction data for policy refinement, HandITL yields policies that outperform those trained with standard teleoperation data by 19% on average across three long-horizon dexterous tasks.
-
-arXiv: https://arxiv.org/pdf/2605.15157</description>
-      <guid isPermaLink="false">1782980289812</guid>
-      <pubDate>Thu, 14 May 2026 00:00:00 +0800</pubDate>
-    </item>
-    <item>
-      <title>THEMol dataset: Torsion, Hessian, and Energy of Molecules</title>
-      <link>https://seed.bytedance.com/zh/public_papers/themol-dataset-torsion-hessian-and-energy-of-molecules</link>
-      <description>We present THEMol (Torsion, Hessian, Energy of Molecules), a massive open-source collection of quantum mechanical properties tailored for closed-shell organic molecules, with up to 50 heavy atoms. THEMol includes a Hessian subset with more than 3 million relaxed geometries with Hessian matrices, a TorsionScan subset with nearly 100 million constrained relaxed geometries with energies and forces, and relaxation-trajectory subsets (HessianRelax and TorsionScanRelax) that together comprise about 3 billion DFT calculations. The chemical space sampling is comprehensive, spanning twelve essential elements and diverse molecular architectures relevant to drug discovery, electrolytes, ionic liquids, and beyond. The dataset also features exhaustive conformational sampling through the TorsionScan and TorsionScanRelax subsets, including comprehensive in-ring and non-ring torsional scans. Furthermore, it contains an extensive library of Hessian matrices, computed at relaxed geometries, to capture critical second-derivative information of the potential energy landscape. Additionally, we supply electron density-derived atomic multipoles computed via the Minimal Basis Iterative Stockholder partition scheme. Organized into five distinct subsets (Hessian, TorsionScan, HessianRelax, TorsionScanRelax, and MBIS), the data encompasses optimized geometries, relaxation trajectories, and derived molecular properties. We anticipate that this massive and diverse dataset will significantly empower the development of highly accurate and transferable molecular potentials.
-
-arXiv: https://arxiv.org/pdf/2605.14973</description>
-      <guid isPermaLink="false">1782376720158</guid>
-      <pubDate>Thu, 14 May 2026 00:00:00 +0800</pubDate>
     </item>
   </channel>
 </rss>

@@ -7,7 +7,14 @@
     <docs>http://www.rssboard.org/rss-specification</docs>
     <generator>RSS Creator</generator>
     <language>zh-CN</language>
-    <lastBuildDate>Thu, 26 Nov 2026 03:59:28 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 26 Nov 2026 13:45:35 +0000</lastBuildDate>
+    <item>
+      <title>The H3 Family: Models, Community, and What's Next - MiniMax Research</title>
+      <link>https://www.minimax.io/blog/minimax-h3-family</link>
+      <description>Openness is what turns a technology into an ecosystem. A handful of gifted people can invent a technology or build a tool. Only when people share what they've built and work together as a network can creativity flourish and change the way we live.</description>
+      <guid isPermaLink="true">https://www.minimax.io/blog/minimax-h3-family</guid>
+      <pubDate>Thu, 26 Nov 2026 00:00:00 +0000</pubDate>
+    </item>
     <item>
       <title>Practical cryptanalysis with MiniMax's latest Internal Model  - MiniMax Research</title>
       <link>https://www.minimax.io/blog/practical-cryptanalysis-with-minimaxs-latest-internal-model</link>
