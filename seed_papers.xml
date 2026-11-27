@@ -7,7 +7,7 @@
     <docs>http://www.rssboard.org/rss-specification</docs>
     <generator>RSS Creator</generator>
     <language>zh-CN</language>
-    <lastBuildDate>Fri, 27 Nov 2026 04:50:31 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 27 Nov 2026 14:46:51 +0000</lastBuildDate>
     <item>
       <title>OpGuard: Bitwise Alignment for Precise and General Debugging of Production LLM Training</title>
       <link>https://seed.bytedance.com/zh/public_papers/opguard-bitwise-alignment-for-precise-and-general-debugging-of-production-llm-training</link>
